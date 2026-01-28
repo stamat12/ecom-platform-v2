@@ -69,6 +69,11 @@ export default function SkuBatchPage() {
   const [enrichmentInProgress, setEnrichmentInProgress] = useState(false);
   const [enrichmentResults, setEnrichmentResults] = useState(null); // null | { total, succeeded, failed, results }
 
+  // eBay Enrichment state
+  const [selectedSkusForEbayEnrichment, setSelectedSkusForEbayEnrichment] = useState(new Set()); // Set of SKUs for eBay enrichment
+  const [ebayEnrichmentInProgress, setEbayEnrichmentInProgress] = useState(false);
+  const [ebayEnrichmentResults, setEbayEnrichmentResults] = useState(null);
+
   // eBay state
   const [ebayExpanded, setEbayExpanded] = useState({}); // { sku: boolean }
   const [ebaySchemas, setEbaySchemas] = useState({}); // { sku: schema }
@@ -364,12 +369,28 @@ export default function SkuBatchPage() {
 
   const toggleSkuForEnrichment = (sku) => {
     const newSet = new Set(selectedSkusForEnrichment);
+    const newEbaySet = new Set(selectedSkusForEbayEnrichment);
+    
+    if (newSet.has(sku)) {
+      newSet.delete(sku);
+      newEbaySet.delete(sku);
+    } else {
+      newSet.add(sku);
+      newEbaySet.add(sku);
+    }
+    
+    setSelectedSkusForEnrichment(newSet);
+    setSelectedSkusForEbayEnrichment(newEbaySet);
+  };
+
+  const toggleSkuForEbayEnrichment = (sku) => {
+    const newSet = new Set(selectedSkusForEbayEnrichment);
     if (newSet.has(sku)) {
       newSet.delete(sku);
     } else {
       newSet.add(sku);
     }
-    setSelectedSkusForEnrichment(newSet);
+    setSelectedSkusForEbayEnrichment(newSet);
   };
 
   const handleEnrichAll = async () => {
@@ -412,6 +433,50 @@ export default function SkuBatchPage() {
     } catch (e) {
       alert(`Error: ${e.message}`);
       setEnrichmentInProgress(false);
+    }
+  };
+
+  const handleEbayEnrichAll = async () => {
+    if (selectedSkusForEbayEnrichment.size === 0) {
+      alert("No SKUs selected for eBay enrichment");
+      return;
+    }
+
+    setEbayEnrichmentInProgress(true);
+    const results = {};
+    let succeeded = 0;
+    let failed = 0;
+
+    try {
+      for (const sku of selectedSkusForEbayEnrichment) {
+        try {
+          const res = await fetch(`/api/ebay/enrich`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ sku }),
+          });
+          const result = await res.json();
+          
+          if (res.ok && result.required_fields) {
+            results[sku] = { success: true, message: "Enriched" };
+            succeeded++;
+          } else {
+            results[sku] = { success: false, message: result.detail || "Failed" };
+            failed++;
+          }
+        } catch (e) {
+          results[sku] = { success: false, message: e.message };
+          failed++;
+        }
+      }
+
+      setEbayEnrichmentResults({ total: selectedSkusForEbayEnrichment.size, succeeded, failed, results });
+      setTimeout(() => setEbayEnrichmentResults(null), 10000);
+      setSelectedSkusForEbayEnrichment(new Set());
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayEnrichmentInProgress(false);
     }
   };
 
@@ -574,8 +639,18 @@ export default function SkuBatchPage() {
     );
   }
 
+  // Calculate top padding for fixed ribbons
+  const topPadding = (() => {
+    const hasImageRibbon = totalSelectedImages > 0;
+    const hasEnrichmentRibbon = selectedSkusForEnrichment.size > 0;
+    const hasEbayRibbon = selectedSkusForEbayEnrichment.size > 0;
+    
+    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasEbayRibbon].filter(Boolean).length;
+    return ribbonCount * 90;
+  })();
+
   return (
-    <div style={{ width: "100%", maxWidth: "2200px", margin: "0 auto", padding: "0 16px", boxSizing: "border-box" }}>
+    <div style={{ width: "100%", maxWidth: "2200px", margin: "0 auto", padding: "0 16px", boxSizing: "border-box", paddingTop: topPadding, transition: "padding-top 0.2s ease" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
         <Link to="/skus">← Back to list</Link>
         <h3 style={{ margin: 0 }}>Batch view ({selectedSkus.length} SKUs)</h3>
@@ -679,78 +754,199 @@ export default function SkuBatchPage() {
       )}
 
       {/* AI Enrichment Panel */}
-      <div style={{
-        background: "#f0f7ff",
-        padding: 16,
-        borderRadius: 8,
-        marginBottom: 24,
-        border: "2px solid #1976D2",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
-      }}>
-        <div style={{ fontWeight: "bold", marginBottom: 12, fontSize: 16, color: "#1976D2" }}>
-          🤖 AI Product Details Enrichment
-        </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12, alignItems: "center" }}>
-          <span style={{ color: "#555" }}>Select SKUs to enrich: <strong>{selectedSkusForEnrichment.size}</strong> selected</span>
-          <button
-            onClick={() => {
-              if (selectedSkusForEnrichment.size === items.length) {
-                setSelectedSkusForEnrichment(new Set());
-              } else {
-                const allSkus = new Set(items.map(item => item.sku));
-                setSelectedSkusForEnrichment(allSkus);
-              }
-            }}
-            style={{
-              padding: "6px 12px",
-              fontSize: 12,
-              background: "#555",
-              color: "white",
-              border: "none",
-              borderRadius: 4,
-              cursor: "pointer",
-            }}
-          >
-            {selectedSkusForEnrichment.size === items.length ? "Deselect All" : "Select All"}
-          </button>
-          <button
-            onClick={handleEnrichAll}
-            disabled={enrichmentInProgress || selectedSkusForEnrichment.size === 0}
-            style={{
-              padding: "8px 16px",
-              fontSize: 12,
-              background: enrichmentInProgress ? "#ccc" : "#1976D2",
-              color: "white",
-              border: "none",
-              borderRadius: 4,
-              fontWeight: "bold",
-              cursor: enrichmentInProgress || selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
-            }}
-          >
-            {enrichmentInProgress ? "Enriching..." : "✨ Enrich Selected SKUs"}
-          </button>
-        </div>
-
-        {/* Enrichment results */}
-        {enrichmentResults && (
-          <div style={{
-            background: "white",
-            padding: 12,
-            borderRadius: 4,
-            marginTop: 12,
-            border: `2px solid ${enrichmentResults.failed === 0 ? "#4CAF50" : "#FF9800"}`,
-          }}>
-            <div style={{ fontWeight: "bold", marginBottom: 8 }}>
-              {enrichmentResults.failed === 0 ? "✅" : "⚠️"} Results: {enrichmentResults.succeeded} succeeded, {enrichmentResults.failed} failed
-            </div>
-            {Object.entries(enrichmentResults.results).map(([s, res]) => (
-              <div key={s} style={{ fontSize: 12, padding: "4px 0", color: res.success ? "#4CAF50" : "#FF3D00" }}>
-                {s}: {res.success ? `+${res.updated_fields} fields` : res.message}
-              </div>
-            ))}
+      {selectedSkusForEnrichment.size > 0 && (
+        <div style={{
+          position: "fixed",
+          top: totalSelectedImages > 0 ? 90 : 0,
+          left: 0,
+          right: 0,
+          zIndex: 99,
+          background: "#e8f5e9",
+          padding: 12,
+          borderRadius: 0,
+          marginBottom: 16,
+          border: "none",
+          borderBottom: "2px solid #4CAF50",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
+            🤖 AI Product Details Enrichment: {selectedSkusForEnrichment.size} SKU(s) selected
           </div>
-        )}
-      </div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <button
+              onClick={() => {
+                if (selectedSkusForEnrichment.size === items.length) {
+                  setSelectedSkusForEnrichment(new Set());
+                } else {
+                  const allSkus = new Set(items.map(item => item.sku));
+                  setSelectedSkusForEnrichment(allSkus);
+                }
+              }}
+              style={{
+                padding: "8px 14px",
+                fontSize: 13,
+                background: "#388E3C",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              {selectedSkusForEnrichment.size === items.length ? "Deselect All" : "Select All"}
+            </button>
+            <button
+              onClick={handleEnrichAll}
+              disabled={enrichmentInProgress || selectedSkusForEnrichment.size === 0}
+              style={{
+                padding: "8px 14px",
+                fontSize: 13,
+                background: enrichmentInProgress ? "#ccc" : "#4CAF50",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                fontWeight: "bold",
+                cursor: enrichmentInProgress || selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {enrichmentInProgress ? "Enriching..." : "✨ Enrich Selected SKUs"}
+            </button>
+            <button
+              onClick={() => setSelectedSkusForEnrichment(new Set())}
+              style={{
+                padding: "8px 14px",
+                cursor: "pointer",
+                background: "#666",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+              }}
+            >
+              Clear All Selections
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Enrichment results */}
+      {enrichmentResults && (
+        <div style={{
+          background: "white",
+          padding: 12,
+          borderRadius: 4,
+          marginBottom: 16,
+          border: `2px solid ${enrichmentResults.failed === 0 ? "#4CAF50" : "#FF9800"}`,
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
+            {enrichmentResults.failed === 0 ? "✅" : "⚠️"} Results: {enrichmentResults.succeeded} succeeded, {enrichmentResults.failed} failed
+          </div>
+          {Object.entries(enrichmentResults.results).map(([s, res]) => (
+            <div key={s} style={{ fontSize: 12, padding: "4px 0", color: res.success ? "#4CAF50" : "#FF3D00" }}>
+              {s}: {res.success ? `+${res.updated_fields} fields` : res.message}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* eBay Enrichment Panel */}
+      {selectedSkusForEbayEnrichment.size > 0 && (
+        <div style={{
+          position: "fixed",
+          top: (() => {
+            let offset = 0;
+            if (totalSelectedImages > 0) offset += 90;
+            if (selectedSkusForEnrichment.size > 0) offset += 90;
+            return offset;
+          })(),
+          left: 0,
+          right: 0,
+          zIndex: 98,
+          background: "#fff3e0",
+          padding: 12,
+          borderRadius: 0,
+          marginBottom: 16,
+          border: "none",
+          borderBottom: "2px solid #FF9800",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
+            ⭐ eBay Fields Enrichment: {selectedSkusForEbayEnrichment.size} SKU(s) selected
+          </div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <button
+              onClick={() => {
+                if (selectedSkusForEbayEnrichment.size === items.length) {
+                  setSelectedSkusForEbayEnrichment(new Set());
+                } else {
+                  const allSkus = new Set(items.map(item => item.sku));
+                  setSelectedSkusForEbayEnrichment(allSkus);
+                }
+              }}
+              style={{
+                padding: "8px 14px",
+                fontSize: 13,
+                background: "#F57C00",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              {selectedSkusForEbayEnrichment.size === items.length ? "Deselect All" : "Select All"}
+            </button>
+            <button
+              onClick={handleEbayEnrichAll}
+              disabled={ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0}
+              style={{
+                padding: "8px 14px",
+                fontSize: 13,
+                background: ebayEnrichmentInProgress ? "#ccc" : "#FF9800",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                fontWeight: "bold",
+                cursor: ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {ebayEnrichmentInProgress ? "Enriching..." : "⭐ Enrich eBay Fields"}
+            </button>
+            <button
+              onClick={() => setSelectedSkusForEbayEnrichment(new Set())}
+              style={{
+                padding: "8px 14px",
+                cursor: "pointer",
+                background: "#666",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+              }}
+            >
+              Clear All Selections
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* eBay Enrichment results */}
+      {ebayEnrichmentResults && (
+        <div style={{
+          background: "white",
+          padding: 12,
+          borderRadius: 4,
+          marginBottom: 16,
+          border: `2px solid ${ebayEnrichmentResults.failed === 0 ? "#FF9800" : "#FF5722"}`,
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
+            {ebayEnrichmentResults.failed === 0 ? "✅" : "⚠️"} eBay Enrichment: {ebayEnrichmentResults.succeeded} succeeded, {ebayEnrichmentResults.failed} failed
+          </div>
+          {Object.entries(ebayEnrichmentResults.results).map(([s, res]) => (
+            <div key={s} style={{ fontSize: 12, padding: "4px 0", color: res.success ? "#FF9800" : "#FF3D00" }}>
+              {s}: {res.success ? res.message : res.message}
+            </div>
+          ))}
+        </div>
+      )}
 
       {items.length === 0 && (
         <div style={{
@@ -779,7 +975,7 @@ export default function SkuBatchPage() {
                     checked={selectedSkusForEnrichment.has(sku)}
                     onChange={() => toggleSkuForEnrichment(sku)}
                     style={{ width: 18, height: 18, cursor: "pointer" }}
-                    title="Select for AI enrichment"
+                    title="Select for AI Product Details & eBay Fields enrichment"
                   />
                   <h4 style={{ margin: 0 }}>SKU: <span style={{ fontFamily: "ui-monospace" }}>{sku}</span></h4>
                   {jsonStatus[sku] !== undefined && (
