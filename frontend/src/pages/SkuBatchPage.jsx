@@ -69,6 +69,18 @@ export default function SkuBatchPage() {
   const [enrichmentInProgress, setEnrichmentInProgress] = useState(false);
   const [enrichmentResults, setEnrichmentResults] = useState(null); // null | { total, succeeded, failed, results }
 
+  // eBay state
+  const [ebayExpanded, setEbayExpanded] = useState({}); // { sku: boolean }
+  const [ebaySchemas, setEbaySchemas] = useState({}); // { sku: schema }
+  const [ebayFields, setEbayFields] = useState({}); // { sku: fields }
+  const [ebayValidations, setEbayValidations] = useState({}); // { sku: validation }
+  const [ebayEnriching, setEbayEnriching] = useState({}); // { sku: boolean }
+  const [ebayEditingFields, setEbayEditingFields] = useState({}); // { sku: boolean }
+  const [ebayEditedFields, setEbayEditedFields] = useState({}); // { sku: { required: {}, optional: {} } }
+  const [ebaySavingFields, setEbaySavingFields] = useState({}); // { sku: boolean }
+  const [ebayListingData, setEbayListingData] = useState({}); // { sku: { price, quantity, condition } }
+  const [ebayCreatingListing, setEbayCreatingListing] = useState({}); // { sku: boolean }
+
   // Calculate total selected images across all SKUs
   const totalSelectedImages = useMemo(() => {
     return Object.values(selectedImages).reduce((sum, filenames) => sum + filenames.length, 0);
@@ -400,6 +412,138 @@ export default function SkuBatchPage() {
     } catch (e) {
       alert(`Error: ${e.message}`);
       setEnrichmentInProgress(false);
+    }
+  };
+
+  // eBay functions
+  const loadEbayData = async (sku) => {
+    try {
+      // Load schema for SKU
+      const schemaRes = await fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}`);
+      if (schemaRes.ok) {
+        const schemaData = await schemaRes.json();
+        setEbaySchemas(prev => ({ ...prev, [sku]: schemaData }));
+        
+        // Load current eBay fields from JSON
+        const fieldsRes = await fetch(`/api/ebay/fields/${encodeURIComponent(sku)}`);
+        if (fieldsRes.ok) {
+          const fieldsData = await fieldsRes.json();
+          setEbayFields(prev => ({ ...prev, [sku]: fieldsData }));
+        }
+        
+        // Validate
+        await validateEbayFields(sku);
+      }
+    } catch (e) {
+      console.error("Failed to load eBay data:", e);
+    }
+  };
+
+  const validateEbayFields = async (sku) => {
+    try {
+      const res = await fetch(`/api/ebay/validate/${encodeURIComponent(sku)}`);
+      if (res.ok) {
+        const data = await res.json();
+        setEbayValidations(prev => ({ ...prev, [sku]: data }));
+      }
+    } catch (e) {
+      console.error("Validation failed:", e);
+    }
+  };
+
+  const handleEbayEnrich = async (sku) => {
+    try {
+      setEbayEnriching(prev => ({ ...prev, [sku]: true }));
+      const res = await fetch("/api/ebay/enrich", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sku, force: false })
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        alert(`✅ ${sku}: Enriched ${data.updated_fields} fields`);
+        await loadEbayData(sku);
+      } else {
+        const err = await res.json();
+        alert(`❌ ${sku}: ${err.detail || "Enrichment failed"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayEnriching(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
+  const handleEbayCreateListing = async (sku) => {
+    const listingData = ebayListingData[sku] || {};
+    if (!listingData.price) {
+      alert("Please enter a price");
+      return;
+    }
+    
+    if (!confirm(`Create eBay listing for ${sku} at €${listingData.price}?`)) return;
+    
+    try {
+      setEbayCreatingListing(prev => ({ ...prev, [sku]: true }));
+      const res = await fetch("/api/ebay/listings/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku,
+          price: parseFloat(listingData.price),
+          quantity: parseInt(listingData.quantity || "1"),
+          condition: listingData.condition || "Neu"
+        })
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        if (data.listing_id) {
+          alert(`✅ Listing created! ID: ${data.listing_id}`);
+          window.open(`https://www.ebay.de/itm/${data.listing_id}`, "_blank");
+        }
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Listing creation failed"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayCreatingListing(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
+  const handleSaveEbayFields = async (sku) => {
+    try {
+      setEbaySavingFields(prev => ({ ...prev, [sku]: true }));
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-fields`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku,
+          required_fields: ebayEditedFields[sku]?.required || {},
+          optional_fields: ebayEditedFields[sku]?.optional || {}
+        })
+      });
+      
+      if (res.ok) {
+        alert(`✅ ${sku}: eBay fields saved!`);
+        setEbayEditingFields(prev => ({ ...prev, [sku]: false }));
+        setEbayEditedFields(prev => {
+          const newState = { ...prev };
+          delete newState[sku];
+          return newState;
+        });
+        await loadEbayData(sku);
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Failed to save fields"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbaySavingFields(prev => ({ ...prev, [sku]: false }));
     }
   };
 
@@ -968,137 +1112,471 @@ export default function SkuBatchPage() {
                   )}
                 </div>
               )}
-            </div>
 
-            {images.length === 0 && !error && (
-              <div style={{ padding: 12, color: "#666" }}>No images found.</div>
-            )}
+              {/* eBay Collapsible Section */}
+              <div style={{ marginTop: 16, borderTop: "2px solid #e0e0e0", paddingTop: 16 }}>
+                <button
+                  onClick={() => {
+                    setEbayExpanded(prev => ({ ...prev, [sku]: !prev[sku] }));
+                    if (!ebayExpanded[sku] && !ebaySchemas[sku]) loadEbayData(sku);
+                  }}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    padding: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    fontWeight: "bold",
+                    color: "#2196F3",
+                    fontSize: 15,
+                    marginBottom: 12
+                  }}
+                >
+                  <span style={{ fontSize: 18, transform: ebayExpanded[sku] ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
+                  ⭐ eBay Integration {ebayValidations[sku] && `(${ebayValidations[sku].filled_required}/${ebayValidations[sku].total_required})`}
+                </button>
 
-            {images.length > 0 && (
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10 }}>
-                {images.map((img) => {
-                  const rotatingKey = `${sku}/${img.filename}`;
-                  const isRotating = rotating[rotatingKey];
-                  const isSelected = (selectedImages[sku] || []).includes(img.filename);
-                  return (
-                    <div key={img.filename} style={{ border: isSelected ? "3px solid #2196F3" : "1px solid #ddd", borderRadius: 10, overflow: "hidden", position: "relative" }}>
-                      {/* Selection checkbox */}
-                      <div style={{ position: "absolute", top: 4, left: 4, zIndex: 10 }}>
-                        <input
-                          type="checkbox"
-                          checked={isSelected}
-                          onChange={() => toggleImageSelection(sku, img.filename)}
-                          style={{ width: 20, height: 20, cursor: "pointer" }}
-                        />
-                      </div>
-                      {/* Main image star badge */}
-                      {img.is_main && (
-                        <div style={{
-                          position: "absolute",
-                          top: 4,
-                          left: 32,
-                          zIndex: 10,
-                          background: "#FFD700",
-                          color: "#000",
-                          padding: "2px 6px",
-                          borderRadius: 4,
-                          fontSize: "0.7em",
-                          fontWeight: "bold",
-                          boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
-                        }}>
-                          ⭐ Main
+                {ebayExpanded[sku] && (
+                  <div style={{ padding: 12, background: "white" }}>
+                    {/* Validation Status */}
+                    {ebayValidations[sku] && (
+                      <div style={{
+                        marginBottom: 12,
+                        padding: 8,
+                        background: ebayValidations[sku].valid ? "#f0fff4" : "#fff9e6",
+                        border: `1px solid ${ebayValidations[sku].valid ? "#28a745" : "#ffc107"}`,
+                        borderRadius: 4
+                      }}>
+                        <div style={{ fontSize: 11, fontWeight: "bold", color: ebayValidations[sku].valid ? "#28a745" : "#f57c00" }}>
+                          {ebayValidations[sku].valid ? "✓ Ready for listing" : "⚠ Missing required fields"}
                         </div>
-                      )}
-                      {/* Classification badge */}
-                      {img.classification && (
-                        <div style={{
-                          position: "absolute",
-                          top: 4,
-                          right: 4,
-                          zIndex: 10,
-                          padding: "2px 6px",
-                          borderRadius: 4,
-                          fontSize: "0.7em",
-                          fontWeight: "bold",
-                          background: img.classification === "phone" ? "#2196F3" : img.classification === "stock" ? "#FF9800" : "#9C27B0",
-                          color: "white"
-                        }}>
-                          {img.classification === "phone" ? "📱" : img.classification === "stock" ? "📦" : "✨"}
+                        <div style={{ fontSize: 10, color: "#666", marginTop: 4 }}>
+                          Required: {ebayValidations[sku].filled_required}/{ebayValidations[sku].total_required} |
+                          Optional: {ebayValidations[sku].filled_optional}/{ebayValidations[sku].total_optional}
                         </div>
-                      )}
-                      <button
-                        onClick={() => setPreview({ sku, img })}
-                        style={{ all: "unset", cursor: "pointer", display: "block", position: "relative" }}
-                        title={img.filename}
-                      >
-                        <img
-                          src={`${img.thumb_url}&t=${Date.now()}`}
-                          alt={img.filename}
-                          style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", display: "block", opacity: isRotating ? 0.5 : 1 }}
-                          loading="lazy"
-                        />
-                        {isRotating && (
-                          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.3)", color: "white" }}>
-                            Rotating...
+                        {ebayValidations[sku].missing_required && ebayValidations[sku].missing_required.length > 0 && (
+                          <div style={{ fontSize: 10, color: "#d32f2f", marginTop: 6 }}>
+                            Missing: {ebayValidations[sku].missing_required.slice(0, 3).join(", ")}
+                            {ebayValidations[sku].missing_required.length > 3 && ` +${ebayValidations[sku].missing_required.length - 3} more`}
                           </div>
                         )}
+                      </div>
+                    )}
+
+                    {/* Action Buttons */}
+                    <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+                      <button
+                        onClick={() => handleEbayEnrich(sku)}
+                        disabled={ebayEnriching[sku] || ebayEditingFields[sku]}
+                        style={{
+                          flex: 1,
+                          minWidth: 120,
+                          padding: "8px 12px",
+                          fontSize: 11,
+                          background: "#28a745",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 4,
+                          cursor: (ebayEnriching[sku] || ebayEditingFields[sku]) ? "not-allowed" : "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        {ebayEnriching[sku] ? "🤖 Enriching..." : "🤖 Auto-Fill"}
                       </button>
-                      <div style={{ padding: 8 }}>
-                        <div style={{ fontSize: 12, fontFamily: "ui-monospace", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                          {img.filename}
-                        </div>
-                        <div style={{ fontSize: 12, color: "#666", marginTop: 4, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                          {img.is_ebay ? <span>eBay</span> : null}
-                          {img.source ? <span>{img.source}</span> : null}
-                        </div>
-                        <div style={{ marginTop: 6, display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap" }}>
+                      <button
+                        onClick={() => validateEbayFields(sku)}
+                        disabled={ebayEditingFields[sku]}
+                        title="Check if all required eBay fields are filled"
+                        style={{
+                          flex: 1,
+                          minWidth: 100,
+                          padding: "8px 12px",
+                          fontSize: 11,
+                          background: "#17a2b8",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 4,
+                          cursor: ebayEditingFields[sku] ? "not-allowed" : "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        ✓ Validate
+                      </button>
+                      {!ebayEditingFields[sku] ? (
+                        <button
+                          onClick={() => {
+                            setEbayEditingFields(prev => ({ ...prev, [sku]: true }));
+                            setEbayEditedFields(prev => ({
+                              ...prev,
+                              [sku]: {
+                                required: { ...(ebayFields[sku]?.required_fields || {}) },
+                                optional: { ...(ebayFields[sku]?.optional_fields || {}) }
+                              }
+                            }));
+                          }}
+                          style={{
+                            flex: 1,
+                            minWidth: 100,
+                            padding: "8px 12px",
+                            fontSize: 11,
+                            background: "#ff9800",
+                            color: "white",
+                            border: "none",
+                            borderRadius: 4,
+                            cursor: "pointer",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          ✏️ Edit
+                        </button>
+                      ) : (
+                        <>
                           <button
-                            onClick={() => handleToggleMainImage(sku, img.filename, img.is_main)}
-                            style={{ 
-                              padding: "2px 6px", 
-                              fontSize: 11, 
-                              cursor: "pointer",
-                              background: img.is_main ? "#FFD700" : "#e0e0e0",
-                              color: img.is_main ? "#000" : "#666",
+                            onClick={() => handleSaveEbayFields(sku)}
+                            disabled={ebaySavingFields[sku]}
+                            style={{
+                              flex: 1,
+                              minWidth: 80,
+                              padding: "8px 12px",
+                              fontSize: 11,
+                              background: "#4CAF50",
+                              color: "white",
                               border: "none",
-                              borderRadius: 3,
-                              fontWeight: img.is_main ? "bold" : "normal"
+                              borderRadius: 4,
+                              cursor: ebaySavingFields[sku] ? "not-allowed" : "pointer",
+                              fontWeight: "bold"
                             }}
-                            title={img.is_main ? "Unmark as main" : "Mark as main"}
                           >
-                            {img.is_main ? "⭐ Main" : "☆ Main"}
+                            {ebaySavingFields[sku] ? "Saving..." : "💾 Save"}
                           </button>
                           <button
-                            onClick={() => handleRotate(sku, img.filename, 90)}
-                            disabled={isRotating}
-                            style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
-                            title="Rotate 90° clockwise"
+                            onClick={() => {
+                              setEbayEditingFields(prev => ({ ...prev, [sku]: false }));
+                              setEbayEditedFields(prev => {
+                                const newState = { ...prev };
+                                delete newState[sku];
+                                return newState;
+                              });
+                            }}
+                            style={{
+                              flex: 1,
+                              minWidth: 80,
+                              padding: "8px 12px",
+                              fontSize: 11,
+                              background: "#999",
+                              color: "white",
+                              border: "none",
+                              borderRadius: 4,
+                              cursor: "pointer",
+                              fontWeight: "bold"
+                            }}
                           >
-                            ↻90°
+                            Cancel
                           </button>
-                          <button
-                            onClick={() => handleRotate(sku, img.filename, 180)}
-                            disabled={isRotating}
-                            style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
-                            title="Rotate 180°"
-                          >
-                            ↻180°
-                          </button>
-                          <button
-                            onClick={() => handleRotate(sku, img.filename, 270)}
-                            disabled={isRotating}
-                            style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
-                            title="Rotate 270° clockwise"
-                          >
-                            ↻270°
-                          </button>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Category Info */}
+                    {ebaySchemas[sku] && (
+                      <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
+                        <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebaySchemas[sku].category_name}</div>
+                        <div style={{ color: "#666" }}>ID: {ebaySchemas[sku].category_id}</div>
+                      </div>
+                    )}
+
+                    {/* eBay Fields Display */}
+                    {ebayFields[sku] && (
+                      <div style={{ marginBottom: 12 }}>
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 12 }}>
+                          {/* Required Fields */}
+                          {ebayFields[sku].required_fields && Object.keys(ebayFields[sku].required_fields).length > 0 && (
+                            <div>
+                              <div style={{ fontSize: 10, fontWeight: "bold", color: "#d32f2f", marginBottom: 6 }}>
+                                Required Fields ({Object.keys(ebayFields[sku].required_fields).length})
+                              </div>
+                              <div style={{ maxHeight: 300, overflow: "auto" }}>
+                                {Object.entries(ebayFields[sku].required_fields).map(([name, value]) => (
+                                  <div key={name} style={{ marginBottom: 6, padding: 6, background: "#fff8f8", borderRadius: 3 }}>
+                                    <div style={{ fontSize: 9, fontWeight: "600", color: "#d32f2f", marginBottom: 3 }}>{name}</div>
+                                    {ebayEditingFields[sku] ? (
+                                      <input
+                                        type="text"
+                                        value={ebayEditedFields[sku]?.required?.[name] ?? value}
+                                        onChange={(e) => setEbayEditedFields(prev => ({
+                                          ...prev,
+                                          [sku]: {
+                                            ...(prev[sku] || {}),
+                                            required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                          }
+                                        }))}
+                                        style={{
+                                          width: "100%",
+                                          padding: "4px 6px",
+                                          fontSize: 9,
+                                          border: "1px solid #d32f2f",
+                                          borderRadius: 3,
+                                          fontFamily: "monospace"
+                                        }}
+                                      />
+                                    ) : (
+                                      <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{value || <em style={{ color: "#999" }}>empty</em>}</div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Optional Fields */}
+                          {ebayFields[sku].optional_fields && Object.keys(ebayFields[sku].optional_fields).length > 0 && (
+                            <div>
+                              <div style={{ fontSize: 10, fontWeight: "bold", color: "#1976d2", marginBottom: 6 }}>
+                                Optional Fields ({Object.keys(ebayFields[sku].optional_fields).length})
+                              </div>
+                              <div style={{ maxHeight: 300, overflow: "auto" }}>
+                                {Object.entries(ebayFields[sku].optional_fields).map(([name, value]) => (
+                                  <div key={name} style={{ marginBottom: 6, padding: 6, background: "#f8f8ff", borderRadius: 3 }}>
+                                    <div style={{ fontSize: 9, fontWeight: "600", color: "#1976d2", marginBottom: 3 }}>{name}</div>
+                                    {ebayEditingFields[sku] ? (
+                                      <input
+                                        type="text"
+                                        value={ebayEditedFields[sku]?.optional?.[name] ?? value}
+                                        onChange={(e) => setEbayEditedFields(prev => ({
+                                          ...prev,
+                                          [sku]: {
+                                            ...(prev[sku] || {}),
+                                            optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                          }
+                                        }))}
+                                        style={{
+                                          width: "100%",
+                                          padding: "4px 6px",
+                                          fontSize: 9,
+                                          border: "1px solid #1976d2",
+                                          borderRadius: 3,
+                                          fontFamily: "monospace"
+                                        }}
+                                      />
+                                    ) : (
+                                      <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{value || <em style={{ color: "#999" }}>empty</em>}</div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
+                    )}
+
+                    {/* Create Listing Section */}
+                    <div style={{ borderTop: "1px solid #e0e0e0", paddingTop: 12 }}>
+                      <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>Create eBay Listing</div>
+
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 2fr", gap: 8, alignItems: "end" }}>
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Price (€)</label>
+                          <input
+                            type="number"
+                            step="0.01"
+                            value={ebayListingData[sku]?.price || ""}
+                            onChange={(e) => setEbayListingData(prev => ({
+                              ...prev,
+                              [sku]: { ...(prev[sku] || { quantity: "1", condition: "Neu" }), price: e.target.value }
+                            }))}
+                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                            placeholder="29.99"
+                          />
+                        </div>
+
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Qty</label>
+                          <input
+                            type="number"
+                            min="1"
+                            value={ebayListingData[sku]?.quantity || "1"}
+                            onChange={(e) => setEbayListingData(prev => ({
+                              ...prev,
+                              [sku]: { ...(prev[sku] || { price: "", condition: "Neu" }), quantity: e.target.value }
+                            }))}
+                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                          />
+                        </div>
+
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
+                          <select
+                            value={ebayListingData[sku]?.condition || "Neu"}
+                            onChange={(e) => setEbayListingData(prev => ({
+                              ...prev,
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1" }), condition: e.target.value }
+                            }))}
+                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                          >
+                            <option value="Neu">Neu</option>
+                            <option value="Neu mit Etikett">Neu mit Etikett</option>
+                            <option value="Neuwertig">Neuwertig</option>
+                            <option value="Gut">Gut</option>
+                            <option value="Sehr gut">Sehr gut</option>
+                            <option value="Akzeptabel">Akzeptabel</option>
+                          </select>
+                        </div>
+
+                        <button
+                          onClick={() => handleEbayCreateListing(sku)}
+                          disabled={ebayCreatingListing[sku] || !ebayListingData[sku]?.price}
+                          style={{
+                            padding: "8px 12px",
+                            fontSize: 11,
+                            background: "#ff6b00",
+                            color: "white",
+                            border: "none",
+                            borderRadius: 4,
+                            cursor: (ebayCreatingListing[sku] || !ebayListingData[sku]?.price) ? "not-allowed" : "pointer",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          {ebayCreatingListing[sku] ? "Creating..." : "📤 Create Listing"}
+                        </button>
+                      </div>
                     </div>
-                  );
-                })}
+                  </div>
+                )}
               </div>
-            )}
+
+              {images.length === 0 && !error && (
+                <div style={{ padding: 12, color: "#666" }}>No images found.</div>
+              )}
+
+              {images.length > 0 && (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10 }}>
+                  {images.map((img) => {
+                    const rotatingKey = `${sku}/${img.filename}`;
+                    const isRotating = rotating[rotatingKey];
+                    const isSelected = (selectedImages[sku] || []).includes(img.filename);
+                    return (
+                      <div key={img.filename} style={{ border: isSelected ? "3px solid #2196F3" : "1px solid #ddd", borderRadius: 10, overflow: "hidden", position: "relative" }}>
+                        {/* Selection checkbox */}
+                        <div style={{ position: "absolute", top: 4, left: 4, zIndex: 10 }}>
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={() => toggleImageSelection(sku, img.filename)}
+                            style={{ width: 20, height: 20, cursor: "pointer" }}
+                          />
+                        </div>
+                        {/* Main image star badge */}
+                        {img.is_main && (
+                          <div style={{
+                            position: "absolute",
+                            top: 4,
+                            left: 32,
+                            zIndex: 10,
+                            background: "#FFD700",
+                            color: "#000",
+                            padding: "2px 6px",
+                            borderRadius: 4,
+                            fontSize: "0.7em",
+                            fontWeight: "bold",
+                            boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
+                          }}>
+                            ⭐ Main
+                          </div>
+                        )}
+                        {/* Classification badge */}
+                        {img.classification && (
+                          <div style={{
+                            position: "absolute",
+                            top: 4,
+                            right: 4,
+                            zIndex: 10,
+                            padding: "2px 6px",
+                            borderRadius: 4,
+                            fontSize: "0.7em",
+                            fontWeight: "bold",
+                            background: img.classification === "phone" ? "#2196F3" : img.classification === "stock" ? "#FF9800" : "#9C27B0",
+                            color: "white"
+                          }}>
+                            {img.classification === "phone" ? "📱" : img.classification === "stock" ? "📦" : "✨"}
+                          </div>
+                        )}
+                          <button
+                          onClick={() => setPreview({ sku, img })}
+                          style={{ all: "unset", cursor: "pointer", display: "block", position: "relative" }}
+                          title={img.filename}
+                        >
+                          <img
+                            src={`${img.thumb_url}&t=${Date.now()}`}
+                            alt={img.filename}
+                            style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", display: "block", opacity: isRotating ? 0.5 : 1 }}
+                            loading="lazy"
+                          />
+                          {isRotating && (
+                            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.3)", color: "white" }}>
+                              Rotating...
+                            </div>
+                          )}
+                        </button>
+                          <div style={{ padding: 8 }}>
+                          <div style={{ fontSize: 12, fontFamily: "ui-monospace", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                            {img.filename}
+                          </div>
+                          <div style={{ fontSize: 12, color: "#666", marginTop: 4, display: "flex", gap: 8, flexWrap: "wrap" }}>
+                            {img.is_ebay ? <span>eBay</span> : null}
+                            {img.source ? <span>{img.source}</span> : null}
+                          </div>
+                          <div style={{ marginTop: 6, display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap" }}>
+                            <button
+                              onClick={() => handleToggleMainImage(sku, img.filename, img.is_main)}
+                              style={{ 
+                                padding: "2px 6px", 
+                                fontSize: 11, 
+                                cursor: "pointer",
+                                background: img.is_main ? "#FFD700" : "#e0e0e0",
+                                color: img.is_main ? "#000" : "#666",
+                                border: "none",
+                                borderRadius: 3,
+                                fontWeight: img.is_main ? "bold" : "normal"
+                              }}
+                              title={img.is_main ? "Unmark as main" : "Mark as main"}
+                            >
+                              {img.is_main ? "⭐ Main" : "☆ Main"}
+                            </button>
+                            <button
+                              onClick={() => handleRotate(sku, img.filename, 90)}
+                              disabled={isRotating}
+                              style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
+                              title="Rotate 90° clockwise"
+                            >
+                              ↻90°
+                            </button>
+                            <button
+                              onClick={() => handleRotate(sku, img.filename, 180)}
+                              disabled={isRotating}
+                              style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
+                              title="Rotate 180°"
+                            >
+                              ↻180°
+                            </button>
+                            <button
+                              onClick={() => handleRotate(sku, img.filename, 270)}
+                              disabled={isRotating}
+                              style={{ padding: "2px 6px", fontSize: 11, cursor: isRotating ? "not-allowed" : "pointer" }}
+                              title="Rotate 270° clockwise"
+                            >
+                              ↻270°
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         );
       })}

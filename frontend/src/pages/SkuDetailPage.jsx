@@ -48,6 +48,20 @@ export default function SkuDetailPage() {
   const [editingDetails, setEditingDetails] = useState(false);
   const [editedFields, setEditedFields] = useState({});
 
+  // eBay state
+  const [ebayExpanded, setEbayExpanded] = useState(false);
+  const [ebaySchema, setEbaySchema] = useState(null);
+  const [ebayFields, setEbayFields] = useState(null);
+  const [ebayValidation, setEbayValidation] = useState(null);
+  const [ebayEnriching, setEbayEnriching] = useState(false);
+  const [ebayValidating, setEbayValidating] = useState(false);
+  const [ebayLoading, setEbayLoading] = useState(false);
+  const [ebayEditingFields, setEbayEditingFields] = useState(false);
+  const [ebayEditedFields, setEbayEditedFields] = useState({});
+  const [ebaySavingFields, setEbaySavingFields] = useState(false);
+  const [ebayListingData, setEbayListingData] = useState({ price: "", quantity: "1", condition: "Neu" });
+  const [ebayCreatingListing, setEbayCreatingListing] = useState(false);
+
   const handleGenerateJson = async () => {
     setGeneratingJson(true);
     try {
@@ -67,6 +81,139 @@ export default function SkuDetailPage() {
       alert(`Error: ${e.message}`);
     } finally {
       setGeneratingJson(false);
+    }
+  };
+
+  // eBay functions
+  const loadEbayData = async () => {
+    try {
+      setEbayLoading(true);
+      // Load schema for SKU
+      const schemaRes = await fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}`);
+      if (schemaRes.ok) {
+        const schemaData = await schemaRes.json();
+        setEbaySchema(schemaData);
+        
+        // Load current eBay fields from JSON
+        const fieldsRes = await fetch(`/api/ebay/fields/${encodeURIComponent(sku)}`);
+        if (fieldsRes.ok) {
+          const fieldsData = await fieldsRes.json();
+          setEbayFields(fieldsData);
+        }
+        
+        // Validate
+        await validateEbayFields();
+      }
+    } catch (e) {
+      console.error("Failed to load eBay data:", e);
+    } finally {
+      setEbayLoading(false);
+    }
+  };
+
+  const validateEbayFields = async () => {
+    try {
+      setEbayValidating(true);
+      const res = await fetch(`/api/ebay/validate/${encodeURIComponent(sku)}`);
+      if (res.ok) {
+        const data = await res.json();
+        setEbayValidation(data);
+      }
+    } catch (e) {
+      console.error("Validation failed:", e);
+    } finally {
+      setEbayValidating(false);
+    }
+  };
+
+  const handleEbayEnrich = async () => {
+    try {
+      setEbayEnriching(true);
+      const res = await fetch("/api/ebay/enrich", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sku, force: false })
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        alert(`✅ Enriched ${data.updated_fields} fields`);
+        await loadEbayData();
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Enrichment failed"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayEnriching(false);
+    }
+  };
+
+  const handleEbayCreateListing = async () => {
+    if (!ebayListingData.price) {
+      alert("Please enter a price");
+      return;
+    }
+    
+    if (!confirm(`Create eBay listing for ${sku} at €${ebayListingData.price}?`)) return;
+    
+    try {
+      setEbayCreatingListing(true);
+      const res = await fetch("/api/ebay/listings/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku,
+          price: parseFloat(ebayListingData.price),
+          quantity: parseInt(ebayListingData.quantity),
+          condition: ebayListingData.condition
+        })
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        if (data.listing_id) {
+          alert(`✅ Listing created! ID: ${data.listing_id}`);
+          window.open(`https://www.ebay.de/itm/${data.listing_id}`, "_blank");
+        }
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Listing creation failed"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayCreatingListing(false);
+    }
+  };
+
+  const handleSaveEbayFields = async () => {
+    try {
+      setEbaySavingFields(true);
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-fields`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku,
+          required_fields: ebayEditedFields.required || {},
+          optional_fields: ebayEditedFields.optional || {}
+        })
+      });
+      
+      if (res.ok) {
+        alert("✅ eBay fields saved!");
+        setEbayEditingFields(false);
+        setEbayEditedFields({});
+        await loadEbayData();
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Failed to save fields"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbaySavingFields(false);
     }
   };
 
@@ -746,6 +893,310 @@ export default function SkuDetailPage() {
             </div>
           </div>
         )}
+
+        {/* eBay Section */}
+        <div style={{ marginTop: 24, borderTop: "2px solid #e0e0e0", paddingTop: 16 }}>
+          <button
+            onClick={() => {
+              setEbayExpanded(!ebayExpanded);
+              if (!ebayExpanded && !ebaySchema) loadEbayData();
+            }}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              fontWeight: "bold",
+              color: "#2196F3",
+              fontSize: 15,
+              marginBottom: 12
+            }}
+          >
+            <span style={{ fontSize: 18, transform: ebayExpanded ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
+            ⭐ eBay Integration {ebayValidation && `(${ebayValidation.filled_required}/${ebayValidation.total_required})`}
+          </button>
+
+          {ebayExpanded && (
+            <div>
+              {/* Validation Status */}
+              {ebayValidation && (
+                <div style={{ 
+                  marginBottom: 12, 
+                  padding: 8, 
+                  background: ebayValidation.valid ? "#f0fff4" : "#fff9e6",
+                  border: `1px solid ${ebayValidation.valid ? "#28a745" : "#ffc107"}`,
+                  borderRadius: 4 
+                }}>
+                  <div style={{ fontSize: 11, fontWeight: "bold", color: ebayValidation.valid ? "#28a745" : "#f57c00" }}>
+                    {ebayValidation.valid ? "✓ Ready for listing" : "⚠ Missing required fields"}
+                  </div>
+                  <div style={{ fontSize: 10, color: "#666", marginTop: 4 }}>
+                    Required: {ebayValidation.filled_required}/{ebayValidation.total_required} | 
+                    Optional: {ebayValidation.filled_optional}/{ebayValidation.total_optional}
+                  </div>
+                  {ebayValidation.missing_required && ebayValidation.missing_required.length > 0 && (
+                    <div style={{ fontSize: 10, color: "#d32f2f", marginTop: 6 }}>
+                      Missing: {ebayValidation.missing_required.slice(0, 3).join(", ")}
+                      {ebayValidation.missing_required.length > 3 && ` +${ebayValidation.missing_required.length - 3} more`}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 12 }}>
+                <button
+                  onClick={handleEbayEnrich}
+                  disabled={ebayEnriching || ebayEditingFields}
+                  style={{
+                    padding: "8px 12px",
+                    fontSize: 12,
+                    background: "#28a745",
+                    color: "white",
+                    border: "none",
+                    borderRadius: 4,
+                    cursor: (ebayEnriching || ebayEditingFields) ? "not-allowed" : "pointer",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {ebayEnriching ? "🤖 Enriching..." : "🤖 Auto-Fill eBay Fields"}
+                </button>
+                <button
+                  onClick={validateEbayFields}
+                  disabled={ebayValidating || ebayEditingFields}
+                  title="Check if all required eBay fields are filled"
+                  style={{
+                    padding: "8px 12px",
+                    fontSize: 12,
+                    background: "#17a2b8",
+                    color: "white",
+                    border: "none",
+                    borderRadius: 4,
+                    cursor: (ebayValidating || ebayEditingFields) ? "not-allowed" : "pointer",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {ebayValidating ? "Validating..." : "✓ Validate Fields"}
+                </button>
+                {!ebayEditingFields ? (
+                  <button
+                    onClick={() => {
+                      setEbayEditingFields(true);
+                      setEbayEditedFields({
+                        required: { ...(ebayFields?.required_fields || {}) },
+                        optional: { ...(ebayFields?.optional_fields || {}) }
+                      });
+                    }}
+                    style={{
+                      padding: "8px 12px",
+                      fontSize: 12,
+                      background: "#ff9800",
+                      color: "white",
+                      border: "none",
+                      borderRadius: 4,
+                      cursor: "pointer",
+                      fontWeight: "bold"
+                    }}
+                  >
+                    ✏️ Edit Fields
+                  </button>
+                ) : (
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <button
+                      onClick={handleSaveEbayFields}
+                      disabled={ebaySavingFields}
+                      style={{
+                        flex: 1,
+                        padding: "8px 12px",
+                        fontSize: 12,
+                        background: "#4CAF50",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 4,
+                        cursor: ebaySavingFields ? "not-allowed" : "pointer",
+                        fontWeight: "bold"
+                      }}
+                    >
+                      {ebaySavingFields ? "Saving..." : "💾 Save"}
+                    </button>
+                    <button
+                      onClick={() => {
+                        setEbayEditingFields(false);
+                        setEbayEditedFields({});
+                      }}
+                      style={{
+                        flex: 1,
+                        padding: "8px 12px",
+                        fontSize: 12,
+                        background: "#999",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                        fontWeight: "bold"
+                      }}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Category Info */}
+              {ebaySchema && (
+                <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
+                  <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebaySchema.category_name}</div>
+                  <div style={{ color: "#666" }}>ID: {ebaySchema.category_id}</div>
+                </div>
+              )}
+
+              {/* Loading State */}
+              {ebayLoading && (
+                <div style={{ padding: 12, textAlign: "center", color: "#666", fontSize: 11 }}>
+                  Loading eBay fields...
+                </div>
+              )}
+
+              {/* eBay Fields Display */}
+              {!ebayLoading && ebayFields && (
+                <div style={{ marginBottom: 12, maxHeight: 400, overflow: "auto" }}>
+                  {/* Required Fields */}
+                  {ebayFields.required_fields && Object.keys(ebayFields.required_fields).length > 0 && (
+                    <div style={{ marginBottom: 12 }}>
+                      <div style={{ fontSize: 10, fontWeight: "bold", color: "#d32f2f", marginBottom: 6 }}>
+                        Required Fields
+                      </div>
+                      {Object.entries(ebayFields.required_fields).map(([name, value]) => (
+                        <div key={name} style={{ marginBottom: 6, padding: 6, background: "#fff8f8", borderRadius: 3 }}>
+                          <div style={{ fontSize: 9, fontWeight: "600", color: "#d32f2f", marginBottom: 3 }}>{name}</div>
+                          {ebayEditingFields ? (
+                            <input
+                              type="text"
+                              value={ebayEditedFields.required?.[name] ?? value}
+                              onChange={(e) => setEbayEditedFields(prev => ({
+                                ...prev,
+                                required: { ...(prev.required || {}), [name]: e.target.value }
+                              }))}
+                              style={{
+                                width: "100%",
+                                padding: "4px 6px",
+                                fontSize: 9,
+                                border: "1px solid #d32f2f",
+                                borderRadius: 3,
+                                fontFamily: "monospace"
+                              }}
+                            />
+                          ) : (
+                            <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{value || <em style={{ color: "#999" }}>empty</em>}</div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {/* Optional Fields */}
+                  {ebayFields.optional_fields && Object.keys(ebayFields.optional_fields).length > 0 && (
+                    <div>
+                      <div style={{ fontSize: 10, fontWeight: "bold", color: "#1976d2", marginBottom: 6 }}>
+                        Optional Fields ({Object.keys(ebayFields.optional_fields).length})
+                      </div>
+                      {Object.entries(ebayFields.optional_fields).map(([name, value]) => (
+                        <div key={name} style={{ marginBottom: 6, padding: 6, background: "#f8f8ff", borderRadius: 3 }}>
+                          <div style={{ fontSize: 9, fontWeight: "600", color: "#1976d2", marginBottom: 3 }}>{name}</div>
+                          {ebayEditingFields ? (
+                            <input
+                              type="text"
+                              value={ebayEditedFields.optional?.[name] ?? value}
+                              onChange={(e) => setEbayEditedFields(prev => ({
+                                ...prev,
+                                optional: { ...(prev.optional || {}), [name]: e.target.value }
+                              }))}
+                              style={{
+                                width: "100%",
+                                padding: "4px 6px",
+                                fontSize: 9,
+                                border: "1px solid #1976d2",
+                                borderRadius: 3,
+                                fontFamily: "monospace"
+                              }}
+                            />
+                          ) : (
+                            <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{value || <em style={{ color: "#999" }}>empty</em>}</div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Create Listing Section */}
+              <div style={{ marginTop: 16, borderTop: "1px solid #e0e0e0", paddingTop: 12 }}>
+                <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8 }}>Create eBay Listing</div>
+                
+                <div style={{ marginBottom: 8 }}>
+                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Price (€)</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    value={ebayListingData.price}
+                    onChange={(e) => setEbayListingData({...ebayListingData, price: e.target.value})}
+                    style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                    placeholder="29.99"
+                  />
+                </div>
+
+                <div style={{ marginBottom: 8 }}>
+                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Quantity</label>
+                  <input
+                    type="number"
+                    min="1"
+                    value={ebayListingData.quantity}
+                    onChange={(e) => setEbayListingData({...ebayListingData, quantity: e.target.value})}
+                    style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                  />
+                </div>
+
+                <div style={{ marginBottom: 12 }}>
+                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
+                  <select
+                    value={ebayListingData.condition}
+                    onChange={(e) => setEbayListingData({...ebayListingData, condition: e.target.value})}
+                    style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                  >
+                    <option value="Neu">Neu</option>
+                    <option value="Neu mit Etikett">Neu mit Etikett</option>
+                    <option value="Neuwertig">Neuwertig</option>
+                    <option value="Gut">Gut</option>
+                    <option value="Sehr gut">Sehr gut</option>
+                    <option value="Akzeptabel">Akzeptabel</option>
+                  </select>
+                </div>
+
+                <button
+                  onClick={handleEbayCreateListing}
+                  disabled={ebayCreatingListing || !ebayListingData.price}
+                  style={{
+                    width: "100%",
+                    padding: "10px",
+                    fontSize: 12,
+                    background: "#ff6b00",
+                    color: "white",
+                    border: "none",
+                    borderRadius: 4,
+                    cursor: (ebayCreatingListing || !ebayListingData.price) ? "not-allowed" : "pointer",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {ebayCreatingListing ? "Creating..." : "📤 Create eBay Listing"}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>    </div>
   );
 }

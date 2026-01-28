@@ -657,6 +657,74 @@ def validate_ebay_fields(sku: str):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+@app.get("/api/ebay/fields/{sku}")
+def get_ebay_fields_for_sku(sku: str):
+    """Get current eBay fields for SKU from JSON file"""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json
+        
+        product_json = read_sku_json(sku)
+        if not product_json:
+            return {
+                "success": False,
+                "message": f"No JSON found for SKU {sku}",
+                "required_fields": {},
+                "optional_fields": {}
+            }
+        
+        ebay_fields = product_json.get("eBay Fields", {})
+        
+        # Handle both old flat format and new structured format
+        if isinstance(ebay_fields, dict):
+            if "required" in ebay_fields or "optional" in ebay_fields:
+                # New structured format
+                required_fields = ebay_fields.get("required", {})
+                optional_fields = ebay_fields.get("optional", {})
+            else:
+                # Old flat format - need to split based on schema
+                # For now, just return all as optional
+                required_fields = {}
+                optional_fields = ebay_fields
+        else:
+            required_fields = {}
+            optional_fields = {}
+        
+        return {
+            "success": True,
+            "sku": sku,
+            "required_fields": required_fields,
+            "optional_fields": optional_fields
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/skus/{sku}/ebay-fields")
+def save_ebay_fields_for_sku(sku: str, request: dict):
+    """Save eBay fields to SKU JSON file"""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+        
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+        
+        # Update eBay Fields with new structured format
+        product_json["eBay Fields"] = {
+            "required": request.get("required_fields", {}),
+            "optional": request.get("optional_fields", {})
+        }
+        
+        write_sku_json(sku, product_json)
+        
+        return {
+            "success": True,
+            "message": "eBay fields saved successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 # ============================================================
 # eBay Listing Endpoints
 # ============================================================
