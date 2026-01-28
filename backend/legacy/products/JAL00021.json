@@ -1,0 +1,175 @@
+{
+  "JAL00021": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNSC117051643",
+      "ISIN": "b0d9qkbqbs",
+      "Supplier Title": "Bindokun Large Waterproof Cable Box, Outdoor Cable Box Waterproof (33 x 21.2 x 13 cm), IP54 Waterproof Box Outdoor to Protect Multiple Sockets, Extension Cables, Outdoor Plugs"
+    },
+    "Price Data": {
+      "Price Net": "8.18",
+      "Shipping Net": "0.93",
+      "Total Cost Net": "9.11"
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Elektromaterial/Verlängerungskabel & Zubehör/Sicherheitsboxen & Schutzboxen",
+      "eBay Category ID": "259491"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Bindokun",
+      "Color": "Schwarz",
+      "Size": "33 x 21,2 x 13 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "IP54 wasserdichte Box zum Schutz von Mehrfachsteckdosen und Verlängerungskabeln im Freien. Mit Aufhängevorrichtung und nachleuchtendem Warnaufkleber.",
+      "Keywords": "wasserdichte Kabelbox für den Außenbereich",
+      "Materials": "Verstärktes Polypropylen (PP)"
+    },
+    "OP": {
+      "OP": "33.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "IMG_9346.jpg"
+        },
+        {
+          "filename": "IMG_9345.jpg"
+        },
+        {
+          "filename": "IMG_9344.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IBIAAeSwI-tpZB0O/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TOIAAeSwmxtpZB0Q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CyoAAeSweG9pZB0S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2N8AAeSw4mtpZB0U/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/enkAAeSwOIppZB0W/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9345.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-5AAAeSwLLVpZB0Z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9346.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zlEAAeSwlxdpZB0f/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos",
+        "Produktart": "Kabelabdeckung"
+      },
+      "optional": {
+        "Endbeschlagmaterial": "",
+        "Material": "Kunststoff",
+        "Farbe": "Schwarz",
+        "Breite": "",
+        "Durchmesser": "",
+        "Finish": "",
+        "Länge": "250 mm",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": "",
+        "Anzahl pro Packung": "1",
+        "Besonderheiten": "Wetterfest, staubdicht",
+        "Herstellergarantie": "",
+        "Ursprungsland": "",
+        "Höhe": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "39.0",
+        "Net Profit": "9.223109243697483",
+        "Net Profit Margin": "101.24159433257391"
+      }
+    }
+  }
+}

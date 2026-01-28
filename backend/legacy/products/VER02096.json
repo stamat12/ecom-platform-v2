@@ -1,0 +1,228 @@
+{
+  "VER02096": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "2536714",
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "207835",
+      "ISIN": "",
+      "Supplier Title": "Sakko Damengröße 32"
+    },
+    "Price Data": {
+      "Price Net": "0.83",
+      "Shipping Net": "0.82",
+      "Total Cost Net": "1.66"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Anzüge & Anzugteile",
+      "eBay Category ID": "63865"
+    },
+    "EAN": {
+      "EAN": "4099589982988"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Comma",
+      "Color": "Braun",
+      "Size": "32"
+    },
+    "Intern Generated Info": {
+      "More details": "Länge: ca. 57 cm, Brustweite: ca. 41 cm, Ärmellänge: ca. 60 cm",
+      "Keywords": "Blazer",
+      "Materials": "Viskose, Leinen, Baumwolle, Polyester"
+    },
+    "OP": {
+      "OP": "149.99"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02096 (10).jpg"
+        },
+        {
+          "filename": "VER02096 (5).jpg"
+        },
+        {
+          "filename": "VER02096 (6).jpg"
+        },
+        {
+          "filename": "VER02096 (11).jpg"
+        },
+        {
+          "filename": "VER02096 (13).jpg"
+        },
+        {
+          "filename": "VER02096 (4).jpg"
+        },
+        {
+          "filename": "VER02096 (3).jpg"
+        },
+        {
+          "filename": "VER02096 (8).jpg"
+        },
+        {
+          "filename": "VER02096 (1).jpg"
+        },
+        {
+          "filename": "VER02096 (12).jpg"
+        },
+        {
+          "filename": "VER02096 (9).jpg"
+        },
+        {
+          "filename": "VER02096 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02096 (5).jpg"
+        },
+        {
+          "filename": "VER02096 (4).jpg"
+        },
+        {
+          "filename": "VER02096 (7).jpg"
+        },
+        {
+          "filename": "VER02096 (8).jpg"
+        },
+        {
+          "filename": "VER02096 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02096 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/wgkAAeSwFjVpYsow/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/G3UAAeSwBWZpYso0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (10).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/Ju8AAeSwhFhpYso4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UeEAAeSw~x5pYso8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oDoAAeSwZappYspA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yZwAAeSwqgJpYspE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J-wAAeSw8ZdpYspI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/k5YAAeSw4U9pYspL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/IY4AAeSwfkRpYspQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/M4gAAeSwnwJpYspT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/KBgAAeSw8ZdpYspY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02096 (9).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/6F8AAeSwpl9pYspd/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Damen",
+        "Farbe": "Braun",
+        "Größe": "34",
+        "Marke": "COMMA",
+        "Produktart": "Blazer",
+        "Stil": "Hosenanzug"
+      },
+      "optional": {
+        "Anlass": "Business",
+        "Thema": "",
+        "Set enthält": "",
+        "Material": "",
+        "Größenkategorie": "Normalgröße",
+        "Jacken-/Mantellänge": "Normal",
+        "Vintage": "Nein",
+        "Jackenrevers-Form": "Spitzkragen",
+        "Gewebeart": "",
+        "Muster": "",
+        "Futtermaterial": "",
+        "Anzahl der Teile": "Einteilig",
+        "Jahreszeit": "",
+        "Jackenschnitt": "Einreihig",
+        "Besonderheiten": "",
+        "Passform": "",
+        "Ursprungsland": "",
+        "Taillenumfang": "",
+        "Brustumfang": "",
+        "Ärmellänge": "Langarm",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein",
+        "Schrittlänge": "",
+        "Herstellernummer": "",
+        "Jackenärmel-Knopfart": "Ein-Knopf",
+        "Knöpfung der Jacke": "Ein-Knopf",
+        "Textilpflege": "Maschinenwäsche",
+        "Anleitung für Personalisierung": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "85.0",
+        "Net Profit": "49.808571428571426",
+        "Net Profit Margin": "3000.5163511187607"
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "JAL00243": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "Aottori muslin blouse women's oversized shirt blouse tops long-sleeved shirt long blouse long-sleeved shirt elegant V-neck cotton loose blouse shirt blouses tunic with pocket #purple XXL"
+    },
+    "Price Data": {
+      "Price Net": 1.17,
+      "Shipping Net": 0.31,
+      "Total Cost Net": 1.48
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Aottori",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": []
+    }
+  }
+}

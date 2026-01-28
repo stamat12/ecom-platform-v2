@@ -1,0 +1,186 @@
+{
+  "HAN000442": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051404,
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 810198,
+      "ISIN": "",
+      "Supplier Title": "1 Stk. Mizuna Jacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 12.5,
+      "Shipping Net": 2.67,
+      "Total Cost Net": 15.17
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Mizuno",
+      "Color": "Dunkelblau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Gepolsterte, wasserabweisende Jacke, die Sie bei kälteren Bedingungen warm hält.",
+      "Keywords": "Club Jacke",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": 65.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 2,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HAN000442 (5).jpg"
+        },
+        {
+          "filename": "HAN000442 (3).jpg"
+        },
+        {
+          "filename": "HAN000442 (7).jpg"
+        },
+        {
+          "filename": "HAN000442 (2).jpg"
+        },
+        {
+          "filename": "HAN000442 (1).jpg"
+        },
+        {
+          "filename": "HAN000442 (6).jpg"
+        },
+        {
+          "filename": "HAN000442 (4).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000442 (3)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000442 (3)_1.jpg"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "HAN000442 (2).jpg"
+        },
+        {
+          "filename": "HAN000442 (7).jpg"
+        },
+        {
+          "filename": "HAN000442 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000442 (3)_1_upscaled_x4.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/46wAAeSwUMlpYsHC/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000442 (3)_1.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTE4NFg4NjQ=/z/GgIAAeSwXUNpYsHF/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000442 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AncAAeSw-1VpYsHI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000442 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2wgAAeSwXVppYsHM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000442 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/YIkAAeSw45JpYsHP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000442 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LD0AAeSwgaVpYsHS/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Mizuno",
+        "Größe": "S",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Sportjacke",
+        "Farbe": "Navy",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Winter",
+        "Futtermaterial": "",
+        "Besonderheiten": "",
+        "Gewebeart": "",
+        "Thema": "",
+        "Ursprungsland": "China",
+        "Modell": "Mizuno Club Jacket",
+        "Isoliermaterial": "",
+        "Jacken-/Mantellänge": "",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Aktivität": "",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Produktlinie": "",
+        "Muster": "Ohne Muster",
+        "Akzente": "",
+        "Passform": "",
+        "Wärmegrad": "",
+        "Kragenart": "",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Textilpflege": "",
+        "Brustumfang": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "32FE9A07",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "65.0",
+        "Net Profit": "21.8918487394958",
+        "Net Profit Margin": "144.31014330583915"
+      }
+    }
+  }
+}

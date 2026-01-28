@@ -1,0 +1,49 @@
+{
+  "2": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2024/10/10",
+      "Invoice Date": "2024-10-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 2.1,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 2.26
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen"
+    },
+    "EAN": {
+      "EAN": 1923310112036.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Lefties",
+      "Color": "Multicolor",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Evening Collection Hose",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 19.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    }
+  }
+}

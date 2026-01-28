@@ -1,0 +1,49 @@
+{
+  "VER02079": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 696643,
+      "Invoice Date": "2025-09-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 207481,
+      "ISIN": "",
+      "Supplier Title": "6 Stk. Modellauto"
+    },
+    "Price Data": {
+      "Price Net": 18.0,
+      "Shipping Net": 2.67,
+      "Total Cost Net": 20.67
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

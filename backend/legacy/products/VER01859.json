@@ -1,0 +1,207 @@
+{
+  "VER01859": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "2507930",
+      "Invoice Date": "2025-07-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "770377",
+      "ISIN": "",
+      "Supplier Title": "Ecco Street Court W 272813 Gr. 39"
+    },
+    "Price Data": {
+      "Price Net": "20.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "20.39"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": "194891862851"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Modell „ECCO Street Court W“, Phorene-Sohle",
+      "Keywords": "Street Court W Sneaker",
+      "Materials": "Leder, Textil, Gummi"
+    },
+    "OP": {
+      "OP": "140.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01859 (4).jpg"
+        },
+        {
+          "filename": "VER01859 (7).jpg"
+        },
+        {
+          "filename": "VER01859 (3).jpg"
+        },
+        {
+          "filename": "VER01859 (9).jpg"
+        },
+        {
+          "filename": "VER01859 (6).jpg"
+        },
+        {
+          "filename": "VER01859 (1).jpg"
+        },
+        {
+          "filename": "VER01859 (5).jpg"
+        },
+        {
+          "filename": "VER01859 (8).jpg"
+        },
+        {
+          "filename": "VER01859 (2).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01859 (3).jpg"
+        },
+        {
+          "filename": "VER01859 (9).jpg"
+        },
+        {
+          "filename": "VER01859 (1).jpg"
+        },
+        {
+          "filename": "VER01859 (5).jpg"
+        },
+        {
+          "filename": "VER01859 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01859 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7S8AAeSwrq5pYkgD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SPIAAeSwjJlpYkgF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fmcAAeSwzYNpYkgI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HrQAAeSwKpVpYkgL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OTEAAeSwbK5pYkgO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ykUAAeSwpMhpYkgR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xysAAeSw5iJpYkgV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RJMAAeSwbKlpYkgX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01859 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~qsAAeSwKrNpYkgd/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Ecco",
+        "EU-Schuhgröße": "39",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "272813 52292",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "",
+        "Modell": "Street Court W",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "8-8,5",
+        "Obermaterial": "Leder",
+        "Charakter": "",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "Nein",
+        "Futtermaterial": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Thema": "",
+        "Jahreszeit": "",
+        "Schuhweite": "",
+        "Akzente": "",
+        "Besonderheiten": "",
+        "Anlass": "Freizeit",
+        "Gewebeart": "",
+        "Aktivität": "",
+        "Ursprungsland": "Portugal",
+        "Muster": "",
+        "Herstellungsjahr": "",
+        "Signiert": "Nein",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.42",
+        "Selling Price Total": "115.0",
+        "Net Profit": "52.67865546218488",
+        "Net Profit Margin": "258.35534802444766"
+      }
+    }
+  }
+}

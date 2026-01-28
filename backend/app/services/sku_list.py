@@ -1,0 +1,250 @@
+from __future__ import annotations
+from typing import Dict, Any, List
+import os
+
+from app.services.excel_inventory import excel_inventory
+import config  # type: ignore
+import pandas as pd
+
+# Operators by type
+STRING_OPS = ["contains", "equals", "starts_with", "ends_with"]
+NUM_DATE_OPS = ["equals", "lt", "lte", "gt", "gte", "between"]
+BOOL_OPS = ["is_true", "is_false"]
+ENUM_OPS = ["equals", "in", "not_in"]
+
+
+def get_available_columns() -> List[str]:
+    """Get all available columns from the inventory"""
+    df = excel_inventory.load()
+    return list(df.columns)
+
+
+def get_default_columns() -> List[str]:
+    """Get the 8 default columns to display"""
+    # These are the most important columns
+    return [
+        "SKU (Old)",
+        "Brand",
+        "Category",
+        "Color",
+        "Size",
+        "Condition",
+        "Status",
+        "Price Net",
+    ]
+
+
+def _infer_column_type(series: pd.Series) -> str:
+    dt = series.dtype
+    if pd.api.types.is_bool_dtype(dt):
+        return "boolean"
+    if pd.api.types.is_numeric_dtype(dt):
+        return "number"
+    if pd.api.types.is_datetime64_any_dtype(dt):
+        return "date"
+    # enum heuristic: small unique set on object-like
+    unique_count = series.dropna().astype(str).nunique()
+    if unique_count > 0 and unique_count <= 30:
+        return "enum"
+    return "string"
+
+
+def get_columns_meta() -> List[Dict[str, Any]]:
+    df = excel_inventory.load()
+    meta: List[Dict[str, Any]] = []
+    for col in df.columns:
+        s = df[col]
+        ctype = _infer_column_type(s)
+        operators = STRING_OPS
+        enum_values = None
+        if ctype == "number" or ctype == "date":
+            operators = NUM_DATE_OPS
+        elif ctype == "boolean":
+            operators = BOOL_OPS
+        elif ctype == "enum":
+            operators = ENUM_OPS
+            # capture up to 50 unique values as option suggestions
+            enum_values = (
+                s.dropna()
+                .astype(str)
+                .unique()
+                .tolist()
+            )[:50]
+        meta.append({
+            "name": col,
+            "type": ctype,
+            "operators": operators,
+            "enum_values": enum_values,
+        })
+    return meta
+
+
+def get_distinct_values(column: str, limit: int = 200, q: str | None = None) -> Dict[str, Any]:
+    """Return distinct non-empty string values for a column with optional substring filter and limit."""
+    df = excel_inventory.load()
+    if column not in df.columns:
+        return {"column": column, "values": [], "total_unique": 0, "limited": False}
+    s = df[column].dropna().astype(str)
+    # Remove empty strings
+    s = s[s.str.len() > 0]
+    if q:
+        q_lower = str(q).lower()
+        s = s[s.str.lower().str.contains(q_lower, na=False)]
+    counts = s.value_counts()
+    values = counts.index.tolist()
+    total_unique = len(values)
+    limited = total_unique > limit
+    if limited:
+        values = values[:limit]
+    return {
+        "column": column,
+        "values": values,
+        "total_unique": total_unique,
+        "limited": limited,
+    }
+
+
+def list_skus(
+    page: int,
+    page_size: int,
+    filters: List[Dict[str, Any]] | None = None,
+    columns: List[str] | None = None,
+) -> Dict[str, Any]:
+    """
+    List SKUs with column-level filtering support.
+    
+    Args:
+        page: Page number (1-indexed)
+        page_size: Number of items per page
+        filters: List of filter dicts with keys: column, value, operator
+                 operator can be: contains, equals, starts_with, ends_with
+        columns: List of columns to return (if None, returns all columns)
+    """
+    df = excel_inventory.load().copy()
+
+    # Apply filters
+    if filters:
+        for filter_item in filters:
+            col = filter_item.get("column")
+            if not col or col not in df.columns:
+                continue
+
+            ftype = filter_item.get("type")
+            operator = filter_item.get("operator", "contains")
+
+            # Typed filters
+            if ftype in ("number", "date", "boolean", "enum"):
+                series = df[col]
+                try:
+                    if ftype == "number":
+                        s = pd.to_numeric(series, errors="coerce")
+                        val = filter_item.get("value")
+                        val2 = filter_item.get("value2")
+                        if operator == "equals" and val is not None:
+                            df = df[s == float(val)]
+                        elif operator == "lt" and val is not None:
+                            df = df[s < float(val)]
+                        elif operator == "lte" and val is not None:
+                            df = df[s <= float(val)]
+                        elif operator == "gt" and val is not None:
+                            df = df[s > float(val)]
+                        elif operator == "gte" and val is not None:
+                            df = df[s >= float(val)]
+                        elif operator == "between" and val is not None and val2 is not None:
+                            df = df[(s >= float(val)) & (s <= float(val2))]
+                    elif ftype == "date":
+                        s = pd.to_datetime(series, errors="coerce")
+                        val = filter_item.get("value")
+                        val2 = filter_item.get("value2")
+                        # Accept ISO date strings
+                        if operator == "equals" and val:
+                            dv = pd.to_datetime(val, errors="coerce")
+                            df = df[s.dt.date == dv.date()] if pd.notna(dv) else df
+                        elif operator == "lt" and val:
+                            dv = pd.to_datetime(val, errors="coerce")
+                            df = df[s < dv] if pd.notna(dv) else df
+                        elif operator == "lte" and val:
+                            dv = pd.to_datetime(val, errors="coerce")
+                            df = df[s <= dv] if pd.notna(dv) else df
+                        elif operator == "gt" and val:
+                            dv = pd.to_datetime(val, errors="coerce")
+                            df = df[s > dv] if pd.notna(dv) else df
+                        elif operator == "gte" and val:
+                            dv = pd.to_datetime(val, errors="coerce")
+                            df = df[s >= dv] if pd.notna(dv) else df
+                        elif operator == "between" and val and val2:
+                            dv1 = pd.to_datetime(val, errors="coerce")
+                            dv2 = pd.to_datetime(val2, errors="coerce")
+                            if pd.notna(dv1) and pd.notna(dv2):
+                                df = df[(s >= dv1) & (s <= dv2)]
+                    elif ftype == "boolean":
+                        # Consider common string booleans too
+                        truthy = {True, "true", "1", 1, "yes"}
+                        falsy = {False, "false", "0", 0, "no"}
+                        s = series.astype(str).str.lower()
+                        if operator == "is_true":
+                            df = df[s.isin({"true", "1", "yes"})]
+                        elif operator == "is_false":
+                            df = df[s.isin({"false", "0", "no"})]
+                    elif ftype == "enum":
+                        s = series.astype(str)
+                        values = filter_item.get("values") or ([] if filter_item.get("value") is None else [filter_item.get("value")])
+                        values = [str(v) for v in values]
+                        if operator == "equals" and values:
+                            df = df[s == values[0]]
+                        elif operator == "in" and values:
+                            df = df[s.isin(values)]
+                        elif operator == "not_in" and values:
+                            df = df[~s.isin(values)]
+                except Exception:
+                    # Ignore faulty filters
+                    pass
+                continue
+
+            # Typed string filters (and legacy fallback)
+            df[col] = df[col].fillna("").astype(str)
+            col_lower = df[col].str.lower()
+            values_list = filter_item.get("values")
+            if operator in ("in", "not_in") and values_list:
+                norm = [str(v).lower() for v in values_list]
+                mask = col_lower.isin(norm)
+                df = df[mask] if operator == "in" else df[~mask]
+            else:
+                value = str(filter_item.get("value", "")).lower()
+                if not value:
+                    continue
+                if operator == "equals":
+                    df = df[col_lower == value]
+                elif operator == "starts_with":
+                    df = df[col_lower.str.startswith(value)]
+                elif operator == "ends_with":
+                    df = df[col_lower.str.endswith(value)]
+                else:  # contains (default)
+                    df = df[col_lower.str.contains(value, na=False)]
+
+    # Filter by selected columns if provided
+    if columns and isinstance(columns, list) and len(columns) > 0:
+        valid_columns = [col for col in columns if col in df.columns]
+        if valid_columns:
+            df = df[valid_columns]
+
+    total = len(df)
+    start = max(0, (page - 1) * page_size)
+    end = start + page_size
+
+    page_df = df.iloc[start:end].copy()
+
+    # Replace NaN / +/-Inf with None so JSON serialization is safe
+    page_df = page_df.replace([float("inf"), float("-inf")], None)
+    page_df = page_df.where(page_df.notna(), None)
+
+    items = page_df.to_dict(orient="records")
+    available_columns = list(df.columns) if columns is None else columns
+
+    return {
+        "page": page,
+        "page_size": page_size,
+        "total": total,
+        "items": items,
+        "available_columns": available_columns,
+    }

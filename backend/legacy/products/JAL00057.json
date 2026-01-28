@@ -1,0 +1,193 @@
+{
+  "JAL00057": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spFBK5NvzHD",
+      "ISIN": "b0b74pgrpp",
+      "Supplier Title": "EIGHTREE WiFi Alexa Smart Plug with Power Meter, Smart Home WiFi Plug, Alexa Accessory, Schedule, Remote Access, Works with Alexa, Google Home, SmartThings, 2.4G WiFi Only, 16A"
+    },
+    "Price Data": {
+      "Price Net": "2.58",
+      "Shipping Net": "0.14",
+      "Total Cost Net": "2.71"
+    },
+    "Ebay Category": {
+      "Category": "/Business & Industrie/Elektronik & Messtechnik/Elektrische Steckdosen & Stecker/Elektrische Steckdosen & Buchsen",
+      "eBay Category ID": "53112"
+    },
+    "EAN": {
+      "EAN": "725414718210"
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Verpackung"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Eightree",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese smarte Steckdose ermöglicht die Überwachung des Stromverbrauchs und die Steuerung über eine App. Sie unterstützt Sprachsteuerung und Timer-Funktionen. Ideal für die Nutzung mit verschiedenen Haushaltsgeräten.",
+      "Keywords": "smarte Steckdose",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "11.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00057 (1).jpg"
+        },
+        {
+          "filename": "JAL00057 (3).jpg"
+        },
+        {
+          "filename": "JAL00057 (2).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/fB0AAeSwOxtpZtKd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/fIMAAeSwk-FpZtKf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/cRgAAeSwhWNpZtKg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/39wAAeSwHyJpZtKi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/iykAAeSwgWRpZtKk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00057 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XYcAAeSw8ZdpZtKm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00057 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ds8AAeSw3KdpZtKo/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "EIGHTREE",
+        "Stecker-Typ": "",
+        "Anschlussart": "",
+        "Nennstrom": "16 A oder Weniger",
+        "Anwendung": "Aufladung/Stromversorgung",
+        "Material": "Kunststoff",
+        "Besonderheiten": "['Sprachsteuerung', 'Fernsteuerung per App', 'Timer & Zeitpläne']",
+        "Geeignet für": "Innenraum",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Produktart": "Intelligente Steckdose",
+        "Smart Home Kommunikationsprotokoll": "WLAN",
+        "Smart Home Kompatibilität": "['Amazon Alexa', 'Google Home/Assistant']",
+        "Spannung": "201-250 V",
+        "Stromart": "AC",
+        "Anzahl der Leitungseinführungen": "",
+        "Ausgangskonfiguration": "Einzelsteckdose",
+        "Steckdosen-Typ": "Einzelsteckdose",
+        "Anzahl der Steckdosen": "1",
+        "Anzahl der Phasen": "1",
+        "Anzahl der Pole": "2",
+        "Farbe": "Weiß",
+        "Anzahl pro Packung": "1",
+        "Montageart": "Aufputz",
+        "Ursprungsland": "",
+        "Anzahl der Einheiten": "",
+        "Anzahl der Vorprägungen": "",
+        "Beständigkeitseigenschaften": "",
+        "Breite": "",
+        "Höhe": "",
+        "Schutzart": "",
+        "Länge": "",
+        "Maßeinheit": "",
+        "Plattendesign": "",
+        "Schutzeigenschaften": "",
+        "Zimmer": "Küche"
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "17.0",
+        "Net Profit": "2.1657142857142864",
+        "Net Profit Margin": "79.91565629942016"
+      }
+    }
+  }
+}

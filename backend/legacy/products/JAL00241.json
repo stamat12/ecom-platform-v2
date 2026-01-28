@@ -1,0 +1,110 @@
+{
+  "JAL00241": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "DOULAFASS V-shaped Waist Bikini Women Set High Cut Triangle Bikini 2pcs Swimwear"
+    },
+    "Price Data": {
+      "Price Net": 0.3,
+      "Shipping Net": 0.24,
+      "Total Cost Net": 0.54
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Doulafass",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 38.0
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 10,
+        "count_phone": 5,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

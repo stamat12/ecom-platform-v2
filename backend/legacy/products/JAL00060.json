@@ -1,0 +1,158 @@
+{
+  "JAL00060": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK208422295",
+      "ISIN": "b0d5cscrrt",
+      "Supplier Title": "IFFEI Summer Dress Women's Lightweight Boho Floral Dresses Short Ruffle Beach Dress with Belt Dark Green L"
+    },
+    "Price Data": {
+      "Price Net": "3.6",
+      "Shipping Net": "0.47",
+      "Total Cost Net": "4.07"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Iffei",
+      "Color": "grün",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Kleid hat einen eleganten Schnitt mit einem Taillengürtel. Es ist aus leichtem Material gefertigt und eignet sich perfekt für den Sommer. Die kurzen Ärmel und der fließende Stoff sorgen für einen bequemen Sitz.",
+      "Keywords": "Kleid Damen",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "37.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTUy/z/nZIAAeSw1b1pZtL7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTUy/z/iv4AAeSwBlVpZtL8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTUy/z/B-gAAeSwHotpZtL~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTUy/z/W6AAAeSwZmBpZtMB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTUy/z/qkkAAeSwNL5pZtMD/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Iffei",
+        "Größe": "L",
+        "Stil": "Fit & Flare",
+        "Farbe": "Grün",
+        "Abteilung": "Damen",
+        "Kleiderlänge": "Midi"
+      },
+      "optional": {
+        "Material": "",
+        "Anlass": "Freizeit",
+        "Gewebeart": "",
+        "Ärmellänge": "Kurzarm",
+        "Charakter": "",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Muster": "Ohne Muster",
+        "Verschluss": "Bindeverschluss",
+        "Ärmelart": "Kurzarm",
+        "Größenkategorie": "",
+        "Vintage": "",
+        "Jahreszeit": "Sommer",
+        "Thema": "",
+        "Akzente": "",
+        "Besonderheiten": "",
+        "Ursprungsland": "",
+        "Textilpflege": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "29.0",
+        "Net Profit": "7.059747899159664",
+        "Net Profit Margin": "173.45817934053227"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "VER02001": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 693179,
+      "Invoice Date": "2025-08-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152975,
+      "ISIN": "",
+      "Supplier Title": "Oberteil Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 5.25
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Sport-BHs",
+      "eBay Category ID": "59315"
+    },
+    "EAN": {
+      "EAN": 196152351999.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Rotbraun",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Nike Indy Light Support Sport-BH bietet leichten Halt bei Workouts mit geringer Belastung wie Yoga, Pilates und Barre. Das schmale Design sorgt für ein luftiges Tragegefühl, während die schnelltrocknende Technologie für ein trockenes und bequemes Tragegefühl sorgt.",
+      "Keywords": "Indy Light Support Sport BH",
+      "Materials": "78-83% Polyester, 17-22% Elasthan; Einsatz: 81% Polyester, 19% Elasthan; Futter: 82% Polyester, 18% Elasthan; Zwischenfutter: 89% Polyester, 11% Elasthan"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02001 (4).jpg"
+        },
+        {
+          "filename": "VER02001 (1).jpg"
+        },
+        {
+          "filename": "VER02001 (2).jpg"
+        },
+        {
+          "filename": "VER02001 (3).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02001 (4).jpg"
+        },
+        {
+          "filename": "VER02001 (2).jpg"
+        },
+        {
+          "filename": "VER02001 (3).jpg"
+        }
+      ]
+    }
+  }
+}

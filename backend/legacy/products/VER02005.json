@@ -1,0 +1,49 @@
+{
+  "VER02005": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 695450,
+      "Invoice Date": "2025-09-09T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 144116,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Schuhe Größe 39 ⅓"
+    },
+    "Price Data": {
+      "Price Net": 14.17,
+      "Shipping Net": 1.33,
+      "Total Cost Net": 15.5
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "adidas Originals",
+      "Color": "Weiß / Schwarz",
+      "Size": "39 1/3"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Adidas Samba OG ist ein klassischer Fußballschuh, der für seinen Komfort und seine Strapazierfähigkeit bekannt ist. Er hat ein Obermaterial aus Leder und Synthetik, ein Synthetikfutter und eine Gummisohle. Der Samba OG ist eine zeitlose Silhouette, die sowohl für den Sport als auch für den Alltag geeignet ist.",
+      "Keywords": "Samba OG Sneaker",
+      "Materials": "Obermaterial aus Leder und Synthetik, Futter aus Synthetik, Gummisohle"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

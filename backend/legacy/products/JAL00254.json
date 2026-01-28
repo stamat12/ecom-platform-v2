@@ -1,0 +1,152 @@
+{
+  "JAL00254": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "Meilicloth Men's Cotton T-Shirt Slim Fit V-Neck Muscle Shirt Henley Shirt Breathable Comfortable Casual Black M"
+    },
+    "Price Data": {
+      "Price Net": "1.07",
+      "Shipping Net": "0.24",
+      "Total Cost Net": "1.31"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": 15687
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Meilicloth",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Das T-Shirt hat einen modernen Schnitt und kurze Ärmel. Es verfügt über einen Henley-Ausschnitt mit Knöpfen. Der Stoff ist weich und angenehm zu tragen.",
+      "Keywords": "T-Shirt Herren",
+      "Materials": "Baumwolle"
+    },
+    "OP": {
+      "OP": "19.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "New Box 1"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "3.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTc0/z/JqAAAeSwfaBpar6k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTc0/z/K-IAAeSw5Vhpar6m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTgw/z/V~cAAeSwQwtpar6o/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Meilicloth",
+        "Abteilung": "Herren",
+        "Größe": "M",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Produktart": "T-Shirt",
+        "Thema": "",
+        "Charakter": "",
+        "Ausschnitt": "Henley",
+        "Material": "",
+        "Ärmellänge": "Kurzarm",
+        "Charakter Familie": "",
+        "Besonderheiten": "['Atmungsaktiv']",
+        "Passform": "",
+        "Muster": "Ohne Muster",
+        "Vintage": "",
+        "Größenkategorie": "Normalgröße",
+        "Ursprungsland": "",
+        "Akzente": "",
+        "Produktlinie": "",
+        "Gewebeart": "",
+        "Jahreszeit": "",
+        "Personalisieren": "",
+        "Handgefertigt": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Modell": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Herstellungsjahr": "",
+        "Maßeinheit": "cm"
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "19.0",
+        "Net Profit": "2.6163865546218497",
+        "Net Profit Margin": "199.72416447495033"
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "P0010182": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "HANNBSG6365BLUE7014",
+      "Supplier Title": "NBSG6365 BLUE 7"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Radsport/Fahrradbekleidung/Handschuhe & Fäustlinge",
+      "eBay Category ID": "22683"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Nordblanc",
+      "Color": "Blau",
+      "Size": 7
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Fahrradhandschuhe mit halben Fingern, atmungsaktivem Material und gepolsterter Innenhand für besseren Grip und Komfort. Perfekt für Radfahren und Fitness",
+      "Keywords": "NBSG6365 Frahrradhandschuhe Unisex",
+      "Materials": "Mischgewebe (Polyester, Kunstleder, Gummi-Einsätze)"
+    },
+    "OP": {
+      "OP": 20.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 3,
+        "count_enhanced": 1,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_183134063.jpg"
+        },
+        {
+          "filename": "PXL_20250526_183222647.jpg"
+        },
+        {
+          "filename": "PXL_20250526_183413374.jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_real_PXL_20250526_183134063_1_upscaled_x4.jpg",
+          "upscaled": true
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_183134063.jpg"
+        },
+        {
+          "filename": "PXL_20250526_183222647.jpg"
+        }
+      ]
+    }
+  }
+}

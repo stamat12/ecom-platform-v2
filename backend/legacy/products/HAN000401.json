@@ -1,0 +1,98 @@
+{
+  "HAN000401": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24112263,
+      "Invoice Date": "2024-11-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 775419,
+      "ISIN": null,
+      "Supplier Title": "Pepe Jeans Jeans Jacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 21.47
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pepe Jeans",
+      "Color": "Blau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Jeansjacke hat eine klassische Passform und ist aus hochwertigem Denim gefertigt. Sie verfügt über zwei Brusttaschen und eine durchgehende Knopfleiste. Der Kragen und die Nähte sind gut verarbeitet, was der Jacke einen zeitlosen Look verleiht.",
+      "Keywords": "Jeansjacke Herren",
+      "Materials": "99% Baumwolle 1% Elasthan"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 20"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HAN000401 (1).JPG"
+        },
+        {
+          "filename": "HAN000401 (2).JPG"
+        },
+        {
+          "filename": "HAN000401 (3).JPG"
+        },
+        {
+          "filename": "HAN000401 (3)_fb.jpg"
+        },
+        {
+          "filename": "HAN000401 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000401 (4).JPG"
+        },
+        {
+          "filename": "HAN000401 (5).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "HAN000401 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000401 (5).JPG"
+        },
+        {
+          "filename": "HAN000401 (4).JPG"
+        }
+      ]
+    }
+  }
+}

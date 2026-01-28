@@ -1,0 +1,79 @@
+{
+  "JAL00234": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "DOULAFASS V-shaped waist bikini women set high cut triangle bikini 2-piece swimwear"
+    },
+    "Price Data": {
+      "Price Net": 0.3,
+      "Shipping Net": 0.14,
+      "Total Cost Net": 0.44
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Doulafass",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 24.0
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": []
+    }
+  }
+}

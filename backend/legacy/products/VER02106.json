@@ -1,0 +1,148 @@
+{
+  "VER02106": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "2536714",
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "734659",
+      "ISIN": "",
+      "Supplier Title": "Elektrische Zahnbürste Sonicar 3100"
+    },
+    "Price Data": {
+      "Price Net": "19.17",
+      "Shipping Net": "0.82",
+      "Total Cost Net": "19.99"
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Mund- & Zahnpflege/Elektrische Mund- & Zahnpflege/Elektrische Zahnbürsten",
+      "eBay Category ID": "31770"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Philips",
+      "Color": "Schwarz, Rosa",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Doppelpack, Drucksensor, 2-Minuten-Timer (Smartimer), 4-Quadranten-Timer (QuadPacer), Erinnerungsfunktion für Bürstenkopfwechsel, 14 Tage Akkulaufzeit, USB-Ladekabel (Netzteil nicht enthalten)",
+      "Keywords": "Sonicare 3100 Elektrische Zahnbürste",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "59.99"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02106 (5).jpg"
+        },
+        {
+          "filename": "VER02106 (1).jpg"
+        },
+        {
+          "filename": "VER02106 (3).jpg"
+        },
+        {
+          "filename": "VER02106 (4).jpg"
+        },
+        {
+          "filename": "VER02106 (2).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02106 (3).jpg"
+        },
+        {
+          "filename": "VER02106 (1).jpg"
+        },
+        {
+          "filename": "VER02106 (5).jpg"
+        },
+        {
+          "filename": "VER02106 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02106 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pUIAAeSwZAVpYsog/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02106 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JpAAAeSwKaRpYsoj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02106 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jMsAAeSwpktpYsom/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02106 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/IZQAAeSwblJpYsoo/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Zahnbürste mit integrierter Munddusche",
+        "Marke": "Philips"
+      },
+      "optional": {
+        "Produktlinie": "Philips Sonicare",
+        "Modell": "3100",
+        "Bewegungsart": "Schall",
+        "Stromquelle": "Batterie",
+        "Abteilung": "Unisex Erwachsene",
+        "Herstellernummer": "HX3675",
+        "Leistung": "",
+        "Geschwindigkeitsstufen": "",
+        "Farbe": "Schwarz",
+        "Besonderheiten": "['Pressure Sensor', 'SmartTimer', 'QuadPacer']",
+        "Ursprungsland": "",
+        "Herstellergarantie": "",
+        "Griffmaterial": "",
+        "Anzahl der Einheiten": "",
+        "Bürstenkopfmaterial": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "55.0",
+        "Net Profit": "12.893487394957983",
+        "Net Profit Margin": "64.49968681819902"
+      }
+    }
+  }
+}

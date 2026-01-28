@@ -1,0 +1,11 @@
+{
+  "sku_list": {
+    "default": {
+      "profile_id": "default",
+      "selected_columns": [],
+      "column_filters": {},
+      "page_size": 50,
+      "column_widths": {}
+    }
+  }
+}

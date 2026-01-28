@@ -1,0 +1,180 @@
+{
+  "HAN000350": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24091292,
+      "Invoice Date": "2024-09-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 380359,
+      "ISIN": null,
+      "Supplier Title": "Hunkemöller BH Größe 80B"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.58,
+      "Total Cost Net": 7.25
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets"
+    },
+    "EAN": {
+      "EAN": 8720676789994.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hunkemöller ",
+      "Color": "Schwarz",
+      "Size": "80B"
+    },
+    "Intern Generated Info": {
+      "More details": "Der BH hat gepolsterte Cups und eine schöne Spitzenverzierung. Die Rückseite ist aus transparentem Material gefertigt. Er bietet eine gute Unterstützung und einen eleganten Look.",
+      "Keywords": "Gepolsterter Push-Up-Bügel-BH Lotta",
+      "Materials": "71% Polyamid 19% Polyester 10% Elasthan"
+    },
+    "OP": {
+      "OP": 42.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 18"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 28,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "199942_1.jpg"
+        },
+        {
+          "filename": "199942_2.jpg"
+        },
+        {
+          "filename": "199942_3.jpg"
+        },
+        {
+          "filename": "199942_5.jpg"
+        },
+        {
+          "filename": "199942_6.jpg"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "HAN000350 (1).JPG"
+        },
+        {
+          "filename": "HAN000350 (2).JPG"
+        },
+        {
+          "filename": "HAN000350 (3).JPG"
+        },
+        {
+          "filename": "HAN000350 (3)_fb.jpg"
+        },
+        {
+          "filename": "HAN000350 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000350 (4).JPG"
+        },
+        {
+          "filename": "HAN000350 (5).JPG"
+        },
+        {
+          "filename": "HAN000350 (6).JPG"
+        },
+        {
+          "filename": "IMG_6630.jpg"
+        },
+        {
+          "filename": "IMG_6630_wb.jpg"
+        },
+        {
+          "filename": "IMG_6631.jpg"
+        },
+        {
+          "filename": "IMG_6631_wb.jpg"
+        },
+        {
+          "filename": "IMG_6632.jpg"
+        },
+        {
+          "filename": "IMG_6632_wb.jpg"
+        },
+        {
+          "filename": "IMG_6633.jpg"
+        },
+        {
+          "filename": "IMG_6633_wb.jpg"
+        },
+        {
+          "filename": "IMG_6634.jpg"
+        },
+        {
+          "filename": "IMG_6634_wb.jpg"
+        },
+        {
+          "filename": "IMG_6635.jpg"
+        },
+        {
+          "filename": "IMG_6635_wb.jpg"
+        },
+        {
+          "filename": "IMG_6636.jpg"
+        },
+        {
+          "filename": "IMG_6636_wb.jpg"
+        },
+        {
+          "filename": "IMG_6637.jpg"
+        },
+        {
+          "filename": "IMG_6637_wb.jpg"
+        },
+        {
+          "filename": "IMG_6638.jpg"
+        },
+        {
+          "filename": "IMG_6638_wb.jpg"
+        },
+        {
+          "filename": "IMG_6639.jpg"
+        },
+        {
+          "filename": "IMG_6639_wb.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "199942_5.jpg"
+        },
+        {
+          "filename": "199942_6.jpg"
+        },
+        {
+          "filename": "HAN000350 (5).JPG"
+        },
+        {
+          "filename": "HAN000350 (1).JPG"
+        }
+      ]
+    }
+  }
+}

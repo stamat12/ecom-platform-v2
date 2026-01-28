@@ -1,0 +1,138 @@
+{
+  "VER01214": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411390,
+      "Invoice Date": "2024-11-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 380052,
+      "ISIN": "",
+      "Supplier Title": "Teylam Knöchelbandage Grau"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 3.81
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Kleingeräte & Zubehör/Sonstige",
+      "eBay Category ID": "28065"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Teylam",
+      "Color": "Grau",
+      "Size": "Linke Fußgelenk"
+    },
+    "Intern Generated Info": {
+      "More details": "Kompressionsbandage",
+      "Keywords": "Knöchelbandage",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01214 (3).JPG"
+        },
+        {
+          "filename": "VER01214 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01214 (3)_fb.jpg"
+        },
+        {
+          "filename": "VER01214 (2).JPG"
+        },
+        {
+          "filename": "VER01214 (1).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01214 (3).JPG"
+        },
+        {
+          "filename": "VER01214 (1).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01214 (3)_wb.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rIsAAeSwK2ZpZrM9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01214 (1).JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cp0AAeSwm0dpZrNA/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "TEYLAM"
+      },
+      "optional": {
+        "Verwendungsbereich": "",
+        "Besonderheiten": "",
+        "Breite": "",
+        "Gewicht": "",
+        "Herstellernummer": "B0898986532",
+        "Material": "",
+        "Modell": "",
+        "Muskelgruppe": "",
+        "Produktart": "",
+        "Sportart/Aktivität": "Fitness",
+        "Farbe": "Grau",
+        "Ursprungsland": "China",
+        "Indoor/Outdoor": "",
+        "Anzahl der Einheiten": "",
+        "Anzahl der Teile": "",
+        "Durchmesser": "",
+        "Höhe": "",
+        "Länge": "",
+        "Maßeinheit": "",
+        "Personalisiert": "",
+        "Set enthält": "",
+        "Signiert": "",
+        "Vintage": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "26.0",
+        "Net Profit": "5.158739495798317",
+        "Net Profit Margin": "135.39998676636003"
+      }
+    }
+  }
+}

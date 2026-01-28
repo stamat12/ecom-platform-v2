@@ -1,0 +1,314 @@
+{
+  "HAN000354": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2410233,
+      "Invoice Date": "2024-10-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 741934,
+      "ISIN": null,
+      "Supplier Title": "S Oliver Jacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 13.33,
+      "Shipping Net": 0.58,
+      "Total Cost Net": 13.91
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen"
+    },
+    "EAN": {
+      "EAN": 4063615112212.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "S. Oliver",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Jacke hat einen hohen Kragen und einen durchgehenden Reißverschluss. Sie verfügt über seitliche Taschen mit Druckknöpfen. Das Material ist leicht und angenehm zu tragen.",
+      "Keywords": "Jacke Herren",
+      "Materials": "Außenmaterial: 89% Polyamid, 11% Elasthan; Material 2: 95% Polyester, 5% Elasthan; Futter: 100% Polyester"
+    },
+    "OP": {
+      "OP": 69.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 19"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 78,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HAN000354 (1).jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (1)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (10).jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (10)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (11).jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (11)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (12).jpg"
+        },
+        {
+          "filename": "HAN000354 (13).jpg"
+        },
+        {
+          "filename": "HAN000354 (14).jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (14)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (15).jpg"
+        },
+        {
+          "filename": "HAN000354 (15)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (15)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (15)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (15)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (15)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (2).jpg"
+        },
+        {
+          "filename": "HAN000354 (2)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (2)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (3).jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (4).jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (5).jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (5)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (6).jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (6)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (7) - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (7).jpg"
+        },
+        {
+          "filename": "HAN000354 (8).jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_bb.jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_fb.jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_gb.jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_rb.jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (8)_wb.jpg"
+        },
+        {
+          "filename": "HAN000354 (9) - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "HAN000354 (9) - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (4)_wb - Kopie.jpg"
+        },
+        {
+          "filename": "HAN000354 (3).jpg"
+        },
+        {
+          "filename": "HAN000354 (7) - Kopie.jpg"
+        }
+      ]
+    }
+  }
+}

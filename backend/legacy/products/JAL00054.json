@@ -1,0 +1,184 @@
+{
+  "JAL00054": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spYK6B4X2W4",
+      "ISIN": "b07c1ggsnl",
+      "Supplier Title": "Alpenmärchen Midi Dirndl from Exclusive Collection including lace apron size 44 - ALM556"
+    },
+    "Price Data": {
+      "Price Net": "12.65",
+      "Shipping Net": "0.88",
+      "Total Cost Net": "13.53"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Trachtenmode/Dirndl & Kleider",
+      "eBay Category ID": "80962"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Alpenmärchen",
+      "Color": "Blau Beige",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Kleid hat eine elegante Kombination aus blauem Oberteil und beigem Rock. Es ist mit feinen Stickereien verziert und hat eine Schnürung vorne. Der Stoff ist weich und angenehm zu tragen, ideal für festliche Anlässe.",
+      "Keywords": "Dirndl Kleid Damen",
+      "Materials": "Polyester Baumwolle"
+    },
+    "OP": {
+      "OP": "111.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 4,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00054 (2).jpg"
+        },
+        {
+          "filename": "JAL00054 (1).jpg"
+        },
+        {
+          "filename": "JAL00054 (5).jpg"
+        },
+        {
+          "filename": "JAL00054 (3).jpg"
+        },
+        {
+          "filename": "JAL00054 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00054 (1).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTg2/z/-GQAAeSwCsxpZtLc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTg2/z/PBcAAeSwKpVpZtLe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTg2/z/px8AAeSwbHlpZtLh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTMx/z/erYAAeSwrBhpZtLi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00054 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dEsAAeSwRaxpZtLo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00054 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ljcAAeSwEdBpZtLs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00054 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/W~YAAeSwa3VpZtLw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00054 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2PwAAeSwe2FpZtL0/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "ALPENMÄRCHEN"
+      },
+      "optional": {
+        "Produktart": "Dirndl",
+        "Größe": "44",
+        "Farbe": "Blau",
+        "Länge": "Knielang",
+        "Material": "",
+        "Stil": "Vintage",
+        "Sub-Material": "",
+        "Ärmelart": "Ärmellos",
+        "Ursprungsland": "",
+        "Größenkategorie": "Normalgröße",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Thema": "Ethno",
+        "Textilpflege": "Maschinenwäsche",
+        "Abteilung": "Damen",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "75.0",
+        "Net Profit": "30.73521008403361",
+        "Net Profit Margin": "227.16341525523737"
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "JAL00175": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU335774-47-53-061125020306",
+      "Invoice Date": "06.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "PJ PAUL JONES Men's Jacket with Pocket Tweed Jacket Business Tweed Blazer Regular Fit S Dark Grey"
+    },
+    "Price Data": {
+      "Price Net": "2.06",
+      "Shipping Net": "1.42",
+      "Total Cost Net": "3.48"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Anzüge",
+      "eBay Category ID": 3001
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pj Paul Jones",
+      "Color": "Dunkelgrau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses elegante Sakko hat einen modernen Schnitt und ist ideal für formelle Anlässe. Es verfügt über einen klassischen Reverskragen und zwei Taschen. Die hochwertige Verarbeitung sorgt für einen angenehmen Tragekomfort.",
+      "Keywords": "Sakko Herren",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "28.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 1"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM5/z/2v4AAeSwWzppa4BH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/F5MAAeSwIaBpa4BJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/-zgAAeSwAkppa4BK/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "PJ PAUL JONES",
+        "Größe": "S",
+        "Produktart": "Blazer",
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz",
+        "Stil": "1-Teiler"
+      },
+      "optional": {
+        "Material": "",
+        "Gewebeart": "",
+        "Passform": "",
+        "Thema": "",
+        "Anlass": "Business",
+        "Taillenumfang": "",
+        "Jacken-/Mantellänge": "Normal",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Jackenrevers-Form": "Spitzkragen",
+        "Schrittlänge": "",
+        "Muster": "Ohne Muster",
+        "Anzahl der Teile": "1-teilig",
+        "Futtermaterial": "",
+        "Jahreszeit": "",
+        "Ursprungsland": "",
+        "Rückenschlitz-Form": "",
+        "Jackenschnitt": "Einreihig",
+        "Besonderheiten": "",
+        "Jackenärmel-Knopfart": "Ein-Knopf",
+        "Beinform": "",
+        "Knöpfung der Jacke": "Ein-Knopf",
+        "Brustumfang": "",
+        "Handgefertigt": "Nein",
+        "Bundfalte": "",
+        "Textilpflege": "",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "45.0",
+        "Net Profit": "19.175126050420168",
+        "Net Profit Margin": "551.0093692649473"
+      }
+    }
+  }
+}

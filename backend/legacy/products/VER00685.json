@@ -1,0 +1,193 @@
+{
+  "VER00685": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2310749,
+      "Invoice Date": "2023-10-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 419130,
+      "ISIN": "",
+      "Supplier Title": "1 Stk. Keyz Carbon Tastatur *"
+    },
+    "Price Data": {
+      "Price Net": 6.9,
+      "Shipping Net": 0.97,
+      "Total Cost Net": 7.87
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Tastaturen, Mäuse & Pointing/Tastaturen & Keypads",
+      "eBay Category ID": "33963"
+    },
+    "EAN": {
+      "EAN": 3760162064865.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "The G-Lab",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Mechanische Gaming-Tastatur mit blauen Schaltern, 6-Farben-Hintergrundbeleuchtung, N-Key-Rollover, Metallrahmen.",
+      "Keywords": "Keyz Carbon Gaming-Tastatur",
+      "Materials": "Metall"
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER00685 (4).jpg"
+        },
+        {
+          "filename": "VER00685 (3).jpg"
+        },
+        {
+          "filename": "VER00685 (2).jpg"
+        },
+        {
+          "filename": "VER00685 (9).jpg"
+        },
+        {
+          "filename": "VER00685 (8).jpg"
+        },
+        {
+          "filename": "VER00685 (10).jpg"
+        },
+        {
+          "filename": "VER00685 (1).jpg"
+        },
+        {
+          "filename": "VER00685 (7).jpg"
+        },
+        {
+          "filename": "VER00685 (5).jpg"
+        },
+        {
+          "filename": "VER00685 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER00685 (4).jpg"
+        },
+        {
+          "filename": "VER00685 (3).jpg"
+        },
+        {
+          "filename": "VER00685 (2).jpg"
+        },
+        {
+          "filename": "VER00685 (10).jpg"
+        },
+        {
+          "filename": "VER00685 (7).jpg"
+        },
+        {
+          "filename": "VER00685 (5).jpg"
+        },
+        {
+          "filename": "VER00685 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER00685 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2LgAAeSwnnNpZrNb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (10).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MSQAAeSw4AJpZrNf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1U8AAeSweaVpZrNi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wBoAAeSwk-FpZrNl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/1BoAAeSweGFpZrNo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s~sAAeSwY7hpZrNr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BUgAAeSweBNpZrNu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00685 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nbgAAeSwzlJpZrNx/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "G-LAB",
+        "Produktart": "Mechanisch"
+      },
+      "optional": {
+        "Konnektivität": "USB",
+        "Modell": "KEYZ CARBON",
+        "Tastatursprache": "Französisch",
+        "Tastaturlayout": "QWERTY (Standard)",
+        "Farbe": "Schwarz",
+        "Besonderheiten": "Beleuchtet, N-Key Rollover",
+        "Herstellernummer": "KEYZ-CARBON-V3/FR",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Inklusive Ladegerät": "Nein",
+        "Ladebereich des Geräts": "",
+        "Ursprungsland": "",
+        "Material": "Metal",
+        "Herstellergarantie": "",
+        "Breite": "",
+        "Höhe": "",
+        "Länge": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "34.0",
+        "Net Profit": "8.73142857142857",
+        "Net Profit Margin": "110.94572517698309"
+      }
+    }
+  }
+}

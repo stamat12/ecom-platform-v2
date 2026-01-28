@@ -1,0 +1,197 @@
+{
+  "VER01371": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503528,
+      "Invoice Date": "2025-03-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 389119,
+      "ISIN": "",
+      "Supplier Title": "Tasche"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 3.12
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": "4064461878116"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "even&odds",
+      "Color": "silber",
+      "Size": "One Size"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat eine glänzende silberne Oberfläche und einen auffälligen ovalen Verschluss. Sie verfügt über einen langen Schulterriemen, der verstellbar ist. Ideal für verschiedene Anlässe und leicht kombinierbar.",
+      "Keywords": "Damentasche",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01371 (2).JPG"
+        },
+        {
+          "filename": "VER01371 (6).JPG"
+        },
+        {
+          "filename": "VER01371 (4).JPG"
+        },
+        {
+          "filename": "VER01371 (1).JPG"
+        },
+        {
+          "filename": "VER01371 (3).JPG"
+        },
+        {
+          "filename": "VER01371 (8).JPG"
+        },
+        {
+          "filename": "VER01371 (5).JPG"
+        },
+        {
+          "filename": "VER01371 (7).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01371 (4).JPG"
+        },
+        {
+          "filename": "VER01371 (3).JPG"
+        },
+        {
+          "filename": "VER01371 (8).JPG"
+        },
+        {
+          "filename": "VER01371 (5).JPG"
+        },
+        {
+          "filename": "VER01371 (7).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01371 (3).JPG",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tRUAAeSwl3ppZrNH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (1).JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/stwAAeSwj6FpZrNJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (4).JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JQcAAeSwCBdpZrNL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (6).JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wZkAAeSwPThpZrNN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (8).JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5GUAAeSwkthpZrNP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (7).JPG",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KRgAAeSwaGtpZrNS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01371 (5).JPG",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ugwAAeSwtPNpZrNU/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "even&odd",
+        "Außenmaterial": "Kunstleder",
+        "Abteilung": "Damen",
+        "Stil": "Schultertasche",
+        "Außenfarbe": "Silber"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Kunstleder",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Grau",
+        "Henkel-/Riemenfarbe": "Silber",
+        "Farbe des Verschlusses": "Silber",
+        "Produktlinie": "",
+        "Charakter": "",
+        "Größe": "One Size",
+        "Muster": "",
+        "Verschluss": "Drehverschluss",
+        "Zubehör": "",
+        "Taschenbreite": "20 cm",
+        "Taschenhöhe": "12 cm",
+        "Vintage": "Nein",
+        "Taschentiefe": "6 cm",
+        "Individualisiert": "Nein",
+        "Besonderheiten": "",
+        "Thema": "",
+        "Griffstil": "Schulterriemen",
+        "Modell": "",
+        "Akzente": "",
+        "Verarbeitung": "",
+        "Verschlussmaterial": "Metall",
+        "Ursprungsland": "",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Nein",
+        "Gewebeart": "",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "1",
+        "Henkellänge": "",
+        "Herstellernummer": "EWH-H23307",
+        "Maßeinheit": "",
+        "Trägerlänge": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "6.41",
+        "Selling Price Total": "25.0",
+        "Net Profit": "8.128403361344535",
+        "Net Profit Margin": "260.5257487610428"
+      }
+    }
+  }
+}

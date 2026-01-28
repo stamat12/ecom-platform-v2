@@ -1,0 +1,240 @@
+{
+  "JAL00056": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spFBK5NvzHD",
+      "ISIN": "b0chmln7l9",
+      "Supplier Title": "Smart WLAN socket with power measurement EIGHTREE, electricity meter for balcony power plant socket Bidirectional measurement of power consumption & generation in mini PV WLAN socket for balcony power plants Only 2.4G"
+    },
+    "Price Data": {
+      "Price Net": "2.58",
+      "Shipping Net": "0.16",
+      "Total Cost Net": "2.74"
+    },
+    "Ebay Category": {
+      "Category": "/Business & Industrie/Elektronik & Messtechnik/Elektrische Steckdosen & Stecker/Elektrische Steckdosen & Buchsen",
+      "eBay Category ID": "53112"
+    },
+    "EAN": {
+      "EAN": "725414717985"
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Eightree",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Smart Plug von Eightree ermöglicht eine einfache Installation und automatische Steuerung. Er unterstützt 2,4 GHz Wi-Fi und bietet Funktionen wie Energieüberwachung und Sprachsteuerung. Das Gerät ist kompakt und eignet sich für die Nutzung mit verschiedenen Smart-Home-Systemen.",
+      "Keywords": "Smart Plug",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "30.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "stock": [
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "2.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00056 (4).jpg"
+        },
+        {
+          "filename": "JAL00056 (5).jpg"
+        },
+        {
+          "filename": "JAL00056 (1).jpg"
+        },
+        {
+          "filename": "JAL00056 (3).jpg"
+        },
+        {
+          "filename": "JAL00056 (2).jpg"
+        },
+        {
+          "filename": "JAL00056 (7).jpg"
+        },
+        {
+          "filename": "JAL00056 (8).jpg"
+        },
+        {
+          "filename": "JAL00056 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00056 (4).jpg"
+        },
+        {
+          "filename": "JAL00056 (5).jpg"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00056 (3).jpg"
+        },
+        {
+          "filename": "JAL00056 (6).jpg"
+        },
+        {
+          "filename": "2.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/Q2YAAeSw1~BpZtKv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/q2kAAeSweBNpZtKy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/yTkAAeSwoSlpZtKz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/NksAAeSweblpZtK1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/hesAAeSwvltpZtK3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kfQAAeSwONBpZtK5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qLEAAeSw45JpZtK8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~ecAAeSwhYZpZtK-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/k8wAAeSwn8VpZtLB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (6).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dkAAAeSw~DNpZtLF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00056 (2).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cI4AAeSwLmtpZtLD/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "EIGHTREE",
+        "Stecker-Typ": "F",
+        "Anschlussart": "WLAN",
+        "Nennstrom": "16 A",
+        "Anwendung": "Aufladung/Stromversorgung",
+        "Material": "Kunststoff",
+        "Besonderheiten": "App Steuerung, Energieüberwachung, Sprachsteuerung",
+        "Geeignet für": "Innenraum",
+        "Herstellernummer": "ET29",
+        "Modell": "ET29",
+        "Produktart": "Smart Plug",
+        "Smart Home Kommunikationsprotokoll": "WLAN",
+        "Smart Home Kompatibilität": "Amazon Alexa, Google Home",
+        "Spannung": "230 V",
+        "Stromart": "AC",
+        "Anzahl der Leitungseinführungen": "",
+        "Ausgangskonfiguration": "Einzelsteckdose",
+        "Steckdosen-Typ": "Einzelsteckdose",
+        "Anzahl der Steckdosen": "1",
+        "Anzahl der Phasen": "1",
+        "Anzahl der Pole": "2",
+        "Farbe": "Weiß",
+        "Anzahl pro Packung": "1",
+        "Montageart": "Steckdose",
+        "Ursprungsland": "China",
+        "Anzahl der Einheiten": "1",
+        "Anzahl der Vorprägungen": "",
+        "Beständigkeitseigenschaften": "",
+        "Breite": "",
+        "Höhe": "",
+        "Schutzart": "",
+        "Länge": "",
+        "Maßeinheit": "",
+        "Plattendesign": "",
+        "Schutzeigenschaften": "",
+        "Zimmer": "Küche"
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "25.0",
+        "Net Profit": "8.858403361344537",
+        "Net Profit Margin": "323.2993927498006"
+      }
+    }
+  }
+}

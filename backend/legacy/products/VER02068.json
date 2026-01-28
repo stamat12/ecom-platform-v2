@@ -1,0 +1,159 @@
+{
+  "VER02068": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2509750,
+      "Invoice Date": "2025-09-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 854917,
+      "ISIN": "",
+      "Supplier Title": "Nike Phantom GX 2 elite Fußballschuhe Gr.40,5"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 46.31
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fußball/Schuhe",
+      "eBay Category ID": "19298"
+    },
+    "EAN": {
+      "EAN": "19786275345586"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Orange",
+      "Size": 40.5
+    },
+    "Intern Generated Info": {
+      "More details": "Sportart: Fußball\nSchuhspitze: Rund\nAbsatzform: Flach\nSchaftdetail: Strickbund\nVerschluss: Schnürung\nMuster: Print\nFunktion: Atmungsaktiv\nExtras: Reflektierende Elemente\nAußensohle: Nocken (Firm Ground), flexibel\nInnensohle: Konturiert, herausnehmbar, gepolstert\nArtikelnummer: N1242A2TK-G11",
+      "Keywords": "Phantom GX II Elite FG Fußballschuhe",
+      "Materials": "Obermaterial: Kunststoff/Textil\nInnenmaterial: Textil\nDecksohle: Textil\nSohle: Kunststoff\nFütterungsdicke: Kalt gefüttert"
+    },
+    "OP": {
+      "OP": 260.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 17,
+        "count_enhanced": 6,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02068 (14).jpg"
+        },
+        {
+          "filename": "VER02068 (6).jpg"
+        },
+        {
+          "filename": "VER02068 (5).jpg"
+        },
+        {
+          "filename": "VER02068 (2).jpg"
+        },
+        {
+          "filename": "VER02068 (3).jpg"
+        },
+        {
+          "filename": "VER02068 (9).jpg"
+        },
+        {
+          "filename": "VER02068 (17).jpg"
+        },
+        {
+          "filename": "VER02068 (16).jpg"
+        },
+        {
+          "filename": "VER02068 (15).jpg"
+        },
+        {
+          "filename": "VER02068 (1).jpg"
+        },
+        {
+          "filename": "VER02068 (10).jpg"
+        },
+        {
+          "filename": "VER02068 (12).jpg"
+        },
+        {
+          "filename": "VER02068 (4).jpg"
+        },
+        {
+          "filename": "VER02068 (7).jpg"
+        },
+        {
+          "filename": "VER02068 (13).jpg"
+        },
+        {
+          "filename": "VER02068 (11).jpg"
+        },
+        {
+          "filename": "VER02068 (8).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_real_VER02068 (3)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_VER02068 (15)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_VER02068 (4)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_VER02068 (12)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_VER02068 (7)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_VER02068 (11)_2.jpg"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "VER02068 (3).jpg"
+        },
+        {
+          "filename": "VER02068 (2).jpg"
+        },
+        {
+          "filename": "VER02068 (11).jpg"
+        },
+        {
+          "filename": "VER02068 (14).jpg"
+        },
+        {
+          "filename": "VER02068 (15).jpg"
+        }
+      ]
+    }
+  }
+}

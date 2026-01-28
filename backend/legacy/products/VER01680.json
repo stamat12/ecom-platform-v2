@@ -1,0 +1,201 @@
+{
+  "VER01680": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2506444,
+      "Invoice Date": "2025-06-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 814352,
+      "ISIN": "",
+      "Supplier Title": "Mömax Bessagi Alicia 4 Stühle"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 16.0,
+      "Total Cost Net": 61.83
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Möbel/Stühle",
+      "eBay Category ID": "54235"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Bessagi Home",
+      "Color": "Dunkelblau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Stuhl hat eine elegante, geschwungene Form und ist mit einem samtartigen Material gepolstert. Die Beine sind aus schwarzem Metall, was für Stabilität sorgt. Ideal für Esszimmer oder als dekoratives Möbelstück im Wohnbereich.",
+      "Keywords": "Alicia Samt gepolsterte Stühle 4 Stk.",
+      "Materials": "Samt Metall"
+    },
+    "OP": {
+      "OP": 220.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 6,
+        "count_phone": 2,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "VER01680 (2).jpg"
+        },
+        {
+          "filename": "VER01680 (3).jpg"
+        },
+        {
+          "filename": "VER01680 (6).jpg"
+        },
+        {
+          "filename": "VER01680 (5).jpg"
+        },
+        {
+          "filename": "VER01680 (4).jpg"
+        },
+        {
+          "filename": "VER01680 (7).jpg"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "VER01680 (8).jpg"
+        },
+        {
+          "filename": "VER01680 (1).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01680 (4).jpg"
+        },
+        {
+          "filename": "VER01680 (6).jpg"
+        },
+        {
+          "filename": "VER01680 (8).jpg"
+        },
+        {
+          "filename": "VER01680 (3).jpg"
+        },
+        {
+          "filename": "VER01680 (7).jpg"
+        },
+        {
+          "filename": "VER01680 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01680 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/0KAAAeSwcmFpZrnC/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/zjEAAeSwfaBpZrnE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (2).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/9Y8AAeSw28NpZrnG/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/3AoAAeSwek1pZrnI/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/3vgAAeSwzLJpZrnK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/VQAAAeSwTTNpZrnM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/21AAAeSwnBZpZrnO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01680 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uiwAAeSwELdpZrnR/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Breite": "53 cm",
+        "Farbe": "Blau",
+        "Höhe": "82.5 cm",
+        "Länge": "53 cm",
+        "Produktart": "Esszimmerstuhl"
+      },
+      "optional": {
+        "Set enthält": "",
+        "Zimmer": "Esszimmer",
+        "Marke": "Bessagi",
+        "Gestellmaterial": "Metall",
+        "Stil": "",
+        "Montagezustand": "Montage erforderlich",
+        "Abteilung": "Erwachsene",
+        "Holzton": "",
+        "Innen-/Außenbereich": "Innenbereich",
+        "Gewicht": "",
+        "Herstellernummer": "04890011/06",
+        "Modell": "Alicia",
+        "Montage erforderlich": "Ja",
+        "Zusätzlich benötigte Teile": "Nein",
+        "Anzahl der Teile": "1",
+        "Besonderheiten": "",
+        "Polsterstoff": "100% Baumwolle",
+        "Sitzhöhe": "47 cm",
+        "Sitztiefe": "41 cm",
+        "Minimale Länge": "",
+        "Rückenlehnenhöhe": "41 cm",
+        "Thema": "",
+        "Finish": "",
+        "Muster": "",
+        "Ursprungsland": "",
+        "Herstellergarantie": "",
+        "Personalisiert": "Nein",
+        "Anzahl der Einheiten": "1",
+        "Maximale Gewichtskapazität": "",
+        "Maßeinheit": "cm"
+      },
+      "pricing": {
+        "Shipping Costs Net": "20.0",
+        "Selling Price Total": "175.0",
+        "Net Profit": "43.878823529411775",
+        "Net Profit Margin": "70.96688262884001"
+      }
+    }
+  }
+}

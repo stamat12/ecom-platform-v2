@@ -1,0 +1,142 @@
+{
+  "JAL00172": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU335774-47-53-061125020306",
+      "Invoice Date": "06.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "PJ PAUL JONES men's jacket with pocket tweed jacket business tweed blazer regular fit S brown"
+    },
+    "Price Data": {
+      "Price Net": "2.06",
+      "Shipping Net": "1.42",
+      "Total Cost Net": "3.48"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Anzüge",
+      "eBay Category ID": 3001
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pj Paul Jones",
+      "Color": "Braun",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses Sakko hat einen modernen Schnitt und ist ideal für formelle Anlässe. Es verfügt über einen klassischen Reverskragen und zwei Taschen. Die hochwertige Verarbeitung sorgt für einen eleganten Look.",
+      "Keywords": "Sakko Herren Braun",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "67.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 1"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 2,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM5/z/qXgAAeSwhaRpa4Ak/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/noYAAeSw6o1pa4Al/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "PJ PAUL JONES",
+        "Größe": "S",
+        "Produktart": "Blazer",
+        "Abteilung": "Herren",
+        "Farbe": "Braun",
+        "Stil": "1-Teiler"
+      },
+      "optional": {
+        "Material": "",
+        "Gewebeart": "",
+        "Passform": "",
+        "Thema": "",
+        "Anlass": "Business",
+        "Taillenumfang": "",
+        "Jacken-/Mantellänge": "Normal",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Jackenrevers-Form": "Spitzkragen",
+        "Schrittlänge": "",
+        "Muster": "Ohne Muster",
+        "Anzahl der Teile": "1-teilig",
+        "Futtermaterial": "",
+        "Jahreszeit": "Herbst",
+        "Ursprungsland": "",
+        "Rückenschlitz-Form": "Einschlitz",
+        "Jackenschnitt": "Einreihig",
+        "Besonderheiten": "",
+        "Jackenärmel-Knopfart": "Ein-Knopf",
+        "Beinform": "",
+        "Knöpfung der Jacke": "Ein-Knopf",
+        "Brustumfang": "119-124 cm",
+        "Handgefertigt": "Nein",
+        "Bundfalte": "",
+        "Textilpflege": "",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "50.0",
+        "Net Profit": "22.776806722689074",
+        "Net Profit Margin": "654.5059403071573"
+      }
+    }
+  }
+}

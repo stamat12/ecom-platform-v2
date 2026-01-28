@@ -1,0 +1,272 @@
+{
+  "JAL00064": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spL1NjnlOPP",
+      "ISIN": "b0cgzqpv9f",
+      "Supplier Title": "Hearkent Vibration Alarm Reminder Watch-Wristwatch with up to 8 Alarms/Vibration Reminders for Pill Reminders-Large Number Watch-Vibration Watch Medication Watch for Seniors/Blind People (Black)"
+    },
+    "Price Data": {
+      "Price Net": "4.0",
+      "Shipping Net": "0.08",
+      "Total Cost Net": "4.08"
+    },
+    "Ebay Category": {
+      "Category": "/Uhren & Schmuck/Uhren, -teile & -zubehör/Armband- & Taschenuhren/Armbanduhren",
+      "eBay Category ID": 31387
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Hearkent",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Uhr verfügt über eine digitale Anzeige mit Hintergrundbeleuchtung. Sie hat 8 Alarme und ist bis zu 50 Meter wasserdicht. Zudem bietet sie Funktionen wie Stoppuhr und Countdown.",
+      "Keywords": "digitaluhr",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "46.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 15,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00064 (2).jpg"
+        },
+        {
+          "filename": "JAL00064 (9).jpg"
+        },
+        {
+          "filename": "JAL00064 (13).jpg"
+        },
+        {
+          "filename": "JAL00064 (4).jpg"
+        },
+        {
+          "filename": "JAL00064 (11).jpg"
+        },
+        {
+          "filename": "JAL00064 (7).jpg"
+        },
+        {
+          "filename": "JAL00064 (3).jpg"
+        },
+        {
+          "filename": "JAL00064 (1).jpg"
+        },
+        {
+          "filename": "JAL00064 (10).jpg"
+        },
+        {
+          "filename": "JAL00064 (5).jpg"
+        },
+        {
+          "filename": "JAL00064 (12).jpg"
+        },
+        {
+          "filename": "JAL00064 (8).jpg"
+        },
+        {
+          "filename": "JAL00064 (6).jpg"
+        },
+        {
+          "filename": "JAL00064 (14).jpg"
+        },
+        {
+          "filename": "JAL00064 (15).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00064 (6).jpg"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00064 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/yr8AAeSwocVpaBan/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/Jb4AAeSwunRpaBav/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/yRUAAeSwgNJpaBax/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/NVcAAeSwF3VpaBaz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/4okAAeSwoG9paBa2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (14).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QiYAAeSw6W9paBbN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5VUAAeSw4n5paBbQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fJEAAeSwzMRpaBbT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/O7QAAeSwi5dpaBbV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M74AAeSwxmZpaBcA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/Oq4AAeSwnpdpaBaq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00064 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l~YAAeSw5cJpaBat/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Hearkent",
+        "Abteilung": "Unisex Erwachsene",
+        "EAN": "9780201379624"
+      },
+      "optional": {
+        "Referenznummer": "",
+        "Individualisiert": "Nein",
+        "Modell": "",
+        "Produktart": "Armbanduhr",
+        "Uhrwerk": "Quarz",
+        "Besonderheiten": "8 Alarme, EL-Hintergrundbeleuchtung, 50m wasserdicht",
+        "Zifferblattfarbe": "Grau",
+        "Armbandfarbe": "Schwarz",
+        "Uhrengehäuse-Farbe": "Schwarz",
+        "Armbandmaterial": "Kunststoff",
+        "Gehäusematerial": "Kunststoff",
+        "Stil": "Sportlich",
+        "Anzeigeformat": "Digital",
+        "Herstellungsjahr": "",
+        "Wasserdichtigkeit": "50 m (5 ATM)",
+        "Mit Original-Papieren": "Nein",
+        "Mit Original-Box/Originalverpackung": "Ja",
+        "Zifferblatt-Einteilung": "Keine Stundenstriche",
+        "Lünettenfarbe": "",
+        "Armband": "Einteiliges Armband",
+        "Uhrenform": "Rund",
+        "Gehäusegröße": "",
+        "Ursprungsland": "China",
+        "Armbandbreite": "",
+        "Vintage": "Nein",
+        "Stegbreite": "",
+        "Zifferblattmuster": "",
+        "Thema": "",
+        "Lünettenart": "",
+        "Gehäuse-Finish": "",
+        "Gehäusedicke": "",
+        "Gehäuseboden": "",
+        "Verschluss": "Schnalle",
+        "Herstellergarantie": "",
+        "Anzahl der Steine": "",
+        "Händigkeit": "",
+        "Mit Bedienungsanleitung": "Ja",
+        "Maximaler Handgelenkumfang": "",
+        "Handgefertigt": "Nein",
+        "Verkäufergarantie": "Nein",
+        "Mit Serviceprotokoll": "Nein",
+        "Hemmungsart": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "42.0",
+        "Net Profit": "15.574117647058822",
+        "Net Profit Margin": "381.7185697808535"
+      }
+    }
+  }
+}

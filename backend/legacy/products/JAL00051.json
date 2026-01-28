@@ -1,0 +1,213 @@
+{
+  "JAL00051": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spFVN4NnmBV",
+      "ISIN": "b01g5hiq0m",
+      "Supplier Title": "KangaROOS Women's K-bluerun 701 B Sneaker, Black Dark Gray 0522, 42 EU"
+    },
+    "Price Data": {
+      "Price Net": "0.81",
+      "Shipping Net": "0.67",
+      "Total Cost Net": "1.48"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": "4054264397068.0"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "KangaROOS",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus einem atmungsaktiven Material gefertigt und verfügen über einen praktischen Klettverschluss. Sie haben eine rutschfeste Sohle und bieten guten Halt. Ideal für den Alltag oder sportliche Aktivitäten.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Textil, Gummi"
+    },
+    "OP": {
+      "OP": "33.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "IMG_9339.jpg"
+        },
+        {
+          "filename": "IMG_9340.jpg"
+        },
+        {
+          "filename": "IMG_9343.jpg"
+        },
+        {
+          "filename": "IMG_9337.jpg"
+        },
+        {
+          "filename": "IMG_9338.jpg"
+        },
+        {
+          "filename": "IMG_9336.jpg"
+        },
+        {
+          "filename": "IMG_9342.jpg"
+        },
+        {
+          "filename": "IMG_9341.jpg"
+        },
+        {
+          "filename": "IMG_9335.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_9340.jpg"
+        },
+        {
+          "filename": "IMG_9335.jpg"
+        },
+        {
+          "filename": "IMG_9339.jpg"
+        },
+        {
+          "filename": "IMG_9343.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "IMG_9340.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MkoAAeSwyo1paBcH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9341.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NToAAeSwROBpaBcK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9338.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/59QAAeSwxQ1paBcO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9339.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/45QAAeSwu3NpaBcS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9342.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/roYAAeSw16dpaBcU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9343.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5A0AAeSwZAVpaBcY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9335.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NWQAAeSwfllpaBcc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9337.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MeAAAeSwAwdpaBcf/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "KangaROOS",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "spFVN4NnmBV",
+        "Individualisiert": "Nein",
+        "Modell": "K-bluerun 701 B",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "8",
+        "US-Schuhgröße": "9",
+        "Stil": "Sneaker",
+        "Charakter": "",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Textil",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "Nein",
+        "Thema": "",
+        "Schuhweite": "Normal",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Textil",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Ganzjährig",
+        "Aktivität": "Wandern",
+        "Ursprungsland": "",
+        "Verschluss": "Klettverschluss",
+        "Besonderheiten": "Atmungsaktiv, rutschfeste Sohle",
+        "Signiert": "Nein",
+        "Muster": "Einfarbig",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "",
+        "Pronation": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.4",
+        "Selling Price Total": "28.0",
+        "Net Profit": "8.939411764705882",
+        "Net Profit Margin": "604.0143084260732"
+      }
+    }
+  }
+}

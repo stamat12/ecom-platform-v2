@@ -1,0 +1,112 @@
+{
+  "JAL00002": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc45oL7iI",
+      "ISIN": "b0cxcpsqhl",
+      "Supplier Title": "Women's Pleated Tennis Skirt with Pants Athletic Golf Skirt Activewear Skirt with Pants Underneath Sports Skirt Outfits Workout Running Mini Skirts"
+    },
+    "Price Data": {
+      "Price Net": "0.61",
+      "Shipping Net": "0.29",
+      "Total Cost Net": "0.9"
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Weitere Ballsportarten/Tennis/Bekleidung/Kleider & Röcke",
+      "eBay Category ID": "70901"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Pinspark",
+      "Color": "Schwarz",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Rock hat einen sportlichen Look mit weißen Streifen am Saum. Er ist aus einem leichten, fließenden Material gefertigt. Die Falten sorgen für eine schöne Bewegung und einen femininen Schnitt.",
+      "Keywords": "Rock Damen",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "22.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Abteilung": "Damen",
+        "Größe": "X-Small",
+        "Produktart": "Rock",
+        "Modell": "",
+        "Besonderheiten": "Atmungsaktiv",
+        "Material": "",
+        "Herstellernummer": "",
+        "Ursprungsland": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.42",
+        "Selling Price Total": "19.0",
+        "Net Profit": "3.01638655462185",
+        "Net Profit Margin": "335.15406162465"
+      }
+    }
+  }
+}

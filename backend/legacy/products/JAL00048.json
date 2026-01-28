@@ -1,0 +1,187 @@
+{
+  "JAL00048": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK355792790",
+      "ISIN": "b0dbpq3qlv",
+      "Supplier Title": "JOGAL Herren Blumen Kurzarm Baumwolle Hawaii Hemd Strand Sommer Freizeithemd Weiß Rosa Gänseblümchen Klein"
+    },
+    "Price Data": {
+      "Price Net": "0.68",
+      "Shipping Net": "0.12",
+      "Total Cost Net": "0.8"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": 57990
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Jogal",
+      "Color": "Bunt",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses Hemd hat ein auffälliges Blumenmuster in verschiedenen Farben. Es verfügt über einen klassischen Kragen und kurze Ärmel. Ideal für lässige Anlässe oder den Sommer.",
+      "Keywords": "Jogal Hemd Herren",
+      "Materials": "Baumwolle"
+    },
+    "OP": {
+      "OP": "28.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00048 (8).jpg"
+        },
+        {
+          "filename": "JAL00048 (4).jpg"
+        },
+        {
+          "filename": "JAL00048 (5).jpg"
+        },
+        {
+          "filename": "JAL00048 (3).jpg"
+        },
+        {
+          "filename": "JAL00048 (1).jpg"
+        },
+        {
+          "filename": "JAL00048 (7).jpg"
+        },
+        {
+          "filename": "JAL00048 (2).jpg"
+        },
+        {
+          "filename": "JAL00048 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00048 (8).jpg"
+        },
+        {
+          "filename": "JAL00048 (1).jpg"
+        },
+        {
+          "filename": "JAL00048 (4).jpg"
+        },
+        {
+          "filename": "JAL00048 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00048 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3lQAAeSwW25paBdU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00048 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Mh4AAeSwvadpaBdZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00048 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OFYAAeSwnylpaBde/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00048 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6ocAAeSwBS5paBdk/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Jogal",
+        "Abteilung": "Herren",
+        "Größe": "S",
+        "Farbe": "Mehrfarbig"
+      },
+      "optional": {
+        "Ärmellänge": "Kurzarm",
+        "Charakter": "",
+        "Material": "",
+        "Muster": "Blumen",
+        "Gewebeart": "",
+        "Thema": "",
+        "Passform": "",
+        "Besonderheiten": "",
+        "Produktart": "Geknöpftes Hemd",
+        "Ausschnitt": "Kragen",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "",
+        "Jahreszeit": "Sommer",
+        "Kragenart": "Kentkragen",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "",
+        "Akzente": "",
+        "Produktlinie": "",
+        "Verschluss": "Knopf",
+        "Brustumfang": "",
+        "Modell": "",
+        "Textilpflege": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Handgefertigt": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.4",
+        "Selling Price Total": "24.0",
+        "Net Profit": "6.738067226890755",
+        "Net Profit Margin": "842.2584033613443"
+      }
+    }
+  }
+}

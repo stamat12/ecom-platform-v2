@@ -1,0 +1,187 @@
+{
+  "JAL00020": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc45oL7iI",
+      "ISIN": "b0cs5v96mk",
+      "Supplier Title": "COOrun Women's UPF 50+ Sun Protection Hoodie Jacket Long Sleeve Hooded Active Shirts Outdoor Hiking Performance"
+    },
+    "Price Data": {
+      "Price Net": "0.61",
+      "Shipping Net": "0.29",
+      "Total Cost Net": "0.9"
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Damen/Jacken & Westen",
+      "eBay Category ID": "181365"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "COOrun",
+      "Color": "Hellblau",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt verfügt über seitliche Reißverschlusstaschen und tiefe Innentaschen. Es ist ideal für aktive Frauen, die Funktionalität und Stil kombinieren möchten. Der Stoff ist leicht und atmungsaktiv.",
+      "Keywords": "Jacke Damen",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "20.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 6,
+        "count_phone": 7,
+        "count_enhanced": 2,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "JAL00020 (1).jpg"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00020 (9).jpg"
+        },
+        {
+          "filename": "JAL00020 (2).jpg"
+        },
+        {
+          "filename": "JAL00020 (12).jpg"
+        },
+        {
+          "filename": "JAL00020 (3).jpg"
+        },
+        {
+          "filename": "JAL00020 (10).jpg"
+        },
+        {
+          "filename": "JAL00020 (8).jpg"
+        },
+        {
+          "filename": "JAL00020 (11).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_JAL00020 (11)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_JAL00020 (8)_1_upscaled_x4.jpg",
+          "upscaled": true
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/~MEAAeSwBrppZALo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/cWIAAeSwc4dpZALq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/ofYAAeSwONBpZALs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/-F4AAeSwgllpZALt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY4/z/9uMAAeSwap5pZALw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_JAL00020 (8)_1_upscaled_x4.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/SeAAAeSwFm9pZAL6/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_JAL00020 (11)_1_upscaled_x4.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/X8wAAeSw1~BpZAMF/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00020 (10).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mSsAAeSwyQlpZAMJ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos"
+      },
+      "optional": {
+        "Größe": "XL",
+        "Material": "",
+        "Farbe": "Blau",
+        "Ursprungsland": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Selling Price Total": "18.0",
+        "Net Profit": "2.256050420168068",
+        "Net Profit Margin": "250.6722689075631"
+      }
+    }
+  }
+}

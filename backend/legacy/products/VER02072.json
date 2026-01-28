@@ -1,0 +1,107 @@
+{
+  "VER02072": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25091376,
+      "Invoice Date": "2025-09-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 843035,
+      "ISIN": "",
+      "Supplier Title": "Williot Fleece Hemd Größe M"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 7.15
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": "8684666084325"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Williot",
+      "Color": "Anthrazit",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Langärmliges kariertes Herrenhemd aus einer weichen Baumwollmischung mit normaler Passform.",
+      "Keywords": "Salvatore Hemd",
+      "Materials": "50% Baumwolle, 30% Acryl, 20% Polyester"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02072 (2)-AT-36SNNQ3.jpg"
+        },
+        {
+          "filename": "VER02072 (10).jpg"
+        },
+        {
+          "filename": "VER02072 (5).jpg"
+        },
+        {
+          "filename": "VER02072 (3).jpg"
+        },
+        {
+          "filename": "VER02072 (7).jpg"
+        },
+        {
+          "filename": "VER02072 (1).jpg"
+        },
+        {
+          "filename": "VER02072 (8).jpg"
+        },
+        {
+          "filename": "VER02072 (1)-AT-36SNNQ3.jpg"
+        },
+        {
+          "filename": "VER02072 (9).jpg"
+        },
+        {
+          "filename": "VER02072 (2).jpg"
+        },
+        {
+          "filename": "VER02072 (11).jpg"
+        },
+        {
+          "filename": "VER02072 (12).jpg"
+        },
+        {
+          "filename": "VER02072 (4).jpg"
+        },
+        {
+          "filename": "VER02072 (6).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

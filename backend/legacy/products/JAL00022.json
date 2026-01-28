@@ -1,0 +1,235 @@
+{
+  "JAL00022": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spBqMrGvfHt",
+      "ISIN": "b0brsqpgyh",
+      "Supplier Title": "AZSDXS Sports Shoes Men's Lightweight Running Shoes Men's Breathable Sneakers Men's Trainers Black White 41"
+    },
+    "Price Data": {
+      "Price Net": "1.85",
+      "Shipping Net": "0.37",
+      "Total Cost Net": "2.22"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": 95672
+    },
+    "EAN": {
+      "EAN": "729162932126"
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Azsdxs",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe haben ein atmungsaktives Obermaterial aus Netzgewebe. Sie bieten eine gute Dämpfung und sind leicht. Die Sohle hat eine rutschfeste Beschichtung für besseren Halt.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Textil, Gummi"
+    },
+    "OP": {
+      "OP": "24.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00022 (3).jpg"
+        },
+        {
+          "filename": "JAL00022 (5).jpg"
+        },
+        {
+          "filename": "JAL00022 (10).jpg"
+        },
+        {
+          "filename": "JAL00022 (9).jpg"
+        },
+        {
+          "filename": "JAL00022 (2).jpg"
+        },
+        {
+          "filename": "JAL00022 (6).jpg"
+        },
+        {
+          "filename": "JAL00022 (1).jpg"
+        },
+        {
+          "filename": "JAL00022 (8).jpg"
+        },
+        {
+          "filename": "JAL00022 (4).jpg"
+        },
+        {
+          "filename": "JAL00022 (7).jpg"
+        },
+        {
+          "filename": "JAL00022 (11).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00022 (3).jpg"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00022 (2).jpg"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4LcAAeSwa1JpZBmo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z78AAeSwl3ppZBmr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9K4AAeSwBU9pZBmt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Tq4AAeSw-4hpZBmv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/aLMAAeSwhYZpZBmw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00022 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/iesAAeSwm0dpZBmz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00022 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6K0AAeSwsXFpZBm4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00022 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RUMAAeSw23NpZBm7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00022 (2).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9xkAAeSwVQJpZBnA/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Damyuan",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "",
+        "Modell": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Obermaterial": "Baumwolle",
+        "Charakter": "",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "Nein",
+        "Futtermaterial": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Thema": "",
+        "Jahreszeit": "",
+        "Schuhweite": "",
+        "Akzente": "",
+        "Besonderheiten": "Atmungsaktiv",
+        "Anlass": "Freizeit",
+        "Gewebeart": "",
+        "Aktivität": "Fitnessstudio & Training",
+        "Ursprungsland": "",
+        "Muster": "",
+        "Herstellungsjahr": "",
+        "Signiert": "Nein",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "26.0",
+        "Net Profit": "6.748739495798317",
+        "Net Profit Margin": "303.99727458550973"
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "VER02071": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25091376,
+      "Invoice Date": "2025-09-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 842962,
+      "ISIN": "",
+      "Supplier Title": "G Star Raw Sweater Größe M"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 15.48
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155183"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "G-Star RAW",
+      "Color": "Beige",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses Sweatshirt mit normaler Passform ist mit einer G-Star RAW Grafik auf der Brust gestaltet.",
+      "Keywords": "Box Grafik Sweatshirt",
+      "Materials": "Obermaterial: 100% Baumwolle (Bio), Rippe: 97% Baumwolle (Bio), 3% Elasthan"
+    },
+    "OP": {
+      "OP": 89.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 1
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02071 (9).jpg"
+        },
+        {
+          "filename": "VER02071 (3).jpg"
+        },
+        {
+          "filename": "VER02071 (2).jpg"
+        },
+        {
+          "filename": "VER02071 (4).jpg"
+        },
+        {
+          "filename": "VER02071 (8).jpg"
+        },
+        {
+          "filename": "VER02071 (5).jpg"
+        },
+        {
+          "filename": "VER02071 (12).jpg"
+        },
+        {
+          "filename": "VER02071 (6).jpg"
+        },
+        {
+          "filename": "VER02071 (1).jpg"
+        },
+        {
+          "filename": "VER02071 (10).jpg"
+        },
+        {
+          "filename": "VER02071 (11).jpg"
+        },
+        {
+          "filename": "VER02071 (7).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_real_VER02071 (7)_1.jpg"
+        }
+      ]
+    }
+  }
+}

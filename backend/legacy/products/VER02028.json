@@ -1,0 +1,197 @@
+{
+  "VER02028": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 827075,
+      "ISIN": "",
+      "Supplier Title": "Adidas tyshawn Sneaker leicht verschmutzt Gr.44"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 20.73
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "adidas",
+      "Color": "Cremeweiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Signature-Skateschuh von Tyshawn Jones kombiniert Basketball-Ästhetik mit unschlagbarem Komfort und Strapazierfähigkeit.",
+      "Keywords": "Tyshawn Sneaker",
+      "Materials": "Obermaterial: Leder, Futter: Textil, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02028 (3).jpg"
+        },
+        {
+          "filename": "VER02028 (9).jpg"
+        },
+        {
+          "filename": "VER02028 (2).jpg"
+        },
+        {
+          "filename": "VER02028 (4).jpg"
+        },
+        {
+          "filename": "VER02028 (5).jpg"
+        },
+        {
+          "filename": "VER02028 (6).jpg"
+        },
+        {
+          "filename": "VER02028 (7).jpg"
+        },
+        {
+          "filename": "VER02028 (8).jpg"
+        },
+        {
+          "filename": "VER02028 (1).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02028 (3).jpg"
+        },
+        {
+          "filename": "VER02028 (7).jpg"
+        },
+        {
+          "filename": "VER02028 (9).jpg"
+        },
+        {
+          "filename": "VER02028 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02028 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UzMAAeSwgb9pZruU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8eMAAeSwLKtpZruY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (2).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4~YAAeSw3xRpZruc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zm0AAeSw7slpZrug/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2ngAAeSwK2ZpZruk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1oUAAeSwfaBpZruo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6XIAAeSwzLJpZrur/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02028 (7).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/E38AAeSwsPRpZruw/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "",
+        "Individualisiert": "",
+        "Modell": "Tyshawn",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Stil": "Sneaker",
+        "Charakter": "",
+        "Schuhschaft-Typ": "High Top",
+        "Innensohlenmaterial": "",
+        "Obermaterial": "Leder",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "",
+        "Thema": "",
+        "Schuhweite": "",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "",
+        "Aktivität": "",
+        "Ursprungsland": "",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "",
+        "Signiert": "",
+        "Muster": "",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "75.0",
+        "Net Profit": "23.53521008403361",
+        "Net Profit Margin": "113.53212775703622"
+      }
+    }
+  }
+}

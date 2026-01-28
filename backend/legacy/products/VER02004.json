@@ -1,0 +1,82 @@
+{
+  "VER02004": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 695450,
+      "Invoice Date": "2025-09-09T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 144114,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Schuhe Größe 38 ⅔"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.33,
+      "Total Cost Net": 18.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Karton (leicht verschmutzt)"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "adidas Originals",
+      "Color": "Weiß / Schwarz",
+      "Size": "38 2/3"
+    },
+    "Intern Generated Info": {
+      "More details": "Der adidas Samba OG ist ein legendärer Fußballschuh, der sich auch als Alltagsschuh bewährt hat. Er besticht durch sein klassisches Design mit den drei Streifen und bietet hohen Tragekomfort.",
+      "Keywords": "Samba OG Sneaker",
+      "Materials": "Obermaterial: Leder und Synthetik; Futter: Textil; Außensohle: Gummi"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02004 (1).jpg"
+        },
+        {
+          "filename": "VER02004 (2).jpg"
+        },
+        {
+          "filename": "VER02004 (3).jpg"
+        },
+        {
+          "filename": "VER02004 (4).jpg"
+        },
+        {
+          "filename": "VER02004 (5).jpg"
+        },
+        {
+          "filename": "VER02004 (6).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

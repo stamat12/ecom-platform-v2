@@ -1,0 +1,220 @@
+{
+  "JAL00023": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK427603209",
+      "ISIN": "b0dfpfc1h4",
+      "Supplier Title": "Megadream Mobile Game Controller for iPhone/iOS/Android/Switch/PC with RGB Fan/Turbo/Back Key/Vibration, Wireless Gamepad Joystick for iPhone 15/14/13/Galaxy 24/23/22/One Plus/Call of Duty/Genshin"
+    },
+    "Price Data": {
+      "Price Net": "5.05",
+      "Shipping Net": "0.32",
+      "Total Cost Net": "5.37"
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/Zubehör/Controller",
+      "eBay Category ID": "117042"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Coolshark",
+      "Color": "Schwarz und Weiß",
+      "Size": "Bis zu 7,2 Zoll"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Controller verfügt über eine duale Vibration und einen 3D-Joystick für präzises Spielen. Er ist mit den meisten iPhones und Android-Handys kompatibel. Zusätzlich hat er eine RGB-Hintergrundbeleuchtung und einen Kühler, um das Handy während des Spielens kühl zu halten.",
+      "Keywords": "Controller Gaming Zubehör",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "56.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00023 (8).jpg"
+        },
+        {
+          "filename": "JAL00023 (3).jpg"
+        },
+        {
+          "filename": "JAL00023 (4).jpg"
+        },
+        {
+          "filename": "JAL00023 (1).jpg"
+        },
+        {
+          "filename": "JAL00023 (5).jpg"
+        },
+        {
+          "filename": "JAL00023 (6).jpg"
+        },
+        {
+          "filename": "JAL00023 (2).jpg"
+        },
+        {
+          "filename": "JAL00023 (9).jpg"
+        },
+        {
+          "filename": "JAL00023 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00023 (8).jpg"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00023 (9).jpg"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/SYEAAeSwn6dpZBzx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RDcAAeSw0UVpZBz1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9FgAAeSw1q5pZBz3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0msAAeSwq8NpZBz5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MH8AAeSwpktpZBz7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00023 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BAMAAeSwkthpZBz~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00023 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UfsAAeSw8nNpZB0C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00023 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sOIAAeSw1~BpZB0G/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00023 (3).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2A4AAeSwrBhpZB0J/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00023 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ADAAAeSwBS5pZBz0/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Coolshark",
+        "Produktart": "Controller"
+      },
+      "optional": {
+        "Kompatibles Produkt": "Smartphone",
+        "Anzahl der Lüfter": "",
+        "Plattform": "Android",
+        "Modell": "JK02",
+        "Farbe": "Schwarz",
+        "Konnektivität": "Bluetooth",
+        "Modellkompatibilität": "",
+        "Material": "Kunststoff",
+        "Besonderheiten": "Gepolstert, RGB Backlight, Cooler",
+        "Kabellänge": "",
+        "Herstellernummer": "",
+        "Maximale Anzahl von Spielern": "1",
+        "Ursprungsland": "",
+        "Funkreichweite": "Mehr als 10 m",
+        "Personalisieren": "Ja",
+        "Gewicht": "",
+        "Herstellergarantie": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellungsjahr": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "42.0",
+        "Net Profit": "15.544117647058822",
+        "Net Profit Margin": "289.46215357651437"
+      }
+    }
+  }
+}

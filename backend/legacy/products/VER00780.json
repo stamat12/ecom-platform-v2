@@ -1,0 +1,174 @@
+{
+  "VER00780": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665725,
+      "ISIN": "",
+      "Supplier Title": "1 Stk. Leonardi Halskette"
+    },
+    "Price Data": {
+      "Price Net": 0.83,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 1.37
+    },
+    "Ebay Category": {
+      "Category": "/Uhren & Schmuck/Modeschmuck/Halsketten & Anhänger",
+      "eBay Category ID": "155101"
+    },
+    "EAN": {
+      "EAN": 9009982062120.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "SAADIA collection",
+      "Color": "Gold",
+      "Size": "ca. 90 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Lange Gliederkette mit strukturierten, länglichen Gliedern und Knebelverschluss.",
+      "Keywords": "N057G-CO Collier",
+      "Materials": "Messing, vergoldet"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_3034.JPG"
+        },
+        {
+          "filename": "IMG_3033.JPG"
+        },
+        {
+          "filename": "IMG_3030.JPG"
+        },
+        {
+          "filename": "IMG_3031.JPG"
+        },
+        {
+          "filename": "IMG_3032.JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_3034.JPG"
+        },
+        {
+          "filename": "IMG_3033.JPG"
+        },
+        {
+          "filename": "IMG_3030.JPG"
+        },
+        {
+          "filename": "IMG_3031.JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "IMG_3030.JPG",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Mj8AAeSw9oJpZrOC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_3033.JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LbQAAeSwwalpZrOE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_3034.JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5LIAAeSweMVpZrOH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_3031.JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NY0AAeSwUMlpZrOJ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Stil": "Kette",
+        "Marke": "Leonardi",
+        "Produktart": "Halskette"
+      },
+      "optional": {
+        "Farbe": "Gold",
+        "Hauptsteinfarbe": "",
+        "Metall": "Messing",
+        "Material": "",
+        "Basismetall": "",
+        "Thema": "",
+        "Anhängerform": "",
+        "Hauptstein": "",
+        "Hauptsteinform": "",
+        "Nebenstein": "",
+        "Kettenlänge": "",
+        "Materialien aus": "",
+        "Hauptstein-Herstellungsprozess": "",
+        "Fassung": "",
+        "Hauptstein-Behandlung": "",
+        "Feingehalt": "",
+        "Schliff": "",
+        "Anzahl der Edelsteine": "",
+        "Anhängerart": "",
+        "Kettenart": "Ankerkette",
+        "Ursprungsland": "",
+        "Verschluss": "Karabinerverschluss",
+        "Hauptstein-Breite": "",
+        "Hauptstein-Länge": "",
+        "Hauptstein-Tiefe": "",
+        "Anlass": "",
+        "Besonderheiten": "",
+        "Vintage": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Antik": "",
+        "Großhandel": "",
+        "Signiert": "",
+        "Verkäufergarantie": "",
+        "Edelstein-Reinheitsgrad": "",
+        "Individualisiert": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Epoche": "",
+        "Herstellernummer": "N057G-CO",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "21.0",
+        "Net Profit": "3.577058823529412",
+        "Net Profit Margin": "261.0991841992271"
+      }
+    }
+  }
+}

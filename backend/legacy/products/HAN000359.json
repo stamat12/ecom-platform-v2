@@ -1,0 +1,170 @@
+{
+  "HAN000359": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24101225,
+      "Invoice Date": "2024-10-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 736122,
+      "ISIN": null,
+      "Supplier Title": "Ragwear Jacke Größe M"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.58,
+      "Total Cost Net": 25.58
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen"
+    },
+    "EAN": {
+      "EAN": 4064601581326.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "ragwear",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Olssen Übergangsjacke von ragwear ist aus 100% Polyester gefertigt und bietet eine leichte, atmungsaktive Konstruktion. Sie verfügt über eine Kapuze und praktische Taschen mit Reißverschluss. Ideal für die Übergangszeit und umweltfreundlich, da sie vegan ist.",
+      "Keywords": "Olssen Übergangsjacke Herren",
+      "Materials": "Oberstoff: 100% Polyester; Futter: 100% Polyester"
+    },
+    "OP": {
+      "OP": 109.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX G1"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 29,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HAN000359 (1).jpg"
+        },
+        {
+          "filename": "HAN000359 (2).jpg"
+        },
+        {
+          "filename": "HAN000359 (2)_bb.jpg"
+        },
+        {
+          "filename": "HAN000359 (2)_fb.jpg"
+        },
+        {
+          "filename": "HAN000359 (2)_gb.jpg"
+        },
+        {
+          "filename": "HAN000359 (2)_rb.jpg"
+        },
+        {
+          "filename": "HAN000359 (2)_wb.jpg"
+        },
+        {
+          "filename": "HAN000359 (3).jpg"
+        },
+        {
+          "filename": "HAN000359 (3)_bb.jpg"
+        },
+        {
+          "filename": "HAN000359 (3)_fb.jpg"
+        },
+        {
+          "filename": "HAN000359 (3)_gb.jpg"
+        },
+        {
+          "filename": "HAN000359 (3)_rb.jpg"
+        },
+        {
+          "filename": "HAN000359 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000359 (4).jpg"
+        },
+        {
+          "filename": "HAN000359 (4)_bb.jpg"
+        },
+        {
+          "filename": "HAN000359 (4)_fb.jpg"
+        },
+        {
+          "filename": "HAN000359 (4)_gb.jpg"
+        },
+        {
+          "filename": "HAN000359 (4)_rb.jpg"
+        },
+        {
+          "filename": "HAN000359 (4)_wb.jpg"
+        },
+        {
+          "filename": "HAN000359 (5).jpg"
+        },
+        {
+          "filename": "HAN000359 (5)_bb.jpg"
+        },
+        {
+          "filename": "HAN000359 (5)_fb.jpg"
+        },
+        {
+          "filename": "HAN000359 (5)_gb.jpg"
+        },
+        {
+          "filename": "HAN000359 (5)_rb.jpg"
+        },
+        {
+          "filename": "HAN000359 (5)_wb.jpg"
+        },
+        {
+          "filename": "HAN000359 (6).jpg"
+        },
+        {
+          "filename": "HAN000359 (7).jpg"
+        },
+        {
+          "filename": "HAN000359 (8).jpg"
+        },
+        {
+          "filename": "HAN000359 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "HAN000359 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000359 (6).jpg"
+        },
+        {
+          "filename": "HAN000359 (9).jpg"
+        },
+        {
+          "filename": "HAN000359 (1).jpg"
+        },
+        {
+          "filename": "HAN000359 (7).jpg"
+        }
+      ]
+    }
+  }
+}

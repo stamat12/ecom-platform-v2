@@ -1,0 +1,235 @@
+{
+  "JAL00001": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spFPN4NS4QK",
+      "ISIN": "b0d8sycvll",
+      "Supplier Title": "Kyopp Barefoot Shoes Children Breathable Non-Slip Hiking Shoes Lightweight Soft Barefoot Shoes Size 26-35 (Blue 32EU)"
+    },
+    "Price Data": {
+      "Price Net": "1.55",
+      "Shipping Net": "0.11",
+      "Total Cost Net": "1.66"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Kinder/Unisex für Kinder/Unisex-Schuhe",
+      "eBay Category ID": "155202"
+    },
+    "EAN": {
+      "EAN": "706384696852"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "KU",
+      "Brand": "Kyopp",
+      "Color": "Blau",
+      "Size": "32"
+    },
+    "Intern Generated Info": {
+      "More details": "Kinder Barfußschuhe mit Schnellschnürung und rutschfester TPR-Sohle. Atmungsaktives Strick-Obermaterial. Ideal für Wandern und Wassersport.",
+      "Keywords": "Barfußschuh",
+      "Materials": "Obermaterial: Strick, Sohlenmaterial: TPR"
+    },
+    "OP": {
+      "OP": "31.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 5,
+        "count_phone": 6,
+        "count_enhanced": 3,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "IMG_9223.jpg"
+        },
+        {
+          "filename": "IMG_9226.jpg"
+        },
+        {
+          "filename": "IMG_9225.jpg"
+        },
+        {
+          "filename": "IMG_9222.jpg"
+        },
+        {
+          "filename": "IMG_9221.jpg"
+        },
+        {
+          "filename": "IMG_9224.jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9226_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9221_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_real_IMG_9225_1_upscaled_x4.jpg",
+          "upscaled": true
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9226_1_upscaled_x4.jpg"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "studio_restoration_real_IMG_9225_1_upscaled_x4.jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/j-gAAeSwoG9pXuGp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9226_1_upscaled_x4.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xA4AAeSwqwppXuGn/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FmMAAeSwhJtpXuGr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hsoAAeSw4iBpXuGt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nCAAAeSwA-FpXuGv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGoAAeSwEdBpXuGx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_real_IMG_9225_1_upscaled_x4.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1J4AAeSwudppXuHG/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9221_1_upscaled_x4.jpg",
+          "order": 7
+        },
+        {
+          "filename": "IMG_9224.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2jQAAeSw1QppXuHI/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "EU-Schuhgröße": "32",
+        "Farbe": "Blau",
+        "Marke": "Kyopp",
+        "Produktart": "Sportschuh",
+        "Stil": "Halbschuhe"
+      },
+      "optional": {
+        "UK-Schuhgröße": "",
+        "AU-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Modell": "",
+        "Obermaterial": "Baumwolle",
+        "Abteilung": "Unisex Kinder",
+        "Vintage": "",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Produktlinie": "",
+        "Charakter": "",
+        "Jahreszeit": "Sommer",
+        "Charakter Familie": "",
+        "Innensohlenmaterial": "",
+        "Futtermaterial": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Thema": "",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "",
+        "Dämpfungsgrad": "",
+        "Akzente": "",
+        "Anlass": "Freizeit",
+        "Schuhweite": "",
+        "Stollentyp": "",
+        "Aktivität": "",
+        "Handgefertigt": "",
+        "Muster": "",
+        "Herstellungsjahr": "",
+        "Sprengung": "",
+        "Ursprungsland": "",
+        "Absatzart": "Flach",
+        "Herstellernummer": "",
+        "Pronation": "",
+        "Schuhschaft-Typ": "Low Top",
+        "Schuhspitze": "Geschlossen"
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.42",
+        "Selling Price Total": "28.0",
+        "Net Profit": "8.739411764705883",
+        "Net Profit Margin": "526.4705882352941"
+      }
+    }
+  }
+}

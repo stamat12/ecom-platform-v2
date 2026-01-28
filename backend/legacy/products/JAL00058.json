@@ -1,0 +1,197 @@
+{
+  "JAL00058": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE989420711",
+      "ISIN": "b0cw631dv3",
+      "Supplier Title": "Lifewit 8 Set Drawer Dividers, Adjustable Drawer Dividers for Inside Length 32–56 cm & Height 13 cm Organizer System for Kitchen/Wardrobes/Desk, White"
+    },
+    "Price Data": {
+      "Price Net": "4.77",
+      "Shipping Net": "2.92",
+      "Total Cost Net": "7.69"
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Klein- & Hängeaufbewahrung/Wandschrankorganisatoren",
+      "eBay Category ID": "43503"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Lifewit",
+      "Color": "Weiß",
+      "Size": "32-56,5 cm x 10,5 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Set aus 8 verstellbaren Schubladenteilern. Passend für Schubladen mit einer Innenlänge von 32 bis 56,5 cm und einer Höhe von mindestens 10,5 cm. Mit Anti-Rutsch-Schaumstoff für sicheren Halt.",
+      "Keywords": "Verstellbare Schubladenteiler",
+      "Materials": "ABS-Kunststoff, Schaumstoff"
+    },
+    "OP": {
+      "OP": "46.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00058 (3).jpg"
+        },
+        {
+          "filename": "JAL00058 (1).jpg"
+        },
+        {
+          "filename": "JAL00058 (2).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "JAL00058 (2).jpg"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5OwAAeSwCMlpZtTH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/iD0AAeSwk-FpZtTJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oGgAAeSw7nRpZtTK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rWUAAeSweMVpZtTM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/n0AAAeSwn8VpZtTN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00058 (2).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6vIAAeSwXVppZtTR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00058 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/p8kAAeSwVQJpZtTU/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Schubladenteiler",
+        "Breite": "10 cm",
+        "Höhe": "13 cm",
+        "Länge": "56 cm"
+      },
+      "optional": {
+        "Marke": "Lifewit",
+        "Material": "ABS-Kunststoff",
+        "Anzahl der Regalfächer": "",
+        "Anzahl der Teile": "8",
+        "Montage": "Freistehend",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Abteilung": "Unisex Erwachsene",
+        "Besonderheiten": "Verstellbar",
+        "Durchmesser": "",
+        "Gewicht": "",
+        "Herstellernummer": "LPNHE989420711",
+        "Kapazität": "",
+        "Modell": "",
+        "Montage erforderlich": "Nein",
+        "Tiefe": "",
+        "Anzahl der Fächer": "8",
+        "Anzahl pro Packung": "1",
+        "Anzahl der Einheiten": "8",
+        "Anzahl der Schubladen": "",
+        "Duft": "",
+        "Farbe": "Weiß",
+        "Finish": "",
+        "Form": "Rechteckig",
+        "Geeignet für": "Indoor",
+        "Größe": "32-56 cm",
+        "Maßeinheit": "cm",
+        "Muster": "Einfarbig",
+        "Original/Reproduktion": "Original",
+        "Pflegeanleitung": "",
+        "Stil": "Modern",
+        "Thema": "",
+        "Ursprungsland": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "45.0",
+        "Net Profit": "14.965126050420167",
+        "Net Profit Margin": "194.60502016151062"
+      }
+    }
+  }
+}

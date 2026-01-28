@@ -1,0 +1,138 @@
+{
+  "VER01211": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411390,
+      "Invoice Date": "2024-11-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 363897,
+      "ISIN": "",
+      "Supplier Title": "Vonner Knöchelbandage Gr. XL, Beige"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 2.15
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Kleingeräte & Zubehör/Sonstige",
+      "eBay Category ID": "28065"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Uonner",
+      "Color": "Beige",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Geeignet für alle Sportarten: Laufen, Wandern, Camping, Fußkorbsport, Radfahren, Fitness.",
+      "Keywords": "HH01 Knöchelbandage",
+      "Materials": "85% Nylon, 15% Spandex"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01211 (3).JPG"
+        },
+        {
+          "filename": "VER01211 (1).JPG"
+        },
+        {
+          "filename": "VER01211 (1)_wb.jpg"
+        },
+        {
+          "filename": "VER01211 (1)_fb.jpg"
+        },
+        {
+          "filename": "VER01211 (2).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01211 (3).JPG"
+        },
+        {
+          "filename": "VER01211 (1)_wb.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01211 (1)_wb.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/utMAAeSwyQppZrN3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01211 (3).JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AOkAAeSwE3ppZrN5/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Uonner"
+      },
+      "optional": {
+        "Verwendungsbereich": "",
+        "Besonderheiten": "",
+        "Breite": "",
+        "Gewicht": "",
+        "Herstellernummer": "X001GVSW5Z",
+        "Material": "Nylon",
+        "Modell": "HH01",
+        "Muskelgruppe": "",
+        "Produktart": "Knöchelbandage",
+        "Sportart/Aktivität": "Fitnessstudio & Training",
+        "Farbe": "Beige",
+        "Ursprungsland": "",
+        "Indoor/Outdoor": "",
+        "Anzahl der Einheiten": "",
+        "Anzahl der Teile": "",
+        "Durchmesser": "",
+        "Höhe": "",
+        "Länge": "",
+        "Maßeinheit": "",
+        "Personalisiert": "",
+        "Set enthält": "",
+        "Signiert": "",
+        "Vintage": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "22.0",
+        "Net Profit": "3.937394957983195",
+        "Net Profit Margin": "183.1346492085207"
+      }
+    }
+  }
+}

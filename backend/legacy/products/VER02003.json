@@ -1,0 +1,83 @@
+{
+  "VER02003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 693179,
+      "Invoice Date": "2025-08-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152980,
+      "ISIN": null,
+      "Supplier Title": "Oberteil Größe XS"
+    },
+    "Price Data": {
+      "Price Net": 7.08,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 7.61
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Sport-BHs"
+    },
+    "EAN": {
+      "EAN": 194957242603.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Schwarz",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Nike Swoosh Indy Sport-BH bietet leichten Halt bei Workouts mit geringer Belastung wie Yoga, Pilates und Barre. Das schmale Design hat einen tiefen Ausschnitt und dünne Träger, die im Rücken gekreuzt sind und für eine feminine Silhouette sorgen. Schweißableitendes Material sorgt für ein trockenes, bequemes Tragegefühl.",
+      "Keywords": "Sport BH Indy leichter Support gepolstert",
+      "Materials": "Hauptteil: 78 % Polyester/22 % Elastan. Einsatzfutter vorne/Einsatzfutter oben hinten: 80 % Polyester/20 % Elastan. Mesh: 81 % Polyester/19 % Elastan."
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02003 (3).jpg"
+        },
+        {
+          "filename": "VER02003 (2).jpg"
+        },
+        {
+          "filename": "VER02003 (1).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02003 (2).jpg"
+        },
+        {
+          "filename": "VER02003 (3).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "HAN000406": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24112263,
+      "Invoice Date": "2024-11-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 775492,
+      "ISIN": "",
+      "Supplier Title": "Pull&Bear Jeans Jacke Größe M"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 8.97
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pull&Bear",
+      "Color": "Blau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Jeansjacke hat einen klassischen Schnitt und ist aus robustem Denim gefertigt. Sie verfügt über eine Knopfleiste und mehrere Taschen. Die Farbe ist ein helles Blau mit einem leicht verwaschenen Look.",
+      "Keywords": "Jeansjacke Herren",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 3,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HAN000406 (1).JPG"
+        },
+        {
+          "filename": "HAN000406 (4).JPG"
+        },
+        {
+          "filename": "HAN000406 (2)_wb.jpg"
+        },
+        {
+          "filename": "HAN000406 (2).JPG"
+        },
+        {
+          "filename": "HAN000406 (2)_fb.jpg"
+        },
+        {
+          "filename": "HAN000406 (3).JPG"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1_upscaled_x4.jpg",
+          "upscaled": true
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1.JPG"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (1)_1.JPG"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (1)_1.JPG"
+        },
+        {
+          "filename": "HAN000406 (4).JPG"
+        },
+        {
+          "filename": "HAN000406 (2)_wb.jpg"
+        },
+        {
+          "filename": "HAN000406 (3).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1_upscaled_x4.jpg",
+          "order": 1
+        },
+        {
+          "filename": "HAN000406 (2)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dAkAAeSwR2lpYr2y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (1)_1.JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAyNFgxMDI0/z/fKEAAeSwZAVpYr20/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1.JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAyNFgxMDI0/z/0OkAAeSw9oJpYr23/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000406 (3).JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mPgAAeSwHAxpYr26/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000406 (4).JPG",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yXIAAeSwmZtpYr28/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Pull&Bear",
+        "Größe": "M",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Biker",
+        "Farbe": "Blau",
+        "Außenmaterial": "Baumwolle"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "",
+        "Besonderheiten": "",
+        "Gewebeart": "Denim",
+        "Thema": "",
+        "Ursprungsland": "Bangladesch",
+        "Modell": "",
+        "Isoliermaterial": "",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Knopf",
+        "Anlass": "Freizeit",
+        "Aktivität": "",
+        "Vintage": "",
+        "Größenkategorie": "Normalgröße",
+        "Produktlinie": "",
+        "Muster": "Ohne Muster",
+        "Akzente": "",
+        "Passform": "",
+        "Wärmegrad": "",
+        "Kragenart": "Kentkragen",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Brustumfang": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "41.0",
+        "Net Profit": "10.803781512605036",
+        "Net Profit Margin": "120.44349512380197"
+      }
+    }
+  }
+}

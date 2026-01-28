@@ -1,0 +1,270 @@
+{
+  "VER01661": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051443,
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 434048,
+      "ISIN": "",
+      "Supplier Title": "Gstar Raw lune nylon parka Größe S"
+    },
+    "Price Data": {
+      "Price Net": 62.5,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 62.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 8720346873077.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "G-Star RAW",
+      "Color": "Schwarz",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Gefütterter Parka mit Kapuze und Steppfutter. Verdeckter Reißverschluss mit Knopfleiste. Verstellbare Taille mit Kordelzug.",
+      "Keywords": "Lune Nylon Parka Parka",
+      "Materials": "Obermaterial: 100% Recyceltes Polyamid, Futter: 100% Recyceltes Polyester, Wattierung: 100% Polyester"
+    },
+    "OP": {
+      "OP": 329.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 25,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01661 (4).jpg"
+        },
+        {
+          "filename": "VER01661 (11).jpg"
+        },
+        {
+          "filename": "VER01661 (5).jpg"
+        },
+        {
+          "filename": "VER01661 (7).jpg"
+        },
+        {
+          "filename": "VER01661 (15).jpg"
+        },
+        {
+          "filename": "VER01661 (6).jpg"
+        },
+        {
+          "filename": "VER01661 (12).jpg"
+        },
+        {
+          "filename": "VER01661 (20).jpg"
+        },
+        {
+          "filename": "VER01661 (24).jpg"
+        },
+        {
+          "filename": "VER01661 (14).jpg"
+        },
+        {
+          "filename": "VER01661 (10).jpg"
+        },
+        {
+          "filename": "VER01661 (17).jpg"
+        },
+        {
+          "filename": "VER01661 (23).jpg"
+        },
+        {
+          "filename": "VER01661 (3).jpg"
+        },
+        {
+          "filename": "VER01661 (22).jpg"
+        },
+        {
+          "filename": "VER01661 (25).jpg"
+        },
+        {
+          "filename": "VER01661 (2).jpg"
+        },
+        {
+          "filename": "VER01661 (1).jpg"
+        },
+        {
+          "filename": "VER01661 (13).jpg"
+        },
+        {
+          "filename": "VER01661 (18).jpg"
+        },
+        {
+          "filename": "VER01661 (19).jpg"
+        },
+        {
+          "filename": "VER01661 (8).jpg"
+        },
+        {
+          "filename": "VER01661 (9).jpg"
+        },
+        {
+          "filename": "VER01661 (16).jpg"
+        },
+        {
+          "filename": "VER01661 (21).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01661 (8).jpg"
+        },
+        {
+          "filename": "VER01661 (20).jpg"
+        },
+        {
+          "filename": "VER01661 (22).jpg"
+        },
+        {
+          "filename": "VER01661 (9).jpg"
+        },
+        {
+          "filename": "VER01661 (5).jpg"
+        },
+        {
+          "filename": "VER01661 (23).jpg"
+        },
+        {
+          "filename": "VER01661 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01661 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mEIAAeSwtN9pa4gb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zxAAAeSwn3xpa4gf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GCIAAeSweblpa4gh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rGgAAeSwOrlpa4gk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SysAAeSwhFhpa4go/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nnwAAeSw3xRpa4gs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (18).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xeQAAeSwFpZpa4gu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (19).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zeoAAeSwL7dpa4g1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/c60AAeSwA3Jpa4g4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (8).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ffkAAeSw3zVpa4g9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (9).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GLsAAeSweblpa4hB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01661 (20).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0BwAAeSw4q9pa4hF/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "G-Star RAW",
+        "Größe": "S",
+        "Abteilung": "Unisex Erwachsene",
+        "Produktart": "Mantel",
+        "Stil": "Parka",
+        "Farbe": "Schwarz",
+        "Außenmaterial": "Nylon"
+      },
+      "optional": {
+        "Jahreszeit": "Winter",
+        "Futtermaterial": "Polyester",
+        "Jacken-/Mantellänge": "Lang",
+        "Isoliermaterial": "Synthetik",
+        "Gewebeart": "",
+        "Besonderheiten": "['Abnehmbare Kapuze']",
+        "Thema": "",
+        "Akzente": "",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "Bangladesch",
+        "Modell": "AF PARKA",
+        "Passform": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Ärmellänge": "Langarm",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "D22524-C143-6484",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "245.0",
+        "Net Profit": "103.8623529411765",
+        "Net Profit Margin": "165.22805113136573"
+      }
+    }
+  }
+}

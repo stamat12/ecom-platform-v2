@@ -1,0 +1,169 @@
+{
+  "JAL00245": {
+    "Invoice Data": {
+      "Buying Entity": "",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": "PJ PAUL JONES Men's Sporty Blazer Modern Suit Jacket with Lapel Collar Jacket Men L Black"
+    },
+    "Price Data": {
+      "Price Net": "2.86",
+      "Shipping Net": "0.77",
+      "Total Cost Net": "3.63"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Anzüge",
+      "eBay Category ID": 3001
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pj Paul Jones",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Sakko hat einen modernen Schnitt und ist aus einem leichten, strukturierten Stoff gefertigt. Es verfügt über zwei Taschen und einen Reverskragen. Ideal für formelle Anlässe oder als stilvolles Freizeitoutfit.",
+      "Keywords": "Sakko Herren Schwarz",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "51.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "New Box 1"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM5/z/f44AAeSw7MRpar61/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/v6UAAeSwKxppar63/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/j0kAAeSwxEBpar64/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/htcAAeSw-eRpar66/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/-vAAAeSwjTBpar68/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "PJ PAUL JONES",
+        "Größe": "L",
+        "Produktart": "Blazer",
+        "Abteilung": "Herren",
+        "Farbe": "Blau",
+        "Stil": "2-Teiler"
+      },
+      "optional": {
+        "Material": "",
+        "Gewebeart": "",
+        "Passform": "",
+        "Thema": "",
+        "Anlass": "Business",
+        "Taillenumfang": "",
+        "Jacken-/Mantellänge": "Normal",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "",
+        "Jackenrevers-Form": "Spitzkragen",
+        "Schrittlänge": "",
+        "Muster": "Ohne Muster",
+        "Anzahl der Teile": "1-teilig",
+        "Futtermaterial": "",
+        "Jahreszeit": "",
+        "Ursprungsland": "",
+        "Rückenschlitz-Form": "",
+        "Jackenschnitt": "Einreihig",
+        "Besonderheiten": "",
+        "Jackenärmel-Knopfart": "Ein-Knopf",
+        "Beinform": "",
+        "Knöpfung der Jacke": "Ein-Knopf",
+        "Brustumfang": "119-124 cm",
+        "Handgefertigt": "",
+        "Bundfalte": "",
+        "Textilpflege": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "45.0",
+        "Net Profit": "19.02512605042017",
+        "Net Profit Margin": "524.1081556589578"
+      }
+    }
+  }
+}

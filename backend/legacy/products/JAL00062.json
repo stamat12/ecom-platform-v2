@@ -1,0 +1,188 @@
+{
+  "JAL00062": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE497238951",
+      "ISIN": "b089k91vk5",
+      "Supplier Title": "Wonninek Hydroponic Planting Net, 6.9 cm Black Plastic Basket for Garden Plants Net, 20 Pack (Black)"
+    },
+    "Price Data": {
+      "Price Net": "0.66",
+      "Shipping Net": "0.13",
+      "Total Cost Net": "0.79"
+    },
+    "Ebay Category": {
+      "Category": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Körbe, Blumentöpfe, -kästen & Untersetzer",
+      "eBay Category ID": "20518"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Wonninek",
+      "Color": "",
+      "Size": "70mm Durchmesser"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Töpfe sind aus robustem Kunststoff gefertigt und haben ein durchlässiges Design. Sie eignen sich hervorragend für die Hydrokultur und das Wachsen von Pflanzen. Die Töpfe sind stapelbar und leicht zu handhaben.",
+      "Keywords": "20 Stk. Pflanztöpfe Hydrokultur",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "27.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00062 (6).jpg"
+        },
+        {
+          "filename": "JAL00062 (3).jpg"
+        },
+        {
+          "filename": "JAL00062 (7).jpg"
+        },
+        {
+          "filename": "JAL00062 (4).jpg"
+        },
+        {
+          "filename": "JAL00062 (5).jpg"
+        },
+        {
+          "filename": "JAL00062 (1).jpg"
+        },
+        {
+          "filename": "JAL00062 (8).jpg"
+        },
+        {
+          "filename": "JAL00062 (2).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "5.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTMwMFgxMzAw/z/tOkAAeSw2zJpZtLL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTQ2MVgxMzAw/z/e9MAAeSwAF9pZtLM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxNTAw/z/5VoAAeSwAmhpZtLO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxNTAw/z/m90AAeSwLLVpZtLP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTMwMFgxMzAw/z/8swAAeSwUMlpZtLR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00062 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6V4AAeSwYN5pZtLU/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Blumentopf"
+      },
+      "optional": {
+        "Geeignete Pflanzenart": "",
+        "Marke": "",
+        "Größe": "Klein",
+        "Höhe": "7 cm",
+        "Breite": "7 cm",
+        "Länge": "7 cm",
+        "Kapazität": "1 L",
+        "Herstellernummer": "",
+        "Set enthält": "Blumentopf",
+        "Material": "Kunststoff",
+        "Form": "Rund",
+        "Farbe": "Schwarz",
+        "Besonderheiten": "",
+        "Anzahl der Teile": "4",
+        "Ursprungsland": "",
+        "Innen-/Außenbereich": "Innen- & Außenbereich",
+        "Personalisieren": "Nein",
+        "Gewicht": "0,2 kg",
+        "Anleitung für Personalisierung": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "18.0",
+        "Net Profit": "4.926050420168068",
+        "Net Profit Margin": "623.5506860972239"
+      }
+    }
+  }
+}

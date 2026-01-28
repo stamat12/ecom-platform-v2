@@ -1,0 +1,49 @@
+{
+  "1": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2024/10/10",
+      "Invoice Date": "2024-10-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": 3.15,
+      "Shipping Net": 0.23,
+      "Total Cost Net": 3.38
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Kinder/Mädchen/Mode für Mädchen/Outerwear"
+    },
+    "EAN": {
+      "EAN": 7625914105325.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Threadboys",
+      "Color": "Mustard",
+      "Size": "146-152"
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 29.99
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "Tausch"
+    }
+  }
+}

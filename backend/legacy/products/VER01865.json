@@ -1,0 +1,212 @@
+{
+  "VER01865": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25071232",
+      "Invoice Date": "2025-07-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "440095",
+      "ISIN": "",
+      "Supplier Title": "Barebarics Zing White & beige Gr. 42"
+    },
+    "Price Data": {
+      "Price Net": "25.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "25.39"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": "8585056100789"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Barebarics",
+      "Color": "Weiß & Beige",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Barfußschuhe mit breiter Zehenbox.",
+      "Keywords": "Zing Sneaker",
+      "Materials": "Obermaterial: Leder, Wildleder, Textil; Futter: Textil; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": "159.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01865 (5).jpg"
+        },
+        {
+          "filename": "VER01865 (6).jpg"
+        },
+        {
+          "filename": "VER01865 (7).jpg"
+        },
+        {
+          "filename": "VER01865 (9).jpg"
+        },
+        {
+          "filename": "VER01865 (11).jpg"
+        },
+        {
+          "filename": "VER01865 (4).jpg"
+        },
+        {
+          "filename": "VER01865 (8).jpg"
+        },
+        {
+          "filename": "VER01865 (2).jpg"
+        },
+        {
+          "filename": "VER01865 (12).jpg"
+        },
+        {
+          "filename": "VER01865 (3).jpg"
+        },
+        {
+          "filename": "VER01865 (1).jpg"
+        },
+        {
+          "filename": "VER01865 (10).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01865 (7).jpg"
+        },
+        {
+          "filename": "VER01865 (9).jpg"
+        },
+        {
+          "filename": "VER01865 (11).jpg"
+        },
+        {
+          "filename": "VER01865 (8).jpg"
+        },
+        {
+          "filename": "VER01865 (12).jpg"
+        },
+        {
+          "filename": "VER01865 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01865 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6-EAAeSwBrppYk~-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XXsAAeSwwm9pYlAB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (11).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5HcAAeSwpkZpYlAE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6dAAAeSwPPBpYlAH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/niEAAeSwZbFpYlAK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lRsAAeSwhDRpYlAN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/igIAAeSw4iBpYlAR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01865 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XdsAAeSwwm9pYlAV/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Barebarics",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Weiß & Beige"
+      },
+      "optional": {
+        "Herstellernummer": "",
+        "Individualisiert": "Nein",
+        "Modell": "ZING",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Stil": "Sneaker",
+        "Charakter": "",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "",
+        "Obermaterial": "",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "Nein",
+        "Thema": "",
+        "Schuhweite": "",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "",
+        "Aktivität": "",
+        "Ursprungsland": "Portugal",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "",
+        "Signiert": "Nein",
+        "Muster": "",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      },
+      "pricing": {
+        "Shipping Costs Net": "9.41",
+        "Selling Price Total": "115.0",
+        "Net Profit": "47.68865546218488",
+        "Net Profit Margin": "187.82455873251234"
+      }
+    }
+  }
+}

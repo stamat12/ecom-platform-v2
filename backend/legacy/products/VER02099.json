@@ -1,0 +1,91 @@
+{
+  "VER02099": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 2536714,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 207896,
+      "ISIN": "",
+      "Supplier Title": "Strandtasche"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.82,
+      "Total Cost Net": 2.49
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Done"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02099 (7).jpg"
+        },
+        {
+          "filename": "VER02099 (5).jpg"
+        },
+        {
+          "filename": "VER02099 (4).jpg"
+        },
+        {
+          "filename": "VER02099 (9).jpg"
+        },
+        {
+          "filename": "VER02099 (8).jpg"
+        },
+        {
+          "filename": "VER02099 (2).jpg"
+        },
+        {
+          "filename": "VER02099 (6).jpg"
+        },
+        {
+          "filename": "VER02099 (3).jpg"
+        },
+        {
+          "filename": "VER02099 (1).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}
