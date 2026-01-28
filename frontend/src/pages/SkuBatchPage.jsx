@@ -646,7 +646,7 @@ export default function SkuBatchPage() {
     const hasEbayRibbon = selectedSkusForEbayEnrichment.size > 0;
     
     const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasEbayRibbon].filter(Boolean).length;
-    return ribbonCount * 90;
+    return ribbonCount * 50;
   })();
 
   return (
@@ -665,89 +665,94 @@ export default function SkuBatchPage() {
           right: 0,
           zIndex: 100,
           background: "#f5f5f5",
-          padding: 12,
+          padding: 6,
           borderRadius: 0,
-          marginBottom: 16,
+          marginBottom: 8,
           border: "none",
           borderBottom: "2px solid #2196F3",
           boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}>
-          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
+          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
             Batch Classify: {totalSelectedImages} image(s) selected across {Object.keys(selectedImages).filter(sku => selectedImages[sku].length > 0).length} SKU(s)
           </div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => handleBatchClassifyAll("phone")}
               disabled={batchClassifying}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: batchClassifying ? "not-allowed" : "pointer",
                 background: "#2196F3",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
               }}
             >
-              📱 Classify All as Phone
+              📱 Phone
             </button>
             <button
               onClick={() => handleBatchClassifyAll("stock")}
               disabled={batchClassifying}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: batchClassifying ? "not-allowed" : "pointer",
                 background: "#FF9800",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
               }}
             >
-              📦 Classify All as Stock
+              📦 Stock
             </button>
             <button
               onClick={() => handleBatchClassifyAll("enhanced")}
               disabled={batchClassifying}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: batchClassifying ? "not-allowed" : "pointer",
                 background: "#9C27B0",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
               }}
             >
-              ✨ Classify All as Enhanced
+              ✨ Enhanced
             </button>
             <button
               onClick={handleBatchMarkAsMain}
               disabled={batchClassifying}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: batchClassifying ? "not-allowed" : "pointer",
                 background: "#FFD700",
                 color: "#000",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
               }}
             >
-              ⭐ Mark All as Main
+              ⭐ Mark as Main
             </button>
             <button
               onClick={() => setSelectedImages({})}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: "pointer",
                 background: "#666",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
               }}
             >
-              Clear All Selections
+              Clear All
             </button>
           </div>
         </div>
@@ -757,22 +762,22 @@ export default function SkuBatchPage() {
       {selectedSkusForEnrichment.size > 0 && (
         <div style={{
           position: "fixed",
-          top: totalSelectedImages > 0 ? 90 : 0,
+          top: totalSelectedImages > 0 ? 50 : 0,
           left: 0,
           right: 0,
           zIndex: 99,
           background: "#e8f5e9",
-          padding: 12,
+          padding: 6,
           borderRadius: 0,
-          marginBottom: 16,
+          marginBottom: 8,
           border: "none",
           borderBottom: "2px solid #4CAF50",
           boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}>
-          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
-            🤖 AI Product Details Enrichment: {selectedSkusForEnrichment.size} SKU(s) selected
+          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
+            🤖 AI Product Details: {selectedSkusForEnrichment.size} SKU(s)
           </div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
                 if (selectedSkusForEnrichment.size === items.length) {
@@ -783,12 +788,12 @@ export default function SkuBatchPage() {
                 }
               }}
               style={{
-                padding: "8px 14px",
-                fontSize: 13,
+                padding: "4px 8px",
+                fontSize: 11,
                 background: "#388E3C",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 cursor: "pointer",
                 fontWeight: "bold",
               }}
@@ -799,30 +804,31 @@ export default function SkuBatchPage() {
               onClick={handleEnrichAll}
               disabled={enrichmentInProgress || selectedSkusForEnrichment.size === 0}
               style={{
-                padding: "8px 14px",
-                fontSize: 13,
+                padding: "4px 8px",
+                fontSize: 11,
                 background: enrichmentInProgress ? "#ccc" : "#4CAF50",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
                 cursor: enrichmentInProgress || selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
               }}
             >
-              {enrichmentInProgress ? "Enriching..." : "✨ Enrich Selected SKUs"}
+              {enrichmentInProgress ? "Enriching..." : "✨ Enrich"}
             </button>
             <button
               onClick={() => setSelectedSkusForEnrichment(new Set())}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: "pointer",
                 background: "#666",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
               }}
             >
-              Clear All Selections
+              Clear All
             </button>
           </div>
         </div>
@@ -854,25 +860,25 @@ export default function SkuBatchPage() {
           position: "fixed",
           top: (() => {
             let offset = 0;
-            if (totalSelectedImages > 0) offset += 90;
-            if (selectedSkusForEnrichment.size > 0) offset += 90;
+            if (totalSelectedImages > 0) offset += 50;
+            if (selectedSkusForEnrichment.size > 0) offset += 50;
             return offset;
           })(),
           left: 0,
           right: 0,
           zIndex: 98,
           background: "#fff3e0",
-          padding: 12,
+          padding: 6,
           borderRadius: 0,
-          marginBottom: 16,
+          marginBottom: 8,
           border: "none",
           borderBottom: "2px solid #FF9800",
           boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}>
-          <div style={{ fontWeight: "bold", marginBottom: 8 }}>
-            ⭐ eBay Fields Enrichment: {selectedSkusForEbayEnrichment.size} SKU(s) selected
+          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
+            ⭐ eBay Fields: {selectedSkusForEbayEnrichment.size} SKU(s)
           </div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
                 if (selectedSkusForEbayEnrichment.size === items.length) {
@@ -883,46 +889,47 @@ export default function SkuBatchPage() {
                 }
               }}
               style={{
-                padding: "8px 14px",
-                fontSize: 13,
+                padding: "4px 8px",
+                fontSize: 11,
                 background: "#F57C00",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 cursor: "pointer",
                 fontWeight: "bold",
               }}
             >
-              {selectedSkusForEbayEnrichment.size === items.length ? "Deselect All" : "Select All"}
+              {selectedSkusForEbayEnrichment.size === items.length ? "Clear" : "All"}
             </button>
             <button
               onClick={handleEbayEnrichAll}
               disabled={ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0}
               style={{
-                padding: "8px 14px",
-                fontSize: 13,
+                padding: "4px 8px",
+                fontSize: 11,
                 background: ebayEnrichmentInProgress ? "#ccc" : "#FF9800",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
                 fontWeight: "bold",
                 cursor: ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0 ? "not-allowed" : "pointer",
               }}
             >
-              {ebayEnrichmentInProgress ? "Enriching..." : "⭐ Enrich eBay Fields"}
+              {ebayEnrichmentInProgress ? "Enriching..." : "⭐ Enrich"}
             </button>
             <button
               onClick={() => setSelectedSkusForEbayEnrichment(new Set())}
               style={{
-                padding: "8px 14px",
+                padding: "4px 8px",
+                fontSize: 11,
                 cursor: "pointer",
                 background: "#666",
                 color: "white",
                 border: "none",
-                borderRadius: 4,
+                borderRadius: 3,
               }}
             >
-              Clear All Selections
+              Clear
             </button>
           </div>
         </div>
