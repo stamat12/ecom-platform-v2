@@ -20,6 +20,9 @@ from app.services.ai_enrichment import enrich_sku_fields, enrich_multiple_skus
 from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
 
+# Import eBay services
+from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
+
 # Import models
 from app.models.sku_list import (
     SkuImagesResponse,
@@ -43,6 +46,22 @@ from app.models.main_image import MainImageRequest, MainImageResponse, BatchMain
 from app.models.product_detail import ProductDetailResponse, UpdateProductDetailRequest, UpdateProductDetailResponse
 from app.models.ai_enrichment import EnrichSingleRequest, EnrichSingleResponse, EnrichBatchRequest, EnrichBatchResponse, AIConfigResponse
 from app.config import ai_config
+
+# Import eBay models
+from app.models.ebay_schema import EbaySchemaResponse, EbaySchemaListResponse, EbaySchemaRefreshRequest, EbaySchemaRefreshResponse
+from app.models.ebay_enrichment import EbayEnrichRequest, EbayEnrichResponse, EbayBatchEnrichRequest, EbayBatchEnrichResponse, EbayValidationRequest, EbayValidationResponse
+from app.models.ebay_listing import (
+    ImageUploadRequest, ImageUploadResponse,
+    ManufacturerLookupRequest, ManufacturerLookupResponse,
+    CreateListingRequest, CreateListingResponse,
+    ListingPreviewRequest, ListingPreviewResponse,
+    BatchCreateListingRequest, BatchCreateListingResponse
+)
+from app.models.ebay_sync import (
+    SyncListingsRequest, SyncListingsResponse,
+    ListingCountsResponse,
+    SyncStatusRequest, SyncStatusResponse
+)
 
 # Create FastAPI app
 app = FastAPI(title="Ecom Platform API", version="1.0")
@@ -473,3 +492,357 @@ def get_distinct(
         raise HTTPException(status_code=400, detail="Invalid column")
     result = get_distinct_values(column, limit=limit, q=q)
     return DistinctValuesResponse(**result)
+
+
+# ============================================================
+# eBay Schema Endpoints
+# ============================================================
+
+@app.get("/api/ebay/schemas/{category_id}", response_model=EbaySchemaResponse)
+def get_ebay_schema(
+    category_id: str,
+    use_cache: bool = Query(True, description="Use cached schema if available")
+):
+    """Get eBay category schema by category ID"""
+    try:
+        schema_data = ebay_schema.get_schema(category_id, use_cache=use_cache)
+        
+        if not schema_data:
+            return EbaySchemaResponse(
+                success=False,
+                category_id=category_id,
+                message="Schema not found"
+            )
+        
+        metadata = schema_data.get("_metadata", {})
+        schema = schema_data.get("schema", {})
+        
+        return EbaySchemaResponse(
+            success=True,
+            category_id=category_id,
+            category_name=metadata.get("category_name"),
+            metadata=metadata,
+            schema=schema,
+            cached=use_cache,
+            message="Schema retrieved successfully"
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/ebay/schemas/sku/{sku}", response_model=EbaySchemaResponse)
+def get_ebay_schema_for_sku(
+    sku: str,
+    use_cache: bool = Query(True, description="Use cached schema if available")
+):
+    """Get eBay category schema for SKU's category"""
+    try:
+        schema_data = ebay_schema.get_schema_for_sku(sku, use_cache=use_cache)
+        
+        if not schema_data:
+            return EbaySchemaResponse(
+                success=False,
+                category_id="",
+                message=f"No schema found for SKU {sku}"
+            )
+        
+        metadata = schema_data.get("_metadata", {})
+        schema = schema_data.get("schema", {})
+        
+        return EbaySchemaResponse(
+            success=True,
+            category_id=metadata.get("category_id", ""),
+            category_name=metadata.get("category_name"),
+            metadata=metadata,
+            schema=schema,
+            cached=use_cache,
+            message="Schema retrieved successfully"
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/ebay/schemas/list", response_model=EbaySchemaListResponse)
+def list_ebay_schemas():
+    """List all cached eBay schemas"""
+    try:
+        schemas = ebay_schema.list_all_schemas()
+        return EbaySchemaListResponse(
+            success=True,
+            count=len(schemas),
+            schemas=schemas
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/ebay/schemas/refresh", response_model=EbaySchemaRefreshResponse)
+def refresh_ebay_schemas(request: EbaySchemaRefreshRequest):
+    """Refresh eBay schemas from API"""
+    try:
+        result = ebay_schema.refresh_schemas(
+            category_ids=request.category_ids,
+            force=request.force
+        )
+        
+        refreshed = result.get("refreshed", [])
+        failed = result.get("failed", [])
+        
+        return EbaySchemaRefreshResponse(
+            success=len(failed) == 0,
+            refreshed_count=len(refreshed),
+            failed_count=len(failed),
+            details=refreshed + failed,
+            message=f"Refreshed {len(refreshed)} schemas, {len(failed)} failed"
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ============================================================
+# eBay Field Enrichment Endpoints
+# ============================================================
+
+@app.post("/api/ebay/enrich", response_model=EbayEnrichResponse)
+def enrich_ebay_fields(request: EbayEnrichRequest):
+    """Enrich eBay fields for a single SKU using AI vision"""
+    try:
+        result = ebay_enrichment.enrich_ebay_fields(request.sku, force=request.force)
+        
+        return EbayEnrichResponse(
+            success=result.get("success", False),
+            sku=result.get("sku", request.sku),
+            updated_fields=result.get("updated_fields", 0),
+            missing_required=result.get("missing_required", []),
+            message=result.get("message", "Enrichment completed"),
+            fields=result.get("fields"),
+            required_fields=result.get("required_fields"),
+            optional_fields=result.get("optional_fields"),
+            used_images=result.get("used_images", 0)
+        )
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/enrich/batch", response_model=EbayBatchEnrichResponse)
+def enrich_ebay_fields_batch(request: EbayBatchEnrichRequest):
+    """Enrich eBay fields for multiple SKUs"""
+    try:
+        result = ebay_enrichment.enrich_multiple_skus(request.skus, force=request.force)
+        
+        results = []
+        for r in result.get("results", []):
+            results.append(EbayEnrichResponse(**r))
+        
+        return EbayBatchEnrichResponse(
+            success=result.get("success", False),
+            total_count=result.get("total_count", 0),
+            successful_count=result.get("successful_count", 0),
+            failed_count=result.get("failed_count", 0),
+            results=results,
+            message=result.get("message", "Batch enrichment completed")
+        )
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.get("/api/ebay/validate/{sku}", response_model=EbayValidationResponse)
+def validate_ebay_fields(sku: str):
+    """Validate eBay fields for SKU (check required fields are filled)"""
+    try:
+        result = ebay_enrichment.validate_ebay_fields(sku)
+        
+        return EbayValidationResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+# ============================================================
+# eBay Listing Endpoints
+# ============================================================
+
+@app.post("/api/ebay/images/upload", response_model=ImageUploadResponse)
+def upload_ebay_images(request: ImageUploadRequest):
+    """Upload images to eBay Picture Services"""
+    try:
+        result = ebay_listing.upload_images_for_sku(
+            sku=request.sku,
+            max_images=request.max_images,
+            force_reupload=request.force_reupload
+        )
+        
+        return ImageUploadResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/manufacturer/lookup", response_model=ManufacturerLookupResponse)
+def lookup_manufacturer(request: ManufacturerLookupRequest):
+    """Lookup manufacturer information for brand"""
+    try:
+        manufacturer_info = ebay_listing.get_manufacturer_info(
+            request.brand,
+            force_refresh=request.force_refresh
+        )
+        
+        if manufacturer_info:
+            return ManufacturerLookupResponse(
+                success=True,
+                brand=request.brand,
+                manufacturer_info=manufacturer_info,
+                cached=not request.force_refresh,
+                message="Manufacturer info retrieved"
+            )
+        else:
+            return ManufacturerLookupResponse(
+                success=False,
+                brand=request.brand,
+                manufacturer_info=None,
+                cached=False,
+                message="Manufacturer info not found"
+            )
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/listings/preview", response_model=ListingPreviewResponse)
+def preview_ebay_listing(request: ListingPreviewRequest):
+    """Preview eBay listing without creating it"""
+    try:
+        result = ebay_listing.preview_listing(
+            sku=request.sku,
+            price=request.price,
+            condition_id=request.condition_id
+        )
+        
+        return ListingPreviewResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/listings/create", response_model=CreateListingResponse)
+def create_ebay_listing(request: CreateListingRequest):
+    """Create eBay listing"""
+    try:
+        result = ebay_listing.create_listing(
+            sku=request.sku,
+            price=request.price,
+            condition_id=request.condition_id,
+            schedule_days=request.schedule_days,
+            payment_policy=request.payment_policy,
+            return_policy=request.return_policy,
+            shipping_policy=request.shipping_policy,
+            custom_description=request.custom_description,
+            best_offer_enabled=request.best_offer_enabled,
+            quantity=request.quantity
+        )
+        
+        return CreateListingResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/listings/batch", response_model=BatchCreateListingResponse)
+def create_ebay_listings_batch(request: BatchCreateListingRequest):
+    """Create multiple eBay listings"""
+    results = []
+    successful = 0
+    failed = 0
+    
+    for listing_req in request.listings:
+        try:
+            result = ebay_listing.create_listing(
+                sku=listing_req.sku,
+                price=listing_req.price,
+                condition_id=listing_req.condition_id,
+                schedule_days=listing_req.schedule_days,
+                payment_policy=listing_req.payment_policy,
+                return_policy=listing_req.return_policy,
+                shipping_policy=listing_req.shipping_policy,
+                custom_description=listing_req.custom_description,
+                best_offer_enabled=listing_req.best_offer_enabled,
+                quantity=listing_req.quantity
+            )
+            results.append(CreateListingResponse(**result))
+            
+            if result.get("success"):
+                successful += 1
+            else:
+                failed += 1
+                if request.stop_on_error:
+                    break
+        except Exception as e:
+            results.append(CreateListingResponse(
+                success=False,
+                sku=listing_req.sku,
+                message=f"Error: {str(e)}",
+                errors=[str(e)]
+            ))
+            failed += 1
+            if request.stop_on_error:
+                break
+    
+    return BatchCreateListingResponse(
+        success=successful > 0,
+        total_count=len(request.listings),
+        successful_count=successful,
+        failed_count=failed,
+        results=results,
+        message=f"Created {successful} listings, {failed} failed"
+    )
+
+
+# ============================================================
+# eBay Sync Endpoints
+# ============================================================
+
+@app.post("/api/ebay/sync/listings", response_model=SyncListingsResponse)
+def sync_ebay_listings(request: SyncListingsRequest):
+    """Fetch active eBay listings"""
+    try:
+        result = ebay_sync.get_active_listings(
+            use_cache=request.use_cache,
+            force_refresh=request.force_refresh
+        )
+        
+        return SyncListingsResponse(
+            success=result.get("success", False),
+            total_listings=result.get("total_listings", 0),
+            cached=result.get("cached", False),
+            listings=result.get("listings", []),
+            message=result.get("message", "")
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/ebay/sync/counts", response_model=ListingCountsResponse)
+def get_ebay_listing_counts(use_cache: bool = Query(True)):
+    """Get SKU listing counts"""
+    try:
+        result = ebay_sync.get_sku_listing_counts(use_cache=use_cache)
+        
+        return ListingCountsResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/ebay/sync/status/{sku}", response_model=SyncStatusResponse)
+def sync_listing_status(sku: str):
+    """Sync listing status for specific SKU"""
+    try:
+        result = ebay_sync.sync_listing_status_for_sku(sku)
+        
+        return SyncStatusResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.delete("/api/ebay/sync/cache")
+def clear_ebay_cache():
+    """Clear eBay listings cache"""
+    try:
+        result = ebay_sync.clear_listings_cache()
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

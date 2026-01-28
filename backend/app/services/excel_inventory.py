@@ -54,3 +54,8 @@ class ExcelInventoryCache:
 
 
 excel_inventory = ExcelInventoryCache()
+
+
+def load_inventory_dataframe() -> pd.DataFrame:
+    """Load inventory dataframe (with caching)"""
+    return excel_inventory.load()

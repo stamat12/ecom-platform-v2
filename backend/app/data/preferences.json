@@ -2,7 +2,16 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [],
+      "selected_columns": [
+        "SKU (Old)",
+        "Brand",
+        "Category",
+        "Color",
+        "Size",
+        "Condition",
+        "Status",
+        "Price Net"
+      ],
       "column_filters": {},
       "page_size": 50,
       "column_widths": {}
