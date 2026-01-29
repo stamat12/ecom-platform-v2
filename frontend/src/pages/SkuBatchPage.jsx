@@ -367,6 +367,22 @@ export default function SkuBatchPage() {
     setExpandedDetails((prev) => ({ ...prev, [sku]: !prev[sku] }));
   };
 
+  const getDetailValue = (sku, categoryName, fieldName) => {
+    const details = productDetails[sku];
+    if (!details?.categories) return "";
+    const category = details.categories.find(cat => cat.name === categoryName);
+    if (!category?.fields) return "";
+    const field = category.fields.find(f => f.name === fieldName);
+    return field?.value ?? "";
+  };
+
+  const toNumber = (value) => {
+    if (value === null || value === undefined) return 0;
+    const cleaned = String(value).replace(/[^0-9,.-]/g, "").replace(",", ".");
+    const parsed = parseFloat(cleaned);
+    return Number.isFinite(parsed) ? parsed : 0;
+  };
+
   const toggleSkuForEnrichment = (sku) => {
     const newSet = new Set(selectedSkusForEnrichment);
     const newEbaySet = new Set(selectedSkusForEbayEnrichment);
@@ -996,6 +1012,16 @@ export default function SkuBatchPage() {
 
       {items.map(({ sku, data, error }) => {
         const images = Array.isArray(data?.images) ? data.images : [];
+        const conditionFromProduct = getDetailValue(sku, "Product Condition", "Condition");
+        const totalCostNet = toNumber(getDetailValue(sku, "Price Data", "Total Cost Net"));
+        const opValue = toNumber(getDetailValue(sku, "OP", "OP"));
+        const fees = ebaySchemas[sku]?.metadata?.fees || {};
+        const paymentFee = toNumber(fees.payment_fee);
+        const salesCommission = toNumber(fees.sales_commission_percentage);
+        const sellingPriceTotal = toNumber(ebayListingData[sku]?.price || 0);
+        const shippingCostsNet = toNumber(ebayListingData[sku]?.shipping_costs_net || 0);
+        const netProfit = (sellingPriceTotal / 1.19) - (sellingPriceTotal * salesCommission) - paymentFee - shippingCostsNet - totalCostNet;
+        const netProfitMargin = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : 0;
         return (
           <div key={sku} style={{ marginBottom: 24, border: "1px solid #e0e0e0", borderRadius: 10, padding: 16 }}>
             {/* SKU Header */}
@@ -1681,23 +1707,95 @@ export default function SkuBatchPage() {
                     {/* Create Listing Section */}
                     <div style={{ borderTop: "1px solid #e0e0e0", paddingTop: 12 }}>
                       <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>Create eBay Listing</div>
+                      <div style={{ background: "#f4f8ff", padding: 8, borderRadius: 6, border: "1px solid #e3ecff", marginBottom: 8 }}>
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#666" }}>Condition</label>
+                            <input
+                              readOnly
+                              value={conditionFromProduct || "—"}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3, background: "#fafafa" }}
+                            />
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#666" }}>Total Cost Net</label>
+                            <input
+                              readOnly
+                              value={`€ ${Number.isFinite(totalCostNet) ? totalCostNet.toFixed(2) : "0.00"}`}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3, background: "#fafafa" }}
+                            />
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#666" }}>OP</label>
+                            <input
+                              readOnly
+                              value={Number.isFinite(opValue) ? opValue.toFixed(2) : "0.00"}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3, background: "#fafafa" }}
+                            />
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#666" }}>Payment Fee</label>
+                            <input
+                              readOnly
+                              value={`€ ${Number.isFinite(paymentFee) ? paymentFee.toFixed(2) : "0.00"}`}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3, background: "#fafafa" }}
+                            />
+                          </div>
 
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 2fr", gap: 8, alignItems: "end" }}>
-                        <div>
-                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Price (€)</label>
-                          <input
-                            type="number"
-                            step="0.01"
-                            value={ebayListingData[sku]?.price || ""}
-                            onChange={(e) => setEbayListingData(prev => ({
-                              ...prev,
-                              [sku]: { ...(prev[sku] || { quantity: "1", condition: "Neu" }), price: e.target.value }
-                            }))}
-                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
-                            placeholder="29.99"
-                          />
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#666" }}>Sales Commission %</label>
+                            <input
+                              readOnly
+                              value={`${Number.isFinite(salesCommission) ? (salesCommission * 100).toFixed(1) : "0.0"}%`}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3, background: "#fafafa" }}
+                            />
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#1976d2" }}>Shipping Costs Net</label>
+                            <input
+                              type="number"
+                              step="0.01"
+                              value={ebayListingData[sku]?.shipping_costs_net ?? ""}
+                              onChange={(e) => setEbayListingData(prev => ({
+                                ...prev,
+                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "Neu" }), shipping_costs_net: e.target.value }
+                              }))}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
+                              placeholder="0.00"
+                            />
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#1976d2" }}>Selling Price Total</label>
+                            <input
+                              type="number"
+                              step="0.01"
+                              value={ebayListingData[sku]?.price || ""}
+                              onChange={(e) => setEbayListingData(prev => ({
+                                ...prev,
+                                [sku]: { ...(prev[sku] || { quantity: "1", condition: "Neu" }), price: e.target.value }
+                              }))}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
+                              placeholder="29.99"
+                            />
+                          </div>
+                          <div />
+
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#2e7d32" }}>Net Profit</label>
+                            <div style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #a5d6a7", borderRadius: 3, background: "#fff", color: "#2e7d32", fontWeight: "bold" }}>
+                              € {Number.isFinite(netProfit) ? netProfit.toFixed(2) : "0.00"}
+                            </div>
+                          </div>
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#2e7d32" }}>Net Profit Margin</label>
+                            <div style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #a5d6a7", borderRadius: 3, background: "#fff", color: "#2e7d32", fontWeight: "bold" }}>
+                              {Number.isFinite(netProfitMargin) ? netProfitMargin.toFixed(1) : "0.0"}%
+                            </div>
+                          </div>
                         </div>
+                      </div>
 
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 8, alignItems: "end" }}>
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Qty</label>
                           <input
@@ -1706,7 +1804,7 @@ export default function SkuBatchPage() {
                             value={ebayListingData[sku]?.quantity || "1"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", condition: "Neu" }), quantity: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", condition: conditionFromProduct || "Neu" }), quantity: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                           />
@@ -1715,7 +1813,7 @@ export default function SkuBatchPage() {
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
                           <select
-                            value={ebayListingData[sku]?.condition || "Neu"}
+                            value={ebayListingData[sku]?.condition || conditionFromProduct || "Neu"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
                               [sku]: { ...(prev[sku] || { price: "", quantity: "1" }), condition: e.target.value }
