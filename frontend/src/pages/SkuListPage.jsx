@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SkuListPage() {
@@ -9,6 +9,7 @@ export default function SkuListPage() {
   const [total, setTotal] = useState(0);
   const [selectedSkus, setSelectedSkus] = useState([]);
   const navigate = useNavigate();
+  const hasRestoredState = useRef(false);
 
   // Column and filter state
   const [allColumns, setAllColumns] = useState([]);
@@ -28,8 +29,26 @@ export default function SkuListPage() {
 
   // Load available columns, column meta, and persisted filters on mount
   useEffect(() => {
+    // Prevent double execution in React strict mode
+    if (hasRestoredState.current) return;
+    
     const load = async () => {
       try {
+        // Check if we have saved state from batch navigation
+        const savedState = sessionStorage.getItem('skuListPageState');
+        let restoredState = null;
+        if (savedState) {
+          try {
+            restoredState = JSON.parse(savedState);
+            console.log('Restored state:', restoredState);
+            sessionStorage.removeItem('skuListPageState'); // Clear after restoring
+          } catch (e) {
+            console.error('Failed to parse saved state:', e);
+          }
+        }
+        
+        hasRestoredState.current = true;
+
         const [colRes, metaRes, filtRes] = await Promise.all([
           fetch("/api/skus/columns"),
           fetch("/api/skus/columns/meta"),
@@ -50,13 +69,39 @@ export default function SkuListPage() {
         if (filtRes.ok) {
           const filtData = await filtRes.json();
           const validSelected = (filtData.selected_columns || []).filter((c) => (colData.columns || []).includes(c));
-          setSelectedColumns(validSelected.length ? validSelected : (colData.default_columns || []));
-          setColumnFilters(filtData.column_filters || {});
-          setPageSize(Number(filtData.page_size || 50));
-          setColumnWidths(filtData.column_widths || {});
+          
+          // Use restored state if available, otherwise use persisted filters
+          if (restoredState) {
+            console.log('Applying restored state...');
+            const cols = (restoredState.selectedColumns && restoredState.selectedColumns.length > 0) 
+              ? restoredState.selectedColumns 
+              : (validSelected.length ? validSelected : (colData.default_columns || []));
+            console.log('Setting columns to:', cols);
+            console.log('Setting filters to:', restoredState.columnFilters);
+            setSelectedColumns(cols);
+            setColumnFilters(restoredState.columnFilters || filtData.column_filters || {});
+            setPageSize(restoredState.pageSize || Number(filtData.page_size || 50));
+            setColumnWidths(restoredState.columnWidths || filtData.column_widths || {});
+            setSelectedSkus(restoredState.selectedSkus || []);
+            setPage(restoredState.page || 1);
+          } else {
+            setSelectedColumns(validSelected.length ? validSelected : (colData.default_columns || []));
+            setColumnFilters(filtData.column_filters || {});
+            setPageSize(Number(filtData.page_size || 50));
+            setColumnWidths(filtData.column_widths || {});
+          }
         } else {
-          // Fallback to defaults
-          setSelectedColumns(colData.default_columns || []);
+          // Fallback to defaults or restored state
+          if (restoredState) {
+            setSelectedColumns(restoredState.selectedColumns || (colData.default_columns || []));
+            setColumnFilters(restoredState.columnFilters || {});
+            setPageSize(restoredState.pageSize || 50);
+            setColumnWidths(restoredState.columnWidths || {});
+            setSelectedSkus(restoredState.selectedSkus || []);
+            setPage(restoredState.page || 1);
+          } else {
+            setSelectedColumns(colData.default_columns || []);
+          }
         }
 
         // Preload distinct values for multi-select string columns that are present
@@ -82,6 +127,13 @@ export default function SkuListPage() {
   // Load SKUs when filters or pagination change
   useEffect(() => {
     if (filterLoading) return;
+
+    console.log('Loading SKUs with:', {
+      page,
+      pageSize,
+      selectedColumns,
+      columnFilters
+    });
 
     const params = new URLSearchParams({
       page,
@@ -352,11 +404,31 @@ export default function SkuListPage() {
           View selected (single)
         </button>
         <button
-          onClick={() => navigate("/skus/batch", { state: { selectedSkus } })}
+          onClick={() => {
+            // Save current state before navigating
+            const stateToSave = {
+              selectedSkus,
+              page,
+              columnFilters,
+              selectedColumns,
+              columnWidths,
+              pageSize
+            };
+            console.log('Saving state:', stateToSave);
+            sessionStorage.setItem('skuListPageState', JSON.stringify(stateToSave));
+            navigate("/skus/batch", { state: { selectedSkus } });
+          }}
           disabled={selectedSkus.length === 0}
           style={{ padding: "6px 10px", cursor: selectedSkus.length === 0 ? "not-allowed" : "pointer" }}
         >
           View selected (one page)
+        </button>
+        <button
+          onClick={() => setSelectedSkus([])}
+          disabled={selectedSkus.length === 0}
+          style={{ padding: "6px 10px", cursor: selectedSkus.length === 0 ? "not-allowed" : "pointer", background: "#dc3545", color: "white", border: "none", borderRadius: 4 }}
+        >
+          Deselect All
         </button>
         <span style={{ color: "#555" }}>Selected: {selectedSkus.length}</span>
       </div>

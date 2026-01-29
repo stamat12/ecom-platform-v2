@@ -31,3 +31,18 @@ def read_sku_json(sku: str) -> Dict[str, Any]:
         return data
 
     return {}
+
+
+def write_sku_json(sku: str, product_json: Dict[str, Any]) -> None:
+    """Write product JSON for a SKU back to disk with atomic write"""
+    path = _sku_json_path(sku)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Wrap in SKU key if not already wrapped
+    full_data = {sku: product_json}
+    
+    # Atomic write using temp file
+    temp_path = path.with_suffix(".tmp.json")
+    with temp_path.open("w", encoding="utf-8") as f:
+        json.dump(full_data, f, ensure_ascii=False, indent=2)
+    temp_path.replace(path)

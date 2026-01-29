@@ -175,6 +175,40 @@
           "filename": "HAN000350 (1).JPG"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "hunkemöller",
+        "Farbe": "Schwarz",
+        "Stil": "Bralette",
+        "Abteilung": "Damen",
+        "Größe": "36B",
+        "Produktart": "BH"
+      },
+      "optional": {
+        "Besonderheiten": "Gepolstert",
+        "Material": "",
+        "Thema": "",
+        "Akzente": "",
+        "Gewebeart": "",
+        "Größenkategorie": "",
+        "Körbchengröße": "",
+        "Unterbrustumfang": "",
+        "Träger-/Riemenart": "",
+        "Transparenz": "",
+        "Verschluss": "",
+        "Produktlinie": "",
+        "Muster": "",
+        "Textilpflege": "",
+        "Ursprungsland": "Bangladesch",
+        "Vintage": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Bügelart": "Mit Bügel",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

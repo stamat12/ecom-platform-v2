@@ -46,7 +46,8 @@ def _image_to_data_uri(image_path: Path) -> str:
 
 def _collect_main_image_paths(sku: str, product_json: Dict[str, Any]) -> List[Path]:
     """
-    Collect paths to main images for SKU
+    Collect paths to main images for SKU.
+    Finds actual file paths for main images defined in product JSON.
     
     Returns:
         List of Path objects to main images
@@ -54,34 +55,71 @@ def _collect_main_image_paths(sku: str, product_json: Dict[str, Any]) -> List[Pa
     images_section = product_json.get("Images", {}) or {}
     main_images = images_section.get("main_images", []) or []
     
+    logger.debug(f"Looking for main_images in Images section for {sku}")
+    logger.debug(f"Found {len(main_images)} main_images defined")
+    
     if not main_images:
         logger.warning(f"No main images defined for SKU {sku}")
+        logger.debug(f"Images section content: {list(images_section.keys())}")
         return []
     
-    # Get all images for SKU using existing service
-    all_images_info = list_images_for_sku(sku)
-    all_images = all_images_info.get("images", [])
-    
-    if not all_images:
-        return []
-    
-    # Extract main image filenames
-    main_filenames = set()
+    # Extract main image filenames from JSON structure
+    main_filenames = []
     for item in main_images:
         if isinstance(item, dict):
             fn = item.get("filename")
             if fn:
-                main_filenames.add(Path(fn).name)
+                main_filenames.append(fn)
+                logger.debug(f"Added main filename from dict: {fn}")
         elif isinstance(item, str):
-            main_filenames.add(Path(item).name)
+            main_filenames.append(item)
+            logger.debug(f"Added main filename from string: {item}")
     
-    # Find matching image paths
+    logger.debug(f"Main filenames to locate: {main_filenames}")
+    
+    # Use image_listing service to find actual image paths
+    all_images_info = list_images_for_sku(sku)
+    all_images = all_images_info.get("images", [])
+    
+    logger.debug(f"Found {len(all_images)} total images on disk for {sku}")
+    
+    if not all_images:
+        logger.warning(f"No images found on disk for SKU {sku}")
+        # If folder not found, return empty
+        if not all_images_info.get("folder_found"):
+            logger.debug(f"Images folder not found for {sku}")
+        return []
+    
+    # Build set of main filenames for fast lookup
+    main_set = {Path(fn).name.lower() for fn in main_filenames}
+    logger.debug(f"Main filenames (normalized): {main_set}")
+    
+    # Find matching image paths - reconstruct full paths from disk listing
     image_paths = []
     for img_info in all_images:
-        img_path = Path(img_info.get("full_path", ""))
-        if img_path.exists() and img_path.name in main_filenames:
-            image_paths.append(img_path)
+        img_filename = img_info.get("filename", "")
+        if img_filename.lower() in main_set:
+            # Get SKU directory
+            sku_dir = all_images_info.get("sku_dir")
+            if not sku_dir:
+                # Reconstruct from original_url if needed
+                logger.debug(f"SKU dir not in response, attempting to locate for {sku}")
+                from app.services.image_listing import _find_sku_dir
+                sku_dir = _find_sku_dir(sku)
+            
+            if sku_dir:
+                img_path = Path(sku_dir) / img_filename
+                if img_path.exists():
+                    image_paths.append(img_path)
+                    logger.debug(f"Matched main image: {img_path}")
+                else:
+                    logger.warning(f"Main image file not found: {img_path}")
+            else:
+                logger.warning(f"Could not locate SKU directory for {sku}")
     
+    logger.info(f"Collected {len(image_paths)} main image paths for {sku}")
+    if not image_paths:
+        logger.warning(f"No matching main image paths found for {sku}")
     return image_paths
 
 

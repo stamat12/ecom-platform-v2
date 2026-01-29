@@ -244,7 +244,7 @@ def get_schema(category_id: str, use_cache: bool = True, category_name: str = ""
 
 def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, Any]]:
     """
-    Get schema for SKU's category
+    Get schema for SKU's category (synchronous version)
     
     Args:
         sku: Product SKU
@@ -259,16 +259,61 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
         logger.warning(f"No product JSON found for SKU {sku}")
         return None
     
-    # Extract category info
-    ebay_cat = product_json.get("Ebay Category", {})
-    category_id = ebay_cat.get("eBay Category ID")
-    category_name = ebay_cat.get("Category", "")
+    # Try to get category from multiple possible locations (same logic as /api/ebay/fields endpoint)
+    category = None
     
-    if not category_id:
-        logger.warning(f"No eBay category ID found for SKU {sku}")
+    # Try top-level category field
+    if "category" in product_json:
+        category = product_json.get("category")
+    
+    # Try from Ebay Category section
+    if not category and "Ebay Category" in product_json:
+        ebay_cat = product_json.get("Ebay Category", {})
+        if isinstance(ebay_cat, dict):
+            category = ebay_cat.get("Category")
+    
+    # Try from AI Product Details
+    if not category and "AI Product Details" in product_json:
+        ai_details = product_json.get("AI Product Details", {})
+        if isinstance(ai_details, dict):
+            category = ai_details.get("category")
+    
+    if not category:
+        logger.warning(f"No category found for SKU {sku}")
         return None
     
-    return get_schema(str(category_id), use_cache, category_name)
+    logger.info(f"Found category for SKU {sku}: {category}")
+    
+    # Look up category ID from mapping
+    category_data = _get_category_id_from_mapping(category)
+    
+    if not category_data:
+        logger.warning(f"Could not find category ID for: {category}")
+        return None
+    
+    category_id = category_data.get("categoryId")
+    logger.info(f"Found category ID {category_id} for SKU {sku}")
+    
+    # Try to load schema from file
+    try:
+        schemas_dir = Path(__file__).parent.parent.parent / "schemas"
+        schema_file_pattern = f"EbayCat_{category_id}_*.json"
+        schema_files = list(schemas_dir.glob(schema_file_pattern))
+        
+        if schema_files:
+            schema_file = schema_files[0]
+            logger.info(f"Loading schema from {schema_file.name}")
+            with open(schema_file, 'r', encoding='utf-8') as f:
+                import json
+                schema_data = json.load(f)
+            return schema_data
+        else:
+            logger.warning(f"No schema file found for category {category_id} (pattern: {schema_file_pattern})")
+            return None
+            
+    except Exception as e:
+        logger.error(f"Error loading schema for SKU {sku}: {e}")
+        return None
 
 
 def list_all_schemas() -> List[Dict[str, Any]]:
@@ -336,6 +381,290 @@ def refresh_schemas(category_ids: Optional[List[str]] = None, force: bool = Fals
             })
     
     return results
+
+
+async def get_schema_by_category_name(category_name: str) -> dict:
+    """
+    Fetch eBay schema by category name or full path.
+    1. Checks for cached schema files
+    2. Looks up category ID in category_mapping.json
+    3. Fetches schema from eBay API if needed
+    4. Caches the schema for future use
+    
+    Args:
+        category_name: Category name or full path (e.g., "/Kleidung & Accessoires/Damen/.../BHs & BH-Sets")
+    
+    Returns:
+        Dictionary with schema data or error message
+    """
+    try:
+        # Get all available schemas
+        schemas_dir = Path(__file__).parent.parent.parent / "schemas"
+        if not schemas_dir.exists():
+            schemas_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Extract simple category name from path if it's a full path
+        simple_category = category_name
+        if "/" in category_name:
+            simple_category = category_name.split("/")[-1].strip()
+        
+        logger.info(f"Looking for schema for category: {category_name} (simple: {simple_category})")
+        
+        # Step 1: Search for existing schema files
+        schema_files = list(schemas_dir.glob("EbayCat_*.json"))
+        
+        for schema_file in schema_files:
+            try:
+                with open(schema_file, 'r', encoding='utf-8') as f:
+                    import json
+                    schema_data = json.load(f)
+                    
+                # Check if this schema matches the category
+                # Handle both old format (_metadata.category_name) and new format
+                metadata = schema_data.get("_metadata", {})
+                schema_cat_name = metadata.get("category_name") or schema_data.get("categoryName") or schema_data.get("name") or ""
+                
+                if schema_cat_name == category_name or \
+                   schema_cat_name.endswith(simple_category) or \
+                   schema_cat_name == simple_category:
+                    logger.info(f"Found existing schema file: {schema_file.name}")
+                    return {
+                        "categoryId": metadata.get("category_id") or schema_data.get("categoryId"),
+                        "categoryName": simple_category,
+                        "schema": schema_data
+                    }
+            except Exception as e:
+                logger.debug(f"Error reading schema file {schema_file}: {e}")
+                continue
+        
+        # Step 2: Look up category ID from mapping
+        logger.info(f"Schema file not found, looking up category ID from mapping")
+        category_data = _get_category_id_from_mapping(category_name)
+        
+        if not category_data:
+            logger.warning(f"Could not find eBay category ID for: {category_name}")
+            return {"error": f"No category mapping found for: {category_name}"}
+        
+        category_id = category_data.get("categoryId")
+        fees_data = category_data.get("fees", {})
+        logger.info(f"Found category ID {category_id} in mapping with fees: {fees_data}")
+        
+        # Step 3: Check if schema already exists for this category ID
+        schema_file_pattern = f"EbayCat_{category_id}_*.json"
+        existing_schema = list(schemas_dir.glob(schema_file_pattern))
+        
+        if existing_schema:
+            logger.info(f"Found existing schema for category ID {category_id}")
+            with open(existing_schema[0], 'r', encoding='utf-8') as f:
+                import json
+                schema_data = json.load(f)
+                return {
+                    "categoryId": category_id,
+                    "categoryName": simple_category,
+                    "schema": schema_data
+                }
+        
+        # Step 4: Fetch schema from eBay API
+        logger.info(f"Fetching eBay schema for category ID: {category_id}")
+        try:
+            aspects_result = fetch_ebay_aspects_from_api(category_id)
+            
+            # Get fees from mapping, with fallback to defaults
+            payment_fee = fees_data.get("payment_fee", 0.35) if fees_data else 0.35
+            sales_commission_percentage = fees_data.get("sales_commission_up_to", 0.12) if fees_data else 0.12
+            
+            # Build schema JSON in old format
+            schema_to_save = {
+                "_metadata": {
+                    "category_name": category_name,
+                    "category_id": category_id,
+                    "marketplace": "EBAY_DE",
+                    "fees": {
+                        "payment_fee": payment_fee,
+                        "sales_commission_percentage": sales_commission_percentage
+                    }
+                },
+                "schema": {
+                    "required": aspects_result.get("required", []),
+                    "optional": aspects_result.get("optional", [])
+                }
+            }
+            
+            # Save to schemas folder with old naming convention
+            schema_file_name = f"EbayCat_{category_id}_EBAY_DE.json"
+            schema_file_path = schemas_dir / schema_file_name
+            
+            with open(schema_file_path, 'w', encoding='utf-8') as f:
+                import json
+                json.dump(schema_to_save, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"Saved new schema to {schema_file_path}")
+            
+            return {
+                "categoryId": category_id,
+                "categoryName": simple_category,
+                "schema": schema_to_save
+            }
+            
+        except Exception as e:
+            logger.error(f"Error fetching schema from eBay API for category ID {category_id}: {e}")
+            return {"error": f"Failed to fetch eBay schema for category ID {category_id}: {str(e)}"}
+        
+    except Exception as e:
+        logger.error(f"Error getting schema by category name: {e}")
+        return {"error": str(e)}
+
+
+def _get_category_id_from_mapping(category_name: str) -> Optional[dict]:
+    """
+    Load category data from category_mapping.json file
+    First tries exact full path match, then simple name match
+    
+    Args:
+        category_name: Category name or full path to look up
+    
+    Returns:
+        Dict with categoryId and fees if found in mapping, None otherwise
+    """
+    try:
+        mapping_file = Path(__file__).parent.parent.parent / "schemas" / "category_mapping.json"
+        
+        if not mapping_file.exists():
+            logger.debug(f"Category mapping file not found: {mapping_file}")
+            return None
+        
+        with open(mapping_file, 'r', encoding='utf-8') as f:
+            import json
+            mapping_data = json.load(f)
+        
+        mappings = mapping_data.get("categoryMappings", [])
+        logger.debug(f"Loaded {len(mappings)} category mappings from {mapping_file}")
+        
+        # Extract simple name from full path
+        simple_name = category_name
+        if "/" in category_name:
+            simple_name = category_name.split("/")[-1].strip()
+        
+        # Strategy 1: Try exact full path match first
+        for entry in mappings:
+            full_path = entry.get("fullPath", "")
+            if full_path == category_name:
+                cat_id = entry.get("categoryId")
+                fees = entry.get("fees", {})
+                logger.info(f"Found category ID {cat_id} (full path match) for '{category_name}'")
+                return {"categoryId": cat_id, "fees": fees}
+        
+        # Strategy 2: Try simple name exact match
+        for entry in mappings:
+            if entry.get("categoryName", "").lower() == simple_name.lower():
+                cat_id = entry.get("categoryId")
+                fees = entry.get("fees", {})
+                logger.info(f"Found category ID {cat_id} (simple name match) for '{simple_name}'")
+                return {"categoryId": cat_id, "fees": fees}
+        
+        logger.debug(f"No mapping found for category: {category_name}")
+        return None
+        
+    except Exception as e:
+        logger.error(f"Error loading category mapping: {e}")
+        return None
+
+
+async def _search_ebay_category_id(category_name: str) -> Optional[str]:
+    """
+    Search eBay API to find category ID by category name.
+    Tries multiple search strategies.
+    
+    Args:
+        category_name: Simple category name (e.g., "BHs & BH-Sets")
+    
+    Returns:
+        Category ID if found, None otherwise
+    """
+    try:
+        tree_id = fetch_category_tree_id()
+        base_url = get_taxonomy_endpoint()
+        headers = {
+            "Authorization": f"Bearer {get_ebay_token()}",
+            "Accept": "application/json",
+        }
+        
+        # Strategy 1: Try exact search with category suggestions
+        logger.info(f"Strategy 1: Searching for category '{category_name}' using suggestions API")
+        try:
+            url = f"{base_url}/category_tree/{tree_id}/get_category_suggestions"
+            params = {"q": category_name}
+            
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            
+            suggestions = data.get("categorySuggestions", [])
+            logger.info(f"Got {len(suggestions)} suggestions for '{category_name}'")
+            
+            if suggestions:
+                first_match = suggestions[0]
+                cat_id = first_match.get("categoryId")
+                cat_name = first_match.get("categoryName", "")
+                logger.info(f"Found eBay category ID {cat_id} ({cat_name}) for '{category_name}'")
+                return cat_id
+        except Exception as e:
+            logger.debug(f"Strategy 1 failed: {e}")
+        
+        # Strategy 2: Try searching for just the main keyword (first word)
+        logger.info(f"Strategy 2: Trying shorter search with first keyword")
+        try:
+            first_word = category_name.split()[0]
+            url = f"{base_url}/category_tree/{tree_id}/get_category_suggestions"
+            params = {"q": first_word}
+            
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            
+            suggestions = data.get("categorySuggestions", [])
+            logger.info(f"Got {len(suggestions)} suggestions for '{first_word}'")
+            
+            if suggestions:
+                # Look for best match
+                for suggestion in suggestions:
+                    cat_name = suggestion.get("categoryName", "").lower()
+                    if category_name.lower() in cat_name or "bh" in cat_name.lower():
+                        cat_id = suggestion.get("categoryId")
+                        logger.info(f"Found matching eBay category ID {cat_id} ({cat_name})")
+                        return cat_id
+        except Exception as e:
+            logger.debug(f"Strategy 2 failed: {e}")
+        
+        # Strategy 3: Try without special characters
+        logger.info(f"Strategy 3: Trying search without special characters")
+        try:
+            clean_name = category_name.replace("&", "and").replace(" - ", " ")
+            url = f"{base_url}/category_tree/{tree_id}/get_category_suggestions"
+            params = {"q": clean_name}
+            
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            
+            suggestions = data.get("categorySuggestions", [])
+            if suggestions:
+                first_match = suggestions[0]
+                cat_id = first_match.get("categoryId")
+                logger.info(f"Found eBay category ID {cat_id} for '{clean_name}'")
+                return cat_id
+        except Exception as e:
+            logger.debug(f"Strategy 3 failed: {e}")
+        
+        logger.warning(f"No eBay category found for: {category_name} after all strategies")
+        return None
+        
+    except requests.HTTPError as e:
+        logger.error(f"eBay API error searching categories: {e.response.status_code} - {e.response.text}")
+        return None
+    except Exception as e:
+        logger.error(f"Error searching eBay categories: {e}")
+        return None
 
 
 # Import pandas at module level to avoid issues

@@ -658,10 +658,11 @@ def validate_ebay_fields(sku: str):
 
 
 @app.get("/api/ebay/fields/{sku}")
-def get_ebay_fields_for_sku(sku: str):
-    """Get current eBay fields for SKU from JSON file"""
+async def get_ebay_fields_for_sku(sku: str):
+    """Get eBay fields for a SKU based on its category"""
     try:
         from app.repositories.sku_json_repo import read_sku_json
+        from app.services import ebay_schema
         
         product_json = read_sku_json(sku)
         if not product_json:
@@ -672,26 +673,136 @@ def get_ebay_fields_for_sku(sku: str):
                 "optional_fields": {}
             }
         
+        # Try to get category from multiple possible locations
+        category = None
+        
+        # Try top-level category field
+        if "category" in product_json:
+            category = product_json.get("category")
+        
+        # Try from Ebay Category section
+        if not category and "Ebay Category" in product_json:
+            ebay_cat = product_json.get("Ebay Category", {})
+            if isinstance(ebay_cat, dict):
+                category = ebay_cat.get("Category")
+        
+        # Try from AI Product Details
+        if not category and "AI Product Details" in product_json:
+            ai_details = product_json.get("AI Product Details", {})
+            if isinstance(ai_details, dict):
+                category = ai_details.get("category") or ai_details.get("Category")
+        
+        if not category:
+            return {
+                "success": False,
+                "message": f"No category set for SKU {sku}",
+                "required_fields": {},
+                "optional_fields": {}
+            }
+        
+        # Get schema by category name
+        schema_data = await ebay_schema.get_schema_by_category_name(category)
+        
+        if "error" in schema_data:
+            # Fallback to old behavior - return current eBay fields without schema
+            ebay_fields = product_json.get("eBay Fields", {})
+            
+            if isinstance(ebay_fields, dict):
+                if "required" in ebay_fields or "optional" in ebay_fields:
+                    required_fields = ebay_fields.get("required", {})
+                    optional_fields = ebay_fields.get("optional", {})
+                else:
+                    required_fields = {}
+                    optional_fields = ebay_fields
+            else:
+                required_fields = {}
+                optional_fields = {}
+            
+            return {
+                "success": True,
+                "sku": sku,
+                "category": category,
+                "required_fields": required_fields,
+                "optional_fields": optional_fields,
+                "warning": schema_data.get("error")
+            }
+        
+        # Get existing eBay fields from product JSON
         ebay_fields = product_json.get("eBay Fields", {})
         
-        # Handle both old flat format and new structured format
+        # Flatten eBay fields if it has required/optional structure
+        flat_ebay_fields = {}
         if isinstance(ebay_fields, dict):
             if "required" in ebay_fields or "optional" in ebay_fields:
-                # New structured format
-                required_fields = ebay_fields.get("required", {})
-                optional_fields = ebay_fields.get("optional", {})
+                # New nested structure: {required: {...}, optional: {...}}
+                flat_ebay_fields.update(ebay_fields.get("required", {}))
+                flat_ebay_fields.update(ebay_fields.get("optional", {}))
             else:
-                # Old flat format - need to split based on schema
-                # For now, just return all as optional
-                required_fields = {}
-                optional_fields = ebay_fields
+                # Old flat structure: {fieldName: value, ...}
+                flat_ebay_fields = ebay_fields
+        
+        # Split schema fields into required and optional
+        required_fields = {}
+        optional_fields = {}
+        
+        # Get the schema - handle nested structure with _metadata
+        schema_wrapper = schema_data.get("schema", {})
+        
+        # If schema has _metadata, it's the new saved format - get the nested schema
+        if "_metadata" in schema_wrapper:
+            schema_structure = schema_wrapper.get("schema", {})
         else:
-            required_fields = {}
-            optional_fields = {}
+            schema_structure = schema_wrapper
+        
+        # Handle old format with "required" and "optional" keys
+        if "required" in schema_structure and "optional" in schema_structure:
+            # Old format: {schema: {required: [...], optional: [...]}}
+            for field in schema_structure.get("required", []):
+                field_name = field.get("name", "")
+                current_value = flat_ebay_fields.get(field_name, "")
+                
+                field_info = {
+                    "name": field_name,
+                    "value": current_value,
+                    "description": field.get("description", ""),
+                    "options": field.get("values", [])  # "values" in old format
+                }
+                required_fields[field_name] = field_info
+            
+            for field in schema_structure.get("optional", []):
+                field_name = field.get("name", "")
+                current_value = flat_ebay_fields.get(field_name, "")
+                
+                field_info = {
+                    "name": field_name,
+                    "value": current_value,
+                    "description": field.get("description", ""),
+                    "options": field.get("values", [])  # "values" in old format
+                }
+                optional_fields[field_name] = field_info
+        else:
+            # New format: direct list of fields
+            for field in schema_data.get("fields", []):
+                field_name = field.get("name") or field.get("aspect_name") or ""
+                current_value = flat_ebay_fields.get(field_name, "")
+                
+                field_info = {
+                    "name": field_name,
+                    "value": current_value,
+                    "description": field.get("description", ""),
+                    "options": field.get("options", [])
+                }
+                
+                if field.get("required"):
+                    required_fields[field_name] = field_info
+                else:
+                    optional_fields[field_name] = field_info
         
         return {
             "success": True,
             "sku": sku,
+            "category": category,
+            "categoryId": schema_data.get("categoryId"),
             "required_fields": required_fields,
             "optional_fields": optional_fields
         }
