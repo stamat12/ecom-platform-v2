@@ -61,7 +61,7 @@ EBAY_ENRICHMENT_MAX_TOKENS = 800
 # Manufacturer Lookup Settings
 MANUFACTURER_CACHE_DURATION_DAYS = 90
 MANUFACTURER_LOOKUP_MODEL = "gpt-4o"
-MANUFACTURER_LOOKUP_TEMP = 0.3
+MANUFACTURER_LOOKUP_TEMP = 0
 MANUFACTURER_LOOKUP_MAX_TOKENS = 500
 
 # Image Upload Settings
@@ -69,7 +69,7 @@ EBAY_MAX_IMAGES = 12
 EBAY_IMAGE_SIZE_LIMIT_MB = 12
 
 # Listing Template Settings
-LISTING_BANNER_URL = os.getenv("EBAY_BANNER_URL", "")
+LISTING_BANNER_URL = os.getenv("EBAY_BANNER_URL", "https://i.postimg.cc/523Rftvm/I-Love-You-So-Much-1.jpg")
 LISTING_RETURN_POLICY_DAYS = 14
 LISTING_SHIPPING_INFO = "Kostenloser Versand innerhalb Deutschlands"
 
@@ -118,74 +118,74 @@ Antworte im folgenden JSON-Format:
 """
 
 # Manufacturer Lookup Prompt
-MANUFACTURER_LOOKUP_PROMPT = """Du bist ein Recherche-Assistent für Herstellerinformationen.
+MANUFACTURER_LOOKUP_PROMPT = """
+You are a research assistant helping an e-commerce seller in the EU.
 
-Aufgabe: Finde die offizielle Kontaktadresse des Herstellers/der Marke: "{brand}"
+Task:
+Find the OFFICIAL manufacturer or main company information for the brand "{brand}".
+Try to find:
+1. The main company/headquarters in the EU / DACH region
+2. OR the official EU distributor/representative
+3. OR the international headquarters if brand is based outside EU
 
-ANFORDERUNGEN:
-1. Suche nach der offiziellen EU- oder Deutschland-Adresse
-2. Priorisiere deutsche oder österreichische Adressen
-3. Gib vollständige Kontaktdaten zurück
+Search Strategy:
+- Check the official brand website for contact/imprint/about pages
+- Look for "Contact", "About Us", "Impressum", "Imprint" sections
+- For smaller brands, the company address might be on their online shop footer
+- If main HQ is outside EU (e.g. USA, China), try to find their EU office/distributor
 
-Antworte im JSON-Format:
-{{
-  "company_name": "Offizieller Firmenname",
-  "street": "Straße und Hausnummer",
-  "city": "Stadt",
-  "state": "Bundesland/Region (optional)",
-  "postal_code": "PLZ",
-  "country": "Land",
-  "email": "Kontakt-Email (falls verfügbar)",
-  "phone": "Telefonnummer (falls verfügbar)"
-}}
+IMPORTANT:
+- If you CANNOT find ANY real information after thorough search, return: {{"error": "No verified manufacturer data found"}}
+- Do NOT generate placeholder, example, or fake data like "Musterstraße", "info@example.com", etc.
+- It's OK if you can't find phone/email - just provide address info you can verify
+- Provide what you CAN find, don't reject partial data
 
-Wenn du keine verlässlichen Informationen findest, gib null zurück.
+Return ONLY a JSON object with these EXACT keys:
+
+- "CompanyName": Full legal name of the company (string)
+- "Street1": Main street and house number (string)
+- "Street2": Additional address line if needed, otherwise "" (string)
+- "CityName": City (string)
+- "StateOrProvince": State, province or Bundesland if applicable, otherwise "" (string)
+- "PostalCode": Postal code (string)
+- "Country": 2-letter country code like "DE", "AT", "UK", "FR", "IT", "NL", etc. (string)
+- "Phone": Main customer service or company phone (optional, use "" if not found) (string)
+- "Email": Official contact email (optional, use "" if not found) (string)
+- "ContactURL": Official contact/support page URL (optional, use "" if not found) (string)
+
+RULES:
+- "Country" MUST be a 2-letter country code (e.g. "DE", "AT", "FR", "UK", "ES", "IT", "NL").
+- "Phone" if found, MUST include country code starting with "00" (not "+"), no spaces/brackets/dashes. Example: "0049301234567"
+- "Phone", "Email", "ContactURL" can be "" if you can't find them - focus on getting address right
+
+Output:
+Return ONLY valid JSON, no explanation, no comments.
 """
 
-# Listing Description HTML Template
-LISTING_DESCRIPTION_TEMPLATE = """
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <style>
-        body {{ font-family: Arial, sans-serif; margin: 0; padding: 20px; }}
-        .banner {{ width: 100%; margin-bottom: 20px; }}
-        .section {{ margin-bottom: 20px; }}
-        .section h2 {{ color: #333; border-bottom: 2px solid #e67e22; padding-bottom: 5px; }}
-        .details {{ background: #f9f9f9; padding: 15px; border-radius: 5px; }}
-        .details p {{ margin: 5px 0; }}
-        .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; }}
-    </style>
-</head>
-<body>
-    {banner}
-    
-    <div class="section">
-        <h2>Produktbeschreibung</h2>
-        <div class="details">
-            {description}
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2>Produktdetails</h2>
-        <div class="details">
-            {product_details}
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2>Versand & Rückgabe</h2>
-        <div class="details">
-            <p><strong>Versand:</strong> {shipping_info}</p>
-            <p><strong>Rückgabe:</strong> {return_days} Tage Rückgaberecht</p>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <p>Vielen Dank für Ihr Interesse!</p>
-    </div>
-</body>
-</html>
-"""
+# Listing Description HTML Template (exact match from old project)
+LISTING_DESCRIPTION_TEMPLATE = (
+    '<img src="https://i.postimg.cc/523Rftvm/I-Love-You-So-Much-1.jpg" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;" alt="Header Banner">'
+    '<h2 style="text-align:center; color:#FF0000; margin-top:0.5em; margin-bottom:0.5em;">🏷️ {title}</h2>'
+    '<div style="text-align:center;">'
+    '{description_block}'
+    '<div style="margin-top:1.5em;"><strong><span style="color:#008000;">'
+    'Sie möchten mehr über die Passform oder weitere Details erfahren? '
+    'Geben Sie einfach die Produktbezeichnung oder Artikelnummer online ein – '
+    'dort finden Sie zusätzliche Informationen und Bilder.'
+    '</span></strong></div>'
+    '<div style="font-size:20px; margin-top:1.5em;"><strong><span style="color:#FF0000;">Versand</span></strong>'
+    ' 📦 – erfolgt <b>innerhalb von 2 Werktagen</b>!'
+    '</div>'
+    '<div style="font-size:20px; margin-top:0.75em;"><strong><span style="color:#FF0000;">14 Tage Rückgaberecht</span></strong> ↩️ – '
+    '<span style="color:#0039f3;"><strong><i>risikofrei einkaufen!</i></strong></span><br>'
+    '<strong style="display:inline-block; margin-top:0.25em;"><span style="color:#FF0000;">Sparen</span></strong>💸: '
+    'Entdecken Sie all unsere Angebote und die wöchentlichen Schnäppchen-Auktionen – '
+    '<span style="color:#0039f3;"><i><strong>mit Kombiversand sparen Sie Versandkosten</strong></i></span>!'
+    '</div>'
+    '<div style="font-size:20px; margin-top:0.75em;"><strong><span style="color:#FF0000;">Bei Fragen</span></strong>💬 – '
+    'Wir antworten <i><strong><span style="color:#0039f3;">innerhalb von 24h!</span></strong></i>'
+    '</div>'
+    '</div>'
+    '<div style="text-align:center; font-size:20px; margin-top:1.5em; margin-bottom:1em;"><br></div>'
+    '<p style="text-align:center; margin-bottom:1em;"><br></p>'
+)

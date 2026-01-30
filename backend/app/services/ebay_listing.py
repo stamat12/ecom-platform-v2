@@ -419,7 +419,7 @@ def build_title_from_product(product_json: Dict[str, Any], sku: str) -> str:
 
 
 def build_description_html(product_json: Dict[str, Any], title: str) -> str:
-    """Build HTML description from product data"""
+    """Build HTML description from product data using exact old project template"""
     product_info = product_json.get("Intern Product Info", {})
     generated_info = product_json.get("Intern Generated Info", {})
     condition_section = product_json.get("Product Condition", {})
@@ -431,6 +431,7 @@ def build_description_html(product_json: Dict[str, Any], title: str) -> str:
     materials = generated_info.get("Materials", "")
     more_details = generated_info.get("More details", "")
     
+    # Build description lines
     desc_lines = []
     if condition:
         desc_lines.append(f"Zustand: {condition}")
@@ -447,6 +448,7 @@ def build_description_html(product_json: Dict[str, Any], title: str) -> str:
         desc_lines.append("")
         desc_lines.append(materials)
     
+    # Build description block with exact styling from old project
     description_block = ""
     for line in desc_lines:
         description_block += (
@@ -455,21 +457,10 @@ def build_description_html(product_json: Dict[str, Any], title: str) -> str:
             f'</div>'
         )
     
-    # Build banner HTML
-    banner = ""
-    if LISTING_BANNER_URL:
-        banner = f'<img src="{LISTING_BANNER_URL}" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;" alt="Header Banner">'
-    
-    # Build product details HTML
-    product_details = description_block
-    
-    # Use template
+    # Use template exactly as in old project
     html_desc = LISTING_DESCRIPTION_TEMPLATE.format(
-        banner=banner,
-        description=f"<h2>{title}</h2>",
-        product_details=product_details,
-        shipping_info=LISTING_SHIPPING_INFO,
-        return_days=LISTING_RETURN_POLICY_DAYS
+        title=title,
+        description_block=description_block
     )
     
     return html_desc
