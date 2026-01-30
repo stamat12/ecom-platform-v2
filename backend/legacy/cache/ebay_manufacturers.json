@@ -132,15 +132,17 @@
     "ContactURL": "https://www.g-star.com/en_us/customer-service/contact"
   },
   "nike": {
-    "company_name": "Nike Deutschland GmbH",
-    "street": "Otto-Fleck-Schneise 7",
-    "city": "Frankfurt am Main",
-    "state": "Hessen",
-    "postal_code": "60528",
-    "country": "Deutschland",
-    "email": null,
-    "phone": "+49 69 1532950",
-    "cached_at": "2026-01-30T21:10:39.969806",
+    "CompanyName": "Nike European Operations Netherlands B.V.",
+    "Street1": "Colosseum 1",
+    "Street2": "",
+    "CityName": "Hilversum",
+    "StateOrProvince": "",
+    "PostalCode": "1213 NL",
+    "Country": "NL",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.nike.com/help/a/contact-us",
+    "cached_at": "2026-01-30T23:04:03.520827",
     "original_brand": "Nike"
   }
 }

@@ -254,6 +254,113 @@ def upload_images_for_sku(
     }
 
 
+def _normalize_phone(phone: str) -> str:
+    """Normalize phone numbers to eBay format: 00 prefix, no spaces/symbols."""
+    if not phone:
+        return ""
+
+    normalized = str(phone).strip()
+    # Remove common separators/symbols
+    for ch in (" ", "-", "(", ")", ".", "/", "\\", "\t", "\n", "\r"):
+        normalized = normalized.replace(ch, "")
+
+    if normalized.startswith("+"):
+        normalized = f"00{normalized[1:]}"
+
+    return normalized
+
+
+def _normalize_country(country: str, default_country: str = "DE") -> str:
+    """Normalize country to 2-letter ISO code."""
+    if not country:
+        return default_country
+
+    raw = str(country).strip()
+    if not raw:
+        return default_country
+
+    upper = raw.upper()
+    if len(upper) == 2 and upper.isalpha():
+        return upper
+
+    mapping = {
+        "AUSTRIA": "AT",
+        "ÖSTERREICH": "AT",
+        "GERMANY": "DE",
+        "DEUTSCHLAND": "DE",
+        "SWITZERLAND": "CH",
+        "SCHWEIZ": "CH",
+        "FRANCE": "FR",
+        "SPAIN": "ES",
+        "ITALY": "IT",
+        "UNITED KINGDOM": "UK",
+        "GREAT BRITAIN": "UK",
+        "ENGLAND": "UK",
+        "UNITED STATES": "US",
+        "USA": "US",
+        "NETHERLANDS": "NL",
+        "HOLLAND": "NL",
+        "BELGIUM": "BE",
+        "DENMARK": "DK",
+        "SWEDEN": "SE",
+        "NORWAY": "NO",
+        "FINLAND": "FI",
+        "IRELAND": "IE",
+        "LUXEMBOURG": "LU",
+        "POLAND": "PL",
+        "CZECH REPUBLIC": "CZ",
+        "CZECHIA": "CZ",
+        "SLOVAKIA": "SK",
+        "SLOVENIA": "SI",
+        "HUNGARY": "HU",
+        "ROMANIA": "RO",
+        "BULGARIA": "BG",
+        "GREECE": "GR",
+        "PORTUGAL": "PT",
+        "TURKEY": "TR",
+        "CHINA": "CN",
+        "JAPAN": "JP",
+        "SOUTH KOREA": "KR",
+        "KOREA": "KR",
+        "TAIWAN": "TW",
+        "HONG KONG": "HK",
+        "AUSTRALIA": "AU",
+        "NEW ZEALAND": "NZ",
+        "CANADA": "CA",
+        "MEXICO": "MX",
+        "BRAZIL": "BR",
+        "ARGENTINA": "AR",
+        "INDIA": "IN",
+        "ISRAEL": "IL",
+        "UNITED ARAB EMIRATES": "AE",
+        "UAE": "AE",
+        "SAUDI ARABIA": "SA",
+        "SOUTH AFRICA": "ZA",
+        "SINGAPORE": "SG",
+        "MALAYSIA": "MY",
+        "THAILAND": "TH",
+        "VIETNAM": "VN",
+        "INDONESIA": "ID",
+        "PHILIPPINES": "PH",
+    }
+
+    return mapping.get(upper, default_country)
+
+
+def _normalize_manufacturer_info(info: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize manufacturer info to required JSON format."""
+    normalized = dict(info or {})
+
+    if "Phone" in normalized:
+        normalized["Phone"] = _normalize_phone(normalized.get("Phone", ""))
+    if "Country" in normalized:
+        normalized["Country"] = _normalize_country(normalized.get("Country", ""))
+    else:
+        normalized["Country"] = _normalize_country("")
+
+    return normalized
+
+
 def get_manufacturer_info(brand: str, force_refresh: bool = False) -> Optional[Dict[str, Any]]:
     """
     Get manufacturer information for brand
@@ -272,8 +379,11 @@ def get_manufacturer_info(brand: str, force_refresh: bool = False) -> Optional[D
     if not force_refresh:
         cached = ebay_cache_repo.get_manufacturer_info(brand)
         if cached:
+            normalized_cached = _normalize_manufacturer_info(cached)
+            if normalized_cached != cached:
+                ebay_cache_repo.save_manufacturer_info(brand, normalized_cached)
             logger.info(f"Using cached manufacturer info for '{brand}'")
-            return cached
+            return normalized_cached
     
     # Research using OpenAI
     logger.info(f"Looking up manufacturer info for '{brand}' using AI...")
@@ -312,6 +422,8 @@ def get_manufacturer_info(brand: str, force_refresh: bool = False) -> Optional[D
         if 'Muster' in manufacturer_info.get('Street1', '') or 'example' in manufacturer_info.get('Email', '').lower():
             logger.warning(f"AI returned placeholder data for '{brand}', ignoring")
             return None
+
+        manufacturer_info = _normalize_manufacturer_info(manufacturer_info)
         
         # Save to cache
         ebay_cache_repo.save_manufacturer_info(brand, manufacturer_info)
@@ -340,8 +452,8 @@ def _build_manufacturer_xml(manufacturer_info: Optional[Dict[str, Any]]) -> str:
     city = str(manufacturer_info.get("CityName", "") or "").strip()
     state = str(manufacturer_info.get("StateOrProvince", "") or "").strip()
     postal = str(manufacturer_info.get("PostalCode", "") or "").strip()
-    country = str(manufacturer_info.get("Country", "") or "").strip() or "DE"
-    phone = str(manufacturer_info.get("Phone", "") or "").strip()
+    country = _normalize_country(str(manufacturer_info.get("Country", "") or "").strip() or "DE")
+    phone = _normalize_phone(str(manufacturer_info.get("Phone", "") or "").strip())
     email = str(manufacturer_info.get("Email", "") or "").strip()
     contact_url = str(manufacturer_info.get("ContactURL", "") or "").strip()
     
@@ -515,6 +627,12 @@ def create_listing(
     else:
         html_desc = build_description_html(product_json, title)
     
+    # Cache description HTML (before attempting upload)
+    try:
+        ebay_cache_repo.save_description_html(sku, html_desc, success=False)
+    except Exception as e:
+        logger.warning(f"Failed to cache description for {sku}: {e}")
+    
     # Get condition ID
     if condition_id is None:
         condition_text = condition_section.get("Condition", "")
@@ -669,6 +787,11 @@ def create_listing(
     
     if success:
         logger.info(f"Successfully created listing for SKU {sku}, ItemID: {item_id}")
+        # Update cached description with success status
+        try:
+            ebay_cache_repo.save_description_html(sku, html_desc, success=True)
+        except Exception as e:
+            logger.warning(f"Failed to update description cache for {sku}: {e}")
     else:
         logger.error(f"Failed to create listing for SKU {sku}: {errors}")
     

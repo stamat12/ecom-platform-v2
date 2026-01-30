@@ -226,3 +226,95 @@ def clear_manufacturer_cache() -> bool:
     except Exception as e:
         logger.error(f"Error clearing manufacturer cache: {e}")
         return False
+
+# ===== Description Cache =====
+
+def save_description_html(sku: str, html: str, success: bool = False) -> bool:
+    """
+    Cache product description HTML for a SKU
+    
+    Args:
+        sku: SKU identifier
+        html: HTML description content
+        success: Whether the listing was successfully created
+    
+    Returns:
+        True if saved successfully
+    """
+    ensure_cache_dir()
+    cache_path = _get_cache_path("ebay_descriptions")
+    
+    # Load existing cache
+    descriptions = {}
+    if cache_path.exists():
+        try:
+            with cache_path.open("r", encoding="utf-8") as f:
+                descriptions = json.load(f)
+        except Exception as e:
+            logger.warning(f"Error loading existing descriptions cache: {e}")
+    
+    # Add/update SKU description
+    descriptions[sku] = {
+        "html": html,
+        "cached_at": datetime.now().isoformat(),
+        "success": success
+    }
+    
+    try:
+        # Atomic write
+        temp_path = cache_path.with_suffix(".tmp.json")
+        with temp_path.open("w", encoding="utf-8") as f:
+            json.dump(descriptions, f, ensure_ascii=False, indent=2)
+        
+        temp_path.replace(cache_path)
+        logger.info(f"Cached description HTML for SKU {sku}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Error saving description cache: {e}")
+        return False
+
+def get_description_html(sku: str) -> Optional[str]:
+    """
+    Get cached description HTML for a SKU
+    
+    Args:
+        sku: SKU identifier
+    
+    Returns:
+        HTML string or None if not cached
+    """
+    cache_path = _get_cache_path("ebay_descriptions")
+    
+    if not cache_path.exists():
+        return None
+    
+    try:
+        with cache_path.open("r", encoding="utf-8") as f:
+            descriptions = json.load(f)
+        
+        entry = descriptions.get(sku)
+        if entry:
+            logger.debug(f"Found cached description for SKU {sku}")
+            return entry.get("html")
+        
+        return None
+        
+    except Exception as e:
+        logger.error(f"Error loading description cache: {e}")
+        return None
+
+def clear_description_cache() -> bool:
+    """Delete description cache"""
+    cache_path = _get_cache_path("ebay_descriptions")
+    
+    if not cache_path.exists():
+        return True
+    
+    try:
+        cache_path.unlink()
+        logger.info("Cleared description cache")
+        return True
+    except Exception as e:
+        logger.error(f"Error clearing description cache: {e}")
+        return False
