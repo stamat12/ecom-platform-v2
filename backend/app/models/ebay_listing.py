@@ -59,6 +59,7 @@ class ManufacturerLookupResponse(BaseModel):
 class CreateListingRequest(BaseModel):
     """Request to create eBay listing"""
     sku: str
+    ebay_sku: Optional[str] = Field(default=None, description="SKU to use for eBay listing (if different from source SKU)")
     price: float = Field(gt=0)
     condition_id: Optional[int] = Field(default=None, description="eBay condition ID (e.g., 1000=New)")
     schedule_days: int = Field(default=14, ge=0, le=30, description="Days to schedule listing in future")

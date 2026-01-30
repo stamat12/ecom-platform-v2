@@ -40,17 +40,36 @@ DEFAULT_SCHEDULE_DAYS = 14
 DEFAULT_LISTING_DURATION = "GTC"  # Good 'Til Cancelled
 DEFAULT_QUANTITY = 1
 
-# Condition Mapping (German text → eBay Condition ID)
+# Condition Mapping (eBay ConditionID → German label)
+CONDITION_ID_TO_LABEL: Dict[int, str] = {
+    1000: "Neu (New)",
+    1500: "Neu ohne Originalverpackung (New other)",
+    1750: "Neu mit Fehlern (New with defects)",
+    2000: "Generalüberholt (Manufacturer refurbished)",
+    2500: "Verkäufer überholt (Seller refurbished)",
+    3000: "Gebraucht (Used)",
+    4000: "Sehr gut (Very Good)",
+    5000: "Gut (Good)",
+    6000: "Akzeptabel (Acceptable)",
+    7000: "Für Teile / nicht funktionsfähig (For parts or not working)",
+}
+
+# Reverse mapping (German text → eBay ConditionID)
 CONDITION_MAPPING: Dict[str, int] = {
+    "Neu": 1000,
     "Neu mit Karton": 1000,
     "Neu mit Etiketten": 1000,
+    "Neu ohne Originalverpackung": 1500,
     "Neu ohne Karton": 1500,
     "Neu mit Fehlern": 1750,
     "Generalüberholt": 2000,
+    "Verkäufer überholt": 2500,
     "Gebraucht": 3000,
     "Sehr gut": 4000,
     "Gut": 5000,
     "Akzeptabel": 6000,
+    "Für Teile / nicht funktionsfähig": 7000,
+    "Für Teile": 7000,
 }
 
 # eBay Field Enrichment Settings

@@ -588,7 +588,8 @@ def create_listing(
     shipping_policy: Optional[str] = None,
     custom_description: Optional[str] = None,
     best_offer_enabled: bool = True,
-    quantity: int = DEFAULT_QUANTITY
+    quantity: int = DEFAULT_QUANTITY,
+    ebay_sku: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Create eBay listing from product JSON
@@ -601,7 +602,10 @@ def create_listing(
     token = get_ebay_token()
     endpoint = get_api_endpoint()
     
-    # Load product JSON
+    # Use ebay_sku if provided, otherwise use original sku
+    listing_sku = ebay_sku if ebay_sku else sku
+    
+    # Load product JSON using original SKU (for data/images)
     product_json = read_sku_json(sku)
     if not product_json:
         raise ValueError(f"No product JSON found for SKU {sku}")
@@ -691,8 +695,11 @@ def create_listing(
     return_policy = return_policy or RETURN_POLICY_NAME
     shipping_policy = shipping_policy or SHIPPING_POLICY_NAME
     
-    # Schedule time
-    schedule_time = (datetime.utcnow() + timedelta(days=schedule_days)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    # Schedule time (if schedule_days=0, upload immediately, otherwise schedule in future)
+    if schedule_days == 0:
+        schedule_time = None  # Upload immediately
+    else:
+        schedule_time = (datetime.utcnow() + timedelta(days=schedule_days)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     price_str = f"{price:.2f}"
     
     # Build XML request
@@ -710,7 +717,7 @@ def create_listing(
   <ErrorLanguage>de_DE</ErrorLanguage>
   <WarningLevel>High</WarningLevel>
   <Item>
-    <SKU>{sku}</SKU>
+    <SKU>{listing_sku}</SKU>
     <Title>{html.escape(title)}</Title>
     <Description><![CDATA[{html_desc}]]></Description>
     <PrimaryCategory>
@@ -729,7 +736,7 @@ def create_listing(
     <ListingDuration>{DEFAULT_LISTING_DURATION}</ListingDuration>
     <ListingType>FixedPriceItem</ListingType>
     {best_offer_xml}
-    <ScheduleTime>{schedule_time}</ScheduleTime>
+    {f'<ScheduleTime>{schedule_time}</ScheduleTime>' if schedule_time else ''}
 
     <SellerProfiles>
       <SellerPaymentProfile>

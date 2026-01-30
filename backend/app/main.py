@@ -1008,7 +1008,8 @@ def create_ebay_listing(request: CreateListingRequest):
             shipping_policy=request.shipping_policy,
             custom_description=request.custom_description,
             best_offer_enabled=request.best_offer_enabled,
-            quantity=request.quantity
+            quantity=request.quantity,
+            ebay_sku=request.ebay_sku
         )
         
         return CreateListingResponse(**result)
