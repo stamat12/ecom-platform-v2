@@ -87,6 +87,28 @@
         {
           "filename": "VER02000 (2).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02000 (2).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02000 (3).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02000 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02000 (4).jpg",
+          "order": 5,
+          "eBay URL": ""
+        }
       ]
     },
     "eBay Fields": {

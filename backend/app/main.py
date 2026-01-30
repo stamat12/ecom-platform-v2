@@ -867,6 +867,70 @@ def save_ebay_fields_for_sku(sku: str, request: dict):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+@app.get("/api/skus/{sku}/ebay-images")
+def get_ebay_image_orders(sku: str):
+    """Get eBay image orders for a SKU"""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json
+        
+        product_json = read_sku_json(sku)
+        if not product_json:
+            return {"orders": {}}
+        
+        # Get eBay Images array from JSON
+        ebay_images = product_json.get("Images", {}).get("eBay Images", [])
+        
+        # Convert array to { filename: order } dict
+        orders = {}
+        for img in ebay_images:
+            if isinstance(img, dict) and "filename" in img and "order" in img:
+                orders[img["filename"]] = img["order"]
+        
+        return {"orders": orders}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/skus/{sku}/ebay-images")
+def save_ebay_image_orders(sku: str, request: dict):
+    """Save eBay image orders for a SKU"""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+        
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+        
+        orders = request.get("orders", {})
+        
+        # Ensure Images section exists
+        if "Images" not in product_json:
+            product_json["Images"] = {}
+        
+        # Build eBay Images array from orders dict
+        ebay_images = []
+        for filename, order in orders.items():
+            ebay_images.append({
+                "filename": filename,
+                "order": order,
+                "eBay URL": ""  # Will be filled when uploaded to eBay
+            })
+        
+        # Sort by order
+        ebay_images.sort(key=lambda x: x["order"])
+        
+        product_json["Images"]["eBay Images"] = ebay_images
+        
+        write_sku_json(sku, product_json)
+        
+        return {
+            "success": True,
+            "message": "eBay image orders saved successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 # ============================================================
 # eBay Listing Endpoints
 # ============================================================

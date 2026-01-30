@@ -78,6 +78,7 @@ export default function SkuBatchPage() {
   const [ebayExpanded, setEbayExpanded] = useState({}); // { sku: boolean }
   const [ebaySchemas, setEbaySchemas] = useState({}); // { sku: schema }
   const [ebayFields, setEbayFields] = useState({}); // { sku: fields }
+  const [ebayImageOrders, setEbayImageOrders] = useState({}); // { sku: { filename: order_number } }
   const [ebayValidations, setEbayValidations] = useState({}); // { sku: validation }
   const [ebayEnriching, setEbayEnriching] = useState({}); // { sku: boolean }
   const [ebayEditingFields, setEbayEditingFields] = useState({}); // { sku: boolean }
@@ -243,6 +244,10 @@ export default function SkuBatchPage() {
           return { sku, data: null, error: "Failed to load images" };
         }
         const data = await res.json();
+        
+        // Load eBay image orders for this SKU
+        loadEbayImageOrders(sku);
+        
         return { sku, data, error: null };
       } catch (e) {
         return { sku, data: null, error: e.message };
@@ -504,6 +509,9 @@ export default function SkuBatchPage() {
       // Load product details first (needed for Total Cost Net and OP calculations)
       await loadProductDetails(sku);
       
+      // Load eBay image orders
+      await loadEbayImageOrders(sku);
+      
       // Load schema for SKU (with cache bust)
       const cacheBust = Date.now();
       const schemaRes = await fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}?t=${cacheBust}`);
@@ -556,6 +564,70 @@ export default function SkuBatchPage() {
       }
     } catch (e) {
       console.error("Validation failed:", e);
+    }
+  };
+
+  const handleEbayImageOrderClick = async (sku, filename, orderNumber) => {
+    try {
+      const currentOrders = ebayImageOrders[sku] || {};
+      
+      // If this image already has this order, remove it
+      if (currentOrders[filename] === orderNumber) {
+        const updated = { ...currentOrders };
+        delete updated[filename];
+        setEbayImageOrders(prev => ({ ...prev, [sku]: updated }));
+        
+        // Save to backend
+        await saveEbayImageOrders(sku, updated);
+      } else {
+        // Check if another image has this order number
+        const existingFilename = Object.keys(currentOrders).find(fn => currentOrders[fn] === orderNumber);
+        
+        const updated = { ...currentOrders };
+        // Remove order from other image if exists
+        if (existingFilename) {
+          delete updated[existingFilename];
+        }
+        // Assign order to this image
+        updated[filename] = orderNumber;
+        
+        setEbayImageOrders(prev => ({ ...prev, [sku]: updated }));
+        
+        // Save to backend
+        await saveEbayImageOrders(sku, updated);
+      }
+    } catch (e) {
+      console.error("Failed to update eBay image order:", e);
+      alert(`Error: ${e.message}`);
+    }
+  };
+
+  const saveEbayImageOrders = async (sku, orders) => {
+    try {
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-images`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orders })
+      });
+      
+      if (!res.ok) {
+        throw new Error(`Failed to save eBay image orders: ${res.status}`);
+      }
+    } catch (e) {
+      console.error("Failed to save eBay image orders:", e);
+      throw e;
+    }
+  };
+
+  const loadEbayImageOrders = async (sku) => {
+    try {
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-images`);
+      if (res.ok) {
+        const data = await res.json();
+        setEbayImageOrders(prev => ({ ...prev, [sku]: data.orders || {} }));
+      }
+    } catch (e) {
+      console.error("Failed to load eBay image orders:", e);
     }
   };
 
@@ -2006,6 +2078,42 @@ export default function SkuBatchPage() {
                             >
                               ↻270°
                             </button>
+                          </div>
+                          {/* eBay Image Order Numbers */}
+                          <div style={{ marginTop: 8, paddingTop: 6, borderTop: "1px solid #e0e0e0" }}>
+                            <div style={{ fontSize: 10, color: "#666", marginBottom: 4, textAlign: "center" }}>eBay Order</div>
+                            <div style={{ display: "flex", gap: 3, justifyContent: "center", flexWrap: "wrap" }}>
+                              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => {
+                                const currentOrders = ebayImageOrders[sku] || {};
+                                const isSelected = currentOrders[img.filename] === num;
+                                const isUsedByOther = Object.keys(currentOrders).some(fn => fn !== img.filename && currentOrders[fn] === num);
+                                
+                                return (
+                                  <button
+                                    key={num}
+                                    onClick={() => handleEbayImageOrderClick(sku, img.filename, num)}
+                                    style={{
+                                      width: 24,
+                                      height: 24,
+                                      padding: 0,
+                                      fontSize: 10,
+                                      fontWeight: isSelected ? "bold" : "normal",
+                                      cursor: "pointer",
+                                      background: isSelected ? "#2196F3" : isUsedByOther ? "#e0e0e0" : "white",
+                                      color: isSelected ? "white" : isUsedByOther ? "#999" : "#333",
+                                      border: isSelected ? "2px solid #1976d2" : "1px solid #ccc",
+                                      borderRadius: 3,
+                                      display: "flex",
+                                      alignItems: "center",
+                                      justifyContent: "center"
+                                    }}
+                                    title={isUsedByOther ? "Already assigned to another image" : isSelected ? "Click to unassign" : `Assign order ${num}`}
+                                  >
+                                    {num}
+                                  </button>
+                                );
+                              })}
+                            </div>
                           </div>
                         </div>
                       </div>
