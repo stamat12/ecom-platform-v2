@@ -14,13 +14,25 @@ ENUM_OPS = ["equals", "in", "not_in"]
 
 
 def get_available_columns() -> List[str]:
-    """Get all available columns from the inventory"""
+    """Get all available columns from the inventory, excluding internal/metadata columns"""
     df = excel_inventory.load()
-    return list(df.columns)
+    cols = list(df.columns)
+    # Remove internal/metadata columns that shouldn't be displayed
+    excluded = [
+        "BGN Price",
+        "BG Marketplace",
+        "ÖVG",
+        "JSON",
+        "Images JSON Phone",
+        "Images JSON Stock",
+        "Images JSON Enhanced",
+        "Reference"
+    ]
+    return [col for col in cols if col not in excluded]
 
 
 def get_default_columns() -> List[str]:
-    """Get the 8 default columns to display"""
+    """Get the default columns to display"""
     # These are the most important columns
     return [
         "SKU (Old)",
