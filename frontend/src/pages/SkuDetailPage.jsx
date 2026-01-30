@@ -98,7 +98,21 @@ export default function SkuDetailPage() {
         const fieldsRes = await fetch(`/api/ebay/fields/${encodeURIComponent(sku)}`);
         if (fieldsRes.ok) {
           const fieldsData = await fieldsRes.json();
+          console.log(`eBay fields for ${sku}:`, fieldsData);
           setEbayFields(fieldsData);
+        } else {
+          const errorText = await fieldsRes.text();
+          console.error(`Failed to load eBay fields for ${sku}:`, fieldsRes.status, errorText);
+          // Set placeholder structure so user knows there was an error
+          setEbayFields({ 
+            success: false, 
+            sku: sku, 
+            required_fields: {}, 
+            optional_fields: {},
+            error_message: `Failed to load eBay fields (${fieldsRes.status}): ${errorText}`,
+            category: "Error",
+            categoryId: null
+          });
         }
         
         // Validate
@@ -1046,10 +1060,13 @@ export default function SkuDetailPage() {
               </div>
 
               {/* Category Info */}
-              {ebaySchema && (
+              {ebayFields && (
                 <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
-                  <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebaySchema.category_name}</div>
-                  <div style={{ color: "#666" }}>ID: {ebaySchema.category_id}</div>
+                  <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebayFields.category || ebaySchema?.category_name || "No Category"}</div>
+                  <div style={{ color: "#666" }}>ID: {ebayFields.categoryId || ebaySchema?.category_id || "N/A"}</div>
+                  {ebayFields.error_message && (
+                    <div style={{ color: "#d32f2f", marginTop: 4, fontSize: 9 }}>⚠️ {ebayFields.error_message}</div>
+                  )}
                 </div>
               )}
 
@@ -1063,6 +1080,13 @@ export default function SkuDetailPage() {
               {/* eBay Fields Display */}
               {!ebayLoading && ebayFields && (
                 <div style={{ marginBottom: 12, maxHeight: 400, overflow: "auto" }}>
+                  {/* Show message if no fields available */}
+                  {(!ebayFields.required_fields || Object.keys(ebayFields.required_fields).length === 0) && 
+                   (!ebayFields.optional_fields || Object.keys(ebayFields.optional_fields).length === 0) && (
+                    <div style={{ padding: 12, background: "#fff9e6", border: "1px solid #ffc107", borderRadius: 4, fontSize: 10, color: "#666", marginBottom: 12 }}>
+                      ⚠️ No eBay fields schema loaded. {ebayFields.message || "Please check if the category is set correctly and has a valid schema."}
+                    </div>
+                  )}
                   {/* Required Fields */}
                   {ebayFields.required_fields && Object.keys(ebayFields.required_fields).length > 0 && (
                     <div style={{ marginBottom: 12 }}>

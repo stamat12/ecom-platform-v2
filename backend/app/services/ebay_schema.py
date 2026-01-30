@@ -253,11 +253,18 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
     Returns:
         Schema dict or None if SKU has no category
     """
-    product_json = read_sku_json(sku)
-    
-    if not product_json:
-        logger.warning(f"No product JSON found for SKU {sku}")
-        return None
+    try:
+        logger.info(f"Getting schema for SKU: {sku} (use_cache={use_cache})")
+        product_json = read_sku_json(sku)
+        
+        if not product_json:
+            logger.warning(f"No product JSON found for SKU {sku}")
+            return None
+    except Exception as e:
+        logger.error(f"Error reading product JSON for {sku}: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        raise
     
     # Try to get category from multiple possible locations (same logic as /api/ebay/fields endpoint)
     category = None
@@ -285,14 +292,20 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
     logger.info(f"Found category for SKU {sku}: {category}")
     
     # Look up category ID from mapping
-    category_data = _get_category_id_from_mapping(category)
-    
-    if not category_data:
-        logger.warning(f"Could not find category ID for: {category}")
-        return None
-    
-    category_id = category_data.get("categoryId")
-    logger.info(f"Found category ID {category_id} for SKU {sku}")
+    try:
+        category_data = _get_category_id_from_mapping(category)
+        
+        if not category_data:
+            logger.warning(f"Could not find category ID for: {category}")
+            return None
+        
+        category_id = category_data.get("categoryId")
+        logger.info(f"Found category ID {category_id} for SKU {sku}")
+    except Exception as e:
+        logger.error(f"Error looking up category ID for {sku}: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        raise
     
     # Try to load schema from file
     try:

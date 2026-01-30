@@ -530,35 +530,46 @@ def get_ebay_schema(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get("/api/ebay/schemas/sku/{sku}", response_model=EbaySchemaResponse)
+@app.get("/api/ebay/schemas/sku/{sku}")
 def get_ebay_schema_for_sku(
     sku: str,
     use_cache: bool = Query(True, description="Use cached schema if available")
 ):
     """Get eBay category schema for SKU's category"""
     try:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"API: Getting eBay schema for SKU: {sku}")
+        
         schema_data = ebay_schema.get_schema_for_sku(sku, use_cache=use_cache)
         
         if not schema_data:
-            return EbaySchemaResponse(
-                success=False,
-                category_id="",
-                message=f"No schema found for SKU {sku}"
-            )
+            logger.warning(f"No schema found for SKU {sku}")
+            return {
+                "success": False,
+                "category_id": "",
+                "message": f"No schema found for SKU {sku}"
+            }
         
         metadata = schema_data.get("_metadata", {})
         schema = schema_data.get("schema", {})
         
-        return EbaySchemaResponse(
-            success=True,
-            category_id=metadata.get("category_id", ""),
-            category_name=metadata.get("category_name"),
-            metadata=metadata,
-            schema=schema,
-            cached=use_cache,
-            message="Schema retrieved successfully"
-        )
+        logger.info(f"Returning schema for SKU {sku}: category_id={metadata.get('category_id')}")
+        return {
+            "success": True,
+            "category_id": str(metadata.get("category_id", "")),
+            "category_name": metadata.get("category_name"),
+            "metadata": metadata,
+            "schema": schema,
+            "cached": use_cache,
+            "message": "Schema retrieved successfully"
+        }
     except Exception as e:
+        import logging
+        import traceback
+        logger = logging.getLogger(__name__)
+        logger.error(f"Error in get_ebay_schema_for_sku for {sku}: {str(e)}")
+        logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -663,9 +674,13 @@ async def get_ebay_fields_for_sku(sku: str):
     try:
         from app.repositories.sku_json_repo import read_sku_json
         from app.services import ebay_schema
+        import logging
+        logger = logging.getLogger(__name__)
         
+        logger.info(f"Getting eBay fields for SKU: {sku}")
         product_json = read_sku_json(sku)
         if not product_json:
+            logger.warning(f"No JSON found for SKU {sku}")
             return {
                 "success": False,
                 "message": f"No JSON found for SKU {sku}",
@@ -693,6 +708,7 @@ async def get_ebay_fields_for_sku(sku: str):
                 category = ai_details.get("category") or ai_details.get("Category")
         
         if not category:
+            logger.warning(f"No category set for SKU {sku}")
             return {
                 "success": False,
                 "message": f"No category set for SKU {sku}",
@@ -700,10 +716,13 @@ async def get_ebay_fields_for_sku(sku: str):
                 "optional_fields": {}
             }
         
+        logger.info(f"Found category for {sku}: {category}")
         # Get schema by category name
         schema_data = await ebay_schema.get_schema_by_category_name(category)
+        logger.info(f"Schema data keys: {schema_data.keys() if schema_data else 'None'}")
         
         if "error" in schema_data:
+            logger.warning(f"Schema error for {sku}: {schema_data.get('error')}")
             # Fallback to old behavior - return current eBay fields without schema
             ebay_fields = product_json.get("eBay Fields", {})
             
@@ -729,6 +748,7 @@ async def get_ebay_fields_for_sku(sku: str):
         
         # Get existing eBay fields from product JSON
         ebay_fields = product_json.get("eBay Fields", {})
+        logger.info(f"Existing eBay fields for {sku}: {type(ebay_fields)} with keys {ebay_fields.keys() if isinstance(ebay_fields, dict) else 'N/A'}")
         
         # Flatten eBay fields if it has required/optional structure
         flat_ebay_fields = {}
@@ -741,12 +761,15 @@ async def get_ebay_fields_for_sku(sku: str):
                 # Old flat structure: {fieldName: value, ...}
                 flat_ebay_fields = ebay_fields
         
+        logger.info(f"Flat eBay fields count for {sku}: {len(flat_ebay_fields)}")
+        
         # Split schema fields into required and optional
         required_fields = {}
         optional_fields = {}
         
         # Get the schema - handle nested structure with _metadata
         schema_wrapper = schema_data.get("schema", {})
+        logger.info(f"Schema wrapper keys: {schema_wrapper.keys() if isinstance(schema_wrapper, dict) else 'N/A'}")
         
         # If schema has _metadata, it's the new saved format - get the nested schema
         if "_metadata" in schema_wrapper:
@@ -756,6 +779,7 @@ async def get_ebay_fields_for_sku(sku: str):
         
         # Handle old format with "required" and "optional" keys
         if "required" in schema_structure and "optional" in schema_structure:
+            logger.info(f"Using old schema format for {sku} - required: {len(schema_structure.get('required', []))}, optional: {len(schema_structure.get('optional', []))}")
             # Old format: {schema: {required: [...], optional: [...]}}
             for field in schema_structure.get("required", []):
                 field_name = field.get("name", "")
@@ -782,7 +806,8 @@ async def get_ebay_fields_for_sku(sku: str):
                 optional_fields[field_name] = field_info
         else:
             # New format: direct list of fields
-            for field in schema_data.get("fields", []):
+            logger.info(f"Using new schema format for {sku}")
+            for field in schema_structure.get("fields", []):
                 field_name = field.get("name") or field.get("aspect_name") or ""
                 current_value = flat_ebay_fields.get(field_name, "")
                 
@@ -798,6 +823,7 @@ async def get_ebay_fields_for_sku(sku: str):
                 else:
                     optional_fields[field_name] = field_info
         
+        logger.info(f"Final result for {sku} - required_fields: {len(required_fields)}, optional_fields: {len(optional_fields)}")
         return {
             "success": True,
             "sku": sku,
@@ -807,6 +833,11 @@ async def get_ebay_fields_for_sku(sku: str):
             "optional_fields": optional_fields
         }
     except Exception as e:
+        import logging
+        import traceback
+        logger = logging.getLogger(__name__)
+        logger.error(f"Error in get_ebay_fields_for_sku for {sku}: {str(e)}")
+        logger.error(traceback.format_exc())
         raise HTTPException(status_code=400, detail=str(e))
 
 

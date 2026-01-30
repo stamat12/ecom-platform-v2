@@ -333,7 +333,7 @@ export default function SkuBatchPage() {
   };
 
   const loadProductDetails = async (sku) => {
-    if (productDetails[sku]) return; // Already loaded
+    if (productDetails[sku]) return productDetails[sku]; // Already loaded, return cached
 
     setDetailsLoading((prev) => ({ ...prev, [sku]: true }));
     try {
@@ -341,12 +341,14 @@ export default function SkuBatchPage() {
       if (res.ok) {
         const data = await res.json();
         setProductDetails((prev) => ({ ...prev, [sku]: data }));
+        return data;
       }
     } catch (e) {
       console.error(`Failed to load details for ${sku}:`, e);
     } finally {
       setDetailsLoading((prev) => ({ ...prev, [sku]: false }));
     }
+    return null;
   };
 
   const toggleDetailsExpand = async (sku) => {
@@ -499,6 +501,9 @@ export default function SkuBatchPage() {
   // eBay functions
   const loadEbayData = async (sku) => {
     try {
+      // Load product details first (needed for Total Cost Net and OP calculations)
+      await loadProductDetails(sku);
+      
       // Load schema for SKU (with cache bust)
       const cacheBust = Date.now();
       const schemaRes = await fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}?t=${cacheBust}`);
@@ -511,9 +516,27 @@ export default function SkuBatchPage() {
         if (fieldsRes.ok) {
           const fieldsData = await fieldsRes.json();
           console.log(`eBay fields for ${sku}:`, fieldsData);
+          console.log(`  - has required_fields: ${!!fieldsData.required_fields}`);
+          console.log(`  - required_fields keys: ${fieldsData.required_fields ? Object.keys(fieldsData.required_fields).length : 0}`);
+          console.log(`  - has optional_fields: ${!!fieldsData.optional_fields}`);
+          console.log(`  - optional_fields keys: ${fieldsData.optional_fields ? Object.keys(fieldsData.optional_fields).length : 0}`);
           setEbayFields(prev => ({ ...prev, [sku]: fieldsData }));
         } else {
-          console.error(`Failed to load eBay fields for ${sku}:`, fieldsRes.status, await fieldsRes.text());
+          const errorText = await fieldsRes.text();
+          console.error(`Failed to load eBay fields for ${sku}:`, fieldsRes.status, errorText);
+          // Set placeholder structure so user knows there was an error
+          setEbayFields(prev => ({ 
+            ...prev, 
+            [sku]: { 
+              success: false, 
+              sku: sku, 
+              required_fields: {}, 
+              optional_fields: {},
+              error_message: `Failed to load eBay fields (${fieldsRes.status}): ${errorText}`,
+              category: "Error",
+              categoryId: null
+            } 
+          }));
         }
         
         // Validate
@@ -1546,14 +1569,24 @@ export default function SkuBatchPage() {
                     {/* Category Info */}
                     {ebayFields[sku] && (
                       <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
-                        <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebayFields[sku].category}</div>
-                        <div style={{ color: "#666" }}>ID: {ebayFields[sku].categoryId}</div>
+                        <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebayFields[sku].category || "No Category"}</div>
+                        <div style={{ color: "#666" }}>ID: {ebayFields[sku].categoryId || "N/A"}</div>
+                        {ebayFields[sku].error_message && (
+                          <div style={{ color: "#d32f2f", marginTop: 4, fontSize: 9 }}>⚠️ {ebayFields[sku].error_message}</div>
+                        )}
                       </div>
                     )}
 
                     {/* eBay Fields Display */}
                     {ebayFields[sku] && (
                       <div style={{ marginBottom: 12 }}>
+                        {/* Show message if no fields available */}
+                        {(!ebayFields[sku].required_fields || Object.keys(ebayFields[sku].required_fields).length === 0) && 
+                         (!ebayFields[sku].optional_fields || Object.keys(ebayFields[sku].optional_fields).length === 0) && (
+                          <div style={{ padding: 12, background: "#fff9e6", border: "1px solid #ffc107", borderRadius: 4, fontSize: 10, color: "#666" }}>
+                            ⚠️ No eBay fields schema loaded. {ebayFields[sku].message || "Please check if the category is set correctly and has a valid schema."}
+                          </div>
+                        )}
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 12 }}>
                           {/* Required Fields */}
                           {ebayFields[sku].required_fields && Object.keys(ebayFields[sku].required_fields).length > 0 && (

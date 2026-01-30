@@ -78,6 +78,18 @@
           "filename": "VER02003 (3).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "Farbe": "Schwarz",
+        "Produktart": "BH",
+        "Größe": "XS"
+      },
+      "optional": {
+        "Stil": "Sport-BH",
+        "Abteilung": "Damen"
+      }
     }
   }
 }

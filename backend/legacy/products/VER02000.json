@@ -88,6 +88,25 @@
           "filename": "VER02000 (2).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "Abteilung": "Herren",
+        "Größe": "M",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Produktart": "T-Shirt",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Ärmellänge": "Kurzarm",
+        "Passform": "Regular",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "Nicht angegeben",
+        "Textilpflege": "Maschinenwäsche",
+        "Modell": "Nicht angegeben",
+        "Herstellungsjahr": "2020-2029"
+      }
     }
   }
 }

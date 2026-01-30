@@ -422,59 +422,97 @@ def validate_ebay_fields(sku: str) -> Dict[str, Any]:
     Returns:
         Dict with validation results
     """
-    # Load product JSON
-    product_json = read_sku_json(sku)
-    if not product_json:
+    try:
+        # Load product JSON
+        product_json = read_sku_json(sku)
+        if not product_json:
+            return {
+                "sku": sku,
+                "valid": False,
+                "message": "Product JSON not found",
+                "missing_required": [],
+                "category_id": "",
+                "category_name": "",
+                "total_required": 0,
+                "filled_required": 0,
+                "total_optional": 0,
+                "filled_optional": 0
+            }
+        
+        # Get schema
+        schema_data = get_schema_for_sku(sku, use_cache=True)
+        if not schema_data:
+            return {
+                "sku": sku,
+                "valid": False,
+                "message": "No eBay schema found",
+                "missing_required": [],
+                "category_id": "",
+                "category_name": "",
+                "total_required": 0,
+                "filled_required": 0,
+                "total_optional": 0,
+                "filled_optional": 0
+            }
+        
+        metadata = schema_data.get("_metadata", {})
+        schema = schema_data.get("schema", {})
+        
+        raw_category_id = metadata.get("category_id", "")
+        category_id = "" if raw_category_id is None else str(raw_category_id)
+        category_name = "" if metadata.get("category_name") is None else str(metadata.get("category_name"))
+        
+        required_aspects = schema.get("required", [])
+        optional_aspects = schema.get("optional", [])
+        
+        # Get current fields
+        existing_ebay_fields = product_json.get("eBay Fields", {}) or {}
+        current_required = existing_ebay_fields.get("required", {}) if isinstance(existing_ebay_fields, dict) else {}
+        current_optional = existing_ebay_fields.get("optional", {}) if isinstance(existing_ebay_fields, dict) else {}
+
+        def _normalize_field_value(value: Any) -> str:
+            if value is None:
+                return ""
+            if isinstance(value, dict) and "value" in value:
+                raw = value.get("value")
+                return "" if raw is None else str(raw).strip()
+            if isinstance(value, list):
+                return ", ".join([str(v).strip() for v in value if v is not None]).strip()
+            return str(value).strip()
+        
+        # Check missing required
+        required_names = {a.get("name") for a in required_aspects if a.get("name")}
+        missing_required = [name for name in required_names if not _normalize_field_value(current_required.get(name))]
+        
+        # Calculate stats
+        filled_required = len([v for v in current_required.values() if _normalize_field_value(v)])
+        filled_optional = len([v for v in current_optional.values() if _normalize_field_value(v)])
+        
+        valid = len(missing_required) == 0
+        
+        return {
+            "sku": sku,
+            "valid": valid,
+            "missing_required": missing_required,
+            "category_id": category_id,
+            "category_name": category_name,
+            "total_required": len(required_names),
+            "filled_required": filled_required,
+            "total_optional": len(optional_aspects),
+            "filled_optional": filled_optional,
+            "message": "All required fields filled" if valid else f"{len(missing_required)} required fields missing"
+        }
+    except Exception as e:
+        logger.error(f"Validation failed for SKU {sku}: {e}")
         return {
             "sku": sku,
             "valid": False,
-            "message": "Product JSON not found",
-            "missing_required": []
+            "missing_required": [],
+            "category_id": "",
+            "category_name": "",
+            "total_required": 0,
+            "filled_required": 0,
+            "total_optional": 0,
+            "filled_optional": 0,
+            "message": f"Validation failed: {str(e)}"
         }
-    
-    # Get schema
-    schema_data = get_schema_for_sku(sku, use_cache=True)
-    if not schema_data:
-        return {
-            "sku": sku,
-            "valid": False,
-            "message": "No eBay schema found",
-            "missing_required": []
-        }
-    
-    metadata = schema_data.get("_metadata", {})
-    schema = schema_data.get("schema", {})
-    
-    category_id = metadata.get("category_id", "")
-    category_name = metadata.get("category_name", "")
-    
-    required_aspects = schema.get("required", [])
-    optional_aspects = schema.get("optional", [])
-    
-    # Get current fields
-    existing_ebay_fields = product_json.get("eBay Fields", {}) or {}
-    current_required = existing_ebay_fields.get("required", {}) if isinstance(existing_ebay_fields, dict) else {}
-    current_optional = existing_ebay_fields.get("optional", {}) if isinstance(existing_ebay_fields, dict) else {}
-    
-    # Check missing required
-    required_names = {a.get("name") for a in required_aspects if a.get("name")}
-    missing_required = [name for name in required_names if not (current_required.get(name) or "").strip()]
-    
-    # Calculate stats
-    filled_required = len([v for v in current_required.values() if v and str(v).strip()])
-    filled_optional = len([v for v in current_optional.values() if v and str(v).strip()])
-    
-    valid = len(missing_required) == 0
-    
-    return {
-        "sku": sku,
-        "valid": valid,
-        "missing_required": missing_required,
-        "category_id": category_id,
-        "category_name": category_name,
-        "total_required": len(required_names),
-        "filled_required": filled_required,
-        "total_optional": len(optional_aspects),
-        "filled_optional": filled_optional,
-        "message": "All required fields filled" if valid else f"{len(missing_required)} required fields missing"
-    }
