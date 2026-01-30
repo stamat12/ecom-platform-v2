@@ -61,9 +61,11 @@ def list_images_for_sku(sku: str) -> Dict[str, Any]:
         info = images_meta.get(fn, {}) if isinstance(images_meta, dict) else {}
         # Get classification from JSON structure (phone/stock/enhanced categories)
         classification = get_image_classification(sku, fn)
+        full_path = sku_dir / fn if sku_dir else None
         merged.append(
             {
                 "filename": fn,
+                "full_path": str(full_path) if full_path else "",
                 "classification": classification,
                 "is_main": fn in main_images_list,
                 "is_ebay": fn in ebay_images,
