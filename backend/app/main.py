@@ -498,28 +498,6 @@ def get_distinct(
     return DistinctValuesResponse(**result)
 
 
-@app.get("/api/skus/folder-images/status")
-def get_folder_images_status():
-    """Get the status of folder images cache"""
-    last_update = get_last_update_time()
-    return {
-        "last_update": last_update,
-        "has_cache": last_update is not None
-    }
-
-
-@app.post("/api/skus/folder-images/compute")
-async def compute_folder_images():
-    """Compute folder images for all SKUs with progress updates (SSE)"""
-    from fastapi.responses import StreamingResponse
-    
-    async def generate():
-        for update in compute_folder_images_for_all_skus():
-            yield f"data: {json.dumps(update)}\n\n"
-    
-    return StreamingResponse(generate(), media_type="text/event-stream")
-
-
 # ============================================================
 # eBay Schema Endpoints
 # ============================================================

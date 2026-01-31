@@ -16,6 +16,7 @@ DEFAULT_STATE = {
     "profile_id": "default",
     "selected_columns": get_default_columns(),
     "column_filters": {},
+    "filter_mode": {},
     "page_size": 50,
     "column_widths": {},
 }
@@ -53,6 +54,7 @@ def get_sku_filter_state(profile_id: str = "default") -> Dict[str, Any]:
     state.setdefault("profile_id", profile_id)
     state.setdefault("selected_columns", DEFAULT_STATE["selected_columns"])
     state.setdefault("column_filters", {})
+    state.setdefault("filter_mode", {})
     state.setdefault("page_size", 50)
     state.setdefault("column_widths", {})
     return state
@@ -63,6 +65,7 @@ def save_sku_filter_state(state: Dict[str, Any]) -> Dict[str, Any]:
     profile_id = state.get("profile_id") or "default"
     selected_columns = state.get("selected_columns") or []
     column_filters = state.get("column_filters") or {}
+    filter_mode = state.get("filter_mode") or {}
     page_size = int(state.get("page_size") or 50)
     column_widths = state.get("column_widths") or {}
 
@@ -70,6 +73,7 @@ def save_sku_filter_state(state: Dict[str, Any]) -> Dict[str, Any]:
         "profile_id": str(profile_id),
         "selected_columns": list(selected_columns),
         "column_filters": dict(column_filters),
+        "filter_mode": dict(filter_mode),
         "page_size": page_size,
         "column_widths": {str(k): int(v) for k, v in dict(column_widths).items() if isinstance(v, (int, float))},
     }

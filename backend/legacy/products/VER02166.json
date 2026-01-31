@@ -1,0 +1,85 @@
+{
+  "VER02166": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02166 (1).jpg"
+        },
+        {
+          "filename": "VER02166 (10).jpg"
+        },
+        {
+          "filename": "VER02166 (11).jpg"
+        },
+        {
+          "filename": "VER02166 (2).jpg"
+        },
+        {
+          "filename": "VER02166 (3).jpg"
+        },
+        {
+          "filename": "VER02166 (4).jpg"
+        },
+        {
+          "filename": "VER02166 (5).jpg"
+        },
+        {
+          "filename": "VER02166 (6).jpg"
+        },
+        {
+          "filename": "VER02166 (7).jpg"
+        },
+        {
+          "filename": "VER02166 (8).jpg"
+        },
+        {
+          "filename": "VER02166 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02166 (7).jpg"
+        },
+        {
+          "filename": "VER02166 (5).jpg"
+        },
+        {
+          "filename": "VER02166 (3).jpg"
+        },
+        {
+          "filename": "VER02166 (1).jpg"
+        },
+        {
+          "filename": "VER02166 (11).jpg"
+        },
+        {
+          "filename": "VER02166 (10).jpg"
+        }
+      ]
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "On",
+      "Color": "Weiß Blau",
+      "Size": "44.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe haben eine atmungsaktive Oberseite und eine auffällige Sohle mit CloudTec-Technologie. Sie sind ideal für Läufer, die Komfort und Dämpfung suchen. Die Kombination aus Weiß und Blau verleiht ihnen ein modernes Aussehen.",
+      "Keywords": "Cloudmonster Sneakers Herren",
+      "Materials": "Textil, Gummi"
+    }
+  }
+}

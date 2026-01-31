@@ -1,0 +1,65 @@
+{
+  "VER02186": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02186 (1).jpg"
+        },
+        {
+          "filename": "VER02186 (2).jpg"
+        },
+        {
+          "filename": "VER02186 (3).jpg"
+        },
+        {
+          "filename": "VER02186 (4).jpg"
+        },
+        {
+          "filename": "VER02186 (5).jpg"
+        },
+        {
+          "filename": "VER02186 (6).jpg"
+        },
+        {
+          "filename": "VER02186 (7).jpg"
+        },
+        {
+          "filename": "VER02186 (8).jpg"
+        },
+        {
+          "filename": "VER02186 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02186 (5).jpg"
+        },
+        {
+          "filename": "VER02186 (7).jpg"
+        },
+        {
+          "filename": "VER02186 (4).jpg"
+        },
+        {
+          "filename": "VER02186 (3).jpg"
+        },
+        {
+          "filename": "VER02186 (1).jpg"
+        }
+      ]
+    }
+  }
+}

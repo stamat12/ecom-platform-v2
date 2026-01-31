@@ -1,0 +1,70 @@
+{
+  "VER02162": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02162 (1).jpg"
+        },
+        {
+          "filename": "VER02162 (2).jpg"
+        },
+        {
+          "filename": "VER02162 (3).jpg"
+        },
+        {
+          "filename": "VER02162 (4).jpg"
+        },
+        {
+          "filename": "VER02162 (5).jpg"
+        },
+        {
+          "filename": "VER02162 (6).jpg"
+        },
+        {
+          "filename": "VER02162 (7).jpg"
+        },
+        {
+          "filename": "VER02162 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02162 (6).jpg"
+        },
+        {
+          "filename": "VER02162 (5).jpg"
+        },
+        {
+          "filename": "VER02162 (1).jpg"
+        },
+        {
+          "filename": "VER02162 (8).jpg"
+        }
+      ]
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Beige",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Stiefel haben eine spitze Form und einen eleganten Absatz. Sie sind aus weichem Material gefertigt und bieten einen modernen Look. Ideal für verschiedene Anlässe und leicht zu kombinieren.",
+      "Keywords": "Stiefel Damen",
+      "Materials": "Synthetik"
+    }
+  }
+}

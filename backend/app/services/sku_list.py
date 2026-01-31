@@ -76,6 +76,7 @@ def get_columns_meta() -> List[Dict[str, Any]]:
     for col in df.columns:
         s = df[col]
         ctype = _infer_column_type(s)
+        
         operators = STRING_OPS
         enum_values = None
         if ctype == "number" or ctype == "date":

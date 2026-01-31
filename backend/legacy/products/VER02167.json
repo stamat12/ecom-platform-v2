@@ -1,0 +1,73 @@
+{
+  "VER02167": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02167 (1).jpg"
+        },
+        {
+          "filename": "VER02167 (2).jpg"
+        },
+        {
+          "filename": "VER02167 (3).jpg"
+        },
+        {
+          "filename": "VER02167 (4).jpg"
+        },
+        {
+          "filename": "VER02167 (5).jpg"
+        },
+        {
+          "filename": "VER02167 (6).jpg"
+        },
+        {
+          "filename": "VER02167 (7).jpg"
+        },
+        {
+          "filename": "VER02167 (8).jpg"
+        },
+        {
+          "filename": "VER02167 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02167 (7).jpg"
+        },
+        {
+          "filename": "VER02167 (8).jpg"
+        },
+        {
+          "filename": "VER02167 (3).jpg"
+        },
+        {
+          "filename": "VER02167 (4).jpg"
+        }
+      ]
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Birkenstock",
+      "Color": "Cognac",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Sandalen haben eine große Schnalle und sind aus echtem Leder gefertigt. Sie bieten eine bequeme Passform und sind ideal für den Sommer. Die Sohle besteht aus Naturkork und EVA für zusätzlichen Komfort.",
+      "Keywords": "Madrid Big Buckle Sandalen Unisex",
+      "Materials": "Echt Leder Naturkork EVA"
+    }
+  }
+}

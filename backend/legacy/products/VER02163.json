@@ -1,0 +1,61 @@
+{
+  "VER02163": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02163 (1).jpg"
+        },
+        {
+          "filename": "VER02163 (2).jpg"
+        },
+        {
+          "filename": "VER02163 (3).jpg"
+        },
+        {
+          "filename": "VER02163 (4).jpg"
+        },
+        {
+          "filename": "VER02163 (5).jpg"
+        },
+        {
+          "filename": "VER02163 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02163 (4).jpg"
+        },
+        {
+          "filename": "VER02163 (5).jpg"
+        },
+        {
+          "filename": "VER02163 (3).jpg"
+        }
+      ]
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Fashion Jewelry",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Ohrringe haben ein florales Design mit einer glänzenden silbernen Oberfläche. Sie sind leicht und angenehm zu tragen. Ideal für besondere Anlässe oder den Alltag.",
+      "Keywords": "Ohrringe Damen Silber",
+      "Materials": "Metall"
+    }
+  }
+}

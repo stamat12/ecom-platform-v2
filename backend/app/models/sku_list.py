@@ -66,6 +66,7 @@ class SkuFilterState(BaseModel):
     profile_id: str = "default"
     selected_columns: List[str] = []
     column_filters: Dict[str, Any] = {}
+    filter_mode: Dict[str, str] = {}  # { column: "include" | "exclude" }
     page_size: int = 50
     column_widths: Dict[str, int] = {}
 
@@ -74,6 +75,7 @@ class SkuFilterStateResponse(BaseModel):
     profile_id: str
     selected_columns: List[str]
     column_filters: Dict[str, Any]
+    filter_mode: Dict[str, str]  # { column: "include" | "exclude" }
     page_size: int
     column_widths: Dict[str, int]
 

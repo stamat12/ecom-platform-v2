@@ -1,0 +1,56 @@
+{
+  "VER02177": {
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02177 (1).jpg"
+        },
+        {
+          "filename": "VER02177 (2).jpg"
+        },
+        {
+          "filename": "VER02177 (3).jpg"
+        },
+        {
+          "filename": "VER02177 (4).jpg"
+        },
+        {
+          "filename": "VER02177 (5).jpg"
+        },
+        {
+          "filename": "VER02177 (6).jpg"
+        },
+        {
+          "filename": "VER02177 (7).jpg"
+        },
+        {
+          "filename": "VER02177 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02177 (6).jpg"
+        },
+        {
+          "filename": "VER02177 (1).jpg"
+        },
+        {
+          "filename": "VER02177 (3).jpg"
+        }
+      ]
+    }
+  }
+}
