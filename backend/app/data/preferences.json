@@ -11,10 +11,16 @@
         "Condition",
         "Status",
         "Price Net",
-        "Json"
+        "Lager",
+        "Json",
+        "Json Stock Images",
+        "Json Phone Images",
+        "Json Enhanced Images",
+        "Images"
       ],
       "column_filters": {
-        "Json": "true"
+        "Json": "true",
+        "Lager": "new box 1"
       },
       "page_size": 50,
       "column_widths": {}

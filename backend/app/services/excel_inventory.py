@@ -2,6 +2,7 @@ from __future__ import annotations
 import os
 import time
 from typing import Optional
+import json
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -56,11 +57,49 @@ class ExcelInventoryCache:
             except:
                 return False
         
+        # Add computed image count columns from JSON files
+        def get_image_counts(sku):
+            if pd.isna(sku) or str(sku).strip() == "":
+                return None, None, None
+            try:
+                path = _sku_json_path(str(sku))
+                if not path.exists():
+                    return None, None, None
+                
+                with path.open("r", encoding="utf-8") as f:
+                    data = json.load(f)
+                
+                # Extract SKU data (JSON structure is {SKU: {...}})
+                sku_str = str(sku)
+                sku_data = data.get(sku_str, {})
+                
+                # Get image summary
+                images = sku_data.get("Images", {})
+                summary = images.get("summary", {})
+                
+                return (
+                    summary.get("count_stock", 0),
+                    summary.get("count_phone", 0),
+                    summary.get("count_enhanced", 0)
+                )
+            except:
+                return None, None, None
+        
         # Use "SKU (Old)" column for the SKU value
         if "SKU (Old)" in df.columns:
             df["Json"] = df["SKU (Old)"].apply(has_json)
+            # Add image count columns
+            image_counts = df["SKU (Old)"].apply(get_image_counts)
+            df["Json Stock Images"] = image_counts.apply(lambda x: x[0] if x and x[0] is not None else None)
+            df["Json Phone Images"] = image_counts.apply(lambda x: x[1] if x and x[1] is not None else None)
+            df["Json Enhanced Images"] = image_counts.apply(lambda x: x[2] if x and x[2] is not None else None)
         elif "SKU" in df.columns:
             df["Json"] = df["SKU"].apply(has_json)
+            # Add image count columns
+            image_counts = df["SKU"].apply(get_image_counts)
+            df["Json Stock Images"] = image_counts.apply(lambda x: x[0] if x and x[0] is not None else None)
+            df["Json Phone Images"] = image_counts.apply(lambda x: x[1] if x and x[1] is not None else None)
+            df["Json Enhanced Images"] = image_counts.apply(lambda x: x[2] if x and x[2] is not None else None)
 
         self._df = df
         self._loaded_at = now

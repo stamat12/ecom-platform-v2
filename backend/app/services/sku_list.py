@@ -254,6 +254,11 @@ def list_skus(
     # Convert Json column boolean values to "TRUE"/"FALSE" strings for display
     if "Json" in page_df.columns:
         page_df["Json"] = page_df["Json"].apply(lambda x: "TRUE" if x is True else ("FALSE" if x is False else None))
+    
+    # Convert image count columns to integers or empty strings
+    for col in ["Json Stock Images", "Json Phone Images", "Json Enhanced Images"]:
+        if col in page_df.columns:
+            page_df[col] = page_df[col].apply(lambda x: int(x) if pd.notna(x) and x is not None else "")
 
     items = page_df.to_dict(orient="records")
     available_columns = list(df.columns) if columns is None else columns
