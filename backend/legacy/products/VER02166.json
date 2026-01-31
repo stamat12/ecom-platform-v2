@@ -17,7 +17,8 @@
       "Total Cost Net": "68.72"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
       "EAN": ""
@@ -40,7 +41,7 @@
       "OP": "180"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -113,7 +114,70 @@
         {
           "filename": "VER02166 (10).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02166 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oQIAAeSwLrZpfnyr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vZcAAeSwegJpfnyu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/x5MAAeSw0dlpfnyy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vb8AAeSwegJpfny1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9CIAAeSweR9pfny4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7V4AAeSw6CRpfny7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wVcAAeSwjVFpfny~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02166 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JkYAAeSwV~5pfnzC/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "On",
+        "EU-Schuhgröße": "44,5",
+        "Abteilung": "Herren",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "3ME10460629",
+        "Modell": "Cloudmonster",
+        "UK-Schuhgröße": "10",
+        "US-Schuhgröße": "10,5",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "100% Baumwolle",
+        "Produktart": "Sportschuh",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Schnürung"
+      }
     }
   }
 }

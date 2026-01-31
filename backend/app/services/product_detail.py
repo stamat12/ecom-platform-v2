@@ -117,6 +117,9 @@ def update_product_detail(sku: str, updates: Dict[str, Dict[str, str]]) -> tuple
     Returns:
         Tuple of (success, message, updated_count)
     """
+    # Import here to avoid circular dependency
+    from app.services.json_generation import get_category_id_for_path
+    
     # Read current product data
     product_json = read_sku_json(sku)
     
@@ -144,6 +147,14 @@ def update_product_detail(sku: str, updates: Dict[str, Dict[str, str]]) -> tuple
         for field_name, new_value in fields.items():
             product_json[category_name][field_name] = new_value
             updated_count += 1
+        
+        # If this is Ebay Category and Category field was updated, add CategoryID
+        if category_name == "Ebay Category" and "Category" in fields:
+            category_path = fields["Category"]
+            if category_path:
+                category_id = get_category_id_for_path(category_path)
+                if category_id:
+                    product_json[category_name]["eBay Category ID"] = category_id
     
     # Save back to JSON file
     products_dir = Path(getattr(config, "PRODUCTS_FOLDER_PATH"))

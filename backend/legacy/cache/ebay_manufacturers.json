@@ -144,5 +144,19 @@
     "ContactURL": "https://www.nike.com/help/a/contact-us",
     "cached_at": "2026-01-30T23:04:03.520827",
     "original_brand": "Nike"
+  },
+  "on": {
+    "CompanyName": "On AG",
+    "Street1": "Pfingstweidstrasse 106",
+    "Street2": "",
+    "CityName": "Zürich",
+    "StateOrProvince": "",
+    "PostalCode": "8005",
+    "Country": "CH",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.on-running.com/en-ch/contact",
+    "cached_at": "2026-01-31T23:05:59.724019",
+    "original_brand": "On"
   }
 }

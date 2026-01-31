@@ -1208,3 +1208,65 @@ def migrate_json_categories():
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Migration failed: {str(e)}")
+
+
+@app.post("/api/migrate/category-ids")
+def migrate_category_ids():
+    """Migrate all JSONs to add missing eBay Category IDs.
+    
+    This endpoint:
+    - Finds all JSONs with Category path but no Category ID
+    - Looks up the ID from category_mapping.json
+    - Adds the ID to the Ebay Category section
+    - Returns migration statistics
+    """
+    from app.services.migrate_category_ids import migrate_all_category_ids
+    
+    try:
+        total, updated, errors = migrate_all_category_ids()
+        return {
+            "success": True,
+            "total_files": total,
+            "updated_files": updated,
+            "errors": errors,
+            "message": f"Migration completed: {updated} files updated, {errors} errors"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Migration failed: {str(e)}")
+
+
+@app.get("/api/ebay/categories")
+def get_ebay_categories():
+    """Get all eBay categories from category_mapping.json for autocomplete."""
+    try:
+        import json
+        from pathlib import Path
+        
+        schemas_path = Path(__file__).resolve().parent.parent / "schemas"
+        category_file = schemas_path / "category_mapping.json"
+        
+        if not category_file.exists():
+            raise HTTPException(status_code=404, detail="Category mapping file not found")
+        
+        with open(category_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        # Extract unique fullPaths for autocomplete
+        categories = []
+        seen = set()
+        for mapping in data.get("categoryMappings", []):
+            full_path = mapping.get("fullPath", "")
+            if full_path and full_path not in seen:
+                categories.append({
+                    "fullPath": full_path,
+                    "categoryId": mapping.get("categoryId", ""),
+                    "categoryName": mapping.get("categoryName", "")
+                })
+                seen.add(full_path)
+        
+        return {
+            "categories": categories,
+            "count": len(categories)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to load categories: {str(e)}")

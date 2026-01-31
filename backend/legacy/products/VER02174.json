@@ -3,47 +3,48 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 871309,
-      "ISIN": null,
+      "Supplier Number": "871309",
+      "ISIN": "",
       "Supplier Title": "1 Paar Lawrence Grey Schuhe Gr. 44"
     },
     "Price Data": {
-      "Price Net": 20.0,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 20.39
+      "Price Net": "20.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "20.39"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Lawrence Grey",
+      "Color": "schwarz",
+      "Size": "44"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese eleganten Schnürschuhe sind aus hochwertigem Leder gefertigt. Sie verfügen über eine klassische Brogue-Optik mit Lochmuster. Die robuste Sohle sorgt für guten Halt und Komfort.",
+      "Keywords": "Lawrence Grey Schnürschuhe Herren",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "160"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -95,7 +96,62 @@
         {
           "filename": "VER02174 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02174 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4rcAAeSwGvNpfoA5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02174 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7~wAAeSwH35pfoA8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02174 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/21QAAeSw1lVpfoBA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02174 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6ZYAAeSwMYJpfoBD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02174 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/d6YAAeSwYTJpfoBG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02174 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-A0AAeSwXAJpfoBI/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Lawrence Grey",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Stil": "Halbschuhe",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "AU-Schuhgröße": "10",
+        "UK-Schuhgröße": "10",
+        "US-Schuhgröße": "10",
+        "Produktart": "Freizeitschuh",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Jahreszeit": "Herbst",
+        "Verschluss": "Schnürung",
+        "Anlass": "Freizeit",
+        "Schuhspitze": "Runde Form",
+        "Herstellernummer": "33060855-010"
+      }
     }
   }
 }

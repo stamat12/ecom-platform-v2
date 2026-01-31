@@ -3,47 +3,48 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 871310,
-      "ISIN": null,
+      "Supplier Number": "871310",
+      "ISIN": "",
       "Supplier Title": "1 Paar Ashton Aubry Schuhe Gr. 44"
     },
     "Price Data": {
-      "Price Net": 20.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 21.22
+      "Price Net": "20.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "21.22"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": ""
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "",
+      "Brand": "",
+      "Color": "",
+      "Size": ""
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": ""
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",

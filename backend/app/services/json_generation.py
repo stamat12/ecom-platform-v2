@@ -17,6 +17,50 @@ LEGACY = Path(__file__).resolve().parents[2] / "legacy"
 sys.path.insert(0, str(LEGACY))
 import config  # type: ignore
 
+# Load category mapping once at import time
+_CATEGORY_MAPPING_CACHE = None
+
+def _load_category_mapping():
+    """Load category mapping from JSON file."""
+    global _CATEGORY_MAPPING_CACHE
+    if _CATEGORY_MAPPING_CACHE is not None:
+        return _CATEGORY_MAPPING_CACHE
+    
+    try:
+        mapping_path = Path(__file__).resolve().parents[2] / "schemas" / "category_mapping.json"
+        if mapping_path.exists():
+            with open(mapping_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                _CATEGORY_MAPPING_CACHE = data.get('categoryMappings', [])
+                return _CATEGORY_MAPPING_CACHE
+    except Exception as e:
+        print(f"[CATEGORY MAPPING] Error loading: {e}")
+    
+    return []
+
+def get_category_id_for_path(category_path: str) -> str:
+    """Look up CategoryID from category path using category_mapping.json.
+    
+    Args:
+        category_path: The full path like "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker"
+    
+    Returns:
+        The categoryId as string, or empty string if not found
+    """
+    if not category_path:
+        return ""
+    
+    category_path = category_path.strip()
+    mappings = _load_category_mapping()
+    
+    # Search for exact match
+    for mapping in mappings:
+        if mapping.get('fullPath') == category_path:
+            return str(mapping.get('categoryId', ''))
+    
+    return ""
+
+
 
 # Column categories mirroring inventory_data_collector.py
 CATEGORY_COLUMNS = {
@@ -161,6 +205,14 @@ def create_json_from_inventory(sku: str) -> dict:
                     category_data[col] = row_data[col]
             # Always add the category section, even if empty
             payload[sku][category] = category_data
+        
+        # For Ebay Category, look up and add the CategoryID if Category is present
+        if "Ebay Category" in payload[sku]:
+            category_path = payload[sku]["Ebay Category"].get("Category", "")
+            if category_path:
+                category_id = get_category_id_for_path(category_path)
+                if category_id:
+                    payload[sku]["Ebay Category"]["eBay Category ID"] = category_id
         
         # Ensure OP is float with 2 decimals
         try:

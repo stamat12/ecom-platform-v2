@@ -17,7 +17,8 @@
       "Total Cost Net": "20.39"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
       "EAN": ""
@@ -37,7 +38,7 @@
       "Materials": "Leder"
     },
     "OP": {
-      "OP": ""
+      "OP": "170"
     },
     "Status": {
       "Status": ""
@@ -98,7 +99,59 @@
         {
           "filename": "VER02173 (8).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02173 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/voYAAeSwjBhpfn32/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yhoAAeSw1u1pfn35/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1LUAAeSw-8tpfn39/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BLcAAeSwqxdpfn4B/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vUEAAeSwSYlpfn4E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/bRQAAeSwTVNpfn4H/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02173 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6~4AAeSwwwtpfn4K/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Lawrence Grey",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Stil": "Halbschuhe",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Freizeitschuh",
+        "Jahreszeit": "Herbst",
+        "Verschluss": "Schnürung"
+      }
     }
   }
 }
