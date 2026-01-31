@@ -152,15 +152,15 @@ def create_json_from_inventory(sku: str) -> dict:
         row = rows.iloc[0]
         row_data = {k: _to_json_safe(v) for k, v in row.to_dict().items()}
 
-        # Build payload organized by categories
+        # Build payload organized by categories (including all categories, even if empty)
         payload = {sku: {}}
         for category, columns in CATEGORY_COLUMNS.items():
             category_data = {}
             for col in columns:
                 if col in row_data:
                     category_data[col] = row_data[col]
-            if category_data:
-                payload[sku][category] = category_data
+            # Always add the category section, even if empty
+            payload[sku][category] = category_data
         
         # Ensure OP is float with 2 decimals
         try:

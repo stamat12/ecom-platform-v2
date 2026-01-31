@@ -1,5 +1,50 @@
 {
   "VER02182": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25112339,
+      "Invoice Date": "2025-11-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 876947,
+      "ISIN": null,
+      "Supplier Title": "1 Paar About you Sandalen Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 7.06
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
     "Images": {
       "schema_version": "1.0",
       "summary": {

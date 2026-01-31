@@ -1,5 +1,50 @@
 {
   "VER02163": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25111073",
+      "Invoice Date": "2025-11-13T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "905847",
+      "ISIN": "",
+      "Supplier Title": "1 Paar Fashion Jewelry Ohrringe"
+    },
+    "Price Data": {
+      "Price Net": "0.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "1.22"
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Fashion Jewelry",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Ohrringe haben ein florales Design mit einer glänzenden silbernen Oberfläche. Sie sind leicht und angenehm zu tragen. Ideal für besondere Anlässe oder den Alltag.",
+      "Keywords": "Ohrringe Damen Silber",
+      "Materials": "Metall"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
     "Images": {
       "schema_version": "1.0",
       "summary": {
@@ -45,17 +90,6 @@
           "filename": "VER02163 (3).jpg"
         }
       ]
-    },
-    "Intern Product Info": {
-      "Gender": "F",
-      "Brand": "Fashion Jewelry",
-      "Color": "Silber",
-      "Size": ""
-    },
-    "Intern Generated Info": {
-      "More details": "Diese Ohrringe haben ein florales Design mit einer glänzenden silbernen Oberfläche. Sie sind leicht und angenehm zu tragen. Ideal für besondere Anlässe oder den Alltag.",
-      "Keywords": "Ohrringe Damen Silber",
-      "Materials": "Metall"
     }
   }
 }

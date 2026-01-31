@@ -1182,3 +1182,29 @@ def clear_ebay_cache():
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ============================================================
+# JSON Migration Endpoint
+# ============================================================
+
+@app.post("/api/migrate/json-categories")
+def migrate_json_categories():
+    """Migrate all existing SKU JSONs to add missing category sections.
+    
+    This endpoint:
+    - Adds missing category sections (Invoice Data, Supplier Data, etc.) to all JSON files
+    - Fills data from Excel inventory database
+    - Preserves existing data (no overwriting)
+    - Returns migration statistics
+    """
+    from app.services.migrate_json_categories import migrate_all_jsons as run_migration
+    
+    try:
+        run_migration()
+        return {
+            "success": True,
+            "message": "Migration completed. Check logs for details."
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Migration failed: {str(e)}")

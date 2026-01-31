@@ -1,5 +1,50 @@
 {
   "VER02167": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25112054,
+      "Invoice Date": "2025-11-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 874513,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Birkenstock Madrid Big Buckle Cognac Gr. 42"
+    },
+    "Price Data": {
+      "Price Net": 25.83,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 26.22
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Birkenstock",
+      "Color": "Cognac",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Sandalen haben eine große Schnalle und sind aus echtem Leder gefertigt. Sie bieten eine bequeme Passform und sind ideal für den Sommer. Die Sohle besteht aus Naturkork und EVA für zusätzlichen Komfort.",
+      "Keywords": "Madrid Big Buckle Sandalen Unisex",
+      "Materials": "Echt Leder Naturkork EVA"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
     "Images": {
       "schema_version": "1.0",
       "summary": {
@@ -57,17 +102,6 @@
           "filename": "VER02167 (4).jpg"
         }
       ]
-    },
-    "Intern Product Info": {
-      "Gender": "U",
-      "Brand": "Birkenstock",
-      "Color": "Cognac",
-      "Size": "42"
-    },
-    "Intern Generated Info": {
-      "More details": "Die Sandalen haben eine große Schnalle und sind aus echtem Leder gefertigt. Sie bieten eine bequeme Passform und sind ideal für den Sommer. Die Sohle besteht aus Naturkork und EVA für zusätzlichen Komfort.",
-      "Keywords": "Madrid Big Buckle Sandalen Unisex",
-      "Materials": "Echt Leder Naturkork EVA"
     }
   }
 }
