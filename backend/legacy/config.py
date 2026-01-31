@@ -111,10 +111,10 @@ CONDITION_MAPPING = {
 
 # Search Paths
 IMAGE_FOLDER_PATHS = [
-    Path("../Images"),
-    Path("../../HANDEL_SEGMENT/Images"),
-    Path("../../AUCTIONS_SEGMENT/Auktionen/_FOTOS"),
-    Path("../../BAGS_SEGMENT/Images")
+    TRADING_ROOT / "Images",
+    TRADING_ROOT.parent / "HANDEL_SEGMENT" / "Images",
+    TRADING_ROOT.parent / "AUCTIONS_SEGMENT" / "Auktionen" / "_FOTOS",
+    TRADING_ROOT.parent / "BAGS_SEGMENT" / "Images",
 ]
 
 MODEL_IMAGE = "gemini-2.5-flash-image"

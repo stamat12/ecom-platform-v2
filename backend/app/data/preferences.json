@@ -11,19 +11,23 @@
         "Condition",
         "Status",
         "Price Net",
-        "Lager",
-        "Json",
-        "Json Stock Images",
-        "Json Phone Images",
+        "Folder Images",
         "Json Enhanced Images",
-        "Images"
+        "Json Phone Images",
+        "Json Stock Images",
+        "Json"
       ],
       "column_filters": {
-        "Json": "true",
-        "Lager": "new box 1"
+        "SKU (Old)": "ver020",
+        "Folder Images": {
+          "min": "",
+          "max": ""
+        }
       },
       "page_size": 50,
-      "column_widths": {}
+      "column_widths": {
+        "Json": 89
+      }
     }
   }
 }

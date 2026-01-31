@@ -1,8 +1,10 @@
 from __future__ import annotations
 from typing import Dict, Any, List
 import os
+from pathlib import Path
 
 from app.services.excel_inventory import excel_inventory
+from app.services.folder_images_cache import get_folder_image_count
 import config  # type: ignore
 import pandas as pd
 
@@ -28,7 +30,10 @@ def get_available_columns() -> List[str]:
         "Images JSON Enhanced",
         "Reference"
     ]
-    return [col for col in cols if col not in excluded]
+    available = [col for col in cols if col not in excluded]
+    if "Folder Images" not in available:
+        available.append("Folder Images")
+    return available
 
 
 def get_default_columns() -> List[str]:
@@ -89,6 +94,15 @@ def get_columns_meta() -> List[Dict[str, Any]]:
             "operators": operators,
             "enum_values": enum_values,
         })
+    
+    # Add virtual column metadata
+    meta.append({
+        "name": "Folder Images",
+        "type": "number",
+        "operators": NUM_DATE_OPS,
+        "enum_values": None,
+    })
+    
     return meta
 
 
@@ -134,6 +148,14 @@ def list_skus(
         columns: List of columns to return (if None, returns all columns)
     """
     df = excel_inventory.load().copy()
+
+    # Separate Folder Images filter for later (virtual column)
+    folder_images_filter = None
+    if filters:
+        filters = [f for f in filters]  # copy
+        folder_images_filter = next((f for f in filters if f.get("column") == "Folder Images"), None)
+        if folder_images_filter:
+            filters = [f for f in filters if f.get("column") != "Folder Images"]
 
     # Apply filters
     if filters:
@@ -235,9 +257,50 @@ def list_skus(
                 else:  # contains (default)
                     df = df[col_lower.str.contains(value, na=False)]
 
+    # Capture SKU series before column filtering (needed for Folder Images)
+    sku_series = None
+    if "SKU (Old)" in df.columns:
+        sku_series = df["SKU (Old)"]
+    elif "SKU" in df.columns:
+        sku_series = df["SKU"]
+
+    # Apply Folder Images filter if present (read from cache)
+    if folder_images_filter and sku_series is not None:
+        # Read from cache
+        def get_cached_count(sku: str | None) -> int | None:
+            if not sku or str(sku).strip() == "":
+                return None
+            return get_folder_image_count(str(sku))
+        
+        df["_folder_images_temp"] = sku_series.apply(get_cached_count)
+        
+        # Apply the filter
+        ftype = folder_images_filter.get("type", "number")
+        operator = folder_images_filter.get("operator", "gte")
+        val = folder_images_filter.get("value")
+        val2 = folder_images_filter.get("value2")
+        
+        s = pd.to_numeric(df["_folder_images_temp"], errors="coerce")
+        if operator == "equals" and val is not None:
+            df = df[s == float(val)]
+        elif operator == "lt" and val is not None:
+            df = df[s < float(val)]
+        elif operator == "lte" and val is not None:
+            df = df[s <= float(val)]
+        elif operator == "gt" and val is not None:
+            df = df[s > float(val)]
+        elif operator == "gte" and val is not None:
+            df = df[s >= float(val)]
+        elif operator == "between" and val is not None and val2 is not None:
+            df = df[(s >= float(val)) & (s <= float(val2))]
+        
+        # Drop temp column
+        df = df.drop(columns=["_folder_images_temp"])
+
     # Filter by selected columns if provided
-    if columns and isinstance(columns, list) and len(columns) > 0:
-        valid_columns = [col for col in columns if col in df.columns]
+    requested_columns = columns if (columns and isinstance(columns, list) and len(columns) > 0) else None
+    if requested_columns:
+        valid_columns = [col for col in requested_columns if col in df.columns]
         if valid_columns:
             df = df[valid_columns]
 
@@ -246,6 +309,16 @@ def list_skus(
     end = start + page_size
 
     page_df = df.iloc[start:end].copy()
+
+    # Compute Folder Images column (virtual) from cache
+    if requested_columns is None or "Folder Images" in requested_columns:
+        def get_cached_count(sku: str | None) -> int | None:
+            if not sku or str(sku).strip() == "":
+                return None
+            return get_folder_image_count(str(sku))
+
+        if sku_series is not None:
+            page_df["Folder Images"] = sku_series.loc[page_df.index].apply(get_cached_count)
 
     # Replace NaN / +/-Inf with None so JSON serialization is safe
     page_df = page_df.replace([float("inf"), float("-inf")], None)
@@ -256,12 +329,15 @@ def list_skus(
         page_df["Json"] = page_df["Json"].apply(lambda x: "TRUE" if x is True else ("FALSE" if x is False else None))
     
     # Convert image count columns to integers or empty strings
-    for col in ["Json Stock Images", "Json Phone Images", "Json Enhanced Images"]:
+    for col in ["Json Stock Images", "Json Phone Images", "Json Enhanced Images", "Folder Images"]:
         if col in page_df.columns:
             page_df[col] = page_df[col].apply(lambda x: int(x) if pd.notna(x) and x is not None else "")
 
     items = page_df.to_dict(orient="records")
-    available_columns = list(df.columns) if columns is None else columns
+    if columns is None:
+        available_columns = list(df.columns) + (["Folder Images"] if "Folder Images" not in df.columns else [])
+    else:
+        available_columns = columns
 
     return {
         "page": page,

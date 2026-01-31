@@ -19,6 +19,8 @@ from app.services.product_detail import get_product_detail, update_product_detai
 from app.services.ai_enrichment import enrich_sku_fields, enrich_multiple_skus
 from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
+from app.services.folder_images_cache import get_last_update_time
+from app.services.folder_images_computation import compute_folder_images_for_all_skus
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -492,6 +494,28 @@ def get_distinct(
         raise HTTPException(status_code=400, detail="Invalid column")
     result = get_distinct_values(column, limit=limit, q=q)
     return DistinctValuesResponse(**result)
+
+
+@app.get("/api/skus/folder-images/status")
+def get_folder_images_status():
+    """Get the status of folder images cache"""
+    last_update = get_last_update_time()
+    return {
+        "last_update": last_update,
+        "has_cache": last_update is not None
+    }
+
+
+@app.post("/api/skus/folder-images/compute")
+async def compute_folder_images():
+    """Compute folder images for all SKUs with progress updates (SSE)"""
+    from fastapi.responses import StreamingResponse
+    
+    async def generate():
+        for update in compute_folder_images_for_all_skus():
+            yield f"data: {json.dumps(update)}\n\n"
+    
+    return StreamingResponse(generate(), media_type="text/event-stream")
 
 
 # ============================================================
