@@ -36,6 +36,7 @@ def get_default_columns() -> List[str]:
     # These are the most important columns
     return [
         "SKU (Old)",
+        "Json",
         "Brand",
         "Category",
         "Color",
@@ -249,6 +250,10 @@ def list_skus(
     # Replace NaN / +/-Inf with None so JSON serialization is safe
     page_df = page_df.replace([float("inf"), float("-inf")], None)
     page_df = page_df.where(page_df.notna(), None)
+
+    # Convert Json column boolean values to "TRUE"/"FALSE" strings for display
+    if "Json" in page_df.columns:
+        page_df["Json"] = page_df["Json"].apply(lambda x: "TRUE" if x is True else ("FALSE" if x is False else None))
 
     items = page_df.to_dict(orient="records")
     available_columns = list(df.columns) if columns is None else columns

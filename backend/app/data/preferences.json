@@ -10,10 +10,11 @@
         "Size",
         "Condition",
         "Status",
-        "Price Net"
+        "Price Net",
+        "Json"
       ],
       "column_filters": {
-        "SKU (Old)": "ver02"
+        "Json": "true"
       },
       "page_size": 50,
       "column_widths": {}

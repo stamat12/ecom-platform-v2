@@ -15,6 +15,8 @@ LEGACY = Path(__file__).resolve().parents[2] / "legacy"
 sys.path.insert(0, str(LEGACY))
 import config  # type: ignore
 
+from app.repositories.sku_json_repo import _sku_json_path
+
 
 def _get_inventory_path() -> str:
     # Env override wins (recommended)
@@ -44,6 +46,21 @@ class ExcelInventoryCache:
             _get_inventory_path(),
             sheet_name=_get_inventory_sheet(),
         )
+
+        # Add computed "Json" column that checks if JSON file exists for each SKU
+        def has_json(sku):
+            if pd.isna(sku) or str(sku).strip() == "":
+                return False
+            try:
+                return _sku_json_path(str(sku)).exists()
+            except:
+                return False
+        
+        # Use "SKU (Old)" column for the SKU value
+        if "SKU (Old)" in df.columns:
+            df["Json"] = df["SKU (Old)"].apply(has_json)
+        elif "SKU" in df.columns:
+            df["Json"] = df["SKU"].apply(has_json)
 
         self._df = df
         self._loaded_at = now
