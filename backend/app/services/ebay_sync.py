@@ -16,6 +16,7 @@ from app.config.ebay_config import (
     LISTINGS_CACHE_DURATION_HOURS
 )
 from app.repositories import ebay_cache_repo
+from app.services import ebay_listings_cache
 
 logger = logging.getLogger(__name__)
 
@@ -147,14 +148,34 @@ def get_active_listings(use_cache: bool = True, force_refresh: bool = False) -> 
     # Try cache first
     if use_cache and not force_refresh:
         cached_listings = ebay_cache_repo.get_cached_listings(LISTINGS_CACHE_DURATION_HOURS)
-        if cached_listings:
-            logger.info(f"Using cached eBay listings ({len(cached_listings)} listings)")
+        legacy_cache = ebay_listings_cache.read_cache()
+        legacy_listings = legacy_cache.get("listings", []) if legacy_cache else []
+
+        if cached_listings or legacy_listings:
+            # Merge listings from both caches (dedupe by item_id + sku)
+            merged = []
+            seen = set()
+            for listing in (cached_listings or []) + (legacy_listings or []):
+                item_id = (listing.get("item_id") or "").strip()
+                sku = (listing.get("sku") or "").strip()
+                key = f"{item_id}::{sku}"
+                if key in seen:
+                    continue
+                seen.add(key)
+                merged.append(listing)
+
+            logger.info(
+                "Using cached eBay listings (repo=%s, legacy=%s, merged=%s)",
+                len(cached_listings or []),
+                len(legacy_listings or []),
+                len(merged),
+            )
             return {
                 "success": True,
-                "total_listings": len(cached_listings),
+                "total_listings": len(merged),
                 "cached": True,
-                "listings": cached_listings,
-                "message": f"Loaded {len(cached_listings)} listings from cache"
+                "listings": merged,
+                "message": f"Loaded {len(merged)} listings from cache"
             }
     
     # Fetch from API

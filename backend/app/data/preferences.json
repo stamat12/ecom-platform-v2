@@ -2,8 +2,23 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [],
-      "column_filters": {},
+      "selected_columns": [
+        "SKU (Old)",
+        "Json",
+        "Brand",
+        "Category",
+        "Color",
+        "Size",
+        "Condition",
+        "Status",
+        "Price Net",
+        "Supplier Title",
+        "Ebay Listing",
+        "Folder Images"
+      ],
+      "column_filters": {
+        "SKU (Old)": "ver0216"
+      },
       "filter_mode": {},
       "page_size": 50,
       "column_widths": {}

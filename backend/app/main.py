@@ -116,6 +116,7 @@ def get_sku_filters(profile_id: str = Query("default", description="Profile iden
         profile_id=state["profile_id"],
         selected_columns=state.get("selected_columns", []),
         column_filters=state.get("column_filters", {}),
+        filter_mode=state.get("filter_mode", {}),
         page_size=state.get("page_size", 50),
         column_widths=state.get("column_widths", {}),
     )
@@ -129,6 +130,7 @@ def put_sku_filters(request: SkuFilterState):
         profile_id=saved["profile_id"],
         selected_columns=saved.get("selected_columns", []),
         column_filters=saved.get("column_filters", {}),
+        filter_mode=saved.get("filter_mode", {}),
         page_size=saved.get("page_size", 50),
         column_widths=saved.get("column_widths", {}),
     )

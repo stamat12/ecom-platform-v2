@@ -1,62 +1,6 @@
 {
-  "timestamp": "2026-01-31T16:21:25.458159",
+  "timestamp": "2026-01-31T23:52:20.786232",
   "listings": [
-    {
-      "item_id": "136395109785",
-      "sku": "VER00763",
-      "title": "Julietta Mokassin, Korallrot, Größe 40",
-      "marketplace": "",
-      "view_url": "https://www.ebay.de/itm/Julietta-Mokassin-Korallrot-Gr-e-40-/136395109785"
-    },
-    {
-      "item_id": "136395313996",
-      "sku": "VER00745",
-      "title": "Be Mine Neima Brautschuhe, Elfenbein, Größe 38",
-      "marketplace": "",
-      "view_url": "https://www.ebay.de/itm/Be-Mine-Neima-Brautschuhe-Elfenbein-Gr-e-38-/136395313996"
-    },
-    {
-      "item_id": "136395634304",
-      "sku": "VER00774",
-      "title": "Baldowski Glitzer-Pumps, Champagner, Größe 37",
-      "marketplace": "",
-      "view_url": "https://www.ebay.de/itm/Baldowski-Glitzer-Pumps-Champagner-Gr-e-37-/136395634304"
-    },
-    {
-      "item_id": "136395736449",
-      "sku": "VER01033",
-      "title": "Oceans Apart Joelie Veste En Polaire, Crème, Taille S",
-      "marketplace": "",
-      "view_url": "https://www.ebay.fr/itm/Oceans-Apart-Joelie-Veste-En-Polaire-Cr-me-Taille-S-/136395736449"
-    },
-    {
-      "item_id": "136395736466",
-      "sku": "VER01033",
-      "title": "Oceans Apart Joelie Giacca In Fleece, Crema, Taglia S",
-      "marketplace": "",
-      "view_url": "https://www.ebay.it/itm/Oceans-Apart-Joelie-Giacca-In-Fleece-Crema-Taglia-S-/136395736466"
-    },
-    {
-      "item_id": "136395736470",
-      "sku": "VER01033",
-      "title": "Oceans Apart Joelie Chaqueta De Forro Polar, Crema, Talla S",
-      "marketplace": "",
-      "view_url": "https://www.ebay.es/itm/Oceans-Apart-Joelie-Chaqueta-De-Forro-Polar-Crema-Talla-S-/136395736470"
-    },
-    {
-      "item_id": "136395885777",
-      "sku": "VER00974",
-      "title": "J.Lindeberg Sitkin Skijacke, Blau / Schwarz, Größe M",
-      "marketplace": "",
-      "view_url": "https://www.ebay.de/itm/J-Lindeberg-Sitkin-Skijacke-Blau-Schwarz-Gr-e-M-/136395885777"
-    },
-    {
-      "item_id": "136395940411",
-      "sku": "VER00640",
-      "title": "Fabletics Morgan Iridescent Sport-BH, Schwarz, Größe XL",
-      "marketplace": "",
-      "view_url": "https://www.ebay.de/itm/Fabletics-Morgan-Iridescent-Sport-BH-Schwarz-Gr-e-XL-/136395940411"
-    },
     {
       "item_id": "136686541055",
       "sku": "VER01783",
@@ -7912,6 +7856,13 @@
       "view_url": "https://www.ebay.fr/itm/Sandales-Steve-Madden-40-5-Rose-/136670291319"
     },
     {
+      "item_id": "136395109785",
+      "sku": "VER00763",
+      "title": "Julietta Mokassin, Korallrot, Größe 40",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Julietta-Mokassin-Korallrot-Gr-e-40-/136395109785"
+    },
+    {
       "item_id": "136390447897",
       "sku": "VER00898",
       "title": "Cazadora Cero, Amarillo, Talla 40",
@@ -7959,6 +7910,13 @@
       "title": "Cámara Plegable Zeiss Ikon Ikonta 520/2, Negra, Tamaño 6x9 cm (Película 120)",
       "marketplace": "",
       "view_url": "https://www.ebay.es/itm/C-mara-Plegable-Zeiss-Ikon-Ikonta-520-2-Negra-Tama-o-6x9-cm-Pel-cula-120--/136390448059"
+    },
+    {
+      "item_id": "136395313996",
+      "sku": "VER00745",
+      "title": "Be Mine Neima Brautschuhe, Elfenbein, Größe 38",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Be-Mine-Neima-Brautschuhe-Elfenbein-Gr-e-38-/136395313996"
     },
     {
       "item_id": "136680027722",
@@ -8073,11 +8031,46 @@
       "view_url": "https://www.ebay.es/itm/Reebok-Royal-BB4500-HI2-Zapatillas-Blancas-Talla-44-/136670768108"
     },
     {
+      "item_id": "136395634304",
+      "sku": "VER00774",
+      "title": "Baldowski Glitzer-Pumps, Champagner, Größe 37",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Baldowski-Glitzer-Pumps-Champagner-Gr-e-37-/136395634304"
+    },
+    {
+      "item_id": "136395736449",
+      "sku": "VER01033",
+      "title": "Oceans Apart Joelie Veste En Polaire, Crème, Taille S",
+      "marketplace": "",
+      "view_url": "https://www.ebay.fr/itm/Oceans-Apart-Joelie-Veste-En-Polaire-Cr-me-Taille-S-/136395736449"
+    },
+    {
+      "item_id": "136395736466",
+      "sku": "VER01033",
+      "title": "Oceans Apart Joelie Giacca In Fleece, Crema, Taglia S",
+      "marketplace": "",
+      "view_url": "https://www.ebay.it/itm/Oceans-Apart-Joelie-Giacca-In-Fleece-Crema-Taglia-S-/136395736466"
+    },
+    {
+      "item_id": "136395736470",
+      "sku": "VER01033",
+      "title": "Oceans Apart Joelie Chaqueta De Forro Polar, Crema, Talla S",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/Oceans-Apart-Joelie-Chaqueta-De-Forro-Polar-Crema-Talla-S-/136395736470"
+    },
+    {
       "item_id": "136390854043",
       "sku": "VER01025",
       "title": "About You Sia Plateau-Sandaletten, Beige, Größe 39",
       "marketplace": "",
       "view_url": "https://www.ebay.de/itm/About-You-Sia-Plateau-Sandaletten-Beige-Gr-e-39-/136390854043"
+    },
+    {
+      "item_id": "136395885777",
+      "sku": "VER00974",
+      "title": "J.Lindeberg Sitkin Skijacke, Blau / Schwarz, Größe M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/J-Lindeberg-Sitkin-Skijacke-Blau-Schwarz-Gr-e-M-/136395885777"
     },
     {
       "item_id": "136680508386",
@@ -8206,6 +8199,13 @@
       "view_url": "https://www.ebay.de/itm/Alba-Moda-Knielganger-Rock-Beige-Gr-e-40-/136391022112"
     },
     {
+      "item_id": "136395940411",
+      "sku": "VER00640",
+      "title": "Fabletics Morgan Iridescent Sport-BH, Schwarz, Größe XL",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Fabletics-Morgan-Iridescent-Sport-BH-Schwarz-Gr-e-XL-/136395940411"
+    },
+    {
       "item_id": "136391025514",
       "sku": "VER01866",
       "title": "Anna Field Slipper, Braun, Größe 39",
@@ -8288,6 +8288,13 @@
       "title": "Oceans Apart Joelie Fleecejacke, Cremeweiß, Größe S",
       "marketplace": "",
       "view_url": "https://www.ebay.de/itm/Oceans-Apart-Joelie-Fleecejacke-Cremewei-Gr-e-S-/136386519188"
+    },
+    {
+      "item_id": "137002686794",
+      "sku": "VER02166",
+      "title": "On Cloudmonster Sneakers Herren, Weiß Blau, Größe 44.5",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/On-Cloudmonster-Sneakers-Herren-Wei-Blau-Gr-e-44-5-/137002686794"
     },
     {
       "item_id": "136386602802",
