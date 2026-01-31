@@ -4,6 +4,7 @@
       "profile_id": "default",
       "selected_columns": [
         "SKU (Old)",
+        "Json",
         "Brand",
         "Category",
         "Color",
@@ -11,23 +12,16 @@
         "Condition",
         "Status",
         "Price Net",
-        "Folder Images",
-        "Json Enhanced Images",
-        "Json Phone Images",
-        "Json Stock Images",
-        "Json"
+        "Ebay Listing",
+        "Folder Images"
       ],
       "column_filters": {
-        "SKU (Old)": "ver020",
-        "Folder Images": {
-          "min": "",
-          "max": ""
-        }
+        "Ebay Listing": "true",
+        "SKU (Old)": "ver02",
+        "Json": "true"
       },
       "page_size": 50,
-      "column_widths": {
-        "Json": 89
-      }
+      "column_widths": {}
     }
   }
 }

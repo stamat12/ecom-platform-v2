@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from app.services.legacy_imports import add_legacy_to_syspath
 import json
 
@@ -19,8 +19,10 @@ from app.services.product_detail import get_product_detail, update_product_detai
 from app.services.ai_enrichment import enrich_sku_fields, enrich_multiple_skus
 from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
-from app.services.folder_images_cache import get_last_update_time
+from app.services.folder_images_cache import get_last_update_time as get_folder_images_last_update
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
+from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache
+from app.services.ebay_listings_computation import compute_ebay_listings
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -1094,6 +1096,63 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
 # ============================================================
 # eBay Sync Endpoints
 # ============================================================
+
+@app.get("/api/skus/folder-images/status")
+def get_folder_images_status():
+    """Get folder images cache status"""
+    last_update = get_folder_images_last_update()
+    return {
+        "last_update": last_update,
+        "has_cache": last_update is not None
+    }
+
+
+@app.post("/api/skus/folder-images/compute")
+def compute_folder_images():
+    """Compute folder images for all SKUs with SSE progress updates"""
+    def event_stream():
+        for progress in compute_folder_images_for_all_skus():
+            yield f"data: {json.dumps(progress)}\n\n"
+    
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
+
+@app.get("/api/skus/ebay-listings/status")
+def get_ebay_listings_status():
+    """Get eBay listings cache status"""
+    last_update = get_ebay_listings_last_update()
+    cache = read_ebay_cache()
+    count = len(cache.get('listings', [])) if cache else 0
+    return {
+        "last_update": last_update,
+        "has_cache": last_update is not None,
+        "listings_count": count
+    }
+
+
+@app.post("/api/skus/ebay-listings/compute")
+def compute_ebay_listings_endpoint():
+    """Fetch eBay listings and update cache with SSE progress updates"""
+    def event_stream():
+        for progress in compute_ebay_listings():
+            yield f"data: {json.dumps(progress)}\n\n"
+    
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
 
 @app.post("/api/ebay/sync/listings", response_model=SyncListingsResponse)
 def sync_ebay_listings(request: SyncListingsRequest):

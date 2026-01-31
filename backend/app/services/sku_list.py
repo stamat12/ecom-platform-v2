@@ -5,6 +5,7 @@ from pathlib import Path
 
 from app.services.excel_inventory import excel_inventory
 from app.services.folder_images_cache import get_folder_image_count
+from app.services.ebay_listings_cache import get_sku_has_listing
 import config  # type: ignore
 import pandas as pd
 
@@ -33,6 +34,8 @@ def get_available_columns() -> List[str]:
     available = [col for col in cols if col not in excluded]
     if "Folder Images" not in available:
         available.append("Folder Images")
+    if "Ebay Listing" not in available:
+        available.append("Ebay Listing")
     return available
 
 
@@ -103,6 +106,13 @@ def get_columns_meta() -> List[Dict[str, Any]]:
         "enum_values": None,
     })
     
+    meta.append({
+        "name": "Ebay Listing",
+        "type": "boolean",
+        "operators": BOOL_OPS,
+        "enum_values": None,
+    })
+    
     return meta
 
 
@@ -149,13 +159,17 @@ def list_skus(
     """
     df = excel_inventory.load().copy()
 
-    # Separate Folder Images filter for later (virtual column)
+    # Separate Folder Images and Ebay Listing filters for later (virtual columns)
     folder_images_filter = None
+    ebay_listing_filter = None
     if filters:
         filters = [f for f in filters]  # copy
         folder_images_filter = next((f for f in filters if f.get("column") == "Folder Images"), None)
+        ebay_listing_filter = next((f for f in filters if f.get("column") == "Ebay Listing"), None)
         if folder_images_filter:
             filters = [f for f in filters if f.get("column") != "Folder Images"]
+        if ebay_listing_filter:
+            filters = [f for f in filters if f.get("column") != "Ebay Listing"]
 
     # Apply filters
     if filters:
@@ -297,6 +311,27 @@ def list_skus(
         # Drop temp column
         df = df.drop(columns=["_folder_images_temp"])
 
+    # Apply Ebay Listing filter if present (read from cache)
+    if ebay_listing_filter and sku_series is not None:
+        # Read from cache
+        def get_cached_listing(sku: str | None) -> bool | None:
+            if not sku or str(sku).strip() == "":
+                return None
+            return get_sku_has_listing(str(sku))
+        
+        df["_ebay_listing_temp"] = sku_series.apply(get_cached_listing)
+        
+        # Apply the filter
+        operator = ebay_listing_filter.get("operator", "is_true")
+        
+        if operator == "is_true":
+            df = df[df["_ebay_listing_temp"] == True]
+        elif operator == "is_false":
+            df = df[df["_ebay_listing_temp"] == False]
+        
+        # Drop temp column
+        df = df.drop(columns=["_ebay_listing_temp"])
+
     # Filter by selected columns if provided
     requested_columns = columns if (columns and isinstance(columns, list) and len(columns) > 0) else None
     if requested_columns:
@@ -320,13 +355,24 @@ def list_skus(
         if sku_series is not None:
             page_df["Folder Images"] = sku_series.loc[page_df.index].apply(get_cached_count)
 
+    # Compute Ebay Listing column (virtual) from cache
+    if requested_columns is None or "Ebay Listing" in requested_columns:
+        def get_cached_listing(sku: str | None) -> bool | None:
+            if not sku or str(sku).strip() == "":
+                return None
+            return get_sku_has_listing(str(sku))
+
+        if sku_series is not None:
+            page_df["Ebay Listing"] = sku_series.loc[page_df.index].apply(get_cached_listing)
+
     # Replace NaN / +/-Inf with None so JSON serialization is safe
     page_df = page_df.replace([float("inf"), float("-inf")], None)
     page_df = page_df.where(page_df.notna(), None)
 
-    # Convert Json column boolean values to "TRUE"/"FALSE" strings for display
-    if "Json" in page_df.columns:
-        page_df["Json"] = page_df["Json"].apply(lambda x: "TRUE" if x is True else ("FALSE" if x is False else None))
+    # Convert Json and Ebay Listing column boolean values to "TRUE"/"FALSE" strings for display
+    for bool_col in ["Json", "Ebay Listing"]:
+        if bool_col in page_df.columns:
+            page_df[bool_col] = page_df[bool_col].apply(lambda x: "TRUE" if x is True else ("FALSE" if x is False else None))
     
     # Convert image count columns to integers or empty strings
     for col in ["Json Stock Images", "Json Phone Images", "Json Enhanced Images", "Folder Images"]:
@@ -335,7 +381,11 @@ def list_skus(
 
     items = page_df.to_dict(orient="records")
     if columns is None:
-        available_columns = list(df.columns) + (["Folder Images"] if "Folder Images" not in df.columns else [])
+        available_columns = list(df.columns)
+        if "Folder Images" not in available_columns:
+            available_columns.append("Folder Images")
+        if "Ebay Listing" not in available_columns:
+            available_columns.append("Ebay Listing")
     else:
         available_columns = columns
 
