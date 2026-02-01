@@ -11,8 +11,7 @@
         "Size",
         "Condition",
         "Status",
-        "Price Net",
-        "Lager"
+        "Price Net"
       ],
       "column_filters": {},
       "filter_mode": {},

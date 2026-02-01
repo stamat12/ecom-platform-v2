@@ -24,10 +24,12 @@ export default function SkuListPage() {
   const [defaultColumns, setDefaultColumns] = useState([]);
   const [selectedColumns, setSelectedColumns] = useState([]);
   const [columnFilters, setColumnFilters] = useState({}); // { columnName: filterValue or typed object }
+  const [filterMode, setFilterMode] = useState({}); // { columnName: 'include' | 'exclude' }
+  const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
   const [filterLoading, setFilterLoading] = useState(true);
   const [columnMeta, setColumnMeta] = useState({}); // { columnName: { type, operators, enum_values } }
   const [distinctValues, setDistinctValues] = useState({}); // { columnName: [values] }
-  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size"]; // multi-select typeahead
+  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size", "Lager"]; // multi-select typeahead
   const [chipInputs, setChipInputs] = useState({}); // temp text inputs per column
   const [suggestions, setSuggestions] = useState({}); // { columnName: [values] }
   const [openSuggest, setOpenSuggest] = useState({}); // { columnName: boolean }
@@ -57,6 +59,15 @@ export default function SkuListPage() {
         
         hasRestoredState.current = true;
 
+        // Read localStorage state (filters, modes, columns, sizes)
+        let localState = null;
+        try {
+          const savedLocal = localStorage.getItem('SkuListPageFilters');
+          if (savedLocal) localState = JSON.parse(savedLocal);
+        } catch (e) {
+          console.error('Failed to parse saved filters:', e);
+        }
+
         const [colRes, metaRes, filtRes] = await Promise.all([
           fetch("/api/skus/columns"),
           fetch("/api/skus/columns/meta"),
@@ -77,8 +88,13 @@ export default function SkuListPage() {
         if (filtRes.ok) {
           const filtData = await filtRes.json();
           const validSelected = (filtData.selected_columns || []).filter((c) => (colData.columns || []).includes(c));
+          const localSelected = (localState?.selectedColumns || []).filter((c) => (colData.columns || []).includes(c));
+          const localFilters = localState?.columnFilters || null;
+          const localFilterMode = localState?.filterMode || null;
+          const localPageSize = localState?.pageSize || null;
+          const localColumnWidths = localState?.columnWidths || null;
           
-          // Use restored state if available, otherwise use persisted filters
+          // Use restored state if available, otherwise use persisted filters or server filters
           if (restoredState) {
             console.log('Applying restored state...');
             const cols = (restoredState.selectedColumns && restoredState.selectedColumns.length > 0) 
@@ -88,27 +104,36 @@ export default function SkuListPage() {
             console.log('Setting filters to:', restoredState.columnFilters);
             setSelectedColumns(cols);
             setColumnFilters(restoredState.columnFilters || filtData.column_filters || {});
+            setFilterMode(restoredState.filterMode || {});
             setPageSize(restoredState.pageSize || Number(filtData.page_size || 50));
             setColumnWidths(restoredState.columnWidths || filtData.column_widths || {});
             setSelectedSkus(restoredState.selectedSkus || []);
             setPage(restoredState.page || 1);
           } else {
-            setSelectedColumns(validSelected.length ? validSelected : (colData.default_columns || []));
-            setColumnFilters(filtData.column_filters || {});
-            setPageSize(Number(filtData.page_size || 50));
-            setColumnWidths(filtData.column_widths || {});
+            const cols = localSelected.length ? localSelected : (validSelected.length ? validSelected : (colData.default_columns || []));
+            setSelectedColumns(cols);
+            setColumnFilters(localFilters || filtData.column_filters || {});
+            setFilterMode(localFilterMode || {});
+            setPageSize(localPageSize || Number(filtData.page_size || 50));
+            setColumnWidths(localColumnWidths || filtData.column_widths || {});
           }
         } else {
           // Fallback to defaults or restored state
           if (restoredState) {
             setSelectedColumns(restoredState.selectedColumns || (colData.default_columns || []));
             setColumnFilters(restoredState.columnFilters || {});
+            setFilterMode(restoredState.filterMode || {});
             setPageSize(restoredState.pageSize || 50);
             setColumnWidths(restoredState.columnWidths || {});
             setSelectedSkus(restoredState.selectedSkus || []);
             setPage(restoredState.page || 1);
           } else {
-            setSelectedColumns(colData.default_columns || []);
+            const localSelected = (localState?.selectedColumns || []).filter((c) => (colData.columns || []).includes(c));
+            setSelectedColumns(localSelected.length ? localSelected : (colData.default_columns || []));
+            setColumnFilters(localState?.columnFilters || {});
+            setFilterMode(localState?.filterMode || {});
+            if (localState?.pageSize) setPageSize(localState.pageSize);
+            if (localState?.columnWidths) setColumnWidths(localState.columnWidths);
           }
         }
 
@@ -131,6 +156,21 @@ export default function SkuListPage() {
     };
     load();
   }, []);
+
+  // Persist filters to localStorage whenever they change
+  useEffect(() => {
+    try {
+      localStorage.setItem('SkuListPageFilters', JSON.stringify({
+        columnFilters,
+        filterMode,
+        selectedColumns,
+        pageSize,
+        columnWidths
+      }));
+    } catch (e) {
+      console.error('Failed to save filters to localStorage:', e);
+    }
+  }, [columnFilters, filterMode, selectedColumns, pageSize, columnWidths]);
 
   // Load SKUs when filters or pagination change
   useEffect(() => {
@@ -157,6 +197,9 @@ export default function SkuListPage() {
     for (const [column, value] of Object.entries(columnFilters)) {
       const meta = columnMeta[column] || { type: "string" };
       const type = meta.type;
+      const mode = filterMode[column] || "include";
+      const isExclude = mode === "exclude";
+      
       if (type === "number" && value && (value.min || value.max)) {
         const min = value.min;
         const max = value.max;
@@ -181,11 +224,13 @@ export default function SkuListPage() {
         const op = value === "true" ? "is_true" : value === "false" ? "is_false" : null;
         if (op) filters.push({ column, type, operator: op });
       } else if (type === "enum" && Array.isArray(value) && value.length > 0) {
-        filters.push({ column, type, operator: "in", values: value });
+        const op = isExclude ? "not_in" : "in";
+        filters.push({ column, type, operator: op, values: value });
       } else if (type === "enum" && typeof value === "string" && value.trim()) {
         filters.push({ column, type, operator: "equals", value: value.trim() });
       } else if (multiSelectStringCols.includes(column) && Array.isArray(value) && value.length > 0) {
-        filters.push({ column, type: "string", operator: "in", values: value });
+        const op = isExclude ? "not_in" : "in";
+        filters.push({ column, type: "string", operator: op, values: value });
       } else if (typeof value === "string" && value.trim()) {
         filters.push({ column, type: "string", operator: "contains", value: value.trim() });
       }
@@ -209,7 +254,7 @@ export default function SkuListPage() {
         }
       })
       .catch((e) => setErr(String(e)));
-  }, [page, pageSize, selectedColumns, columnFilters, filterLoading]);
+  }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading]);
 
   const totalPages = Math.ceil(total / pageSize);
 
@@ -765,17 +810,58 @@ export default function SkuListPage() {
                 {selectedColumns.map((col) => {
                   const meta = columnMeta[col] || { type: "string" };
                   const val = columnFilters[col] ?? (multiSelectStringCols.includes(col) ? [] : "");
+                  const mode = filterMode[col] || "include";
+                  const hasFilter = val && (Array.isArray(val) ? val.length > 0 : true) && typeof val !== "object" || (typeof val === "object" && (val.min || val.max || val.start || val.end));
+                  
                   if (meta.type === "number") {
                     const v = typeof val === "object" ? val : { min: "", max: "" };
                     return (
                       <th key={`filter-${col}`} style={{ padding: 4 }}>
-                        <div style={{ display: "flex", gap: 6 }}>
-                          <input type="number" placeholder="Min" value={v.min || ""}
-                            onChange={(e) => handleFilterChange(col, { ...v, min: e.target.value })}
-                            style={{ width: "50%" }} />
-                          <input type="number" placeholder="Max" value={v.max || ""}
-                            onChange={(e) => handleFilterChange(col, { ...v, max: e.target.value })}
-                            style={{ width: "50%" }} />
+                        <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                          <div style={{ flex: 1 }}>
+                            <input type="number" placeholder="Min" value={v.min || ""}
+                              onChange={(e) => handleFilterChange(col, { ...v, min: e.target.value })}
+                              style={{ width: "100%", marginBottom: 2 }} />
+                            <input type="number" placeholder="Max" value={v.max || ""}
+                              onChange={(e) => handleFilterChange(col, { ...v, max: e.target.value })}
+                              style={{ width: "100%" }} />
+                          </div>
+                          {hasFilter && (
+                            <div style={{ display: "flex", gap: 2 }}>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: mode === "include" ? "#4CAF50" : "#ddd",
+                                  color: mode === "include" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Include mode"
+                              >
+                                ✓
+                              </button>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: mode === "exclude" ? "#f44336" : "#ddd",
+                                  color: mode === "exclude" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Exclude mode"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </th>
                     );
@@ -784,13 +870,51 @@ export default function SkuListPage() {
                     const v = typeof val === "object" ? val : { start: "", end: "" };
                     return (
                       <th key={`filter-${col}`} style={{ padding: 4 }}>
-                        <div style={{ display: "flex", gap: 6 }}>
-                          <input type="date" value={v.start || ""}
-                            onChange={(e) => handleFilterChange(col, { ...v, start: e.target.value })}
-                            style={{ width: "50%" }} />
-                          <input type="date" value={v.end || ""}
-                            onChange={(e) => handleFilterChange(col, { ...v, end: e.target.value })}
-                            style={{ width: "50%" }} />
+                        <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                          <div style={{ flex: 1 }}>
+                            <input type="date" value={v.start || ""}
+                              onChange={(e) => handleFilterChange(col, { ...v, start: e.target.value })}
+                              style={{ width: "100%", marginBottom: 2 }} />
+                            <input type="date" value={v.end || ""}
+                              onChange={(e) => handleFilterChange(col, { ...v, end: e.target.value })}
+                              style={{ width: "100%" }} />
+                          </div>
+                          {hasFilter && (
+                            <div style={{ display: "flex", gap: 2 }}>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: mode === "include" ? "#4CAF50" : "#ddd",
+                                  color: mode === "include" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Include mode"
+                              >
+                                ✓
+                              </button>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: mode === "exclude" ? "#f44336" : "#ddd",
+                                  color: mode === "exclude" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Exclude mode"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </th>
                     );
@@ -816,55 +940,95 @@ export default function SkuListPage() {
                     const isOpen = !!openSuggest[col] && inputVal.length > 0 && opts.length > 0;
                     return (
                       <th key={`filter-${col}`} style={{ padding: 4, position: "relative" }}>
-                        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                          <input
-                            type="text"
-                            placeholder={`Search ${col}...`}
-                            value={inputVal}
-                            onChange={(e) => setChipInputs((prev) => ({ ...prev, [col]: e.target.value }))}
-                            onFocus={() => setOpenSuggest((prev) => ({ ...prev, [col]: true }))}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter") {
-                                e.preventDefault();
-                                handleTokenAdd(col);
-                              }
-                              if (e.key === "Escape") {
-                                setOpenSuggest((prev) => ({ ...prev, [col]: false }));
-                              }
-                            }}
-                            style={{ width: "100%", padding: "4px 6px" }}
-                          />
-                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                            <button onClick={() => handleTokenAdd(col)}>Add</button>
-                            <button onClick={() => handleTokenClear(col)} disabled={tokens.length === 0}>Clear</button>
-                          </div>
-                        </div>
-                        {isOpen && (
-                          <div style={{ position: "absolute", zIndex: 10, background: "#fff", border: "1px solid #ccc", borderRadius: 4, width: "100%", maxHeight: 160, overflowY: "auto" }}>
-                            {opts.map((o) => (
-                              <div key={o}
-                                onMouseDown={(e) => e.preventDefault()}
-                                onClick={() => {
-                                  // clicking should not blur input before we add
-                                  const current = Array.isArray(columnFilters[col]) ? columnFilters[col] : [];
-                                  if (!current.includes(o)) handleFilterChange(col, [...current, o]);
-                                  setChipInputs((prev) => ({ ...prev, [col]: "" }));
-                                  setOpenSuggest((prev) => ({ ...prev, [col]: false }));
+                        <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                              <input
+                                type="text"
+                                placeholder={`Search ${col}...`}
+                                value={inputVal}
+                                onChange={(e) => setChipInputs((prev) => ({ ...prev, [col]: e.target.value }))}
+                                onFocus={() => setOpenSuggest((prev) => ({ ...prev, [col]: true }))}
+                                onKeyDown={(e) => {
+                                  if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    handleTokenAdd(col);
+                                  }
+                                  if (e.key === "Escape") {
+                                    setOpenSuggest((prev) => ({ ...prev, [col]: false }));
+                                  }
                                 }}
-                                style={{ padding: "6px 8px", cursor: "pointer" }}
-                              >
-                                {o}
+                                style={{ width: "100%", padding: "4px 6px" }}
+                              />
+                              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                                <button onClick={() => handleTokenAdd(col)}>Add</button>
+                                <button onClick={() => handleTokenClear(col)} disabled={tokens.length === 0}>Clear</button>
                               </div>
-                            ))}
+                            </div>
+                            {isOpen && (
+                              <div style={{ position: "absolute", zIndex: 10, background: "#fff", border: "1px solid #ccc", borderRadius: 4, width: "calc(100% - 60px)", maxHeight: 160, overflowY: "auto" }}>
+                                {opts.map((o) => (
+                                  <div key={o}
+                                    onMouseDown={(e) => e.preventDefault()}
+                                    onClick={() => {
+                                      // clicking should not blur input before we add
+                                      const current = Array.isArray(columnFilters[col]) ? columnFilters[col] : [];
+                                      if (!current.includes(o)) handleFilterChange(col, [...current, o]);
+                                      setChipInputs((prev) => ({ ...prev, [col]: "" }));
+                                      setOpenSuggest((prev) => ({ ...prev, [col]: false }));
+                                    }}
+                                    style={{ padding: "6px 8px", cursor: "pointer" }}
+                                  >
+                                    {o}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
+                              {tokens.map((t) => (
+                                <span key={t} style={{ background: "#e0e0e0", borderRadius: 12, padding: "2px 8px" }}>
+                                  {t}
+                                  <button onClick={() => handleTokenRemove(col, t)} style={{ marginLeft: 6 }}>x</button>
+                                </span>
+                              ))}
+                            </div>
                           </div>
-                        )}
-                        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
-                          {tokens.map((t) => (
-                            <span key={t} style={{ background: "#e0e0e0", borderRadius: 12, padding: "2px 8px" }}>
-                              {t}
-                              <button onClick={() => handleTokenRemove(col, t)} style={{ marginLeft: 6 }}>x</button>
-                            </span>
-                          ))}
+                          {tokens.length > 0 && (
+                            <div style={{ display: "flex", gap: 2 }}>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "include" ? "#4CAF50" : "#ddd",
+                                  color: filterMode[col] === "include" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Include mode"
+                              >
+                                ✓
+                              </button>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "exclude" ? "#f44336" : "#ddd",
+                                  color: filterMode[col] === "exclude" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Exclude mode"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </th>
                     );
@@ -872,36 +1036,112 @@ export default function SkuListPage() {
                   if (meta.type === "enum" && Array.isArray(meta.enum_values)) {
                     return (
                       <th key={`filter-${col}`} style={{ padding: 4 }}>
-                        <select multiple value={Array.isArray(val) ? val : []}
-                          onChange={(e) => {
-                            const selected = Array.from(e.target.selectedOptions).map((o) => o.value);
-                            handleFilterChange(col, selected);
-                          }}
-                          style={{ width: "100%", minHeight: 80 }}>
-                          {meta.enum_values.map((ev) => (
-                            <option key={ev} value={ev}>{ev}</option>
-                          ))}
-                        </select>
+                        <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                          <select multiple value={Array.isArray(val) ? val : []}
+                            onChange={(e) => {
+                              const selected = Array.from(e.target.selectedOptions).map((o) => o.value);
+                              handleFilterChange(col, selected);
+                            }}
+                            style={{ flex: 1, minHeight: 80 }}>
+                            {meta.enum_values.map((ev) => (
+                              <option key={ev} value={ev}>{ev}</option>
+                            ))}
+                          </select>
+                          {Array.isArray(val) && val.length > 0 && (
+                            <div style={{ display: "flex", gap: 2 }}>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "include" ? "#4CAF50" : "#ddd",
+                                  color: filterMode[col] === "include" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Include mode"
+                              >
+                                ✓
+                              </button>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "exclude" ? "#f44336" : "#ddd",
+                                  color: filterMode[col] === "exclude" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Exclude mode"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          )}
+                        </div>
                       </th>
                     );
                   }
                   // default string input
                   return (
                     <th key={`filter-${col}`} style={{ padding: 4 }}>
-                      <input
-                        type="text"
-                        placeholder={`Filter ${col}...`}
-                        value={typeof val === "string" ? val : ""}
-                        onChange={(e) => handleFilterChange(col, e.target.value)}
-                        style={{
-                          width: "100%",
-                          padding: "4px 6px",
-                          border: "1px solid #ccc",
-                          borderRadius: 3,
-                          boxSizing: "border-box",
-                          fontSize: "0.9em",
-                        }}
-                      />
+                      <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                        <input
+                          type="text"
+                          placeholder={`Filter ${col}...`}
+                          value={typeof val === "string" ? val : ""}
+                          onChange={(e) => handleFilterChange(col, e.target.value)}
+                          style={{
+                            flex: 1,
+                            padding: "4px 6px",
+                            border: "1px solid #ccc",
+                            borderRadius: 3,
+                            boxSizing: "border-box",
+                            fontSize: "0.9em",
+                          }}
+                        />
+                        {val && (
+                          <div style={{ display: "flex", gap: 2 }}>
+                            <button
+                              onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                              style={{
+                                padding: "4px 8px",
+                                background: filterMode[col] === "include" ? "#4CAF50" : "#ddd",
+                                color: filterMode[col] === "include" ? "white" : "black",
+                                border: "none",
+                                borderRadius: 3,
+                                cursor: "pointer",
+                                fontSize: "0.8em",
+                                fontWeight: "bold"
+                              }}
+                              title="Include mode"
+                            >
+                              ✓
+                            </button>
+                            <button
+                              onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                              style={{
+                                padding: "4px 8px",
+                                background: filterMode[col] === "exclude" ? "#f44336" : "#ddd",
+                                color: filterMode[col] === "exclude" ? "white" : "black",
+                                border: "none",
+                                borderRadius: 3,
+                                cursor: "pointer",
+                                fontSize: "0.8em",
+                                fontWeight: "bold"
+                              }}
+                              title="Exclude mode"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     </th>
                   );
                 })}
