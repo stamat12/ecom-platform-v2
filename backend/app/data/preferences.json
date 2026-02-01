@@ -11,14 +11,9 @@
         "Size",
         "Condition",
         "Status",
-        "Price Net",
-        "Supplier Title",
-        "Ebay Listing",
-        "Folder Images"
+        "Price Net"
       ],
-      "column_filters": {
-        "SKU (Old)": "ver0216"
-      },
+      "column_filters": {},
       "filter_mode": {},
       "page_size": 50,
       "column_widths": {}

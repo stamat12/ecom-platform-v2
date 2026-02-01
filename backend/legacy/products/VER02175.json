@@ -41,10 +41,10 @@
       "OP": ""
     },
     "Status": {
-      "Status": ""
+      "Status": null
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",

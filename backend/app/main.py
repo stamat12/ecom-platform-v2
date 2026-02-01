@@ -23,6 +23,8 @@ from app.services.folder_images_cache import get_last_update_time as get_folder_
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
 from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache
 from app.services.ebay_listings_computation import compute_ebay_listings
+from app.services.inventory_json_importer import import_jsons_to_inventory
+from app.services.excel_to_json_updater import update_jsons_from_excel
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -66,6 +68,7 @@ from app.models.ebay_sync import (
     ListingCountsResponse,
     SyncStatusRequest, SyncStatusResponse
 )
+from app.models.inventory_import import InventoryImportRequest, InventoryImportResponse
 
 # Create FastAPI app
 app = FastAPI(title="Ecom Platform API", version="1.0")
@@ -134,6 +137,27 @@ def put_sku_filters(request: SkuFilterState):
         page_size=saved.get("page_size", 50),
         column_widths=saved.get("column_widths", {}),
     )
+
+
+@app.post("/api/inventory/import-jsons", response_model=InventoryImportResponse)
+def import_inventory_jsons(request: InventoryImportRequest):
+    """Import per-SKU JSON files back into the inventory Excel sheet."""
+    result = import_jsons_to_inventory(
+        skus=request.skus,
+        append_missing=request.append_missing,
+    )
+    if not result.get("success"):
+        raise HTTPException(status_code=500, detail=result.get("message", "Import failed"))
+    return InventoryImportResponse(**result)
+
+
+@app.post("/api/inventory/export-to-jsons", response_model=InventoryImportResponse)
+def export_inventory_to_jsons(request: InventoryImportRequest):
+    """Update JSON files from Excel for Category, Status, and Lager columns."""
+    result = update_jsons_from_excel(skus=request.skus)
+    if not result.get("success"):
+        raise HTTPException(status_code=500, detail=result.get("message", "Export failed"))
+    return InventoryImportResponse(**result)
 
 
 @app.get("/api/skus", response_model=SkuListResponse)

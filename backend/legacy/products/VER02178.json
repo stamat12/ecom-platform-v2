@@ -17,7 +17,8 @@
       "Total Cost Net": 6.22
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
       "EAN": null
@@ -43,7 +44,7 @@
       "Status": null
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",

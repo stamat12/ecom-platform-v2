@@ -17,7 +17,8 @@
       "Total Cost Net": 16.22
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
       "EAN": null
@@ -43,7 +44,7 @@
       "Status": null
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",

@@ -17,7 +17,7 @@
       "Total Cost Net": "1.22"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": null
     },
     "EAN": {
       "EAN": ""
@@ -40,7 +40,7 @@
       "OP": ""
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

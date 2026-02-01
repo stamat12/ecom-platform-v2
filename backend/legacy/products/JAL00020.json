@@ -41,10 +41,10 @@
       "OP": "20.0"
     },
     "Status": {
-      "Status": ""
+      "Status": null
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "NEW BOX 001"
     },
     "Images": {
       "schema_version": "1.0",

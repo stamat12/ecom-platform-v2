@@ -41,10 +41,10 @@
       "OP": "33.0"
     },
     "Status": {
-      "Status": ""
+      "Status": null
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": null
     },
     "Images": {
       "schema_version": "1.0",
