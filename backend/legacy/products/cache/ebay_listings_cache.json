@@ -1,48 +1,6 @@
 {
-  "timestamp": "2026-01-31T23:52:20.786232",
+  "timestamp": "2026-02-01T16:20:27.300408",
   "listings": [
-    {
-      "item_id": "136686541055",
-      "sku": "VER01783",
-      "title": "Zapatillas WODEN May, Blancas, Talla 37",
-      "marketplace": "",
-      "view_url": "https://www.ebay.es/itm/Zapatillas-WODEN-May-Blancas-Talla-37-/136686541055"
-    },
-    {
-      "item_id": "136397197346",
-      "sku": "VER00974",
-      "title": "J. Lindeberg Sitkin Veste De Ski, Bleu / Noir, Taille M",
-      "marketplace": "",
-      "view_url": "https://www.ebay.fr/itm/J-Lindeberg-Sitkin-Veste-De-Ski-Bleu-Noir-Taille-M-/136397197346"
-    },
-    {
-      "item_id": "136397197347",
-      "sku": "VER01104",
-      "title": "Pat Calvin Chaussures À Lacets, Beige, Taille 44",
-      "marketplace": "",
-      "view_url": "https://www.ebay.fr/itm/Pat-Calvin-Chaussures-Lacets-Beige-Taille-44-/136397197347"
-    },
-    {
-      "item_id": "136397197348",
-      "sku": "VER00974",
-      "title": "J.Lindeberg Sitkin Chaqueta De Esquí, Azul / Negro, Talla M",
-      "marketplace": "",
-      "view_url": "https://www.ebay.es/itm/J-Lindeberg-Sitkin-Chaqueta-De-Esqu-Azul-Negro-Talla-M-/136397197348"
-    },
-    {
-      "item_id": "136397197358",
-      "sku": "VER00974",
-      "title": "J.Lindeberg Sitkin Giacca Da Sci, Blu / Nero, Taglia M",
-      "marketplace": "",
-      "view_url": "https://www.ebay.it/itm/J-Lindeberg-Sitkin-Giacca-Da-Sci-Blu-Nero-Taglia-M-/136397197358"
-    },
-    {
-      "item_id": "136397197390",
-      "sku": "VER01104",
-      "title": "Pat Calvin Zapatos De Cordones, Beige, Talla 44",
-      "marketplace": "",
-      "view_url": "https://www.ebay.es/itm/Pat-Calvin-Zapatos-De-Cordones-Beige-Talla-44-/136397197390"
-    },
     {
       "item_id": "136261547131",
       "sku": "HAN000364",
@@ -8302,6 +8260,104 @@
       "title": "Nike Park 20 Poloshirt Herren, Marinenblau, Größe S",
       "marketplace": "",
       "view_url": "https://www.ebay.de/itm/Nike-Park-20-Poloshirt-Herren-Marinenblau-Gr-e-S-/136386602802"
+    },
+    {
+      "item_id": "137002779614",
+      "sku": "VER01660",
+      "title": "G-Star RAW Lune Nylon AF Parka, Noir, Taille M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.fr/itm/G-Star-RAW-Lune-Nylon-AF-Parka-Noir-Taille-M-/137002779614"
+    },
+    {
+      "item_id": "137002901046",
+      "sku": "VER01660",
+      "title": "G-Star RAW Lune Nylon AF Parka, Nero, Taglia M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.it/itm/G-Star-RAW-Lune-Nylon-AF-Parka-Nero-Taglia-M-/137002901046"
+    },
+    {
+      "item_id": "137003108084",
+      "sku": "VER01660",
+      "title": "G-Star RAW Lune Nylon AF Parka, Negro, Tamaño M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/G-Star-RAW-Lune-Nylon-AF-Parka-Negro-Tama-o-M-/137003108084"
+    },
+    {
+      "item_id": "136686541055",
+      "sku": "VER01783",
+      "title": "Zapatillas WODEN May, Blancas, Talla 37",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/Zapatillas-WODEN-May-Blancas-Talla-37-/136686541055"
+    },
+    {
+      "item_id": "136397197346",
+      "sku": "VER00974",
+      "title": "J. Lindeberg Sitkin Veste De Ski, Bleu / Noir, Taille M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.fr/itm/J-Lindeberg-Sitkin-Veste-De-Ski-Bleu-Noir-Taille-M-/136397197346"
+    },
+    {
+      "item_id": "136397197347",
+      "sku": "VER01104",
+      "title": "Pat Calvin Chaussures À Lacets, Beige, Taille 44",
+      "marketplace": "",
+      "view_url": "https://www.ebay.fr/itm/Pat-Calvin-Chaussures-Lacets-Beige-Taille-44-/136397197347"
+    },
+    {
+      "item_id": "136397197348",
+      "sku": "VER00974",
+      "title": "J.Lindeberg Sitkin Chaqueta De Esquí, Azul / Negro, Talla M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/J-Lindeberg-Sitkin-Chaqueta-De-Esqu-Azul-Negro-Talla-M-/136397197348"
+    },
+    {
+      "item_id": "136397197358",
+      "sku": "VER00974",
+      "title": "J.Lindeberg Sitkin Giacca Da Sci, Blu / Nero, Taglia M",
+      "marketplace": "",
+      "view_url": "https://www.ebay.it/itm/J-Lindeberg-Sitkin-Giacca-Da-Sci-Blu-Nero-Taglia-M-/136397197358"
+    },
+    {
+      "item_id": "136397197390",
+      "sku": "VER01104",
+      "title": "Pat Calvin Zapatos De Cordones, Beige, Talla 44",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/Pat-Calvin-Zapatos-De-Cordones-Beige-Talla-44-/136397197390"
+    },
+    {
+      "item_id": "137002705773",
+      "sku": "VER02173",
+      "title": "Lawrence Grey Business Schuhe Herren, schwarz, Größe 44",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Lawrence-Grey-Business-Schuhe-Herren-schwarz-Gr-e-44-/137002705773"
+    },
+    {
+      "item_id": "137002712428",
+      "sku": "VER02174",
+      "title": "Lawrence Grey Lawrence Grey Schnürschuhe Herren, schwarz, Größe 44",
+      "marketplace": "",
+      "view_url": "https://www.ebay.de/itm/Lawrence-Grey-Lawrence-Grey-Schn-rschuhe-Herren-schwarz-Gr-e-44-/137002712428"
+    },
+    {
+      "item_id": "137004027358",
+      "sku": "VER02166",
+      "title": "Zapatillas On Cloudmonster Para Hombre, Blanco Azul, Talla 44.5",
+      "marketplace": "",
+      "view_url": "https://www.ebay.es/itm/Zapatillas-On-Cloudmonster-Para-Hombre-Blanco-Azul-Talla-44-5-/137004027358"
+    },
+    {
+      "item_id": "137004226445",
+      "sku": "VER02166",
+      "title": "On Cloudmonster Baskets Pour Hommes, Blanc Bleu, Taille 44.5",
+      "marketplace": "",
+      "view_url": "https://www.ebay.fr/itm/On-Cloudmonster-Baskets-Pour-Hommes-Blanc-Bleu-Taille-44-5-/137004226445"
+    },
+    {
+      "item_id": "137004389892",
+      "sku": "VER02166",
+      "title": "On Cloudmonster Sneakers Uomo, Bianco Blu, Taglia 44.5",
+      "marketplace": "",
+      "view_url": "https://www.ebay.it/itm/On-Cloudmonster-Sneakers-Uomo-Bianco-Blu-Taglia-44-5-/137004389892"
     }
   ]
 }

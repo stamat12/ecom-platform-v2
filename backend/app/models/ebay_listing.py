@@ -69,6 +69,7 @@ class CreateListingRequest(BaseModel):
     custom_description: Optional[str] = None
     best_offer_enabled: bool = True
     quantity: int = Field(default=1, ge=1)
+    ean: Optional[str] = Field(default=None, description="European Article Number (EAN/UPC/ISBN)")
 
 
 class ListingPreviewRequest(BaseModel):

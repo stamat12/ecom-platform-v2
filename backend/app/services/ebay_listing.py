@@ -589,7 +589,8 @@ def create_listing(
     custom_description: Optional[str] = None,
     best_offer_enabled: bool = True,
     quantity: int = DEFAULT_QUANTITY,
-    ebay_sku: Optional[str] = None
+    ebay_sku: Optional[str] = None,
+    ean: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Create eBay listing from product JSON
@@ -660,6 +661,11 @@ def create_listing(
     item_specifics_lines = ["<ItemSpecifics>"]
     required_fields = ebay_fields.get("required", {})
     optional_fields = ebay_fields.get("optional", {})
+    
+    # Add EAN if provided (important for many eBay categories)
+    if ean:
+        required_fields = dict(required_fields)  # Make a copy
+        required_fields["EAN"] = ean
     
     for name, value in required_fields.items():
         if value:

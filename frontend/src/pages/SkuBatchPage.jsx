@@ -84,8 +84,9 @@ export default function SkuBatchPage() {
   const [ebayEditingFields, setEbayEditingFields] = useState({}); // { sku: boolean }
   const [ebayEditedFields, setEbayEditedFields] = useState({}); // { sku: { required: {}, optional: {} } }
   const [ebaySavingFields, setEbaySavingFields] = useState({}); // { sku: boolean }
-  const [ebayListingData, setEbayListingData] = useState({}); // { sku: { price, quantity, condition } }
+  const [ebayListingData, setEbayListingData] = useState({}); // { sku: { price, quantity, condition, ean, modified_sku, schedule_date } }
   const [ebayCreatingListing, setEbayCreatingListing] = useState({}); // { sku: boolean }
+  const [uploadProgress, setUploadProgress] = useState({}); // { sku: { show, message, step, total } }
 
   // Calculate total selected images across all SKUs
   const totalSelectedImages = useMemo(() => {
@@ -668,31 +669,65 @@ export default function SkuBatchPage() {
     
     try {
       setEbayCreatingListing(prev => ({ ...prev, [sku]: true }));
+      setUploadProgress(prev => ({ ...prev, [sku]: { show: true, message: "Preparing listing data...", step: 1, total: 4 } }));
+      
+      await new Promise(resolve => setTimeout(resolve, 300));
+      setUploadProgress(prev => ({ ...prev, [sku]: { show: true, message: "Uploading images to eBay...", step: 2, total: 4 } }));
+      
+      const requestBody = {
+        sku,
+        price: parseFloat(listingData.price),
+        quantity: parseInt(listingData.quantity || "1"),
+        condition: listingData.condition || "1000"
+      };
+      
+      // Add modified SKU if provided
+      if (listingData.modified_sku && listingData.modified_sku.trim()) {
+        requestBody.ebay_sku = listingData.modified_sku.trim();
+      }
+      
+      // Add schedule days if date provided
+      if (listingData.schedule_date) {
+        const scheduleDays = Math.ceil((new Date(listingData.schedule_date) - new Date()) / (1000 * 60 * 60 * 24));
+        requestBody.schedule_days = Math.max(0, scheduleDays);
+      } else {
+        requestBody.schedule_days = 0; // Upload immediately
+      }
+      
+      // Add EAN if provided
+      if (listingData.ean && listingData.ean.trim()) {
+        requestBody.ean = listingData.ean.trim();
+      }
+      
       const res = await fetch("/api/ebay/listings/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          sku,
-          price: parseFloat(listingData.price),
-          quantity: parseInt(listingData.quantity || "1"),
-          condition: listingData.condition || "Neu"
-        })
+        body: JSON.stringify(requestBody)
       });
+      
+      setUploadProgress(prev => ({ ...prev, [sku]: { show: true, message: "Creating eBay listing...", step: 3, total: 4 } }));
       
       if (res.ok) {
         const data = await res.json();
         if (data.listing_id) {
+          setUploadProgress(prev => ({ ...prev, [sku]: { show: true, message: "✅ Listing created successfully!", step: 4, total: 4 } }));
+          await new Promise(resolve => setTimeout(resolve, 1000));
           alert(`✅ Listing created! ID: ${data.listing_id}`);
           window.open(`https://www.ebay.de/itm/${data.listing_id}`, "_blank");
         }
       } else {
         const err = await res.json();
+        setUploadProgress(prev => ({ ...prev, [sku]: { show: false, message: "", step: 0, total: 0 } }));
         alert(`❌ ${err.detail || "Listing creation failed"}`);
       }
     } catch (e) {
+      setUploadProgress(prev => ({ ...prev, [sku]: { show: false, message: "", step: 0, total: 0 } }));
       alert(`Error: ${e.message}`);
     } finally {
       setEbayCreatingListing(prev => ({ ...prev, [sku]: false }));
+      setTimeout(() => {
+        setUploadProgress(prev => ({ ...prev, [sku]: { show: false, message: "", step: 0, total: 0 } }));
+      }, 2000);
     }
   };
 
@@ -1812,6 +1847,7 @@ export default function SkuBatchPage() {
                     {/* Create Listing Section */}
                     <div style={{ borderTop: "1px solid #e0e0e0", paddingTop: 12 }}>
                       <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>Create eBay Listing</div>
+
                       <div style={{ background: "#f4f8ff", padding: 8, borderRadius: 6, border: "1px solid #e3ecff", marginBottom: 8 }}>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
                           <div>
@@ -1863,7 +1899,7 @@ export default function SkuBatchPage() {
                               value={ebayListingData[sku]?.shipping_costs_net ?? ""}
                               onChange={(e) => setEbayListingData(prev => ({
                                 ...prev,
-                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "Neu" }), shipping_costs_net: e.target.value }
+                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), shipping_costs_net: e.target.value }
                               }))}
                               style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
                               placeholder="0.00"
@@ -1877,7 +1913,7 @@ export default function SkuBatchPage() {
                               value={ebayListingData[sku]?.price || ""}
                               onChange={(e) => setEbayListingData(prev => ({
                                 ...prev,
-                                [sku]: { ...(prev[sku] || { quantity: "1", condition: "Neu" }), price: e.target.value }
+                                [sku]: { ...(prev[sku] || { quantity: "1", condition: "1000" }), price: e.target.value }
                               }))}
                               style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
                               placeholder="29.99"
@@ -1900,7 +1936,7 @@ export default function SkuBatchPage() {
                         </div>
                       </div>
 
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 8, alignItems: "end" }}>
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 8, alignItems: "end", marginBottom: 12 }}>
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Qty</label>
                           <input
@@ -1909,7 +1945,7 @@ export default function SkuBatchPage() {
                             value={ebayListingData[sku]?.quantity || "1"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", condition: conditionFromProduct || "Neu" }), quantity: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", condition: conditionFromProduct || "1000" }), quantity: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                           />
@@ -1918,39 +1954,124 @@ export default function SkuBatchPage() {
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
                           <select
-                            value={ebayListingData[sku]?.condition || conditionFromProduct || "Neu"}
+                            value={ebayListingData[sku]?.condition || conditionFromProduct || "1000"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
                               [sku]: { ...(prev[sku] || { price: "", quantity: "1" }), condition: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                           >
-                            <option value="Neu">Neu</option>
-                            <option value="Neu mit Etikett">Neu mit Etikett</option>
-                            <option value="Neuwertig">Neuwertig</option>
-                            <option value="Gut">Gut</option>
-                            <option value="Sehr gut">Sehr gut</option>
-                            <option value="Akzeptabel">Akzeptabel</option>
+                            <option value="">-- Select Condition --</option>
+                            <option value="1000">1000 - New</option>
+                            <option value="1500">1500 - New other</option>
+                            <option value="1750">1750 - New with defects</option>
+                            <option value="2000">2000 - Certified Refurbished</option>
+                            <option value="2500">2500 - Seller Refurbished</option>
+                            <option value="2750">2750 - Like New</option>
+                            <option value="3000">3000 - Used</option>
+                            <option value="4000">4000 - Very Good</option>
+                            <option value="5000">5000 - Good</option>
+                            <option value="6000">6000 - Acceptable</option>
+                            <option value="7000">7000 - For parts / not working</option>
                           </select>
                         </div>
 
-                        <button
-                          onClick={() => handleEbayCreateListing(sku)}
-                          disabled={ebayCreatingListing[sku] || !ebayListingData[sku]?.price}
-                          style={{
-                            padding: "8px 12px",
-                            fontSize: 11,
-                            background: "#ff6b00",
-                            color: "white",
-                            border: "none",
-                            borderRadius: 4,
-                            cursor: (ebayCreatingListing[sku] || !ebayListingData[sku]?.price) ? "not-allowed" : "pointer",
-                            fontWeight: "bold"
-                          }}
-                        >
-                          {ebayCreatingListing[sku] ? "Creating..." : "📤 Create Listing"}
-                        </button>
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>
+                            EAN <span style={{ color: "#999", fontWeight: "normal" }}>(opt)</span>
+                          </label>
+                          <input
+                            type="text"
+                            value={ebayListingData[sku]?.ean || ""}
+                            onChange={(e) => setEbayListingData(prev => ({
+                              ...prev,
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), ean: e.target.value }
+                            }))}
+                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                            placeholder="e.g. 4005900071439"
+                          />
+                        </div>
+
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>
+                            Modified SKU <span style={{ color: "#999", fontWeight: "normal" }}>(opt)</span>
+                          </label>
+                          <input
+                            type="text"
+                            value={ebayListingData[sku]?.modified_sku || ""}
+                            onChange={(e) => setEbayListingData(prev => ({
+                              ...prev,
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), modified_sku: e.target.value }
+                            }))}
+                            style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                            placeholder={sku}
+                            title={`Default: ${sku}`}
+                          />
+                        </div>
                       </div>
+
+                      <div style={{ marginBottom: 12 }}>
+                        <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>
+                          Schedule Upload <span style={{ color: "#999", fontWeight: "normal" }}>(optional)</span>
+                        </label>
+                        <input
+                          type="datetime-local"
+                          value={ebayListingData[sku]?.schedule_date || ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "Neu" }), schedule_date: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                        />
+                      </div>
+
+                      {uploadProgress[sku]?.show && (
+                        <div style={{
+                          padding: "10px",
+                          background: "#f0f8ff",
+                          border: "1px solid #4a90e2",
+                          borderRadius: 4,
+                          marginBottom: 8,
+                          marginTop: 8
+                        }}>
+                          <div style={{ fontSize: 10, fontWeight: "bold", marginBottom: 5, color: "#2c5282" }}>
+                            {uploadProgress[sku].message}
+                          </div>
+                          <div style={{ background: "#e0e0e0", borderRadius: 8, height: 16, overflow: "hidden" }}>
+                            <div style={{
+                              background: "linear-gradient(90deg, #4a90e2, #357abd)",
+                              height: "100%",
+                              width: `${(uploadProgress[sku].step / uploadProgress[sku].total) * 100}%`,
+                              transition: "width 0.3s ease",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              color: "white",
+                              fontSize: 9,
+                              fontWeight: "bold"
+                            }}>
+                              {uploadProgress[sku].step}/{uploadProgress[sku].total}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      <button
+                        onClick={() => handleEbayCreateListing(sku)}
+                        disabled={ebayCreatingListing[sku] || !ebayListingData[sku]?.price}
+                        style={{
+                          padding: "8px 12px",
+                          fontSize: 11,
+                          background: "#ff6b00",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 4,
+                          cursor: (ebayCreatingListing[sku] || !ebayListingData[sku]?.price) ? "not-allowed" : "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        {ebayCreatingListing[sku] ? "Creating..." : "📤 Create Listing"}
+                      </button>
                     </div>
                   </div>
                 )}

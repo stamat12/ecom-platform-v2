@@ -1039,7 +1039,8 @@ def create_ebay_listing(request: CreateListingRequest):
             custom_description=request.custom_description,
             best_offer_enabled=request.best_offer_enabled,
             quantity=request.quantity,
-            ebay_sku=request.ebay_sku
+            ebay_sku=request.ebay_sku,
+            ean=request.ean
         )
         
         return CreateListingResponse(**result)
@@ -1111,7 +1112,7 @@ def get_folder_images_status():
     }
 
 
-@app.post("/api/skus/folder-images/compute")
+@app.get("/api/skus/folder-images/compute")
 def compute_folder_images():
     """Compute folder images for all SKUs with SSE progress updates"""
     def event_stream():
@@ -1141,7 +1142,7 @@ def get_ebay_listings_status():
     }
 
 
-@app.post("/api/skus/ebay-listings/compute")
+@app.get("/api/skus/ebay-listings/compute")
 def compute_ebay_listings_endpoint():
     """Fetch eBay listings and update cache with SSE progress updates"""
     def event_stream():

@@ -96,8 +96,23 @@ EBAY_PAYMENT_POLICY_NAME = "EbayZahlungen"
 EBAY_RETURN_POLICY_NAME = "14TageRücknahme"
 EBAY_SHIPPING_POLICY_NAME = "Deutschland_bis50cm_KOSTENLOS"
 
-# eBay Condition Mapping: German text to eBay ConditionID
+# eBay Condition Mapping: ID to Name and Description
 CONDITION_MAPPING = {
+    1000: {"name": "New", "description": "Brand new, unopened, original retail packaging."},
+    1500: {"name": "New other", "description": "New/unused but packaging may be open or missing."},
+    1750: {"name": "New with defects", "description": "New with cosmetic flaws (common in Clothing & Shoes)."},
+    2000: {"name": "Certified Refurbished", "description": "Must be manufacturer-approved (requires special permissions)."},
+    2500: {"name": "Seller Refurbished", "description": "Restored to working order by the seller."},
+    2750: {"name": "Like New", "description": "Looks untouched (common in Books, Movies, Music)."},
+    3000: {"name": "Used", "description": "Previously used, operational but has wear."},
+    4000: {"name": "Very Good", "description": "Minimal signs of wear (common in Media & Electronics)."},
+    5000: {"name": "Good", "description": "Functional but visible scuffs/scratches."},
+    6000: {"name": "Acceptable", "description": "Significant wear but still works."},
+    7000: {"name": "For parts / not working", "description": "Defective or missing essential components."},
+}
+
+# Legacy German condition mapping (kept for backwards compatibility if needed)
+CONDITION_MAPPING_LEGACY = {
     "Neu mit Karton": 1000,
     "Neu mit Etiketten": 1000,
     "Neu ohne Karton": 1500,

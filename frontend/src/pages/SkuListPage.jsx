@@ -8,6 +8,14 @@ export default function SkuListPage() {
   const [pageSize, setPageSize] = useState(50);
   const [total, setTotal] = useState(0);
   const [selectedSkus, setSelectedSkus] = useState([]);
+  const [folderImagesComputing, setFolderImagesComputing] = useState(false);
+  const [folderImagesStatus, setFolderImagesStatus] = useState({});
+  const [folderImagesProgress, setFolderImagesProgress] = useState({ current: 0, total: 0 });
+  const [ebayListingsComputing, setEbayListingsComputing] = useState(false);
+  const [ebayListingsStatus, setEbayListingsStatus] = useState({});
+  const [ebayListingsProgress, setEbayListingsProgress] = useState({ current: 0, total: 0 });
+  const [inventoryImporting, setInventoryImporting] = useState(false);
+  const [inventoryExporting, setInventoryExporting] = useState(false);
   const navigate = useNavigate();
   const hasRestoredState = useRef(false);
 
@@ -357,6 +365,29 @@ export default function SkuListPage() {
     };
   }, []);
 
+  // Load initial status timestamps on mount
+  useEffect(() => {
+    const loadStatus = async () => {
+      try {
+        const folderRes = await fetch("/api/skus/folder-images/status");
+        const folderData = await folderRes.json();
+        setFolderImagesStatus(folderData);
+      } catch (e) {
+        console.error("Error loading folder images status:", e);
+      }
+
+      try {
+        const ebayRes = await fetch("/api/skus/ebay-listings/status");
+        const ebayData = await ebayRes.json();
+        setEbayListingsStatus(ebayData);
+      } catch (e) {
+        console.error("Error loading eBay listings status:", e);
+      }
+    };
+    
+    loadStatus();
+  }, []);
+
   const pageSkus = rows
     .map((row) => row["SKU"] ?? row["SKU (Old)"])
     .filter(Boolean);
@@ -387,6 +418,111 @@ export default function SkuListPage() {
     navigate(`/skus/${encodeURIComponent(first)}`, { state: { selectedSkus } });
   };
 
+  const computeFolderImages = async () => {
+    setFolderImagesComputing(true);
+    try {
+      const eventSource = new EventSource("/api/skus/folder-images/compute");
+      
+      eventSource.onmessage = (event) => {
+        try {
+          const progress = JSON.parse(event.data);
+          setFolderImagesProgress(progress);
+          if (progress.status === "completed") {
+            setFolderImagesStatus(progress);
+            eventSource.close();
+            alert(`✅ Computed folder images for ${progress.processed} SKUs`);
+          }
+        } catch (e) {
+          console.error("Error parsing progress:", e);
+        }
+      };
+
+      eventSource.onerror = () => {
+        eventSource.close();
+        setFolderImagesComputing(false);
+      };
+    } catch (error) {
+      console.error("Error computing folder images:", error);
+      alert(`Error: ${error.message}`);
+      setFolderImagesComputing(false);
+    }
+  };
+
+  const computeEbayListings = async () => {
+    setEbayListingsComputing(true);
+    try {
+      const eventSource = new EventSource("/api/skus/ebay-listings/compute");
+      
+      eventSource.onmessage = (event) => {
+        try {
+          const progress = JSON.parse(event.data);
+          setEbayListingsProgress(progress);
+          if (progress.status === "completed") {
+            setEbayListingsStatus(progress);
+            eventSource.close();
+            alert(`✅ Synced eBay listings for ${progress.processed} SKUs`);
+            setEbayListingsComputing(false);
+          }
+        } catch (e) {
+          console.error("Error parsing progress:", e);
+        }
+      };
+
+      eventSource.onerror = () => {
+        eventSource.close();
+        setEbayListingsComputing(false);
+      };
+    } catch (error) {
+      console.error("Error computing eBay listings:", error);
+      alert(`Error: ${error.message}`);
+      setEbayListingsComputing(false);
+    }
+  };
+
+  const importInventoryFromJsons = async () => {
+    setInventoryImporting(true);
+    try {
+      const res = await fetch("/api/inventory/import-jsons", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({})
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        alert(data.message || "Inventory updated from JSONs");
+      } else {
+        alert(data.detail || data.message || "Inventory import failed");
+      }
+    } catch (error) {
+      console.error("Error importing inventory JSONs:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setInventoryImporting(false);
+    }
+  };
+
+  const exportInventoryToJsons = async () => {
+    setInventoryExporting(true);
+    try {
+      const res = await fetch("/api/inventory/export-to-jsons", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({})
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        alert(data.message || "JSONs updated from Excel");
+      } else {
+        alert(data.detail || data.message || "Export to JSONs failed");
+      }
+    } catch (error) {
+      console.error("Error exporting to JSONs:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setInventoryExporting(false);
+    }
+  };
+
   if (err) {
     return <div style={{ color: "red" }}>Error: {err}</div>;
   }
@@ -394,6 +530,81 @@ export default function SkuListPage() {
   return (
     <div>
       <h3>SKUs (Total: {total})</h3>
+
+      <div style={{ marginBottom: 12, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <button
+          onClick={computeFolderImages}
+          disabled={folderImagesComputing}
+          style={{ padding: "6px 10px", background: "#4CAF50", color: "white", border: "none", borderRadius: 4, cursor: folderImagesComputing ? "not-allowed" : "pointer" }}
+        >
+          {folderImagesComputing ? "Computing..." : "Compute Folder Images"}
+        </button>
+        {folderImagesStatus.last_update && (
+          <span style={{ fontSize: "0.9em", color: "#666" }}>
+            Last updated: {new Date(folderImagesStatus.last_update).toLocaleString()}
+          </span>
+        )}
+        {folderImagesComputing && folderImagesProgress.total > 0 && (
+          <div style={{ flex: 1, maxWidth: 300 }}>
+            <div style={{ fontSize: "0.9em", marginBottom: 4 }}>
+              Processing: {folderImagesProgress.current} / {folderImagesProgress.total}
+            </div>
+            <div style={{ width: "100%", height: 20, background: "#e0e0e0", borderRadius: 4, overflow: "hidden" }}>
+              <div
+                style={{
+                  height: "100%",
+                  background: "#4CAF50",
+                  width: `${(folderImagesProgress.current / folderImagesProgress.total) * 100}%`,
+                  transition: "width 0.3s ease"
+                }}
+              />
+            </div>
+          </div>
+        )}
+        <button
+          onClick={computeEbayListings}
+          disabled={ebayListingsComputing}
+          style={{ padding: "6px 10px", background: "#FF9800", color: "white", border: "none", borderRadius: 4, cursor: ebayListingsComputing ? "not-allowed" : "pointer" }}
+        >
+          {ebayListingsComputing ? "Fetching..." : "Fetch eBay Listings"}
+        </button>
+        {ebayListingsStatus.last_update && (
+          <span style={{ fontSize: "0.9em", color: "#666" }}>
+            Last eBay sync: {new Date(ebayListingsStatus.last_update).toLocaleString()}
+          </span>
+        )}
+        {ebayListingsComputing && ebayListingsProgress.total > 0 && (
+          <div style={{ flex: 1, maxWidth: 300 }}>
+            <div style={{ fontSize: "0.9em", marginBottom: 4 }}>
+              Processing: {ebayListingsProgress.current} / {ebayListingsProgress.total}
+            </div>
+            <div style={{ width: "100%", height: 20, background: "#e0e0e0", borderRadius: 4, overflow: "hidden" }}>
+              <div
+                style={{
+                  height: "100%",
+                  background: "#FF9800",
+                  width: `${(ebayListingsProgress.current / ebayListingsProgress.total) * 100}%`,
+                  transition: "width 0.3s ease"
+                }}
+              />
+            </div>
+          </div>
+        )}
+        <button
+          onClick={importInventoryFromJsons}
+          disabled={inventoryImporting}
+          style={{ padding: "6px 10px", cursor: inventoryImporting ? "not-allowed" : "pointer", background: "#1976d2", color: "white", border: "none", borderRadius: 4 }}
+        >
+          {inventoryImporting ? "Updating Excel..." : "📥 Update Excel from JSON (All SKUs)"}
+        </button>
+        <button
+          onClick={exportInventoryToJsons}
+          disabled={inventoryExporting}
+          style={{ padding: "6px 10px", cursor: inventoryExporting ? "not-allowed" : "pointer", background: "#ff9800", color: "white", border: "none", borderRadius: 4 }}
+        >
+          {inventoryExporting ? "Updating JSONs..." : "📤 Update JSONs from Excel (Category, Status, Lager)"}
+        </button>
+      </div>
 
       <div style={{ marginBottom: 12, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <button

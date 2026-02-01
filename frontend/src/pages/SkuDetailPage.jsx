@@ -59,8 +59,11 @@ export default function SkuDetailPage() {
   const [ebayEditingFields, setEbayEditingFields] = useState(false);
   const [ebayEditedFields, setEbayEditedFields] = useState({});
   const [ebaySavingFields, setEbaySavingFields] = useState(false);
-  const [ebayListingData, setEbayListingData] = useState({ price: "", quantity: "1", condition: "Neu" });
+  const [ebayListingData, setEbayListingData] = useState({ price: "", quantity: "1", condition: "1000", ean: "" });
   const [ebayCreatingListing, setEbayCreatingListing] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState({ show: false, message: "", step: 0, total: 0 });
+  const [modifiedSku, setModifiedSku] = useState("");
+  const [scheduleDate, setScheduleDate] = useState("");
 
   const handleGenerateJson = async () => {
     setGeneratingJson(true);
@@ -174,31 +177,63 @@ export default function SkuDetailPage() {
     
     try {
       setEbayCreatingListing(true);
+      setUploadProgress({ show: true, message: "Preparing listing data...", step: 1, total: 4 });
+      
+      await new Promise(resolve => setTimeout(resolve, 300)); // Brief pause for UI
+      setUploadProgress({ show: true, message: "Uploading images to eBay...", step: 2, total: 4 });
+      
+      const requestBody = {
+        sku,
+        price: parseFloat(ebayListingData.price),
+        quantity: parseInt(ebayListingData.quantity),
+        condition: ebayListingData.condition
+      };
+      
+      // Add modified SKU if provided
+      if (modifiedSku && modifiedSku.trim()) {
+        requestBody.ebay_sku = modifiedSku.trim();
+      }
+      
+      // Add schedule days if date provided
+      if (scheduleDate) {
+        const scheduleDays = Math.ceil((new Date(scheduleDate) - new Date()) / (1000 * 60 * 60 * 24));
+        requestBody.schedule_days = Math.max(0, scheduleDays);
+      } else {
+        requestBody.schedule_days = 0; // Upload immediately
+      }
+      
+      // Add EAN if provided
+      if (ebayListingData.ean && ebayListingData.ean.trim()) {
+        requestBody.ean = ebayListingData.ean.trim();
+      }
+      
       const res = await fetch("/api/ebay/listings/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          sku,
-          price: parseFloat(ebayListingData.price),
-          quantity: parseInt(ebayListingData.quantity),
-          condition: ebayListingData.condition
-        })
+        body: JSON.stringify(requestBody)
       });
+      
+      setUploadProgress({ show: true, message: "Creating eBay listing...", step: 3, total: 4 });
       
       if (res.ok) {
         const data = await res.json();
         if (data.listing_id) {
+          setUploadProgress({ show: true, message: "✅ Listing created successfully!", step: 4, total: 4 });
+          await new Promise(resolve => setTimeout(resolve, 1000));
           alert(`✅ Listing created! ID: ${data.listing_id}`);
           window.open(`https://www.ebay.de/itm/${data.listing_id}`, "_blank");
         }
       } else {
         const err = await res.json();
+        setUploadProgress({ show: false, message: "", step: 0, total: 0 });
         alert(`❌ ${err.detail || "Listing creation failed"}`);
       }
     } catch (e) {
+      setUploadProgress({ show: false, message: "", step: 0, total: 0 });
       alert(`Error: ${e.message}`);
     } finally {
       setEbayCreatingListing(false);
+      setTimeout(() => setUploadProgress({ show: false, message: "", step: 0, total: 0 }), 2000);
     }
   };
 
@@ -1173,32 +1208,103 @@ export default function SkuDetailPage() {
                   />
                 </div>
 
-                <div style={{ marginBottom: 8 }}>
-                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Quantity</label>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 8, marginBottom: 12 }}>
+                  <div>
+                    <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Quantity</label>
+                    <input
+                      type="number"
+                      min="1"
+                      value={ebayListingData.quantity}
+                      onChange={(e) => setEbayListingData({...ebayListingData, quantity: e.target.value})}
+                      style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
+                    <select
+                      value={ebayListingData.condition}
+                      onChange={(e) => setEbayListingData({...ebayListingData, condition: e.target.value})}
+                      style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                    >
+                      <option value="">-- Select Condition --</option>
+                      <option value="1000">1000 - New</option>
+                      <option value="1500">1500 - New other</option>
+                      <option value="1750">1750 - New with defects</option>
+                      <option value="2000">2000 - Certified Refurbished</option>
+                      <option value="2500">2500 - Seller Refurbished</option>
+                      <option value="2750">2750 - Like New</option>
+                      <option value="3000">3000 - Used</option>
+                      <option value="4000">4000 - Very Good</option>
+                      <option value="5000">5000 - Good</option>
+                      <option value="6000">6000 - Acceptable</option>
+                      <option value="7000">7000 - For parts / not working</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>EAN <span style={{ color: "#999", fontWeight: "normal" }}>(opt)</span></label>
+                    <input
+                      type="text"
+                      value={ebayListingData.ean}
+                      onChange={(e) => setEbayListingData({...ebayListingData, ean: e.target.value})}
+                      style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                      placeholder="e.g. 4005900071439"
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Modified SKU <span style={{ color: "#999", fontWeight: "normal" }}>(opt)</span></label>
+                    <input
+                      type="text"
+                      value={modifiedSku}
+                      onChange={(e) => setModifiedSku(e.target.value)}
+                      style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
+                      placeholder={sku}
+                      title={`Default: ${sku}`}
+                    />
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: 12 }}>
+                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Schedule Upload <span style={{ color: "#999", fontWeight: "normal" }}>(optional - leave empty for immediate upload)</span></label>
                   <input
-                    type="number"
-                    min="1"
-                    value={ebayListingData.quantity}
-                    onChange={(e) => setEbayListingData({...ebayListingData, quantity: e.target.value})}
+                    type="datetime-local"
+                    value={scheduleDate}
+                    onChange={(e) => setScheduleDate(e.target.value)}
                     style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
                   />
                 </div>
 
-                <div style={{ marginBottom: 12 }}>
-                  <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
-                  <select
-                    value={ebayListingData.condition}
-                    onChange={(e) => setEbayListingData({...ebayListingData, condition: e.target.value})}
-                    style={{ width: "100%", padding: "6px", fontSize: 11, border: "1px solid #ddd", borderRadius: 3 }}
-                  >
-                    <option value="Neu">Neu</option>
-                    <option value="Neu mit Etikett">Neu mit Etikett</option>
-                    <option value="Neuwertig">Neuwertig</option>
-                    <option value="Gut">Gut</option>
-                    <option value="Sehr gut">Sehr gut</option>
-                    <option value="Akzeptabel">Akzeptabel</option>
-                  </select>
-                </div>
+                {uploadProgress.show && (
+                  <div style={{
+                    padding: "12px",
+                    background: "#f0f8ff",
+                    border: "1px solid #4a90e2",
+                    borderRadius: 4,
+                    marginBottom: 10
+                  }}>
+                    <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 6, color: "#2c5282" }}>
+                      {uploadProgress.message}
+                    </div>
+                    <div style={{ background: "#e0e0e0", borderRadius: 10, height: 20, overflow: "hidden" }}>
+                      <div style={{
+                        background: "linear-gradient(90deg, #4a90e2, #357abd)",
+                        height: "100%",
+                        width: `${(uploadProgress.step / uploadProgress.total) * 100}%`,
+                        transition: "width 0.3s ease",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "white",
+                        fontSize: 10,
+                        fontWeight: "bold"
+                      }}>
+                        {uploadProgress.step}/{uploadProgress.total}
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <button
                   onClick={handleEbayCreateListing}
