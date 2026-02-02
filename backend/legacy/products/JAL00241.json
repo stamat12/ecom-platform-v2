@@ -49,18 +49,18 @@
       "schema_version": "1.0",
       "summary": {
         "has_stock": true,
-        "has_phone": true,
+        "has_phone": false,
         "has_enhanced": false,
-        "count_stock": 10,
-        "count_phone": 5,
+        "count_stock": 5,
+        "count_phone": 0,
         "count_enhanced": 0
       },
       "stock": [
         {
-          "filename": "5.png"
+          "filename": "1.png"
         },
         {
-          "filename": "1.png"
+          "filename": "2.png"
         },
         {
           "filename": "3.png"
@@ -69,41 +69,10 @@
           "filename": "4.png"
         },
         {
-          "filename": "2.png"
-        },
-        {
-          "filename": "4.png"
-        },
-        {
           "filename": "5.png"
-        },
-        {
-          "filename": "1.png"
-        },
-        {
-          "filename": "3.png"
-        },
-        {
-          "filename": "2.png"
         }
       ],
-      "phone": [
-        {
-          "filename": "4.png"
-        },
-        {
-          "filename": "5.png"
-        },
-        {
-          "filename": "1.png"
-        },
-        {
-          "filename": "3.png"
-        },
-        {
-          "filename": "2.png"
-        }
-      ],
+      "phone": [],
       "enhanced": []
     }
   }

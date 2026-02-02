@@ -1,49 +1,127 @@
 {
   "JAL00229": {
     "Invoice Data": {
-      "Buying Entity": null,
+      "Buying Entity": "",
       "Supplier": "JLI Trading Limited",
       "Invoice": "JEU350271-47-53-181125020419",
       "Invoice Date": "18.11.2025"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
+      "Supplier Number": "",
+      "ISIN": "",
       "Supplier Title": "VATPAVE Men's Summer Shirt Men's Casual Shirts Guayabera Short Sleeve Shirt Camp Collar Leisure Beach Shirt Festival X-Large Navy"
     },
     "Price Data": {
-      "Price Net": 0.43,
-      "Shipping Net": 0.31,
-      "Total Cost Net": 0.74
+      "Price Net": "0.43",
+      "Shipping Net": "0.31",
+      "Total Cost Net": "0.74"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Brandneu"
     },
     "Intern Product Info": {
-      "Gender": null,
+      "Gender": "M",
       "Brand": "Vatpave",
-      "Color": null,
-      "Size": null
+      "Color": "Dunkelblau",
+      "Size": "XL"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Das Hemd hat einen klassischen Kragen und kurze Ärmel. Es verfügt über zwei Brusttaschen mit Knopfverschluss. Die Vorderseite ist mit einem dekorativen Muster versehen, das dem Hemd einen eleganten Look verleiht.",
+      "Keywords": "Hemd Herren",
+      "Materials": "None"
     },
     "OP": {
-      "OP": 28.0
+      "OP": "28.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
       "Lager": "NEW BOX 001"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxMTUz/z/MBMAAeSwmgFpf~Oh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxMTUz/z/MBgAAeSwmgFpf~Oj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxMTUz/z/TBcAAeSwZedpf~Ol/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxMTUz/z/TroAAeSwwJdpf~Oo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxMTUz/z/CRkAAeSwhd9pf~Or/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {"Marke": "VATPAVE", "Abteilung": "Herren", "Größe": "XL", "Farbe": "Dunkelblau"},
+      "optional": "{'Ärmellänge': 'Kurzarm', 'Material': 'Baumwolle', 'Muster': 'Ohne Muster', 'Gewebeart': 'Gewebe', 'Passform': 'Regular', 'Produktart': 'Geknöpftes Hemd', 'Ausschnitt': 'Kragen', 'Jahreszeit': 'Sommer', 'Kragenart': 'Kentkragen', 'Anlass': 'Freizeit', 'Textilpflege': 'Maschinenwäsche'}"
     }
   }
 }

@@ -1,0 +1,80 @@
+{
+  "JAL00093": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE991435227",
+      "ISIN": "b0bbgfq41d",
+      "Supplier Title": "Amptyhub FRV100 Baracuda Flow Regulator Valve Replacement Part for Zodiac MX6 and MX 8 Series in Ground Automatic Robot Pool Cleaners"
+    },
+    "Price Data": {
+      "Price Net": 0.67,
+      "Shipping Net": 0.08,
+      "Total Cost Net": 0.75
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Amptyhub",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 27.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 1,
+        "count_phone": 4,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00093 (1).jpg"
+        },
+        {
+          "filename": "JAL00093 (2).jpg"
+        },
+        {
+          "filename": "JAL00093 (3).jpg"
+        },
+        {
+          "filename": "JAL00093 (4).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

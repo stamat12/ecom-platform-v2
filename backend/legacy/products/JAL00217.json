@@ -1,5 +1,50 @@
 {
   "JAL00217": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU345256-47-53-141125020223",
+      "Invoice Date": "14.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "AXESQUIN Rain Pants Women, Waterproof Breathable Rain Pants for Women Windproof Outdoor Cycling Hiking Women Trousers Gray 3XL"
+    },
+    "Price Data": {
+      "Price Net": 2.0,
+      "Shipping Net": 0.31,
+      "Total Cost Net": 2.31
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Axesquin",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 27.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 001"
+    },
     "Images": {
       "schema_version": "1.0",
       "summary": {

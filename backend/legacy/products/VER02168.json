@@ -1,0 +1,49 @@
+{
+  "VER02168": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25112054,
+      "Invoice Date": "2025-11-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 874534,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Vino de la Tierra de Castilla Y Leon Intucion Sauvignon Blanc 750ml Jahrgang 2024"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 2.89
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

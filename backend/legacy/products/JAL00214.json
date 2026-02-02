@@ -1,46 +1,47 @@
 {
   "JAL00214": {
     "Invoice Data": {
-      "Buying Entity": null,
+      "Buying Entity": "",
       "Supplier": "JLI Trading Limited",
       "Invoice": "JEU345256-47-53-141125020223",
       "Invoice Date": "14.11.2025"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
+      "Supplier Number": "",
+      "ISIN": "",
       "Supplier Title": "AXESQUIN Rain Pants Women, Waterproof Breathable Rain Pants for Women Windproof Outdoor Cycling Hiking Women Trousers Gray 3XL"
     },
     "Price Data": {
-      "Price Net": 2.0,
-      "Shipping Net": 0.31,
-      "Total Cost Net": 2.31
+      "Price Net": "2.0",
+      "Shipping Net": "0.31",
+      "Total Cost Net": "2.31"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Brandneu"
     },
     "Intern Product Info": {
-      "Gender": null,
+      "Gender": "U",
       "Brand": "Axesquin",
-      "Color": null,
-      "Size": null
+      "Color": "Grau",
+      "Size": "3XL"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Hose hat einen elastischen Bund für optimalen Tragekomfort. Sie ist wasserabweisend mit einer Wassersäule von 5000 mm. Zudem verfügt sie über praktische Reißverschlusstaschen und verstellbare Klettverschlüsse an den Säumen.",
+      "Keywords": "Regenhose Damen",
+      "Materials": "Polyester"
     },
     "OP": {
-      "OP": 27.0
+      "OP": "27.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
       "Lager": "NEW BOX 001"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 0,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
       },
       "stock": [
         {
@@ -73,7 +76,89 @@
         }
       ],
       "phone": [],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTQwNFgxMDgw/z/QlYAAeSwpNlpf-0g/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTA4MFgxMDgw/z/DfQAAeSwRYFpf-0h/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/PZkAAeSwKJlpf-0k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTA4MFgxMDgw/z/RXIAAeSwUBJpf-0m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTA4MFgxMDgw/z/LvcAAeSwvh5pf-0o/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos",
+        "Größe": "3XL",
+        "Abteilung": "Damen",
+        "Farbe": "Grau",
+        "Stil": "Jogginghose"
+      },
+      "optional": {
+        "Material": "Polyester",
+        "Produktart": "Hosen",
+        "Taillenumfang": "",
+        "Beinform": "",
+        "Gewebeart": "",
+        "Besonderheiten": "Wasserdicht",
+        "Thema": "",
+        "Anlass": "Freizeit",
+        "Größenkategorie": "",
+        "Verschluss": "Zugbandverschluss",
+        "Schrittlänge": "",
+        "Vintage": "Nein",
+        "Jahreszeit": "Herbst",
+        "Muster": "",
+        "Akzente": "Reißverschluss",
+        "Passform": "Regular",
+        "Ursprungsland": "",
+        "Bundfalte": "",
+        "Modell": "",
+        "Textilpflege": "",
+        "Bundhöhe": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

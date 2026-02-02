@@ -158,5 +158,19 @@
     "ContactURL": "https://www.on-running.com/en-ch/contact",
     "cached_at": "2026-01-31T23:05:59.724019",
     "original_brand": "On"
+  },
+  "axesquin": {
+    "CompanyName": "Axesquin Co., Ltd.",
+    "Street1": "1-1-1, Minami-Aoyama",
+    "Street2": "",
+    "CityName": "Minato-ku, Tokyo",
+    "StateOrProvince": "",
+    "PostalCode": "107-0062",
+    "Country": "JP",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.axesquin.co.jp/contact/",
+    "cached_at": "2026-02-02T01:17:48.586547",
+    "original_brand": "Axesquin"
   }
 }

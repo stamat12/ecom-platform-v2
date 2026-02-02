@@ -1,0 +1,49 @@
+{
+  "VER02157": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25111072,
+      "Invoice Date": "2025-11-13T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 864055,
+      "ISIN": null,
+      "Supplier Title": "H&M Shaping StrumpfhoseGröße XL"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 5.39
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

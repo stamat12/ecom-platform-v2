@@ -1,0 +1,49 @@
+{
+  "VER02155": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2511239,
+      "Invoice Date": "2025-11-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 360933,
+      "ISIN": null,
+      "Supplier Title": "Felix Bühler Weste Gr. M"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 4.56
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

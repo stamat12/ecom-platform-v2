@@ -12,12 +12,13 @@
       "Supplier Title": "Aottori muslin blouse women's oversized shirt blouse tops long-sleeved shirt long blouse long-sleeved shirt elegant V-neck cotton loose blouse shirt blouses tunic with pocket #purple XXL"
     },
     "Price Data": {
-      "Price Net": 1.17,
-      "Shipping Net": 0.31,
-      "Total Cost Net": 1.48
+      "Price Net": "1.17",
+      "Shipping Net": "0.31",
+      "Total Cost Net": "1.48"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
     },
     "EAN": {
       "EAN": ""
@@ -26,21 +27,21 @@
       "Condition": "Kundenretour"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "F",
       "Brand": "Aottori",
-      "Color": "",
-      "Size": ""
+      "Color": "lila",
+      "Size": "XXL"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Die Bluse hat einen lässigen Schnitt und ist aus leichtem Material gefertigt. Sie verfügt über eine durchgehende Knopfleiste und eine Brusttasche. Die Ärmel können hochgekrempelt werden, was einen entspannten Look verleiht.",
+      "Keywords": "Bluse Damen",
+      "Materials": "Baumwolle"
     },
     "OP": {
-      "OP": 30.0
+      "OP": "30.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
       "Lager": "NEW BOX 001"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 0,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [
         {
@@ -73,7 +76,85 @@
         }
       ],
       "phone": [],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/XlYAAeSwUUZpf~cq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/P1UAAeSw06Bpf~cs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/iCYAAeSwbcxpf~cu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/Wn4AAeSwc2ppf~cw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/SZIAAeSwNqNpf~cx/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos",
+        "Produktart": "Geknöpftes Hemd",
+        "Größe": "2XL",
+        "Abteilung": "Damen",
+        "Farbe": "Lila",
+        "Stil": "Basic",
+        "Ärmellänge": "Langarm"
+      },
+      "optional": {
+        "Material": "",
+        "Gewebeart": "",
+        "Ärmelart": "",
+        "Akzente": "",
+        "Anlass": "Freizeit",
+        "Ausschnitt": "Kragen",
+        "Muster": "Ohne Muster",
+        "Charakter": "",
+        "Besonderheiten": "",
+        "Passform": "",
+        "Größenkategorie": "",
+        "Vintage": "",
+        "Thema": "",
+        "Jahreszeit": "Frühling",
+        "Verschluss": "Knopf",
+        "Ursprungsland": "",
+        "Träger-/Riemenart": "",
+        "Textilpflege": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

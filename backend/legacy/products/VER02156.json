@@ -1,0 +1,49 @@
+{
+  "VER02156": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-15905-27",
+      "Invoice Date": "2025-11-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152,
+      "ISIN": null,
+      "Supplier Title": "Fahrradhelm Abus Youn-I 2.0, Gr. S"
+    },
+    "Price Data": {
+      "Price Net": 8.26,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.26
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

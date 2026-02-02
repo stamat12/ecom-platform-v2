@@ -1,0 +1,49 @@
+{
+  "VER02154": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2511238,
+      "Invoice Date": "2025-11-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 870087,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Adidas K4 Sneakers Größe 39 1/3"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 18.72
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}
