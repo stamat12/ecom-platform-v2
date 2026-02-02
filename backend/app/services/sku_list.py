@@ -29,8 +29,7 @@ def get_available_columns() -> List[str]:
         "Images JSON Phone",
         "Images JSON Stock",
         "Images JSON Enhanced",
-        "Reference",
-        "Sold"
+        "Reference"
     ]
     available = [col for col in cols if col not in excluded]
     if "Folder Images" not in available:

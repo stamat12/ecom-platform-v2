@@ -14,8 +14,8 @@ export default function SkuListPage() {
   const [ebayListingsComputing, setEbayListingsComputing] = useState(false);
   const [ebayListingsStatus, setEbayListingsStatus] = useState({});
   const [ebayListingsProgress, setEbayListingsProgress] = useState({ current: 0, total: 0 });
-  const [inventoryImporting, setInventoryImporting] = useState(false);
   const [inventoryExporting, setInventoryExporting] = useState(false);
+  const [inventoryDbUpdating, setInventoryDbUpdating] = useState(false);
   const navigate = useNavigate();
   const hasRestoredState = useRef(false);
 
@@ -524,28 +524,6 @@ export default function SkuListPage() {
     }
   };
 
-  const importInventoryFromJsons = async () => {
-    setInventoryImporting(true);
-    try {
-      const res = await fetch("/api/inventory/import-jsons", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({})
-      });
-      const data = await res.json();
-      if (res.ok && data.success) {
-        alert(data.message || "Inventory updated from JSONs");
-      } else {
-        alert(data.detail || data.message || "Inventory import failed");
-      }
-    } catch (error) {
-      console.error("Error importing inventory JSONs:", error);
-      alert(`Error: ${error.message}`);
-    } finally {
-      setInventoryImporting(false);
-    }
-  };
-
   const exportInventoryToJsons = async () => {
     setInventoryExporting(true);
     try {
@@ -565,6 +543,28 @@ export default function SkuListPage() {
       alert(`Error: ${error.message}`);
     } finally {
       setInventoryExporting(false);
+    }
+  };
+
+  const updateDbFromJsons = async () => {
+    setInventoryDbUpdating(true);
+    try {
+      const res = await fetch("/api/inventory/update-db-from-jsons", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({})
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        alert(data.message || "Database updated from JSONs");
+      } else {
+        alert(data.detail || data.message || "Database update failed");
+      }
+    } catch (error) {
+      console.error("Error updating database from JSONs:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setInventoryDbUpdating(false);
     }
   };
 
@@ -636,11 +636,11 @@ export default function SkuListPage() {
           </div>
         )}
         <button
-          onClick={importInventoryFromJsons}
-          disabled={inventoryImporting}
-          style={{ padding: "6px 10px", cursor: inventoryImporting ? "not-allowed" : "pointer", background: "#1976d2", color: "white", border: "none", borderRadius: 4 }}
+          onClick={updateDbFromJsons}
+          disabled={inventoryDbUpdating}
+          style={{ padding: "6px 10px", cursor: inventoryDbUpdating ? "not-allowed" : "pointer", background: "#2e7d32", color: "white", border: "none", borderRadius: 4 }}
         >
-          {inventoryImporting ? "Updating Excel..." : "📥 Update Excel from JSON (All SKUs)"}
+          {inventoryDbUpdating ? "Updating DB..." : "🗄️ Update DB from JSON (New only)"}
         </button>
         <button
           onClick={exportInventoryToJsons}

@@ -21,9 +21,10 @@ from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
 from app.services.folder_images_cache import get_last_update_time as get_folder_images_last_update
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
-from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache
+from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing
+from app.services.ebay_category_search import search_ebay_categories
 from app.services.ebay_listings_computation import compute_ebay_listings
-from app.services.inventory_json_importer import import_jsons_to_inventory
+from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
 
 # Import eBay services
@@ -139,15 +140,16 @@ def put_sku_filters(request: SkuFilterState):
     )
 
 
-@app.post("/api/inventory/import-jsons", response_model=InventoryImportResponse)
-def import_inventory_jsons(request: InventoryImportRequest):
-    """Import per-SKU JSON files back into the inventory Excel sheet."""
-    result = import_jsons_to_inventory(
+
+@app.post("/api/inventory/update-db-from-jsons", response_model=InventoryImportResponse)
+def update_inventory_db_from_jsons(request: InventoryImportRequest):
+    """Import per-SKU JSON files into the inventory SQLite database (only changed values)."""
+    result = update_db_from_jsons(
         skus=request.skus,
         append_missing=request.append_missing,
     )
     if not result.get("success"):
-        raise HTTPException(status_code=500, detail=result.get("message", "Import failed"))
+        raise HTTPException(status_code=500, detail=result.get("message", "DB import failed"))
     return InventoryImportResponse(**result)
 
 
@@ -1140,6 +1142,24 @@ def get_ebay_listings_status():
         "has_cache": last_update is not None,
         "listings_count": count
     }
+
+
+@app.get("/api/skus/ebay-listings/has")
+def get_ebay_listings_has(skus: str = Query("", description="Comma-separated SKUs to check")):
+    """Check whether each SKU has an active eBay listing (from cache)."""
+    sku_list = [s.strip() for s in skus.split(",") if s.strip()]
+    result = {sku: get_sku_has_listing(sku) for sku in sku_list}
+    return {"skus": result}
+
+
+@app.get("/api/ebay/categories/search")
+def search_ebay_categories_endpoint(
+    query: str = Query("", description="Search text"),
+    limit: int = Query(20, ge=1, le=200),
+):
+    """Search eBay categories cache by text (SQLite)."""
+    items = search_ebay_categories(query=query, limit=limit)
+    return {"items": items}
 
 
 @app.get("/api/skus/ebay-listings/compute")

@@ -1,0 +1,128 @@
+{
+  "JAL00038": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spYF2Q742Z4",
+      "ISIN": "b0cjvbmpln",
+      "Supplier Title": "IMEKIS Women's Vertical Stripe Pants Black and White Striped Pants Elastic Flared Pants Bootcut Wide Leg Pants with Pockets Long Yoga Pants Jogging Pants Thin Casual Pants Black + White L"
+    },
+    "Price Data": {
+      "Price Net": "0.7",
+      "Shipping Net": "0.13",
+      "Total Cost Net": "0.83"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Imekis",
+      "Color": "Schwarz/Weiß",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Hose hat ein auffälliges Streifenmuster in Schwarz und Weiß. Sie ist aus einem elastischen Material gefertigt, das für einen bequemen Sitz sorgt. Die Hose hat einen hohen Bund und ist im Flared-Stil geschnitten.",
+      "Keywords": "Imekis Hose Damen Streifen",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "24.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 001"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos",
+        "Größe": "L",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Stil": "Schlaghose"
+      },
+      "optional": {
+        "Material": "",
+        "Produktart": "Hosen",
+        "Taillenumfang": "",
+        "Beinform": "",
+        "Gewebeart": "",
+        "Besonderheiten": "",
+        "Thema": "",
+        "Anlass": "",
+        "Größenkategorie": "",
+        "Verschluss": "",
+        "Schrittlänge": "",
+        "Vintage": "",
+        "Jahreszeit": "",
+        "Muster": "Gestreift",
+        "Akzente": "",
+        "Passform": "",
+        "Ursprungsland": "",
+        "Bundfalte": "",
+        "Modell": "",
+        "Textilpflege": "",
+        "Bundhöhe": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import os
 import time
 from typing import Optional
 import json
+import sqlite3
 
 import pandas as pd
 from openpyxl import load_workbook
@@ -33,6 +34,11 @@ def _get_inventory_sheet() -> str | int:
     return os.getenv("INVENTORY_SHEET_NAME") or getattr(config, "INVENTORY_SHEET_NAME", 0)
 
 
+def _get_db_path() -> str:
+    """Get path to SQLite database cache"""
+    return str(LEGACY / "cache" / "inventory.db")
+
+
 class ExcelInventoryCache:
     def __init__(self, ttl_seconds: int = 30):
         self.ttl_seconds = ttl_seconds
@@ -44,60 +50,13 @@ class ExcelInventoryCache:
         if self._df is not None and (now - self._loaded_at) < self.ttl_seconds:
             return self._df
 
-        # Read via openpyxl with data_only=True so cached formula results are loaded
-        inventory_path = _get_inventory_path()
-        sheet_name = _get_inventory_sheet()
-        wb = load_workbook(inventory_path, data_only=True)
-        if isinstance(sheet_name, int):
-            ws = wb.worksheets[sheet_name]
-        else:
-            ws = wb[sheet_name]
-        rows = list(ws.values)
-        if not rows:
-            df = pd.DataFrame()
-        else:
-            headers = rows[0]
-            data = rows[1:]
-            df = pd.DataFrame(data, columns=headers)
-
-        # Fallback if headers are empty or dataframe is empty
-        if df.empty or all((h is None or str(h).strip() == "") for h in df.columns):
-            df = pd.read_excel(inventory_path, sheet_name=sheet_name)
-
-        # Drop any completely empty column names
-        df = df.loc[:, [c for c in df.columns if c is not None and str(c).strip() != ""]]
-
-        # Remove Sold column entirely (computed later)
-        if "Sold" in df.columns:
-            df = df.drop(columns=["Sold"])
-
-        def _read_income_skus() -> set[str]:
-            try:
-                income_ws = wb["Income"]
-            except Exception:
-                return set()
-
-            income_rows = list(income_ws.values)
-            if not income_rows:
-                return set()
-
-            income_headers = income_rows[0]
-            try:
-                sku_idx = list(income_headers).index("SKU (Old)")
-            except ValueError:
-                return set()
-
-            skus: set[str] = set()
-            for row in income_rows[1:]:
-                if row is None or sku_idx >= len(row):
-                    continue
-                sku = row[sku_idx]
-                if sku is None:
-                    continue
-                sku_str = str(sku).strip()
-                if sku_str:
-                    skus.add(sku_str)
-            return skus
+        # Read from SQLite database instead of Excel for better performance
+        db_path = _get_db_path()
+        conn = sqlite3.connect(db_path)
+        try:
+            df = pd.read_sql("SELECT * FROM inventory", conn)
+        finally:
+            conn.close()
 
         # Add computed "Json" column that checks if JSON file exists for each SKU
         def has_json(sku):

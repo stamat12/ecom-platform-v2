@@ -1,0 +1,49 @@
+{
+  "JAL00229": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "VATPAVE Men's Summer Shirt Men's Casual Shirts Guayabera Short Sleeve Shirt Camp Collar Leisure Beach Shirt Festival X-Large Navy"
+    },
+    "Price Data": {
+      "Price Net": 0.43,
+      "Shipping Net": 0.31,
+      "Total Cost Net": 0.74
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Vatpave",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 28.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 001"
+    }
+  }
+}

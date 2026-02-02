@@ -1,0 +1,50 @@
+{
+  "JAL00256": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Meilicloth Men's Cotton T-Shirt Slim Fit V-Neck Muscle Shirt Henley Shirt Breathable Comfortable Casual Black M"
+    },
+    "Price Data": {
+      "Price Net": 1.07,
+      "Shipping Net": 0.24,
+      "Total Cost Net": 1.31
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Meilicloth",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Das T-Shirt hat einen modernen Schnitt und kurze Ärmel. Es verfügt über einen Henley-Ausschnitt mit Knöpfen. Der Stoff ist weich und angenehm zu tragen.",
+      "Keywords": "T-Shirt Herren",
+      "Materials": "Baumwolle"
+    },
+    "OP": {
+      "OP": 19.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 001"
+    }
+  }
+}

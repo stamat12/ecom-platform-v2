@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Modal({ open, onClose, children }) {
@@ -87,6 +87,10 @@ export default function SkuBatchPage() {
   const [ebayListingData, setEbayListingData] = useState({}); // { sku: { price, quantity, condition, ean, modified_sku, schedule_date } }
   const [ebayCreatingListing, setEbayCreatingListing] = useState({}); // { sku: boolean }
   const [uploadProgress, setUploadProgress] = useState({}); // { sku: { show, message, step, total } }
+  const [ebayListingStatus, setEbayListingStatus] = useState({}); // { sku: true/false/null }
+  const [ebayCategorySuggestions, setEbayCategorySuggestions] = useState({}); // { sku: [items] }
+  const [ebayCategoryLoading, setEbayCategoryLoading] = useState({}); // { sku: boolean }
+  const categorySearchTimers = useRef({});
 
   // Calculate total selected images across all SKUs
   const totalSelectedImages = useMemo(() => {
@@ -234,6 +238,18 @@ export default function SkuBatchPage() {
   };
 
   const fetchAllImages = async () => {
+    try {
+      if (selectedSkus.length > 0) {
+        const resListings = await fetch(`/api/skus/ebay-listings/has?skus=${encodeURIComponent(selectedSkus.join(","))}`);
+        if (resListings.ok) {
+          const listingsData = await resListings.json();
+          setEbayListingStatus(listingsData.skus || {});
+        }
+      }
+    } catch (e) {
+      console.error("Error loading eBay listing status:", e);
+    }
+
     const promises = selectedSkus.map(async (sku) => {
       try {
         const resJson = await fetch(`/api/skus/${encodeURIComponent(sku)}/json/status`);
@@ -389,6 +405,56 @@ export default function SkuBatchPage() {
     const cleaned = String(value).replace(/[^0-9,.-]/g, "").replace(",", ".");
     const parsed = parseFloat(cleaned);
     return Number.isFinite(parsed) ? parsed : 0;
+  };
+
+  const searchEbayCategories = (sku, query) => {
+    const q = String(query || "").trim();
+    if (categorySearchTimers.current[sku]) {
+      clearTimeout(categorySearchTimers.current[sku]);
+    }
+    if (q.length < 2) {
+      setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: [] }));
+      return;
+    }
+    categorySearchTimers.current[sku] = setTimeout(async () => {
+      setEbayCategoryLoading((prev) => ({ ...prev, [sku]: true }));
+      try {
+        const res = await fetch(`/api/ebay/categories/search?query=${encodeURIComponent(q)}&limit=25`);
+        if (res.ok) {
+          const data = await res.json();
+          setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: data.items || [] }));
+        }
+      } catch (e) {
+        console.error("Error searching eBay categories:", e);
+      } finally {
+        setEbayCategoryLoading((prev) => ({ ...prev, [sku]: false }));
+      }
+    }, 250);
+  };
+
+  const applyEbayCategorySelection = (sku, categoryName, fieldName, item) => {
+    setEditedFieldsState((prev) => {
+      const current = prev[sku] || {};
+      const categoryFields = current[categoryName] || {};
+      const updated = {
+        ...current,
+        [categoryName]: {
+          ...categoryFields,
+          [fieldName]: item.label || "",
+        },
+      };
+
+      const idField = Object.keys(categoryFields).find((name) => {
+        const n = name.toLowerCase();
+        return n.includes("category") && n.includes("id");
+      });
+      if (idField && item.category_id) {
+        updated[categoryName][idField] = item.category_id;
+      }
+
+      return { ...prev, [sku]: updated };
+    });
+    setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: [] }));
   };
 
   const toggleSkuForEnrichment = (sku) => {
@@ -1190,6 +1256,48 @@ export default function SkuBatchPage() {
                       )}
                     </div>
                   )}
+                  {ebayListingStatus[sku] !== undefined && (
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        padding: "4px 8px",
+                        background:
+                          ebayListingStatus[sku] === true
+                            ? "#e3f2fd"
+                            : ebayListingStatus[sku] === false
+                            ? "#f3f4f6"
+                            : "#fff8e1",
+                        borderRadius: 4,
+                        fontSize: "0.85em",
+                      }}
+                      title={
+                        ebayListingStatus[sku] === true
+                          ? "Active eBay listing found"
+                          : ebayListingStatus[sku] === false
+                          ? "No active eBay listing"
+                          : "eBay listing cache not available"
+                      }
+                    >
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          color:
+                            ebayListingStatus[sku] === true
+                              ? "#1976d2"
+                              : ebayListingStatus[sku] === false
+                              ? "#6b7280"
+                              : "#f57c00",
+                        }}
+                      >
+                        {ebayListingStatus[sku] === true
+                          ? "✓ eBay"
+                          : ebayListingStatus[sku] === false
+                          ? "✗ eBay"
+                          : "? eBay"}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div style={{ color: "#666", marginTop: 4 }}>
                   {error ? (
@@ -1398,32 +1506,106 @@ export default function SkuBatchPage() {
                                     }}>
                                       {field.name}
                                     </label>
-                                    <textarea
-                                      value={editedFieldsState[sku]?.[cat.name]?.[field.name] ?? field.value}
-                                      onChange={(e) => {
-                                        setEditedFieldsState(prev => ({
-                                          ...prev,
-                                          [sku]: {
-                                            ...(prev[sku] || {}),
-                                            [cat.name]: {
-                                              ...(prev[sku]?.[cat.name] || {}),
-                                              [field.name]: e.target.value
+                                    {cat.name === "Ebay Category" && field.name === "Category" ? (
+                                      <div style={{ position: "relative" }}>
+                                        <input
+                                          type="text"
+                                          value={editedFieldsState[sku]?.[cat.name]?.[field.name] ?? field.value}
+                                          onChange={(e) => {
+                                            const value = e.target.value;
+                                            setEditedFieldsState(prev => ({
+                                              ...prev,
+                                              [sku]: {
+                                                ...(prev[sku] || {}),
+                                                [cat.name]: {
+                                                  ...(prev[sku]?.[cat.name] || {}),
+                                                  [field.name]: value
+                                                }
+                                              }
+                                            }));
+                                            searchEbayCategories(sku, value);
+                                          }}
+                                          placeholder="Type to search eBay categories..."
+                                          style={{
+                                            width: "100%",
+                                            padding: "6px 8px",
+                                            border: "1px solid #2196F3",
+                                            borderRadius: 3,
+                                            fontSize: 12,
+                                            fontFamily: "monospace",
+                                            boxSizing: "border-box"
+                                          }}
+                                        />
+                                        {(ebayCategoryLoading[sku] || (ebayCategorySuggestions[sku] && ebayCategorySuggestions[sku].length > 0)) && (
+                                          <div
+                                            style={{
+                                              position: "absolute",
+                                              top: "100%",
+                                              left: 0,
+                                              right: 0,
+                                              zIndex: 50,
+                                              background: "white",
+                                              border: "1px solid #e0e0e0",
+                                              borderTop: "none",
+                                              maxHeight: 220,
+                                              overflowY: "auto",
+                                              boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+                                            }}
+                                          >
+                                            {ebayCategoryLoading[sku] && (
+                                              <div style={{ padding: 8, fontSize: 11, color: "#666" }}>Searching...</div>
+                                            )}
+                                            {(ebayCategorySuggestions[sku] || []).map((item, idx) => (
+                                              <div
+                                                key={`${item.category_id || item.label}-${idx}`}
+                                                onClick={() => applyEbayCategorySelection(sku, cat.name, field.name, item)}
+                                                style={{
+                                                  padding: "6px 8px",
+                                                  cursor: "pointer",
+                                                  fontSize: 11,
+                                                  borderTop: "1px solid #f0f0f0"
+                                                }}
+                                              >
+                                                <div style={{ fontWeight: 600, color: "#333" }}>{item.label}</div>
+                                                {item.category_id && (
+                                                  <div style={{ fontSize: 10, color: "#777" }}>ID: {item.category_id}</div>
+                                                )}
+                                              </div>
+                                            ))}
+                                            {!ebayCategoryLoading[sku] && (ebayCategorySuggestions[sku] || []).length === 0 && (
+                                              <div style={{ padding: 8, fontSize: 11, color: "#999" }}>No matches</div>
+                                            )}
+                                          </div>
+                                        )}
+                                      </div>
+                                    ) : (
+                                      <textarea
+                                        value={editedFieldsState[sku]?.[cat.name]?.[field.name] ?? field.value}
+                                        onChange={(e) => {
+                                          setEditedFieldsState(prev => ({
+                                            ...prev,
+                                            [sku]: {
+                                              ...(prev[sku] || {}),
+                                              [cat.name]: {
+                                                ...(prev[sku]?.[cat.name] || {}),
+                                                [field.name]: e.target.value
+                                              }
                                             }
-                                          }
-                                        }));
-                                      }}
-                                      style={{
-                                        width: "100%",
-                                        padding: "6px 8px",
-                                        border: "1px solid #2196F3",
-                                        borderRadius: 3,
-                                        fontSize: 12,
-                                        fontFamily: "monospace",
-                                        minHeight: 50,
-                                        boxSizing: "border-box",
-                                        resize: "vertical"
-                                      }}
-                                    />
+                                          }));
+                                        }}
+                                        style={{
+                                          width: "100%",
+                                          padding: "6px 8px",
+                                          border: "1px solid #2196F3",
+                                          borderRadius: 3,
+                                          fontSize: 12,
+                                          fontFamily: "monospace",
+                                          minHeight: 50,
+                                          boxSizing: "border-box",
+                                          resize: "vertical"
+                                        }}
+                                      />
+                                    )}
                                   </div>
                                 ))}
                               </div>

@@ -1,0 +1,49 @@
+{
+  "JAL00177": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU335774-47-53-061125020306",
+      "Invoice Date": "06.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "AXESQUIN Rain Jacket Women, Rain Jacket Women Waterproof Breathable Lightweight Rain Jacket Bicycle Women with Hood Hiking Travel Trekking"
+    },
+    "Price Data": {
+      "Price Net": 3.73,
+      "Shipping Net": 0.98,
+      "Total Cost Net": 4.71
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Axesquin",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 47.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 001"
+    }
+  }
+}
