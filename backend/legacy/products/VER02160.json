@@ -44,6 +44,39 @@
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02160 (1).jpg"
+        },
+        {
+          "filename": "VER02160 (2).jpg"
+        },
+        {
+          "filename": "VER02160 (3).jpg"
+        },
+        {
+          "filename": "VER02160 (4).jpg"
+        },
+        {
+          "filename": "VER02160 (5).jpg"
+        },
+        {
+          "filename": "VER02160 (6).jpg"
+        }
+      ],
+      "enhanced": []
     }
   }
 }

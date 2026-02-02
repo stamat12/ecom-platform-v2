@@ -1,0 +1,91 @@
+{
+  "VER02143": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102751,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 860652,
+      "ISIN": null,
+      "Supplier Title": "Gabor santchevreau Sandalen Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 17.06
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02143 (1).jpg"
+        },
+        {
+          "filename": "VER02143 (2).jpg"
+        },
+        {
+          "filename": "VER02143 (3).jpg"
+        },
+        {
+          "filename": "VER02143 (4).jpg"
+        },
+        {
+          "filename": "VER02143 (5).jpg"
+        },
+        {
+          "filename": "VER02143 (6).jpg"
+        },
+        {
+          "filename": "VER02143 (7).jpg"
+        },
+        {
+          "filename": "VER02143 (8).jpg"
+        },
+        {
+          "filename": "VER02143 (9).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

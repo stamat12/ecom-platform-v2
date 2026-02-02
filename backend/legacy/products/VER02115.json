@@ -1,0 +1,151 @@
+{
+  "VER02115": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "2510771",
+      "Invoice Date": "2025-10-09T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "843282",
+      "ISIN": "",
+      "Supplier Title": "Calvin Klein Badeshorts Größe L"
+    },
+    "Price Data": {
+      "Price Net": "18.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "18.72"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Bademode",
+      "eBay Category ID": "15690"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Calvin Klein",
+      "Color": "Rot",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Badehose ist in einem kräftigen Rotton gehalten. Sie hat einen elastischen Bund mit Kordelzug für eine individuelle Passform. Auf der Vorderseite befindet sich das Logo von Calvin Klein in Weiß.",
+      "Keywords": "Badehose Herren",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "70"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02115 (1).jpg"
+        },
+        {
+          "filename": "VER02115 (2).jpg"
+        },
+        {
+          "filename": "VER02115 (3).jpg"
+        },
+        {
+          "filename": "VER02115 (4).jpg"
+        },
+        {
+          "filename": "VER02115 (5).jpg"
+        },
+        {
+          "filename": "VER02115 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02115 (3).jpg"
+        },
+        {
+          "filename": "VER02115 (5).jpg"
+        },
+        {
+          "filename": "VER02115 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02115 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m6oAAeSwMXdpgSZG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02115 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ydIAAeSwjrhpgSZL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02115 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zncAAeSwj9dpgSZP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02115 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uEUAAeSwLQ9pgSZT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02115 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rLUAAeSww19pgSZX/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Rot",
+        "Größe": "L",
+        "Marke": "Calvin Klein",
+        "Produktart": "Unterteil"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "Badeshorts",
+        "Abteilung": "Herren",
+        "Material": "100% Polyester",
+        "Charakter": "",
+        "Muster": "",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Gewebeart": "",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "",
+        "Besonderheiten": "Innenslip",
+        "Aktivität": "Freizeit",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Anleitung für Personalisierung": ""
+      }
+    }
+  }
+}

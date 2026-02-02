@@ -1,0 +1,91 @@
+{
+  "VER02141": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102751,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 860616,
+      "ISIN": null,
+      "Supplier Title": "Clark's Torhill mocc Loafer Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 22.5,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 22.89
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02141 (1).jpg"
+        },
+        {
+          "filename": "VER02141 (2).jpg"
+        },
+        {
+          "filename": "VER02141 (3).jpg"
+        },
+        {
+          "filename": "VER02141 (4).jpg"
+        },
+        {
+          "filename": "VER02141 (5).jpg"
+        },
+        {
+          "filename": "VER02141 (6).jpg"
+        },
+        {
+          "filename": "VER02141 (7).jpg"
+        },
+        {
+          "filename": "VER02141 (8).jpg"
+        },
+        {
+          "filename": "VER02141 (9).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

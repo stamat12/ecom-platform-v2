@@ -1,0 +1,105 @@
+{
+  "VER02131": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25102426",
+      "Invoice Date": "2025-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "905726",
+      "ISIN": "",
+      "Supplier Title": "1 Paar Damenschuhe Gr.38"
+    },
+    "Price Data": {
+      "Price Net": "4.17",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "4.56"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "None",
+      "Color": "Beige",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Stiefel sind aus einem beigen Kunstleder gefertigt und haben ein weiches, warmes Innenfutter. Sie verfügen über eine robuste Sohle mit gutem Grip und sind ideal für den Herbst und Winter. Die Schnürung sorgt für einen sicheren Halt.",
+      "Keywords": "Stiefeletten Damen",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02131 (1).jpg"
+        },
+        {
+          "filename": "VER02131 (2).jpg"
+        },
+        {
+          "filename": "VER02131 (3).jpg"
+        },
+        {
+          "filename": "VER02131 (4).jpg"
+        },
+        {
+          "filename": "VER02131 (5).jpg"
+        },
+        {
+          "filename": "VER02131 (6).jpg"
+        },
+        {
+          "filename": "VER02131 (7).jpg"
+        },
+        {
+          "filename": "VER02131 (8).jpg"
+        },
+        {
+          "filename": "VER02131 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02131 (6).jpg"
+        },
+        {
+          "filename": "VER02131 (3).jpg"
+        },
+        {
+          "filename": "VER02131 (1).jpg"
+        }
+      ]
+    }
+  }
+}

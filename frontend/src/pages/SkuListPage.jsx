@@ -16,6 +16,10 @@ export default function SkuListPage() {
   const [ebayListingsProgress, setEbayListingsProgress] = useState({ current: 0, total: 0 });
   const [inventoryExporting, setInventoryExporting] = useState(false);
   const [inventoryDbUpdating, setInventoryDbUpdating] = useState(false);
+  const [excelSyncModalOpen, setExcelSyncModalOpen] = useState(false);
+  const [excelSheets, setExcelSheets] = useState({});
+  const [selectedSheets, setSelectedSheets] = useState({});
+  const [excelSyncLoading, setExcelSyncLoading] = useState(false);
   const navigate = useNavigate();
   const hasRestoredState = useRef(false);
 
@@ -29,10 +33,11 @@ export default function SkuListPage() {
   const [filterLoading, setFilterLoading] = useState(true);
   const [columnMeta, setColumnMeta] = useState({}); // { columnName: { type, operators, enum_values } }
   const [distinctValues, setDistinctValues] = useState({}); // { columnName: [values] }
-  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size", "Lager"]; // multi-select typeahead
+  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size", "Lager", "Vinted", "Willhaben", "Status"]; // multi-select typeahead
   const [chipInputs, setChipInputs] = useState({}); // temp text inputs per column
   const [suggestions, setSuggestions] = useState({}); // { columnName: [values] }
   const [openSuggest, setOpenSuggest] = useState({}); // { columnName: boolean }
+  const [emptyFilters, setEmptyFilters] = useState({}); // { columnName: boolean } - true to show only empty values
   const [columnWidths, setColumnWidths] = useState({}); // { columnName: px }
   const [resizing, setResizing] = useState(null); // { col, startX, startWidth }
   const profileId = "default"; // could be derived from user context later
@@ -93,6 +98,7 @@ export default function SkuListPage() {
           const localFilterMode = localState?.filterMode || null;
           const localPageSize = localState?.pageSize || null;
           const localColumnWidths = localState?.columnWidths || null;
+          const localEmptyFilters = localState?.emptyFilters || null;
           
           // Use restored state if available, otherwise use persisted filters or server filters
           if (restoredState) {
@@ -107,6 +113,7 @@ export default function SkuListPage() {
             setFilterMode(restoredState.filterMode || {});
             setPageSize(restoredState.pageSize || Number(filtData.page_size || 50));
             setColumnWidths(restoredState.columnWidths || filtData.column_widths || {});
+            setEmptyFilters(restoredState.emptyFilters || {});
             setSelectedSkus(restoredState.selectedSkus || []);
             setPage(restoredState.page || 1);
           } else {
@@ -116,6 +123,7 @@ export default function SkuListPage() {
             setFilterMode(localFilterMode || {});
             setPageSize(localPageSize || Number(filtData.page_size || 50));
             setColumnWidths(localColumnWidths || filtData.column_widths || {});
+            setEmptyFilters(localEmptyFilters || {});
           }
         } else {
           // Fallback to defaults or restored state
@@ -125,6 +133,7 @@ export default function SkuListPage() {
             setFilterMode(restoredState.filterMode || {});
             setPageSize(restoredState.pageSize || 50);
             setColumnWidths(restoredState.columnWidths || {});
+            setEmptyFilters(restoredState.emptyFilters || {});
             setSelectedSkus(restoredState.selectedSkus || []);
             setPage(restoredState.page || 1);
           } else {
@@ -132,6 +141,7 @@ export default function SkuListPage() {
             setSelectedColumns(localSelected.length ? localSelected : (colData.default_columns || []));
             setColumnFilters(localState?.columnFilters || {});
             setFilterMode(localState?.filterMode || {});
+            setEmptyFilters(localState?.emptyFilters || {});
             if (localState?.pageSize) setPageSize(localState.pageSize);
             if (localState?.columnWidths) setColumnWidths(localState.columnWidths);
           }
@@ -165,12 +175,13 @@ export default function SkuListPage() {
         filterMode,
         selectedColumns,
         pageSize,
-        columnWidths
+        columnWidths,
+        emptyFilters
       }));
     } catch (e) {
       console.error('Failed to save filters to localStorage:', e);
     }
-  }, [columnFilters, filterMode, selectedColumns, pageSize, columnWidths]);
+  }, [columnFilters, filterMode, selectedColumns, pageSize, columnWidths, emptyFilters]);
 
   // Load SKUs when filters or pagination change
   useEffect(() => {
@@ -236,6 +247,13 @@ export default function SkuListPage() {
       }
     }
 
+    // Add empty filters for Vinted and Willhaben columns
+    for (const [column, isEmpty] of Object.entries(emptyFilters)) {
+      if (isEmpty) {
+        filters.push({ column, type: "string", operator: "is_empty", value: null });
+      }
+    }
+
     if (filters.length > 0) {
       params.append("filters", JSON.stringify(filters));
     }
@@ -254,7 +272,7 @@ export default function SkuListPage() {
         }
       })
       .catch((e) => setErr(String(e)));
-  }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading]);
+  }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading, emptyFilters]);
 
   const totalPages = Math.ceil(total / pageSize);
 
@@ -568,6 +586,111 @@ export default function SkuListPage() {
     }
   };
 
+  const openExcelSyncModal = async () => {
+    setExcelSyncLoading(true);
+    try {
+      const res = await fetch("/api/excel/sheets");
+      if (res.ok) {
+        const data = await res.json();
+        setExcelSheets(data.sheets || {});
+        // Initialize all sheets as selected with all columns
+        const initial = {};
+        Object.entries(data.sheets || {}).forEach(([sheet, columns]) => {
+          initial[sheet] = {
+            selected: true,
+            columns: columns.reduce((acc, col) => ({ ...acc, [col]: true }), {})
+          };
+        });
+        setSelectedSheets(initial);
+        setExcelSyncModalOpen(true);
+      } else {
+        alert("Failed to load Excel sheets");
+      }
+    } catch (error) {
+      console.error("Error loading Excel sheets:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setExcelSyncLoading(false);
+    }
+  };
+
+  const syncExcelToDb = async () => {
+    setExcelSyncLoading(true);
+    try {
+      const sheetsToSync = [];
+      Object.entries(selectedSheets).forEach(([sheet, info]) => {
+        if (info.selected) {
+          const selectedCols = Object.entries(info.columns)
+            .filter(([_, selected]) => selected)
+            .map(([col, _]) => col);
+          if (selectedCols.length > 0) {
+            sheetsToSync.push({ sheet_name: sheet, columns: selectedCols });
+          }
+        }
+      });
+
+      if (sheetsToSync.length === 0) {
+        alert("Please select at least one sheet and columns");
+        setExcelSyncLoading(false);
+        return;
+      }
+
+      const res = await fetch("/api/excel/sync-to-db", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sheets: sheetsToSync })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        alert("✅ " + data.message);
+        setExcelSyncModalOpen(false);
+      } else {
+        alert(data.message || "Sync failed");
+      }
+    } catch (error) {
+      console.error("Error syncing Excel to DB:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setExcelSyncLoading(false);
+    }
+  };
+
+  const selectAllSheets = () => {
+    const updated = {};
+    Object.entries(selectedSheets).forEach(([sheet, info]) => {
+      updated[sheet] = { ...info, selected: true };
+    });
+    setSelectedSheets(updated);
+  };
+
+  const deselectAllSheets = () => {
+    const updated = {};
+    Object.entries(selectedSheets).forEach(([sheet, info]) => {
+      updated[sheet] = { ...info, selected: false };
+    });
+    setSelectedSheets(updated);
+  };
+
+  const selectAllColumns = (sheet) => {
+    setSelectedSheets(prev => ({
+      ...prev,
+      [sheet]: {
+        ...prev[sheet],
+        columns: Object.keys(prev[sheet]?.columns || {}).reduce((acc, col) => ({ ...acc, [col]: true }), {})
+      }
+    }));
+  };
+
+  const deselectAllColumns = (sheet) => {
+    setSelectedSheets(prev => ({
+      ...prev,
+      [sheet]: {
+        ...prev[sheet],
+        columns: Object.keys(prev[sheet]?.columns || {}).reduce((acc, col) => ({ ...acc, [col]: false }), {})
+      }
+    }));
+  };
+
   if (err) {
     return <div style={{ color: "red" }}>Error: {err}</div>;
   }
@@ -643,6 +766,13 @@ export default function SkuListPage() {
           {inventoryDbUpdating ? "Updating DB..." : "🗄️ Update DB from JSON (New only)"}
         </button>
         <button
+          onClick={openExcelSyncModal}
+          disabled={excelSyncLoading}
+          style={{ padding: "6px 10px", cursor: excelSyncLoading ? "not-allowed" : "pointer", background: "#1565c0", color: "white", border: "none", borderRadius: 4 }}
+        >
+          {excelSyncLoading ? "Loading..." : "📊 Sync Excel to DB (Selective)"}
+        </button>
+        <button
           onClick={exportInventoryToJsons}
           disabled={inventoryExporting}
           style={{ padding: "6px 10px", cursor: inventoryExporting ? "not-allowed" : "pointer", background: "#ff9800", color: "white", border: "none", borderRadius: 4 }}
@@ -650,6 +780,200 @@ export default function SkuListPage() {
           {inventoryExporting ? "Updating JSONs..." : "📤 Update JSONs from Excel (Category, Status, Lager)"}
         </button>
       </div>
+
+      {/* Excel Sync Modal */}
+      {excelSyncModalOpen && (
+        <div style={{
+          position: "fixed",
+          inset: 0,
+          background: "rgba(0,0,0,0.6)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: 16,
+          zIndex: 999,
+        }}>
+          <div style={{
+            background: "white",
+            borderRadius: 10,
+            maxWidth: 700,
+            maxHeight: "80vh",
+            overflow: "auto",
+            padding: 24,
+            boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+          }}>
+            <h3 style={{ marginTop: 0, marginBottom: 16 }}>Sync Excel to Database</h3>
+            <p style={{ color: "#666", marginBottom: 16, fontSize: 13 }}>Select sheets and columns to sync from Excel to the database</p>
+
+            <div style={{ marginBottom: 12, display: "flex", gap: 8 }}>
+              <button
+                onClick={selectAllSheets}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: 12,
+                  background: "#4caf50",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  fontWeight: "bold"
+                }}
+              >
+                Select All Sheets
+              </button>
+              <button
+                onClick={deselectAllSheets}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: 12,
+                  background: "#f44336",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  fontWeight: "bold"
+                }}
+              >
+                Deselect All Sheets
+              </button>
+            </div>
+
+            <div style={{ marginBottom: 16, maxHeight: 400, overflowY: "auto" }}>
+              {Object.entries(excelSheets).map(([sheet, columns]) => (
+                <div key={sheet} style={{
+                  marginBottom: 16,
+                  padding: 12,
+                  border: "1px solid #e0e0e0",
+                  borderRadius: 6,
+                  background: "#f9f9f9"
+                }}>
+                  <label style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, cursor: "pointer" }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedSheets[sheet]?.selected || false}
+                      onChange={(e) => {
+                        setSelectedSheets(prev => ({
+                          ...prev,
+                          [sheet]: {
+                            ...prev[sheet],
+                            selected: e.target.checked
+                          }
+                        }));
+                      }}
+                      style={{ width: 18, height: 18, cursor: "pointer" }}
+                    />
+                    <span style={{ fontWeight: 600, color: "#333" }}>{sheet}</span>
+                  </label>
+
+                  {selectedSheets[sheet]?.selected && (
+                    <div>
+                      <div style={{ marginBottom: 8, display: "flex", gap: 6 }}>
+                        <button
+                          onClick={() => selectAllColumns(sheet)}
+                          style={{
+                            padding: "4px 10px",
+                            fontSize: 11,
+                            background: "#2196f3",
+                            color: "white",
+                            border: "none",
+                            borderRadius: 3,
+                            cursor: "pointer",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          All Cols
+                        </button>
+                        <button
+                          onClick={() => deselectAllColumns(sheet)}
+                          style={{
+                            padding: "4px 10px",
+                            fontSize: 11,
+                            background: "#ff9800",
+                            color: "white",
+                            border: "none",
+                            borderRadius: 3,
+                            cursor: "pointer",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          No Cols
+                        </button>
+                      </div>
+                      <div style={{
+                        marginLeft: 28,
+                        paddingTop: 8,
+                        borderTop: "1px solid #e0e0e0",
+                        paddingTop: 8,
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+                        gap: 8
+                      }}>
+                      {columns.map(col => (
+                        <label key={col} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
+                          <input
+                            type="checkbox"
+                            checked={selectedSheets[sheet]?.columns?.[col] || false}
+                            onChange={(e) => {
+                              setSelectedSheets(prev => ({
+                                ...prev,
+                                [sheet]: {
+                                  ...prev[sheet],
+                                  columns: {
+                                    ...prev[sheet]?.columns,
+                                    [col]: e.target.checked
+                                  }
+                                }
+                              }));
+                            }}
+                            style={{ width: 16, height: 16, cursor: "pointer" }}
+                          />
+                          <span style={{ fontSize: 12, color: "#555" }}>{col}</span>
+                        </label>
+                      ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div style={{ display: "flex", gap: 12, justifyContent: "flex-end" }}>
+              <button
+                onClick={() => setExcelSyncModalOpen(false)}
+                disabled={excelSyncLoading}
+                style={{
+                  padding: "8px 16px",
+                  fontSize: 12,
+                  background: "#999",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: excelSyncLoading ? "not-allowed" : "pointer",
+                  fontWeight: "bold"
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={syncExcelToDb}
+                disabled={excelSyncLoading}
+                style={{
+                  padding: "8px 16px",
+                  fontSize: 12,
+                  background: "#1565c0",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: excelSyncLoading ? "not-allowed" : "pointer",
+                  fontWeight: "bold"
+                }}
+              >
+                {excelSyncLoading ? "Syncing..." : "✅ Sync Selected"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div style={{ marginBottom: 12, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <button
@@ -963,6 +1287,14 @@ export default function SkuListPage() {
                               <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                                 <button onClick={() => handleTokenAdd(col)}>Add</button>
                                 <button onClick={() => handleTokenClear(col)} disabled={tokens.length === 0}>Clear</button>
+                                <label style={{ display: "flex", alignItems: "center", gap: 4, whiteSpace: "nowrap", fontSize: "0.9em" }}>
+                                  <input
+                                    type="checkbox"
+                                    checked={emptyFilters[col] || false}
+                                    onChange={(e) => setEmptyFilters((prev) => ({ ...prev, [col]: e.target.checked }))}
+                                  />
+                                  Empty
+                                </label>
                               </div>
                             </div>
                             {isOpen && (

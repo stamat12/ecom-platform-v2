@@ -1,0 +1,161 @@
+{
+  "VER02114": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "2510771",
+      "Invoice Date": "2025-10-09T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "843280",
+      "ISIN": "",
+      "Supplier Title": "The north Face explode Shorts Größe 34"
+    },
+    "Price Data": {
+      "Price Net": "18.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "18.72"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shorts & Bermudas",
+      "eBay Category ID": "15689"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "The North Face",
+      "Color": "Schwarz",
+      "Size": "34"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Shorts sind aus leichtem, strapazierfähigem Material gefertigt. Sie verfügen über mehrere Taschen, darunter eine seitliche Reißverschlusstasche. Ideal für Outdoor-Aktivitäten und Freizeit.",
+      "Keywords": "Explorationsshorts Herren",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02114 (1).jpg"
+        },
+        {
+          "filename": "VER02114 (2).jpg"
+        },
+        {
+          "filename": "VER02114 (3).jpg"
+        },
+        {
+          "filename": "VER02114 (4).jpg"
+        },
+        {
+          "filename": "VER02114 (5).jpg"
+        },
+        {
+          "filename": "VER02114 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02114 (3).jpg"
+        },
+        {
+          "filename": "VER02114 (1).jpg"
+        },
+        {
+          "filename": "VER02114 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02114 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tXwAAeSwsfJpgSXy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02114 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/sdMAAeSwFLVpgSX1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02114 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/16kAAeSwANVpgSX6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02114 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s1gAAeSw7QJpgSX-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02114 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pfIAAeSwTqNpgSYC/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "The North Face",
+        "Abteilung": "Herren",
+        "Größe": "34",
+        "Stil": "Chino",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Ursprungsland": "",
+        "Material": "",
+        "Gewebeart": "",
+        "Passform": "",
+        "Anlass": "",
+        "Taillenumfang": "",
+        "Größenkategorie": "",
+        "Schrittlänge": "",
+        "Bundfalte": "",
+        "Vintage": "",
+        "Charakter": "",
+        "Thema": "",
+        "Muster": "",
+        "Jahreszeit": "",
+        "Besonderheiten": "",
+        "Verschluss": "",
+        "Akzente": "",
+        "Textilpflege": "",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Bundhöhe": "",
+        "Handgefertigt": "Nein",
+        "Herstellernummer": "",
+        "Maßeinheit": "",
+        "Taschenart": "",
+        "Waschung": ""
+      }
+    }
+  }
+}

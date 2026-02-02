@@ -1,0 +1,115 @@
+{
+  "VER02135": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25102751",
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "863588",
+      "ISIN": "",
+      "Supplier Title": "Puma drycell Shirt Größe M"
+    },
+    "Price Data": {
+      "Price Net": "6.67",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "7.06"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "PUMA",
+      "Color": "Weiß",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Das T-Shirt hat kurze Ärmel und einen runden Ausschnitt. Es besteht aus einem leichten, atmungsaktiven Material, das für sportliche Aktivitäten geeignet ist. Die DryCell-Technologie sorgt für Feuchtigkeitsmanagement und hohen Tragekomfort.",
+      "Keywords": "T-Shirt Herren",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02135 (1).jpg"
+        },
+        {
+          "filename": "VER02135 (2).jpg"
+        },
+        {
+          "filename": "VER02135 (3).jpg"
+        },
+        {
+          "filename": "VER02135 (4).jpg"
+        },
+        {
+          "filename": "VER02135 (5).jpg"
+        },
+        {
+          "filename": "VER02135 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02135 (4).jpg"
+        },
+        {
+          "filename": "VER02135 (6).jpg"
+        },
+        {
+          "filename": "VER02135 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Puma",
+        "Abteilung": "Herren",
+        "Größe": "M",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Produktart": "T-Shirt",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Material": "Baumwolle",
+        "Ärmellänge": "Kurzarm",
+        "Besonderheiten": "Feuchtigkeitsabführend",
+        "Passform": "Regular",
+        "Vintage": "Nein",
+        "Textilpflege": "Maschinenwäsche",
+        "Anzahl der Einheiten": "1"
+      }
+    }
+  }
+}

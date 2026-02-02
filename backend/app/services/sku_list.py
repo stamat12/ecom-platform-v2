@@ -254,6 +254,12 @@ def list_skus(
             # Typed string filters (and legacy fallback)
             df[col] = df[col].fillna("").astype(str)
             col_lower = df[col].str.lower()
+            
+            # Handle is_empty operator
+            if operator == "is_empty":
+                df = df[(df[col].isna()) | (df[col].astype(str).str.strip() == "")]
+                continue
+            
             values_list = filter_item.get("values")
             if operator in ("in", "not_in") and values_list:
                 norm = [str(v).lower() for v in values_list]

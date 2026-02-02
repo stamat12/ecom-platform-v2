@@ -172,5 +172,47 @@
     "ContactURL": "https://www.axesquin.co.jp/contact/",
     "cached_at": "2026-02-02T01:17:48.586547",
     "original_brand": "Axesquin"
+  },
+  "festo": {
+    "CompanyName": "Festo SE & Co. KG",
+    "Street1": "Ruiter Straße 82",
+    "Street2": "",
+    "CityName": "Esslingen am Neckar",
+    "StateOrProvince": "Baden-Württemberg",
+    "PostalCode": "73734",
+    "Country": "DE",
+    "Phone": "00497113670",
+    "Email": "",
+    "ContactURL": "https://www.festo.com/cms/en_corp/2.htm",
+    "cached_at": "2026-02-02T23:28:25.168038",
+    "original_brand": "Festo"
+  },
+  "the north face": {
+    "CompanyName": "VF International Sagl",
+    "Street1": "Via Laveggio 5",
+    "Street2": "",
+    "CityName": "Stabio",
+    "StateOrProvince": "",
+    "PostalCode": "6855",
+    "Country": "CH",
+    "Phone": "0041588661000",
+    "Email": "",
+    "ContactURL": "https://www.thenorthface.eu/help/contact-us.html",
+    "cached_at": "2026-02-02T23:32:40.288415",
+    "original_brand": "The North Face"
+  },
+  "calvin klein": {
+    "CompanyName": "PVH Europe B.V.",
+    "Street1": "Danzigerkade 165",
+    "Street2": "",
+    "CityName": "Amsterdam",
+    "StateOrProvince": "",
+    "PostalCode": "1013 AP",
+    "Country": "NL",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.calvinklein.nl/contact",
+    "cached_at": "2026-02-02T23:34:03.729833",
+    "original_brand": "Calvin Klein"
   }
 }

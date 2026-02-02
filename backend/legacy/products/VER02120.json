@@ -1,0 +1,130 @@
+{
+  "VER02120": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25101687",
+      "Invoice Date": "2025-10-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "900597",
+      "ISIN": "",
+      "Supplier Title": "Nike Herrenschuhe Gr. 44/ Leicht verschmutzt"
+    },
+    "Price Data": {
+      "Price Net": "13.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "13.72"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Weiß",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus glattem, weißem Kunstleder gefertigt. Sie verfügen über eine klassische Schnürung und eine bequeme Innensohle. Die Sohle ist leicht und bietet guten Halt.",
+      "Keywords": "Sneakers Herren",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02120 (1).jpg"
+        },
+        {
+          "filename": "VER02120 (10).jpg"
+        },
+        {
+          "filename": "VER02120 (2).jpg"
+        },
+        {
+          "filename": "VER02120 (3).jpg"
+        },
+        {
+          "filename": "VER02120 (4).jpg"
+        },
+        {
+          "filename": "VER02120 (5).jpg"
+        },
+        {
+          "filename": "VER02120 (6).jpg"
+        },
+        {
+          "filename": "VER02120 (7).jpg"
+        },
+        {
+          "filename": "VER02120 (8).jpg"
+        },
+        {
+          "filename": "VER02120 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02120 (7).jpg"
+        },
+        {
+          "filename": "VER02120 (9).jpg"
+        },
+        {
+          "filename": "VER02120 (4).jpg"
+        },
+        {
+          "filename": "VER02120 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "195243 596959",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "Kunstleder",
+        "Produktart": "Sportschuh",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Schnürung"
+      }
+    }
+  }
+}

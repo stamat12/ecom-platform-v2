@@ -1,0 +1,85 @@
+{
+  "VER02144": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102751,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 868882,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein YMOYMOO745 Sneaker Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 21.22
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02144 (1).jpg"
+        },
+        {
+          "filename": "VER02144 (2).jpg"
+        },
+        {
+          "filename": "VER02144 (3).jpg"
+        },
+        {
+          "filename": "VER02144 (4).jpg"
+        },
+        {
+          "filename": "VER02144 (5).jpg"
+        },
+        {
+          "filename": "VER02144 (6).jpg"
+        },
+        {
+          "filename": "VER02144 (7).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

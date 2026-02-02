@@ -54,9 +54,7 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 5,
-        "count_enhanced": 0,
-        "has_main_images": true,
-        "count_main_images": 2
+        "count_enhanced": 0
       },
       "stock": [],
       "phone": [
@@ -76,15 +74,7 @@
           "filename": "VER02178 (5).jpg"
         }
       ],
-      "enhanced": [],
-      "main_images": [
-        {
-          "filename": "VER02178 (4).jpg"
-        },
-        {
-          "filename": "VER02178 (5).jpg"
-        }
-      ]
+      "enhanced": []
     }
   }
 }

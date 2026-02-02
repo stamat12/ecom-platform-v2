@@ -26,6 +26,7 @@ from app.services.ebay_category_search import search_ebay_categories
 from app.services.ebay_listings_computation import compute_ebay_listings
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
+from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -70,6 +71,7 @@ from app.models.ebay_sync import (
     SyncStatusRequest, SyncStatusResponse
 )
 from app.models.inventory_import import InventoryImportRequest, InventoryImportResponse
+from app.models.excel_sync import ExcelToDbSyncRequest, ExcelToDbSyncResponse
 
 # Create FastAPI app
 app = FastAPI(title="Ecom Platform API", version="1.0")
@@ -1160,6 +1162,65 @@ def search_ebay_categories_endpoint(
     """Search eBay categories cache by text (SQLite)."""
     items = search_ebay_categories(query=query, limit=limit)
     return {"items": items}
+
+
+@app.get("/api/excel/sheets")
+def get_excel_sheets_endpoint():
+    """Get list of Excel sheet names and their columns."""
+    sheets = get_excel_sheets()
+    result = {}
+    for sheet in sheets:
+        result[sheet] = get_excel_columns(sheet)
+    return {"sheets": result}
+
+
+@app.post("/api/excel/sync-to-db", response_model=ExcelToDbSyncResponse)
+def sync_excel_to_db_endpoint(request: ExcelToDbSyncRequest):
+    """Sync selected columns from Excel sheets to database."""
+    results = []
+    all_success = True
+
+    for sheet_info in request.sheets:
+        result = sync_excel_to_db(sheet_info.sheet_name, sheet_info.columns)
+        results.append({
+            "sheet": sheet_info.sheet_name,
+            **result
+        })
+        if not result.get("success", False):
+            all_success = False
+
+    return ExcelToDbSyncResponse(
+        success=all_success,
+        message="Sync completed" if all_success else "Sync completed with errors",
+        results=results
+    )
+
+
+@app.get("/api/debug/db-tables")
+def debug_db_tables():
+    """DEBUG: Show database table structure"""
+    import sqlite3
+    from app.services.config import Config
+    config = Config()
+    
+    db_path = config.DATABASE_PATH or config.LEGACY_DB_PATH
+    conn = sqlite3.connect(db_path)
+    
+    # Get all tables
+    tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+    result = {}
+    
+    for (table_name,) in tables:
+        # Get columns for each table
+        cols = conn.execute(f"PRAGMA table_info({table_name})").fetchall()
+        row_count = conn.execute(f"SELECT COUNT(*) FROM {table_name}").fetchone()[0]
+        result[table_name] = {
+            "columns": [col[1] for col in cols],  # col[1] is column name
+            "row_count": row_count
+        }
+    
+    conn.close()
+    return result
 
 
 @app.get("/api/skus/ebay-listings/compute")

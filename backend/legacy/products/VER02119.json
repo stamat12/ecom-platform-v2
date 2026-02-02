@@ -1,0 +1,120 @@
+{
+  "VER02119": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25101687",
+      "Invoice Date": "2025-10-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "900115",
+      "ISIN": "",
+      "Supplier Title": "The North Face Men's Long Sleeve Zippered Denim Shirt Größe L"
+    },
+    "Price Data": {
+      "Price Net": "10.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "11.22"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "The North Face",
+      "Color": "Blau",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Hemd hat einen klassischen Kragen und lange Ärmel. Es ist aus leichtem Material gefertigt und hat eine Brusttasche. Die Farbe ist ein sanftes Blau, ideal für lässige Anlässe.",
+      "Keywords": "Hemd Herren",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "56"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02119 (1).jpg"
+        },
+        {
+          "filename": "VER02119 (2).jpg"
+        },
+        {
+          "filename": "VER02119 (3).jpg"
+        },
+        {
+          "filename": "VER02119 (4).jpg"
+        },
+        {
+          "filename": "VER02119 (5).jpg"
+        },
+        {
+          "filename": "VER02119 (6).jpg"
+        },
+        {
+          "filename": "VER02119 (7).jpg"
+        },
+        {
+          "filename": "VER02119 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02119 (4).jpg"
+        },
+        {
+          "filename": "VER02119 (6).jpg"
+        },
+        {
+          "filename": "VER02119 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "The North Face",
+        "Abteilung": "Herren",
+        "Größe": "L",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Ärmellänge": "Langarm",
+        "Material": "Baumwolle",
+        "Produktart": "Geknöpftes Hemd",
+        "Ausschnitt": "Kragen",
+        "Jahreszeit": "Frühling",
+        "Kragenart": "Kentkragen",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}
