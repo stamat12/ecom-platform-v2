@@ -50,6 +50,9 @@ export default function SkuBatchPage() {
 
   const [items, setItems] = useState([]);
   const [preview, setPreview] = useState(null); // { sku, image }
+  const [previewEan, setPreviewEan] = useState(""); // EAN value in preview modal
+  const [previewOp, setPreviewOp] = useState(""); // OP value in preview modal
+  const [previewSaving, setPreviewSaving] = useState(false); // Saving state for preview modal
   const [rotating, setRotating] = useState({}); // { "sku/filename": true }
   const [jsonStatus, setJsonStatus] = useState({}); // { sku: true/false }
   const [generatingJson, setGeneratingJson] = useState({}); // { sku: true/false }
@@ -1480,7 +1483,7 @@ export default function SkuBatchPage() {
                       {!editingDetails[sku] ? (
                         <>
                           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginBottom: 12 }}>
-                            {productDetails[sku].categories.map((cat) => (
+                            {productDetails[sku].categories.filter(cat => cat.name !== "eBay Fields").map((cat) => (
                               <div key={cat.name} style={{ paddingBottom: 12, borderBottom: "1px solid #e0e0e0" }}>
                                 <div style={{ fontWeight: "bold", color: "#1976D2", marginBottom: 8, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.5px" }}>
                                   {cat.name}
@@ -1516,7 +1519,7 @@ export default function SkuBatchPage() {
                           <button
                             onClick={() => {
                               const initialEdited = {};
-                              productDetails[sku].categories.forEach(cat => {
+                              productDetails[sku].categories.filter(cat => cat.name !== "eBay Fields").forEach(cat => {
                                 initialEdited[cat.name] = {};
                                 cat.fields.forEach(field => {
                                   initialEdited[cat.name][field.name] = field.value;
@@ -1542,7 +1545,7 @@ export default function SkuBatchPage() {
                       ) : (
                         <>
                           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginBottom: 12 }}>
-                            {productDetails[sku].categories.map((cat) => (
+                            {productDetails[sku].categories.filter(cat => cat.name !== "eBay Fields").map((cat) => (
                               <div key={cat.name} style={{ paddingBottom: 12, borderBottom: "1px solid #e0e0e0" }}>
                                 <div style={{ fontWeight: "bold", color: "#1976D2", marginBottom: 8, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.5px" }}>
                                   {cat.name}
@@ -2368,7 +2371,30 @@ export default function SkuBatchPage() {
                           </div>
                         )}
                           <button
-                          onClick={() => setPreview({ sku, img })}
+                          onClick={async () => {
+                            // Load current EAN and OP values
+                            const details = await loadProductDetails(sku);
+                            let ean = "";
+                            let op = "";
+                            
+                            if (details?.categories) {
+                              const eanCat = details.categories.find(c => c.name === "EAN");
+                              if (eanCat) {
+                                const eanField = eanCat.fields.find(f => f.name === "EAN");
+                                ean = eanField?.value || "";
+                              }
+                              
+                              const opCat = details.categories.find(c => c.name === "OP");
+                              if (opCat) {
+                                const opField = opCat.fields.find(f => f.name === "OP");
+                                op = opField?.value || "";
+                              }
+                            }
+                            
+                            setPreviewEan(ean);
+                            setPreviewOp(op);
+                            setPreview({ sku, img });
+                          }}
                           style={{ all: "unset", cursor: "pointer", display: "block", position: "relative" }}
                           title={img.filename}
                         >
@@ -2484,16 +2510,107 @@ export default function SkuBatchPage() {
       <Modal open={!!preview} onClose={() => setPreview(null)}>
         {preview && (
           <div>
-            <div style={{ fontFamily: "ui-monospace", marginBottom: 8 }}>
+            <div style={{ fontFamily: "ui-monospace", marginBottom: 8, fontWeight: "bold" }}>
               {preview.sku} • {preview.img.filename}
             </div>
             <img
               src={preview.img.preview_url || preview.img.original_url}
               alt={preview.img.filename}
-              style={{ maxWidth: "85vw", maxHeight: "75vh", display: "block" }}
+              style={{ maxWidth: "85vw", maxHeight: "60vh", display: "block" }}
             />
-            <div style={{ marginTop: 10, display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <a href={preview.img.original_url} target="_blank" rel="noreferrer">Open original</a>
+            <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap", alignItems: "flex-end" }}>
+              <div style={{ flex: "1 1 200px" }}>
+                <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>EAN:</label>
+                <input
+                  type="text"
+                  value={previewEan}
+                  onChange={(e) => setPreviewEan(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "6px 8px",
+                    fontSize: 14,
+                    border: "1px solid #ccc",
+                    borderRadius: 4
+                  }}
+                  placeholder="Enter EAN"
+                />
+              </div>
+              <div style={{ flex: "1 1 200px" }}>
+                <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>OP:</label>
+                <input
+                  type="text"
+                  value={previewOp}
+                  onChange={(e) => setPreviewOp(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "6px 8px",
+                    fontSize: 14,
+                    border: "1px solid #ccc",
+                    borderRadius: 4
+                  }}
+                  placeholder="Enter OP"
+                />
+              </div>
+              <button
+                onClick={async () => {
+                  setPreviewSaving(true);
+                  try {
+                    const sku = preview.sku;
+                    const updates = {};
+                    if (previewEan !== "") updates.EAN = { EAN: previewEan };
+                    if (previewOp !== "") updates.OP = { OP: previewOp };
+
+                    if (Object.keys(updates).length === 0) {
+                      alert("No changes to save");
+                      setPreviewSaving(false);
+                      return;
+                    }
+
+                    // Save to Product Details
+                    const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`, {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ sku, updates })
+                    });
+                    const result = await res.json();
+
+                    if (result.success) {
+                      alert(`✅ Saved successfully`);
+                      
+                      // Refresh product details
+                      const detailsRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
+                      if (detailsRes.ok) {
+                        const detailsData = await detailsRes.json();
+                        setProductDetails(prev => ({ ...prev, [sku]: detailsData }));
+                      }
+
+                      setPreview(null);
+                    } else {
+                      alert(result.message || "Failed to save");
+                    }
+                  } catch (e) {
+                    alert(`Error: ${e.message}`);
+                  } finally {
+                    setPreviewSaving(false);
+                  }
+                }}
+                disabled={previewSaving}
+                style={{
+                  padding: "6px 16px",
+                  fontSize: 14,
+                  background: previewSaving ? "#ccc" : "#4CAF50",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: previewSaving ? "not-allowed" : "pointer",
+                  fontWeight: "bold"
+                }}
+              >
+                {previewSaving ? "Saving..." : "💾 Save"}
+              </button>
+              <a href={preview.img.original_url} target="_blank" rel="noreferrer" style={{ padding: "6px 10px", fontSize: 12 }}>
+                Open original
+              </a>
             </div>
           </div>
         )}

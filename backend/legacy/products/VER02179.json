@@ -3,45 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876930,
-      "ISIN": null,
+      "Supplier Number": "876930",
+      "ISIN": "",
       "Supplier Title": "1 Paar Tom Tailor 7490010917 Sneaker Größe 37"
     },
     "Price Data": {
-      "Price Net": 13.33,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 13.72
+      "Price Net": "13.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "13.72"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "4066893062705"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "TOM TAILOR",
+      "Brand": "Tom Tailor",
       "Color": "weiß",
-      "Size": "EU 37"
+      "Size": "37"
     },
     "Intern Generated Info": {
       "More details": "Diese Sneakers sind in einem eleganten weißen Design gehalten. Sie verfügen über eine superweiche Innensohle mit Memory-Effekt für hohen Tragekomfort. Die Schuhe haben eine robuste Gummisohle und sind ideal für den Alltag.",
-      "Keywords": "TOM TAILOR Sneakers Damen",
+      "Keywords": "Sneakers Damen",
       "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "55"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -108,7 +108,90 @@
         {
           "filename": "VER02179 (11).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02179 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/56QAAeSwMfJpgoSY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GcIAAeSwGwNpgoSb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZewAAeSwUaRpgoSf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YLYAAeSwKVBpgoSi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VSUAAeSwg0ZpgoSk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (11).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cBkAAeSwq~ppgoSn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/d-0AAeSwEb5pgoSq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02179 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YKMAAeSw~gBpgoSs/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Tom Tailor",
+        "EU-Schuhgröße": "37",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "7490010017",
+        "Individualisiert": "Nein",
+        "Modell": "",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Stil": "Sneaker",
+        "Charakter": "",
+        "Schuhschaft-Typ": "",
+        "Innensohlenmaterial": "",
+        "Obermaterial": "Synthetik",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "",
+        "Thema": "",
+        "Schuhweite": "",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Frühling",
+        "Aktivität": "Fitnessstudio & Training",
+        "Ursprungsland": "",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "",
+        "Signiert": "",
+        "Muster": "",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      }
     }
   }
 }

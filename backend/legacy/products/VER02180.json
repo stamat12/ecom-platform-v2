@@ -3,45 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876929,
-      "ISIN": null,
+      "Supplier Number": "876929",
+      "ISIN": "",
       "Supplier Title": "1 Paar Converse M5039C Sneaker Größe 37"
     },
     "Price Data": {
-      "Price Net": 16.67,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 17.06
+      "Price Net": "16.67",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "17.06"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "886952780234"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
       "Brand": "Converse",
       "Color": "Schwarz",
-      "Size": "4.5 UK / 6.5 US / 37 EUR"
+      "Size": "37"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus schwarzem Textilmaterial gefertigt. Sie haben eine Gummisohle und eine klassische Schnürung. Das Design ist schlicht und zeitlos, ideal für den Alltag.",
-      "Keywords": "Converse All Star Sneakers Unisex",
+      "Keywords": "All Star Sneakers Unisex",
       "Materials": "Textil Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -111,7 +111,87 @@
         {
           "filename": "VER02180 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02180 (16).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VHAAAeSwk69pgoe2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (18).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TC8AAeSw6R9pgoe6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (20).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/SNIAAeSw5M9pgoe9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (19).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YygAAeSwd1lpgofB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (17).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K5gAAeSwkYtpgofE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (21).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gt8AAeSw1L1pgofH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/e5IAAeSwsaZpgofJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (12).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WxkAAeSwYsdpgofL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (15).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YPwAAeSw245pgofO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02180 (14).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/g-oAAeSwj6NpgofQ/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Converse",
+        "EU-Schuhgröße": "37",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "M5039C",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "C Taylor A/S Ox",
+        "Modell": "C Taylor A/S Ox",
+        "UK-Schuhgröße": "4.5",
+        "US-Schuhgröße": "6.5",
+        "Obermaterial": "Textil",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Textil",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Akzente": "Logo",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "Vietnam"
+      }
     }
   }
 }

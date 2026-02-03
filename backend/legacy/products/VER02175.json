@@ -21,7 +21,7 @@
       "eBay Category ID": "24087"
     },
     "EAN": {
-      "EAN": ""
+      "EAN": "4069092251208"
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -105,11 +105,76 @@
         {
           "filename": "VER02175 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02175 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z3sAAeSwdGlpgncu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/F7YAAeSwNqNpgncy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IbQAAeSw3zdpgnc2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nfgAAeSwjbBpgnc6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-mYAAeSwoRFpgnc9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IMoAAeSwARhpgndA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8FYAAeSwV2dpgndD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02175 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EOAAAeSwontpgndG/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
-      "required": "{'Marke': 'Ashton Aubry', 'EU-Schuhgröße': '44', 'Abteilung': 'Herren', 'Stil': 'Halbschuhe', 'Farbe': 'Schwarz', 'Obermaterial': 'Leder'}",
-      "optional": "{'AU-Schuhgröße': '11', 'UK-Schuhgröße': '10', 'US-Schuhgröße': '11,5', 'Futtermaterial': 'Kunstleder', 'Laufsohlenmaterial': 'Gummi', 'Innensohlenmaterial': 'Schaumstoff', 'Produktart': 'Freizeitschuh', 'Vintage': 'Nein', 'Individualisiert': 'Nein', 'Jahreszeit': 'Frühling', 'Verschluss': 'Schnürung', 'Anlass': 'Freizeit', 'Schuhspitze': 'Runde Form', 'Muster': 'Ohne Muster', 'Herstellernummer': '40217611-004'}"
+      "required": {
+        "Marke": "Ashton Aubry",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Stil": "Halbschuhe",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "AU-Schuhgröße": "11",
+        "UK-Schuhgröße": "10",
+        "US-Schuhgröße": "11,5",
+        "Futtermaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Gummi",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Produktart": "Freizeitschuh",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Jahreszeit": "Frühling",
+        "Verschluss": "Schnürung",
+        "Anlass": "Freizeit",
+        "Schuhspitze": "Runde Form",
+        "Muster": "Ohne Muster",
+        "Herstellernummer": "40217611-004"
+      }
     }
   }
 }

@@ -3,28 +3,28 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876916,
-      "ISIN": null,
+      "Supplier Number": "876916",
+      "ISIN": "",
       "Supplier Title": "1 Paar Bershka Sandals Größe 41"
     },
     "Price Data": {
-      "Price Net": 5.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 6.22
+      "Price Net": "5.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "6.22"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -34,14 +34,14 @@
     },
     "Intern Generated Info": {
       "More details": "Die Sandalen haben ein offenes Design mit mehreren Riemen. Sie sind aus schwarzem Material gefertigt und verfügen über einen verstellbaren Riemen mit Schnalle. Ideal für den Sommer und vielseitig kombinierbar.",
-      "Keywords": "Bershka Sandalen Damen",
+      "Keywords": "Sandalen Damen",
       "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "45"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -83,6 +83,33 @@
         },
         {
           "filename": "VER02178 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02178 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MPkAAeSwCRdpgn1Z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02178 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9BkAAeSwkMFpgn1d/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02178 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TNkAAeSwreJpgn1g/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02178 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/W9gAAeSwmhlpgn1l/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02178 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MfcAAeSwlkVpgn1n/$_1.JPG?set_id=8800005007"
         }
       ]
     },

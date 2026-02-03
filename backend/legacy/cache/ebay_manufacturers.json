@@ -242,5 +242,61 @@
     "ContactURL": "https://about.puma.com/en/contact",
     "cached_at": "2026-02-03T01:30:55.290660",
     "original_brand": "PUMA"
+  },
+  "new balance": {
+    "CompanyName": "New Balance Athletics, Inc.",
+    "Street1": "20 Guest Street",
+    "Street2": "",
+    "CityName": "Boston",
+    "StateOrProvince": "MA",
+    "PostalCode": "02135",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.newbalance.com/contact-us.html",
+    "cached_at": "2026-02-03T23:36:45.307237",
+    "original_brand": "New Balance"
+  },
+  "bershka": {
+    "CompanyName": "Industria de Diseño Textil, S.A. (Inditex)",
+    "Street1": "Avenida de la Diputación",
+    "Street2": "",
+    "CityName": "Arteixo",
+    "StateOrProvince": "A Coruña",
+    "PostalCode": "15143",
+    "Country": "ES",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.bershka.com/es/en/contact",
+    "cached_at": "2026-02-03T23:57:47.031133",
+    "original_brand": "Bershka"
+  },
+  "tom tailor": {
+    "CompanyName": "TOM TAILOR GmbH",
+    "Street1": "Garstedter Weg 14",
+    "Street2": "",
+    "CityName": "Hamburg",
+    "StateOrProvince": "",
+    "PostalCode": "22453",
+    "Country": "DE",
+    "Phone": "004940589560",
+    "Email": "info@tom-tailor.com",
+    "ContactURL": "https://www.tom-tailor.com/en-de/contact",
+    "cached_at": "2026-02-04T00:28:48.876844",
+    "original_brand": "Tom Tailor"
+  },
+  "converse": {
+    "CompanyName": "Converse Inc.",
+    "Street1": "One Bowerman Drive",
+    "Street2": "",
+    "CityName": "Beaverton",
+    "StateOrProvince": "OR",
+    "PostalCode": "97005",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.converse.com/help/contact-us",
+    "cached_at": "2026-02-04T00:42:12.227903",
+    "original_brand": "Converse"
   }
 }

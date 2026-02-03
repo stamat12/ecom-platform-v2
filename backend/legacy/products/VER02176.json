@@ -3,34 +3,34 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 875153,
-      "ISIN": null,
+      "Supplier Number": "875153",
+      "ISIN": "",
       "Supplier Title": "1 Stk. New Balance RC42 Sneakers Size Uk:6.5"
     },
     "Price Data": {
-      "Price Net": 20.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 21.22
+      "Price Net": "20.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "21.22"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "New Balance",
       "Color": "Weiß/Schwarz",
-      "Size": "40 EU"
+      "Size": "40"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe haben eine weiße Oberfläche mit schwarzen Akzenten. Sie sind aus Leder und haben eine Gummisohle. Die Schnürsenkel sind ebenfalls weiß und sorgen für einen sicheren Halt.",
@@ -38,10 +38,10 @@
       "Materials": "Leder, Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "100"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -107,6 +107,48 @@
         },
         {
           "filename": "VER02176 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02176 (10).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oZ8AAeSwsKxpgnhi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Q8MAAeSw5A1pgnhl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FYcAAeSwCRdpgnhp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3TwAAeSwXwppgnhs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/peUAAeSwstRpgnhv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1XQAAeSwpOlpgnhx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Nw4AAeSwBRppgnh1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02176 (2).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G00AAeSw~plpgnh5/$_1.JPG?set_id=8800005007"
         }
       ]
     },
