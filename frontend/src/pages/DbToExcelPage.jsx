@@ -8,7 +8,7 @@ export default function DbToExcelPage() {
   const [syncResult, setSyncResult] = useState(null);
 
   const handleSyncDbToExcel = async () => {
-    if (!confirm("Sync JSON data to Excel? This will update cells where there are changes.\n\nColumns updated:\n- Ebay Category\n- EAN\n- Product Condition\n- Intern Product Info\n- Intern Generated Info\n- OP\n- Status\n- Warehouse\n- Json Phone stock\n- Json Enhanced")) {
+    if (!confirm("Sync JSON data to Excel? This will update cells where there are changes.\n\nColumns updated:\n- Category (eBay path)\n- EAN\n- Condition\n- Gender, Brand, Color, Size\n- More details, Materials, Keywords\n- OP\n- Status\n- Lager\n- Images JSON Phone, Stock, Enhanced\n- JSON (Yes/empty)\n- Images (folder count)")) {
       return;
     }
 
@@ -52,16 +52,24 @@ export default function DbToExcelPage() {
         
         <h3>Columns that will be updated:</h3>
         <ul>
-          <li>✅ Ebay Category</li>
-          <li>✅ EAN</li>
-          <li>✅ Product Condition</li>
-          <li>✅ Intern Product Info</li>
-          <li>✅ Intern Generated Info</li>
-          <li>✅ OP</li>
-          <li>✅ Status</li>
-          <li>✅ Warehouse</li>
-          <li>✅ Json Phone stock (image counts)</li>
-          <li>✅ Json Enhanced (image counts)</li>
+          <li>✅ <strong>Category</strong> (from Ebay Category section)</li>
+          <li>✅ <strong>EAN</strong> (from EAN section)</li>
+          <li>✅ <strong>Condition</strong> (from Product Condition section)</li>
+          <li>✅ <strong>Gender</strong> (from Intern Product Info section)</li>
+          <li>✅ <strong>Brand</strong> (from Intern Product Info section)</li>
+          <li>✅ <strong>Color</strong> (from Intern Product Info section)</li>
+          <li>✅ <strong>Size</strong> (from Intern Product Info section)</li>
+          <li>✅ <strong>More details</strong> (from Intern Generated Info section)</li>
+          <li>✅ <strong>Materials</strong> (from Intern Generated Info section)</li>
+          <li>✅ <strong>Keywords</strong> (from Intern Generated Info section)</li>
+          <li>✅ <strong>OP</strong> (from OP section)</li>
+          <li>✅ <strong>Status</strong> (from Status section)</li>
+          <li>✅ <strong>Lager</strong> (from Warehouse section)</li>
+          <li>✅ <strong>Images JSON Phone</strong> (phone image count)</li>
+          <li>✅ <strong>Images JSON Stock</strong> (stock image count)</li>
+          <li>✅ <strong>Images JSON Enhanced</strong> (enhanced image count)</li>
+          <li>✅ <strong>JSON</strong> ("Yes" if JSON file exists, empty otherwise)</li>
+          <li>✅ <strong>Images</strong> (folder images count from cache)</li>
         </ul>
 
         <p><strong>Note:</strong> Only cells with changes will be updated. Excel table format is preserved.</p>

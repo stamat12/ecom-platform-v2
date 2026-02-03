@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "About You",
+      "Color": "Beige",
+      "Size": ""
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Sandalen haben eine bequeme, gepolsterte Innensohle und sind mit mehreren Riemen ausgestattet. Die Sohle ist aus Jute gefertigt, was einen sommerlichen Look verleiht. Sie sind ideal für warme Tage und lassen sich gut kombinieren.",
+      "Keywords": "Sandalen Damen",
+      "Materials": "Synthetik, Jute"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 7,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -80,7 +82,18 @@
           "filename": "VER02182 (7).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02182 (4).jpg"
+        },
+        {
+          "filename": "VER02182 (3).jpg"
+        },
+        {
+          "filename": "VER02182 (7).jpg"
+        }
+      ]
     }
   }
 }

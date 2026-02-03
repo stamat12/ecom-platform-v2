@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "Puma",
+      "Color": "Braun",
+      "Size": "40"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Sneakers haben eine auffällige Plateausohle und sind aus weichem Wildleder gefertigt. Die Kombination aus Braun und Beige verleiht ihnen einen modernen Look. Sie sind ideal für lässige Outfits und bieten hohen Tragekomfort.",
+      "Keywords": "Puma Sneakers Damen",
+      "Materials": "Wildleder"
     },
     "OP": {
       "OP": null

@@ -4,6 +4,7 @@ import SkuListPage from "./pages/SkuListPage.jsx";
 import SkuDetailPage from "./pages/SkuDetailPage.jsx";
 import SkuBatchPage from "./pages/SkuBatchPage.jsx";
 import DbToExcelPage from "./pages/DbToExcelPage.jsx";
+import CleanupDatabasePage from "./pages/CleanupDatabasePage.jsx";
 
 export default function App() {
   return (
@@ -17,6 +18,11 @@ export default function App() {
             📊 DB to Excel
           </span>
         </Link>
+        <Link to="/cleanup-db" style={{ textDecoration: "none" }}>
+          <span style={{ padding: "8px 16px", backgroundColor: "#dc3545", color: "white", borderRadius: "4px", fontSize: "14px" }}>
+            🧹 Cleanup DB
+          </span>
+        </Link>
         <div style={{ marginLeft: "auto", color: "#666" }}>FastAPI + React (Vite) + eBay Integration</div>
       </header>
 
@@ -26,6 +32,7 @@ export default function App() {
         <Route path="/skus/batch" element={<SkuBatchPage />} />
         <Route path="/skus/:sku" element={<SkuDetailPage />} />
         <Route path="/db-to-excel" element={<DbToExcelPage />} />
+        <Route path="/cleanup-db" element={<CleanupDatabasePage />} />
       </Routes>
     </div>
   );

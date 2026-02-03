@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "Bershka",
+      "Color": "Schwarz",
+      "Size": "41"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Sandalen haben ein offenes Design mit mehreren Riemen. Sie sind aus schwarzem Material gefertigt und verfügen über einen verstellbaren Riemen mit Schnalle. Ideal für den Sommer und vielseitig kombinierbar.",
+      "Keywords": "Bershka Sandalen Damen",
+      "Materials": "Kunstleder"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 5,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -74,7 +76,39 @@
           "filename": "VER02178 (5).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02178 (4).jpg"
+        },
+        {
+          "filename": "VER02178 (5).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Bershka",
+        "EU-Schuhgröße": "41",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Stil": "Gladiator",
+        "Obermaterial": "Kunstleder"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Innensohlenmaterial": "Synthetik",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Absatzart": "Flach",
+        "US-Schuhgröße": "10",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Verschluss": "Schnalle",
+        "Individualisiert": "Nein",
+        "Jahreszeit": "Sommer",
+        "Personalisieren": "Nein"
+      }
     }
   }
 }

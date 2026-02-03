@@ -116,6 +116,7 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
             rows_updated = 0
             rows_inserted = 0
             rows_failed = 0
+            rows_skipped_insert = 0
 
             # Check if this table should be fully replaced
             if table_name in FULL_REPLACE_TABLES:
@@ -169,7 +170,7 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                             val = val.strip()
                         key_values.append(val)
                     key_tuple = tuple(key_values)
-                    db_rows[key_tuple] = dict(db_row)
+                    db_rows.setdefault(key_tuple, []).append(db_row["rowid"])
 
                 print(f"[SYNC] Found {len(db_rows)} existing rows in database")
 
@@ -195,9 +196,9 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                             continue
 
                         # Check if this row exists in database
-                        existing_row = db_rows.get(key_tuple)
+                        existing_row_ids = db_rows.get(key_tuple)
 
-                        if existing_row:
+                        if existing_row_ids:
                             # UPDATE existing row
                             updates = {}
                             for col in available_cols:
@@ -212,13 +213,17 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
 
                             if updates:
                                 set_clause = ", ".join([f'"{col}" = ?' for col in updates.keys()])
-                                conn.execute(
-                                    f'UPDATE "{table_name}" SET {set_clause} WHERE rowid = ?',
-                                    list(updates.values()) + [existing_row['rowid']],
-                                )
-                                rows_updated += 1
+                                for rowid in existing_row_ids:
+                                    conn.execute(
+                                        f'UPDATE "{table_name}" SET {set_clause} WHERE rowid = ?',
+                                        list(updates.values()) + [rowid],
+                                    )
+                                rows_updated += len(existing_row_ids)
                         else:
                             # INSERT new row - include ALL columns from Excel
+                            if table_name == "inventory":
+                                rows_skipped_insert += 1
+                                continue
                             all_values = {}
                             for db_col in db_columns.keys():
                                 if db_col in df.columns:
@@ -245,6 +250,9 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                         traceback.print_exc()
                         rows_failed += 1
 
+                # Commit updates/inserts for smart sync
+                conn.commit()
+
             # Invalidate cache
             if table_name == "inventory":
                 excel_inventory.invalidate()
@@ -255,6 +263,7 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                 "rows_updated": rows_updated,
                 "rows_inserted": rows_inserted,
                 "rows_failed": rows_failed,
+                "rows_skipped_insert": rows_skipped_insert,
                 "columns_synced": available_cols,
             }
         finally:

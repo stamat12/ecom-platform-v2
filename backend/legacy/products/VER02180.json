@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Schwarz",
+      "Size": "4.5 UK / 6.5 US / 37 EUR"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus schwarzem Textilmaterial gefertigt. Sie haben eine Gummisohle und eine klassische Schnürung. Das Design ist schlicht und zeitlos, ideal für den Alltag.",
+      "Keywords": "Converse All Star Sneakers Unisex",
+      "Materials": "Textil Gummi"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 11,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
       },
       "stock": [],
       "phone": [
@@ -92,7 +94,24 @@
           "filename": "VER02180 (21).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02180 (14).jpg"
+        },
+        {
+          "filename": "VER02180 (18).jpg"
+        },
+        {
+          "filename": "VER02180 (20).jpg"
+        },
+        {
+          "filename": "VER02180 (16).jpg"
+        },
+        {
+          "filename": "VER02180 (1).jpg"
+        }
+      ]
     }
   }
 }

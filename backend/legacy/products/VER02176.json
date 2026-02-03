@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "New Balance",
+      "Color": "Weiß/Schwarz",
+      "Size": "40 EU"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe haben eine weiße Oberfläche mit schwarzen Akzenten. Sie sind aus Leder und haben eine Gummisohle. Die Schnürsenkel sind ebenfalls weiß und sorgen für einen sicheren Halt.",
+      "Keywords": "RC40 Sneakers Damen",
+      "Materials": "Leder, Gummi"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 11,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -92,7 +94,54 @@
           "filename": "VER02176 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02176 (10).jpg"
+        },
+        {
+          "filename": "VER02176 (7).jpg"
+        },
+        {
+          "filename": "VER02176 (4).jpg"
+        },
+        {
+          "filename": "VER02176 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "New Balance",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "197376178427",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "RC",
+        "Modell": "URC42LA",
+        "UK-Schuhgröße": "6.5",
+        "US-Schuhgröße": "7",
+        "Obermaterial": "Baumwolle",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "2014",
+        "Vintage": "Nein",
+        "Futtermaterial": "Stoff",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Schuhweite": "Standard",
+        "Akzente": "Logo",
+        "Besonderheiten": "Atmungsaktiv",
+        "Anlass": "Freizeit",
+        "Aktivität": "Fitnessstudio & Training",
+        "Ursprungsland": "Vietnam"
+      }
     }
   }
 }

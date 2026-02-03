@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "New Balance",
+      "Color": "Weiß und Schwarz",
+      "Size": "UK 6"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus Leder und haben eine Gummisohle. Sie sind in einem klassischen Design mit einem schwarzen Logo auf der Seite. Die Schnürsenkel sind weiß und die Schuhe haben eine bequeme Passform.",
+      "Keywords": "RC42 Sneakers Unisex",
+      "Materials": "Leder Gummi"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 8,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -83,7 +85,38 @@
           "filename": "VER02177 (8).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02177 (6).jpg"
+        },
+        {
+          "filename": "VER02177 (5).jpg"
+        },
+        {
+          "filename": "VER02177 (4).jpg"
+        },
+        {
+          "filename": "VER02177 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "New Balance",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "134106026",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "8",
+        "Obermaterial": "Leder",
+        "Produktart": "Sportschuh",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Ganzjährig"
+      }
     }
   }
 }

@@ -14,16 +14,26 @@ import sys
 sys.path.insert(0, str(LEGACY))
 import config  # type: ignore
 
-# JSON sections to sync
-JSON_SECTIONS_TO_SYNC = [
-    "Ebay Category",
-    "EAN",
-    "Product Condition",
-    "Intern Product Info",
-    "Intern Generated Info",
-    "OP",
-    "Status",
-    "Warehouse"
+# Excel columns to sync from JSON
+EXCEL_COLUMNS_TO_SYNC = [
+    "Category",           # from Ebay Category section
+    "EAN",                # from EAN section
+    "Condition",          # from Product Condition section
+    "Gender",             # from Intern Product Info section
+    "Brand",              # from Intern Product Info section
+    "Color",              # from Intern Product Info section
+    "Size",               # from Intern Product Info section
+    "More details",       # from Intern Generated Info section
+    "Materials",          # from Intern Generated Info section
+    "Keywords",           # from Intern Generated Info section
+    "OP",                 # from OP section
+    "Status",             # from Status section
+    "Lager",              # from Warehouse section
+    "Images JSON Phone",  # from Images section (count)
+    "Images JSON Stock",  # from Images section (count)
+    "Images JSON Enhanced",  # from Images section (count)
+    "JSON",               # whether JSON file exists (Yes/empty)
+    "Images"              # folder images count from cache
 ]
 
 PRODUCTS_DIR = LEGACY / "products"
@@ -45,18 +55,43 @@ def read_sku_json(sku: str) -> Optional[Dict[str, Any]]:
         return None
 
 
+def sku_json_exists(sku: str) -> str:
+    """Check if JSON file exists for SKU. Returns 'Yes' or empty string."""
+    json_file = PRODUCTS_DIR / f"{sku}.json"
+    return "Yes" if json_file.exists() else ""
+
+
+def get_folder_images_count(sku: str) -> int:
+    """Get folder images count from cache for specific SKU."""
+    try:
+        cache_file = LEGACY / "cache" / "folder_images_cache.json"
+        if not cache_file.exists():
+            return 0
+        
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            counts = data.get("counts", {})
+            # Get count for this specific SKU
+            return counts.get(sku, 0)
+    except Exception as e:
+        print(f"Error reading folder images cache: {e}")
+        return 0
+        return 0
+
+
 def get_image_counts(sku: str) -> Dict[str, int]:
     """Extract image counts from JSON."""
     json_data = read_sku_json(sku)
     if not json_data:
-        return {"Json Phone stock": 0, "Json Enhanced": 0}
+        return {"Images JSON Phone": 0, "Images JSON Stock": 0, "Images JSON Enhanced": 0}
     
     images = json_data.get("Images", {})
     summary = images.get("summary", {})
     
     return {
-        "Json Phone stock": summary.get("count_phone", 0),
-        "Json Enhanced": summary.get("count_enhanced", 0)
+        "Images JSON Phone": summary.get("count_phone", 0),
+        "Images JSON Stock": summary.get("count_stock", 0),
+        "Images JSON Enhanced": summary.get("count_enhanced", 0)
     }
 
 
@@ -68,30 +103,62 @@ def flatten_json_sections(sku: str) -> Dict[str, Any]:
     
     flattened = {}
     
-    # Map section names to their main content field
-    section_mappings = {
-        "Ebay Category": lambda x: x.get("eBay Category ID"),
-        "EAN": lambda x: x.get("EAN"),
-        "Product Condition": lambda x: x.get("Condition"),
-        "Intern Product Info": lambda x: json.dumps(x),
-        "Intern Generated Info": lambda x: json.dumps(x),
-        "OP": lambda x: x.get("OP"),
-        "Status": lambda x: x.get("Status"),
-        "Warehouse": lambda x: x.get("Lager"),
-    }
+    # Ebay Category section -> Category column (the path) and we don't update Category ID in Excel
+    ebay_cat = json_data.get("Ebay Category", {})
+    if ebay_cat:
+        flattened["Category"] = ebay_cat.get("Category")
     
-    for section_name, extractor in section_mappings.items():
-        section_data = json_data.get(section_name)
-        if section_data:
-            try:
-                flattened[section_name] = extractor(section_data)
-            except Exception as e:
-                print(f"Error extracting {section_name} for {sku}: {e}")
-                flattened[section_name] = None
+    # EAN section -> EAN column
+    ean_section = json_data.get("EAN", {})
+    if ean_section:
+        flattened["EAN"] = ean_section.get("EAN")
+    
+    # Product Condition section -> Condition column
+    condition_section = json_data.get("Product Condition", {})
+    if condition_section:
+        flattened["Condition"] = condition_section.get("Condition")
+    
+    # Intern Product Info section -> Gender, Brand, Color, Size columns
+    product_info = json_data.get("Intern Product Info", {})
+    if product_info:
+        flattened["Gender"] = product_info.get("Gender")
+        flattened["Brand"] = product_info.get("Brand")
+        flattened["Color"] = product_info.get("Color")
+        flattened["Size"] = product_info.get("Size")
+    
+    # Intern Generated Info section -> More details, Materials, Keywords columns
+    generated_info = json_data.get("Intern Generated Info", {})
+    if generated_info:
+        flattened["More details"] = generated_info.get("More details")
+        flattened["Materials"] = generated_info.get("Materials")
+        flattened["Keywords"] = generated_info.get("Keywords")
+    
+    # OP section -> OP column
+    op_section = json_data.get("OP", {})
+    if op_section:
+        flattened["OP"] = op_section.get("OP")
+    
+    # Status section -> Status column
+    status_section = json_data.get("Status", {})
+    if status_section:
+        flattened["Status"] = status_section.get("Status")
+    
+    # Warehouse section -> Lager column
+    warehouse_section = json_data.get("Warehouse", {})
+    if warehouse_section:
+        flattened["Lager"] = warehouse_section.get("Lager")
     
     # Add image counts
     image_counts = get_image_counts(sku)
-    flattened.update(image_counts)
+    flattened["Images JSON Phone"] = image_counts.get("Images JSON Phone", 0)
+    flattened["Images JSON Stock"] = image_counts.get("Images JSON Stock", 0)
+    flattened["Images JSON Enhanced"] = image_counts.get("Images JSON Enhanced", 0)
+    
+    # Add JSON file existence check
+    flattened["JSON"] = sku_json_exists(sku)
+    
+    # Add folder images count from cache
+    flattened["Images"] = get_folder_images_count(sku)
     
     return flattened
 
@@ -155,7 +222,7 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
         headers = {cell.value: idx + 1 for idx, cell in enumerate(ws[1])}
         
         # Columns to update
-        columns_to_update = JSON_SECTIONS_TO_SYNC + ["Json Phone stock", "Json Enhanced"]
+        columns_to_update = EXCEL_COLUMNS_TO_SYNC
         
         # Find rows by SKU and update
         sku_col = None

@@ -28,6 +28,7 @@ from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
 from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db
 from app.services.db_to_excel_sync import sync_db_to_excel
+from app.services.inventory_cleanup import cleanup_duplicate_skus
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -1210,6 +1211,21 @@ def sync_db_to_excel_endpoint():
         }
     else:
         raise HTTPException(status_code=400, detail=result.get("message", "Sync failed"))
+
+
+@app.post("/api/database/cleanup-duplicates")
+def cleanup_duplicates_endpoint():
+    """Clean up duplicate SKUs in inventory table."""
+    result = cleanup_duplicate_skus()
+    
+    if result.get("success"):
+        return {
+            "success": True,
+            "message": result.get("message"),
+            "stats": result.get("stats", {})
+        }
+    else:
+        raise HTTPException(status_code=400, detail=result.get("message", "Cleanup failed"))
 
 
 @app.get("/api/debug/db-tables")

@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Gelb",
+      "Size": "37"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus einem gelben Textilmaterial gefertigt. Sie haben eine weiße Gummisohle und eine klassische Schnürung. Die Zehenkappe ist aus Gummi und bietet zusätzlichen Schutz.",
+      "Keywords": "Chuck Taylor Sneakers Unisex",
+      "Materials": "Textil Gummi"
     },
     "OP": {
       "OP": null

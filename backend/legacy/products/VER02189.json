@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Lawrence Grey",
+      "Color": "dunkelblau",
+      "Size": "44"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus hochwertigem Wildleder gefertigt und bieten einen eleganten Look. Sie haben eine robuste Gummisohle für besseren Halt. Die Schnürung sorgt für eine individuelle Anpassung und Komfort.",
+      "Keywords": "Lawrence Grey Business Schuhe Herren",
+      "Materials": "Wildleder"
     },
     "OP": {
       "OP": null

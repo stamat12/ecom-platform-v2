@@ -24,24 +24,24 @@
       "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "",
-      "Brand": "",
-      "Color": "",
-      "Size": ""
+      "Gender": "M",
+      "Brand": "Ashton Aubry",
+      "Color": "schwarz",
+      "Size": "44"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Diese eleganten Schnürschuhe sind aus hochwertigem Leder gefertigt. Sie verfügen über eine klassische Form mit einer schlichten, aber stilvollen Optik. Die Schuhe sind ideal für formelle Anlässe oder das Büro geeignet.",
+      "Keywords": "Schnürschuhe Herren",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": ""
+      "OP": "180"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
       },
       "stock": [],
       "phone": [
@@ -86,7 +88,28 @@
           "filename": "VER02175 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02175 (5).jpg"
+        },
+        {
+          "filename": "VER02175 (7).jpg"
+        },
+        {
+          "filename": "VER02175 (8).jpg"
+        },
+        {
+          "filename": "VER02175 (3).jpg"
+        },
+        {
+          "filename": "VER02175 (4).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": "{'Marke': 'Ashton Aubry', 'EU-Schuhgröße': '44', 'Abteilung': 'Herren', 'Stil': 'Halbschuhe', 'Farbe': 'Schwarz', 'Obermaterial': 'Leder'}",
+      "optional": "{'AU-Schuhgröße': '11', 'UK-Schuhgröße': '10', 'US-Schuhgröße': '11,5', 'Futtermaterial': 'Kunstleder', 'Laufsohlenmaterial': 'Gummi', 'Innensohlenmaterial': 'Schaumstoff', 'Produktart': 'Freizeitschuh', 'Vintage': 'Nein', 'Individualisiert': 'Nein', 'Jahreszeit': 'Frühling', 'Verschluss': 'Schnürung', 'Anlass': 'Freizeit', 'Schuhspitze': 'Runde Form', 'Muster': 'Ohne Muster', 'Herstellernummer': '40217611-004'}"
     }
   }
 }

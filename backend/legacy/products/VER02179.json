@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "TOM TAILOR",
+      "Color": "weiß",
+      "Size": "EU 37"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Sneakers sind in einem eleganten weißen Design gehalten. Sie verfügen über eine superweiche Innensohle mit Memory-Effekt für hohen Tragekomfort. Die Schuhe haben eine robuste Gummisohle und sind ideal für den Alltag.",
+      "Keywords": "TOM TAILOR Sneakers Damen",
+      "Materials": "Kunstleder"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 11,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -92,7 +94,21 @@
           "filename": "VER02179 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02179 (6).jpg"
+        },
+        {
+          "filename": "VER02179 (7).jpg"
+        },
+        {
+          "filename": "VER02179 (3).jpg"
+        },
+        {
+          "filename": "VER02179 (11).jpg"
+        }
+      ]
     }
   }
 }

@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Bordeaux",
+      "Size": "46"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Converse Chuck Taylor All Star Sneakers sind in einem auffälligen Bordeaux-Ton gehalten. Sie verfügen über eine hohe Silhouette mit klassischen weißen Schnürsenkeln und einer Gummisohle. Die Schuhe sind aus strapazierfähigem Textilmaterial gefertigt und bieten einen zeitlosen Look.",
+      "Keywords": "Chuck Taylor Sneakers Unisex",
+      "Materials": "Textil Gummi"
     },
     "OP": {
       "OP": null

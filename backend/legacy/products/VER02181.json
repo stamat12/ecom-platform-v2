@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Rosa",
+      "Size": "42"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Converse Schuhe sind in einem sanften Rosaton gehalten. Sie haben eine hohe Form und sind mit weißen Schnürsenkeln ausgestattet. Die Gummisohle sorgt für guten Halt und Komfort.",
+      "Keywords": "CTAS HI Sneakers Unisex",
+      "Materials": "Textil, Gummi"
     },
     "OP": {
       "OP": null
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 13,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -98,7 +100,21 @@
           "filename": "VER02181 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02181 (12).jpg"
+        },
+        {
+          "filename": "VER02181 (3).jpg"
+        },
+        {
+          "filename": "VER02181 (4).jpg"
+        },
+        {
+          "filename": "VER02181 (7).jpg"
+        }
+      ]
     }
   }
 }

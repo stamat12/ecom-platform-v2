@@ -27,15 +27,15 @@
       "Condition": null
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "KU",
+      "Brand": "Converse",
+      "Color": "Gelb",
+      "Size": "36"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Schuhe sind aus robustem Canvas-Material gefertigt und haben eine klassische Schnürung. Die Gummisohle sorgt für guten Halt und Komfort. Sie sind ideal für den Alltag und bieten einen lässigen Look.",
+      "Keywords": "Chuck Taylor Sneakers Kids",
+      "Materials": "Canvas, Gummi"
     },
     "OP": {
       "OP": null
