@@ -27,6 +27,7 @@ from app.services.ebay_listings_computation import compute_ebay_listings
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
 from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db
+from app.services.db_to_excel_sync import sync_db_to_excel
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -1194,6 +1195,21 @@ def sync_excel_to_db_endpoint(request: ExcelToDbSyncRequest):
         message="Sync completed" if all_success else "Sync completed with errors",
         results=results
     )
+
+
+@app.post("/api/excel/sync-from-db")
+def sync_db_to_excel_endpoint():
+    """Sync JSON data back to Excel file."""
+    result = sync_db_to_excel()
+    
+    if result.get("success"):
+        return {
+            "success": True,
+            "message": result.get("message"),
+            "stats": result.get("stats", {})
+        }
+    else:
+        raise HTTPException(status_code=400, detail=result.get("message", "Sync failed"))
 
 
 @app.get("/api/debug/db-tables")

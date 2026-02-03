@@ -99,7 +99,65 @@
         {
           "filename": "VER02116 (8).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02116 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wXwAAeSwZ0VpgSiX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1nUAAeSw0dlpgSib/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6P0AAeSwvcFpgSif/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5qoAAeSw1WRpgSij/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ueEAAeSwb9FpgSit/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0-8AAeSwauBpgSiw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02116 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u~AAAeSwo-RpgSiz/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz",
+        "Größe": "M",
+        "Marke": "Gymshark",
+        "Produktart": "Hosen",
+        "Stil": "Jogger"
+      },
+      "optional": {
+        "Anlass": "Sport",
+        "Verschluss": "Zugbandverschluss",
+        "Vintage": "Nein",
+        "Passform": "Relaxed",
+        "Jahreszeit": "Herbst",
+        "Muster": "Ohne Muster",
+        "Beinform": "Gerades Bein",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein"
+      }
     }
   }
 }

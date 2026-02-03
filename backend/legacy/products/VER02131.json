@@ -99,7 +99,84 @@
         {
           "filename": "VER02131 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02131 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/U50AAeSwsaZpgUDl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02131 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KVMAAeSwKvBpgUDp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02131 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/XBMAAeSw-ghpgUDt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02131 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/QyIAAeSwg~hpgUDw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02131 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/R4sAAeSwRFZpgUDz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02131 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/PtAAAeSw7hBpgUD2/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Market & Spruce",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Damen",
+        "Farbe": "Beige",
+        "Obermaterial": "Kunstleder",
+        "Stil": "Stiefelette",
+        "Absatzhöhe": "Mittel"
+      },
+      "optional": {
+        "Produktart": "Stiefel",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstpelz",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Schuhschaft-Typ": "Knöchel",
+        "Jahreszeit": "Winter",
+        "AU-Schuhgröße": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Besonderheiten": "Gefüttert",
+        "Modell": "",
+        "Absatzart": "Blockabsatz",
+        "Ursprungsland": "",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Thema": "",
+        "Akzente": "Logo",
+        "Schuhweite": "Standard",
+        "Verschluss": "Schnürung",
+        "Schuhspitze": "Runde Form",
+        "Produktlinie": "",
+        "Anlass": "Freizeit",
+        "Gewebeart": "",
+        "Muster": "",
+        "Plateauhöhe": "",
+        "Wadenweite": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Charakter": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

@@ -217,16 +217,68 @@ export default function SkuDetailPage() {
       
       if (res.ok) {
         const data = await res.json();
-        if (data.listing_id) {
+        
+        // Build detailed message
+        let message = `📦 SKU: ${data.sku}\n\n`;
+        
+        if (data.success) {
+          message += `✅ SUCCESS - Listing Created!\n\n`;
+          message += `🔗 eBay Item ID: ${data.item_id}\n`;
+          message += `📝 Title: ${data.title}\n`;
+          message += `💰 Price: €${data.price}\n`;
+          message += `📸 Images uploaded: ${data.image_count}\n`;
+          message += `📁 Category ID: ${data.category_id}\n`;
+          
+          if (data.scheduled_time) {
+            message += `📅 Scheduled for: ${new Date(data.scheduled_time).toLocaleString('de-DE')}\n`;
+          } else {
+            message += `📅 Published: Immediately\n`;
+          }
+          
+          if (data.has_manufacturer_info) {
+            message += `✅ Manufacturer info included\n`;
+          }
+          
+          // Show warnings if any
+          if (data.warnings && data.warnings.length > 0) {
+            message += `\n⚠️ WARNINGS (${data.warnings.length}):\n`;
+            data.warnings.forEach((warning, idx) => {
+              message += `${idx + 1}. ${warning}\n`;
+            });
+          }
+          
           setUploadProgress({ show: true, message: "✅ Listing created successfully!", step: 4, total: 4 });
           await new Promise(resolve => setTimeout(resolve, 1000));
-          alert(`✅ Listing created! ID: ${data.listing_id}`);
-          window.open(`https://www.ebay.de/itm/${data.listing_id}`, "_blank");
+          alert(message);
+          window.open(`https://www.ebay.de/itm/${data.item_id}`, "_blank");
+        } else {
+          // Failed
+          message += `❌ FAILED - Listing Not Created\n\n`;
+          
+          if (data.errors && data.errors.length > 0) {
+            message += `❌ ERRORS (${data.errors.length}):\n`;
+            data.errors.forEach((error, idx) => {
+              message += `${idx + 1}. ${error}\n`;
+            });
+          } else {
+            message += `Error: ${data.message || 'Unknown error'}\n`;
+          }
+          
+          // Show warnings if any
+          if (data.warnings && data.warnings.length > 0) {
+            message += `\n⚠️ WARNINGS (${data.warnings.length}):\n`;
+            data.warnings.forEach((warning, idx) => {
+              message += `${idx + 1}. ${warning}\n`;
+            });
+          }
+          
+          setUploadProgress({ show: false, message: "", step: 0, total: 0 });
+          alert(message);
         }
       } else {
         const err = await res.json();
         setUploadProgress({ show: false, message: "", step: 0, total: 0 });
-        alert(`❌ ${err.detail || "Listing creation failed"}`);
+        alert(`❌ Server Error\n\n${err.detail || "Listing creation failed"}`);
       }
     } catch (e) {
       setUploadProgress({ show: false, message: "", step: 0, total: 0 });

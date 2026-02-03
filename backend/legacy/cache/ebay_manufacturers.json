@@ -214,5 +214,33 @@
     "ContactURL": "https://www.calvinklein.nl/contact",
     "cached_at": "2026-02-02T23:34:03.729833",
     "original_brand": "Calvin Klein"
+  },
+  "gymshark": {
+    "CompanyName": "Gymshark Ltd",
+    "Street1": "GSHQ, Blythe Valley Park",
+    "Street2": "3 Central Boulevard",
+    "CityName": "Solihull",
+    "StateOrProvince": "",
+    "PostalCode": "B90 8AB",
+    "Country": "GB",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.gymshark.com/pages/contact",
+    "cached_at": "2026-02-02T23:44:05.398863",
+    "original_brand": "Gymshark"
+  },
+  "puma": {
+    "CompanyName": "PUMA SE",
+    "Street1": "PUMA Way 1",
+    "Street2": "",
+    "CityName": "Herzogenaurach",
+    "StateOrProvince": "Bavaria",
+    "PostalCode": "91074",
+    "Country": "DE",
+    "Phone": "004991328140",
+    "Email": "",
+    "ContactURL": "https://about.puma.com/en/contact",
+    "cached_at": "2026-02-03T01:30:55.290660",
+    "original_brand": "PUMA"
   }
 }

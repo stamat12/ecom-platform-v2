@@ -90,7 +90,49 @@
         {
           "filename": "VER02128 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02128 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/SccAAeSw8nNpgUA3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02128 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rOsAAeSwl~tpgUA9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02128 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9cAAAeSwO01pgUBC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02128 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Y20AAeSw9aBpgUBF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02128 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/htkAAeSwKAJpgUBI/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Gymshark",
+        "Größe": "M",
+        "Farbe": "Grün",
+        "Stil": "Athletisch",
+        "Abteilung": "Damen"
+      },
+      "optional": {
+        "Material": "82% Polyamid, 13% Polyester, 5% Elasthan",
+        "Jahreszeit": "Sommer",
+        "Textilpflege": "Maschinenwäsche",
+        "Muster": "Camouflage"
+      }
     }
   }
 }

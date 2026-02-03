@@ -90,6 +90,23 @@
         {
           "filename": "VER02135 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02135 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LbEAAeSwKvBpgUGz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02135 (1).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OHIAAeSwnBxpgUG3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02135 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OfIAAeSwLQ9pgUG8/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
