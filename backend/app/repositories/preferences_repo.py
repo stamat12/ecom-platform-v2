@@ -19,6 +19,7 @@ DEFAULT_STATE = {
     "filter_mode": {},
     "page_size": 50,
     "column_widths": {},
+    "emptyFilters": {},
 }
 
 
@@ -68,6 +69,7 @@ def save_sku_filter_state(state: Dict[str, Any]) -> Dict[str, Any]:
     filter_mode = state.get("filter_mode") or {}
     page_size = int(state.get("page_size") or 50)
     column_widths = state.get("column_widths") or {}
+    empty_filters = state.get("emptyFilters") or {}
 
     cleaned = {
         "profile_id": str(profile_id),
@@ -76,6 +78,7 @@ def save_sku_filter_state(state: Dict[str, Any]) -> Dict[str, Any]:
         "filter_mode": dict(filter_mode),
         "page_size": page_size,
         "column_widths": {str(k): int(v) for k, v in dict(column_widths).items() if isinstance(v, (int, float))},
+        "emptyFilters": dict(empty_filters),
     }
 
     store = _read_store()

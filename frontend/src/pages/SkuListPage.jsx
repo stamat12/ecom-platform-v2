@@ -110,17 +110,17 @@ export default function SkuListPage() {
             console.log('Setting filters to:', restoredState.columnFilters);
             setSelectedColumns(cols);
             setColumnFilters(restoredState.columnFilters || filtData.column_filters || {});
-            setFilterMode(restoredState.filterMode || {});
+            setFilterMode(restoredState.filterMode || localFilterMode || {});
             setPageSize(restoredState.pageSize || Number(filtData.page_size || 50));
             setColumnWidths(restoredState.columnWidths || filtData.column_widths || {});
-            setEmptyFilters(restoredState.emptyFilters || {});
+            setEmptyFilters(restoredState.emptyFilters || localEmptyFilters || {});
             setSelectedSkus(restoredState.selectedSkus || []);
             setPage(restoredState.page || 1);
           } else {
             const cols = localSelected.length ? localSelected : (validSelected.length ? validSelected : (colData.default_columns || []));
             setSelectedColumns(cols);
             setColumnFilters(localFilters || filtData.column_filters || {});
-            setFilterMode(localFilterMode || {});
+            setFilterMode(localFilterMode || filtData.filter_mode || {});
             setPageSize(localPageSize || Number(filtData.page_size || 50));
             setColumnWidths(localColumnWidths || filtData.column_widths || {});
             setEmptyFilters(localEmptyFilters || {});
@@ -391,8 +391,10 @@ export default function SkuListPage() {
       profile_id: profileId,
       selected_columns: selectedColumns,
       column_filters: columnFilters,
+      filter_mode: filterMode,
       page_size: pageSize,
       column_widths: columnWidths,
+      emptyFilters: emptyFilters,
     };
     fetch("/api/skus/filters", {
       method: "PUT",
@@ -419,7 +421,7 @@ export default function SkuListPage() {
       controller.abort();
       clearTimeout(id);
     };
-  }, [selectedColumns, columnFilters, pageSize, columnWidths, filterLoading]);
+  }, [selectedColumns, columnFilters, filterMode, pageSize, columnWidths, emptyFilters, filterLoading]);
 
   // Flush state on unmount to avoid losing recent changes when navigating away quickly
   useEffect(() => {

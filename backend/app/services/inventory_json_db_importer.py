@@ -97,6 +97,9 @@ def update_db_from_jsons(
             changed: Dict[str, Any] = {}
             for col, val in updates.items():
                 old = row[col] if col in row.keys() else None
+                # Skip Status updates if current value in DB is already "OK"
+                if col == "Status" and old == "OK":
+                    continue
                 if _normalize_for_compare(old) != _normalize_for_compare(val):
                     changed[col] = val
 

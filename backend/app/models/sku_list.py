@@ -69,12 +69,17 @@ class SkuFilterState(BaseModel):
     filter_mode: Dict[str, str] = {}  # { column: "include" | "exclude" }
     page_size: int = 50
     column_widths: Dict[str, int] = {}
+    emptyFilters: Dict[str, bool] = {}  # { column: true to show only empty values }
 
 class SkuFilterStateResponse(BaseModel):
     """Response wrapper for filter state (keeps schema stable)"""
     profile_id: str
     selected_columns: List[str]
     column_filters: Dict[str, Any]
+    filter_mode: Dict[str, str]  # { column: "include" | "exclude" }
+    page_size: int
+    column_widths: Dict[str, int]
+    emptyFilters: Dict[str, bool] = {}  # { column: true to show only empty values }
     filter_mode: Dict[str, str]  # { column: "include" | "exclude" }
     page_size: int
     column_widths: Dict[str, int]
