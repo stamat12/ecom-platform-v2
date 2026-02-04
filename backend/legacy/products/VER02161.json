@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25111073,
+      "Invoice": "25111073",
       "Invoice Date": "2025-11-13T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 905256,
-      "ISIN": null,
+      "Supplier Number": "905256",
+      "ISIN": "",
       "Supplier Title": "1 Paar H&M Damenschuhe Gr. 36"
     },
     "Price Data": {
-      "Price Net": 2.5,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 2.89
+      "Price Net": "2.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "2.89"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Schwarz",
+      "Size": "36"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Schuhe haben eine glänzende Oberfläche und eine auffällige Schnalle. Sie sind flach und haben eine robuste Gummisohle. Ideal für einen modischen Look im Alltag.",
+      "Keywords": "Flats Schuhe Damen",
+      "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "60"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -85,7 +88,88 @@
           "filename": "VER02161 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02161 (5).jpg"
+        },
+        {
+          "filename": "VER02161 (7).jpg"
+        },
+        {
+          "filename": "VER02161 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02161 (8).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YjYAAeSwalhpg8x-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2uAAAeSwO0Rpg8yC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Pq0AAeSwt4dpg8yF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6YUAAeSwcVxpg8yI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3fYAAeSwN3dpg8yL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BGgAAeSwqDtpg8yO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02161 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/b4UAAeSwdyZpg8yQ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "H&M",
+        "EU-Schuhgröße": "36",
+        "Stil": "Halbschuhe",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Kunstleder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Innensohlenmaterial": "Synthetik",
+        "UK-Schuhgröße": "3",
+        "AU-Schuhgröße": "3",
+        "US-Schuhgröße": "5.5",
+        "Schuhweite": "Standard",
+        "Jahreszeit": "Frühling",
+        "Verschluss": "Schnalle",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Schuhspitze": "Geschlossen",
+        "Anlass": "Freizeit",
+        "Akzente": "Logo",
+        "Besonderheiten": "Komfort",
+        "Gewebeart": "Leder",
+        "Ursprungsland": "Bangladesch",
+        "Anzahl der Einheiten": "1",
+        "Herstellernummer": "1072836001005202206304228MM",
+        "Maßeinheit": "Einheit"
+      }
     }
   }
 }

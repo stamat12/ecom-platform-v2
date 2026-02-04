@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25102751,
+      "Invoice": "25102751",
       "Invoice Date": "2025-10-30T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 868882,
-      "ISIN": null,
+      "Supplier Number": "868882",
+      "ISIN": "",
       "Supplier Title": "Calvin Klein YMOYMOO745 Sneaker Größe 42"
     },
     "Price Data": {
-      "Price Net": 20.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 21.22
+      "Price Net": "20.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "21.22"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "8720108613590"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Calvin Klein",
+      "Color": "Schwarz",
+      "Size": "42"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Sneakers sind in einem schlichten schwarzen Design gehalten. Sie bestehen aus einer Kombination von Leder und Textil. Die Sohle bietet guten Halt und Komfort.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Leder Textil"
     },
     "OP": {
-      "OP": null
+      "OP": "130"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 7,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -79,7 +82,74 @@
           "filename": "VER02144 (7).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02144 (6).jpg"
+        },
+        {
+          "filename": "VER02144 (5).jpg"
+        },
+        {
+          "filename": "VER02144 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02144 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/UnIAAeSwO2Bpg8d4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0P8AAeSwcVxpg8d8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6fgAAeSwnMRpg8d~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dzkAAeSwlQFpg8eC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JCQAAeSw0bRpg8eG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FQQAAeSwzrZpg8eK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02144 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yZwAAeSwbKFpg8eN/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Calvin Klein Jeans",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "4500500352",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "Retro Tennis Laceup NBS LTH MIX",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Verschluss": "Schnürung",
+        "Anlass": "Freizeit",
+        "Signiert": "Nein"
+      }
     }
   }
 }

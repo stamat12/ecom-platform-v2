@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25111072,
+      "Invoice": "25111072",
       "Invoice Date": "2025-11-13T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 741786,
-      "ISIN": null,
+      "Supplier Number": "741786",
+      "ISIN": "",
       "Supplier Title": "Nike ShortsGröße M"
     },
     "Price Data": {
-      "Price Net": 8.33,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 8.72
+      "Price Net": "8.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "8.72"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shorts & Bermudas",
+      "eBay Category ID": "15689"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "196607642986"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Hellgrün",
+      "Size": "30"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Shorts haben eine lockere Passform und enden auf Kniehöhe. Sie verfügen über zwei große Taschen auf der Vorderseite. Der Stoff ist aus 100% Baumwolle und bietet hohen Tragekomfort.",
+      "Keywords": "Shorts Herren",
+      "Materials": "100% Baumwolle"
     },
     "OP": {
-      "OP": null
+      "OP": "90"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 8,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -82,7 +85,78 @@
           "filename": "VER02158 (8).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02158 (3).jpg"
+        },
+        {
+          "filename": "VER02158 (5).jpg"
+        },
+        {
+          "filename": "VER02158 (1).jpg"
+        },
+        {
+          "filename": "VER02158 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02158 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KKQAAeSwpAppg8k8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ch0AAeSwqxdpg8lB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OrEAAeSwRytpg8lG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2zEAAeSwnbNpg8lR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/X7UAAeSwcsxpg8la/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K-kAAeSwBWJpg8le/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02158 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ceoAAeSw1WRpg8lk/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "Abteilung": "Herren",
+        "Größe": "30",
+        "Stil": "Cargo",
+        "Farbe": "Elfenbeinfarben"
+      },
+      "optional": {
+        "Ursprungsland": "Vietnam",
+        "Material": "Baumwolle",
+        "Gewebeart": "Canvas",
+        "Passform": "Regular",
+        "Anlass": "Freizeit",
+        "Schrittlänge": "17,5 cm",
+        "Bundhöhe": "Mittel (25-30 cm)",
+        "Taschenart": "Cargo-Tasche",
+        "Waschung": "Mittlere Waschung"
+      }
     }
   }
 }

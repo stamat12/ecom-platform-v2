@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 2511238,
+      "Invoice": "2511238",
       "Invoice Date": "2025-11-04T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 869950,
-      "ISIN": null,
+      "Supplier Number": "869950",
+      "ISIN": "",
       "Supplier Title": "1 Paar Ecco Sandalen 240873 Größe 41"
     },
     "Price Data": {
-      "Price Net": 15.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 16.22
+      "Price Net": "15.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "16.22"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "809702060851"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Schwarz",
+      "Size": "41"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese Sandalen sind aus schwarzem Leder gefertigt und bieten einen bequemen Sitz. Sie haben mehrere Riemen für zusätzlichen Halt und eine gepolsterte Innensohle. Ideal für den Sommer und vielseitig kombinierbar.",
+      "Keywords": "Flash Sandalen Damen",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "120"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 3,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -67,7 +70,57 @@
           "filename": "VER02153 (3).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02153 (1).jpg"
+        },
+        {
+          "filename": "VER02153 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02153 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GxQAAeSwH1Bpg8i-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02153 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VDkAAeSwYolpg8jB/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Ecco",
+        "EU-Schuhgröße": "41",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Stil": "Riemchen",
+        "Obermaterial": "Kunstleder"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Innensohlenmaterial": "Synthetik",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Absatzart": "Flach",
+        "UK-Schuhgröße": "7.5",
+        "US-Schuhgröße": "10-10.5",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Modell": "Ecco Flash",
+        "Individualisiert": "Nein",
+        "Verschluss": "Schnalle",
+        "Ursprungsland": "Dänemark",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein",
+        "Herstellernummer": "240873-53859"
+      }
     }
   }
 }

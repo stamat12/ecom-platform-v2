@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25111073,
+      "Invoice": "25111073",
       "Invoice Date": "2025-11-13T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 905252,
-      "ISIN": null,
+      "Supplier Number": "905252",
+      "ISIN": "",
       "Supplier Title": "1 Paar H&M Damen Pumps Gr. 38"
     },
     "Price Data": {
-      "Price Net": 2.5,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 2.89
+      "Price Net": "2.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "2.89"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Silber",
+      "Size": "38"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Diese eleganten High Heels sind mit funkelnden Pailletten verziert. Sie haben einen schmalen Absatz und eine offene Ferse. Die Schuhe sind ideal für festliche Anlässe.",
+      "Keywords": "High Heels Damen",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "40"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 6,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -76,7 +79,84 @@
           "filename": "VER02160 (6).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02160 (5).jpg"
+        },
+        {
+          "filename": "VER02160 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02160 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RzwAAeSwjuFpg8lW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02160 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4d4AAeSwXgJpg8lc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02160 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8m8AAeSwpOlpg8li/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02160 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cIEAAeSw431pg8lm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02160 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KWIAAeSwpAppg8lp/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "H&M",
+        "EU-Schuhgröße": "36",
+        "Stil": "Pumps",
+        "Farbe": "Silber",
+        "Abteilung": "Damen",
+        "Obermaterial": "Kunstleder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Stilettoabsatz",
+        "AU-Schuhgröße": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Laufsohlenmaterial": "Kunstleder",
+        "Innensohlenmaterial": "Kunstleder",
+        "Futtermaterial": "Kunstleder",
+        "Schuhspitze": "Spitz",
+        "Akzente": "Glitzer",
+        "Modell": "",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Individualisiert": "",
+        "Charakter": "",
+        "Anlass": "Party/Cocktail",
+        "Thema": "",
+        "Schuhweite": "Standard",
+        "Besonderheiten": "",
+        "Verschluss": "",
+        "Muster": "",
+        "Plateauhöhe": "",
+        "Ursprungsland": "",
+        "Jahreszeit": "",
+        "Sprengung": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

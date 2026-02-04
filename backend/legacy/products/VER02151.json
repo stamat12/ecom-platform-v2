@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 2511238,
+      "Invoice": "2511238",
       "Invoice Date": "2025-11-04T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 869867,
-      "ISIN": null,
+      "Supplier Number": "869867",
+      "ISIN": "",
       "Supplier Title": "1 Paar Antony Morato Sneaker Größe 44"
     },
     "Price Data": {
-      "Price Net": 25.0,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 25.39
+      "Price Net": "25.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "25.39"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Antony Morato",
+      "Color": "Hellblau",
+      "Size": "44"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Sneakers sind aus weichem Wildleder gefertigt und haben eine weiße Gummisohle. Sie verfügen über eine schlichte, elegante Form und sind mit einer kleinen Metallplakette versehen. Ideal für lässige Outfits und den Alltag.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Wildleder, Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "150"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 10,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -88,7 +91,98 @@
           "filename": "VER02151 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02151 (7).jpg"
+        },
+        {
+          "filename": "VER02151 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02151 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0cYAAeSwp2Zpg8iW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/16cAAeSwQ4Jpg8ia/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (9).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/J~MAAeSwNTtpg8ie/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y5EAAeSw8GNpg8ik/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/14EAAeSwYPRpg8io/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/11YAAeSwT-Jpg8it/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (10).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3QcAAeSwXwppg8iw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02151 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IjAAAeSwAfRpg8iy/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "ANTONY MORATO",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Herstellernummer": "",
+        "Individualisiert": "",
+        "Modell": "ANTONY MORATO Sneaker",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Stil": "",
+        "Charakter": "",
+        "Schuhschaft-Typ": "",
+        "Innensohlenmaterial": "",
+        "Obermaterial": "Baumwollmischung",
+        "Produktart": "Sportschuh",
+        "Erscheinungsjahr": "",
+        "Vintage": "",
+        "Thema": "",
+        "Schuhweite": "",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "",
+        "Futtermaterial": "",
+        "Anlass": "",
+        "Jahreszeit": "",
+        "Aktivität": "",
+        "Ursprungsland": "",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "",
+        "Signiert": "",
+        "Muster": "",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      }
     }
   }
 }

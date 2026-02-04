@@ -946,6 +946,31 @@ export default function SkuBatchPage() {
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
         <Link to="/skus">← Back to list</Link>
         <h3 style={{ margin: 0 }}>Batch view ({selectedSkus.length} SKUs)</h3>
+        <button
+          onClick={() => {
+            const allSelected = selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length;
+            if (allSelected) {
+              setSelectedSkusForEnrichment(new Set());
+              setSelectedSkusForEbayEnrichment(new Set());
+            } else {
+              const allSkus = new Set(items.map(item => item.sku));
+              setSelectedSkusForEnrichment(allSkus);
+              setSelectedSkusForEbayEnrichment(allSkus);
+            }
+          }}
+          style={{
+            padding: "6px 12px",
+            fontSize: 13,
+            background: (selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length) ? "#666" : "#4CAF50",
+            color: "white",
+            border: "none",
+            borderRadius: 4,
+            cursor: "pointer",
+            fontWeight: "bold",
+          }}
+        >
+          {(selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
+        </button>
       </div>
 
       {/* Global classification panel */}

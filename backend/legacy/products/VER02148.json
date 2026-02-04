@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 2511238,
+      "Invoice": "2511238",
       "Invoice Date": "2025-11-04T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 869816,
-      "ISIN": null,
+      "Supplier Number": "869816",
+      "ISIN": "",
       "Supplier Title": "1 Paar Nike Court vision lol nn leicht verschmutzt Größe 44,5"
     },
     "Price Data": {
-      "Price Net": 18.33,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 18.72
+      "Price Net": "18.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "18.72"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "19523703155916"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton (verschmutzt)"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Weiß",
+      "Size": "42.5"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus hochwertigem Leder gefertigt und bieten eine bequeme Passform. Sie haben eine klassische Silhouette mit perforierten Details für Atmungsaktivität. Die Gummisohle sorgt für guten Halt und Langlebigkeit.",
+      "Keywords": "Court Vision Lo NN Sneakers Herren",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "80"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 6,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -76,7 +79,72 @@
           "filename": "VER02148 (6).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02148 (3).jpg"
+        },
+        {
+          "filename": "VER02148 (5).jpg"
+        },
+        {
+          "filename": "VER02148 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02148 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VZUAAeSwaytpg8fL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02148 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8J0AAeSw6RVpg8fP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02148 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/THUAAeSwalhpg8fS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02148 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7cQAAeSwqDtpg8fY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02148 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rDgAAeSwgdNpg8fc/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "EU-Schuhgröße": "44,5",
+        "Abteilung": "Herren",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Modell": "Nike Court Vision Lo NN",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Produktart": "Sportschuh",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Ursprungsland": "Vietnam",
+        "Verschluss": "Schnürung",
+        "Herstellernummer": "DH2987 100",
+        "Individualisiert": "Nein",
+        "UK-Schuhgröße": "9,5",
+        "US-Schuhgröße": "10,5",
+        "Innensohlenmaterial": "Synthetik",
+        "Obermaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Besonderheiten": "Atmungsaktiv"
+      }
     }
   }
 }

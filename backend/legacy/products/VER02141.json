@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25102751,
+      "Invoice": "25102751",
       "Invoice Date": "2025-10-30T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 860616,
-      "ISIN": null,
+      "Supplier Number": "860616",
+      "ISIN": "",
       "Supplier Title": "Clark's Torhill mocc Loafer Größe 39"
     },
     "Price Data": {
-      "Price Net": 22.5,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 22.89
+      "Price Net": "22.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "22.89"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "5063090944796"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "Clarks",
+      "Color": "Schwarz",
+      "Size": "39"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus schwarzem Leder gefertigt und haben eine auffällige, dicke Sohle. Sie verfügen über ein klassisches Penny-Loafer-Design. Ideal für lässige und formelle Anlässe.",
+      "Keywords": "Torhill Mocc Schuhe",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "120"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -85,7 +88,93 @@
           "filename": "VER02141 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02141 (5).jpg"
+        },
+        {
+          "filename": "VER02141 (1).jpg"
+        },
+        {
+          "filename": "VER02141 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02141 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/veAAAeSwxv5pg8ZI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wI4AAeSwi-Zpg8ZM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ILIAAeSw2zppg8ZQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JPgAAeSwz0Npg8ZT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/S~YAAeSw~85pg8ZV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4wsAAeSw6lNpg8ZY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~mIAAeSwkp9pg8Zd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02141 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6YUAAeSwzX1pg8Zf/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Clarks",
+        "EU-Schuhgröße": "39",
+        "Stil": "Halbschuhe",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Leder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Innensohlenmaterial": "Schaumstoff",
+        "UK-Schuhgröße": "5,5",
+        "AU-Schuhgröße": "5,5",
+        "US-Schuhgröße": "8",
+        "Schuhweite": "D",
+        "Jahreszeit": "Ganzjährig",
+        "Verschluss": "Slip-On",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Schuhspitze": "Geschlossen",
+        "Anlass": "Freizeit",
+        "Akzente": "Logo",
+        "Besonderheiten": "Komfort",
+        "Gewebeart": "Leder",
+        "Ursprungsland": "Nicht angegeben",
+        "Anzahl der Einheiten": "1",
+        "Herstellernummer": "Nicht angegeben",
+        "Maßeinheit": "Einheit"
+      }
     }
   }
 }

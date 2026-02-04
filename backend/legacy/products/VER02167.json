@@ -3,27 +3,28 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112054,
+      "Invoice": "25112054",
       "Invoice Date": "2025-11-26T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 874513,
-      "ISIN": null,
+      "Supplier Number": "874513",
+      "ISIN": "",
       "Supplier Title": "1 Paar Birkenstock Madrid Big Buckle Cognac Gr. 42"
     },
     "Price Data": {
-      "Price Net": 25.83,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 26.22
+      "Price Net": "25.83",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "26.22"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,14 +34,14 @@
     },
     "Intern Generated Info": {
       "More details": "Die Sandalen haben eine große Schnalle und sind aus echtem Leder gefertigt. Sie bieten eine bequeme Passform und sind ideal für den Sommer. Die Sohle besteht aus Naturkork und EVA für zusätzlichen Komfort.",
-      "Keywords": "Madrid Big Buckle Sandalen Unisex",
+      "Keywords": "Madrid Big Buckle Sandalen ",
       "Materials": "Echt Leder Naturkork EVA"
     },
     "OP": {
-      "OP": null
+      "OP": "130"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -85,7 +88,85 @@
           "filename": "VER02167 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02167 (8).jpg"
+        },
+        {
+          "filename": "VER02167 (7).jpg"
+        },
+        {
+          "filename": "VER02167 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02167 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zrQAAeSwtElpg8y~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OjcAAeSwmhtpg8zC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (9).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7~UAAeSwx1tpg8zG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/aacAAeSwUBJpg8zJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/P9MAAeSwYAVpg8zN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ge8AAeSwU~Bpg8zQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7MkAAeSwSBJpg8zV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02167 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8F4AAeSwIABpg8zX/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Birkenstock",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Damen",
+        "Farbe": "Braun",
+        "Stil": "Zehentrenner",
+        "Obermaterial": "Echt Leder"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Innensohlenmaterial": "Echt Leder",
+        "Laufsohlenmaterial": "EVA",
+        "Futtermaterial": "Naturkork",
+        "Absatzart": "Flach",
+        "UK-Schuhgröße": "8",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Schuhweite": "Narrow",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Modell": "Madrid Big Buckle",
+        "Verschluss": "Schnalle"
+      }
     }
   }
 }

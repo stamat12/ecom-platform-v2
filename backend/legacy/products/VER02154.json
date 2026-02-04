@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 2511238,
+      "Invoice": "2511238",
       "Invoice Date": "2025-11-04T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 870087,
-      "ISIN": null,
+      "Supplier Number": "870087",
+      "ISIN": "",
       "Supplier Title": "1 Paar Adidas K4 Sneakers Größe 39 1/3"
     },
     "Price Data": {
-      "Price Net": 18.33,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 18.72
+      "Price Net": "18.33",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "18.72"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etoketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "adidas",
+      "Color": "Weiß Schwarz",
+      "Size": "39"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus hochwertigem Leder gefertigt und haben eine klassische Silhouette. Sie verfügen über drei schwarze Streifen an der Seite und eine Gummisohle für guten Halt. Ideal für den Alltag oder sportliche Aktivitäten.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "110"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 6,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -76,7 +79,66 @@
           "filename": "VER02154 (6).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02154 (5).jpg"
+        },
+        {
+          "filename": "VER02154 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02154 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OC4AAeSwsaZpg8j1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02154 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tVgAAeSwl2Npg8j5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02154 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CcsAAeSwUMRpg8j8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02154 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/QfgAAeSwg0Zpg8kA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02154 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KSUAAeSwgBlpg8kC/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "EU-Schuhgröße": "39",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "AIG8950",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "6,5",
+        "Obermaterial": "Leder",
+        "Schuhschaft-Typ": "Low Top",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "Indonesien",
+        "Signiert": "Nein"
+      }
     }
   }
 }

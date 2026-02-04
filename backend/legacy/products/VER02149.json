@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 2511238,
+      "Invoice": "2511238",
       "Invoice Date": "2025-11-04T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 869820,
-      "ISIN": null,
+      "Supplier Number": "869820",
+      "ISIN": "",
       "Supplier Title": "1 Paar Tom's Alpargata rover Größe 41"
     },
     "Price Data": {
-      "Price Net": 9.17,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 9.56
+      "Price Net": "9.17",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "9.56"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "1957031052891"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "TOMS",
+      "Color": "Grau/Blau",
+      "Size": "41"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus recyceltem Baumwollmaterial gefertigt. Sie haben eine bequeme Passform mit einem elastischen Einsatz. Die Sohle ist leicht und flexibel, ideal für den Alltag.",
+      "Keywords": "Alpargata Rover Sneakers Herren",
+      "Materials": "Heritage Canvas, Recycelte Baumwolle"
     },
     "OP": {
-      "OP": null
+      "OP": "85"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 6,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -76,7 +79,67 @@
           "filename": "VER02149 (6).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02149 (5).jpg"
+        },
+        {
+          "filename": "VER02149 (1).jpg"
+        },
+        {
+          "filename": "VER02149 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02149 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A74AAeSwLClpg8gq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02149 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/PP4AAeSwZ0Vpg8gu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02149 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y3kAAeSwtuBpg8gy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02149 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9UUAAeSwOlFpg8g2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02149 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ju8AAeSwAKtpg8g5/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "TOMS",
+        "EU-Schuhgröße": "41",
+        "Abteilung": "Herren",
+        "Farbe": "Grau/Blau"
+      },
+      "optional": {
+        "Herstellernummer": "10017702",
+        "Individualisiert": "Nein",
+        "Modell": "Alpargata Rover",
+        "UK-Schuhgröße": "7.5",
+        "US-Schuhgröße": "8.5",
+        "Stil": "Sneaker",
+        "Obermaterial": "Recycled Cotton",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Ursprungsland": "China",
+        "Verschluss": "Slip-On",
+        "Signiert": "Nein"
+      }
     }
   }
 }

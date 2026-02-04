@@ -3,44 +3,45 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25102751,
+      "Invoice": "25102751",
       "Invoice Date": "2025-10-30T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 860652,
-      "ISIN": null,
+      "Supplier Number": "860652",
+      "ISIN": "",
       "Supplier Title": "Gabor santchevreau Sandalen Größe 41"
     },
     "Price Data": {
-      "Price Net": 16.67,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 17.06
+      "Price Net": "16.67",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "17.06"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "4066558703165"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "Gabor",
+      "Color": "Beige",
+      "Size": "41"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Sandalen haben einen bequemen Absatz und sind aus weichem Material gefertigt. Sie verfügen über einen verstellbaren Riemen mit einer dekorativen Schnalle. Die Sohle ist rutschfest und bietet guten Halt.",
+      "Keywords": "Sandalen Damen",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "100"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -85,7 +88,85 @@
           "filename": "VER02143 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02143 (3).jpg"
+        },
+        {
+          "filename": "VER02143 (7).jpg"
+        },
+        {
+          "filename": "VER02143 (9).jpg"
+        },
+        {
+          "filename": "VER02143 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02143 (8).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IFUAAeSwgBlpg8ck/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ImkAAeSwYEZpg8co/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (9).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EUAAAeSw8A5pg8ct/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JecAAeSwxAtpg8cw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WUEAAeSwiLRpg8c0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TtAAAeSwUBJpg8c3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vw8AAeSw~hhpg8c6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02143 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6hAAAeSwvuBpg8c9/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Gabor",
+        "EU-Schuhgröße": "41",
+        "Abteilung": "Damen",
+        "Farbe": "Grau",
+        "Stil": "Riemchen",
+        "Obermaterial": "Baumwolle"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Absatzart": "Keilabsatz",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Individualisiert": "Nein",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Klettverschluss",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein"
+      }
     }
   }
 }
