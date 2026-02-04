@@ -3,34 +3,34 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876947,
-      "ISIN": null,
+      "Supplier Number": "876947",
+      "ISIN": "",
       "Supplier Title": "1 Paar About you Sandalen Größe 39"
     },
     "Price Data": {
-      "Price Net": 6.67,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 7.06
+      "Price Net": "6.67",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "7.06"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "About You",
       "Color": "Beige",
-      "Size": ""
+      "Size": "39"
     },
     "Intern Generated Info": {
       "More details": "Diese Sandalen haben eine bequeme, gepolsterte Innensohle und sind mit mehreren Riemen ausgestattet. Die Sohle ist aus Jute gefertigt, was einen sommerlichen Look verleiht. Sie sind ideal für warme Tage und lassen sich gut kombinieren.",
@@ -38,10 +38,10 @@
       "Materials": "Synthetik, Jute"
     },
     "OP": {
-      "OP": null
+      "OP": "45"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -93,7 +93,74 @@
         {
           "filename": "VER02182 (7).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02182 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/blUAAeSwdQVpgoql/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02182 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Q8QAAeSwkp9pgoqp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02182 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CLUAAeSwqUBpgoqs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02182 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/imkAAeSwVWFpgoqw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02182 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dIAAAeSw59Npgoqz/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "About You",
+        "EU-Schuhgröße": "37",
+        "Abteilung": "Damen",
+        "Farbe": "Braun",
+        "Stil": "Riemchen",
+        "Obermaterial": "Synthetik"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Modell": "",
+        "Produktlinie": "",
+        "Innensohlenmaterial": "",
+        "Laufsohlenmaterial": "",
+        "Futtermaterial": "",
+        "Absatzart": "",
+        "AU-Schuhgröße": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Vintage": "",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Individualisiert": "",
+        "Charakter": "",
+        "Schuhweite": "",
+        "Besonderheiten": "",
+        "Anlass": "",
+        "Jahreszeit": "",
+        "Akzente": "",
+        "Verschluss": "",
+        "Thema": "",
+        "Ursprungsland": "",
+        "Muster": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
     }
   }
 }

@@ -298,5 +298,19 @@
     "ContactURL": "https://www.converse.com/help/contact-us",
     "cached_at": "2026-02-04T00:42:12.227903",
     "original_brand": "Converse"
+  },
+  "about you": {
+    "CompanyName": "ABOUT YOU SE & Co. KG",
+    "Street1": "Domstraße 10",
+    "Street2": "",
+    "CityName": "Hamburg",
+    "StateOrProvince": "",
+    "PostalCode": "20095",
+    "Country": "DE",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://corporate.aboutyou.de/en/contact",
+    "cached_at": "2026-02-04T00:54:31.799173",
+    "original_brand": "About You"
   }
 }

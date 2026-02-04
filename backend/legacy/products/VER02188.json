@@ -3,28 +3,28 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876995,
-      "ISIN": null,
+      "Supplier Number": "876995",
+      "ISIN": "",
       "Supplier Title": "1 Paar Puma, Sneaker leicht verschmutzt Größe 40"
     },
     "Price Data": {
-      "Price Net": 12.5,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 12.89
+      "Price Net": "12.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "12.89"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu (leicht verschmutzt)"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -34,14 +34,14 @@
     },
     "Intern Generated Info": {
       "More details": "Diese Sneakers haben eine auffällige Plateausohle und sind aus weichem Wildleder gefertigt. Die Kombination aus Braun und Beige verleiht ihnen einen modernen Look. Sie sind ideal für lässige Outfits und bieten hohen Tragekomfort.",
-      "Keywords": "Puma Sneakers Damen",
+      "Keywords": "Sneakers Damen",
       "Materials": "Wildleder"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -114,7 +114,82 @@
         {
           "filename": "VER02188 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02188 (12).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mjkAAeSwj6NpgozI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (10).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/chMAAeSwRv1pgozL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (13).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EQ0AAeSwiONpgozP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/g8EAAeSwKVBpgozU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kZsAAeSw2MppgozY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Y1IAAeSweq5pgozc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Os0AAeSwedFpgozf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/sn8AAeSwFLVpgozj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/XwsAAeSw5M9pgozm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02188 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D6YAAeSwHzNpgozo/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Puma",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Damen",
+        "Farbe": "Braun"
+      },
+      "optional": {
+        "Herstellernummer": "36626802",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "UK-Schuhgröße": "6.5",
+        "US-Schuhgröße": "9",
+        "Obermaterial": "Baumwolle",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Baumwolle",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "Vietnam"
+      }
     }
   }
 }

@@ -3,28 +3,28 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876958,
-      "ISIN": null,
+      "Supplier Number": "876958",
+      "ISIN": "",
       "Supplier Title": "1 Paar Converse Sneaker Größe 45"
     },
     "Price Data": {
-      "Price Net": 16.67,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 17.06
+      "Price Net": "16.67",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "17.06"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -38,10 +38,10 @@
       "Materials": "Textil Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "80"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -114,7 +114,86 @@
         {
           "filename": "VER02184 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02184 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/T9wAAeSwkMFpgo-m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/iTIAAeSwhdFpgo-q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/iD8AAeSwANVpgo-t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cKkAAeSwt4dpgo-x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TmEAAeSw5EVpgo-0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (11).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rtYAAeSwLdRpgo-3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (12).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/HaQAAeSwYqlpgo-6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/f3wAAeSwejdpgo-9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RbkAAeSw84Jpgo~A/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02184 (3).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z34AAeSwcK1pgo~D/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Converse",
+        "EU-Schuhgröße": "46",
+        "Abteilung": "Herren",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Herstellernummer": "A4267069190",
+        "Modell": "Chuck Taylor",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "High Top",
+        "Obermaterial": "Baumwolle",
+        "Produktart": "Sportschuh",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Ursprungsland": "Vietnam",
+        "Verschluss": "Schnürung",
+        "Individualisiert": "Nein",
+        "Produktlinie": "Converse All Star",
+        "UK-Schuhgröße": "11.5",
+        "US-Schuhgröße": "12",
+        "Innensohlenmaterial": "Textil",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Textil"
+      }
     }
   }
 }

@@ -3,28 +3,28 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25112339,
+      "Invoice": "25112339",
       "Invoice Date": "2025-11-28T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 876983,
-      "ISIN": null,
+      "Supplier Number": "876983",
+      "ISIN": "",
       "Supplier Title": "1 Paar Converse 162063CGröße 37"
     },
     "Price Data": {
-      "Price Net": 14.17,
-      "Shipping Net": 0.39,
-      "Total Cost Net": 14.56
+      "Price Net": "14.17",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "14.56"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "888755678169"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -38,10 +38,10 @@
       "Materials": "Textil Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -105,7 +105,78 @@
         {
           "filename": "VER02186 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02186 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G6MAAeSwVwVpgo8j/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gWgAAeSwxAtpgo8t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/seIAAeSwOkppgo8x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u2kAAeSw5A1pgo80/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gKkAAeSwontpgo84/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DhIAAeSwO0Rpgo87/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/S5wAAeSwUzhpgo8-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02186 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/fhAAAeSwf4Rpgo9B/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Converse",
+        "EU-Schuhgröße": "37",
+        "Abteilung": "Damen",
+        "Farbe": "Gelb"
+      },
+      "optional": {
+        "Herstellernummer": "162063Q",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "Chuck Taylor",
+        "Modell": "Chuck 70",
+        "UK-Schuhgröße": "4.5",
+        "US-Schuhgröße": "6.5",
+        "Obermaterial": "Baumwolle",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Textil",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Schuhweite": "Standard",
+        "Anlass": "Freizeit",
+        "Aktivität": "Fitnessstudio & Training",
+        "Ursprungsland": "Vietnam"
+      }
     }
   }
 }
