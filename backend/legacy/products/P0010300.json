@@ -1,0 +1,77 @@
+{
+  "P0010300": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBWHK2197WBLACKUNI006",
+      "Supplier Title": "NBWHK2197W BLACK UNI"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herren-Accessoires/Hüte & Mützen",
+      "eBay Category ID": "52365"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Nordblanc",
+      "Color": "Schwarz",
+      "Size": "One Size"
+    },
+    "Intern Generated Info": {
+      "More details": "Warme Strickmütze mit modernem Muster, ideal für kalte Tage und Outdoor-Aktivitäten.",
+      "Keywords": "NBWHK2197W Wintermütze Unisex",
+      "Materials": "Außenmaterial: 100% Acryl\nInnenmaterial: 100% Polyester (Fleecefutter)"
+    },
+    "OP": {
+      "OP": 20.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 016"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_182329790.jpg"
+        },
+        {
+          "filename": "PXL_20250526_182418705.jpg"
+        },
+        {
+          "filename": "PXL_20250526_182420730.jpg"
+        },
+        {
+          "filename": "PXL_20250526_182507638.jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

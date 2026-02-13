@@ -327,6 +327,22 @@ export default function SkuListPage() {
     setPage(1);
   };
 
+  const handleMoveColumnLeft = (col) => {
+    const idx = selectedColumns.indexOf(col);
+    if (idx <= 0) return; // Already at leftmost position or not selected
+    const newCols = [...selectedColumns];
+    [newCols[idx - 1], newCols[idx]] = [newCols[idx], newCols[idx - 1]];
+    setSelectedColumns(newCols);
+  };
+
+  const handleMoveColumnRight = (col) => {
+    const idx = selectedColumns.indexOf(col);
+    if (idx < 0 || idx >= selectedColumns.length - 1) return; // Not selected or already at rightmost
+    const newCols = [...selectedColumns];
+    [newCols[idx], newCols[idx + 1]] = [newCols[idx + 1], newCols[idx]];
+    setSelectedColumns(newCols);
+  };
+
   const handleFilterChange = (column, value) => {
     setColumnFilters((prev) => ({
       ...prev,
@@ -905,7 +921,6 @@ export default function SkuListPage() {
                         marginLeft: 28,
                         paddingTop: 8,
                         borderTop: "1px solid #e0e0e0",
-                        paddingTop: 8,
                         display: "grid",
                         gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
                         gap: 8
@@ -1042,30 +1057,78 @@ export default function SkuListPage() {
             Reset to Default
           </button>
         </h4>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
-          {allColumns.map((col) => (
-            <label
-              key={col}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                cursor: "pointer",
-                padding: "4px 8px",
-                background: selectedColumns.includes(col) ? "#e3f2fd" : "#fff",
-                borderRadius: 4,
-                border: "1px solid " + (selectedColumns.includes(col) ? "#2196F3" : "#ddd"),
-              }}
-            >
-              <input
-                type="checkbox"
-                checked={selectedColumns.includes(col)}
-                onChange={() => handleColumnToggle(col)}
-                style={{ cursor: "pointer" }}
-              />
-              <span style={{ fontSize: "0.9em" }}>{col}</span>
-            </label>
-          ))}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
+          {allColumns.map((col) => {
+            const isSelected = selectedColumns.includes(col);
+            const idx = selectedColumns.indexOf(col);
+            const canMoveLeft = isSelected && idx > 0;
+            const canMoveRight = isSelected && idx < selectedColumns.length - 1;
+            
+            return (
+              <div
+                key={col}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 4,
+                  padding: "4px 8px",
+                  background: isSelected ? "#e3f2fd" : "#fff",
+                  borderRadius: 4,
+                  border: "1px solid " + (isSelected ? "#2196F3" : "#ddd"),
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={isSelected}
+                  onChange={() => handleColumnToggle(col)}
+                  style={{ cursor: "pointer" }}
+                />
+                <span style={{ fontSize: "0.9em", flex: 1 }}>{col}</span>
+                {isSelected && (
+                  <div style={{ display: "flex", gap: 2 }}>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleMoveColumnLeft(col);
+                      }}
+                      disabled={!canMoveLeft}
+                      title="Move left"
+                      style={{
+                        padding: "2px 6px",
+                        fontSize: "12px",
+                        cursor: canMoveLeft ? "pointer" : "not-allowed",
+                        background: canMoveLeft ? "#2196F3" : "#ddd",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 3,
+                      }}
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleMoveColumnRight(col);
+                      }}
+                      disabled={!canMoveRight}
+                      title="Move right"
+                      style={{
+                        padding: "2px 6px",
+                        fontSize: "12px",
+                        cursor: canMoveRight ? "pointer" : "not-allowed",
+                        background: canMoveRight ? "#2196F3" : "#ddd",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 3,
+                      }}
+                    >
+                      →
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 

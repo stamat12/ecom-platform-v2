@@ -1,0 +1,151 @@
+{
+  "VER01600": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708379",
+      "ISIN": "",
+      "Supplier Title": "Herrenbadehose Größe M"
+    },
+    "Price Data": {
+      "Price Net": "1.67",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "2.17"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Bademode",
+      "eBay Category ID": "15690"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "SUN & BEACH",
+      "Color": "Rot",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Badehose ist rot mit blauen Akzenten. Sie hat einen elastischen Bund und eine Kordel zum Verstellen. Ideal für den Strand oder das Schwimmbad.",
+      "Keywords": "Herren Badehose",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "17"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01600 (1).jpg"
+        },
+        {
+          "filename": "VER01600 (2).jpg"
+        },
+        {
+          "filename": "VER01600 (3).jpg"
+        },
+        {
+          "filename": "VER01600 (4).jpg"
+        },
+        {
+          "filename": "VER01600 (4)_wb.jpg"
+        },
+        {
+          "filename": "VER01600 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01600 (1).jpg"
+        },
+        {
+          "filename": "VER01600 (3).jpg"
+        },
+        {
+          "filename": "VER01600 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01600 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/k6sAAeSwP8Zpjl1K/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01600 (4)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kqMAAeSwtVppjl1N/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01600 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hlAAAeSw-8Fpjl1T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01600 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/UWUAAeSwEzppjl1W/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01600 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/XoUAAeSwrr1pjl1b/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Rot",
+        "Größe": "M",
+        "Marke": "Markenlos",
+        "Produktart": "Unterteil"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "Badeshorts",
+        "Abteilung": "Herren",
+        "Material": "100% Polyester",
+        "Charakter": "",
+        "Muster": "",
+        "Vintage": "",
+        "Größenkategorie": "",
+        "Gewebeart": "",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "",
+        "Besonderheiten": "",
+        "Aktivität": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Anleitung für Personalisierung": ""
+      }
+    }
+  }
+}

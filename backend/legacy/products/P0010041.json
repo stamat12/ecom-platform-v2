@@ -1,0 +1,172 @@
+{
+  "P0010041": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2245REDDIAMXXL001",
+      "Supplier Title": "NBBMU2245 RED DIAMOND XXL"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": "8592502358977"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Rot",
+      "Size": "XXL"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichtes, atmungsaktives Funktionsshirt mit kurzen Ärmeln. Ideal für Sport, Outdoor und Freizeit. Mit DRYFOR®-Technologie für optimalen Feuchtigkeitstransport.",
+      "Keywords": "NBBMU2245 Outdoor Shirt Dryfor",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": "25.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 014"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_172404893.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172419914.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172426546.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172437553.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172452343.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172529260.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172558796.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_172404893.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172529260.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172419914.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250526_172404893.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/O68AAeSwlv9phRpv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172529260.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WN8AAeSwUBJphRpx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172419914.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/X4cAAeSwaytphRp3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172426546.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TdkAAeSwQ2RphRp6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172437553.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V9QAAeSw6UtphRp-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172452343.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xDoAAeSwJm5phRqB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_172558796.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M7sAAeSwjBhphRqE/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nordiblanc",
+        "Abteilung": "Herren",
+        "Größe": "2XL",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Produktart": "T-Shirt",
+        "Thema": "",
+        "Charakter": "",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Material": "Polyester",
+        "Ärmellänge": "Kurzarm",
+        "Charakter Familie": "",
+        "Besonderheiten": "Feuchtigkeitsabführend",
+        "Passform": "",
+        "Muster": "Ohne Muster",
+        "Vintage": "Nein",
+        "Größenkategorie": "",
+        "Ursprungsland": "EU",
+        "Akzente": "",
+        "Produktlinie": "",
+        "Gewebeart": "Jersey",
+        "Jahreszeit": "Sommer",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein",
+        "Textilpflege": "Maschinenwäsche",
+        "Modell": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Herstellungsjahr": "",
+        "Maßeinheit": ""
+      }
+    }
+  }
+}

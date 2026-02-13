@@ -1,0 +1,190 @@
+{
+  "VER02117": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "2510771",
+      "Invoice Date": "2025-10-09T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "843372",
+      "ISIN": "",
+      "Supplier Title": "Gstar Raw Cargo Hose Größe 31x32"
+    },
+    "Price Data": {
+      "Price Net": "20.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "20.39"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jeans",
+      "eBay Category ID": "11483"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "G-Star",
+      "Color": "Schwarz",
+      "Size": "31/32"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Hose hat mehrere Taschen, darunter eine seitliche mit Reißverschluss. Sie ist aus einem robusten Material gefertigt und hat eine schmale Passform. Der Bund ist mit einem Knopf und einem Reißverschluss versehen.",
+      "Keywords": "Hose Cargo Herren",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "119.95"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02117 (1).jpg"
+        },
+        {
+          "filename": "VER02117 (10).jpg"
+        },
+        {
+          "filename": "VER02117 (2).jpg"
+        },
+        {
+          "filename": "VER02117 (3).jpg"
+        },
+        {
+          "filename": "VER02117 (4).jpg"
+        },
+        {
+          "filename": "VER02117 (5).jpg"
+        },
+        {
+          "filename": "VER02117 (6).jpg"
+        },
+        {
+          "filename": "VER02117 (7).jpg"
+        },
+        {
+          "filename": "VER02117 (8).jpg"
+        },
+        {
+          "filename": "VER02117 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02117 (5).jpg"
+        },
+        {
+          "filename": "VER02117 (9).jpg"
+        },
+        {
+          "filename": "VER02117 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02117 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/HwQAAeSwUixpjujY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xk8AAeSwbFlpjujc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GPYAAeSw5iFpjujf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/F-8AAeSwxzNpjujk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NPEAAeSwxdVpjujn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yRcAAeSwo7hpjujs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/07MAAeSwl4xpjujw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wMUAAeSwip5pjuj0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02117 (2).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/M7oAAeSwhTxpjuj3/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "G-Star",
+        "Größe": "31",
+        "Abteilung": "Herren",
+        "Farbe": "Blau",
+        "Stil": "Skinny",
+        "Schrittlänge": "32 in"
+      },
+      "optional": {
+        "Produktart": "Jeans",
+        "Taillenumfang": "Nicht angegeben",
+        "Passform": "Slim",
+        "Modell": "ZIP PKT 3D SKINNY",
+        "Besonderheiten": "Mit Gürtel",
+        "Gewebeart": "Canvas",
+        "Material": "Baumwolle",
+        "Verschluss": "Knopf",
+        "Vintage": "Nein",
+        "Ursprungsland": "Nicht angegeben",
+        "Jahreszeit": "Ganzjährig",
+        "Akzente": "Logo",
+        "Muster": "Ohne Muster",
+        "Waschung": "Nicht angegeben",
+        "Taschenart": "Cargo-Tasche",
+        "Textilpflege": "Maschinenwäsche",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Anleitung für Personalisierung": "Nicht angegeben",
+        "Anzahl der Einheiten": "1",
+        "Bundhöhe": "Mittel (25-30 cm)",
+        "Herstellernummer": "D24307-604-862.44",
+        "Maßeinheit": "Einheit"
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "P0010060": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2250REDDIAMXL009",
+      "Supplier Title": "NBBMU2250 RED DIAMOND XL"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Herren/Hosen & Leggings",
+      "eBay Category ID": "59347"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Rot",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Funktionale Herren-Unterhose in langer Form mit elastischem Bund und atmungsaktivem Material, ideal für Wintersport und Outdoor-Aktivitäten.",
+      "Keywords": "NBBMU2250 Thermohose",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 014"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_165457573.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165512122.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165523000.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165530179.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165549762.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165606953.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165705800.jpg"
+        },
+        {
+          "filename": "PXL_20250526_170306398.jpg"
+        },
+        {
+          "filename": "PXL_20250526_170845319.jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

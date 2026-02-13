@@ -1,0 +1,134 @@
+{
+  "VER01610": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25051174",
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "716742",
+      "ISIN": "",
+      "Supplier Title": "Stradivarius Jeans Mini Größe 38"
+    },
+    "Price Data": {
+      "Price Net": "4.17",
+      "Shipping Net": "0.37",
+      "Total Cost Net": "4.54"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Röcke",
+      "eBay Category ID": "63864"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Stradivarius",
+      "Color": "Blau",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Rock hat eine ausgefranste untere Kante und ist aus leichtem Denim gefertigt. Er verfügt über zwei vordere Taschen und einen Knopfverschluss. Die Waschung ist hellblau mit leichten Used-Effekten.",
+      "Keywords": "Denim Mini Rock",
+      "Materials": "Denim"
+    },
+    "OP": {
+      "OP": "20"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01610 (1).jpg"
+        },
+        {
+          "filename": "VER01610 (2).jpg"
+        },
+        {
+          "filename": "VER01610 (3).jpg"
+        },
+        {
+          "filename": "VER01610 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01610 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01610 (3).jpg"
+        },
+        {
+          "filename": "VER01610 (1).jpg"
+        },
+        {
+          "filename": "VER01610 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01610 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mOcAAeSwXMRpjl46/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01610 (3)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m7sAAeSwWKxpjl4-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01610 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lFQAAeSwiP9pjl5H/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01610 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jMQAAeSw5llpjl5N/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Stradivarius",
+        "Produktart": "Rock",
+        "Größe": "38",
+        "Farbe": "Blau",
+        "Stil": "Minirock",
+        "Abteilung": "Damen",
+        "Rocklänge": "Kurz"
+      },
+      "optional": {
+        "Material": "Baumwolle",
+        "Gewebeart": "Denim",
+        "Muster": "Ohne Muster",
+        "Besonderheiten": "Taschen",
+        "Verschluss": "Knopf",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}

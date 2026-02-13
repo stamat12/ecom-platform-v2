@@ -181,7 +181,7 @@ Return ONLY valid JSON, no explanation, no comments.
 """
 
 PROMPTS = {
-    "studio_restoration": (
+    "prompt 1": (
         "Task: Transform this amateur product photograph into a premium, professional e-commerce studio shot. "
         "Goal: The product must look pristine and high-quality, while maintaining pixel-perfect fidelity to all original text and branding details. "
         "1. Background & Isolation: Isolate the product perfectly from the floor background. Place it on a seamless, pure white background (#FFFFFF). "
@@ -196,7 +196,7 @@ PROMPTS = {
         "5. Framing: Center the product fully within the frame with balanced white space."
     ),
     
-    "studio_restoration_2": (
+    "prompt 2": (
         "Task: High-Fidelity Background Replacement & Studio Lighting Composition. "
         "Goal: Isolate the product EXACTLY as it appears in the source image onto a white background. "
         "1. Background: Seamless pure white (#FFFFFF). Add a natural, soft contact shadow to ground the object. "
@@ -210,7 +210,7 @@ PROMPTS = {
         "5. Framing: Center the product with balanced white space."
     ),
     
-    "studio_restoration_3": (
+    "prompt 3": (
         "Task: Technical Background Replacement & Color Correction ONLY. "
         "Goal: Isolate the product exactly as it appears in the source image onto a white background. "
         "1. STRICT OBJECT PRESERVATION (CRITICAL): Do NOT redraw, re-render, repaint, or 'clean' the product structure. "
@@ -223,7 +223,7 @@ PROMPTS = {
         "Do not change the lighting direction or cast new shadows on the shoe structure itself. "
         "5. Output: The result should look like the original photo was skillfully cut out and placed on white, NOT like a 3D render or a generated image."
     ),
-    "studio_restoration_ultra_gpt": (
+    "prompt 4": (
         "Task: Convert this amateur product photo into a premium, professional studio image.\n"
         "Objective: Produce a pristine e-commerce shot on pure white while preserving EVERY pixel-level detail of the original product.\n"
         "\n"
@@ -266,7 +266,7 @@ PROMPTS = {
         "\n"
         "Output: ONLY the restored product on pure white with a subtle realistic shadow—NO changes to product details.\n"
     ),
-    "background_remover": (
+    "prompt 5": (
         "Task: Strict Foreground Extraction / Background Removal ONLY. "
         "Goal: Isolate the foreground objects (the two shoes) exactly as they appear pixel-for-pixel in the source image. "
         "1. Operation: Perform a precise segmentation cut-out of the shoes. "

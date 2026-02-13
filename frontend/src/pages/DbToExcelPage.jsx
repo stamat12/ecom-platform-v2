@@ -8,7 +8,7 @@ export default function DbToExcelPage() {
   const [syncResult, setSyncResult] = useState(null);
 
   const handleSyncDbToExcel = async () => {
-    if (!confirm("Sync JSON data to Excel? This will update cells where there are changes.\n\nColumns updated:\n- Category (eBay path)\n- EAN\n- Condition\n- Gender, Brand, Color, Size\n- More details, Materials, Keywords\n- OP\n- Status\n- Lager\n- Images JSON Phone, Stock, Enhanced\n- JSON (Yes/empty)\n- Images (folder count)")) {
+    if (!confirm("Sync inventory.db data to Excel? This will update cells where there are changes.\n\nColumns updated (from DB):\n- Category\n- EAN\n- Condition\n- Gender, Brand, Color, Size\n- More details, Materials, Keywords\n- OP\n- Status\n- Lager\n- Images JSON Phone, Stock, Enhanced\n- JSON (Yes/empty)\n- Images (folder count)")) {
       return;
     }
 
@@ -47,24 +47,24 @@ export default function DbToExcelPage() {
       <h1>📊 DB to Excel Sync</h1>
 
       <div style={{ marginBottom: "20px", padding: "20px", backgroundColor: "#f0f0f0", borderRadius: "8px" }}>
-        <h2>Sync JSON Data to Excel</h2>
-        <p>This will update your Excel file with the latest data from the JSON files.</p>
+        <h2>Sync inventory.db Data to Excel</h2>
+        <p>This will update your Excel file with the latest data from the inventory database.</p>
         
         <h3>Columns that will be updated:</h3>
         <ul>
-          <li>✅ <strong>Category</strong> (from Ebay Category section)</li>
-          <li>✅ <strong>EAN</strong> (from EAN section)</li>
-          <li>✅ <strong>Condition</strong> (from Product Condition section)</li>
-          <li>✅ <strong>Gender</strong> (from Intern Product Info section)</li>
-          <li>✅ <strong>Brand</strong> (from Intern Product Info section)</li>
-          <li>✅ <strong>Color</strong> (from Intern Product Info section)</li>
-          <li>✅ <strong>Size</strong> (from Intern Product Info section)</li>
-          <li>✅ <strong>More details</strong> (from Intern Generated Info section)</li>
-          <li>✅ <strong>Materials</strong> (from Intern Generated Info section)</li>
-          <li>✅ <strong>Keywords</strong> (from Intern Generated Info section)</li>
-          <li>✅ <strong>OP</strong> (from OP section)</li>
-          <li>✅ <strong>Status</strong> (from Status section)</li>
-          <li>✅ <strong>Lager</strong> (from Warehouse section)</li>
+          <li>✅ <strong>Category</strong> (from inventory.db)</li>
+          <li>✅ <strong>EAN</strong> (from inventory.db)</li>
+          <li>✅ <strong>Condition</strong> (from inventory.db)</li>
+          <li>✅ <strong>Gender</strong> (from inventory.db)</li>
+          <li>✅ <strong>Brand</strong> (from inventory.db)</li>
+          <li>✅ <strong>Color</strong> (from inventory.db)</li>
+          <li>✅ <strong>Size</strong> (from inventory.db)</li>
+          <li>✅ <strong>More details</strong> (from inventory.db)</li>
+          <li>✅ <strong>Materials</strong> (from inventory.db)</li>
+          <li>✅ <strong>Keywords</strong> (from inventory.db)</li>
+          <li>✅ <strong>OP</strong> (from inventory.db)</li>
+          <li>✅ <strong>Status</strong> (from inventory.db)</li>
+          <li>✅ <strong>Lager</strong> (from inventory.db)</li>
           <li>✅ <strong>Images JSON Phone</strong> (phone image count)</li>
           <li>✅ <strong>Images JSON Stock</strong> (stock image count)</li>
           <li>✅ <strong>Images JSON Enhanced</strong> (enhanced image count)</li>

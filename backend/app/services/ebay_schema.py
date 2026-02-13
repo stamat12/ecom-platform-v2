@@ -307,23 +307,13 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
         logger.error(traceback.format_exc())
         raise
     
-    # Try to load schema from file
+    # Load schema from cache or fetch from API if missing
     try:
-        schemas_dir = Path(__file__).parent.parent.parent / "schemas"
-        schema_file_pattern = f"EbayCat_{category_id}_*.json"
-        schema_files = list(schemas_dir.glob(schema_file_pattern))
-        
-        if schema_files:
-            schema_file = schema_files[0]
-            logger.info(f"Loading schema from {schema_file.name}")
-            with open(schema_file, 'r', encoding='utf-8') as f:
-                import json
-                schema_data = json.load(f)
-            return schema_data
-        else:
-            logger.warning(f"No schema file found for category {category_id} (pattern: {schema_file_pattern})")
+        schema_data = get_schema(category_id, use_cache=use_cache, category_name=str(category))
+        if not schema_data:
+            logger.warning(f"No schema available for category {category_id}")
             return None
-            
+        return schema_data
     except Exception as e:
         logger.error(f"Error loading schema for SKU {sku}: {e}")
         return None
@@ -412,7 +402,7 @@ async def get_schema_by_category_name(category_name: str) -> dict:
     """
     try:
         # Get all available schemas
-        schemas_dir = Path(__file__).parent.parent.parent / "schemas"
+        schemas_dir = ebay_schema_repo.SCHEMAS_DIR
         if not schemas_dir.exists():
             schemas_dir.mkdir(parents=True, exist_ok=True)
         
@@ -540,7 +530,7 @@ def _get_category_id_from_mapping(category_name: str) -> Optional[dict]:
         Dict with categoryId and fees if found in mapping, None otherwise
     """
     try:
-        mapping_file = Path(__file__).parent.parent.parent / "schemas" / "category_mapping.json"
+        mapping_file = ebay_schema_repo.SCHEMAS_DIR / "category_mapping.json"
         
         if not mapping_file.exists():
             logger.debug(f"Category mapping file not found: {mapping_file}")

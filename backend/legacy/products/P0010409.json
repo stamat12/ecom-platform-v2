@@ -1,0 +1,86 @@
+{
+  "P0010409": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "NBWJL2034 PURE WHITE 42"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Damen/Jacken & Westen",
+      "eBay Category ID": "181365"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nordblanc",
+      "Color": "Weiß",
+      "Size": 42
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Damen-Daunenweste von Nordblanc. Gefüllt mit 90 % Daunen und 10 % Federn für optimale Wärmeisolierung. Ideal als isolierende Schicht im Alltag oder für Outdoor-Aktivitäten.",
+      "Keywords": "NBWJL2034 Daunenweste",
+      "Materials": "Obermaterial (Shell): 100 % Polyamid\nFutter (Lining): 100 % Polyester\nFüllung (Padding): 90 % Entendaunen, 10 % Federn"
+    },
+    "OP": {
+      "OP": 95.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250529_153951114.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154012740.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154037207.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154041106.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154045570.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154058019.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154110172.jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "VER02122": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25101687",
+      "Invoice Date": "2025-10-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "440690",
+      "ISIN": "",
+      "Supplier Title": "Blue Cox Slipper Schuhe grün Gr. 45"
+    },
+    "Price Data": {
+      "Price Net": "7.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "7.89"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Blue Cox",
+      "Color": "Dunkelgrün",
+      "Size": "45"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus einem atmungsaktiven Material gefertigt und haben eine flexible Sohle. Sie verfügen über eine bequeme Passform und sind ideal für den Alltag. Die Kombination aus Leder und Textil sorgt für einen modernen Look.",
+      "Keywords": "Slipper Herren",
+      "Materials": "Echtleder Textil"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02122 (1).jpg"
+        },
+        {
+          "filename": "VER02122 (2).jpg"
+        },
+        {
+          "filename": "VER02122 (3).jpg"
+        },
+        {
+          "filename": "VER02122 (4).jpg"
+        },
+        {
+          "filename": "VER02122 (5).jpg"
+        },
+        {
+          "filename": "VER02122 (6).jpg"
+        },
+        {
+          "filename": "VER02122 (7).jpg"
+        },
+        {
+          "filename": "VER02122 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02122 (3).jpg"
+        },
+        {
+          "filename": "VER02122 (5).jpg"
+        },
+        {
+          "filename": "VER02122 (7).jpg"
+        },
+        {
+          "filename": "VER02122 (1).jpg"
+        },
+        {
+          "filename": "VER02122 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02122 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zG0AAeSw0eVpjuoX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KGwAAeSwRihpjuob/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0SIAAeSwR-xpjuoh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zgAAAeSwDStpjuom/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/r5QAAeSwx~Fpjuop/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5QYAAeSw2iRpjuot/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02122 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3RYAAeSwSdFpjuow/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Blue Cox",
+        "EU-Schuhgröße": "45",
+        "Abteilung": "Herren",
+        "Stil": "Slipper",
+        "Farbe": "Grün",
+        "Obermaterial": "Baumwollmischung"
+      },
+      "optional": {
+        "AU-Schuhgröße": "11",
+        "UK-Schuhgröße": "10.5",
+        "US-Schuhgröße": "11.5",
+        "Futtermaterial": "Baumwolle",
+        "Laufsohlenmaterial": "Gummi",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Modell": "Unbekannt",
+        "Produktart": "Freizeitschuh",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Slip-On",
+        "Schuhweite": "Standard",
+        "Charakter": "Unbekannt",
+        "Besonderheiten": "Atmungsaktiv",
+        "Produktlinie": "Unbekannt",
+        "Thema": "Unbekannt",
+        "Gewebeart": "Unbekannt",
+        "Akzente": "Unbekannt",
+        "Ursprungsland": "Unbekannt",
+        "Anlass": "Freizeit",
+        "Schuhspitze": "Runde Form",
+        "Muster": "Ohne Muster",
+        "Anzahl der Einheiten": "1",
+        "Herstellernummer": "943-250607.0",
+        "Maßeinheit": "Einheit"
+      }
+    }
+  }
+}

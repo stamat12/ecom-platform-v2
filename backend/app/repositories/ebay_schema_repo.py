@@ -9,7 +9,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Schemas directory (relative to backend folder)
-SCHEMAS_DIR = Path(__file__).parent.parent.parent / "legacy" / "schemas"
+SCHEMAS_DIR = Path(__file__).parent.parent.parent / "schemas"
 
 def ensure_schemas_dir():
     """Create schemas directory if it doesn't exist"""

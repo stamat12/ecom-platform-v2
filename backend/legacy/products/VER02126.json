@@ -1,0 +1,104 @@
+{
+  "VER02126": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102425,
+      "Invoice Date": "2025-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 863423,
+      "ISIN": null,
+      "Supplier Title": "Zara Pullover Größe M"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 5.39
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Zara",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Oberteil hat einen V-Ausschnitt und ist aus einem gerippten Material gefertigt. Es ist enganliegend und hat kurze Ärmel. Ideal für lässige Anlässe oder als Teil eines Schichtenlooks.",
+      "Keywords": "Zara Oberteil Damen Schwarz M",
+      "Materials": "Keine Angaben"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02126 (1).jpg"
+        },
+        {
+          "filename": "VER02126 (2).jpg"
+        },
+        {
+          "filename": "VER02126 (3).jpg"
+        },
+        {
+          "filename": "VER02126 (4).jpg"
+        },
+        {
+          "filename": "VER02126 (5).jpg"
+        },
+        {
+          "filename": "VER02126 (6).jpg"
+        },
+        {
+          "filename": "VER02126 (7).jpg"
+        },
+        {
+          "filename": "VER02126 (8).jpg"
+        },
+        {
+          "filename": "VER02126 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02126 (1).jpg"
+        },
+        {
+          "filename": "VER02126 (9).jpg"
+        },
+        {
+          "filename": "VER02126 (8).jpg"
+        }
+      ]
+    }
+  }
+}

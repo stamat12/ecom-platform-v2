@@ -1,0 +1,151 @@
+{
+  "VER01592": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708205",
+      "ISIN": "",
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": "0.83",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "1.33"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Katia Swimwear",
+      "Color": "Schwarz",
+      "Size": "54"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Badeanzug hat ein florales Muster in Weiß auf schwarzem Hintergrund. Er bietet eine bequeme Passform und ist ideal für den Strand oder das Schwimmbad. Die Träger sind verstellbar für zusätzlichen Komfort.",
+      "Keywords": "Einteiliger Badeanzug",
+      "Materials": "82% Polyamide; 18% Elastane"
+    },
+    "OP": {
+      "OP": "22"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01592 (1).jpg"
+        },
+        {
+          "filename": "VER01592 (2).jpg"
+        },
+        {
+          "filename": "VER01592 (3).jpg"
+        },
+        {
+          "filename": "VER01592 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01592 (4).jpg"
+        },
+        {
+          "filename": "VER01592 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01592 (3).jpg"
+        },
+        {
+          "filename": "VER01592 (5).jpg"
+        },
+        {
+          "filename": "VER01592 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01592 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YzAAAeSwnnppjlz0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01592 (3)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hqAAAeSwbFlpjlz2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01592 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/UTQAAeSwKn9pjlz-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01592 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hQMAAeSwwoppjl0F/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01592 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gNAAAeSwbkBpjl0I/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Schwarz",
+        "Größe": "54",
+        "Marke": "Katia",
+        "Produktart": "Einteiler"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "",
+        "Abteilung": "Damen",
+        "Material": "",
+        "Charakter": "",
+        "Muster": "Blumen",
+        "Vintage": "",
+        "Größenkategorie": "Übergröße",
+        "Gewebeart": "",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "",
+        "Besonderheiten": "",
+        "Aktivität": "",
+        "Textilpflege": "",
+        "Personalisieren": "",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Anleitung für Personalisierung": ""
+      }
+    }
+  }
+}

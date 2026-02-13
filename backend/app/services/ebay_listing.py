@@ -72,10 +72,12 @@ def map_condition_to_id(condition_text: str) -> int:
     Returns:
         eBay ConditionID (default: 1000 for New)
     """
-    if not condition_text:
+    if condition_text is None:
         return 1000
-    
-    condition_clean = condition_text.strip()
+
+    condition_clean = str(condition_text).strip()
+    if not condition_clean:
+        return 1000
     condition_id = CONDITION_MAPPING.get(condition_clean, 1000)
     
     if condition_clean not in CONDITION_MAPPING:
@@ -370,10 +372,10 @@ def get_manufacturer_info(brand: str, force_refresh: bool = False) -> Optional[D
     Returns:
         Manufacturer info dict or None if lookup fails
     """
-    if not brand or not brand.strip():
+    brand = str(brand or "").strip()
+    if not brand:
         return None
-    
-    brand = brand.strip()
+
     
     # Check cache
     if not force_refresh:
@@ -497,10 +499,10 @@ def build_title_from_product(product_json: Dict[str, Any], sku: str) -> str:
     product_info = product_json.get("Intern Product Info", {})
     generated_info = product_json.get("Intern Generated Info", {})
     
-    brand = product_info.get("Brand", "").strip()
-    keywords = generated_info.get("Keywords", "").strip()
-    color = product_info.get("Color", "").strip()
-    size = product_info.get("Size", "").strip()
+    brand = str(product_info.get("Brand", "") or "").strip()
+    keywords = str(generated_info.get("Keywords", "") or "").strip()
+    color = str(product_info.get("Color", "") or "").strip()
+    size = str(product_info.get("Size", "") or "").strip()
     
     if not keywords:
         raise ValueError(f"Keywords missing in JSON for SKU {sku}")

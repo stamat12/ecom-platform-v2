@@ -1,0 +1,140 @@
+{
+  "VER01601": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708381",
+      "ISIN": "",
+      "Supplier Title": "Herrenbadehose Größe M"
+    },
+    "Price Data": {
+      "Price Net": "1.67",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "2.17"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Bademode",
+      "eBay Category ID": "15690"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "",
+      "Color": "Blau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Badehose ist in einem lebhaften Blau gehalten und hat einen elastischen Bund mit Kordelzug. Sie verfügt über ein Netzfutter für zusätzlichen Komfort. Die Seiten sind mit einem kontrastierenden Band verziert.",
+      "Keywords": "Herren Badehose",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "17"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01601 (1).jpg"
+        },
+        {
+          "filename": "VER01601 (2).jpg"
+        },
+        {
+          "filename": "VER01601 (3).jpg"
+        },
+        {
+          "filename": "VER01601 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01601 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01601 (3).jpg"
+        },
+        {
+          "filename": "VER01601 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01601 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MCAAAeSws09pjl2w/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01601 (3)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I18AAeSwoAxpjl2y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01601 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ajQAAeSw6HRpjl25/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01601 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dJkAAeSwNtxpjl2-/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Blau",
+        "Größe": "M",
+        "Marke": "Markenlos",
+        "Produktart": "Unterteil"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "Badeshorts",
+        "Abteilung": "Herren",
+        "Material": "100% Polyester",
+        "Charakter": "",
+        "Muster": "",
+        "Vintage": "",
+        "Größenkategorie": "Normalgröße",
+        "Gewebeart": "Fleece",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "",
+        "Besonderheiten": "",
+        "Aktivität": "Freizeit",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "",
+        "Herstellernummer": "",
+        "Modell": "",
+        "Anleitung für Personalisierung": ""
+      }
+    }
+  }
+}

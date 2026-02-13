@@ -1,0 +1,139 @@
+{
+  "P0010046": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2250REDDIAMS001",
+      "Supplier Title": "NBBMU2250 GREEN S"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Herren/Hosen & Leggings",
+      "eBay Category ID": "59347"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Funktionale Herren-Unterhose in langer Form mit elastischem Bund und atmungsaktivem Material, ideal für Wintersport und Outdoor-Aktivitäten.",
+      "Keywords": "NBBMU2250 Thermohose",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 013"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_181129215.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181156093.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181159383.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181209020.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181231130.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_181129215.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181231130.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181156093.jpg"
+        },
+        {
+          "filename": "PXL_20250526_181159383.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250526_181129215.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CyYAAeSwduhphSPd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_181156093.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RhgAAeSwIiNphSPi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_181159383.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9nAAAeSwjgFphSPn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_181209020.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GP0AAeSwWZRphSPs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_181231130.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gaQAAeSw6CRphSPv/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Stil": "Kompression",
+        "Marke": "Nordblanc",
+        "Größe": "S",
+        "Farbe": "Grün",
+        "Produktart": "Hosen",
+        "Abteilung": "Herren"
+      },
+      "optional": {
+        "Aktivität": "Fitnessstudio & Training",
+        "Material": "100% Polyester",
+        "Anlass": "Sport",
+        "Verschluss": "Zugbandverschluss"
+      }
+    }
+  }
+}

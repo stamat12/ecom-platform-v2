@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -13,6 +14,7 @@ LEGACY = Path(__file__).resolve().parents[2] / "legacy"
 import sys
 sys.path.insert(0, str(LEGACY))
 import config  # type: ignore
+from app.services.excel_inventory import _get_db_path
 
 # Excel columns to sync from JSON
 EXCEL_COLUMNS_TO_SYNC = [
@@ -39,128 +41,14 @@ EXCEL_COLUMNS_TO_SYNC = [
 PRODUCTS_DIR = LEGACY / "products"
 
 
-def read_sku_json(sku: str) -> Optional[Dict[str, Any]]:
-    """Read JSON for a specific SKU."""
-    json_file = PRODUCTS_DIR / f"{sku}.json"
-    if not json_file.exists():
-        return None
-    
+def load_db_inventory() -> pd.DataFrame:
+    """Load inventory table from SQLite database."""
+    db_path = _get_db_path()
+    conn = sqlite3.connect(db_path)
     try:
-        with open(json_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            # JSON structure: { "SKU": { sections... } }
-            return data.get(sku, {})
-    except Exception as e:
-        print(f"Error reading JSON for {sku}: {e}")
-        return None
-
-
-def sku_json_exists(sku: str) -> str:
-    """Check if JSON file exists for SKU. Returns 'Yes' or empty string."""
-    json_file = PRODUCTS_DIR / f"{sku}.json"
-    return "Yes" if json_file.exists() else ""
-
-
-def get_folder_images_count(sku: str) -> int:
-    """Get folder images count from cache for specific SKU."""
-    try:
-        cache_file = LEGACY / "cache" / "folder_images_cache.json"
-        if not cache_file.exists():
-            return 0
-        
-        with open(cache_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            counts = data.get("counts", {})
-            # Get count for this specific SKU
-            return counts.get(sku, 0)
-    except Exception as e:
-        print(f"Error reading folder images cache: {e}")
-        return 0
-        return 0
-
-
-def get_image_counts(sku: str) -> Dict[str, int]:
-    """Extract image counts from JSON."""
-    json_data = read_sku_json(sku)
-    if not json_data:
-        return {"Images JSON Phone": 0, "Images JSON Stock": 0, "Images JSON Enhanced": 0}
-    
-    images = json_data.get("Images", {})
-    summary = images.get("summary", {})
-    
-    return {
-        "Images JSON Phone": summary.get("count_phone", 0),
-        "Images JSON Stock": summary.get("count_stock", 0),
-        "Images JSON Enhanced": summary.get("count_enhanced", 0)
-    }
-
-
-def flatten_json_sections(sku: str) -> Dict[str, Any]:
-    """Flatten JSON sections into a single dict for Excel columns."""
-    json_data = read_sku_json(sku)
-    if not json_data:
-        return {}
-    
-    flattened = {}
-    
-    # Ebay Category section -> Category column (the path) and we don't update Category ID in Excel
-    ebay_cat = json_data.get("Ebay Category", {})
-    if ebay_cat:
-        flattened["Category"] = ebay_cat.get("Category")
-    
-    # EAN section -> EAN column
-    ean_section = json_data.get("EAN", {})
-    if ean_section:
-        flattened["EAN"] = ean_section.get("EAN")
-    
-    # Product Condition section -> Condition column
-    condition_section = json_data.get("Product Condition", {})
-    if condition_section:
-        flattened["Condition"] = condition_section.get("Condition")
-    
-    # Intern Product Info section -> Gender, Brand, Color, Size columns
-    product_info = json_data.get("Intern Product Info", {})
-    if product_info:
-        flattened["Gender"] = product_info.get("Gender")
-        flattened["Brand"] = product_info.get("Brand")
-        flattened["Color"] = product_info.get("Color")
-        flattened["Size"] = product_info.get("Size")
-    
-    # Intern Generated Info section -> More details, Materials, Keywords columns
-    generated_info = json_data.get("Intern Generated Info", {})
-    if generated_info:
-        flattened["More details"] = generated_info.get("More details")
-        flattened["Materials"] = generated_info.get("Materials")
-        flattened["Keywords"] = generated_info.get("Keywords")
-    
-    # OP section -> OP column
-    op_section = json_data.get("OP", {})
-    if op_section:
-        flattened["OP"] = op_section.get("OP")
-    
-    # Status section -> Status column
-    status_section = json_data.get("Status", {})
-    if status_section:
-        flattened["Status"] = status_section.get("Status")
-    
-    # Warehouse section -> Lager column
-    warehouse_section = json_data.get("Warehouse", {})
-    if warehouse_section:
-        flattened["Lager"] = warehouse_section.get("Lager")
-    
-    # Add image counts
-    image_counts = get_image_counts(sku)
-    flattened["Images JSON Phone"] = image_counts.get("Images JSON Phone", 0)
-    flattened["Images JSON Stock"] = image_counts.get("Images JSON Stock", 0)
-    flattened["Images JSON Enhanced"] = image_counts.get("Images JSON Enhanced", 0)
-    
-    # Add JSON file existence check
-    flattened["JSON"] = sku_json_exists(sku)
-    
-    # Add folder images count from cache
-    flattened["Images"] = get_folder_images_count(sku)
-    
-    return flattened
+        return pd.read_sql("SELECT * FROM inventory", conn)
+    finally:
+        conn.close()
 
 
 def detect_changes(current_values: Dict[str, Any], new_values: Dict[str, Any]) -> bool:
@@ -208,6 +96,25 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
         
         # Read current Excel data
         df = pd.read_excel(excel_file, sheet_name=sheet_name)
+
+        # Load inventory data from DB
+        db_df = load_db_inventory()
+        if db_df.empty:
+            return {"success": False, "message": "Inventory DB is empty"}
+
+        db_sku_col = "SKU (Old)" if "SKU (Old)" in db_df.columns else ("SKU" if "SKU" in db_df.columns else None)
+        if not db_sku_col:
+            return {"success": False, "message": "Could not find SKU column in DB"}
+
+        db_lookup = {}
+        for _, db_row in db_df.iterrows():
+            sku_val = db_row.get(db_sku_col)
+            if pd.isna(sku_val) or sku_val is None:
+                continue
+            sku_key = str(sku_val).strip()
+            if not sku_key:
+                continue
+            db_lookup[sku_key] = db_row
         
         # Track changes
         changes_made = 0
@@ -244,10 +151,10 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
             
             rows_processed += 1
             
-            # Get JSON data for this SKU
-            json_values = flatten_json_sections(str(sku))
-            
-            if not json_values:
+            # Get DB row for this SKU
+            sku_key = str(sku).strip()
+            db_row = db_lookup.get(sku_key)
+            if db_row is None:
                 continue
             
             # Update cells where there are changes
@@ -258,7 +165,13 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
                 col_idx = headers[col_name]
                 current_cell = ws.cell(row=row_idx, column=col_idx)
                 current_value = current_cell.value
-                new_value = json_values.get(col_name)
+                    if col_name == "Status" and str(current_value).strip() == "OK":
+                        continue
+                if col_name not in db_df.columns:
+                    continue
+                new_value = db_row.get(col_name)
+                if pd.isna(new_value):
+                    new_value = None
                 
                 # Convert new value to appropriate format for Excel
                 if isinstance(new_value, dict):

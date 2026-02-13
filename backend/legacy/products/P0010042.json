@@ -1,0 +1,86 @@
+{
+  "P0010042": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2245REDDIAMXXL002",
+      "Supplier Title": "NBBMU2245 RED DIAMOND XXL"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Rot",
+      "Size": "XXL"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichtes, atmungsaktives Funktionsshirt mit kurzen Ärmeln. Ideal für Sport, Outdoor und Freizeit. Mit DRYFOR®-Technologie für optimalen Feuchtigkeitstransport.",
+      "Keywords": "NBBMU2245 Outdoor Shirt Dryfor",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 014"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_172405118.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172420420.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172426975.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172437739.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172452881.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172529425.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172559169.jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

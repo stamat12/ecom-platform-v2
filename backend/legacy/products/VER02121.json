@@ -1,0 +1,177 @@
+{
+  "VER02121": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25101687",
+      "Invoice Date": "2025-10-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "900602",
+      "ISIN": "",
+      "Supplier Title": "Nubikk Roque Road Wave Herrenschuhe Gr. 44"
+    },
+    "Price Data": {
+      "Price Net": "22.5",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "22.89"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": "8719156345577"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nubikk",
+      "Color": "Weiß/Marine",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Sneakers haben eine Kombination aus glattem Leder und Wildleder. Sie sind in Weiß mit marineblauen Akzenten gestaltet. Die Sohle ist dick und bietet guten Komfort.",
+      "Keywords": "Roque Road Wave Sneakers Herren",
+      "Materials": "Leder, Wildleder, Gummi"
+    },
+    "OP": {
+      "OP": "200"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02121 (1).jpg"
+        },
+        {
+          "filename": "VER02121 (2).jpg"
+        },
+        {
+          "filename": "VER02121 (3).jpg"
+        },
+        {
+          "filename": "VER02121 (4).jpg"
+        },
+        {
+          "filename": "VER02121 (5).jpg"
+        },
+        {
+          "filename": "VER02121 (6).jpg"
+        },
+        {
+          "filename": "VER02121 (7).jpg"
+        },
+        {
+          "filename": "VER02121 (8).jpg"
+        },
+        {
+          "filename": "VER02121 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02121 (6).jpg"
+        },
+        {
+          "filename": "VER02121 (4).jpg"
+        },
+        {
+          "filename": "VER02121 (3).jpg"
+        },
+        {
+          "filename": "VER02121 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02121 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z8AAAeSwOGxpjumO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NKQAAeSwZThpjumR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wnsAAeSwxi1pjumV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/QmwAAeSwmBVpjumY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y54AAeSw~vRpjumc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zqsAAeSw1mxpjumf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wscAAeSwxi1pjumi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02121 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zRIAAeSwtMZpjumo/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "NUBIKK",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Herstellernummer": "21049202",
+        "Individualisiert": "Nein",
+        "Modell": "ROQUE ROAD WAVE (M)",
+        "UK-Schuhgröße": "10",
+        "US-Schuhgröße": "11",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "Leder",
+        "Produktart": "Sportschuh",
+        "Anlass": "Freizeit",
+        "Verschluss": "Schnürung",
+        "Produktlinie": "303L White Leather - Navy",
+        "Schuhweite": "Standard",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Stoff",
+        "Jahreszeit": "Sommer",
+        "Ursprungsland": "Belgien"
+      }
+    }
+  }
+}

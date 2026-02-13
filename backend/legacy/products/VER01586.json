@@ -1,0 +1,179 @@
+{
+  "VER01586": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708179",
+      "ISIN": "",
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": "1.67",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "2.17"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Donna's",
+      "Color": "Marinenblau",
+      "Size": "58"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Badeanzug hat einen klassischen Schnitt mit verstellbaren Trägern. Er ist aus einem elastischen Material gefertigt, das für Komfort und Bewegungsfreiheit sorgt. Die Innenausstattung ist schwarz, was einen schönen Kontrast zur marinenblauen Außenseite bietet.",
+      "Keywords": "Badeanzug",
+      "Materials": "82% Nylon 18% Spandex"
+    },
+    "OP": {
+      "OP": "22"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 19,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01586 (1).jpg"
+        },
+        {
+          "filename": "VER01586 (10).jpg"
+        },
+        {
+          "filename": "VER01586 (11).jpg"
+        },
+        {
+          "filename": "VER01586 (12).jpg"
+        },
+        {
+          "filename": "VER01586 (13).jpg"
+        },
+        {
+          "filename": "VER01586 (14).jpg"
+        },
+        {
+          "filename": "VER01586 (15).jpg"
+        },
+        {
+          "filename": "VER01586 (16).jpg"
+        },
+        {
+          "filename": "VER01586 (17).jpg"
+        },
+        {
+          "filename": "VER01586 (18).jpg"
+        },
+        {
+          "filename": "VER01586 (2).jpg"
+        },
+        {
+          "filename": "VER01586 (3).jpg"
+        },
+        {
+          "filename": "VER01586 (4).jpg"
+        },
+        {
+          "filename": "VER01586 (5).jpg"
+        },
+        {
+          "filename": "VER01586 (6).jpg"
+        },
+        {
+          "filename": "VER01586 (6)_wb.jpg"
+        },
+        {
+          "filename": "VER01586 (7).jpg"
+        },
+        {
+          "filename": "VER01586 (8).jpg"
+        },
+        {
+          "filename": "VER01586 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01586 (10).jpg"
+        },
+        {
+          "filename": "VER01586 (18).jpg"
+        },
+        {
+          "filename": "VER01586 (1).jpg"
+        },
+        {
+          "filename": "VER01586 (13).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01586 (10).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KC0AAeSwJnZpjllD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01586 (12).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ha4AAeSw~KBpjllI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01586 (16).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dU8AAeSwr35pjllL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01586 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dtAAAeSwemZpjllN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01586 (18).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6r8AAeSwVrFpjllQ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Donna's",
+        "Produktart": "Einteiler",
+        "Größe": "58",
+        "Abteilung": "Damen",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Material": "82% Nylon, 18% Spandex",
+        "Textilpflege": "Maschinenwäsche",
+        "Ursprungsland": "PRC"
+      }
+    }
+  }
+}

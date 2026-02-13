@@ -1,0 +1,135 @@
+{
+  "P0010414": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "NBWJL2034 LIME CREAM 38"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Damen/Jacken & Westen",
+      "eBay Category ID": "181365"
+    },
+    "EAN": {
+      "EAN": "8592502401864"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nordblanc",
+      "Color": "Gelb",
+      "Size": 38
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Damen-Daunenweste von Nordblanc in Limettengrün mit weißem Reißverschluss. Gefüllt mit 90 % Daunen und 10 % Federn für optimale Wärmeisolierung. Ideal als isolierende Schicht im Alltag oder für Outdoor-Aktivitäten.",
+      "Keywords": "NBWJL2034 Daunenweste",
+      "Materials": "Obermaterial (Shell): 100 % Polyamid\nFutter (Lining): 100 % Polyester\nFüllung (Padding): 90 % Entendaunen, 10 % Federn"
+    },
+    "OP": {
+      "OP": "95.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250529_154336366.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154400089.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154407671.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154422747.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154432942.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250529_154336366.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154400089.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154407671.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154432942.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250529_154336366.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lKMAAeSwmhtpg-XD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154422747.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/n5sAAeSwhMVpg-XG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154400089.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/z9cAAeSw5B9pg-XI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154407671.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kRUAAeSwRUxpg-XN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154432942.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ywgAAeSweLhpg-XQ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "NORD BLANC"
+      },
+      "optional": {
+        "Größe": "38",
+        "Material": "100% Polyester",
+        "Farbe": "Gelb",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    }
+  }
+}

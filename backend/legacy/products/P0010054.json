@@ -1,0 +1,184 @@
+{
+  "P0010054": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2250REDDIAMXL003",
+      "Supplier Title": "NBBMU2250 RED DIAMOND XL"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Herren/Hosen & Leggings",
+      "eBay Category ID": "59347"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Rot",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Funktionale Herren-Unterhose in langer Form mit elastischem Bund und atmungsaktivem Material, ideal für Wintersport und Outdoor-Aktivitäten.",
+      "Keywords": "NBBMU2250 Thermohose",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 014"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_165455806.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165508462.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165521547.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165528869.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165546339.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165557166.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165603640.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165659022.jpg"
+        },
+        {
+          "filename": "PXL_20250526_170256181.jpg"
+        },
+        {
+          "filename": "PXL_20250526_170847189.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_165455806.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165659022.jpg"
+        },
+        {
+          "filename": "PXL_20250526_170847189.jpg"
+        },
+        {
+          "filename": "PXL_20250526_165508462.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250526_165455806.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/W9IAAeSwNTtphSiR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165659022.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sbYAAeSw9TtphSiU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165508462.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mhwAAeSw-vpphSiZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165521547.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/u1cAAeSwFLVphSif/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165528869.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EL4AAeSwUUNphSii/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165546339.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EzMAAeSwUH5phSil/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165557166.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DwUAAeSwstRphSip/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_165603640.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/E9cAAeSwJilphSiu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_170847189.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b70AAeSwAlVphSix/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250526_170256181.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nPUAAeSw9aBphSi4/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Stil": "Jogginghose",
+        "Marke": "Nordblanc",
+        "Größe": "XL",
+        "Farbe": "Rot",
+        "Produktart": "Hosen",
+        "Abteilung": "Herren"
+      },
+      "optional": {
+        "Aktivität": "Fitnessstudio & Training",
+        "Material": "100% Polyester",
+        "Anlass": "Sport",
+        "Verschluss": "Zugbandverschluss",
+        "Größenkategorie": "Normalgröße",
+        "Besonderheiten": "Feuchtigkeitsabführend",
+        "Jahreszeit": "Herbst",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}

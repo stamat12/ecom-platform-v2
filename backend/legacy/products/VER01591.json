@@ -1,0 +1,166 @@
+{
+  "VER01591": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708204",
+      "ISIN": "",
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": "0.83",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "1.33"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Katia Swimwear",
+      "Color": "Schwarz",
+      "Size": "54"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Badeanzug hat ein florales Muster in Weiß auf schwarzem Hintergrund. Er verfügt über verstellbare Träger und eine komfortable Passform. Ideal für den Strand oder das Schwimmbad.",
+      "Keywords": "Einteiliger Badeanzug",
+      "Materials": "82% Polyamide; 18% Elastane"
+    },
+    "OP": {
+      "OP": "22"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01591 (1).jpg"
+        },
+        {
+          "filename": "VER01591 (2).jpg"
+        },
+        {
+          "filename": "VER01591 (3).jpg"
+        },
+        {
+          "filename": "VER01591 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01591 (4).jpg"
+        },
+        {
+          "filename": "VER01591 (5).jpg"
+        },
+        {
+          "filename": "VER01591 (6).jpg"
+        },
+        {
+          "filename": "VER01591 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01591 (3).jpg"
+        },
+        {
+          "filename": "VER01591 (5).jpg"
+        },
+        {
+          "filename": "VER01591 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01591 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/a3gAAeSwzMJpjltX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01591 (3)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RyEAAeSwLYRpjltZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01591 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TZEAAeSwLb5pjlte/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01591 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gxwAAeSwpZRpjltk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01591 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WF0AAeSwWklpjltn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01591 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/haUAAeSwS~5pjlts/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Schwarz",
+        "Größe": "54",
+        "Marke": "KATIA",
+        "Produktart": "Einteiler",
+        "Abteilung": "Damen"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "",
+        "Material": "Polyamid, Elasthan",
+        "Charakter": "",
+        "Muster": "Blumen",
+        "Vintage": "",
+        "Größenkategorie": "",
+        "Gewebeart": "",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "China",
+        "Besonderheiten": "",
+        "Aktivität": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "Nein",
+        "Herstellernummer": "DY1821",
+        "Modell": "",
+        "Anleitung für Personalisierung": "",
+        "Träger-/Riemenart": "Breite Träger",
+        "Anzahl der Teile": "1-teilig",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    }
+  }
+}

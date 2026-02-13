@@ -132,6 +132,57 @@ export default function SkuBatchPage() {
     }
   };
 
+  const handleBulkGenerateMissingJson = async () => {
+    const selected = Array.from(selectedSkusForEnrichment);
+    if (selected.length === 0) {
+      alert("No SKUs selected");
+      return;
+    }
+
+    const targets = selected.filter((sku) => jsonStatus[sku] === false);
+    if (targets.length === 0) {
+      alert("All selected SKUs already have JSON");
+      return;
+    }
+
+    setGeneratingJson((prev) => {
+      const next = { ...prev };
+      targets.forEach((sku) => {
+        next[sku] = true;
+      });
+      return next;
+    });
+
+    const results = await Promise.all(
+      targets.map(async (sku) => {
+        try {
+          const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/json/generate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({}),
+          });
+          const result = await res.json();
+          if (result.success) {
+            setJsonStatus((prev) => ({ ...prev, [sku]: true }));
+            return { sku, success: true };
+          }
+          return { sku, success: false, message: result.message || "Failed to create JSON" };
+        } catch (e) {
+          return { sku, success: false, message: e.message };
+        } finally {
+          setGeneratingJson((prev) => ({ ...prev, [sku]: false }));
+        }
+      })
+    );
+
+    const failed = results.filter((r) => !r.success);
+    if (failed.length > 0) {
+      alert(`Generated JSON for ${results.length - failed.length}/${results.length}. Failed: ${failed.length}`);
+    } else {
+      alert(`Generated JSON for ${results.length} SKU(s).`);
+    }
+  };
+
   const handleClassifyImages = async (sku, classificationType) => {
     const filenames = selectedImages[sku] || [];
     if (filenames.length === 0) {
@@ -970,6 +1021,71 @@ export default function SkuBatchPage() {
           }}
         >
           {(selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
+        </button>
+        <button
+          onClick={handleBulkGenerateMissingJson}
+          disabled={selectedSkusForEnrichment.size === 0}
+          style={{
+            padding: "6px 12px",
+            fontSize: 13,
+            background: selectedSkusForEnrichment.size === 0 ? "#e0e0e0" : "#9c27b0",
+            color: selectedSkusForEnrichment.size === 0 ? "#666" : "white",
+            border: "none",
+            borderRadius: 4,
+            cursor: selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
+            fontWeight: "bold",
+          }}
+        >
+          {(() => {
+            const missingCount = Array.from(selectedSkusForEnrichment).filter(
+              (sku) => jsonStatus[sku] === false
+            ).length;
+            return missingCount > 0
+              ? `Gen JSON (${missingCount} missing)`
+              : "Gen JSON (missing)";
+          })()}
+        </button>
+        <button
+          onClick={() => {
+            // Calculate total available images
+            const allImages = {};
+            items.forEach(item => {
+              if (item.data && item.data.images) {
+                allImages[item.sku] = item.data.images.map(img => img.filename);
+              }
+            });
+            
+            // Check if all images are selected
+            const currentTotal = Object.values(selectedImages).reduce((sum, files) => sum + files.length, 0);
+            const maxTotal = Object.values(allImages).reduce((sum, files) => sum + files.length, 0);
+            const allSelected = currentTotal === maxTotal && maxTotal > 0;
+            
+            if (allSelected) {
+              // Deselect all
+              setSelectedImages({});
+            } else {
+              // Select all
+              setSelectedImages(allImages);
+            }
+          }}
+          style={{
+            padding: "6px 12px",
+            fontSize: 13,
+            background: totalSelectedImages > 0 ? "#2196F3" : "#e0e0e0",
+            color: totalSelectedImages > 0 ? "white" : "#666",
+            border: "none",
+            borderRadius: 4,
+            cursor: "pointer",
+            fontWeight: "bold",
+          }}
+        >
+          {(() => {
+            const maxTotal = items.reduce((sum, item) => 
+              sum + (item.data?.images?.length || 0), 0
+            );
+            const allSelected = totalSelectedImages === maxTotal && maxTotal > 0;
+            return allSelected ? "✓ Deselect All Images" : "Select All Images";
+          })()}
         </button>
       </div>
 
@@ -1976,29 +2092,56 @@ export default function SkuBatchPage() {
                                       )}
                                       {ebayEditingFields[sku] ? (
                                         fieldOptions && fieldOptions.length > 0 ? (
-                                          <select
-                                            value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
-                                            onChange={(e) => setEbayEditedFields(prev => ({
-                                              ...prev,
-                                              [sku]: {
-                                                ...(prev[sku] || {}),
-                                                required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
-                                              }
-                                            }))}
-                                            style={{
-                                              width: "100%",
-                                              padding: "4px 6px",
-                                              fontSize: 9,
-                                              border: "1px solid #d32f2f",
-                                              borderRadius: 3,
-                                              fontFamily: "monospace"
-                                            }}
-                                          >
-                                            <option value="">-- Select --</option>
-                                            {fieldOptions.map(opt => (
-                                              <option key={opt} value={opt}>{opt}</option>
-                                            ))}
-                                          </select>
+                                          <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                                            <select
+                                              value={(() => {
+                                                const currentVal = ebayEditedFields[sku]?.required?.hasOwnProperty(name)
+                                                  ? ebayEditedFields[sku]?.required?.[name]
+                                                  : (fieldValue ?? "");
+                                                return fieldOptions.includes(currentVal) ? currentVal : "";
+                                              })()}
+                                              onChange={(e) => setEbayEditedFields(prev => ({
+                                                ...prev,
+                                                [sku]: {
+                                                  ...(prev[sku] || {}),
+                                                  required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                                }
+                                              }))}
+                                              style={{
+                                                width: "45%",
+                                                padding: "4px 6px",
+                                                fontSize: 9,
+                                                border: "1px solid #d32f2f",
+                                                borderRadius: 3,
+                                                fontFamily: "monospace"
+                                              }}
+                                            >
+                                              <option value="">-- Custom --</option>
+                                              {fieldOptions.map(opt => (
+                                                <option key={opt} value={opt}>{opt}</option>
+                                              ))}
+                                            </select>
+                                            <input
+                                              type="text"
+                                              value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
+                                              onChange={(e) => setEbayEditedFields(prev => ({
+                                                ...prev,
+                                                [sku]: {
+                                                  ...(prev[sku] || {}),
+                                                  required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                                }
+                                              }))}
+                                              placeholder="Custom value"
+                                              style={{
+                                                width: "55%",
+                                                padding: "4px 6px",
+                                                fontSize: 9,
+                                                border: "1px solid #d32f2f",
+                                                borderRadius: 3,
+                                                fontFamily: "monospace"
+                                              }}
+                                            />
+                                          </div>
                                         ) : (
                                           <input
                                             type="text"
@@ -2049,29 +2192,56 @@ export default function SkuBatchPage() {
                                       )}
                                       {ebayEditingFields[sku] ? (
                                         fieldOptions && fieldOptions.length > 0 ? (
-                                          <select
-                                            value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
-                                            onChange={(e) => setEbayEditedFields(prev => ({
-                                              ...prev,
-                                              [sku]: {
-                                                ...(prev[sku] || {}),
-                                                optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
-                                              }
-                                            }))}
-                                            style={{
-                                              width: "100%",
-                                              padding: "4px 6px",
-                                              fontSize: 9,
-                                              border: "1px solid #1976d2",
-                                              borderRadius: 3,
-                                              fontFamily: "monospace"
-                                            }}
-                                          >
-                                            <option value="">-- Select --</option>
-                                            {fieldOptions.map(opt => (
-                                              <option key={opt} value={opt}>{opt}</option>
-                                            ))}
-                                          </select>
+                                          <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                                            <select
+                                              value={(() => {
+                                                const currentVal = ebayEditedFields[sku]?.optional?.hasOwnProperty(name)
+                                                  ? ebayEditedFields[sku]?.optional?.[name]
+                                                  : (fieldValue ?? "");
+                                                return fieldOptions.includes(currentVal) ? currentVal : "";
+                                              })()}
+                                              onChange={(e) => setEbayEditedFields(prev => ({
+                                                ...prev,
+                                                [sku]: {
+                                                  ...(prev[sku] || {}),
+                                                  optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                                }
+                                              }))}
+                                              style={{
+                                                width: "45%",
+                                                padding: "4px 6px",
+                                                fontSize: 9,
+                                                border: "1px solid #1976d2",
+                                                borderRadius: 3,
+                                                fontFamily: "monospace"
+                                              }}
+                                            >
+                                              <option value="">-- Custom --</option>
+                                              {fieldOptions.map(opt => (
+                                                <option key={opt} value={opt}>{opt}</option>
+                                              ))}
+                                            </select>
+                                            <input
+                                              type="text"
+                                              value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
+                                              onChange={(e) => setEbayEditedFields(prev => ({
+                                                ...prev,
+                                                [sku]: {
+                                                  ...(prev[sku] || {}),
+                                                  optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                                }
+                                              }))}
+                                              placeholder="Custom value"
+                                              style={{
+                                                width: "55%",
+                                                padding: "4px 6px",
+                                                fontSize: 9,
+                                                border: "1px solid #1976d2",
+                                                borderRadius: 3,
+                                                fontFamily: "monospace"
+                                              }}
+                                            />
+                                          </div>
                                         ) : (
                                           <input
                                             type="text"

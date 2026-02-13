@@ -1,0 +1,163 @@
+{
+  "P0010410": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "NBWJL2034 PURE WHITE 40"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Damen/Jacken & Westen",
+      "eBay Category ID": "181365"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nordblanc",
+      "Color": "Weiß",
+      "Size": 40
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Damen-Daunenweste von Nordblanc. Gefüllt mit 90 % Daunen und 10 % Federn für optimale Wärmeisolierung. Ideal als isolierende Schicht im Alltag oder für Outdoor-Aktivitäten.",
+      "Keywords": "NBWJL2034 Daunenweste",
+      "Materials": "Obermaterial (Shell): 100 % Polyamid\nFutter (Lining): 100 % Polyester\nFüllung (Padding): 90 % Entendaunen, 10 % Federn"
+    },
+    "OP": {
+      "OP": 95.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250529_153950352.jpg"
+        },
+        {
+          "filename": "PXL_20250529_153959148.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154001980.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154012900.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154037060.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154039424.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154045064.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154057681.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250529_153950352.jpg"
+        },
+        {
+          "filename": "PXL_20250529_153959148.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154001980.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154037060.jpg"
+        },
+        {
+          "filename": "PXL_20250529_154039424.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250529_153950352.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l70AAeSwrHtpg-QB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154057681.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ry8AAeSwzdNpg-QE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_153959148.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/mikAAeSw5Ktpg-QH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154001980.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mXkAAeSwN8Npg-QK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154012900.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZlgAAeSw3MRpg-QN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154037060.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mtkAAeSwB6dpg-QQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154039424.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/u6IAAeSwNqNpg-QT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250529_154045064.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dxUAAeSwF6Jpg-QW/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "NORD BLANC"
+      },
+      "optional": {
+        "Größe": "40",
+        "Material": "100% Polyamid",
+        "Farbe": "Weiß",
+        "Ursprungsland": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": ""
+      }
+    }
+  }
+}

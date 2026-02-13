@@ -1,0 +1,190 @@
+{
+  "VER01580": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": "689226",
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "708089",
+      "ISIN": "",
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": "1.67",
+      "Shipping Net": "0.5",
+      "Total Cost Net": "2.17"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Pink Intimo",
+      "Color": "Mehrfarbig",
+      "Size": "52"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Badeanzug hat ein florales Muster in Schwarz und Weiß. Er besteht aus einem Oberteil mit verstellbaren Trägern und einem passenden Unterteil. Die Materialien sind elastisch und bieten guten Tragekomfort.",
+      "Keywords": "Badeanzug",
+      "Materials": "82% Nylon 18% Elasthan"
+    },
+    "OP": {
+      "OP": "22"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 18,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER01580 (1).jpg"
+        },
+        {
+          "filename": "VER01580 (10).jpg"
+        },
+        {
+          "filename": "VER01580 (11).jpg"
+        },
+        {
+          "filename": "VER01580 (12).jpg"
+        },
+        {
+          "filename": "VER01580 (13).jpg"
+        },
+        {
+          "filename": "VER01580 (14).jpg"
+        },
+        {
+          "filename": "VER01580 (15).jpg"
+        },
+        {
+          "filename": "VER01580 (16).jpg"
+        },
+        {
+          "filename": "VER01580 (17).jpg"
+        },
+        {
+          "filename": "VER01580 (2).jpg"
+        },
+        {
+          "filename": "VER01580 (3).jpg"
+        },
+        {
+          "filename": "VER01580 (4).jpg"
+        },
+        {
+          "filename": "VER01580 (5).jpg"
+        },
+        {
+          "filename": "VER01580 (5)_wb.jpg"
+        },
+        {
+          "filename": "VER01580 (6).jpg"
+        },
+        {
+          "filename": "VER01580 (7).jpg"
+        },
+        {
+          "filename": "VER01580 (8).jpg"
+        },
+        {
+          "filename": "VER01580 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER01580 (16).jpg"
+        },
+        {
+          "filename": "VER01580 (6).jpg"
+        },
+        {
+          "filename": "VER01580 (7).jpg"
+        },
+        {
+          "filename": "VER01580 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01580 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YcUAAeSwY6Bpjlan/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01580 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bbcAAeSwtMZpjlar/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01580 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PPAAAeSw5slpjlav/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01580 (16).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PhQAAeSwhA5pjlay/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER01580 (15).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cPcAAeSwzGxpjla1/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Mehrfarbig",
+        "Größe": "54",
+        "Marke": "Pink Intimo",
+        "Produktart": "Bikini"
+      },
+      "optional": {
+        "Schwimmunterteil-Stil": "Badeslip",
+        "Abteilung": "Damen",
+        "Material": "82% Nylon, 18% Elasthan",
+        "Charakter": "",
+        "Muster": "Blumen",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Gewebeart": "",
+        "Thema": "",
+        "Futtermaterial": "",
+        "Ursprungsland": "P.R.C",
+        "Besonderheiten": "Abnehmbare Pads",
+        "Aktivität": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "Nein",
+        "Herstellernummer": "ART:TT007",
+        "Modell": "",
+        "Anleitung für Personalisierung": ""
+      }
+    }
+  }
+}

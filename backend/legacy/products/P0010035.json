@@ -1,0 +1,119 @@
+{
+  "P0010035": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2245NAMBLUEXS001",
+      "Supplier Title": "NBBMU2245 NAMIBIA BLUE XS"
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.16,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": 8592502358762.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Blau",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichtes, atmungsaktives Funktionsshirt mit kurzen Ärmeln. Ideal für Sport, Outdoor und Freizeit. Mit DRYFOR®-Technologie für optimalen Feuchtigkeitstransport.",
+      "Keywords": "NBBMU2245 Outdoor Shirt Dryfor",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 009"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250526_174956859.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175027032.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175041740.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175204567.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175459627.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175520904.jpg"
+        }
+      ],
+      "enhanced": []
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nordblanc",
+        "Abteilung": "Herren",
+        "Größe": "XS",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Produktart": "T-Shirt",
+        "Thema": "",
+        "Charakter": "",
+        "Ausschnitt": "",
+        "Material": "100% Polyester",
+        "Ärmellänge": "Kurzarm",
+        "Charakter Familie": "",
+        "Besonderheiten": "Atmungsaktiv",
+        "Passform": "Regular",
+        "Muster": "",
+        "Vintage": "Nein",
+        "Größenkategorie": "",
+        "Ursprungsland": "EU",
+        "Akzente": "",
+        "Produktlinie": "",
+        "Gewebeart": "",
+        "Jahreszeit": "",
+        "Personalisieren": "",
+        "Handgefertigt": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Modell": "Nordblanc NBM-2243",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Herstellungsjahr": "",
+        "Maßeinheit": ""
+      }
+    }
+  }
+}

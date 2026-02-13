@@ -1,0 +1,128 @@
+{
+  "VER02127": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "25102425",
+      "Invoice Date": "2025-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "863427",
+      "ISIN": "",
+      "Supplier Title": "Fabletics zaylee funnel neck Tunic Größe L"
+    },
+    "Price Data": {
+      "Price Net": "15.0",
+      "Shipping Net": "0.39",
+      "Total Cost Net": "15.39"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155226"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Fabletics",
+      "Color": "Weiß",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tunika hat einen hohen Kragen und lange Ärmel. Sie ist aus einem weichen, bequemen Material gefertigt. Ideal für sportliche Aktivitäten oder entspannte Tage.",
+      "Keywords": "Zaylee Funnel Neck Tunic Damen",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "89,95"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02127 (1).jpg"
+        },
+        {
+          "filename": "VER02127 (10).jpg"
+        },
+        {
+          "filename": "VER02127 (11).jpg"
+        },
+        {
+          "filename": "VER02127 (2).jpg"
+        },
+        {
+          "filename": "VER02127 (3).jpg"
+        },
+        {
+          "filename": "VER02127 (4).jpg"
+        },
+        {
+          "filename": "VER02127 (5).jpg"
+        },
+        {
+          "filename": "VER02127 (6).jpg"
+        },
+        {
+          "filename": "VER02127 (7).jpg"
+        },
+        {
+          "filename": "VER02127 (8).jpg"
+        },
+        {
+          "filename": "VER02127 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02127 (1).jpg"
+        },
+        {
+          "filename": "VER02127 (5).jpg"
+        },
+        {
+          "filename": "VER02127 (3).jpg"
+        },
+        {
+          "filename": "VER02127 (11).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Damen",
+        "Farbe": "Elfenbeinfarben",
+        "Größe": "L",
+        "Marke": "FABLETICS",
+        "Produktart": "Kapuzenpullover",
+        "Stil": "Pullover"
+      },
+      "optional": {
+        "Material": "100% Baumwolle",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}
