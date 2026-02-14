@@ -2,51 +2,9 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [
-        "SKU (Old)",
-        "Status",
-        "Folder Images",
-        "Sold",
-        "Lager",
-        "Ebay Listing",
-        "Vinted",
-        "Willhaben",
-        "Supplier Title",
-        "Json",
-        "Category"
-      ],
-      "column_filters": {
-        "Sold": [
-          "No"
-        ],
-        "Lager": [
-          "Tausch",
-          "Geschenk Papa",
-          "Mama Geschenk",
-          "Geschenk Mama",
-          "Defekt",
-          "Sliven",
-          "Stamen",
-          "Verloren",
-          "Recycled"
-        ],
-        "Folder Images": {
-          "min": "1",
-          "max": ""
-        },
-        "SKU (Old)": "ver",
-        "Ebay Listing": "false",
-        "Supplier Title": "",
-        "Images": {
-          "min": "",
-          "max": ""
-        }
-      },
-      "filter_mode": {
-        "Lager": "exclude",
-        "Supplier Title": "exclude",
-        "Images": "exclude"
-      },
+      "selected_columns": [],
+      "column_filters": {},
+      "filter_mode": {},
       "page_size": 50,
       "column_widths": {},
       "emptyFilters": {}

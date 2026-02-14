@@ -165,8 +165,8 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
                 col_idx = headers[col_name]
                 current_cell = ws.cell(row=row_idx, column=col_idx)
                 current_value = current_cell.value
-                    if col_name == "Status" and str(current_value).strip() == "OK":
-                        continue
+                if col_name == "Status" and str(current_value).strip() == "OK":
+                    continue
                 if col_name not in db_df.columns:
                     continue
                 new_value = db_row.get(col_name)
