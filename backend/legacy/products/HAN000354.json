@@ -51,12 +51,10 @@
       "summary": {
         "has_stock": false,
         "has_phone": true,
-        "has_enhanced": false,
+        "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 78,
-        "count_enhanced": 0,
-        "has_main_images": true,
-        "count_main_images": 4
+        "count_enhanced": 1
       },
       "stock": [],
       "phone": [
@@ -295,7 +293,15 @@
           "filename": "HAN000354 (9).jpg"
         }
       ],
-      "enhanced": [],
+      "enhanced": [
+        {
+          "filename": "prompt 1_real_HAN000354 (2)_wb_1_upscaled_4x.jpg",
+          "source": "HAN000354 (2)_wb.jpg",
+          "prompt": "prompt 1",
+          "generated": true,
+          "upscaled": true
+        }
+      ],
       "main_images": [
         {
           "filename": "HAN000354 (9) - Kopie.jpg"

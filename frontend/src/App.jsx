@@ -5,6 +5,7 @@ import SkuDetailPage from "./pages/SkuDetailPage.jsx";
 import SkuBatchPage from "./pages/SkuBatchPage.jsx";
 import DbToExcelPage from "./pages/DbToExcelPage.jsx";
 import CleanupDatabasePage from "./pages/CleanupDatabasePage.jsx";
+import PromptManagerPage from "./pages/PromptManagerPage.jsx";
 
 export default function App() {
   return (
@@ -23,6 +24,11 @@ export default function App() {
             🧹 Cleanup DB
           </span>
         </Link>
+        <Link to="/prompts" style={{ textDecoration: "none" }}>
+          <span style={{ padding: "8px 16px", backgroundColor: "#6c757d", color: "white", borderRadius: "4px", fontSize: "14px" }}>
+            Prompts
+          </span>
+        </Link>
         <div style={{ marginLeft: "auto", color: "#666" }}>FastAPI + React (Vite) + eBay Integration</div>
       </header>
 
@@ -33,6 +39,7 @@ export default function App() {
         <Route path="/skus/:sku" element={<SkuDetailPage />} />
         <Route path="/db-to-excel" element={<DbToExcelPage />} />
         <Route path="/cleanup-db" element={<CleanupDatabasePage />} />
+        <Route path="/prompts" element={<PromptManagerPage />} />
       </Routes>
     </div>
   );

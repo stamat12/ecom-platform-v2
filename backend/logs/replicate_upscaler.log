@@ -1,0 +1,903 @@
+2026-02-15 00:25:51,430 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:25:51,430 INFO app.services.replicate_upscaler:     Current size: 1.19 MB, Target: 8.00 MB
+2026-02-15 00:25:51,430 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:25:51,431 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:25:51,431 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (1)_1.jpg
+2026-02-15 00:25:51,431 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:25:51,432 INFO app.services.replicate_upscaler: 📁 Input file: 1.19 MB
+2026-02-15 00:25:51,432 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:25:51,432 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:25:51,433 INFO app.services.replicate_upscaler: ✓ Image read: 1252341 bytes
+2026-02-15 00:25:51,434 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:25:51,440 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1669788 chars), MIME: image/jpeg
+2026-02-15 00:25:51,442 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:25:51,442 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:25:51,442 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:25:51,442 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed498d7a869d1fd53adb83a001fd51b967f1d3727db...
+2026-02-15 00:25:54,972 INFO app.services.replicate_upscaler: 📥 API Response status: 422
+2026-02-15 00:25:54,976 ERROR app.services.replicate_upscaler: ❌ Replicate API error 422: {"title":"Invalid version or not permitted","detail":"The specified version does not exist (or perhaps you don't have permission to use it?)","status":422}
+
+2026-02-15 00:25:54,978 WARNING app.services.replicate_upscaler:     ⚠️  4x upscaling failed: ❌ Replicate API error 422: {"title":"Invalid version or not permitted","detail":"The specified version does not exist (or perhaps you don't have permission to use it?)","status":422}
+
+2026-02-15 00:25:54,978 WARNING app.services.replicate_upscaler:     🔄 Fallback: Attempting 2x upscaling...
+2026-02-15 00:25:54,978 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:25:54,978 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (1)_1.jpg
+2026-02-15 00:25:54,978 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:25:54,978 INFO app.services.replicate_upscaler: 📁 Input file: 1.19 MB
+2026-02-15 00:25:54,979 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:25:54,979 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:25:54,979 INFO app.services.replicate_upscaler: ✓ Image read: 1252341 bytes
+2026-02-15 00:25:54,979 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:25:54,984 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1669788 chars), MIME: image/jpeg
+2026-02-15 00:25:54,984 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:25:54,985 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:25:54,985 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 00:25:54,985 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed498d7a869d1fd53adb83a001fd51b967f1d3727db...
+2026-02-15 00:25:57,897 INFO app.services.replicate_upscaler: 📥 API Response status: 429
+2026-02-15 00:25:57,899 ERROR app.services.replicate_upscaler: ❌ Replicate API error 429: {"detail":"Request was throttled. Your rate limit for creating predictions is reduced to 6 requests per minute with a burst of 1 requests while you have less than $5.0 in credit. Your rate limit resets in ~7s.","status":429,"retry_after":7}
+
+2026-02-15 00:25:57,902 ERROR app.services.replicate_upscaler:     ❌ All upscaling attempts failed: ❌ Replicate API error 429: {"detail":"Request was throttled. Your rate limit for creating predictions is reduced to 6 requests per minute with a burst of 1 requests while you have less than $5.0 in credit. Your rate limit resets in ~7s.","status":429,"retry_after":7}
+
+2026-02-15 00:31:41,449 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:31:41,450 INFO app.services.replicate_upscaler:     Current size: 1.10 MB, Target: 8.00 MB
+2026-02-15 00:31:41,450 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:31:41,450 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:31:41,451 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (2)_1.jpg
+2026-02-15 00:31:41,451 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:31:41,451 INFO app.services.replicate_upscaler: 📁 Input file: 1.10 MB
+2026-02-15 00:31:41,453 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:31:41,453 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:31:41,454 INFO app.services.replicate_upscaler: ✓ Image read: 1151042 bytes
+2026-02-15 00:31:41,454 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:31:41,458 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1534724 chars), MIME: image/jpeg
+2026-02-15 00:31:41,459 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:31:41,459 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:31:41,460 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:31:41,460 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:31:44,497 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:31:44,497 INFO app.services.replicate_upscaler:    Job ID: 41n3n6zfyxrg80cwbszbp9wf0c
+2026-02-15 00:31:44,497 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:31:44,498 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:31:46,343 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 00:31:54,791 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 00:31:54,791 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 00:31:54,791 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/SjjcH090UnqsLB8nAJA5fbgNIuYcHJ4ZXhQDENDtvutzv1DLA/output.png...
+2026-02-15 00:31:54,792 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 00:31:58,803 INFO app.services.replicate_upscaler: ✓ Downloaded: 5539866 bytes (5.28 MB)
+2026-02-15 00:31:58,804 INFO app.services.replicate_upscaler: 💾 Saving to: prompt 1_real_HANVINBM006 (2)_1_upscaled_4x.jpg
+2026-02-15 00:31:58,811 INFO app.services.replicate_upscaler: ✓ Saved successfully: 5.28 MB
+2026-02-15 00:31:58,811 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 00:31:58,811 INFO app.services.replicate_upscaler:    Input:  1.10 MB → Output: 5.28 MB (scale 4x)
+2026-02-15 00:31:58,812 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 00:31:58,818 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 5.28 MB (target: 8.00 MB)
+2026-02-15 00:31:58,818 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 00:31:58,818 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:31:58,818 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (2)_1_upscaled_4x.jpg
+2026-02-15 00:31:58,819 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:31:58,819 INFO app.services.replicate_upscaler: 📁 Input file: 5.28 MB
+2026-02-15 00:31:58,819 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:31:58,819 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:31:58,822 INFO app.services.replicate_upscaler: ✓ Image read: 5539866 bytes
+2026-02-15 00:31:58,823 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:31:58,846 INFO app.services.replicate_upscaler: ✓ Base64 encoded (7386488 chars), MIME: image/jpeg
+2026-02-15 00:31:58,848 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:31:58,849 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:31:58,849 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 00:31:58,849 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:32:07,140 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:32:07,140 INFO app.services.replicate_upscaler:    Job ID: nskvyma75srg80cwbsztjdgkg8
+2026-02-15 00:32:07,140 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:32:07,140 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:32:08,153 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 00:32:08,153 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 00:32:08,154 ERROR app.services.replicate_upscaler:    Full response: {'id': 'nskvyma75srg80cwbsztjdgkg8', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-14T23:32:05.55Z', 'started_at': '2026-02-14T23:32:06.069617915Z', 'completed_at': '2026-02-14T23:32:06.360017455Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/nskvyma75srg80cwbsztjdgkg8/cancel', 'get': 'https://api.replicate.com/v1/predictions/nskvyma75srg80cwbsztjdgkg8', 'stream': 'https://stream.replicate.com/v1/files/fddq-stffuin7m2dkgifezkxpt4anffwiicijjxzcvoiibc5lk3pjifva', 'web': 'https://replicate.com/p/nskvyma75srg80cwbsztjdgkg8'}, 'metrics': {'predict_time': 0.29039956, 'total_time': 0.810017455}}
+2026-02-15 00:32:08,158 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 00:32:08,158 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: prompt 1_real_HANVINBM006 (2)_1_upscaled_4x.jpg (5.28 MB)
+2026-02-15 00:34:15,763 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:34:15,764 INFO app.services.replicate_upscaler:     Current size: 1.26 MB, Target: 8.00 MB
+2026-02-15 00:34:15,764 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:34:15,764 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:34:15,764 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (1)_1.jpg
+2026-02-15 00:34:15,765 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:34:15,766 INFO app.services.replicate_upscaler: 📁 Input file: 1.26 MB
+2026-02-15 00:34:15,766 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:34:15,766 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:34:15,768 INFO app.services.replicate_upscaler: ✓ Image read: 1317261 bytes
+2026-02-15 00:34:15,768 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:34:15,776 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1756348 chars), MIME: image/jpeg
+2026-02-15 00:34:15,777 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:34:15,777 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:34:15,777 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:34:15,778 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:34:19,908 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:34:19,908 INFO app.services.replicate_upscaler:    Job ID: e6d9t8jf4drgc0cwbt0rm5493g
+2026-02-15 00:34:19,909 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:34:19,909 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:34:21,399 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 00:34:28,686 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 00:34:28,686 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 00:34:28,686 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/Fy72eVAFkn3wAqaQTWeLgj3g7xSMmCtnNQ86rpje799HEXPsA/output.png...
+2026-02-15 00:34:28,688 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 00:34:31,741 INFO app.services.replicate_upscaler: ✓ Downloaded: 7260947 bytes (6.92 MB)
+2026-02-15 00:34:31,741 INFO app.services.replicate_upscaler: 💾 Saving to: prompt 1_real_HANVINBM006 (1)_1_upscaled_4x.jpg
+2026-02-15 00:34:31,747 INFO app.services.replicate_upscaler: ✓ Saved successfully: 6.92 MB
+2026-02-15 00:34:31,747 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 00:34:31,747 INFO app.services.replicate_upscaler:    Input:  1.26 MB → Output: 6.92 MB (scale 4x)
+2026-02-15 00:34:31,747 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 00:34:31,753 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 6.92 MB (target: 8.00 MB)
+2026-02-15 00:34:31,753 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 00:34:31,753 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:34:31,753 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM006 (1)_1_upscaled_4x.jpg
+2026-02-15 00:34:31,753 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:34:31,754 INFO app.services.replicate_upscaler: 📁 Input file: 6.92 MB
+2026-02-15 00:34:31,754 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:34:31,754 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:34:31,757 INFO app.services.replicate_upscaler: ✓ Image read: 7260947 bytes
+2026-02-15 00:34:31,757 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:34:31,779 INFO app.services.replicate_upscaler: ✓ Base64 encoded (9681264 chars), MIME: image/jpeg
+2026-02-15 00:34:31,781 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:34:31,781 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:34:31,782 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 00:34:31,782 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:34:47,732 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:34:47,732 INFO app.services.replicate_upscaler:    Job ID: 6ft6w6xvbxrgc0cwbt0t6tmezw
+2026-02-15 00:34:47,733 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:34:47,733 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:34:49,087 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 00:34:51,077 INFO app.services.replicate_upscaler:    [1s] Status: failed
+2026-02-15 00:34:51,077 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 00:34:51,077 ERROR app.services.replicate_upscaler:    Full response: {'id': '6ft6w6xvbxrgc0cwbt0t6tmezw', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-14T23:34:46.367Z', 'started_at': '2026-02-14T23:34:48.558530231Z', 'completed_at': '2026-02-14T23:34:48.950329369Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/6ft6w6xvbxrgc0cwbt0t6tmezw/cancel', 'get': 'https://api.replicate.com/v1/predictions/6ft6w6xvbxrgc0cwbt0t6tmezw', 'stream': 'https://stream.replicate.com/v1/files/fddq-eejit3jvfirrx4scrgeupfggpfzmh2i55dfj3yrihblrvfwjxguq', 'web': 'https://replicate.com/p/6ft6w6xvbxrgc0cwbt0t6tmezw'}, 'metrics': {'predict_time': 0.391799161, 'total_time': 2.583329369}}
+2026-02-15 00:34:51,082 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 00:34:51,083 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: prompt 1_real_HANVINBM006 (1)_1_upscaled_4x.jpg (6.92 MB)
+2026-02-15 00:39:16,121 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:39:16,123 INFO app.services.replicate_upscaler:     Current size: 1.05 MB, Target: 8.00 MB
+2026-02-15 00:39:16,123 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:39:16,124 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:39:16,124 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM008 (2)_1.jpg
+2026-02-15 00:39:16,124 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:39:16,125 INFO app.services.replicate_upscaler: 📁 Input file: 1.05 MB
+2026-02-15 00:39:16,125 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:39:16,125 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:39:16,126 INFO app.services.replicate_upscaler: ✓ Image read: 1101841 bytes
+2026-02-15 00:39:16,127 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:39:16,131 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1469124 chars), MIME: image/jpeg
+2026-02-15 00:39:16,134 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:39:16,134 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:39:16,134 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:39:16,134 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:39:19,501 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:39:19,501 INFO app.services.replicate_upscaler:    Job ID: hmarqq70pdrge0cwbt2tcpxhf0
+2026-02-15 00:39:19,501 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:39:19,501 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:39:20,819 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 00:39:28,948 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 00:39:28,948 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 00:39:28,948 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/o2VNah1eXqxf5EnNve6zMuAUNMUDcgbMBZrSzW9HtCraNXPsA/output.png...
+2026-02-15 00:39:28,948 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 00:39:31,868 INFO app.services.replicate_upscaler: ✓ Downloaded: 3869314 bytes (3.69 MB)
+2026-02-15 00:39:31,868 INFO app.services.replicate_upscaler: 💾 Saving to: prompt 1_real_HANVINBM008 (2)_1_upscaled_4x.jpg
+2026-02-15 00:39:31,873 INFO app.services.replicate_upscaler: ✓ Saved successfully: 3.69 MB
+2026-02-15 00:39:31,874 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 00:39:31,874 INFO app.services.replicate_upscaler:    Input:  1.05 MB → Output: 3.69 MB (scale 4x)
+2026-02-15 00:39:31,874 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 00:39:31,881 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 3.69 MB (target: 8.00 MB)
+2026-02-15 00:39:31,881 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 00:39:31,882 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:39:31,882 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM008 (2)_1_upscaled_4x.jpg
+2026-02-15 00:39:31,882 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:39:31,882 INFO app.services.replicate_upscaler: 📁 Input file: 3.69 MB
+2026-02-15 00:39:31,882 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:39:31,883 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:39:31,884 INFO app.services.replicate_upscaler: ✓ Image read: 3869314 bytes
+2026-02-15 00:39:31,884 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:39:31,899 INFO app.services.replicate_upscaler: ✓ Base64 encoded (5159088 chars), MIME: image/jpeg
+2026-02-15 00:39:31,900 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:39:31,901 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:39:31,901 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 00:39:31,901 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:39:38,705 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:39:38,705 INFO app.services.replicate_upscaler:    Job ID: 5xa7ghsc3srga0cwbt383x9t2m
+2026-02-15 00:39:38,705 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:39:38,705 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:39:40,202 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 00:39:40,203 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 00:39:40,203 ERROR app.services.replicate_upscaler:    Full response: {'id': '5xa7ghsc3srga0cwbt383x9t2m', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-14T23:39:37.374Z', 'started_at': '2026-02-14T23:39:37.729804547Z', 'completed_at': '2026-02-14T23:39:38.042086625Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/5xa7ghsc3srga0cwbt383x9t2m/cancel', 'get': 'https://api.replicate.com/v1/predictions/5xa7ghsc3srga0cwbt383x9t2m', 'stream': 'https://stream.replicate.com/v1/files/fddq-vfaevrihzdc73tlbidtnavzpehhs2oyuio4ht6io5gcomspj3trq', 'web': 'https://replicate.com/p/5xa7ghsc3srga0cwbt383x9t2m'}, 'metrics': {'predict_time': 0.312282105, 'total_time': 0.668086625}}
+2026-02-15 00:39:40,208 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 00:39:40,208 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: prompt 1_real_HANVINBM008 (2)_1_upscaled_4x.jpg (3.69 MB)
+2026-02-15 00:40:41,799 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:40:41,800 INFO app.services.replicate_upscaler:     Current size: 1.02 MB, Target: 8.00 MB
+2026-02-15 00:40:41,800 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:40:41,800 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:40:41,800 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM008 (1)_1.jpg
+2026-02-15 00:40:41,801 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:40:41,801 INFO app.services.replicate_upscaler: 📁 Input file: 1.02 MB
+2026-02-15 00:40:41,802 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:40:41,802 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:40:41,803 INFO app.services.replicate_upscaler: ✓ Image read: 1066074 bytes
+2026-02-15 00:40:41,803 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:40:41,807 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1421432 chars), MIME: image/jpeg
+2026-02-15 00:40:41,809 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:40:41,809 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:40:41,809 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:40:41,809 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:40:44,625 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:40:44,625 INFO app.services.replicate_upscaler:    Job ID: fzveq31dtnrga0cwbt3sq3a3tw
+2026-02-15 00:40:44,626 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:40:44,626 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:40:46,550 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 00:41:02,517 INFO app.services.replicate_upscaler:    [6s] Status: succeeded
+2026-02-15 00:41:02,517 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 00:41:02,517 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/XAc5oM3fYGUdNSRFRSsxpDf8ofPYbY6iTLVcV5TTAZUWQXPsA/output.png...
+2026-02-15 00:41:02,517 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 00:41:04,862 INFO app.services.replicate_upscaler: ✓ Downloaded: 3325214 bytes (3.17 MB)
+2026-02-15 00:41:04,862 INFO app.services.replicate_upscaler: 💾 Saving to: prompt 1_real_HANVINBM008 (1)_1_upscaled_4x.jpg
+2026-02-15 00:41:04,868 INFO app.services.replicate_upscaler: ✓ Saved successfully: 3.17 MB
+2026-02-15 00:41:04,868 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 00:41:04,868 INFO app.services.replicate_upscaler:    Input:  1.02 MB → Output: 3.17 MB (scale 4x)
+2026-02-15 00:41:04,868 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 00:41:04,875 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 3.17 MB (target: 8.00 MB)
+2026-02-15 00:41:04,875 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 00:41:04,875 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:41:04,875 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HANVINBM008 (1)_1_upscaled_4x.jpg
+2026-02-15 00:41:04,875 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:41:04,877 INFO app.services.replicate_upscaler: 📁 Input file: 3.17 MB
+2026-02-15 00:41:04,877 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:41:04,877 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:41:04,879 INFO app.services.replicate_upscaler: ✓ Image read: 3325214 bytes
+2026-02-15 00:41:04,879 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:41:04,892 INFO app.services.replicate_upscaler: ✓ Base64 encoded (4433620 chars), MIME: image/jpeg
+2026-02-15 00:41:04,893 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:41:04,893 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:41:04,893 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 00:41:04,893 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:41:12,669 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:41:12,669 INFO app.services.replicate_upscaler:    Job ID: jcvffmcv7srga0cwbt3rghts2r
+2026-02-15 00:41:12,669 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:41:12,669 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:41:14,213 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 00:41:21,583 INFO app.services.replicate_upscaler:    [3s] Status: failed
+2026-02-15 00:41:21,583 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 00:41:21,583 ERROR app.services.replicate_upscaler:    Full response: {'id': 'jcvffmcv7srga0cwbt3rghts2r', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-14T23:41:11.358Z', 'started_at': '2026-02-14T23:41:17.972818087Z', 'completed_at': '2026-02-14T23:41:18.184988749Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/jcvffmcv7srga0cwbt3rghts2r/cancel', 'get': 'https://api.replicate.com/v1/predictions/jcvffmcv7srga0cwbt3rghts2r', 'stream': 'https://stream.replicate.com/v1/files/fddq-advc7k5zomy5hspqglblbklscv6s35zidwsfcw6hjqbca6zdwfya', 'web': 'https://replicate.com/p/jcvffmcv7srga0cwbt3rghts2r'}, 'metrics': {'predict_time': 0.212170596, 'total_time': 6.826988749}}
+2026-02-15 00:41:21,587 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 00:41:21,587 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: prompt 1_real_HANVINBM008 (1)_1_upscaled_4x.jpg (3.17 MB)
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler:     Current size: 1.28 MB, Target: 8.00 MB
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: prompt 1_real_HAN000354 (2)_wb_1.jpg
+2026-02-15 00:42:07,789 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 00:42:07,790 INFO app.services.replicate_upscaler: 📁 Input file: 1.28 MB
+2026-02-15 00:42:07,790 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 00:42:07,790 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 00:42:07,791 INFO app.services.replicate_upscaler: ✓ Image read: 1346369 bytes
+2026-02-15 00:42:07,791 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 00:42:07,797 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1795160 chars), MIME: image/jpeg
+2026-02-15 00:42:07,797 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 00:42:07,798 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 00:42:07,798 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 00:42:07,798 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 00:42:10,844 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 00:42:10,844 INFO app.services.replicate_upscaler:    Job ID: meqpmabyn1rgc0cwbt48keptxw
+2026-02-15 00:42:10,845 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 00:42:10,845 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 00:42:12,597 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 00:42:32,151 INFO app.services.replicate_upscaler:    [7s] Status: succeeded
+2026-02-15 00:42:32,151 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 00:42:32,151 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/JxYZEGnnl6otM1EbeemakZzmikaf5SgDdynkWGbRdNWLTXPsA/output.png...
+2026-02-15 00:42:32,151 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 00:42:37,001 INFO app.services.replicate_upscaler: ✓ Downloaded: 10176367 bytes (9.70 MB)
+2026-02-15 00:42:37,001 INFO app.services.replicate_upscaler: 💾 Saving to: prompt 1_real_HAN000354 (2)_wb_1_upscaled_4x.jpg
+2026-02-15 00:42:37,008 INFO app.services.replicate_upscaler: ✓ Saved successfully: 9.70 MB
+2026-02-15 00:42:37,008 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 00:42:37,008 INFO app.services.replicate_upscaler:    Input:  1.28 MB → Output: 9.70 MB (scale 4x)
+2026-02-15 00:42:37,008 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 00:42:37,016 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 9.70 MB (target: 8.00 MB)
+2026-02-15 00:42:37,016 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: prompt 1_real_HAN000354 (2)_wb_1_upscaled_4x.jpg (9.70 MB)
+2026-02-15 11:50:25,934 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 11:50:25,936 INFO app.services.replicate_upscaler:     Current size: 1.17 MB, Target: 8.00 MB
+2026-02-15 11:50:25,936 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 11:50:25,936 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 11:50:25,936 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1.jpg
+2026-02-15 11:50:25,937 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 11:50:25,937 INFO app.services.replicate_upscaler: 📁 Input file: 1.17 MB
+2026-02-15 11:50:25,937 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 11:50:25,937 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 11:50:25,938 INFO app.services.replicate_upscaler: ✓ Image read: 1230014 bytes
+2026-02-15 11:50:25,938 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 11:50:25,942 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1640020 chars), MIME: image/jpeg
+2026-02-15 11:50:25,942 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 11:50:25,942 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 11:50:25,944 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 11:50:25,944 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 11:50:29,337 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 11:50:29,338 INFO app.services.replicate_upscaler:    Job ID: c60cstaqbnrgc0cwc3p929y9yg
+2026-02-15 11:50:29,338 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 11:50:29,338 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 11:50:30,682 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 11:50:38,000 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 11:50:38,000 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 11:50:38,000 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/0f7KpSHeJGpaokXmUpip7Qz4HPNGb1kmVwfnqAvhnIV33qPsA/output.png...
+2026-02-15 11:50:38,001 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 11:50:42,039 INFO app.services.replicate_upscaler: ✓ Downloaded: 11253554 bytes (10.73 MB)
+2026-02-15 11:50:42,039 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_4x.jpg
+2026-02-15 11:50:42,046 INFO app.services.replicate_upscaler: ✓ Saved successfully: 10.73 MB
+2026-02-15 11:50:42,046 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 11:50:42,046 INFO app.services.replicate_upscaler:    Input:  1.17 MB → Output: 10.73 MB (scale 4x)
+2026-02-15 11:50:42,046 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 11:50:42,054 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 10.73 MB (target: 8.00 MB)
+2026-02-15 11:50:42,054 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_4x.jpg (10.73 MB)
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler:     Current size: 1.59 MB, Target: 8.00 MB
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM008 (2)_1.jpg
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 11:51:50,942 INFO app.services.replicate_upscaler: 📁 Input file: 1.59 MB
+2026-02-15 11:51:50,943 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 11:51:50,943 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 11:51:50,943 INFO app.services.replicate_upscaler: ✓ Image read: 1664923 bytes
+2026-02-15 11:51:50,943 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 11:51:50,949 INFO app.services.replicate_upscaler: ✓ Base64 encoded (2219900 chars), MIME: image/jpeg
+2026-02-15 11:51:50,950 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 11:51:50,950 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 11:51:50,950 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 11:51:50,950 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 11:51:54,222 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 11:51:54,222 INFO app.services.replicate_upscaler:    Job ID: gs2nvdd3b9rgc0cwc3pt3ntgsc
+2026-02-15 11:51:54,222 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 11:51:54,222 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 11:51:55,553 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 11:52:04,470 INFO app.services.replicate_upscaler:    [4s] Status: succeeded
+2026-02-15 11:52:04,471 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 11:52:04,471 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/NeMm5dceDDveLpmZ6MnfmZoLIvPNhR8IfdwaRxseydecpu6DLA/output.png...
+2026-02-15 11:52:04,471 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 11:52:09,441 INFO app.services.replicate_upscaler: ✓ Downloaded: 14916700 bytes (14.23 MB)
+2026-02-15 11:52:09,441 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM008 (2)_1_upscaled_4x.jpg
+2026-02-15 11:52:09,449 INFO app.services.replicate_upscaler: ✓ Saved successfully: 14.23 MB
+2026-02-15 11:52:09,450 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 11:52:09,450 INFO app.services.replicate_upscaler:    Input:  1.59 MB → Output: 14.23 MB (scale 4x)
+2026-02-15 11:52:09,450 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 11:52:09,455 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 14.23 MB (target: 8.00 MB)
+2026-02-15 11:52:09,455 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM008 (2)_1_upscaled_4x.jpg (14.23 MB)
+2026-02-15 11:56:59,436 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 11:56:59,437 INFO app.services.replicate_upscaler:     Current size: 1.14 MB, Target: 8.00 MB
+2026-02-15 11:56:59,437 INFO app.services.replicate_upscaler: 
+>>> Attempting 4x upscaling...
+2026-02-15 11:56:59,437 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 11:56:59,437 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1.jpg
+2026-02-15 11:56:59,437 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 11:56:59,438 INFO app.services.replicate_upscaler: 📁 Input file: 1.14 MB
+2026-02-15 11:56:59,438 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 11:56:59,439 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 11:56:59,439 INFO app.services.replicate_upscaler: ✓ Image read: 1199697 bytes
+2026-02-15 11:56:59,440 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 11:56:59,444 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1599596 chars), MIME: image/jpeg
+2026-02-15 11:56:59,444 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 11:56:59,445 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 11:56:59,445 INFO app.services.replicate_upscaler:    Scale: 4x
+2026-02-15 11:56:59,445 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 11:57:03,240 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 11:57:03,240 INFO app.services.replicate_upscaler:    Job ID: bp0pm9tt15rga0cwc3s93hpg1c
+2026-02-15 11:57:03,240 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 11:57:03,241 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 11:57:04,771 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 11:57:28,524 INFO app.services.replicate_upscaler:    [10s] Status: processing
+2026-02-15 11:57:37,697 INFO app.services.replicate_upscaler:    [14s] Status: succeeded
+2026-02-15 11:57:37,698 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 11:57:37,698 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/bXrgNBvlTJoLM5dYJSdl9Qbj4q7Z9c8ud4yVn9BXT2RnY9hF/output.png...
+2026-02-15 11:57:37,698 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 11:57:41,496 INFO app.services.replicate_upscaler: ✓ Downloaded: 7249645 bytes (6.91 MB)
+2026-02-15 11:57:41,496 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_4x.jpg
+2026-02-15 11:57:41,502 INFO app.services.replicate_upscaler: ✓ Saved successfully: 6.91 MB
+2026-02-15 11:57:41,503 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 11:57:41,503 INFO app.services.replicate_upscaler:    Input:  1.14 MB → Output: 6.91 MB (scale 4x)
+2026-02-15 11:57:41,503 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 11:57:41,509 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 6.91 MB (target: 8.00 MB)
+2026-02-15 11:57:41,510 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 11:57:41,510 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 11:57:41,510 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_4x.jpg
+2026-02-15 11:57:41,510 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 11:57:41,510 INFO app.services.replicate_upscaler: 📁 Input file: 6.91 MB
+2026-02-15 11:57:41,511 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 11:57:41,511 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 11:57:41,513 INFO app.services.replicate_upscaler: ✓ Image read: 7249645 bytes
+2026-02-15 11:57:41,514 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 11:57:41,542 INFO app.services.replicate_upscaler: ✓ Base64 encoded (9666196 chars), MIME: image/jpeg
+2026-02-15 11:57:41,545 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 11:57:41,545 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 11:57:41,545 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 11:57:41,545 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 11:57:57,687 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 11:57:57,688 INFO app.services.replicate_upscaler:    Job ID: re801pher5rge0cwc3sv2qkm9g
+2026-02-15 11:57:57,688 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 11:57:57,688 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 11:57:58,960 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 11:58:03,658 INFO app.services.replicate_upscaler:    [2s] Status: failed
+2026-02-15 11:58:03,659 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 11:58:03,659 ERROR app.services.replicate_upscaler:    Full response: {'id': 're801pher5rge0cwc3sv2qkm9g', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (4736, 3456, 3) has a total number of pixels 16367616 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T10:57:55.905Z', 'started_at': '2026-02-15T10:58:00.59468102Z', 'completed_at': '2026-02-15T10:58:00.908623583Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/re801pher5rge0cwc3sv2qkm9g/cancel', 'get': 'https://api.replicate.com/v1/predictions/re801pher5rge0cwc3sv2qkm9g', 'stream': 'https://stream.replicate.com/v1/files/fddq-bzrt4scyqrpy4h4p5d3c4enxwv52qlgoxmit66gcidk4qbkpmuha', 'web': 'https://replicate.com/p/re801pher5rge0cwc3sv2qkm9g'}, 'metrics': {'predict_time': 0.313942595, 'total_time': 5.003623583}}
+2026-02-15 11:58:03,667 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 11:58:03,667 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_4x.jpg (6.91 MB)
+2026-02-15 11:59:57,853 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 11:59:57,854 INFO app.services.replicate_upscaler:     Current size: 1.15 MB, Target: 8.00 MB
+2026-02-15 11:59:57,854 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 11:59:57,855 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 11:59:57,855 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_1.jpg
+2026-02-15 11:59:57,855 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 11:59:57,856 INFO app.services.replicate_upscaler: 📁 Input file: 1.15 MB
+2026-02-15 11:59:57,856 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 11:59:57,856 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 11:59:57,857 INFO app.services.replicate_upscaler: ✓ Image read: 1205739 bytes
+2026-02-15 11:59:57,858 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 11:59:57,862 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1607652 chars), MIME: image/jpeg
+2026-02-15 11:59:57,863 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 11:59:57,863 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 11:59:57,864 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 11:59:57,864 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:00:05,888 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:00:05,888 INFO app.services.replicate_upscaler:    Job ID: 4edgg4937srge0cwc3tt0eywm8
+2026-02-15 12:00:05,889 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:00:05,889 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:00:07,364 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 12:00:24,114 INFO app.services.replicate_upscaler:    [7s] Status: succeeded
+2026-02-15 12:00:24,115 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:00:24,115 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/eofCzsTejpFvVp6pK1HL2DWYXCqt5Ei5oDwwK8WOSe3ZUWfwC/output.png...
+2026-02-15 12:00:24,115 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:00:26,294 INFO app.services.replicate_upscaler: ✓ Downloaded: 2284310 bytes (2.18 MB)
+2026-02-15 12:00:26,295 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.jpg
+2026-02-15 12:00:26,299 INFO app.services.replicate_upscaler: ✓ Saved successfully: 2.18 MB
+2026-02-15 12:00:26,300 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:00:26,300 INFO app.services.replicate_upscaler:    Input:  1.15 MB → Output: 2.18 MB (scale 2x)
+2026-02-15 12:00:26,300 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:00:26,307 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 2.18 MB (target: 8.00 MB)
+2026-02-15 12:00:26,307 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 12:00:26,307 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:00:26,307 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.jpg
+2026-02-15 12:00:26,307 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:00:26,308 INFO app.services.replicate_upscaler: 📁 Input file: 2.18 MB
+2026-02-15 12:00:26,308 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:00:26,308 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:00:26,309 INFO app.services.replicate_upscaler: ✓ Image read: 2284310 bytes
+2026-02-15 12:00:26,309 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:00:26,318 INFO app.services.replicate_upscaler: ✓ Base64 encoded (3045748 chars), MIME: image/jpeg
+2026-02-15 12:00:26,319 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:00:26,319 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:00:26,319 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:00:26,320 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:00:30,562 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:00:30,563 INFO app.services.replicate_upscaler:    Job ID: 14hwd0c41nrg80cwc3tvwaaby0
+2026-02-15 12:00:30,563 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:00:30,563 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:00:31,708 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 12:00:31,708 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 12:00:31,708 ERROR app.services.replicate_upscaler:    Full response: {'id': '14hwd0c41nrg80cwc3tvwaaby0', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'image': 'data:image/jpeg;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T11:00:28.813Z', 'started_at': '2026-02-15T11:00:28.993348996Z', 'completed_at': '2026-02-15T11:00:29.097456271Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/14hwd0c41nrg80cwc3tvwaaby0/cancel', 'get': 'https://api.replicate.com/v1/predictions/14hwd0c41nrg80cwc3tvwaaby0', 'stream': 'https://stream.replicate.com/v1/files/fddq-ewveqdpjddz3gnrpne2ocytof3qe4ktcoezje3hx3q6eena7gipq', 'web': 'https://replicate.com/p/14hwd0c41nrg80cwc3tvwaaby0'}, 'metrics': {'predict_time': 0.104107278, 'total_time': 0.284456271}}
+2026-02-15 12:00:31,711 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 12:00:31,711 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.jpg (2.18 MB)
+2026-02-15 12:02:55,196 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 12:02:55,196 INFO app.services.replicate_upscaler:     Current size: 1.13 MB, Target: 8.00 MB
+2026-02-15 12:02:55,197 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 12:02:55,197 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:02:55,197 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1.jpg
+2026-02-15 12:02:55,197 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:02:55,198 INFO app.services.replicate_upscaler: 📁 Input file: 1.13 MB
+2026-02-15 12:02:55,198 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:02:55,198 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:02:55,199 INFO app.services.replicate_upscaler: ✓ Image read: 1184721 bytes
+2026-02-15 12:02:55,200 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:02:55,204 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1579628 chars), MIME: image/jpeg
+2026-02-15 12:02:55,204 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:02:55,204 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:02:55,205 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:02:55,205 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:02:57,856 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:02:57,857 INFO app.services.replicate_upscaler:    Job ID: tj5ppgy3kdrgc0cwc3vr6w21r8
+2026-02-15 12:02:57,857 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:02:57,857 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:02:59,375 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 12:03:24,702 INFO app.services.replicate_upscaler:    [10s] Status: succeeded
+2026-02-15 12:03:24,702 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:03:24,702 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/owKr6dp8eVQhN6f6tI5ViZMNe494tVPdXHEScfcUGFhlfsehF/output.png...
+2026-02-15 12:03:24,702 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:03:27,227 INFO app.services.replicate_upscaler: ✓ Downloaded: 2213632 bytes (2.11 MB)
+2026-02-15 12:03:27,228 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.jpg
+2026-02-15 12:03:27,305 INFO app.services.replicate_upscaler: ✓ Converted PNG to JPEG preserving colors
+2026-02-15 12:03:27,306 INFO app.services.replicate_upscaler: ✓ Saved successfully: 0.42 MB
+2026-02-15 12:03:27,306 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:03:27,307 INFO app.services.replicate_upscaler:    Input:  1.13 MB → Output: 0.42 MB (scale 2x)
+2026-02-15 12:03:27,307 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:03:27,316 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 0.42 MB (target: 8.00 MB)
+2026-02-15 12:03:27,316 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.jpg (0.42 MB)
+2026-02-15 12:06:07,801 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 12:06:07,801 INFO app.services.replicate_upscaler:     Current size: 1.08 MB, Target: 8.00 MB
+2026-02-15 12:06:07,802 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 12:06:07,802 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:06:07,802 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1.jpg
+2026-02-15 12:06:07,803 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:06:07,803 INFO app.services.replicate_upscaler: 📁 Input file: 1.08 MB
+2026-02-15 12:06:07,804 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:06:07,804 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:06:07,805 INFO app.services.replicate_upscaler: ✓ Image read: 1137687 bytes
+2026-02-15 12:06:07,805 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:06:07,810 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1516916 chars), MIME: image/jpeg
+2026-02-15 12:06:07,812 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:06:07,812 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:06:07,812 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:06:07,813 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:06:10,627 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:06:10,627 INFO app.services.replicate_upscaler:    Job ID: 12k7vgxmgnrgc0cwc3x97fkfv8
+2026-02-15 12:06:10,628 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:06:10,628 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:06:11,868 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 12:06:18,730 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 12:06:18,731 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:06:18,731 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/EogNng6eC7TtaSVk9ibjT1IE645ihjttyiiBP1r7S2QU16DLA/output.png...
+2026-02-15 12:06:18,731 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:06:21,168 INFO app.services.replicate_upscaler: ✓ Downloaded: 1804885 bytes (1.72 MB)
+2026-02-15 12:06:21,169 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png
+2026-02-15 12:06:21,173 INFO app.services.replicate_upscaler: ✓ Saved successfully: 1.72 MB
+2026-02-15 12:06:21,173 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:06:21,173 INFO app.services.replicate_upscaler:    Input:  1.08 MB → Output: 1.72 MB (scale 2x)
+2026-02-15 12:06:21,174 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:06:21,181 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 1.72 MB (target: 8.00 MB)
+2026-02-15 12:06:21,182 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 12:06:21,182 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:06:21,182 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png
+2026-02-15 12:06:21,182 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:06:21,183 INFO app.services.replicate_upscaler: 📁 Input file: 1.72 MB
+2026-02-15 12:06:21,183 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:06:21,183 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:06:21,184 INFO app.services.replicate_upscaler: ✓ Image read: 1804885 bytes
+2026-02-15 12:06:21,184 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:06:21,190 INFO app.services.replicate_upscaler: ✓ Base64 encoded (2406516 chars), MIME: image/png
+2026-02-15 12:06:21,191 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:06:21,191 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:06:21,191 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:06:21,191 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:06:25,178 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:06:25,178 INFO app.services.replicate_upscaler:    Job ID: nfnenkqba9rg80cwc3xac7d21g
+2026-02-15 12:06:25,178 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:06:25,178 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:06:26,653 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 12:06:26,654 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 12:06:26,654 ERROR app.services.replicate_upscaler:    Full response: {'id': 'nfnenkqba9rg80cwc3xac7d21g', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'face_enhance': False, 'image': 'data:image/png;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T11:06:22.93Z', 'started_at': '2026-02-15T11:06:24.178197085Z', 'completed_at': '2026-02-15T11:06:24.274033506Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/nfnenkqba9rg80cwc3xac7d21g/cancel', 'get': 'https://api.replicate.com/v1/predictions/nfnenkqba9rg80cwc3xac7d21g', 'stream': 'https://stream.replicate.com/v1/files/fddq-xyax7fykbr7uk2pqu266qpuuwsh6nerbshspog5m4x7y2lwvpzuq', 'web': 'https://replicate.com/p/nfnenkqba9rg80cwc3xac7d21g'}, 'metrics': {'predict_time': 0.095836441, 'total_time': 1.344033506}}
+2026-02-15 12:06:26,657 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 12:06:26,657 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png (1.72 MB)
+2026-02-15 12:15:02,586 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 12:15:02,587 INFO app.services.replicate_upscaler:     Current size: 1.15 MB, Target: 8.00 MB
+2026-02-15 12:15:02,587 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 12:15:02,587 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:15:02,587 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_1.jpg
+2026-02-15 12:15:02,587 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:15:02,588 INFO app.services.replicate_upscaler: 📁 Input file: 1.15 MB
+2026-02-15 12:15:02,588 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:15:02,588 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:15:02,588 INFO app.services.replicate_upscaler: ✓ Image read: 1203055 bytes
+2026-02-15 12:15:02,588 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:15:02,592 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1604076 chars), MIME: image/jpeg
+2026-02-15 12:15:02,593 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:15:02,593 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:15:02,593 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:15:02,593 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:15:05,573 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:15:05,573 INFO app.services.replicate_upscaler:    Job ID: p4hgpnexbsrga0cwc419gmq7sg
+2026-02-15 12:15:05,573 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:15:05,573 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:15:06,774 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 12:15:13,764 INFO app.services.replicate_upscaler:    [3s] Status: succeeded
+2026-02-15 12:15:13,764 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:15:13,764 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/WB3S6ASAYBa5O15oC7f9rUPIaQ6dDx2niWARGQ6SuTpfy1HWA/output.png...
+2026-02-15 12:15:13,764 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:15:16,064 INFO app.services.replicate_upscaler: ✓ Downloaded: 2344390 bytes (2.24 MB)
+2026-02-15 12:15:16,064 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.png
+2026-02-15 12:15:16,068 INFO app.services.replicate_upscaler: ✓ Saved successfully: 2.24 MB
+2026-02-15 12:15:16,068 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:15:16,068 INFO app.services.replicate_upscaler:    Input:  1.15 MB → Output: 2.24 MB (scale 2x)
+2026-02-15 12:15:16,068 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:15:16,075 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 2.24 MB (target: 8.00 MB)
+2026-02-15 12:15:16,075 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 12:15:16,075 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:15:16,076 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.png
+2026-02-15 12:15:16,076 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:15:16,076 INFO app.services.replicate_upscaler: 📁 Input file: 2.24 MB
+2026-02-15 12:15:16,076 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:15:16,076 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:15:16,078 INFO app.services.replicate_upscaler: ✓ Image read: 2344390 bytes
+2026-02-15 12:15:16,078 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:15:16,087 INFO app.services.replicate_upscaler: ✓ Base64 encoded (3125856 chars), MIME: image/png
+2026-02-15 12:15:16,088 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:15:16,088 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:15:16,088 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:15:16,088 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:15:20,624 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:15:20,624 INFO app.services.replicate_upscaler:    Job ID: 9s4b2trr6hrgc0cwc41s7de48m
+2026-02-15 12:15:20,624 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:15:20,624 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:15:22,102 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 12:15:22,102 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 12:15:22,102 ERROR app.services.replicate_upscaler:    Full response: {'id': '9s4b2trr6hrgc0cwc41s7de48m', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'face_enhance': False, 'image': 'data:image/png;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T11:15:18.708Z', 'started_at': '2026-02-15T11:15:18.892858792Z', 'completed_at': '2026-02-15T11:15:18.994084606Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/9s4b2trr6hrgc0cwc41s7de48m/cancel', 'get': 'https://api.replicate.com/v1/predictions/9s4b2trr6hrgc0cwc41s7de48m', 'stream': 'https://stream.replicate.com/v1/files/fddq-ploktjpiw62xqp6t7nmptvkgjbygeizxcnbrg5tvrvp2huapckrq', 'web': 'https://replicate.com/p/9s4b2trr6hrgc0cwc41s7de48m'}, 'metrics': {'predict_time': 0.101225838, 'total_time': 0.286084606}}
+2026-02-15 12:15:22,106 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 12:15:22,106 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (3)_1_upscaled_2x.png (2.24 MB)
+2026-02-15 12:27:45,061 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 12:27:45,062 INFO app.services.replicate_upscaler:     Current size: 1.19 MB, Target: 8.00 MB
+2026-02-15 12:27:45,062 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 12:27:45,063 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:27:45,063 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_2.jpg
+2026-02-15 12:27:45,063 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:27:45,064 INFO app.services.replicate_upscaler: 📁 Input file: 1.19 MB
+2026-02-15 12:27:45,064 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:27:45,064 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:27:45,065 INFO app.services.replicate_upscaler: ✓ Image read: 1247489 bytes
+2026-02-15 12:27:45,065 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:27:45,070 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1663320 chars), MIME: image/jpeg
+2026-02-15 12:27:45,071 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:27:45,071 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:27:45,071 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:27:45,071 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:27:47,907 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:27:47,907 INFO app.services.replicate_upscaler:    Job ID: jj5wp9vzs1rgc0cwc479br6rkw
+2026-02-15 12:27:47,907 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:27:47,908 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:27:49,387 INFO app.services.replicate_upscaler:    [0s] Status: processing
+2026-02-15 12:27:58,637 INFO app.services.replicate_upscaler:    [4s] Status: succeeded
+2026-02-15 12:27:58,637 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:27:58,638 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/YEdzerBzKU1KDy2Tnx245WfxDW2vH6hHUt87rZo7F067erPsA/output.png...
+2026-02-15 12:27:58,638 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:28:01,127 INFO app.services.replicate_upscaler: ✓ Downloaded: 2731673 bytes (2.61 MB)
+2026-02-15 12:28:01,127 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (3)_2_upscaled_2x.png
+2026-02-15 12:28:01,131 INFO app.services.replicate_upscaler: ✓ Saved successfully: 2.61 MB
+2026-02-15 12:28:01,131 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:28:01,131 INFO app.services.replicate_upscaler:    Input:  1.19 MB → Output: 2.61 MB (scale 2x)
+2026-02-15 12:28:01,131 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:28:01,139 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 2.61 MB (target: 8.00 MB)
+2026-02-15 12:28:01,139 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 12:28:01,139 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:28:01,139 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (3)_2_upscaled_2x.png
+2026-02-15 12:28:01,139 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:28:01,140 INFO app.services.replicate_upscaler: 📁 Input file: 2.61 MB
+2026-02-15 12:28:01,140 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:28:01,140 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:28:01,142 INFO app.services.replicate_upscaler: ✓ Image read: 2731673 bytes
+2026-02-15 12:28:01,142 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:28:01,152 INFO app.services.replicate_upscaler: ✓ Base64 encoded (3642232 chars), MIME: image/png
+2026-02-15 12:28:01,152 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:28:01,153 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:28:01,153 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:28:01,153 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:28:05,776 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:28:05,776 INFO app.services.replicate_upscaler:    Job ID: 7mt0kc64mnrga0cwc47bj7kgn8
+2026-02-15 12:28:05,776 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:28:05,777 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:28:08,784 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 12:28:08,784 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 12:28:08,784 ERROR app.services.replicate_upscaler:    Full response: {'id': '7mt0kc64mnrga0cwc47bj7kgn8', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'face_enhance': False, 'image': 'data:image/png;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T11:28:03.749Z', 'started_at': '2026-02-15T11:28:04.015563527Z', 'completed_at': '2026-02-15T11:28:04.123259867Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/7mt0kc64mnrga0cwc47bj7kgn8/cancel', 'get': 'https://api.replicate.com/v1/predictions/7mt0kc64mnrga0cwc47bj7kgn8', 'stream': 'https://stream.replicate.com/v1/files/fddq-7owwek6ngkrlncu5msywwiqq4jsrihix4oatgwycjnymvjeba67a', 'web': 'https://replicate.com/p/7mt0kc64mnrga0cwc47bj7kgn8'}, 'metrics': {'predict_time': 0.107696337, 'total_time': 0.374259867}}
+2026-02-15 12:28:08,790 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 12:28:08,791 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (3)_2_upscaled_2x.png (2.61 MB)
+2026-02-15 12:33:07,016 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE wrapper called
+2026-02-15 12:33:07,017 INFO app.services.replicate_upscaler:     Current size: 1.15 MB, Target: 8.00 MB
+2026-02-15 12:33:07,017 INFO app.services.replicate_upscaler: 
+>>> Attempting 2x upscaling...
+2026-02-15 12:33:07,017 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:33:07,018 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1.jpg
+2026-02-15 12:33:07,018 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:33:07,018 INFO app.services.replicate_upscaler: 📁 Input file: 1.15 MB
+2026-02-15 12:33:07,019 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:33:07,019 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:33:07,020 INFO app.services.replicate_upscaler: ✓ Image read: 1204051 bytes
+2026-02-15 12:33:07,020 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:33:07,024 INFO app.services.replicate_upscaler: ✓ Base64 encoded (1605404 chars), MIME: image/jpeg
+2026-02-15 12:33:07,025 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:33:07,025 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:33:07,025 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:33:07,025 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:33:10,106 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:33:10,106 INFO app.services.replicate_upscaler:    Job ID: 3npkaz3a4drge0cwc49v9qrvmm
+2026-02-15 12:33:10,107 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:33:10,107 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:33:11,540 INFO app.services.replicate_upscaler:    [0s] Status: starting
+2026-02-15 12:33:25,428 INFO app.services.replicate_upscaler:    [6s] Status: succeeded
+2026-02-15 12:33:25,428 INFO app.services.replicate_upscaler: 
+✅ Job succeeded!
+2026-02-15 12:33:25,428 INFO app.services.replicate_upscaler:    Output URL: https://replicate.delivery/czjl/mOan3ebvfgoKYk5dPEguMnu47R5ePeu4VIhvChwjx7dJQYfwC/output.png...
+2026-02-15 12:33:25,428 INFO app.services.replicate_upscaler: 📥 Downloading upscaled image...
+2026-02-15 12:33:27,362 INFO app.services.replicate_upscaler: ✓ Downloaded: 2087234 bytes (1.99 MB)
+2026-02-15 12:33:27,362 INFO app.services.replicate_upscaler: 💾 Saving to: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png
+2026-02-15 12:33:27,367 INFO app.services.replicate_upscaler: ✓ Saved successfully: 1.99 MB
+2026-02-15 12:33:27,367 INFO app.services.replicate_upscaler: 
+🎉 UPSCALING COMPLETE
+2026-02-15 12:33:27,367 INFO app.services.replicate_upscaler:    Input:  1.15 MB → Output: 1.99 MB (scale 2x)
+2026-02-15 12:33:27,367 INFO app.services.replicate_upscaler: ============================================================
+
+2026-02-15 12:33:27,374 INFO app.services.replicate_upscaler: 
+>>> Upscaled result: 1.99 MB (target: 8.00 MB)
+2026-02-15 12:33:27,375 INFO app.services.replicate_upscaler:     ℹ️  Still below target, attempting second upscaling round...
+2026-02-15 12:33:27,375 INFO app.services.replicate_upscaler: 
+============================================================
+2026-02-15 12:33:27,375 INFO app.services.replicate_upscaler: 🚀 UPSCALE START: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png
+2026-02-15 12:33:27,375 INFO app.services.replicate_upscaler: ============================================================
+2026-02-15 12:33:27,375 INFO app.services.replicate_upscaler: 📁 Input file: 1.99 MB
+2026-02-15 12:33:27,376 INFO app.services.replicate_upscaler: ✓ REPLICATE_API_TOKEN found (first 15 chars: r8_JhembZhYlPoS...)
+2026-02-15 12:33:27,376 INFO app.services.replicate_upscaler: 📖 Reading image file...
+2026-02-15 12:33:27,377 INFO app.services.replicate_upscaler: ✓ Image read: 2087234 bytes
+2026-02-15 12:33:27,377 INFO app.services.replicate_upscaler: 🔄 Encoding to base64...
+2026-02-15 12:33:27,386 INFO app.services.replicate_upscaler: ✓ Base64 encoded (2782980 chars), MIME: image/png
+2026-02-15 12:33:27,387 INFO app.services.replicate_upscaler: 
+📡 Submitting to Replicate API:
+2026-02-15 12:33:27,387 INFO app.services.replicate_upscaler:    URL: https://api.replicate.com/v1/predictions
+2026-02-15 12:33:27,387 INFO app.services.replicate_upscaler:    Scale: 2x
+2026-02-15 12:33:27,387 INFO app.services.replicate_upscaler:    Model: nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73a...
+2026-02-15 12:33:30,443 INFO app.services.replicate_upscaler: 📥 API Response status: 201
+2026-02-15 12:33:30,443 INFO app.services.replicate_upscaler:    Job ID: 9gwr15xshhrgc0cwc49v7kmnk8
+2026-02-15 12:33:30,443 INFO app.services.replicate_upscaler:    Status: starting
+2026-02-15 12:33:30,443 INFO app.services.replicate_upscaler: 
+⏳ Polling for job completion (max 120s)...
+2026-02-15 12:33:31,801 INFO app.services.replicate_upscaler:    [0s] Status: failed
+2026-02-15 12:33:31,801 ERROR app.services.replicate_upscaler: ❌ Replicate upscaling failed: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.
+2026-02-15 12:33:31,801 ERROR app.services.replicate_upscaler:    Full response: {'id': '9gwr15xshhrgc0cwc49v7kmnk8', 'model': 'nightmareai/real-esrgan', 'version': 'hidden', 'input': {'face_enhance': False, 'image': 'data:image/png;base64,...', 'scale': 2}, 'logs': 'Traceback (most recent call last):\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 794, in _handle_predict_error\nyield\nFile "/root/.pyenv/versions/3.11.13/lib/python3.11/site-packages/cog/server/worker.py", line 646, in _predict\nresult = predict(**payload)\n^^^^^^^^^^^^^^^^^^\nFile "/src/predict.py", line 80, in predict\nraise ValueError(\nValueError: Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.\n', 'output': None, 'data_removed': False, 'error': 'Input image of dimensions (2368, 1728, 3) has a total number of pixels 4091904 greater than the max size that fits in GPU memory on this hardware, 2096704. Resize input image and try again.', 'source': 'api', 'status': 'failed', 'created_at': '2026-02-15T11:33:28.588Z', 'started_at': '2026-02-15T11:33:28.75431113Z', 'completed_at': '2026-02-15T11:33:28.820926075Z', 'urls': {'cancel': 'https://api.replicate.com/v1/predictions/9gwr15xshhrgc0cwc49v7kmnk8/cancel', 'get': 'https://api.replicate.com/v1/predictions/9gwr15xshhrgc0cwc49v7kmnk8', 'stream': 'https://stream.replicate.com/v1/files/fddq-leszjnlutkj3bgulxvnnnivwili2tbjb5vnlg7wnghnubwa6exvq', 'web': 'https://replicate.com/p/9gwr15xshhrgc0cwc49v7kmnk8'}, 'metrics': {'predict_time': 0.066614963, 'total_time': 0.232926075}}
+2026-02-15 12:33:31,804 INFO app.services.replicate_upscaler:     ℹ️  Second upscaling failed or did not improve, using first result
+2026-02-15 12:33:31,804 INFO app.services.replicate_upscaler: 
+>>> UPSCALE_TO_TARGET_SIZE complete: Used Clothes Enhacement_real_HANVINBM006 (2)_1_upscaled_2x.png (1.99 MB)

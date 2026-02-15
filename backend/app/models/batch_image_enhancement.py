@@ -10,6 +10,9 @@ class ImageReference(BaseModel):
 class BatchImageEnhanceRequest(BaseModel):
     images: List[ImageReference]
     prompt_key: str
+    upscale: bool = True
+    target_size_mb: float = 8.0
+    gemini_model: Optional[str] = None
 
 
 class BatchImageEnhanceResponse(BaseModel):
@@ -17,6 +20,8 @@ class BatchImageEnhanceResponse(BaseModel):
     message: str
     processed_count: int
     prompt_key: str
+    upscale: bool = False
+    target_size_mb: float = 8.0
     results: List[dict]
 
 

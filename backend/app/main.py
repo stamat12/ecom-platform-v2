@@ -12,9 +12,17 @@ from app.services.sku_list import list_skus, get_available_columns, get_default_
 from app.services.image_listing import list_images_for_sku
 from app.services.image_serving import resolve_image_path
 from app.services.image_rotation import rotate_image, clear_image_cache
+from app.services.image_deletion import delete_image
 from app.services.json_generation import check_json_exists, generate_json_for_sku
 from app.services.image_classification import classify_images
 from app.services.main_image import mark_main_images, unmark_main_images
+from app.services.image_enhancement import (
+    enhance_images_batch,
+    list_enhance_prompts,
+    save_enhance_prompts,
+    list_gemini_models,
+    save_gemini_models,
+)
 from app.services.product_detail import get_product_detail, update_product_detail
 from app.services.ai_enrichment import enrich_sku_fields, enrich_multiple_skus
 from app.repositories.sku_json_repo import read_sku_json
@@ -52,6 +60,8 @@ from app.models.image_operations import (
 )
 from app.models.image_classification import ImageClassificationRequest, ImageClassificationResponse
 from app.models.batch_image_classification import BatchImageClassificationRequest, BatchImageClassificationResponse
+from app.models.batch_image_enhancement import BatchImageEnhanceRequest, BatchImageEnhanceResponse
+from app.models.prompt_management import PromptListRequest, PromptListResponse
 from app.models.main_image import MainImageRequest, MainImageResponse, BatchMainImageRequest, BatchMainImageResponse
 from app.models.product_detail import ProductDetailResponse, UpdateProductDetailRequest, UpdateProductDetailResponse
 from app.models.ai_enrichment import EnrichSingleRequest, EnrichSingleResponse, EnrichBatchRequest, EnrichBatchResponse, AIConfigResponse
@@ -229,6 +239,58 @@ def get_sku_images(sku: str):
     )
 
 
+@app.get("/api/images/enhance/prompts")
+def list_image_enhancement_prompts():
+    """List available image enhancement prompts and active model."""
+    return list_enhance_prompts()
+
+
+@app.get("/api/images/enhance/prompts/manage", response_model=PromptListResponse)
+def get_image_enhancement_prompts_manage():
+    """Get editable prompt list with full text."""
+    return PromptListResponse(**list_enhance_prompts(include_text=True))
+
+
+@app.put("/api/images/enhance/prompts/manage", response_model=PromptListResponse)
+def update_image_enhancement_prompts_manage(request: PromptListRequest):
+    """Save prompt list to JSON for live editing."""
+    result = save_enhance_prompts([item.model_dump() for item in request.prompts])
+    return PromptListResponse(**result)
+
+
+@app.post("/api/images/enhance-batch", response_model=BatchImageEnhanceResponse)
+def enhance_images_batch_endpoint(request: BatchImageEnhanceRequest):
+    """Enhance multiple images across multiple SKUs using a prompt and optionally upscale to target size."""
+    result = enhance_images_batch(
+        images=[img.model_dump() for img in request.images],
+        prompt_key=request.prompt_key,
+        upscale=request.upscale,
+        target_size_mb=request.target_size_mb,
+        gemini_model=request.gemini_model,
+    )
+    return BatchImageEnhanceResponse(**result)
+
+
+@app.get("/api/images/enhance/models")
+def list_gemini_models_endpoint():
+    """Get list of available Gemini image generation models."""
+    models = list_gemini_models()
+    return {
+        "success": True,
+        "models": models,
+    }
+
+
+@app.put("/api/images/enhance/models")
+def save_gemini_models_endpoint(request: dict):
+    """Save Gemini models configuration."""
+    success, message = save_gemini_models(request.get("models", []))
+    return {
+        "success": success,
+        "message": message,
+    }
+
+
 @app.get("/api/images/{sku}/{filename}")
 def get_image(
     sku: str,
@@ -261,6 +323,17 @@ def rotate_image_endpoint(
         clear_image_cache(sku, filename)
     
     return ImageRotateResponse(**result)
+
+
+@app.delete("/api/images/{sku}/{filename}")
+def delete_image_endpoint(sku: str, filename: str):
+    """Delete an image from folder and metadata"""
+    result = delete_image(sku, filename)
+    
+    if not result["success"]:
+        raise HTTPException(status_code=400, detail=result.get("message", "Failed to delete image"))
+    
+    return result
 
 
 @app.get("/api/skus/{sku}/json/status", response_model=JsonStatusResponse)

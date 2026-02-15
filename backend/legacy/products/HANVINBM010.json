@@ -1,0 +1,81 @@
+{
+  "HANVINBM010": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155183"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Champion",
+      "Color": "Dunkelblau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "\"UW-WHITEWATER WARHAWKS\" Print auf der Brust (Print hat Risse - siehe Foto), Kontraststreifen an den Ärmeln, gesticktes 'C' Logo am Ärmel, Kapuze mit Druckknöpfen",
+      "Keywords": "Vintage Hoodie",
+      "Materials": "50% Baumwolle, 50% Polyester"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Enhacement Invisible Mannequin_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM010 (2).jpg",
+          "prompt": "Used Clothes Enhacement Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Enhacement_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM010 (2).jpg",
+          "prompt": "Used Clothes Enhacement",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 2
+      }
+    }
+  }
+}

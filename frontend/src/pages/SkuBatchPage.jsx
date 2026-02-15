@@ -59,6 +59,13 @@ export default function SkuBatchPage() {
   const [selectedImages, setSelectedImages] = useState({}); // { sku: [filenames] }
   const [classifying, setClassifying] = useState({});
   const [batchClassifying, setBatchClassifying] = useState(false);
+  const [enhancePrompts, setEnhancePrompts] = useState([]); // [{ key, label }]
+  const [enhanceModel, setEnhanceModel] = useState("");
+  const [geminiModels, setGeminiModels] = useState([]); // Available Gemini models
+  const [selectedGeminiModel, setSelectedGeminiModel] = useState(null); // Selected Gemini model
+  const [enhanceLoading, setEnhanceLoading] = useState(false);
+  const [enhancingImages, setEnhancingImages] = useState({}); // { "sku/filename": boolean }
+  const [imagePromptSelection, setImagePromptSelection] = useState({}); // { "sku/filename": promptKey }
 
   // Product details state
   const [productDetails, setProductDetails] = useState({}); // { sku: ProductDetailResponse }
@@ -109,6 +116,90 @@ export default function SkuBatchPage() {
       });
     });
     return result;
+  };
+
+  const getPromptKeyForImage = (sku, filename) => {
+    const key = `${sku}/${filename}`;
+    return imagePromptSelection[key] || enhancePrompts[0]?.key || "";
+  };
+
+  const handleEnhanceImage = async (sku, filename) => {
+    const promptKey = getPromptKeyForImage(sku, filename);
+    if (!promptKey) {
+      alert("No enhancement prompt available");
+      return;
+    }
+
+    const key = `${sku}/${filename}`;
+    setEnhancingImages(prev => ({ ...prev, [key]: true }));
+    try {
+      const res = await fetch("/api/images/enhance-batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          images: [{ sku, filename }],
+          prompt_key: promptKey,
+          upscale: true,
+          target_size_mb: 8.0,
+          gemini_model: selectedGeminiModel,
+        })
+      });
+      const data = await res.json();
+      const hasSuccess = Array.isArray(data.results)
+        ? data.results.some((result) => result && result.success)
+        : Boolean(data.success);
+      if (!res.ok || !hasSuccess) {
+        throw new Error(data.detail || data.message || "Enhancement failed");
+      }
+
+      const refreshRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/images`);
+      if (refreshRes.ok) {
+        const refreshData = await refreshRes.json();
+        setItems((prev) =>
+          prev.map((item) =>
+            item.sku === sku ? { ...item, data: refreshData, error: null } : item
+          )
+        );
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEnhancingImages(prev => ({ ...prev, [key]: false }));
+    }
+  };
+
+  const handleDeleteImage = async (sku, filename) => {
+    const confirmed = window.confirm(
+      `Are you sure you want to delete "${filename}"?\n\nThis will remove it from both the folder and metadata.`
+    );
+    
+    if (!confirmed) return;
+
+    try {
+      const res = await fetch(`/api/images/${encodeURIComponent(sku)}/${encodeURIComponent(filename)}`, {
+        method: "DELETE",
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.detail || data.message || "Delete failed");
+      }
+
+      // Refresh the images list
+      const refreshRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/images`);
+      if (refreshRes.ok) {
+        const refreshData = await refreshRes.json();
+        setItems((prev) =>
+          prev.map((item) =>
+            item.sku === sku ? { ...item, data: refreshData, error: null } : item
+          )
+        );
+      }
+      
+      alert(`Image "${filename}" deleted successfully`);
+    } catch (e) {
+      alert(`Error deleting image: ${e.message}`);
+    }
   };
 
   const handleGenerateJson = async (sku) => {
@@ -970,6 +1061,44 @@ export default function SkuBatchPage() {
       cancelled = true;
     };
   }, [selectedSkus]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadPrompts() {
+      setEnhanceLoading(true);
+      try {
+        const [promptsRes, modelsRes] = await Promise.all([
+          fetch("/api/images/enhance/prompts"),
+          fetch("/api/images/enhance/models"),
+        ]);
+        
+        if (promptsRes.ok) {
+          const data = await promptsRes.json();
+          if (!cancelled) {
+            setEnhanceModel(data.model || "");
+            setEnhancePrompts(data.prompts || []);
+          }
+        }
+        
+        if (modelsRes.ok) {
+          const data = await modelsRes.json();
+          if (!cancelled) {
+            setGeminiModels(data.models || []);
+            // Set first model as default
+            if (data.models && data.models.length > 0) {
+              setSelectedGeminiModel(data.models[0].id);
+            }
+          }
+        }
+      } finally {
+        if (!cancelled) setEnhanceLoading(false);
+      }
+    }
+    loadPrompts();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   if (selectedSkus.length === 0) {
     return (
@@ -2519,6 +2648,9 @@ export default function SkuBatchPage() {
                     const rotatingKey = `${sku}/${img.filename}`;
                     const isRotating = rotating[rotatingKey];
                     const isSelected = (selectedImages[sku] || []).includes(img.filename);
+                    const promptKey = getPromptKeyForImage(sku, img.filename);
+                    const enhancingKey = `${sku}/${img.filename}`;
+                    const isEnhancing = !!enhancingImages[enhancingKey];
                     return (
                       <div key={img.filename} style={{ border: isSelected ? "3px solid #2196F3" : "1px solid #ddd", borderRadius: 10, overflow: "hidden", position: "relative" }}>
                         {/* Selection checkbox */}
@@ -2609,6 +2741,9 @@ export default function SkuBatchPage() {
                           <div style={{ fontSize: 12, fontFamily: "ui-monospace", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                             {img.filename}
                           </div>
+                          <div style={{ fontSize: 10, color: "#999", marginTop: 2, marginBottom: 4 }}>
+                            {img.file_size_str || "N/A"}
+                          </div>
                           <div style={{ fontSize: 12, color: "#666", marginTop: 4, display: "flex", gap: 8, flexWrap: "wrap" }}>
                             {img.is_ebay ? <span>eBay</span> : null}
                             {img.source ? <span>{img.source}</span> : null}
@@ -2654,7 +2789,83 @@ export default function SkuBatchPage() {
                             >
                               ↻270°
                             </button>
+                            <button
+                              onClick={() => handleDeleteImage(sku, img.filename)}
+                              style={{ 
+                                padding: "2px 6px", 
+                                fontSize: 11, 
+                                cursor: "pointer",
+                                background: "#dc3545",
+                                color: "white",
+                                border: "none",
+                                borderRadius: 3,
+                              }}
+                              title="Delete image"
+                            >
+                              🗑️ Delete
+                            </button>
                           </div>
+                          {enhancePrompts.length > 0 && (
+                            <div style={{ marginTop: 8, paddingTop: 6, borderTop: "1px dashed #e0e0e0" }}>
+                              <div style={{ fontSize: 10, color: "#666", marginBottom: 4, textAlign: "center" }}>
+                                Enhance {enhanceModel ? `(${enhanceModel})` : ""}
+                              </div>
+                              <div style={{ display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap", marginBottom: 6 }}>
+                                {geminiModels.length > 1 && (
+                                  <select
+                                    value={selectedGeminiModel || ""}
+                                    onChange={(e) => setSelectedGeminiModel(e.target.value)}
+                                    style={{
+                                      padding: "2px 6px",
+                                      fontSize: 10,
+                                      border: "1px solid #999",
+                                      borderRadius: 3,
+                                      background: "#f9f9f9",
+                                      fontWeight: "500"
+                                    }}
+                                    title="Choose Gemini model for image generation"
+                                  >
+                                    {geminiModels.map(m => (
+                                      <option key={m.id} value={m.id}>{m.name}</option>
+                                    ))}
+                                  </select>
+                                )}
+                                <select
+                                  value={promptKey}
+                                  onChange={(e) => {
+                                    const key = `${sku}/${img.filename}`;
+                                    setImagePromptSelection(prev => ({ ...prev, [key]: e.target.value }));
+                                  }}
+                                  style={{
+                                    padding: "2px 6px",
+                                    fontSize: 10,
+                                    border: "1px solid #ccc",
+                                    borderRadius: 3,
+                                    maxWidth: 150
+                                  }}
+                                >
+                                  {enhancePrompts.map(p => (
+                                    <option key={p.key} value={p.key}>{p.label || p.key}</option>
+                                  ))}
+                                </select>
+                                <button
+                                  onClick={() => handleEnhanceImage(sku, img.filename)}
+                                  disabled={isEnhancing || enhanceLoading}
+                                  style={{
+                                    padding: "2px 6px",
+                                    fontSize: 10,
+                                    cursor: (isEnhancing || enhanceLoading) ? "not-allowed" : "pointer",
+                                    background: "#6a1b9a",
+                                    color: "white",
+                                    border: "none",
+                                    borderRadius: 3
+                                  }}
+                                >
+                                  {isEnhancing ? "Enhancing..." : "Enhance"}
+                                </button>
+                              </div>
+                            </div>
+                          )}
                           {/* eBay Image Order Numbers */}
                           <div style={{ marginTop: 8, paddingTop: 6, borderTop: "1px solid #e0e0e0" }}>
                             <div style={{ fontSize: 10, color: "#666", marginBottom: 4, textAlign: "center" }}>eBay Order</div>

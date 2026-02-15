@@ -41,6 +41,7 @@ def generate_enhanced_image(
     prompt_name: str,
     prompt_text: str,
     output_dir: Optional[Path] = None,
+    gemini_model: Optional[str] = None,
 ) -> Tuple[Optional[Path], Optional[str]]:
     """Generate enhanced image using Gemini image model.
     
@@ -49,6 +50,7 @@ def generate_enhanced_image(
         prompt_name: Name of the prompt (e.g., 'studio_restoration')
         prompt_text: The actual prompt text from PROMPTS dict
         output_dir: Directory to save the generated image (defaults to source dir)
+        gemini_model: Gemini model to use (defaults to config.MODEL_IMAGE)
     
     Returns:
         (output_path, error_message) - returns path if success, (None, error_msg) if failed
@@ -77,7 +79,10 @@ def generate_enhanced_image(
     if not api_key:
         return None, "GOOGLE_API_KEY (or GEMINI_API_KEY) environment variable not set"
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(config.MODEL_IMAGE)
+    
+    # Use specified model or default to config
+    model_id = gemini_model or config.MODEL_IMAGE
+    model = genai.GenerativeModel(model_id)
 
     # Prepare payload
     image_data = encode_image_to_base64(image_path)

@@ -45,6 +45,8 @@ class ImageInfo(BaseModel):
     is_main: bool = False
     is_ebay: bool = False
     meta: Dict[str, Any] = {}
+    file_size: int = 0
+    file_size_str: str = "0 B"
     thumb_url: str
     preview_url: str
     original_url: str

@@ -62,6 +62,20 @@ def list_images_for_sku(sku: str) -> Dict[str, Any]:
         # Get classification from JSON structure (phone/stock/enhanced categories)
         classification = get_image_classification(sku, fn)
         full_path = sku_dir / fn if sku_dir else None
+        
+        # Get file size
+        file_size_bytes = 0
+        if full_path and full_path.exists():
+            file_size_bytes = full_path.stat().st_size
+        
+        # Format file size for display
+        if file_size_bytes >= 1024 * 1024:
+            file_size_str = f"{file_size_bytes / (1024 * 1024):.1f} MB"
+        elif file_size_bytes >= 1024:
+            file_size_str = f"{file_size_bytes / 1024:.1f} KB"
+        else:
+            file_size_str = f"{file_size_bytes} B"
+        
         merged.append(
             {
                 "filename": fn,
@@ -70,6 +84,8 @@ def list_images_for_sku(sku: str) -> Dict[str, Any]:
                 "is_main": fn in main_images_list,
                 "is_ebay": fn in ebay_images,
                 "meta": info,
+                "file_size": file_size_bytes,
+                "file_size_str": file_size_str,
                 "thumb_url": f"/api/images/{sku}/{fn}?variant=thumb_256",
                 "preview_url": f"/api/images/{sku}/{fn}?variant=thumb_512",
                 "original_url": f"/api/images/{sku}/{fn}?variant=original",
