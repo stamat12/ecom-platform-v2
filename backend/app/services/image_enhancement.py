@@ -305,7 +305,9 @@ def enhance_images_for_sku(
             source_path, prompt_key, prompt_text, output_dir=sku_dir, gemini_model=gemini_model
         )
         if error:
-            errors.append(f"{filename}: {error}")
+            error_msg = f"{filename}: {error}"
+            logger.error(f"❌ Enhancement error: {error_msg}")
+            errors.append(error_msg)
             continue
 
         # Upscale the generated image if requested

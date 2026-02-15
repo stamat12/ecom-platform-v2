@@ -5,7 +5,7 @@ export default function EbayListingPage() {
   const [sku, setSku] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("1");
-  const [condition, setCondition] = useState("Neu");
+  const [condition, setCondition] = useState("1000");
   const [loading, setLoading] = useState(false);
   const [previewing, setPreviewing] = useState(false);
   const [preview, setPreview] = useState(null);
@@ -15,7 +15,20 @@ export default function EbayListingPage() {
   const [batchData, setBatchData] = useState("");
   const [batchResults, setBatchResults] = useState([]);
 
-  const conditions = ["Neu", "Neu mit Etikett", "Neuwertig", "Gut", "Sehr gut", "Akzeptabel"];
+  const conditions = [
+    { id: "1000", label: "1000 - New" },
+    { id: "1500", label: "1500 - New other" },
+    { id: "1750", label: "1750 - New with defects" },
+    { id: "2000", label: "2000 - Certified Refurbished" },
+    { id: "2500", label: "2500 - Seller Refurbished" },
+    { id: "2750", label: "2750 - Like New" },
+    { id: "3000", label: "3000 - Used" },
+    { id: "4000", label: "4000 - Very Good" },
+    { id: "5000", label: "5000 - Good" },
+    { id: "6000", label: "6000 - Acceptable" },
+    { id: "7000", label: "7000 - For parts / not working" },
+  ];
+  const conditionLabelToId = Object.fromEntries(conditions.map(c => [c.label, c.id]));
 
   const handlePreview = async () => {
     if (!sku.trim() || !price.trim()) {
@@ -35,7 +48,7 @@ export default function EbayListingPage() {
           sku: sku.trim(),
           price: parseFloat(price),
           quantity: parseInt(quantity),
-          condition: condition
+          condition_id: parseInt(condition, 10)
         })
       });
 
@@ -73,7 +86,7 @@ export default function EbayListingPage() {
           sku: sku.trim(),
           price: parseFloat(price),
           quantity: parseInt(quantity),
-          condition: condition
+          condition_id: parseInt(condition, 10)
         })
       });
 
@@ -155,17 +168,21 @@ export default function EbayListingPage() {
   const handleBatchCreate = async () => {
     const lines = batchData.split("\n").map(l => l.trim()).filter(Boolean);
     if (lines.length === 0) {
-      setError("Please enter batch data (format: SKU,price,quantity,condition)");
+      setError("Please enter batch data (format: SKU,price,quantity,condition_id)");
       return;
     }
 
     const items = lines.map(line => {
       const [sku, price, qty, cond] = line.split(",").map(s => s.trim());
+      let conditionId = cond || "1000";
+      if (!/^[0-9]+$/.test(conditionId)) {
+        conditionId = conditionLabelToId[conditionId] || "1000";
+      }
       return {
         sku,
         price: parseFloat(price || "0"),
         quantity: parseInt(qty || "1"),
-        condition: cond || "Neu"
+        condition_id: parseInt(conditionId, 10)
       };
     });
 
@@ -322,7 +339,7 @@ export default function EbayListingPage() {
                 onChange={(e) => setCondition(e.target.value)}
                 style={{ width: "100%", padding: 8, fontSize: 14, border: "1px solid #ddd", borderRadius: 4 }}
               >
-                {conditions.map(c => <option key={c} value={c}>{c}</option>)}
+                {conditions.map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
               </select>
             </div>
 

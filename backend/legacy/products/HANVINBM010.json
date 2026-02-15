@@ -52,17 +52,25 @@
       "phone": [],
       "enhanced": [
         {
-          "filename": "Used Clothes Enhacement Invisible Mannequin_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "filename": "Used Clothes Enhacement_real_HANVINBM010 (2)_1_lanczos_4x.png",
           "source": "HANVINBM010 (2).jpg",
-          "prompt": "Used Clothes Enhacement Invisible Mannequin",
+          "prompt": "Used Clothes Enhacement",
           "generated": true,
           "upscaled": true,
           "upscale_method": "lanczos-4x"
         },
         {
-          "filename": "Used Clothes Enhacement_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "filename": "Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM010 (2)_1_lanczos_4x.png",
           "source": "HANVINBM010 (2).jpg",
-          "prompt": "Used Clothes Enhacement",
+          "prompt": "Used Clothes Invisible Mannequin 2.5 flash image",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM010 (2).jpg",
+          "prompt": "Used Clothes Same Position",
           "generated": true,
           "upscaled": true,
           "upscale_method": "lanczos-4x"
@@ -74,7 +82,7 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 0,
-        "count_enhanced": 2
+        "count_enhanced": 3
       }
     }
   }

@@ -5,6 +5,12 @@
       "name": "Gemini 2.5 Flash Image",
       "description": "Latest fast image generation model",
       "active": true
+    },
+    {
+      "id": "gemini-3-pro-image-preview",
+      "name": "Gemini 3 Pro Image (Preview)",
+      "description": "Advanced reasoning model with high-resolution image generation (1K/2K/4K)",
+      "active": true
     }
   ],
   "default_model": "gemini-2.5-flash-image"

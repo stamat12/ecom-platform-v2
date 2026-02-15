@@ -74,7 +74,48 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 0,
-        "count_enhanced": 2
+        "count_enhanced": 2,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "main_images": [
+        {
+          "filename": "HANVINBM008 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM008 (1).jpg"
+        },
+        {
+          "filename": "HANVINBM008 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM008 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM008 (6).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Tommy Hilfiger",
+        "Größe": "XL",
+        "Stil": "Pullover",
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Produktart": "Pullover",
+        "Material": "Baumwolle",
+        "Ausschnitt": "V-Ausschnitt",
+        "Ursprungsland": "Kambodscha",
+        "Gewebeart": "Strick",
+        "Jahreszeit": "Herbst",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Besonderheiten": "Atmungsaktiv",
+        "Ärmellänge": "Langarm",
+        "Textilpflege": "Maschinenwäsche"
       }
     }
   }

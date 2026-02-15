@@ -54,7 +54,9 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 0,
-        "count_enhanced": 5
+        "count_enhanced": 5,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [],
@@ -63,14 +65,6 @@
           "filename": "Used Clothes Enhacement_real_HANVINBM006 (3)_1_lanczos_4x.png",
           "source": "HANVINBM006 (3).jpg",
           "prompt": "Used Clothes Enhacement",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        },
-        {
-          "filename": "Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM006 (2).jpg",
-          "prompt": "Used Clothes Invisible Mannequin 2.5 flash image",
           "generated": true,
           "upscaled": true,
           "upscale_method": "lanczos-4x"
@@ -98,8 +92,82 @@
           "generated": true,
           "upscaled": true,
           "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM006 (2).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "HANVINBM006 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM006 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM006 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM006 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM006 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM006 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM006 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM006 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Champion",
+        "Größe": "XL",
+        "Abteilung": "Herren",
+        "Produktart": "Kapuzenpullover",
+        "Stil": "Pullover",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Material": "Baumwolle",
+        "Ursprungsland": "Honduras",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

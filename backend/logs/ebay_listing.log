@@ -1,0 +1,97 @@
+2026-02-15 15:06:18,687 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:06:18,736 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:06:18,777 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:06:18,778 - INFO - Uploading to eBay: Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:06:26,186 - INFO - Uploaded image Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSw...
+2026-02-15 15:06:26,189 - INFO - Uploading to eBay: Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:06:34,129 - INFO - Uploaded image Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSw...
+2026-02-15 15:06:34,132 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:06:43,220 - INFO - Uploaded image Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSw...
+2026-02-15 15:06:43,223 - INFO - Uploading to eBay: HANVINBM006 (3).jpg
+2026-02-15 15:06:46,231 - INFO - Uploaded image HANVINBM006 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSw...
+2026-02-15 15:06:46,233 - INFO - Uploading to eBay: HANVINBM006 (4).jpg
+2026-02-15 15:06:50,391 - INFO - Uploaded image HANVINBM006 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSw...
+2026-02-15 15:06:50,392 - INFO - Uploading to eBay: HANVINBM006 (5).jpg
+2026-02-15 15:06:53,259 - INFO - Uploaded image HANVINBM006 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSw...
+2026-02-15 15:06:53,260 - INFO - Uploading to eBay: HANVINBM006 (6).jpg
+2026-02-15 15:06:56,334 - INFO - Uploaded image HANVINBM006 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSw...
+2026-02-15 15:06:56,337 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 7, cached: 0, urls: 7
+2026-02-15 15:06:56,343 - INFO - Saved 7 new eBay URLs to JSON
+2026-02-15 15:06:56,344 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-02-15 15:06:56,345 - INFO - Looking up manufacturer info for 'Champion' using AI...
+2026-02-15 15:07:00,513 - INFO - Manufacturer info extracted and cached for 'Champion'
+2026-02-15 15:07:02,901 - ERROR - Failed to create listing for SKU HANVINBM006: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 155183.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 15:08:07,432 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:08:07,472 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:08:07,517 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:08:07,517 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for HANVINBM006 (3).jpg
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for HANVINBM006 (4).jpg
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for HANVINBM006 (5).jpg
+2026-02-15 15:08:07,518 - DEBUG - Using cached URL for HANVINBM006 (6).jpg
+2026-02-15 15:08:07,518 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 0, cached: 7, urls: 7
+2026-02-15 15:08:07,518 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
+2026-02-15 15:08:07,520 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 15:08:10,333 - ERROR - Failed to create listing for SKU HANVINBM006: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 155183.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 15:08:29,125 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:08:29,159 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:08:29,195 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:08:29,195 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:08:29,195 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:08:29,195 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:08:29,195 - DEBUG - Using cached URL for HANVINBM006 (3).jpg
+2026-02-15 15:08:29,195 - DEBUG - Using cached URL for HANVINBM006 (4).jpg
+2026-02-15 15:08:29,196 - DEBUG - Using cached URL for HANVINBM006 (5).jpg
+2026-02-15 15:08:29,196 - DEBUG - Using cached URL for HANVINBM006 (6).jpg
+2026-02-15 15:08:29,196 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 0, cached: 7, urls: 7
+2026-02-15 15:08:29,197 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
+2026-02-15 15:08:29,198 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 15:08:31,504 - ERROR - Failed to create listing for SKU HANVINBM006: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 155183.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 15:09:00,959 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:09:01,003 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:09:01,038 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:09:01,038 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:09:01,038 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:09:01,038 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:09:01,038 - DEBUG - Using cached URL for HANVINBM006 (3).jpg
+2026-02-15 15:09:01,040 - DEBUG - Using cached URL for HANVINBM006 (4).jpg
+2026-02-15 15:09:01,040 - DEBUG - Using cached URL for HANVINBM006 (5).jpg
+2026-02-15 15:09:01,040 - DEBUG - Using cached URL for HANVINBM006 (6).jpg
+2026-02-15 15:09:01,040 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 0, cached: 7, urls: 7
+2026-02-15 15:09:01,040 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
+2026-02-15 15:09:01,041 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 15:09:03,719 - ERROR - Failed to create listing for SKU HANVINBM006: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 155183.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 15:28:57,603 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:29:42,019 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:32:59,436 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:32:59,484 - INFO - Listing condition for SKU HANVINBM006: text='', id=5000, category_id=155183
+2026-02-15 15:32:59,484 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:32:59,523 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:32:59,524 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:32:59,524 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:32:59,525 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:32:59,525 - DEBUG - Using cached URL for HANVINBM006 (3).jpg
+2026-02-15 15:32:59,525 - DEBUG - Using cached URL for HANVINBM006 (4).jpg
+2026-02-15 15:32:59,525 - DEBUG - Using cached URL for HANVINBM006 (5).jpg
+2026-02-15 15:32:59,526 - DEBUG - Using cached URL for HANVINBM006 (6).jpg
+2026-02-15 15:32:59,526 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 0, cached: 7, urls: 7
+2026-02-15 15:32:59,527 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
+2026-02-15 15:32:59,531 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 15:33:02,003 - ERROR - Failed to create listing for SKU HANVINBM006: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 155183.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 15:33:18,569 - INFO - Creating eBay listing for SKU HANVINBM006 at price 32.0€
+2026-02-15 15:33:18,616 - INFO - Listing condition for SKU HANVINBM006: text='', id=1000, category_id=155183
+2026-02-15 15:33:18,617 - INFO - Uploading images for SKU HANVINBM006 (max: 12)
+2026-02-15 15:33:18,661 - INFO - Image files found on disk for SKU HANVINBM006: 10
+2026-02-15 15:33:18,662 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM006 (2)_1_lanczos_4x.png
+2026-02-15 15:33:18,662 - DEBUG - Using cached URL for Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM006 (3)_1_lanczos_4x.png
+2026-02-15 15:33:18,662 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM006 (1)_1_lanczos_4x.png
+2026-02-15 15:33:18,662 - DEBUG - Using cached URL for HANVINBM006 (3).jpg
+2026-02-15 15:33:18,663 - DEBUG - Using cached URL for HANVINBM006 (4).jpg
+2026-02-15 15:33:18,663 - DEBUG - Using cached URL for HANVINBM006 (5).jpg
+2026-02-15 15:33:18,663 - DEBUG - Using cached URL for HANVINBM006 (6).jpg
+2026-02-15 15:33:18,663 - INFO - Upload summary for SKU HANVINBM006 -> uploaded: 0, cached: 7, urls: 7
+2026-02-15 15:33:18,664 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
+2026-02-15 15:33:18,666 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 15:33:22,253 - INFO - Successfully created listing for SKU HANVINBM006, ItemID: 137039802336

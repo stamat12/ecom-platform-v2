@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import base64
 import json
+import logging
 import os
+import re
 import sys
 from pathlib import Path
 from typing import Optional, Tuple
@@ -14,6 +16,24 @@ import google.generativeai as genai
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 import config  # noqa: E402
+
+logger = logging.getLogger(__name__)
+
+# Set up file logging
+def _setup_file_logging():
+    """Configure file logging for image generation."""
+    log_dir = Path(__file__).resolve().parents[2] / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / "image_generator.log"
+    
+    handler = logging.FileHandler(log_file, encoding="utf-8")
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.DEBUG)
+
+_setup_file_logging()
 
 
 def encode_image_to_base64(image_path: Path) -> str:
@@ -34,6 +54,11 @@ def get_mime_type(image_path: Path) -> str:
         ".bmp": "image/bmp",
     }
     return mime_map.get(suffix, "image/jpeg")
+
+
+def _slugify_model_id(model_id: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9]+", "-", model_id or "").strip("-").lower()
+    return cleaned or "gemini"
 
 
 def generate_enhanced_image(
@@ -64,11 +89,13 @@ def generate_enhanced_image(
     # Determine output filename
     stem = image_path.stem
     suffix = image_path.suffix
+    model_id = gemini_model or config.MODEL_IMAGE
+    model_slug = _slugify_model_id(model_id)
 
     # Find next available number to avoid overwrites
     counter = 1
     while True:
-        output_filename = f"{prompt_name}_real_{stem}_{counter}{suffix}"
+        output_filename = f"{prompt_name}_{model_slug}_real_{stem}_{counter}{suffix}"
         output_path = output_dir / output_filename
         if not output_path.exists():
             break
@@ -81,13 +108,14 @@ def generate_enhanced_image(
     genai.configure(api_key=api_key)
     
     # Use specified model or default to config
-    model_id = gemini_model or config.MODEL_IMAGE
+    logger.info(f"📸 Using Gemini model: {model_id}")
     model = genai.GenerativeModel(model_id)
 
     # Prepare payload
     image_data = encode_image_to_base64(image_path)
 
     try:
+        logger.info(f"🚀 Sending request to {model_id}...")
         response = model.generate_content(
             [
                 prompt_text,
@@ -101,8 +129,27 @@ def generate_enhanced_image(
                 "temperature": 0.2,
             },
         )
+        logger.info(f"✅ Response received from {model_id}")
+        usage = getattr(response, "usage_metadata", None)
+        if usage:
+            if isinstance(usage, dict):
+                prompt_tokens = usage.get("prompt_token_count")
+                candidates_tokens = usage.get("candidates_token_count")
+                total_tokens = usage.get("total_token_count")
+            else:
+                prompt_tokens = getattr(usage, "prompt_token_count", None)
+                candidates_tokens = getattr(usage, "candidates_token_count", None)
+                total_tokens = getattr(usage, "total_token_count", None)
+            logger.info(
+                "🔢 Gemini usage - prompt: %s, candidates: %s, total: %s",
+                prompt_tokens,
+                candidates_tokens,
+                total_tokens,
+            )
     except Exception as ex:
-        return None, f"Generation failed: {str(ex)}"
+        error_details = f"{type(ex).__name__}: {str(ex)}"
+        logger.error(f"❌ Gemini API Error ({model_id}): {error_details}")
+        return None, error_details
 
     # Extract image bytes from response with debug info
     image_bytes = None
@@ -116,6 +163,7 @@ def generate_enhanced_image(
             if getattr(part, "inline_data", None) and getattr(part.inline_data, "data", None):
                 part_kind = "inline_image"
                 image_bytes = part.inline_data.data
+                logger.info("✅ Found inline image data in response")
             elif getattr(part, "text", None):
                 part_kind = "text"
                 debug_parts.append(f"text[{len(part.text)}]: {part.text[:200]}")
@@ -129,7 +177,10 @@ def generate_enhanced_image(
 
     if not image_bytes:
         if debug_parts:
-            return None, "Gemini returned no image; parts: " + " | ".join(debug_parts)
+            error_msg = "Gemini returned no image; parts: " + " | ".join(debug_parts)
+            logger.error(f"❌ {error_msg}")
+            return None, error_msg
+        logger.error("❌ Gemini API returned no image data")
         return None, "Gemini API returned no image data"
 
     # Save image bytes
@@ -138,8 +189,11 @@ def generate_enhanced_image(
             image_bytes = base64.b64decode(image_bytes)
         with output_path.open("wb") as f:
             f.write(image_bytes)
+        logger.info(f"💾 Saved image to {output_path.name}")
     except Exception as ex:
-        return None, f"Failed to save image: {str(ex)}"
+        error_msg = f"Failed to save image: {str(ex)}"
+        logger.error(f"❌ {error_msg}")
+        return None, error_msg
 
     return output_path, None
 

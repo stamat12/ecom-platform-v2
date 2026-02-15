@@ -41,6 +41,21 @@ from app.repositories.sku_json_repo import read_sku_json, _sku_json_path
 from app.services.image_listing import list_images_for_sku
 
 logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
+
+def _setup_file_logging() -> None:
+    """Configure file logging for eBay listing flow."""
+    log_dir = Path(__file__).resolve().parents[2] / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / "ebay_listing.log"
+    handler = logging.FileHandler(log_file, encoding="utf-8")
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.DEBUG)
+
+_setup_file_logging()
 
 # OpenAI client
 _openai_client: Optional[OpenAI] = None
@@ -79,6 +94,11 @@ def map_condition_to_id(condition_text: str) -> int:
     if not condition_clean:
         return 1000
     condition_id = CONDITION_MAPPING.get(condition_clean, 1000)
+    logger.info(
+        "Condition mapping: '%s' -> %s",
+        condition_clean,
+        condition_id,
+    )
     
     if condition_clean not in CONDITION_MAPPING:
         logger.warning(f"Unknown condition '{condition_clean}', defaulting to 'Neu mit Karton' (1000)")
@@ -173,6 +193,7 @@ def upload_images_for_sku(
     ebay_images = images_section.get("eBay Images", [])
     
     if not ebay_images:
+        logger.error(f"No eBay images defined for SKU {sku}. Images section: {images_section}")
         raise ValueError(f"No eBay images defined for SKU {sku}")
     
     # Get all image info
@@ -180,6 +201,7 @@ def upload_images_for_sku(
     all_images = all_images_info.get("images", [])
     
     if not all_images:
+        logger.error(f"No images found for SKU {sku}. list_images_for_sku returned empty list.")
         raise ValueError(f"No images found for SKU {sku}")
     
     # Build filename -> path mapping
@@ -188,6 +210,11 @@ def upload_images_for_sku(
         for img in all_images
         if Path(img.get("full_path", "")).exists()
     }
+    logger.info(
+        "Image files found on disk for SKU %s: %s",
+        sku,
+        len(image_path_map),
+    )
     
     # Sort eBay images by order
     sorted_ebay_images = sorted(ebay_images, key=lambda x: x.get('order', 999))
@@ -213,10 +240,11 @@ def upload_images_for_sku(
         # Get image path
         image_path = image_path_map.get(Path(filename).name)
         if not image_path:
-            logger.warning(f"Image file not found: {filename}")
+            logger.warning(f"Image file not found on disk: {filename}")
             continue
         
         try:
+            logger.info(f"Uploading to eBay: {image_path.name}")
             url = upload_picture_to_ebay(image_path)
             urls.append(url)
             uploaded_count += 1
@@ -228,6 +256,14 @@ def upload_images_for_sku(
         except Exception as e:
             logger.error(f"Failed to upload {filename}: {e}")
             continue
+
+    logger.info(
+        "Upload summary for SKU %s -> uploaded: %s, cached: %s, urls: %s",
+        sku,
+        uploaded_count,
+        cached_count,
+        len(urls),
+    )
     
     # Save updated JSON with eBay URLs
     if updated:
@@ -641,15 +677,25 @@ def create_listing(
         logger.warning(f"Failed to cache description for {sku}: {e}")
     
     # Get condition ID
+    condition_text = ""
     if condition_id is None:
         condition_text = condition_section.get("Condition", "")
         condition_id = map_condition_to_id(condition_text)
+    logger.info(
+        "Listing condition for SKU %s: text='%s', id=%s, category_id=%s",
+        sku,
+        condition_text,
+        condition_id,
+        category_id,
+    )
     
     # Upload images
     upload_result = upload_images_for_sku(sku, max_images=EBAY_MAX_IMAGES)
     image_urls = upload_result.get("urls", [])
+    logger.info("Upload result for %s: %s", sku, upload_result)
     
     if not image_urls:
+        logger.error("No image URLs after upload for SKU %s", sku)
         raise ValueError(f"No images uploaded for SKU {sku}")
     
     # Build picture details XML
@@ -865,6 +911,13 @@ def preview_listing(sku: str, price: float, condition_id: Optional[int] = None) 
         condition_id = map_condition_to_id(condition_text)
     else:
         condition_text = condition_section.get("Condition", "")
+    logger.info(
+        "Preview condition for SKU %s: text='%s', id=%s, category_id=%s",
+        sku,
+        condition_text,
+        condition_id,
+        category_id,
+    )
     
     # Get images (check cached URLs)
     upload_result = upload_images_for_sku(sku, max_images=EBAY_MAX_IMAGES)

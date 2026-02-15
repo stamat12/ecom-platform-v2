@@ -182,11 +182,18 @@ export default function SkuDetailPage() {
       await new Promise(resolve => setTimeout(resolve, 300)); // Brief pause for UI
       setUploadProgress({ show: true, message: "Uploading images to eBay...", step: 2, total: 4 });
       
+      let conditionId = ebayListingData.condition
+        ? parseInt(ebayListingData.condition, 10)
+        : null;
+      if (Number.isNaN(conditionId)) {
+        conditionId = null;
+      }
+
       const requestBody = {
         sku,
         price: parseFloat(ebayListingData.price),
         quantity: parseInt(ebayListingData.quantity),
-        condition: ebayListingData.condition
+        condition_id: conditionId,
       };
       
       // Add modified SKU if provided

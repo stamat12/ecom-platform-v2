@@ -885,11 +885,20 @@ export default function SkuBatchPage() {
       await new Promise(resolve => setTimeout(resolve, 300));
       setUploadProgress(prev => ({ ...prev, [sku]: { show: true, message: "Uploading images to eBay...", step: 2, total: 4 } }));
       
+      let conditionId = listingData.condition_id || listingData.condition || "1000";
+      if (typeof conditionId === "string") {
+        conditionId = conditionId.trim();
+      }
+      conditionId = parseInt(conditionId, 10);
+      if (Number.isNaN(conditionId)) {
+        conditionId = 1000;
+      }
+
       const requestBody = {
         sku,
         price: parseFloat(listingData.price),
         quantity: parseInt(listingData.quantity || "1"),
-        condition: listingData.condition || "1000"
+        condition_id: conditionId
       };
       
       // Add modified SKU if provided
@@ -2460,7 +2469,7 @@ export default function SkuBatchPage() {
                               value={ebayListingData[sku]?.shipping_costs_net ?? ""}
                               onChange={(e) => setEbayListingData(prev => ({
                                 ...prev,
-                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), shipping_costs_net: e.target.value }
+                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }), shipping_costs_net: e.target.value }
                               }))}
                               style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
                               placeholder="0.00"
@@ -2474,7 +2483,7 @@ export default function SkuBatchPage() {
                               value={ebayListingData[sku]?.price || ""}
                               onChange={(e) => setEbayListingData(prev => ({
                                 ...prev,
-                                [sku]: { ...(prev[sku] || { quantity: "1", condition: "1000" }), price: e.target.value }
+                                [sku]: { ...(prev[sku] || { quantity: "1", condition_id: "1000" }), price: e.target.value }
                               }))}
                               style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3 }}
                               placeholder="29.99"
@@ -2506,7 +2515,7 @@ export default function SkuBatchPage() {
                             value={ebayListingData[sku]?.quantity || "1"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", condition: conditionFromProduct || "1000" }), quantity: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", condition_id: conditionFromProduct || "1000" }), quantity: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                           />
@@ -2515,10 +2524,10 @@ export default function SkuBatchPage() {
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Condition</label>
                           <select
-                            value={ebayListingData[sku]?.condition || conditionFromProduct || "1000"}
+                            value={ebayListingData[sku]?.condition_id || conditionFromProduct || "1000"}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", quantity: "1" }), condition: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1" }), condition_id: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                           >
@@ -2546,7 +2555,7 @@ export default function SkuBatchPage() {
                             value={ebayListingData[sku]?.ean || ""}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), ean: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }), ean: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                             placeholder="e.g. 4005900071439"
@@ -2562,7 +2571,7 @@ export default function SkuBatchPage() {
                             value={ebayListingData[sku]?.modified_sku || ""}
                             onChange={(e) => setEbayListingData(prev => ({
                               ...prev,
-                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition: "1000" }), modified_sku: e.target.value }
+                              [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }), modified_sku: e.target.value }
                             }))}
                             style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
                             placeholder={sku}

@@ -480,5 +480,19 @@
     "ContactURL": "https://www.nubikk.com/en/contact",
     "cached_at": "2026-02-13T10:06:51.916854",
     "original_brand": "Nubikk"
+  },
+  "champion": {
+    "CompanyName": "Hanesbrands Inc.",
+    "Street1": "1000 East Hanes Mill Road",
+    "Street2": "",
+    "CityName": "Winston-Salem",
+    "StateOrProvince": "NC",
+    "PostalCode": "27105",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.champion.com/contactus",
+    "cached_at": "2026-02-15T15:07:00.504866",
+    "original_brand": "Champion"
   }
 }
