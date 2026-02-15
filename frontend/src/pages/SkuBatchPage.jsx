@@ -96,11 +96,26 @@ export default function SkuBatchPage() {
   const [ebaySavingFields, setEbaySavingFields] = useState({}); // { sku: boolean }
   const [ebayListingData, setEbayListingData] = useState({}); // { sku: { price, quantity, condition, ean, modified_sku, schedule_date } }
   const [ebayCreatingListing, setEbayCreatingListing] = useState({}); // { sku: boolean }
+  const [ebayConditionNoteLoading, setEbayConditionNoteLoading] = useState({}); // { sku: boolean }
   const [uploadProgress, setUploadProgress] = useState({}); // { sku: { show, message, step, total } }
   const [ebayListingStatus, setEbayListingStatus] = useState({}); // { sku: true/false/null }
   const [ebayCategorySuggestions, setEbayCategorySuggestions] = useState({}); // { sku: [items] }
   const [ebayCategoryLoading, setEbayCategoryLoading] = useState({}); // { sku: boolean }
   const categorySearchTimers = useRef({});
+
+  const conditionLabelById = {
+    "1000": "New",
+    "1500": "New other",
+    "1750": "New with defects",
+    "2000": "Certified Refurbished",
+    "2500": "Seller Refurbished",
+    "2750": "Like New",
+    "3000": "Used",
+    "4000": "Very Good",
+    "5000": "Good",
+    "6000": "Acceptable",
+    "7000": "For parts / not working",
+  };
 
   // Calculate total selected images across all SKUs
   const totalSelectedImages = useMemo(() => {
@@ -869,6 +884,49 @@ export default function SkuBatchPage() {
     }
   };
 
+  const handleConditionNoteAi = async (sku) => {
+    const listingData = ebayListingData[sku] || {};
+    let conditionId = listingData.condition_id || listingData.condition || "1000";
+    if (typeof conditionId === "string") {
+      conditionId = conditionId.trim();
+    }
+    conditionId = parseInt(conditionId, 10);
+    if (Number.isNaN(conditionId)) {
+      conditionId = 1000;
+    }
+
+    try {
+      setEbayConditionNoteLoading(prev => ({ ...prev, [sku]: true }));
+      const res = await fetch("/api/ebay/condition-note", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku,
+          condition_id: conditionId,
+          condition_label: conditionLabelById[String(conditionId)] || "",
+          existing_description: listingData.condition_description || "",
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.detail || data.message || "AI generation failed");
+      }
+
+      setEbayListingData(prev => ({
+        ...prev,
+        [sku]: {
+          ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }),
+          condition_description: data.condition_description || "",
+        }
+      }));
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayConditionNoteLoading(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
   const handleEbayCreateListing = async (sku) => {
     const listingData = ebayListingData[sku] || {};
     if (!listingData.price) {
@@ -900,6 +958,10 @@ export default function SkuBatchPage() {
         quantity: parseInt(listingData.quantity || "1"),
         condition_id: conditionId
       };
+
+      if (listingData.condition_description && listingData.condition_description.trim()) {
+        requestBody.condition_description = listingData.condition_description.trim();
+      }
       
       // Add modified SKU if provided
       if (listingData.modified_sku && listingData.modified_sku.trim()) {
@@ -2506,7 +2568,7 @@ export default function SkuBatchPage() {
                         </div>
                       </div>
 
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 8, alignItems: "end", marginBottom: 12 }}>
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", gap: 8, alignItems: "end", marginBottom: 12 }}>
                         <div>
                           <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>Qty</label>
                           <input
@@ -2544,6 +2606,39 @@ export default function SkuBatchPage() {
                             <option value="6000">6000 - Acceptable</option>
                             <option value="7000">7000 - For parts / not working</option>
                           </select>
+                        </div>
+
+                        <div>
+                          <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4 }}>
+                            Condition Note <span style={{ color: "#999", fontWeight: "normal" }}>(required if not new)</span>
+                          </label>
+                          <div style={{ display: "flex", gap: 6 }}>
+                            <input
+                              type="text"
+                              value={ebayListingData[sku]?.condition_description || ""}
+                              onChange={(e) => setEbayListingData(prev => ({
+                                ...prev,
+                                [sku]: { ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }), condition_description: e.target.value }
+                              }))}
+                              style={{ flex: 1, padding: "6px", fontSize: 10, border: "1px solid #ddd", borderRadius: 3 }}
+                              placeholder="Short condition details"
+                            />
+                            <button
+                              onClick={() => handleConditionNoteAi(sku)}
+                              disabled={ebayConditionNoteLoading[sku]}
+                              style={{
+                                padding: "6px 8px",
+                                fontSize: 10,
+                                border: "1px solid #bbb",
+                                borderRadius: 3,
+                                background: ebayConditionNoteLoading[sku] ? "#eee" : "#fff",
+                                cursor: ebayConditionNoteLoading[sku] ? "not-allowed" : "pointer"
+                              }}
+                              title="Generate condition note from main images"
+                            >
+                              {ebayConditionNoteLoading[sku] ? "..." : "AI"}
+                            </button>
+                          </div>
                         </div>
 
                         <div>

@@ -1,0 +1,84 @@
+{
+  "HANVINBM014": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Lange Sporthosen",
+      "eBay Category ID": "260956"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Kappa",
+      "Color": "Weiß / Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Logo-Tape an den Seiten, gesticktes Omini-Logo am Oberschenkel, elastischer Bund mit Kordelzug, Bündchen an den Knöcheln",
+      "Keywords": "Vintage Jogginghose",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM014 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM014 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM014 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM014 (3).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Herren",
+        "Farbe": "Weiß",
+        "Größe": "L",
+        "Marke": "Kappa",
+        "Produktart": "Hosen",
+        "Stil": "Jogginghose"
+      },
+      "optional": {
+        "Anlass": "Sport",
+        "Verschluss": "Zugbandverschluss",
+        "Vintage": "Nein",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein"
+      }
+    }
+  }
+}

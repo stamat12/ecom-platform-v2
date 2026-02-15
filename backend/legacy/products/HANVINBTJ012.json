@@ -1,0 +1,50 @@
+{
+  "HANVINBTJ012": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Adidas",
+      "Color": "Grau",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Durchgehender Reißverschluss, Colorblock-Design, Stehkragen, gesticktes \"Rancho Vista GOLF CLUB\" Logo am Ärmel, Logo im Nacken, 3-Streifen-Print am Rücken (unter Belüftungsschlitz), Reißverschlusstaschen",
+      "Keywords": "Vintage Golf Regenjacke",
+      "Materials": "Nicht angegeben (vermutlich Polyester)"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    }
+  }
+}

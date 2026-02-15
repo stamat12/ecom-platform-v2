@@ -1,0 +1,50 @@
+{
+  "HANVINBM013": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Chaps",
+      "Color": "Blau",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Gestreiftes Muster, Polokragen, Logo-Patch am Saum, \"Est. 1978\" Logo im Nacken",
+      "Keywords": "Vintage Poloshirt",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    }
+  }
+}

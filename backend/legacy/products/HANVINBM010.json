@@ -52,14 +52,6 @@
       "phone": [],
       "enhanced": [
         {
-          "filename": "Used Clothes Enhacement_real_HANVINBM010 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM010 (2).jpg",
-          "prompt": "Used Clothes Enhacement",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        },
-        {
           "filename": "Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM010 (2)_1_lanczos_4x.png",
           "source": "HANVINBM010 (2).jpg",
           "prompt": "Used Clothes Invisible Mannequin 2.5 flash image",
@@ -74,6 +66,14 @@
           "generated": true,
           "upscaled": true,
           "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (1)_1_lanczos_4x.png",
+          "source": "HANVINBM010 (1).jpg",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
         }
       ],
       "summary": {
@@ -83,6 +83,90 @@
         "count_stock": 0,
         "count_phone": 0,
         "count_enhanced": 3
+      },
+      "main_images": [
+        {
+          "filename": "HANVINBM010 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM010 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM010 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM010 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM010 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "HANVINBM010 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b0EAAeSwbmhpkf3f/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/FSsAAeSw0Ttpkf3n/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (2)_1_lanczos_4x.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/-~sAAeSwl8Vpkf3u/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (1)_1_lanczos_4x.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MTQAAeSwh0dpkf33/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GhoAAeSwVR1pkf4B/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/dw8AAeSwRbRpkf4G/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cdYAAeSwC4xpkf4K/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Rm8AAeSwnaNpkf4O/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KpcAAeSwTf1pkf4R/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM010 (8).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GnsAAeSwz2Zpkf4W/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Champion",
+        "Größe": "M",
+        "Abteilung": "Herren",
+        "Produktart": "Kapuzenpullover",
+        "Stil": "Pullover",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Material": "Baumwollmischung",
+        "Ursprungsland": "Honduras",
+        "Textilpflege": "Maschinenwäsche"
       }
     }
   }

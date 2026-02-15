@@ -1,0 +1,119 @@
+{
+  "HANVINBM003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155183"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Jansport",
+      "Color": "Dunkelblau",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Gesticktes \"GW George Washington University\" Logo, Kapuze mit Kordelzug, Kängurutasche, Logo-Patch am Ärmel",
+      "Keywords": "Vintage College Hoodie",
+      "Materials": "55% Baumwolle, 45% Polyester"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM003 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM003 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM003 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM003 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "HANVINBM003 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-t8AAeSwr35pkiSV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YZwAAeSwAiNpkiSZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xFkAAeSwnxppkiSf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RuQAAeSwrL5pkiSj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ARQAAeSwR-xpkiSo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MJoAAeSwEYJpkiSs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM003 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pUAAeSwafFpkiSx/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "JanSport",
+        "Größe": "L",
+        "Abteilung": "Herren",
+        "Produktart": "Kapuzenpullover",
+        "Stil": "Pullover",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Material": "Baumwolle",
+        "Besonderheiten": "Kapuze",
+        "Ursprungsland": "Lesotho",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}

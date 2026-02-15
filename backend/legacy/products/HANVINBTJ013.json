@@ -1,0 +1,50 @@
+{
+  "HANVINBTJ013": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Akzeptabel"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Adidas",
+      "Color": "Dunkelblau",
+      "Size": "164"
+    },
+    "Intern Generated Info": {
+      "More details": "WICHTIGER MANGEL: Die Innenbeschichtung löst sich stark ab (siehe Foto). Außen gut. Durchgehender Reißverschluss, riesiges Logo auf dem Rücken, kleines Logo auf der Brust, Kordelzug am Saum.",
+      "Keywords": "Vintage Regenjacke",
+      "Materials": "100% Polyamid (Nylon)"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    }
+  }
+}

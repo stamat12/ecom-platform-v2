@@ -1,7 +1,6 @@
 """
 eBay category schema management service
 """
-import os
 import logging
 from typing import Dict, Any, List, Optional
 import requests
@@ -15,6 +14,7 @@ from app.config.ebay_config import (
 from app.repositories import ebay_schema_repo
 from app.repositories.sku_json_repo import read_sku_json
 from app.services.excel_inventory import load_inventory_dataframe
+from app.services.ebay_oauth import get_access_token
 
 logger = logging.getLogger(__name__)
 
@@ -24,10 +24,7 @@ _ebay_api_cache: Dict[str, Any] = {}
 
 def get_ebay_token() -> str:
     """Get eBay access token from environment"""
-    token = os.getenv("EBAY_ACCESS_TOKEN")
-    if not token:
-        raise ValueError("EBAY_ACCESS_TOKEN not found in environment variables")
-    return token
+    return get_access_token()
 
 
 def fetch_category_tree_id() -> str:
@@ -268,16 +265,25 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
     
     # Try to get category from multiple possible locations (same logic as /api/ebay/fields endpoint)
     category = None
+    category_id = None
     
     # Try top-level category field
     if "category" in product_json:
         category = product_json.get("category")
     
     # Try from Ebay Category section
-    if not category and "Ebay Category" in product_json:
+    if "Ebay Category" in product_json:
         ebay_cat = product_json.get("Ebay Category", {})
         if isinstance(ebay_cat, dict):
-            category = ebay_cat.get("Category")
+            if not category:
+                category = ebay_cat.get("Category")
+            # Prefer explicit category ID if present
+            category_id = (
+                ebay_cat.get("eBay Category ID")
+                or ebay_cat.get("Category ID")
+                or ebay_cat.get("CategoryId")
+                or ebay_cat.get("category_id")
+            )
     
     # Try from AI Product Details
     if not category and "AI Product Details" in product_json:
@@ -285,27 +291,30 @@ def get_schema_for_sku(sku: str, use_cache: bool = True) -> Optional[Dict[str, A
         if isinstance(ai_details, dict):
             category = ai_details.get("category")
     
-    if not category:
+    if not category and not category_id:
         logger.warning(f"No category found for SKU {sku}")
         return None
     
-    logger.info(f"Found category for SKU {sku}: {category}")
-    
-    # Look up category ID from mapping
-    try:
-        category_data = _get_category_id_from_mapping(category)
-        
-        if not category_data:
-            logger.warning(f"Could not find category ID for: {category}")
-            return None
-        
-        category_id = category_data.get("categoryId")
-        logger.info(f"Found category ID {category_id} for SKU {sku}")
-    except Exception as e:
-        logger.error(f"Error looking up category ID for {sku}: {e}")
-        import traceback
-        logger.error(traceback.format_exc())
-        raise
+    if category_id:
+        logger.info(f"Using category ID {category_id} from SKU {sku}")
+    else:
+        logger.info(f"Found category for SKU {sku}: {category}")
+
+        # Look up category ID from mapping
+        try:
+            category_data = _get_category_id_from_mapping(category)
+
+            if not category_data:
+                logger.warning(f"Could not find category ID for: {category}")
+                return None
+
+            category_id = category_data.get("categoryId")
+            logger.info(f"Found category ID {category_id} for SKU {sku}")
+        except Exception as e:
+            logger.error(f"Error looking up category ID for {sku}: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            raise
     
     # Load schema from cache or fetch from API if missing
     try:

@@ -2,7 +2,6 @@
 eBay listing synchronization service
 """
 import logging
-import os
 import re
 import requests
 import xml.etree.ElementTree as ET
@@ -17,6 +16,7 @@ from app.config.ebay_config import (
 )
 from app.repositories import ebay_cache_repo
 from app.services import ebay_listings_cache
+from app.services.ebay_oauth import get_access_token
 
 logger = logging.getLogger(__name__)
 
@@ -25,10 +25,7 @@ NS = {"e": "urn:ebay:apis:eBLBaseComponents"}
 
 def get_ebay_token() -> str:
     """Get eBay access token from environment"""
-    token = os.getenv("EBAY_ACCESS_TOKEN")
-    if not token:
-        raise ValueError("EBAY_ACCESS_TOKEN not found in environment variables")
-    return token
+    return get_access_token()
 
 
 def _build_headers(call_name: str, token: str) -> Dict[str, str]:

@@ -1,42 +1,166 @@
 {
   "HANVINBM009": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Pullover & Strick",
+      "eBay Category ID": "11484"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nautica",
+      "Color": "Dunkelblau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "V-Ausschnitt, gestreiftes Band auf Brusthöhe (rot/grau), gesticktes Ton-in-Ton Logo über dem Streifen",
+      "Keywords": "Vintage Strickpullover",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
     "Images": {
       "schema_version": "1.0",
-      "stock": [],
-      "phone": [],
-      "enhanced": [
-        {
-          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM009 (2).jpg",
-          "prompt": "Used Clothes Invisible Mannequin",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        },
-        {
-          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM009 (2).jpg",
-          "prompt": "Used Clothes Same Position",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        },
-        {
-          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (1)_1_lanczos_4x.png",
-          "source": "HANVINBM009 (1).jpg",
-          "prompt": "Used Clothes Same Position",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        }
-      ],
       "summary": {
         "has_stock": false,
         "has_phone": false,
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 0,
-        "count_enhanced": 3
+        "count_enhanced": 3,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (1)_1_lanczos_4x.png"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "HANVINBM009 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM009 (1).jpg"
+        },
+        {
+          "filename": "HANVINBM009 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM009 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM009 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM009 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aB8AAeSwLbVpkfy7/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (1)_1_lanczos_4x.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MikAAeSwTVFpkfzC/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/EjIAAeSwz2ZpkfzM/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (2).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ElcAAeSwkWxpkfzT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UcgAAeSwBWNpkfzn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DRcAAeSwPNNpkfzs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QkUAAeSwh79pkfzy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/X0YAAeSwk3Fpkfz3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM009 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ETMAAeSwP8Zpkfz8/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nautica",
+        "Größe": "M",
+        "Stil": "Pullover",
+        "Abteilung": "Herren",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Produktart": "Pullover",
+        "Material": "Baumwolle",
+        "Ausschnitt": "V-Ausschnitt",
+        "Ursprungsland": "China",
+        "Gewebeart": "Strick",
+        "Jahreszeit": "Herbst",
+        "Vintage": "Nein",
+        "Muster": "Ohne Muster",
+        "Passform": "Regular",
+        "Besonderheiten": "Alle Jahreszeiten",
+        "Ärmellänge": "Langarm",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Nur Handwäsche"
       }
     }
   }

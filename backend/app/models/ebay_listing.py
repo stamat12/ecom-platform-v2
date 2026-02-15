@@ -62,6 +62,7 @@ class CreateListingRequest(BaseModel):
     ebay_sku: Optional[str] = Field(default=None, description="SKU to use for eBay listing (if different from source SKU)")
     price: float = Field(gt=0)
     condition_id: Optional[int] = Field(default=None, description="eBay condition ID (e.g., 1000=New)")
+    condition_description: Optional[str] = Field(default=None, description="Additional condition description for non-new items")
     schedule_days: int = Field(default=14, ge=0, le=30, description="Days to schedule listing in future")
     payment_policy: Optional[str] = None
     return_policy: Optional[str] = None
@@ -77,6 +78,23 @@ class ListingPreviewRequest(BaseModel):
     sku: str
     price: float = Field(gt=0)
     condition_id: Optional[int] = None
+
+
+class ConditionNoteRequest(BaseModel):
+    """Request to generate an AI condition description"""
+    sku: str
+    condition_id: Optional[int] = None
+    condition_label: Optional[str] = None
+    existing_description: Optional[str] = None
+
+
+class ConditionNoteResponse(BaseModel):
+    """Response for AI condition description"""
+    success: bool
+    sku: str
+    condition_description: str = ""
+    message: str
+    errors: List[str] = Field(default_factory=list)
 
 
 class CreateListingResponse(BaseModel):

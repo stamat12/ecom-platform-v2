@@ -1,0 +1,87 @@
+{
+  "HANVINBM004": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155183"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Champion",
+      "Color": "Weinrot",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "\"Boston College Hockey\" Print auf der Brust, Kängurutasche, Kapuze mit Kordelzug, gesticktes Champion 'C' Logo am Ärmel",
+      "Keywords": "Vintage College Hoodie",
+      "Materials": "Fleece"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM004 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM004 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM004 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM004 (4).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Champion",
+        "Größe": "XL",
+        "Abteilung": "Herren",
+        "Produktart": "Kapuzenpullover",
+        "Stil": "Pullover",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Material": "Baumwollmischung",
+        "Besonderheiten": "Kapuze",
+        "Gewebeart": "Fleece",
+        "Ursprungsland": "Honduras",
+        "Aktivität": "Eishockey",
+        "Jahreszeit": "Winter",
+        "Ärmellänge": "Langarm",
+        "Passform": "Regular",
+        "Ausschnitt": "Kragen"
+      }
+    }
+  }
+}

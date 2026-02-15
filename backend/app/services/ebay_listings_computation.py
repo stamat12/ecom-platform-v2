@@ -131,12 +131,14 @@ def compute_ebay_listings() -> Generator[Dict, None, None]:
     from datetime import datetime
     from . import ebay_listings_cache
     
-    # Get OAuth token from environment
-    oauth_token = os.getenv('EBAY_ACCESS_TOKEN')
-    if not oauth_token:
+    # Get OAuth token (auto-refresh)
+    try:
+        from app.services.ebay_oauth import get_access_token
+        oauth_token = get_access_token()
+    except Exception as e:
         yield {
             "status": "error",
-            "message": "EBAY_ACCESS_TOKEN not found in environment variables",
+            "message": str(e),
             "timestamp": datetime.now().isoformat()
         }
         return

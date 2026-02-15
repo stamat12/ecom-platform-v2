@@ -75,8 +75,10 @@ from app.models.ebay_listing import (
     ManufacturerLookupRequest, ManufacturerLookupResponse,
     CreateListingRequest, CreateListingResponse,
     ListingPreviewRequest, ListingPreviewResponse,
+    ConditionNoteRequest, ConditionNoteResponse,
     BatchCreateListingRequest, BatchCreateListingResponse
 )
+from app.models.ebay_oauth import EbayOAuthExchangeRequest, EbayOAuthExchangeResponse
 from app.models.ebay_sync import (
     SyncListingsRequest, SyncListingsResponse,
     ListingCountsResponse,
@@ -84,6 +86,7 @@ from app.models.ebay_sync import (
 )
 from app.models.inventory_import import InventoryImportRequest, InventoryImportResponse
 from app.models.excel_sync import ExcelToDbSyncRequest, ExcelToDbSyncResponse
+from app.services import ebay_oauth
 
 # Create FastAPI app
 app = FastAPI(title="Ecom Platform API", version="1.0")
@@ -1105,6 +1108,44 @@ def preview_ebay_listing(request: ListingPreviewRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+@app.post("/api/ebay/oauth/exchange", response_model=EbayOAuthExchangeResponse)
+def exchange_ebay_oauth_code(request: EbayOAuthExchangeRequest):
+    """Exchange OAuth code for refresh token"""
+    try:
+        data = ebay_oauth.exchange_authorization_code(
+            code=request.code,
+            redirect_uri=request.redirect_uri,
+        )
+        return EbayOAuthExchangeResponse(
+            success=True,
+            refresh_token=data.get("refresh_token"),
+            expires_in=data.get("expires_in"),
+            message="Token exchange successful",
+        )
+    except Exception as e:
+        return EbayOAuthExchangeResponse(
+            success=False,
+            refresh_token=None,
+            expires_in=None,
+            message=str(e),
+        )
+
+
+@app.post("/api/ebay/condition-note", response_model=ConditionNoteResponse)
+def generate_condition_note(request: ConditionNoteRequest):
+    """Generate an AI condition description based on main images"""
+    try:
+        result = ebay_listing.generate_condition_description(
+            sku=request.sku,
+            condition_id=request.condition_id,
+            condition_label=request.condition_label,
+            existing_description=request.existing_description,
+        )
+        return ConditionNoteResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 @app.post("/api/ebay/listings/create", response_model=CreateListingResponse)
 def create_ebay_listing(request: CreateListingRequest):
     """Create eBay listing"""
@@ -1113,6 +1154,7 @@ def create_ebay_listing(request: CreateListingRequest):
             sku=request.sku,
             price=request.price,
             condition_id=request.condition_id,
+            condition_description=request.condition_description,
             schedule_days=request.schedule_days,
             payment_policy=request.payment_policy,
             return_policy=request.return_policy,
@@ -1142,6 +1184,7 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
                 sku=listing_req.sku,
                 price=listing_req.price,
                 condition_id=listing_req.condition_id,
+                condition_description=listing_req.condition_description,
                 schedule_days=listing_req.schedule_days,
                 payment_policy=listing_req.payment_policy,
                 return_policy=listing_req.return_policy,

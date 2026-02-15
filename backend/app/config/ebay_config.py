@@ -9,6 +9,8 @@ EBAY_API_ENDPOINT = "https://api.ebay.com/ws/api.dll"
 EBAY_SANDBOX_ENDPOINT = "https://api.sandbox.ebay.com/ws/api.dll"
 EBAY_TAXONOMY_ENDPOINT = "https://api.ebay.com/commerce/taxonomy/v1"
 EBAY_SANDBOX_TAXONOMY_ENDPOINT = "https://api.sandbox.ebay.com/commerce/taxonomy/v1"
+EBAY_OAUTH_ENDPOINT = "https://api.ebay.com/identity/v1/oauth2/token"
+EBAY_SANDBOX_OAUTH_ENDPOINT = "https://api.sandbox.ebay.com/identity/v1/oauth2/token"
 
 # API Configuration
 EBAY_COMPATIBILITY_LEVEL = "1149"
@@ -24,6 +26,16 @@ def get_api_endpoint() -> str:
 
 def get_taxonomy_endpoint() -> str:
     return EBAY_SANDBOX_TAXONOMY_ENDPOINT if USE_SANDBOX else EBAY_TAXONOMY_ENDPOINT
+
+def get_oauth_endpoint() -> str:
+  return EBAY_SANDBOX_OAUTH_ENDPOINT if USE_SANDBOX else EBAY_OAUTH_ENDPOINT
+
+# OAuth Settings
+EBAY_OAUTH_CLIENT_ID = os.getenv("EBAY_OAUTH_CLIENT_ID", "")
+EBAY_OAUTH_CLIENT_SECRET = os.getenv("EBAY_OAUTH_CLIENT_SECRET", "")
+EBAY_OAUTH_REDIRECT_URI = os.getenv("EBAY_OAUTH_REDIRECT_URI", "")
+EBAY_REFRESH_TOKEN = os.getenv("EBAY_REFRESH_TOKEN", "")
+EBAY_OAUTH_SCOPES = os.getenv("EBAY_OAUTH_SCOPES", "")
 
 # Location Settings
 LOCATION_COUNTRY = "AT"
@@ -82,6 +94,11 @@ MANUFACTURER_CACHE_DURATION_DAYS = 90
 MANUFACTURER_LOOKUP_MODEL = "gpt-4o"
 MANUFACTURER_LOOKUP_TEMP = 0
 MANUFACTURER_LOOKUP_MAX_TOKENS = 500
+
+# Condition Description AI Settings
+CONDITION_NOTE_MODEL = "gpt-4o-mini"
+CONDITION_NOTE_TEMP = 0.2
+CONDITION_NOTE_MAX_TOKENS = 120
 
 # Image Upload Settings
 EBAY_MAX_IMAGES = 12
@@ -179,6 +196,19 @@ RULES:
 
 Output:
 Return ONLY valid JSON, no explanation, no comments.
+"""
+
+# Condition Description Prompt
+CONDITION_NOTE_PROMPT = """
+Du bist ein eBay-Verkaeufer. Schreibe eine kurze Zustandsbeschreibung (1-2 Saetze) basierend nur auf den Bildern.
+
+Zustand: {condition_label} (ID {condition_id})
+
+Regeln:
+- Nur sichtbare Merkmale oder Gebrauchsspuren nennen.
+- Wenn nichts Sicheres erkennbar ist, schreibe: "Keine auffaelligen Gebrauchsspuren erkennbar, bitte Bilder beachten."
+- Kein Markdown, keine Emojis, keine Aufzaehlungen.
+- Antworte nur mit dem Text, ohne Anfuehrungszeichen.
 """
 
 # Listing Description HTML Template (exact match from old project)

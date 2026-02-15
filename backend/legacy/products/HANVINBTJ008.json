@@ -1,0 +1,100 @@
+{
+  "HANVINBTJ008": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Adidas",
+      "Color": "Grau / Schwarz",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Durchgehender Reißverschluss, Climaproof-Technologie (wind-/wasserabweisend), Colorblock-Design, roter Streifen auf der Brust, rotes Logo im Nacken, verstellbare Ärmelbündchen, Reißverschlusstaschen, Netzfutter, kleiner Defekt am Ärmel (siehe Foto)",
+      "Keywords": "Vintage Golf Regenjacke",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ008 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ008 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ008 (9).jpg"
+        },
+        {
+          "filename": "HANVINBTJ008 (5).jpg"
+        },
+        {
+          "filename": "HANVINBTJ008 (10).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "Größe": "S",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Grau",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "China",
+        "Modell": "climaproof",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Aktivität": "Golf",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Muster": "Ohne Muster",
+        "Akzente": "Logo",
+        "Passform": "Regular",
+        "Kragenart": "Stehkragen",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    }
+  }
+}

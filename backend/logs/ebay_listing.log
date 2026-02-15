@@ -95,3 +95,447 @@
 2026-02-15 15:33:18,664 - INFO - Upload result for HANVINBM006: {'success': True, 'sku': 'HANVINBM006', 'uploaded_count': 0, 'cached_count': 7, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/HBcAAeSwMXtpkdLh/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjEx/z/UGgAAeSwCBhpkdLp/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/I3IAAeSwtchpkdLy/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l08AAeSwUH9pkdL1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WcoAAeSwKf9pkdL5/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kQ8AAeSwcZVpkdL8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tHcAAeSwI3ppkdL~/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 7 cached URLs'}
 2026-02-15 15:33:18,666 - INFO - Using cached manufacturer info for 'Champion'
 2026-02-15 15:33:22,253 - INFO - Successfully created listing for SKU HANVINBM006, ItemID: 137039802336
+2026-02-15 17:15:49,663 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 17:15:49,705 - INFO - Listing condition for SKU HANVINBM008: text='', id=5000, category_id=11484
+2026-02-15 17:15:49,706 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 17:15:49,736 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 17:15:49,736 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 17:15:56,010 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:15:56,014 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 17:16:01,786 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:16:01,789 - INFO - Uploading to eBay: HANVINBM008 (2).jpg
+2026-02-15 17:16:06,403 - ERROR - Failed to upload HANVINBM008 (2).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:16:06,406 - INFO - Uploading to eBay: HANVINBM008 (4).jpg
+2026-02-15 17:16:10,599 - ERROR - Failed to upload HANVINBM008 (4).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:16:10,600 - INFO - Uploading to eBay: HANVINBM008 (5).jpg
+2026-02-15 17:16:13,153 - ERROR - Failed to upload HANVINBM008 (5).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:16:13,155 - INFO - Uploading to eBay: HANVINBM008 (6).jpg
+2026-02-15 17:16:15,880 - ERROR - Failed to upload HANVINBM008 (6).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:16:15,882 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 0, cached: 0, urls: 0
+2026-02-15 17:16:15,882 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 0, 'cached_count': 0, 'total_count': 0, 'urls': [], 'message': 'Uploaded 0 new images, used 0 cached URLs'}
+2026-02-15 17:16:15,882 - ERROR - No image URLs after upload for SKU HANVINBM008
+2026-02-15 17:18:22,338 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 17:18:22,376 - INFO - Listing condition for SKU HANVINBM008: text='', id=5000, category_id=11484
+2026-02-15 17:18:22,376 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 17:18:22,410 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 17:18:22,411 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 17:18:28,391 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:28,394 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 17:18:34,548 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:34,552 - INFO - Uploading to eBay: HANVINBM008 (2).jpg
+2026-02-15 17:18:39,157 - ERROR - Failed to upload HANVINBM008 (2).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:39,159 - INFO - Uploading to eBay: HANVINBM008 (4).jpg
+2026-02-15 17:18:43,733 - ERROR - Failed to upload HANVINBM008 (4).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:43,736 - INFO - Uploading to eBay: HANVINBM008 (5).jpg
+2026-02-15 17:18:46,850 - ERROR - Failed to upload HANVINBM008 (5).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:46,852 - INFO - Uploading to eBay: HANVINBM008 (6).jpg
+2026-02-15 17:18:49,435 - ERROR - Failed to upload HANVINBM008 (6).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:18:49,436 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 0, cached: 0, urls: 0
+2026-02-15 17:18:49,436 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 0, 'cached_count': 0, 'total_count': 0, 'urls': [], 'message': 'Uploaded 0 new images, used 0 cached URLs'}
+2026-02-15 17:18:49,437 - ERROR - No image URLs after upload for SKU HANVINBM008
+2026-02-15 17:20:24,002 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 17:20:24,041 - INFO - Listing condition for SKU HANVINBM008: text='', id=5000, category_id=11484
+2026-02-15 17:20:24,041 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 17:20:24,072 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 17:20:24,072 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 17:20:30,078 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:30,081 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 17:20:36,006 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:36,008 - INFO - Uploading to eBay: HANVINBM008 (2).jpg
+2026-02-15 17:20:40,568 - ERROR - Failed to upload HANVINBM008 (2).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:40,570 - INFO - Uploading to eBay: HANVINBM008 (4).jpg
+2026-02-15 17:20:44,469 - ERROR - Failed to upload HANVINBM008 (4).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:44,471 - INFO - Uploading to eBay: HANVINBM008 (5).jpg
+2026-02-15 17:20:47,512 - ERROR - Failed to upload HANVINBM008 (5).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:47,513 - INFO - Uploading to eBay: HANVINBM008 (6).jpg
+2026-02-15 17:20:50,710 - ERROR - Failed to upload HANVINBM008 (6).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:20:50,711 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 0, cached: 0, urls: 0
+2026-02-15 17:20:50,711 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 0, 'cached_count': 0, 'total_count': 0, 'urls': [], 'message': 'Uploaded 0 new images, used 0 cached URLs'}
+2026-02-15 17:20:50,711 - ERROR - No image URLs after upload for SKU HANVINBM008
+2026-02-15 17:22:55,595 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 17:22:55,636 - INFO - Listing condition for SKU HANVINBM008: text='', id=5000, category_id=11484
+2026-02-15 17:22:55,637 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 17:22:55,669 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 17:22:55,670 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 17:23:01,796 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:01,798 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 17:23:07,749 - ERROR - Failed to upload Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:07,751 - INFO - Uploading to eBay: HANVINBM008 (2).jpg
+2026-02-15 17:23:11,949 - ERROR - Failed to upload HANVINBM008 (2).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:11,950 - INFO - Uploading to eBay: HANVINBM008 (4).jpg
+2026-02-15 17:23:15,897 - ERROR - Failed to upload HANVINBM008 (4).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:15,899 - INFO - Uploading to eBay: HANVINBM008 (5).jpg
+2026-02-15 17:23:18,258 - ERROR - Failed to upload HANVINBM008 (5).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:18,260 - INFO - Uploading to eBay: HANVINBM008 (6).jpg
+2026-02-15 17:23:20,789 - ERROR - Failed to upload HANVINBM008 (6).jpg: Could not find FullURL in eBay response: <UploadSiteHostedPicturesResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+<Ack>Failure</Ack>
+<Errors>
+<ShortMessage>Invalid IAF token.</ShortMessage>
+<LongMessage>IAF token supplied is invalid.</LongMessage>
+<ErrorCode>21916984</ErrorCode>
+<SeverityCode>Error</SeverityCode>
+<ErrorClassification>RequestError</ErrorClassification>
+</Errors>
+</UploadSiteHostedPicturesResponse>
+2026-02-15 17:23:20,791 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 0, cached: 0, urls: 0
+2026-02-15 17:23:20,791 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 0, 'cached_count': 0, 'total_count': 0, 'urls': [], 'message': 'Uploaded 0 new images, used 0 cached URLs'}
+2026-02-15 17:23:20,791 - ERROR - No image URLs after upload for SKU HANVINBM008
+2026-02-15 17:58:55,045 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 17:58:55,081 - INFO - Listing condition for SKU HANVINBM008: text='', id=5000, category_id=11484
+2026-02-15 17:58:55,081 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 17:58:55,114 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 17:58:55,114 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 17:59:01,829 - INFO - Uploaded image Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aRgAAeSw...
+2026-02-15 17:59:01,831 - INFO - Uploading to eBay: Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 17:59:09,311 - INFO - Uploaded image Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/n4UAAeSw...
+2026-02-15 17:59:09,314 - INFO - Uploading to eBay: HANVINBM008 (2).jpg
+2026-02-15 17:59:14,249 - INFO - Uploaded image HANVINBM008 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kP8AAeSw...
+2026-02-15 17:59:14,251 - INFO - Uploading to eBay: HANVINBM008 (4).jpg
+2026-02-15 17:59:19,050 - INFO - Uploaded image HANVINBM008 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/E1wAAeSw...
+2026-02-15 17:59:19,053 - INFO - Uploading to eBay: HANVINBM008 (5).jpg
+2026-02-15 17:59:22,081 - INFO - Uploaded image HANVINBM008 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kTYAAeSw...
+2026-02-15 17:59:22,083 - INFO - Uploading to eBay: HANVINBM008 (6).jpg
+2026-02-15 17:59:25,713 - INFO - Uploaded image HANVINBM008 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BloAAeSw...
+2026-02-15 17:59:25,716 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 6, cached: 0, urls: 6
+2026-02-15 17:59:25,722 - INFO - Saved 6 new eBay URLs to JSON
+2026-02-15 17:59:25,723 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aRgAAeSwGf9pkftU/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/n4UAAeSw-pZpkftc/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kP8AAeSwmBVpkfth/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/E1wAAeSwG1Jpkftl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kTYAAeSwmBVpkfto/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BloAAeSwr75pkfts/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-02-15 17:59:25,724 - INFO - Looking up manufacturer info for 'Tommy Hilfiger' using AI...
+2026-02-15 17:59:29,872 - INFO - Manufacturer info extracted and cached for 'Tommy Hilfiger'
+2026-02-15 17:59:32,904 - ERROR - Failed to create listing for SKU HANVINBM008: ['Code 21920350: Zustandsinformation 5000 existiert nicht oder ist kein gÃ¼ltiger Zustand fÃ¼r Kategorie 11484.', 'Code 21916883: Der angegebene Zustand ist fÃ¼r die ausgewÃ¤hlte Hauptkategorie-ID ungÃ¼ltig.']
+2026-02-15 18:01:10,206 - INFO - Creating eBay listing for SKU HANVINBM008 at price 27.0€
+2026-02-15 18:01:10,245 - INFO - Listing condition for SKU HANVINBM008: text='', id=3000, category_id=11484
+2026-02-15 18:01:10,247 - INFO - Uploading images for SKU HANVINBM008 (max: 12)
+2026-02-15 18:01:10,263 - INFO - Image files found on disk for SKU HANVINBM008: 8
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (2)_1_lanczos_4x.png
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for Used Clothes Same Position 2.5 flash image_real_HANVINBM008 (1)_1_lanczos_4x.png
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for HANVINBM008 (2).jpg
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for HANVINBM008 (4).jpg
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for HANVINBM008 (5).jpg
+2026-02-15 18:01:10,264 - DEBUG - Using cached URL for HANVINBM008 (6).jpg
+2026-02-15 18:01:10,264 - INFO - Upload summary for SKU HANVINBM008 -> uploaded: 0, cached: 6, urls: 6
+2026-02-15 18:01:10,265 - INFO - Upload result for HANVINBM008: {'success': True, 'sku': 'HANVINBM008', 'uploaded_count': 0, 'cached_count': 6, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aRgAAeSwGf9pkftU/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/n4UAAeSw-pZpkftc/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kP8AAeSwmBVpkfth/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/E1wAAeSwG1Jpkftl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kTYAAeSwmBVpkfto/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BloAAeSwr75pkfts/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 0 new images, used 6 cached URLs'}
+2026-02-15 18:01:10,267 - INFO - Using cached manufacturer info for 'Tommy Hilfiger'
+2026-02-15 18:01:13,648 - INFO - Successfully created listing for SKU HANVINBM008, ItemID: 137040004420
+2026-02-15 18:04:52,939 - INFO - Creating eBay listing for SKU HANVINBM009 at price 22.0€
+2026-02-15 18:04:52,979 - INFO - Listing condition for SKU HANVINBM009: text='', id=3000, category_id=11484
+2026-02-15 18:04:52,980 - INFO - Uploading images for SKU HANVINBM009 (max: 12)
+2026-02-15 18:04:53,018 - INFO - Image files found on disk for SKU HANVINBM009: 10
+2026-02-15 18:04:53,019 - INFO - Uploading to eBay: Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png
+2026-02-15 18:05:00,596 - INFO - Uploaded image Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aB8AAeSw...
+2026-02-15 18:05:00,599 - INFO - Uploading to eBay: Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (1)_1_lanczos_4x.png
+2026-02-15 18:05:07,322 - INFO - Uploaded image Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM009 (1)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MikAAeSw...
+2026-02-15 18:05:07,325 - INFO - Uploading to eBay: Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png
+2026-02-15 18:05:17,717 - INFO - Uploaded image Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM009 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/EjIAAeSw...
+2026-02-15 18:05:17,721 - INFO - Uploading to eBay: HANVINBM009 (2).jpg
+2026-02-15 18:05:26,475 - INFO - Uploaded image HANVINBM009 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ElcAAeSw...
+2026-02-15 18:05:26,478 - INFO - Uploading to eBay: HANVINBM009 (3).jpg
+2026-02-15 18:05:44,868 - INFO - Uploaded image HANVINBM009 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UcgAAeSw...
+2026-02-15 18:05:44,870 - INFO - Uploading to eBay: HANVINBM009 (4).jpg
+2026-02-15 18:05:49,689 - INFO - Uploaded image HANVINBM009 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DRcAAeSw...
+2026-02-15 18:05:49,691 - INFO - Uploading to eBay: HANVINBM009 (5).jpg
+2026-02-15 18:05:55,704 - INFO - Uploaded image HANVINBM009 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QkUAAeSw...
+2026-02-15 18:05:55,707 - INFO - Uploading to eBay: HANVINBM009 (6).jpg
+2026-02-15 18:06:01,020 - INFO - Uploaded image HANVINBM009 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/X0YAAeSw...
+2026-02-15 18:06:01,022 - INFO - Uploading to eBay: HANVINBM009 (7).jpg
+2026-02-15 18:06:05,915 - INFO - Uploaded image HANVINBM009 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ETMAAeSw...
+2026-02-15 18:06:05,917 - INFO - Upload summary for SKU HANVINBM009 -> uploaded: 9, cached: 0, urls: 9
+2026-02-15 18:06:05,923 - INFO - Saved 9 new eBay URLs to JSON
+2026-02-15 18:06:05,923 - INFO - Upload result for HANVINBM009: {'success': True, 'sku': 'HANVINBM009', 'uploaded_count': 9, 'cached_count': 0, 'total_count': 9, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/aB8AAeSwLbVpkfy7/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MikAAeSwTVFpkfzC/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/EjIAAeSwz2ZpkfzM/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ElcAAeSwkWxpkfzT/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UcgAAeSwBWNpkfzn/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DRcAAeSwPNNpkfzs/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QkUAAeSwh79pkfzy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/X0YAAeSwk3Fpkfz3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ETMAAeSwP8Zpkfz8/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 9 new images, used 0 cached URLs'}
+2026-02-15 18:06:05,924 - INFO - Looking up manufacturer info for 'Nautica' using AI...
+2026-02-15 18:06:08,744 - INFO - Manufacturer info extracted and cached for 'Nautica'
+2026-02-15 18:06:14,292 - INFO - Successfully created listing for SKU HANVINBM009, ItemID: 137040008395
+2026-02-15 18:09:48,055 - INFO - Creating eBay listing for SKU HANVINBM010 at price 32.0€
+2026-02-15 18:09:48,088 - INFO - Listing condition for SKU HANVINBM010: text='', id=3000, category_id=155183
+2026-02-15 18:09:48,088 - INFO - Uploading images for SKU HANVINBM010 (max: 12)
+2026-02-15 18:09:48,114 - INFO - Image files found on disk for SKU HANVINBM010: 11
+2026-02-15 18:09:48,115 - INFO - Uploading to eBay: HANVINBM010 (2).jpg
+2026-02-15 18:09:52,755 - INFO - Uploaded image HANVINBM010 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b0EAAeSw...
+2026-02-15 18:09:52,757 - INFO - Uploading to eBay: Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM010 (2)_1_lanczos_4x.png
+2026-02-15 18:10:00,749 - INFO - Uploaded image Used Clothes Invisible Mannequin 2.5 flash image_real_HANVINBM010 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/FSsAAeSw...
+2026-02-15 18:10:00,752 - INFO - Uploading to eBay: Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (2)_1_lanczos_4x.png
+2026-02-15 18:10:07,828 - INFO - Uploaded image Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/-~sAAeSw...
+2026-02-15 18:10:07,830 - INFO - Uploading to eBay: Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (1)_1_lanczos_4x.png
+2026-02-15 18:10:16,834 - INFO - Uploaded image Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM010 (1)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MTQAAeSw...
+2026-02-15 18:10:16,837 - INFO - Uploading to eBay: HANVINBM010 (3).jpg
+2026-02-15 18:10:26,965 - INFO - Uploaded image HANVINBM010 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GhoAAeSw...
+2026-02-15 18:10:26,967 - INFO - Uploading to eBay: HANVINBM010 (4).jpg
+2026-02-15 18:10:32,222 - INFO - Uploaded image HANVINBM010 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/dw8AAeSw...
+2026-02-15 18:10:32,224 - INFO - Uploading to eBay: HANVINBM010 (5).jpg
+2026-02-15 18:10:35,982 - INFO - Uploaded image HANVINBM010 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cdYAAeSw...
+2026-02-15 18:10:35,984 - INFO - Uploading to eBay: HANVINBM010 (6).jpg
+2026-02-15 18:10:39,892 - INFO - Uploaded image HANVINBM010 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Rm8AAeSw...
+2026-02-15 18:10:39,893 - INFO - Uploading to eBay: HANVINBM010 (7).jpg
+2026-02-15 18:10:43,040 - INFO - Uploaded image HANVINBM010 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KpcAAeSw...
+2026-02-15 18:10:43,042 - INFO - Uploading to eBay: HANVINBM010 (8).jpg
+2026-02-15 18:10:47,903 - INFO - Uploaded image HANVINBM010 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GnsAAeSw...
+2026-02-15 18:10:47,904 - INFO - Upload summary for SKU HANVINBM010 -> uploaded: 10, cached: 0, urls: 10
+2026-02-15 18:10:47,911 - INFO - Saved 10 new eBay URLs to JSON
+2026-02-15 18:10:47,911 - INFO - Upload result for HANVINBM010: {'success': True, 'sku': 'HANVINBM010', 'uploaded_count': 10, 'cached_count': 0, 'total_count': 10, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b0EAAeSwbmhpkf3f/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/FSsAAeSw0Ttpkf3n/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/-~sAAeSwl8Vpkf3u/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/MTQAAeSwh0dpkf33/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GhoAAeSwVR1pkf4B/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/dw8AAeSwRbRpkf4G/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cdYAAeSwC4xpkf4K/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Rm8AAeSwnaNpkf4O/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KpcAAeSwTf1pkf4R/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GnsAAeSwz2Zpkf4W/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 10 new images, used 0 cached URLs'}
+2026-02-15 18:10:47,911 - INFO - Using cached manufacturer info for 'Champion'
+2026-02-15 18:10:51,220 - INFO - Successfully created listing for SKU HANVINBM010, ItemID: 137040022116
+2026-02-15 20:46:22,910 - INFO - Creating eBay listing for SKU HANVINBM001 at price 22.0€
+2026-02-15 20:46:22,957 - INFO - Listing condition for SKU HANVINBM001: text='', id=3000, category_id=260954
+2026-02-15 20:46:22,957 - INFO - Uploading images for SKU HANVINBM001 (max: 12)
+2026-02-15 20:46:22,959 - ERROR - No eBay images defined for SKU HANVINBM001. Images section: {'schema_version': '1.0', 'stock': [], 'phone': [], 'enhanced': [{'filename': 'Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png', 'source': 'HANVINBM001 (2).jpg', 'prompt': 'Used Clothes Invisible Mannequin', 'generated': True, 'upscaled': True, 'upscale_method': 'lanczos-4x'}, {'filename': 'Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png', 'source': 'HANVINBM001 (2).jpg', 'prompt': 'Used Clothes Same Position', 'generated': True, 'upscaled': True, 'upscale_method': 'lanczos-4x'}], 'summary': {'has_stock': False, 'has_phone': False, 'has_enhanced': True, 'count_stock': 0, 'count_phone': 0, 'count_enhanced': 2, 'has_main_images': True, 'count_main_images': 8}, 'main_images': [{'filename': 'HANVINBM001 (2).jpg'}, {'filename': 'HANVINBM001 (6).jpg'}, {'filename': 'HANVINBM001 (3).jpg'}, {'filename': 'HANVINBM001 (4).jpg'}, {'filename': 'HANVINBM001 (10).jpg'}, {'filename': 'HANVINBM001 (1).jpg'}, {'filename': 'HANVINBM001 (11).jpg'}, {'filename': 'HANVINBM001 (9).jpg'}]}
+2026-02-15 20:46:46,752 - INFO - Creating eBay listing for SKU HANVINBM001 at price 22.0€
+2026-02-15 20:46:46,804 - INFO - Listing condition for SKU HANVINBM001: text='', id=3000, category_id=260954
+2026-02-15 20:46:46,804 - INFO - Uploading images for SKU HANVINBM001 (max: 12)
+2026-02-15 20:46:46,862 - INFO - Image files found on disk for SKU HANVINBM001: 13
+2026-02-15 20:46:46,862 - INFO - Uploading to eBay: HANVINBM001 (2).jpg
+2026-02-15 20:46:52,981 - INFO - Uploaded image HANVINBM001 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6IsAAeSw...
+2026-02-15 20:46:52,984 - INFO - Uploading to eBay: HANVINBM001 (6).jpg
+2026-02-15 20:46:58,471 - INFO - Uploaded image HANVINBM001 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-N0AAeSw...
+2026-02-15 20:46:58,473 - INFO - Uploading to eBay: HANVINBM001 (4).jpg
+2026-02-15 20:47:04,501 - INFO - Uploaded image HANVINBM001 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~WgAAeSw...
+2026-02-15 20:47:04,503 - INFO - Uploading to eBay: HANVINBM001 (3).jpg
+2026-02-15 20:47:10,582 - INFO - Uploaded image HANVINBM001 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6SsAAeSw...
+2026-02-15 20:47:10,585 - INFO - Uploading to eBay: HANVINBM001 (5).jpg
+2026-02-15 20:47:16,331 - INFO - Uploaded image HANVINBM001 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OL8AAeSw...
+2026-02-15 20:47:16,334 - INFO - Uploading to eBay: HANVINBM001 (10).jpg
+2026-02-15 20:47:20,813 - INFO - Uploaded image HANVINBM001 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8JAAAeSw...
+2026-02-15 20:47:20,816 - INFO - Uploading to eBay: HANVINBM001 (1).jpg
+2026-02-15 20:47:24,905 - INFO - Uploaded image HANVINBM001 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9FYAAeSw...
+2026-02-15 20:47:24,907 - INFO - Uploading to eBay: HANVINBM001 (11).jpg
+2026-02-15 20:47:28,355 - INFO - Uploaded image HANVINBM001 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TFoAAeSw...
+2026-02-15 20:47:28,359 - INFO - Uploading to eBay: HANVINBM001 (9).jpg
+2026-02-15 20:47:32,864 - INFO - Uploaded image HANVINBM001 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KtIAAeSw...
+2026-02-15 20:47:32,866 - INFO - Upload summary for SKU HANVINBM001 -> uploaded: 9, cached: 0, urls: 9
+2026-02-15 20:47:32,874 - INFO - Saved 9 new eBay URLs to JSON
+2026-02-15 20:47:32,875 - INFO - Upload result for HANVINBM001: {'success': True, 'sku': 'HANVINBM001', 'uploaded_count': 9, 'cached_count': 0, 'total_count': 9, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6IsAAeSw8s5pkiKr/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-N0AAeSwIh5pkiKw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~WgAAeSwFQxpkiK2/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6SsAAeSw8s5pkiK8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OL8AAeSw6bBpkiLC/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8JAAAeSwThVpkiLG/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9FYAAeSw7ylpkiLL/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TFoAAeSwwsBpkiLO/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KtIAAeSwv~RpkiLS/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 9 new images, used 0 cached URLs'}
+2026-02-15 20:47:32,876 - INFO - Using cached manufacturer info for 'Adidas'
+2026-02-15 20:47:37,462 - INFO - Successfully created listing for SKU HANVINBM001, ItemID: 137040272229
+2026-02-15 20:54:29,787 - INFO - Creating eBay listing for SKU HANVINBM003 at price 27.0€
+2026-02-15 20:54:29,839 - INFO - Listing condition for SKU HANVINBM003: text='', id=3000, category_id=155183
+2026-02-15 20:54:29,839 - INFO - Uploading images for SKU HANVINBM003 (max: 12)
+2026-02-15 20:54:29,842 - ERROR - No eBay images defined for SKU HANVINBM003. Images section: {'main_images': [{'filename': 'HANVINBM003 (2).jpg'}, {'filename': 'HANVINBM003 (5).jpg'}, {'filename': 'HANVINBM003 (6).jpg'}, {'filename': 'HANVINBM003 (7).jpg'}]}
+2026-02-15 20:54:58,795 - INFO - Creating eBay listing for SKU HANVINBM003 at price 27.0€
+2026-02-15 20:54:58,841 - INFO - Listing condition for SKU HANVINBM003: text='', id=3000, category_id=155183
+2026-02-15 20:54:58,842 - INFO - Uploading images for SKU HANVINBM003 (max: 12)
+2026-02-15 20:54:58,881 - INFO - Image files found on disk for SKU HANVINBM003: 8
+2026-02-15 20:54:58,882 - INFO - Uploading to eBay: HANVINBM003 (2).jpg
+2026-02-15 20:55:03,267 - INFO - Uploaded image HANVINBM003 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-t8AAeSw...
+2026-02-15 20:55:03,270 - INFO - Uploading to eBay: HANVINBM003 (3).jpg
+2026-02-15 20:55:07,687 - INFO - Uploaded image HANVINBM003 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YZwAAeSw...
+2026-02-15 20:55:07,689 - INFO - Uploading to eBay: HANVINBM003 (5).jpg
+2026-02-15 20:55:13,660 - INFO - Uploaded image HANVINBM003 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xFkAAeSw...
+2026-02-15 20:55:13,662 - INFO - Uploading to eBay: HANVINBM003 (6).jpg
+2026-02-15 20:55:17,659 - INFO - Uploaded image HANVINBM003 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RuQAAeSw...
+2026-02-15 20:55:17,660 - INFO - Uploading to eBay: HANVINBM003 (1).jpg
+2026-02-15 20:55:22,271 - INFO - Uploaded image HANVINBM003 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ARQAAeSw...
+2026-02-15 20:55:22,273 - INFO - Uploading to eBay: HANVINBM003 (8).jpg
+2026-02-15 20:55:26,375 - INFO - Uploaded image HANVINBM003 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MJoAAeSw...
+2026-02-15 20:55:26,377 - INFO - Uploading to eBay: HANVINBM003 (7).jpg
+2026-02-15 20:55:31,346 - INFO - Uploaded image HANVINBM003 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pUAAeSw...
+2026-02-15 20:55:31,347 - INFO - Upload summary for SKU HANVINBM003 -> uploaded: 7, cached: 0, urls: 7
+2026-02-15 20:55:31,352 - INFO - Saved 7 new eBay URLs to JSON
+2026-02-15 20:55:31,352 - INFO - Upload result for HANVINBM003: {'success': True, 'sku': 'HANVINBM003', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-t8AAeSwr35pkiSV/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YZwAAeSwAiNpkiSZ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xFkAAeSwnxppkiSf/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RuQAAeSwrL5pkiSj/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ARQAAeSwR-xpkiSo/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MJoAAeSwEYJpkiSs/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pUAAeSwafFpkiSx/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-02-15 20:55:31,353 - INFO - Looking up manufacturer info for 'Jansport' using AI...
+2026-02-15 20:55:32,808 - INFO - Manufacturer info extracted and cached for 'Jansport'
+2026-02-15 20:55:36,222 - INFO - Successfully created listing for SKU HANVINBM003, ItemID: 137040293171

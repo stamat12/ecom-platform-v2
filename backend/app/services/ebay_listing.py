@@ -1,6 +1,7 @@
 """
 eBay listing creation and image upload service
 """
+import base64
 import html
 import json
 import logging
@@ -26,11 +27,16 @@ from app.config.ebay_config import (
     DEFAULT_LISTING_DURATION,
     DEFAULT_QUANTITY,
     CONDITION_MAPPING,
+    CONDITION_ID_TO_LABEL,
     EBAY_MAX_IMAGES,
     MANUFACTURER_LOOKUP_MODEL,
     MANUFACTURER_LOOKUP_TEMP,
     MANUFACTURER_LOOKUP_MAX_TOKENS,
     MANUFACTURER_LOOKUP_PROMPT,
+    CONDITION_NOTE_MODEL,
+    CONDITION_NOTE_TEMP,
+    CONDITION_NOTE_MAX_TOKENS,
+    CONDITION_NOTE_PROMPT,
     LISTING_DESCRIPTION_TEMPLATE,
     LISTING_BANNER_URL,
     LISTING_RETURN_POLICY_DAYS,
@@ -39,6 +45,7 @@ from app.config.ebay_config import (
 from app.repositories import ebay_cache_repo
 from app.repositories.sku_json_repo import read_sku_json, _sku_json_path
 from app.services.image_listing import list_images_for_sku
+from app.services.ebay_oauth import get_access_token
 
 logger = logging.getLogger(__name__)
 logger = logging.getLogger(__name__)
@@ -74,10 +81,7 @@ def get_openai_client() -> OpenAI:
 
 def get_ebay_token() -> str:
     """Get eBay access token from environment"""
-    token = os.getenv("EBAY_ACCESS_TOKEN")
-    if not token:
-        raise ValueError("EBAY_ACCESS_TOKEN not found in environment variables")
-    return token
+    return get_access_token()
 
 
 def map_condition_to_id(condition_text: str) -> int:
@@ -290,6 +294,152 @@ def upload_images_for_sku(
         "urls": urls,
         "message": f"Uploaded {uploaded_count} new images, used {cached_count} cached URLs"
     }
+
+
+def _image_to_data_uri(image_path: Path) -> str:
+    """Convert image file to base64 data URI."""
+    if not image_path.exists():
+        raise FileNotFoundError(f"Image not found: {image_path}")
+    encoded = base64.b64encode(image_path.read_bytes()).decode("utf-8")
+    return f"data:image/*;base64,{encoded}"
+
+
+def _collect_main_image_paths_for_sku(sku: str, product_json: Dict[str, Any]) -> Tuple[List[Path], str]:
+    """Collect main image paths for a SKU using JSON metadata and image listing."""
+    images_section = product_json.get("Images", {}) or {}
+    main_images = images_section.get("main_images", []) or []
+
+    if not main_images:
+        return [], f"No main_images found for {sku}"
+
+    images_info = list_images_for_sku(sku)
+    image_path_map = {
+        Path(img.get("full_path", "")).name: Path(img.get("full_path", ""))
+        for img in images_info.get("images", [])
+        if Path(img.get("full_path", "")).exists()
+    }
+
+    filenames: List[str] = []
+    for item in main_images:
+        if isinstance(item, dict):
+            fn = item.get("filename")
+            if fn:
+                filenames.append(fn)
+        elif isinstance(item, str):
+            filenames.append(item)
+
+    paths: List[Path] = []
+    missing: List[str] = []
+    for fn in filenames:
+        p = image_path_map.get(Path(fn).name)
+        if p and p.exists():
+            paths.append(p)
+        else:
+            missing.append(fn)
+
+    debug = f"Found {len(paths)} main image(s) for {sku}"
+    if missing:
+        debug += f"; Missing: {missing[:5]}"
+
+    return paths, debug
+
+
+def generate_condition_description(
+    sku: str,
+    condition_id: Optional[int],
+    condition_label: Optional[str] = None,
+    existing_description: Optional[str] = None,
+) -> Dict[str, Any]:
+    """Generate a short condition description using main images and AI."""
+    if condition_id is None:
+        return {
+            "success": False,
+            "sku": sku,
+            "condition_description": "",
+            "message": "Missing condition_id",
+            "errors": ["condition_id is required"],
+        }
+
+    if condition_id == 1000:
+        return {
+            "success": True,
+            "sku": sku,
+            "condition_description": (existing_description or "").strip(),
+            "message": "Condition is New; no description required",
+            "errors": [],
+        }
+
+    product_json = read_sku_json(sku)
+    if not product_json:
+        return {
+            "success": False,
+            "sku": sku,
+            "condition_description": "",
+            "message": f"No product JSON found for SKU {sku}",
+            "errors": ["Product JSON not found"],
+        }
+
+    label = (condition_label or "").strip() or CONDITION_ID_TO_LABEL.get(condition_id, "")
+    if not label:
+        label = "Unbekannt"
+
+    image_paths, debug = _collect_main_image_paths_for_sku(sku, product_json)
+    if not image_paths:
+        return {
+            "success": False,
+            "sku": sku,
+            "condition_description": "",
+            "message": f"No main images found for SKU {sku}. {debug}",
+            "errors": ["No main images available"],
+        }
+
+    try:
+        client = get_openai_client()
+        prompt = CONDITION_NOTE_PROMPT.format(condition_label=label, condition_id=condition_id)
+
+        content: List[dict] = [{"type": "text", "text": prompt}]
+        for img_path in image_paths:
+            data_uri = _image_to_data_uri(img_path)
+            content.append({"type": "image_url", "image_url": {"url": data_uri}})
+
+        response = client.chat.completions.create(
+            model=CONDITION_NOTE_MODEL,
+            messages=[
+                {"role": "system", "content": "Du schreibst kurze Zustandsbeschreibungen fuer eBay."},
+                {"role": "user", "content": content},
+            ],
+            temperature=CONDITION_NOTE_TEMP,
+            max_tokens=CONDITION_NOTE_MAX_TOKENS,
+            timeout=45,
+        )
+
+        result_text = (response.choices[0].message.content or "").strip()
+        if result_text.startswith("```"):
+            lines = result_text.split("\n")
+            lines = lines[1:]
+            if lines and lines[-1].strip() == "```":
+                lines = lines[:-1]
+            result_text = "\n".join(lines).strip()
+
+        result_text = result_text.strip().strip("\"")
+
+        return {
+            "success": True,
+            "sku": sku,
+            "condition_description": result_text,
+            "message": "Condition description generated",
+            "errors": [],
+        }
+
+    except Exception as e:
+        logger.error("Condition description generation failed for %s: %s", sku, e)
+        return {
+            "success": False,
+            "sku": sku,
+            "condition_description": "",
+            "message": f"Condition description generation failed: {e}",
+            "errors": [str(e)],
+        }
 
 
 def _normalize_phone(phone: str) -> str:
@@ -620,6 +770,7 @@ def create_listing(
     sku: str,
     price: float,
     condition_id: Optional[int] = None,
+    condition_description: Optional[str] = None,
     schedule_days: int = DEFAULT_SCHEDULE_DAYS,
     payment_policy: Optional[str] = None,
     return_policy: Optional[str] = None,
@@ -688,6 +839,10 @@ def create_listing(
         condition_id,
         category_id,
     )
+
+    condition_desc_clean = (condition_description or "").strip()
+    if condition_id != 1000 and not condition_desc_clean:
+        logger.warning("Missing condition description for non-new SKU %s (condition_id=%s)", sku, condition_id)
     
     # Upload images
     upload_result = upload_images_for_sku(sku, max_images=EBAY_MAX_IMAGES)
@@ -763,7 +918,11 @@ def create_listing(
         <BestOfferEnabled>true</BestOfferEnabled>
     </BestOfferDetails>"""
     
-    xml_body = f"""<?xml version="1.0" encoding="utf-8"?>
+        condition_desc_xml = ""
+        if condition_desc_clean:
+                condition_desc_xml = f"<ConditionDescription>{html.escape(condition_desc_clean)}</ConditionDescription>"
+
+        xml_body = f"""<?xml version="1.0" encoding="utf-8"?>
 <AddFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
   <RequesterCredentials>
     <eBayAuthToken>{token}</eBayAuthToken>
@@ -781,6 +940,7 @@ def create_listing(
     <Currency>EUR</Currency>
     <CategoryMappingAllowed>true</CategoryMappingAllowed>
     <ConditionID>{condition_id}</ConditionID>
+        {condition_desc_xml}
 
     <Country>{LOCATION_COUNTRY}</Country>
     <Location>{LOCATION_CITY}</Location>

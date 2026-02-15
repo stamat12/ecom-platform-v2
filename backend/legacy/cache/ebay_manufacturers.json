@@ -494,5 +494,47 @@
     "ContactURL": "https://www.champion.com/contactus",
     "cached_at": "2026-02-15T15:07:00.504866",
     "original_brand": "Champion"
+  },
+  "tommy hilfiger": {
+    "CompanyName": "Tommy Hilfiger Europe B.V.",
+    "Street1": "Danzigerkade 165",
+    "Street2": "",
+    "CityName": "Amsterdam",
+    "StateOrProvince": "",
+    "PostalCode": "1013 AP",
+    "Country": "NL",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://global.tommy.com/int/en/contact",
+    "cached_at": "2026-02-15T17:59:29.864287",
+    "original_brand": "Tommy Hilfiger"
+  },
+  "nautica": {
+    "CompanyName": "Nautica Apparel, Inc.",
+    "Street1": "40 W 57th Street",
+    "Street2": "",
+    "CityName": "New York",
+    "StateOrProvince": "NY",
+    "PostalCode": "10019",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.nautica.com/contact-us.html",
+    "cached_at": "2026-02-15T18:06:08.735386",
+    "original_brand": "Nautica"
+  },
+  "jansport": {
+    "CompanyName": "VF Corporation",
+    "Street1": "1551 Wewatta Street",
+    "Street2": "",
+    "CityName": "Denver",
+    "StateOrProvince": "CO",
+    "PostalCode": "80202",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.jansport.com/contact-us.html",
+    "cached_at": "2026-02-15T20:55:32.799379",
+    "original_brand": "Jansport"
   }
 }

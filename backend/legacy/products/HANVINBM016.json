@@ -1,0 +1,89 @@
+{
+  "HANVINBM016": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Tommy Hilfiger Golf",
+      "Color": "Gelb",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Polokragen mit dunkelblauen Streifen, Seitenschlitze am Saum (Tennis-Tail), Logo im Nacken",
+      "Keywords": "Vintage Poloshirt",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM016 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM016 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM016 (6).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Herren",
+        "Farbe": "Gelb",
+        "Größe": "L",
+        "Marke": "Tommy Hilfiger"
+      },
+      "optional": {
+        "Produktart": "Polo",
+        "Ärmellänge": "Kurzarm",
+        "Material": "100% Baumwolle",
+        "Muster": "Ohne Muster",
+        "Ausschnitt": "Kragen",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Ursprungsland": "Malaysia",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Gewebeart": "Jersey",
+        "Verschluss": "Knopf",
+        "Kragenart": "Button-Down Kragen",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein"
+      }
+    }
+  }
+}

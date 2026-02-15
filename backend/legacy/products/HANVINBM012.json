@@ -1,0 +1,50 @@
+{
+  "HANVINBM012": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 6.58,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 6.86
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "L.L.Bean",
+      "Color": "Hellgrün",
+      "Size": "17 1/2 - 36 (ca. XL)"
+    },
+    "Intern Generated Info": {
+      "More details": "Button-Down-Kragen, Brusttasche, knitterarm (\"Wrinkle Resistant\"), Kellerfalte am Rücken, Maße: ca. 70cm Achsel zu Achsel, ca. 82cm Länge",
+      "Keywords": "Vintage Hemd",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    }
+  }
+}
