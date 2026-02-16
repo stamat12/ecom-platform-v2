@@ -17,19 +17,19 @@
       "Total Cost Net": 6.78
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": 6927990258300.0
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton (leicht verschmutzt)"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "F",
       "Brand": "Elegantpark",
       "Color": "",
-      "Size": ""
+      "Size": "40"
     },
     "Intern Generated Info": {
       "More details": "",
@@ -37,13 +37,13 @@
       "Materials": ""
     },
     "OP": {
-      "OP": 41.0
+      "OP": "41.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",

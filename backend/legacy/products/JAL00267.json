@@ -17,13 +17,13 @@
       "Total Cost Net": 3.94
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "M",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Sandalen sind aus robustem Material gefertigt und bieten eine gute Unterstützung für den Fuß. Sie verfügen über verstellbare Riemen für eine individuelle Passform. Die Sohle ist rutschfest und eignet sich gut für verschiedene Untergründe.",
-      "Keywords": "YY2212BF Sandalen Herren",
+      "Keywords": "Sandalen Herren",
       "Materials": "Kunststoff, Gummi"
     },
     "OP": {
-      "OP": 61.0
+      "OP": "61.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

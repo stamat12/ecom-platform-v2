@@ -17,13 +17,13 @@
       "Total Cost Net": 3.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Diese Schuhe haben einen Blockabsatz und ein elegantes Design. Sie sind in einem sanften Rosaton gehalten und verfügen über einen verstellbaren Knöchelriemen. Ideal für besondere Anlässe oder den Alltag.",
-      "Keywords": "HHGR405-SPK-39 Schuhe Damen",
+      "Keywords": "Schuhe Damen",
       "Materials": "None"
     },
     "OP": {
-      "OP": 48.0
+      "OP": "48.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

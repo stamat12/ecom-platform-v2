@@ -17,33 +17,33 @@
       "Total Cost Net": 4.42
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
+      "Gender": "U",
       "Brand": "sharllen",
-      "Color": null,
-      "Size": null
+      "Color": "Braun",
+      "Size": "42"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe haben eine graue Strickoberfläche mit einem stabilen, braunen Fersenbereich. Sie sind leicht und flexibel, ideal für den Alltag. Die Schnürsenkel sorgen für einen sicheren Halt.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Textil, Gummi"
     },
     "OP": {
-      "OP": 51.0
+      "OP": "51.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

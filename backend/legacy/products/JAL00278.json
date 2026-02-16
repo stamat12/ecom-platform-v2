@@ -17,19 +17,19 @@
       "Total Cost Net": 5.63
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "F",
       "Brand": "Meik Mangni",
       "Color": "",
-      "Size": ""
+      "Size": "37"
     },
     "Intern Generated Info": {
       "More details": "",
@@ -37,13 +37,13 @@
       "Materials": ""
     },
     "OP": {
-      "OP": 35.0
+      "OP": "35.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",

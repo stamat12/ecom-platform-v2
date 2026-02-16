@@ -17,13 +17,13 @@
       "Total Cost Net": 4.06
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +37,13 @@
       "Materials": ""
     },
     "OP": {
-      "OP": 41.0
+      "OP": "41.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

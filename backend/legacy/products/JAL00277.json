@@ -17,33 +17,33 @@
       "Total Cost Net": 7.12
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "Ortho+rest",
-      "Color": "Navy",
+      "Color": "Marinenblau",
       "Size": "39"
     },
     "Intern Generated Info": {
       "More details": "Diese Schuhe sind speziell für Komfort und Unterstützung konzipiert. Sie verfügen über eine geräumige Zehenbox, die Platz für Hallux Valgus bietet. Die Sohle ist weich und bietet eine gute Dämpfung.",
-      "Keywords": "Ortho+rest Hallux Schuhe Damen",
+      "Keywords": "Hallux Schuhe Damen",
       "Materials": "Keine Angaben"
     },
     "OP": {
-      "OP": 61.0
+      "OP": "61.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

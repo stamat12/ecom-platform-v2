@@ -17,13 +17,13 @@
       "Total Cost Net": 4.57
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus einem atmungsaktiven Material gefertigt und haben eine flexible Sohle. Sie verfügen über eine bequeme Passform und sind ideal für den Alltag. Die Ferse ist in einem braunen Farbton gehalten, was einen schönen Kontrast zum weißen Obermaterial bietet.",
-      "Keywords": "sharllen Sneakers Unisex",
+      "Keywords": "Sneakers Unisex",
       "Materials": "Textil"
     },
     "OP": {
-      "OP": 51.0
+      "OP": "51.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

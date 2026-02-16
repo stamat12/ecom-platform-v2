@@ -17,13 +17,13 @@
       "Total Cost Net": 4.5
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind leicht und atmungsaktiv, mit einem Obermaterial aus atmungsaktivem Gewebe. Sie verfügen über eine weiche und bequeme Innenausstattung, die Unterstützung für die Füße bietet. Die Sohle ist rutschfest und verschleißfest, ideal für den täglichen Gebrauch.",
-      "Keywords": "sharllen Sneakers Unisex",
+      "Keywords": "Sneakers Unisex",
       "Materials": "Textil, Gummi"
     },
     "OP": {
-      "OP": 51.0
+      "OP": "51.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

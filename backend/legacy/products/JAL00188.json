@@ -17,33 +17,33 @@
       "Total Cost Net": 2.13
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "F",
       "Brand": "Genshuo",
-      "Color": "",
-      "Size": ""
+      "Color": "Schwarz",
+      "Size": "40"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Diese eleganten Sandalen haben einen hohen Absatz und eine Plattform. Sie sind aus schwarzem Material gefertigt und verfügen über eine dekorative Schleife auf der Vorderseite. Die Riemchen sind verstellbar und sorgen für einen sicheren Halt.",
+      "Keywords": "Sandalen Damen",
+      "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": 43.0
+      "OP": "43.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

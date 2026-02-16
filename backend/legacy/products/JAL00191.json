@@ -17,13 +17,13 @@
       "Total Cost Net": 10.4
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -37,13 +37,13 @@
       "Materials": "Leder, Gummi"
     },
     "OP": {
-      "OP": 122.0
+      "OP": "122.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

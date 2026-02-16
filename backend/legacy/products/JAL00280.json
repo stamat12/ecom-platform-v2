@@ -17,13 +17,13 @@
       "Total Cost Net": 7.29
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -37,13 +37,13 @@
       "Materials": "Textil"
     },
     "OP": {
-      "OP": 47.0
+      "OP": "47.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

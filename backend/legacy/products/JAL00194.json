@@ -17,33 +17,33 @@
       "Total Cost Net": 4.8
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": 197458545747.0
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "M",
       "Brand": "Bruno Marc",
       "Color": "Schwarz",
-      "Size": "US: 13"
+      "Size": "47"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus schwarzem Leder gefertigt und haben eine klassische Schnürung. Sie verfügen über eine bequeme Innensohle und eine robuste Gummisohle. Die Rückseite hat eine praktische Schlaufe für einfaches Anziehen.",
-      "Keywords": "BMUMOX2508 Schnürschuhe Herren",
+      "Keywords": "Schnürschuhe Herren",
       "Materials": "Leder"
     },
     "OP": {
-      "OP": 46.0
+      "OP": "46.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

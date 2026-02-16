@@ -17,13 +17,13 @@
       "Total Cost Net": 6.34
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Diese eleganten Slingback-Schuhe haben eine spitze Zehenform und sind aus glänzendem Lackleder gefertigt. Sie verfügen über einen bequemen, gepolsterten Innenbereich aus Lammleder. Die Absatzhöhe beträgt 2,5 cm, was sie ideal für den Alltag macht.",
-      "Keywords": "C.Paravano Slingback Schuhe Damen",
+      "Keywords": "Slingback Schuhe Damen",
       "Materials": "Leder"
     },
     "OP": {
-      "OP": 110.0
+      "OP": "110.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

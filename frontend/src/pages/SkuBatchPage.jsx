@@ -73,6 +73,10 @@ export default function SkuBatchPage() {
   const [expandedDetails, setExpandedDetails] = useState({}); // { sku: boolean }
   const [editingDetails, setEditingDetails] = useState({}); // { sku: boolean }
   const [editedFieldsState, setEditedFieldsState] = useState({}); // { sku: { category: { field: value } } }
+  const [selectedSkusForProductDetailsEdit, setSelectedSkusForProductDetailsEdit] = useState(new Set());
+  const [bulkProductDetailsOpen, setBulkProductDetailsOpen] = useState(false);
+  const [bulkProductDetailsSaving, setBulkProductDetailsSaving] = useState(false);
+  const [bulkProductDetailsEdits, setBulkProductDetailsEdits] = useState({}); // { sku: { fieldName: value } }
 
   // AI Enrichment state
   const [selectedSkusForEnrichment, setSelectedSkusForEnrichment] = useState(new Set()); // Set of SKUs to enrich
@@ -566,6 +570,76 @@ export default function SkuBatchPage() {
     return field?.value ?? "";
   };
 
+  const bulkProductDetailFields = [
+    { name: "Supplier Title", editable: false },
+    { name: "Category", editable: true },
+    { name: "Condition", editable: true },
+    { name: "Gender", editable: true },
+    { name: "Brand", editable: true },
+    { name: "Color", editable: true },
+    { name: "Size", editable: true },
+    { name: "More details", editable: true, multiline: true },
+    { name: "Keywords", editable: true, multiline: true },
+    { name: "Materials", editable: true, multiline: true },
+    { name: "OP", editable: true },
+    { name: "Status", editable: true },
+    { name: "Lager", editable: true },
+  ];
+
+  const findDetailFieldInDetails = (details, fieldName) => {
+    if (!details?.categories) return null;
+    for (const category of details.categories) {
+      if (!Array.isArray(category.fields)) continue;
+      const field = category.fields.find((f) => f.name === fieldName);
+      if (field) {
+        return { categoryName: category.name, value: field.value ?? "" };
+      }
+    }
+    return null;
+  };
+
+  const getDetailValueByName = (sku, fieldName) => {
+    const details = productDetails[sku];
+    const found = findDetailFieldInDetails(details, fieldName);
+    return found?.value ?? "";
+  };
+
+  const applyProductCategorySelection = (sku, item) => {
+    setBulkProductDetailsEdits((prev) => {
+      const updates = { ...(prev[sku] || {}) };
+      updates.Category = item.label || "";
+
+      const details = productDetails[sku];
+      if (details?.categories) {
+        const categoryWithField = details.categories.find(cat =>
+          Array.isArray(cat.fields) && cat.fields.some(f => f.name === "Category")
+        );
+        const idField = categoryWithField?.fields?.find((f) => {
+          const n = String(f.name || "").toLowerCase();
+          return n.includes("category") && n.includes("id");
+        });
+        if (idField && item.category_id) {
+          updates[idField.name] = String(item.category_id);
+        }
+      }
+
+      return { ...prev, [sku]: updates };
+    });
+    setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: [] }));
+  };
+
+  const openImagePreview = (sku, img, context = "bulk") => {
+    const allImages = items.find(item => item.sku === sku)?.data?.images || [];
+    const startIndex = allImages.findIndex((i) => i.filename === img?.filename);
+    setPreview({
+      sku,
+      img,
+      images: allImages,
+      index: startIndex >= 0 ? startIndex : 0,
+      context,
+    });
+  };
+
   const toNumber = (value) => {
     if (value === null || value === undefined) return 0;
     const cleaned = String(value).replace(/[^0-9,.-]/g, "").replace(",", ".");
@@ -657,6 +731,16 @@ export default function SkuBatchPage() {
       newSet.add(sku);
     }
     setSelectedSkusForEbayListingEdit(newSet);
+  };
+
+  const toggleSkuForProductDetailsEdit = (sku) => {
+    const newSet = new Set(selectedSkusForProductDetailsEdit);
+    if (newSet.has(sku)) {
+      newSet.delete(sku);
+    } else {
+      newSet.add(sku);
+    }
+    setSelectedSkusForProductDetailsEdit(newSet);
   };
 
   const handleEnrichAll = async () => {
@@ -898,6 +982,81 @@ export default function SkuBatchPage() {
     setTimeout(() => handleBulkEbayCreateListings(), 500);
   };
 
+  const handleBulkProductDetailsSave = async () => {
+    const skus = Array.from(selectedSkusForProductDetailsEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for bulk product details edit");
+      return;
+    }
+
+    setBulkProductDetailsSaving(true);
+    let succeeded = 0;
+    let failed = 0;
+    const missingFieldsBySku = {};
+
+    for (const sku of skus) {
+      const details = productDetails[sku] || await loadProductDetails(sku);
+      if (!details) {
+        failed++;
+        continue;
+      }
+
+      const updates = {};
+      const missingFields = [];
+
+      bulkProductDetailFields.filter(field => field.editable).forEach((field) => {
+        const editedValue = bulkProductDetailsEdits[sku]?.[field.name];
+        const found = findDetailFieldInDetails(details, field.name);
+        if (!found?.categoryName) {
+          missingFields.push(field.name);
+          return;
+        }
+        if (!updates[found.categoryName]) updates[found.categoryName] = {};
+        updates[found.categoryName][field.name] = editedValue ?? "";
+      });
+
+      if (missingFields.length > 0) {
+        missingFieldsBySku[sku] = missingFields;
+      }
+
+      if (Object.keys(updates).length === 0) {
+        failed++;
+        continue;
+      }
+
+      try {
+        const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sku, updates })
+        });
+        const result = await res.json();
+        if (res.ok && result.success) {
+          succeeded++;
+          const detailsRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
+          if (detailsRes.ok) {
+            const detailsData = await detailsRes.json();
+            setProductDetails(prev => ({ ...prev, [sku]: detailsData }));
+          }
+        } else {
+          failed++;
+        }
+      } catch (e) {
+        failed++;
+      }
+    }
+
+    setBulkProductDetailsSaving(false);
+    if (Object.keys(missingFieldsBySku).length > 0) {
+      const message = Object.entries(missingFieldsBySku)
+        .map(([sku, fields]) => `${sku}: ${fields.join(", ")}`)
+        .join("\n");
+      alert(`Missing fields in Product Details schema:\n${message}`);
+    }
+    alert(`✅ Saved product details for ${succeeded} SKU(s). ${failed} failed.`);
+    setBulkProductDetailsOpen(false);
+  };
+
   useEffect(() => {
     if (!bulkEbayListingOpen) return;
     const skus = Array.from(selectedSkusForEbayListingEdit);
@@ -920,6 +1079,29 @@ export default function SkuBatchPage() {
         .catch(e => console.error("Failed to load schema:", e));
     });
   }, [bulkEbayListingOpen, selectedSkusForEbayListingEdit]);
+
+  useEffect(() => {
+    if (!bulkProductDetailsOpen) return;
+    const skus = Array.from(selectedSkusForProductDetailsEdit);
+    const init = async () => {
+      for (const sku of skus) {
+        const details = await loadProductDetails(sku);
+        loadEbayImageOrders(sku);
+        if (details) {
+          const fieldMap = {};
+          bulkProductDetailFields.forEach((field) => {
+            const found = findDetailFieldInDetails(details, field.name);
+            fieldMap[field.name] = found?.value ?? "";
+          });
+          setBulkProductDetailsEdits((prev) => ({
+            ...prev,
+            [sku]: { ...(prev[sku] || {}), ...fieldMap }
+          }));
+        }
+      }
+    };
+    init();
+  }, [bulkProductDetailsOpen, selectedSkusForProductDetailsEdit]);
 
   // eBay functions
   const loadEbayData = async (sku) => {
@@ -1380,10 +1562,11 @@ export default function SkuBatchPage() {
   const topPadding = (() => {
     const hasImageRibbon = totalSelectedImages > 0;
     const hasEnrichmentRibbon = selectedSkusForEnrichment.size > 0;
+    const hasProductDetailsRibbon = selectedSkusForProductDetailsEdit.size > 0;
     const hasEbayListingRibbon = selectedSkusForEbayListingEdit.size > 0;
     const hasEbayRibbon = selectedSkusForEbayEnrichment.size > 0;
     
-    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasEbayListingRibbon, hasEbayRibbon].filter(Boolean).length;
+    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasProductDetailsRibbon, hasEbayListingRibbon, hasEbayRibbon].filter(Boolean).length;
     return ribbonCount * 50;
   })();
 
@@ -1461,10 +1644,10 @@ export default function SkuBatchPage() {
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
                           {displayImage?.thumb_url ? (
                             <img
-                              src={`${displayImage.thumb_url}&t=${Date.now()}`}
+                              src={displayImage.thumb_url}
                               alt={displayImage.filename}
                               style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 3, border: "1px solid #ddd", cursor: "pointer" }}
-                              onClick={() => setPreview({ sku, img: displayImage })}
+                              onClick={() => openImagePreview(sku, displayImage, "bulk")}
                               onError={(e) => { e.target.style.display = "none"; }}
                               title={`${displayImage.filename} (Order: ${ebayOrders[displayImage.filename] || 'N/A'})`}
                             />
@@ -1635,26 +1818,228 @@ export default function SkuBatchPage() {
         </div>
       </Modal>
 
-      {/* Image Preview Modal */}
-      <Modal open={!!preview} onClose={() => setPreview(null)}>
-        <div style={{ textAlign: "center" }}>
-          {preview?.img?.full_url || preview?.img?.thumb_url ? (
-            <>
-              <div style={{ marginBottom: 12 }}>
-                <h3 style={{ margin: "0 0 4px 0" }}>{preview?.img?.filename}</h3>
-                <div style={{ fontSize: 12, color: "#666" }}>
-                  SKU: {preview?.sku} | Order: {ebayImageOrders[preview?.sku]?.[preview?.img?.filename] || "N/A"}
-                </div>
-              </div>
-              <img
-                src={`${preview.img.full_url || preview.img.thumb_url}&t=${Date.now()}`}
-                alt={preview.img.filename}
-                style={{ maxWidth: "90vw", maxHeight: "70vh", objectFit: "contain" }}
-              />
-            </>
-          ) : (
-            <div style={{ padding: 20, color: "#999" }}>No image available</div>
-          )}
+      <Modal open={bulkProductDetailsOpen} onClose={() => setBulkProductDetailsOpen(false)}>
+        <div style={{ width: "95vw", maxWidth: "1600px" }}>
+          <div style={{ fontSize: 16, fontWeight: "bold", marginBottom: 8 }}>Bulk Edit Product Details</div>
+          <div style={{ fontSize: 12, color: "#666", marginBottom: 12 }}>
+            Edit product details for {selectedSkusForProductDetailsEdit.size} selected SKU(s)
+          </div>
+
+          <div style={{ overflowX: "auto", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflow: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
+              <thead>
+                <tr style={{ background: "#f5f5f5", borderBottom: "2px solid #e0e0e0", position: "sticky", top: 0 }}>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", minWidth: 80 }}>Image</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>SKU</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Supplier Title</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Category</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Condition</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Gender</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Brand</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Color</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Size</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>More details</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Keywords</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Materials</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>OP</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Status</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", whiteSpace: "nowrap" }}>Lager</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.from(selectedSkusForProductDetailsEdit).map((sku) => {
+                  const allImages = items.find(item => item.sku === sku)?.data?.images || [];
+                  const ebayOrders = ebayImageOrders[sku] || {};
+                  const imageWithOrder1 = allImages.find(img => ebayOrders[img.filename] === 1);
+                  const displayImage = imageWithOrder1 || allImages[0];
+                  const getValue = (fieldName) => {
+                    const override = bulkProductDetailsEdits[sku]?.[fieldName];
+                    return override !== undefined ? override : getDetailValueByName(sku, fieldName);
+                  };
+                  const setValue = (fieldName, value) => {
+                    setBulkProductDetailsEdits((prev) => ({
+                      ...prev,
+                      [sku]: {
+                        ...(prev[sku] || {}),
+                        [fieldName]: value,
+                      }
+                    }));
+                  };
+                  return (
+                    <tr key={sku} style={{ borderBottom: "1px solid #e0e0e0" }}>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center" }}>
+                        {displayImage?.thumb_url ? (
+                          <img
+                            src={displayImage.thumb_url}
+                            alt={displayImage.filename}
+                            style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 3, border: "1px solid #ddd", cursor: "pointer" }}
+                            onClick={() => openImagePreview(sku, displayImage, "bulk")}
+                            onError={(e) => { e.target.style.display = "none"; }}
+                            title={displayImage.filename}
+                          />
+                        ) : (
+                          <div style={{ width: 60, height: 60, background: "#f0f0f0", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", color: "#999", fontSize: 10 }}>
+                            No img
+                          </div>
+                        )}
+                      </td>
+                      <td style={{ padding: 6, fontWeight: "bold", borderRight: "1px solid #e0e0e0", fontSize: 10 }}>{sku}</td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 200 }}>
+                        <div style={{ background: "#f9f9f9", border: "1px solid #e0e0e0", borderRadius: 3, padding: "6px 8px", color: "#666" }}>
+                          {getValue("Supplier Title") || "(empty)"}
+                        </div>
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 160 }}>
+                        <div style={{ position: "relative" }}>
+                          <input
+                            value={getValue("Category")}
+                            onChange={(e) => {
+                              setValue("Category", e.target.value);
+                              searchEbayCategories(sku, e.target.value);
+                            }}
+                            onFocus={(e) => searchEbayCategories(sku, e.target.value)}
+                            onBlur={() => setTimeout(() => {
+                              setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: [] }));
+                            }, 150)}
+                            style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                          />
+                          {(ebayCategorySuggestions[sku] || []).length > 0 && (
+                            <div
+                              style={{
+                                position: "absolute",
+                                top: "100%",
+                                left: 0,
+                                right: 0,
+                                zIndex: 30,
+                                background: "white",
+                                border: "1px solid #e0e0e0",
+                                borderTop: "none",
+                                maxHeight: 200,
+                                overflowY: "auto",
+                                boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+                              }}
+                            >
+                              {(ebayCategorySuggestions[sku] || []).map((item, idx) => (
+                                <div
+                                  key={`${item.category_id || item.label}-${idx}`}
+                                  onMouseDown={() => applyProductCategorySelection(sku, item)}
+                                  style={{
+                                    padding: "6px 8px",
+                                    cursor: "pointer",
+                                    fontSize: 11,
+                                    borderTop: "1px solid #f0f0f0"
+                                  }}
+                                >
+                                  <div style={{ fontWeight: 600, color: "#333" }}>{item.label}</div>
+                                  {item.category_id && (
+                                    <div style={{ fontSize: 10, color: "#777" }}>ID: {item.category_id}</div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Condition")}
+                          onChange={(e) => setValue("Condition", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Gender")}
+                          onChange={(e) => setValue("Gender", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Brand")}
+                          onChange={(e) => setValue("Brand", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Color")}
+                          onChange={(e) => setValue("Color", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Size")}
+                          onChange={(e) => setValue("Size", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 220 }}>
+                        <textarea
+                          value={getValue("More details")}
+                          onChange={(e) => setValue("More details", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 180 }}>
+                        <textarea
+                          value={getValue("Keywords")}
+                          onChange={(e) => setValue("Keywords", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 180 }}>
+                        <textarea
+                          value={getValue("Materials")}
+                          onChange={(e) => setValue("Materials", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 90 }}>
+                        <input
+                          value={getValue("OP")}
+                          onChange={(e) => setValue("OP", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                        <input
+                          value={getValue("Status")}
+                          onChange={(e) => setValue("Status", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                      <td style={{ padding: 6, minWidth: 120 }}>
+                        <input
+                          value={getValue("Lager")}
+                          onChange={(e) => setValue("Lager", e.target.value)}
+                          style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
+                        />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
+            <button
+              onClick={() => setBulkProductDetailsOpen(false)}
+              disabled={bulkProductDetailsSaving}
+              style={{ padding: "8px 12px", opacity: bulkProductDetailsSaving ? 0.6 : 1 }}
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleBulkProductDetailsSave}
+              disabled={bulkProductDetailsSaving}
+              style={{ padding: "8px 12px", background: "#2196F3", color: "white", border: "none", borderRadius: 4, cursor: bulkProductDetailsSaving ? "not-allowed" : "pointer" }}
+            >
+              {bulkProductDetailsSaving ? "Saving..." : "Save All"}
+            </button>
+          </div>
         </div>
       </Modal>
 
@@ -1931,6 +2316,86 @@ export default function SkuBatchPage() {
         </div>
       )}
 
+      {/* Product Details Bulk Edit Panel */}
+      {selectedSkusForProductDetailsEdit.size > 0 && (
+        <div style={{
+          position: "fixed",
+          top: (() => {
+            let offset = 0;
+            if (totalSelectedImages > 0) offset += 50;
+            if (selectedSkusForEnrichment.size > 0) offset += 50;
+            return offset;
+          })(),
+          left: 0,
+          right: 0,
+          zIndex: 98,
+          background: "#e3f2fd",
+          padding: 6,
+          borderRadius: 0,
+          marginBottom: 8,
+          border: "none",
+          borderBottom: "2px solid #1976d2",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
+            📋 Product Details: {selectedSkusForProductDetailsEdit.size} SKU(s)
+          </div>
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
+            <button
+              onClick={() => {
+                if (selectedSkusForProductDetailsEdit.size === items.length) {
+                  setSelectedSkusForProductDetailsEdit(new Set());
+                } else {
+                  const allSkus = new Set(items.map(item => item.sku));
+                  setSelectedSkusForProductDetailsEdit(allSkus);
+                }
+              }}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#1976d2",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              {selectedSkusForProductDetailsEdit.size === items.length ? "Deselect All" : "Select All"}
+            </button>
+            <button
+              onClick={() => setBulkProductDetailsOpen(true)}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#2196F3",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              ✏️ Bulk Edit
+            </button>
+            <button
+              onClick={() => setSelectedSkusForProductDetailsEdit(new Set())}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                cursor: "pointer",
+                background: "#666",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+              }}
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* eBay Listing Bulk Edit Panel */}
       {selectedSkusForEbayListingEdit.size > 0 && (
         <div style={{
@@ -1939,6 +2404,7 @@ export default function SkuBatchPage() {
             let offset = 0;
             if (totalSelectedImages > 0) offset += 50;
             if (selectedSkusForEnrichment.size > 0) offset += 50;
+            if (selectedSkusForProductDetailsEdit.size > 0) offset += 50;
             return offset;
           })(),
           left: 0,
@@ -2186,6 +2652,13 @@ export default function SkuBatchPage() {
                     onChange={() => toggleSkuForEnrichment(sku)}
                     style={{ width: 18, height: 18, cursor: "pointer" }}
                     title="Select for AI Product Details & eBay Fields enrichment"
+                  />
+                  <input
+                    type="checkbox"
+                    checked={selectedSkusForProductDetailsEdit.has(sku)}
+                    onChange={() => toggleSkuForProductDetailsEdit(sku)}
+                    style={{ width: 18, height: 18, cursor: "pointer" }}
+                    title="Select for bulk product details edit"
                   />
                   <input
                     type="checkbox"
@@ -3391,13 +3864,13 @@ export default function SkuBatchPage() {
                             
                             setPreviewEan(ean);
                             setPreviewOp(op);
-                            setPreview({ sku, img });
+                            openImagePreview(sku, img, "grid");
                           }}
                           style={{ all: "unset", cursor: "pointer", display: "block", position: "relative" }}
                           title={img.filename}
                         >
                           <img
-                            src={`${img.thumb_url}&t=${Date.now()}`}
+                            src={img.thumb_url}
                             alt={img.filename}
                             style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", display: "block", opacity: isRotating ? 0.5 : 1 }}
                             loading="lazy"
@@ -3585,112 +4058,170 @@ export default function SkuBatchPage() {
       })}
 
       <Modal open={!!preview} onClose={() => setPreview(null)}>
-        {preview && (
-          <div>
-            <div style={{ fontFamily: "ui-monospace", marginBottom: 8, fontWeight: "bold" }}>
-              {preview.sku} • {preview.img.filename}
-            </div>
-            <img
-              src={preview.img.preview_url || preview.img.original_url}
-              alt={preview.img.filename}
-              style={{ maxWidth: "85vw", maxHeight: "60vh", display: "block" }}
-            />
-            <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap", alignItems: "flex-end" }}>
-              <div style={{ flex: "1 1 200px" }}>
-                <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>EAN:</label>
-                <input
-                  type="text"
-                  value={previewEan}
-                  onChange={(e) => setPreviewEan(e.target.value)}
-                  style={{
-                    width: "100%",
-                    padding: "6px 8px",
-                    fontSize: 14,
-                    border: "1px solid #ccc",
-                    borderRadius: 4
-                  }}
-                  placeholder="Enter EAN"
-                />
+        {preview && (() => {
+          const images = preview.images?.length
+            ? preview.images
+            : (items.find(item => item.sku === preview.sku)?.data?.images || []);
+          const safeIndex = Math.max(0, Math.min(preview.index ?? 0, Math.max(images.length - 1, 0)));
+          const currentImage = images[safeIndex] || preview.img;
+          const order = currentImage ? (ebayImageOrders[preview.sku]?.[currentImage.filename] || "N/A") : "N/A";
+          const openOriginal = currentImage?.original_url || currentImage?.full_url || currentImage?.preview_url || currentImage?.thumb_url;
+
+          return (
+            <div>
+              <div style={{ fontFamily: "ui-monospace", marginBottom: 8, fontWeight: "bold" }}>
+                {preview.sku} • {currentImage?.filename || "(no image)"} • Order: {order}
               </div>
-              <div style={{ flex: "1 1 200px" }}>
-                <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>OP:</label>
-                <input
-                  type="text"
-                  value={previewOp}
-                  onChange={(e) => setPreviewOp(e.target.value)}
-                  style={{
-                    width: "100%",
-                    padding: "6px 8px",
-                    fontSize: 14,
-                    border: "1px solid #ccc",
-                    borderRadius: 4
-                  }}
-                  placeholder="Enter OP"
+
+              {currentImage ? (
+                <img
+                  src={currentImage.full_url || currentImage.preview_url || currentImage.original_url || currentImage.thumb_url}
+                  alt={currentImage.filename}
+                  style={{ maxWidth: "85vw", maxHeight: "60vh", display: "block" }}
                 />
+              ) : (
+                <div style={{ padding: 20, color: "#999" }}>No image available</div>
+              )}
+
+              <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                <button
+                  onClick={() => setPreview(prev => ({ ...prev, index: Math.max(0, (prev?.index ?? 0) - 1) }))}
+                  disabled={(preview.index ?? 0) <= 0}
+                  style={{ padding: "4px 10px", fontSize: 12, cursor: (preview.index ?? 0) <= 0 ? "not-allowed" : "pointer" }}
+                >
+                  Prev
+                </button>
+                <button
+                  onClick={() => setPreview(prev => ({ ...prev, index: Math.min((images.length || 1) - 1, (prev?.index ?? 0) + 1) }))}
+                  disabled={(preview.index ?? 0) >= (images.length - 1)}
+                  style={{ padding: "4px 10px", fontSize: 12, cursor: (preview.index ?? 0) >= (images.length - 1) ? "not-allowed" : "pointer" }}
+                >
+                  Next
+                </button>
+                <div style={{ fontSize: 12, color: "#666" }}>
+                  {images.length > 0 ? `${safeIndex + 1} / ${images.length}` : "0 / 0"}
+                </div>
+                {openOriginal && (
+                  <a href={openOriginal} target="_blank" rel="noreferrer" style={{ padding: "4px 10px", fontSize: 12 }}>
+                    Open original
+                  </a>
+                )}
               </div>
-              <button
-                onClick={async () => {
-                  setPreviewSaving(true);
-                  try {
-                    const sku = preview.sku;
-                    const updates = {};
-                    if (previewEan !== "") updates.EAN = { EAN: previewEan };
-                    if (previewOp !== "") updates.OP = { OP: previewOp };
 
-                    if (Object.keys(updates).length === 0) {
-                      alert("No changes to save");
-                      setPreviewSaving(false);
-                      return;
-                    }
+              {images.length > 1 && (
+                <div style={{ marginTop: 12, display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {images.map((img, idx) => (
+                    <img
+                      key={`${img.filename}-${idx}`}
+                      src={img.thumb_url || img.preview_url || img.original_url}
+                      alt={img.filename}
+                      onClick={() => setPreview(prev => ({ ...prev, index: idx }))}
+                      style={{
+                        width: 60,
+                        height: 60,
+                        objectFit: "cover",
+                        borderRadius: 4,
+                        border: idx === safeIndex ? "2px solid #1976d2" : "1px solid #ddd",
+                        cursor: "pointer"
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
 
-                    // Save to Product Details
-                    const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`, {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ sku, updates })
-                    });
-                    const result = await res.json();
+              {preview.context === "grid" && (
+                <div style={{ marginTop: 16, display: "flex", gap: 16, flexWrap: "wrap", alignItems: "flex-end" }}>
+                  <div style={{ flex: "1 1 200px" }}>
+                    <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>EAN:</label>
+                    <input
+                      type="text"
+                      value={previewEan}
+                      onChange={(e) => setPreviewEan(e.target.value)}
+                      style={{
+                        width: "100%",
+                        padding: "6px 8px",
+                        fontSize: 14,
+                        border: "1px solid #ccc",
+                        borderRadius: 4
+                      }}
+                      placeholder="Enter EAN"
+                    />
+                  </div>
+                  <div style={{ flex: "1 1 200px" }}>
+                    <label style={{ display: "block", fontSize: 12, marginBottom: 4, fontWeight: "bold" }}>OP:</label>
+                    <input
+                      type="text"
+                      value={previewOp}
+                      onChange={(e) => setPreviewOp(e.target.value)}
+                      style={{
+                        width: "100%",
+                        padding: "6px 8px",
+                        fontSize: 14,
+                        border: "1px solid #ccc",
+                        borderRadius: 4
+                      }}
+                      placeholder="Enter OP"
+                    />
+                  </div>
+                  <button
+                    onClick={async () => {
+                      setPreviewSaving(true);
+                      try {
+                        const sku = preview.sku;
+                        const updates = {};
+                        if (previewEan !== "") updates.EAN = { EAN: previewEan };
+                        if (previewOp !== "") updates.OP = { OP: previewOp };
 
-                    if (result.success) {
-                      alert(`✅ Saved successfully`);
-                      
-                      // Refresh product details
-                      const detailsRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
-                      if (detailsRes.ok) {
-                        const detailsData = await detailsRes.json();
-                        setProductDetails(prev => ({ ...prev, [sku]: detailsData }));
+                        if (Object.keys(updates).length === 0) {
+                          alert("No changes to save");
+                          setPreviewSaving(false);
+                          return;
+                        }
+
+                        const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`, {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ sku, updates })
+                        });
+                        const result = await res.json();
+
+                        if (result.success) {
+                          alert("✅ Saved successfully");
+                          const detailsRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
+                          if (detailsRes.ok) {
+                            const detailsData = await detailsRes.json();
+                            setProductDetails(prev => ({ ...prev, [sku]: detailsData }));
+                          }
+
+                          setPreview(null);
+                        } else {
+                          alert(result.message || "Failed to save");
+                        }
+                      } catch (e) {
+                        alert(`Error: ${e.message}`);
+                      } finally {
+                        setPreviewSaving(false);
                       }
-
-                      setPreview(null);
-                    } else {
-                      alert(result.message || "Failed to save");
-                    }
-                  } catch (e) {
-                    alert(`Error: ${e.message}`);
-                  } finally {
-                    setPreviewSaving(false);
-                  }
-                }}
-                disabled={previewSaving}
-                style={{
-                  padding: "6px 16px",
-                  fontSize: 14,
-                  background: previewSaving ? "#ccc" : "#4CAF50",
-                  color: "white",
-                  border: "none",
-                  borderRadius: 4,
-                  cursor: previewSaving ? "not-allowed" : "pointer",
-                  fontWeight: "bold"
-                }}
-              >
-                {previewSaving ? "Saving..." : "💾 Save"}
-              </button>
-              <a href={preview.img.original_url} target="_blank" rel="noreferrer" style={{ padding: "6px 10px", fontSize: 12 }}>
-                Open original
-              </a>
+                    }}
+                    disabled={previewSaving}
+                    style={{
+                      padding: "6px 16px",
+                      fontSize: 14,
+                      background: previewSaving ? "#ccc" : "#4CAF50",
+                      color: "white",
+                      border: "none",
+                      borderRadius: 4,
+                      cursor: previewSaving ? "not-allowed" : "pointer",
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {previewSaving ? "Saving..." : "💾 Save"}
+                  </button>
+                </div>
+              )}
             </div>
-          </div>
-        )}
+          );
+        })()}
       </Modal>
     </div>
   );

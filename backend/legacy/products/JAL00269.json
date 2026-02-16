@@ -17,13 +17,13 @@
       "Total Cost Net": 3.66
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,17 +33,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Grition Wandersandalen sind ideal für den Sommer. Sie verfügen über einen verstellbaren Klettverschluss für optimalen Halt. Die Sohle ist weich gepolstert und bietet guten Komfort. Zudem sind die Sandalen schnell trocknend und antibakteriell.",
-      "Keywords": "Grition Wandersandalen Unisex",
+      "Keywords": "Wandersandalen Unisex",
       "Materials": "PU"
     },
     "OP": {
-      "OP": 54.0
+      "OP": "54.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

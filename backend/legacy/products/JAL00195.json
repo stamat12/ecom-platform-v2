@@ -17,18 +17,18 @@
       "Total Cost Net": 4.8
     },
     "Ebay Category": {
-      "Category": null
+      "Category": ""
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "C.Paravano",
-      "Color": "Grau",
+      "Color": "Mintgrün",
       "Size": "40"
     },
     "Intern Generated Info": {
@@ -37,13 +37,13 @@
       "Materials": "Leder, Gummi"
     },
     "OP": {
-      "OP": 139.0
+      "OP": "139.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

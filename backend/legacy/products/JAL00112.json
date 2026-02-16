@@ -17,13 +17,14 @@
       "Total Cost Net": 2.63
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Etikett"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff"
     },
     "OP": {
-      "OP": 31.0
+      "OP": "31.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",

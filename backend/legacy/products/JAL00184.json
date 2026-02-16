@@ -17,13 +17,14 @@
       "Total Cost Net": 5.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -33,17 +34,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe haben eine glänzende Lackleder-Oberfläche und eine quadratische Zehenform. Sie sind mit einem Riemen und einer dekorativen Schnalle ausgestattet. Die Innensohle ist gepolstert und aus Lammleder gefertigt.",
-      "Keywords": "C.Paravano Ballerinas Damen",
+      "Keywords": "Ballerinas Damen",
       "Materials": "Lackleder Gummi Lammleder"
     },
     "OP": {
-      "OP": 114.0
+      "OP": "114.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",

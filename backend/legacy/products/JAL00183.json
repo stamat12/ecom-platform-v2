@@ -17,33 +17,34 @@
       "Total Cost Net": 4.75
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "C.Paravano",
       "Color": "Braun mit Leopardenmuster",
-      "Size": "38 1/2"
+      "Size": "38.5"
     },
     "Intern Generated Info": {
       "More details": "Diese Schuhe haben eine spitze Form und sind mit einem Leopardenmuster versehen. Sie verfügen über einen Slingback-Stil mit zwei Riemen. Die Absatzhöhe beträgt 2,5 cm und die Innensohle ist gepolstert.",
-      "Keywords": "C.Paravano Slingback Schuhe Damen",
+      "Keywords": "Slingback Schuhe Damen",
       "Materials": "Synthetik, Lammleder"
     },
     "OP": {
-      "OP": 110.0
+      "OP": "110.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",
