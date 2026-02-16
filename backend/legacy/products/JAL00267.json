@@ -1,0 +1,132 @@
+{
+  "JAL00267": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "GRITION Men's Hiking Sandals Outdoor Trekking Sandals Adjustable Closed Toe Men Summer Sport Hiking Shoes Waterproof Sandal Velcro Loose Beach MULTIWAY (41 EU, Gray)"
+    },
+    "Price Data": {
+      "Price Net": 2.85,
+      "Shipping Net": 1.09,
+      "Total Cost Net": 3.94
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Grition",
+      "Color": "Grau",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Sandalen sind aus robustem Material gefertigt und bieten eine gute Unterstützung für den Fuß. Sie verfügen über verstellbare Riemen für eine individuelle Passform. Die Sohle ist rutschfest und eignet sich gut für verschiedene Untergründe.",
+      "Keywords": "YY2212BF Sandalen Herren",
+      "Materials": "Kunststoff, Gummi"
+    },
+    "OP": {
+      "OP": 61.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00267 (1).jpg"
+        },
+        {
+          "filename": "JAL00267 (10).jpg"
+        },
+        {
+          "filename": "JAL00267 (11).jpg"
+        },
+        {
+          "filename": "JAL00267 (2).jpg"
+        },
+        {
+          "filename": "JAL00267 (3).jpg"
+        },
+        {
+          "filename": "JAL00267 (4).jpg"
+        },
+        {
+          "filename": "JAL00267 (5).jpg"
+        },
+        {
+          "filename": "JAL00267 (6).jpg"
+        },
+        {
+          "filename": "JAL00267 (7).jpg"
+        },
+        {
+          "filename": "JAL00267 (8).jpg"
+        },
+        {
+          "filename": "JAL00267 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00267 (4).jpg"
+        },
+        {
+          "filename": "JAL00267 (11).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

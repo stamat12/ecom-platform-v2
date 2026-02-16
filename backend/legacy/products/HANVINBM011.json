@@ -45,6 +45,63 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM011 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (7).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (4).jpg"
+        }
+      ],
+      "eBay Images": [],
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM011 (2).jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 1
+      }
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Tommy Hilfiger",
+        "Abteilung": "Herren",
+        "Farbe": "Blau"
+      },
+      "optional": {
+        "Produktart": "Geknöpftes Hemd",
+        "Ärmellänge": "Langarm",
+        "Material": "Baumwolle",
+        "Muster": "Kariert",
+        "Gewebeart": "Flanell",
+        "Passform": "Regular",
+        "Kragenart": "Button-Down Kragen",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "Singapur",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

@@ -1,0 +1,132 @@
+{
+  "JAL00188": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "GENSHUO Women's Bow Knot 14 cm Stiletto Heel Sandals with Straps and Round Toe and Open Platform, Black, 40 EU"
+    },
+    "Price Data": {
+      "Price Net": 1.27,
+      "Shipping Net": 0.86,
+      "Total Cost Net": 2.13
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Genshuo",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 43.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00188 (1).jpg"
+        },
+        {
+          "filename": "JAL00188 (10).jpg"
+        },
+        {
+          "filename": "JAL00188 (11).jpg"
+        },
+        {
+          "filename": "JAL00188 (2).jpg"
+        },
+        {
+          "filename": "JAL00188 (3).jpg"
+        },
+        {
+          "filename": "JAL00188 (4).jpg"
+        },
+        {
+          "filename": "JAL00188 (5).jpg"
+        },
+        {
+          "filename": "JAL00188 (6).jpg"
+        },
+        {
+          "filename": "JAL00188 (7).jpg"
+        },
+        {
+          "filename": "JAL00188 (8).jpg"
+        },
+        {
+          "filename": "JAL00188 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00188 (1).jpg"
+        },
+        {
+          "filename": "JAL00188 (2).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "JAL00112": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK411776093",
+      "ISIN": "b0csyndjx3",
+      "Supplier Title": "Meik Mangni Damen Sandalen Sommer Bohemian Flache Zehentrenner Strass Sandaletten Strand Schuhe Plattform Flip Flops B Beige Gr.38"
+    },
+    "Price Data": {
+      "Price Net": 2.2,
+      "Shipping Net": 0.43,
+      "Total Cost Net": 2.63
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Meik Mangni",
+      "Color": "Beige",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Sandalen haben eine elegante Gestaltung mit dekorativen Steinen. Sie sind aus einem bequemen Material gefertigt und bieten guten Halt. Ideal für den Sommer und Freizeitaktivitäten.",
+      "Keywords": "Sandalen Damen",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": 31.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00112 (1).jpg"
+        },
+        {
+          "filename": "JAL00112 (2).jpg"
+        },
+        {
+          "filename": "JAL00112 (3).jpg"
+        },
+        {
+          "filename": "JAL00112 (4).jpg"
+        },
+        {
+          "filename": "JAL00112 (5).jpg"
+        },
+        {
+          "filename": "JAL00112 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00112 (1).jpg"
+        },
+        {
+          "filename": "JAL00112 (3).jpg"
+        },
+        {
+          "filename": "JAL00112 (6).jpg"
+        },
+        {
+          "filename": "JAL00112 (5).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -45,6 +45,53 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ014 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ014 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ014 (5).jpg"
+        },
+        {
+          "filename": "HANVINBTJ014 (1).jpg"
+        },
+        {
+          "filename": "HANVINBTJ014 (8).jpg"
+        },
+        {
+          "filename": "HANVINBTJ014 (6).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Under Armour",
+        "Größe": "SM",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Schwarz",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "Polyester",
+        "Besonderheiten": "Abnehmbare Kapuze",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "Indonesien",
+        "Isoliermaterial": "Synthetik",
+        "Jacken-/Mantellänge": "Lang",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

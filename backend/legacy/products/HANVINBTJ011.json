@@ -45,6 +45,47 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ011 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (6).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (8).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "Größe": "XXL",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Schwarz",
+        "Außenmaterial": "Polyamid"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "Polyester",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "China",
+        "Isoliermaterial": "Synthetik",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

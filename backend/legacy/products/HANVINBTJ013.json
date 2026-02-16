@@ -45,6 +45,54 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ013 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (11).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (10).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (6).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (9).jpg"
+        },
+        {
+          "filename": "HANVINBTJ013 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "Größe": "L",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Blau",
+        "Außenmaterial": "Nylon"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "Polyester",
+        "Besonderheiten": "Abnehmbare Kapuze",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "China",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

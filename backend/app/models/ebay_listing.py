@@ -147,3 +147,31 @@ class BatchCreateListingResponse(BaseModel):
     failed_count: int
     results: List[CreateListingResponse]
     message: str
+
+
+class EbayListingBulkUpdateRequest(BaseModel):
+    """Request to bulk update listing draft fields for SKUs."""
+    skus: List[str]
+    set: Dict[str, Any] = Field(default_factory=dict)
+    adjust: Dict[str, float] = Field(default_factory=dict)
+
+
+class EbayListingBulkUpdateResponse(BaseModel):
+    """Response for bulk listing update."""
+    success: bool
+    updated: int
+    failed: int
+    results: Dict[str, str]
+
+
+class EbayListingBulkSaveRequest(BaseModel):
+    """Request to save listing draft fields per SKU."""
+    listings: Dict[str, Dict[str, Any]]
+
+
+class EbayListingBulkSaveResponse(BaseModel):
+    """Response for bulk listing save."""
+    success: bool
+    updated: int
+    failed: int
+    results: Dict[str, str]

@@ -1,0 +1,174 @@
+{
+  "JAL00269": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "GRITION Hiking Sandals Women Comfortable Closed Toe Lightweight Outdoor Sports Sandals Adjustable Breathable Waterproof For Beach Summer Gray 38EU"
+    },
+    "Price Data": {
+      "Price Net": 2.85,
+      "Shipping Net": 0.81,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Grition",
+      "Color": "Grau",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Grition Wandersandalen sind ideal für den Sommer. Sie verfügen über einen verstellbaren Klettverschluss für optimalen Halt. Die Sohle ist weich gepolstert und bietet guten Komfort. Zudem sind die Sandalen schnell trocknend und antibakteriell.",
+      "Keywords": "Grition Wandersandalen Unisex",
+      "Materials": "PU"
+    },
+    "OP": {
+      "OP": 54.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 24,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00269 (1).jpg"
+        },
+        {
+          "filename": "JAL00269 (10).jpg"
+        },
+        {
+          "filename": "JAL00269 (11).jpg"
+        },
+        {
+          "filename": "JAL00269 (12).jpg"
+        },
+        {
+          "filename": "JAL00269 (13).jpg"
+        },
+        {
+          "filename": "JAL00269 (14).jpg"
+        },
+        {
+          "filename": "JAL00269 (15).jpg"
+        },
+        {
+          "filename": "JAL00269 (16).jpg"
+        },
+        {
+          "filename": "JAL00269 (17).jpg"
+        },
+        {
+          "filename": "JAL00269 (18).jpg"
+        },
+        {
+          "filename": "JAL00269 (19).jpg"
+        },
+        {
+          "filename": "JAL00269 (2).jpg"
+        },
+        {
+          "filename": "JAL00269 (20).jpg"
+        },
+        {
+          "filename": "JAL00269 (21).jpg"
+        },
+        {
+          "filename": "JAL00269 (22).jpg"
+        },
+        {
+          "filename": "JAL00269 (23).jpg"
+        },
+        {
+          "filename": "JAL00269 (24).jpg"
+        },
+        {
+          "filename": "JAL00269 (3).jpg"
+        },
+        {
+          "filename": "JAL00269 (4).jpg"
+        },
+        {
+          "filename": "JAL00269 (5).jpg"
+        },
+        {
+          "filename": "JAL00269 (6).jpg"
+        },
+        {
+          "filename": "JAL00269 (7).jpg"
+        },
+        {
+          "filename": "JAL00269 (8).jpg"
+        },
+        {
+          "filename": "JAL00269 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00269 (2).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

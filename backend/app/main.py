@@ -76,7 +76,9 @@ from app.models.ebay_listing import (
     CreateListingRequest, CreateListingResponse,
     ListingPreviewRequest, ListingPreviewResponse,
     ConditionNoteRequest, ConditionNoteResponse,
-    BatchCreateListingRequest, BatchCreateListingResponse
+    BatchCreateListingRequest, BatchCreateListingResponse,
+    EbayListingBulkUpdateRequest, EbayListingBulkUpdateResponse,
+    EbayListingBulkSaveRequest, EbayListingBulkSaveResponse
 )
 from app.models.ebay_oauth import EbayOAuthExchangeRequest, EbayOAuthExchangeResponse
 from app.models.ebay_sync import (
@@ -981,6 +983,185 @@ def save_ebay_fields_for_sku(sku: str, request: dict):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+def _read_ebay_listing_data(product_json: dict) -> dict:
+    section = product_json.get("Ebay Listing", {})
+    if not isinstance(section, dict):
+        section = {}
+
+    ean_section = product_json.get("EAN", {}) if isinstance(product_json.get("EAN", {}), dict) else {}
+
+    return {
+        "price": section.get("Selling Price Total", ""),
+        "shipping_costs_net": section.get("Shipping Costs Net", ""),
+        "quantity": section.get("Quantity", ""),
+        "condition_id": section.get("Condition ID", ""),
+        "condition_description": section.get("Condition Note", ""),
+        "ean": section.get("EAN", "") or ean_section.get("EAN", ""),
+        "modified_sku": section.get("Modified SKU", ""),
+        "schedule_date": section.get("Schedule Date", ""),
+    }
+
+
+def _apply_ebay_listing_updates(product_json: dict, updates: dict) -> None:
+    if "Ebay Listing" not in product_json or not isinstance(product_json.get("Ebay Listing"), dict):
+        product_json["Ebay Listing"] = {}
+
+    section = product_json["Ebay Listing"]
+
+    mapping = {
+        "price": "Selling Price Total",
+        "shipping_costs_net": "Shipping Costs Net",
+        "quantity": "Quantity",
+        "condition_id": "Condition ID",
+        "condition_description": "Condition Note",
+        "ean": "EAN",
+        "modified_sku": "Modified SKU",
+        "schedule_date": "Schedule Date",
+    }
+
+    for key, value in updates.items():
+        if key not in mapping:
+            continue
+        if value is None:
+            continue
+        section[mapping[key]] = value
+
+    if "ean" in updates and updates.get("ean") is not None:
+        if "EAN" not in product_json or not isinstance(product_json.get("EAN"), dict):
+            product_json["EAN"] = {}
+        product_json["EAN"]["EAN"] = updates.get("ean")
+
+
+@app.get("/api/skus/{sku}/ebay-listing")
+def get_ebay_listing_data(sku: str):
+    """Get stored eBay listing data for a SKU."""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json
+
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+
+        return {
+            "success": True,
+            "sku": sku,
+            "data": _read_ebay_listing_data(product_json),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/skus/{sku}/ebay-listing")
+def save_ebay_listing_data(sku: str, request: dict):
+    """Save eBay listing data for a SKU."""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+
+        data = request.get("data", {}) if isinstance(request, dict) else {}
+        if not isinstance(data, dict):
+            raise HTTPException(status_code=400, detail="Invalid data payload")
+
+        _apply_ebay_listing_updates(product_json, data)
+        write_sku_json(sku, product_json)
+
+        return {
+            "success": True,
+            "sku": sku,
+            "message": "eBay listing data saved",
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/listing/bulk-update", response_model=EbayListingBulkUpdateResponse)
+def bulk_update_ebay_listing_data(request: EbayListingBulkUpdateRequest):
+    """Bulk update eBay listing data for multiple SKUs."""
+    from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+
+    updated = 0
+    failed = 0
+    results = {}
+
+    for sku in request.skus:
+        try:
+            product_json = read_sku_json(sku)
+            if not product_json:
+                raise ValueError("No JSON found")
+
+            current = _read_ebay_listing_data(product_json)
+
+            set_updates = request.set or {}
+            adjust_updates = request.adjust or {}
+
+            merged = dict(current)
+            for key, value in set_updates.items():
+                if value is None or value == "":
+                    continue
+                merged[key] = value
+
+            for key, delta in adjust_updates.items():
+                if delta is None:
+                    continue
+                if key in ("price", "shipping_costs_net"):
+                    base = float(str(merged.get(key) or 0).replace(",", "."))
+                    merged[key] = f"{base + float(delta):.2f}"
+                elif key == "quantity":
+                    base = int(float(str(merged.get(key) or 0).replace(",", ".")))
+                    merged[key] = str(max(0, base + int(delta)))
+
+            _apply_ebay_listing_updates(product_json, merged)
+            write_sku_json(sku, product_json)
+            results[sku] = "updated"
+            updated += 1
+        except Exception as e:
+            results[sku] = str(e)
+            failed += 1
+
+    return EbayListingBulkUpdateResponse(
+        success=failed == 0,
+        updated=updated,
+        failed=failed,
+        results=results,
+    )
+
+
+@app.post("/api/ebay/listing/bulk-save", response_model=EbayListingBulkSaveResponse)
+def bulk_save_ebay_listing_data(request: EbayListingBulkSaveRequest):
+    """Save listing draft fields per SKU."""
+    from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+
+    updated = 0
+    failed = 0
+    results = {}
+
+    for sku, updates in (request.listings or {}).items():
+        try:
+            product_json = read_sku_json(sku)
+            if not product_json:
+                raise ValueError("No JSON found")
+            if not isinstance(updates, dict):
+                raise ValueError("Invalid listing data")
+
+            _apply_ebay_listing_updates(product_json, updates)
+            write_sku_json(sku, product_json)
+            results[sku] = "updated"
+            updated += 1
+        except Exception as e:
+            results[sku] = str(e)
+            failed += 1
+
+    return EbayListingBulkSaveResponse(
+        success=failed == 0,
+        updated=updated,
+        failed=failed,
+        results=results,
+    )
+
+
 @app.get("/api/skus/{sku}/ebay-images")
 def get_ebay_image_orders(sku: str):
     """Get eBay image orders for a SKU"""
@@ -1191,7 +1372,9 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
                 shipping_policy=listing_req.shipping_policy,
                 custom_description=listing_req.custom_description,
                 best_offer_enabled=listing_req.best_offer_enabled,
-                quantity=listing_req.quantity
+                quantity=listing_req.quantity,
+                ebay_sku=listing_req.ebay_sku,
+                ean=listing_req.ean
             )
             results.append(CreateListingResponse(**result))
             

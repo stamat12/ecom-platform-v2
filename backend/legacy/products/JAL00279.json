@@ -1,0 +1,117 @@
+{
+  "JAL00279": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU400924-47-53-050126020219",
+      "Invoice Date": "05.01.2026"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Elegantpark HC1801 Women Mary Jane Closed Toe Block Heel Buckle Satin Wedding Shoes Ivory EU 40"
+    },
+    "Price Data": {
+      "Price Net": 2.4,
+      "Shipping Net": 4.38,
+      "Total Cost Net": 6.78
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": 6927990258300.0
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Elegantpark",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 41.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 1,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00279 (1).jpg"
+        },
+        {
+          "filename": "JAL00279 (10).jpg"
+        },
+        {
+          "filename": "JAL00279 (11).jpg"
+        },
+        {
+          "filename": "JAL00279 (12).jpg"
+        },
+        {
+          "filename": "JAL00279 (2).jpg"
+        },
+        {
+          "filename": "JAL00279 (3).jpg"
+        },
+        {
+          "filename": "JAL00279 (4).jpg"
+        },
+        {
+          "filename": "JAL00279 (5).jpg"
+        },
+        {
+          "filename": "JAL00279 (6).jpg"
+        },
+        {
+          "filename": "JAL00279 (7).jpg"
+        },
+        {
+          "filename": "JAL00279 (8).jpg"
+        },
+        {
+          "filename": "JAL00279 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00279 (12).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "JAL00279 (1).jpg"
+        }
+      ]
+    }
+  }
+}

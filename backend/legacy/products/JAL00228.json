@@ -1,0 +1,79 @@
+{
+  "JAL00228": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU348695-47-53-171125020055",
+      "Invoice Date": "17.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "DREAM PAIRS women's heeled sandals, size 37, silver PU, SDHS2434W-E"
+    },
+    "Price Data": {
+      "Price Net": 3.77,
+      "Shipping Net": 1.83,
+      "Total Cost Net": 5.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": 197458370844.0
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Dream Pairs",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": []
+    }
+  }
+}

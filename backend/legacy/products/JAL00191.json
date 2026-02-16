@@ -1,0 +1,138 @@
+{
+  "JAL00191": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "C.Paravano Mary Jane Ballerinas | Elegant Flat Shoes for Women | Strappy Ballerinas (39.5, White)"
+    },
+    "Price Data": {
+      "Price Net": 9.72,
+      "Shipping Net": 0.68,
+      "Total Cost Net": 10.4
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "C.Paravano",
+      "Color": "Weiß",
+      "Size": "39.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe haben eine flache Sohle und sind mit zwei Riemen versehen. Sie sind aus hochwertigem Material gefertigt und bieten einen hohen Tragekomfort. Die Innensohle ist gepolstert und sorgt für eine angenehme Passform.",
+      "Keywords": "Mary Jane Schuhe Damen",
+      "Materials": "Leder, Gummi"
+    },
+    "OP": {
+      "OP": 122.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00191 (1).jpg"
+        },
+        {
+          "filename": "JAL00191 (10).jpg"
+        },
+        {
+          "filename": "JAL00191 (11).jpg"
+        },
+        {
+          "filename": "JAL00191 (12).jpg"
+        },
+        {
+          "filename": "JAL00191 (2).jpg"
+        },
+        {
+          "filename": "JAL00191 (3).jpg"
+        },
+        {
+          "filename": "JAL00191 (4).jpg"
+        },
+        {
+          "filename": "JAL00191 (5).jpg"
+        },
+        {
+          "filename": "JAL00191 (6).jpg"
+        },
+        {
+          "filename": "JAL00191 (7).jpg"
+        },
+        {
+          "filename": "JAL00191 (8).jpg"
+        },
+        {
+          "filename": "JAL00191 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00191 (3).jpg"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00191 (1).jpg"
+        }
+      ]
+    }
+  }
+}

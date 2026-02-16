@@ -84,6 +84,12 @@ export default function SkuBatchPage() {
   const [ebayEnrichmentInProgress, setEbayEnrichmentInProgress] = useState(false);
   const [ebayEnrichmentResults, setEbayEnrichmentResults] = useState(null);
 
+  // eBay listing bulk edit state
+  const [selectedSkusForEbayListingEdit, setSelectedSkusForEbayListingEdit] = useState(new Set());
+  const [bulkEbayListingOpen, setBulkEbayListingOpen] = useState(false);
+  const [bulkEbayListingSaving, setBulkEbayListingSaving] = useState(false);
+  const [bulkEbayListingCreating, setBulkEbayListingCreating] = useState(false);
+
   // eBay state
   const [ebayExpanded, setEbayExpanded] = useState({}); // { sku: boolean }
   const [ebaySchemas, setEbaySchemas] = useState({}); // { sku: schema }
@@ -643,6 +649,16 @@ export default function SkuBatchPage() {
     setSelectedSkusForEbayEnrichment(newSet);
   };
 
+  const toggleSkuForEbayListingEdit = (sku) => {
+    const newSet = new Set(selectedSkusForEbayListingEdit);
+    if (newSet.has(sku)) {
+      newSet.delete(sku);
+    } else {
+      newSet.add(sku);
+    }
+    setSelectedSkusForEbayListingEdit(newSet);
+  };
+
   const handleEnrichAll = async () => {
     if (selectedSkusForEnrichment.size === 0) {
       alert("Please select at least one SKU to enrich");
@@ -730,6 +746,181 @@ export default function SkuBatchPage() {
     }
   };
 
+  const loadEbayListingData = async (sku) => {
+    try {
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-listing`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data?.data) {
+          setEbayListingData((prev) => ({
+            ...prev,
+            [sku]: {
+              ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }),
+              ...data.data,
+            },
+          }));
+        }
+      }
+    } catch (e) {
+      console.error("Failed to load eBay listing data:", e);
+    }
+  };
+
+  const handleBulkEbayListingSaveTable = async () => {
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for bulk listing edit");
+      return;
+    }
+
+    const listings = {};
+    skus.forEach((sku) => {
+      const listingData = ebayListingData[sku] || {};
+      listings[sku] = {
+        price: listingData.price ?? "",
+        shipping_costs_net: listingData.shipping_costs_net ?? "",
+        quantity: listingData.quantity ?? "",
+        condition_id: listingData.condition_id ?? "",
+        condition_description: listingData.condition_description ?? "",
+        ean: listingData.ean ?? "",
+        modified_sku: listingData.modified_sku ?? "",
+        schedule_date: listingData.schedule_date ?? "",
+      };
+    });
+
+    try {
+      setBulkEbayListingSaving(true);
+      const res = await fetch("/api/ebay/listing/bulk-save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ listings }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || "Bulk save failed");
+      }
+
+      await Promise.all(skus.map((sku) => loadEbayListingData(sku)));
+      setBulkEbayListingOpen(false);
+      alert("✅ Bulk listing fields saved");
+    } catch (e) {
+      alert(`❌ ${e.message}`);
+    } finally {
+      setBulkEbayListingSaving(false);
+    }
+  };
+
+  const handleBulkEbayCreateListings = async () => {
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for bulk listing creation");
+      return;
+    }
+
+    const listings = [];
+    const missingPrice = [];
+
+    skus.forEach((sku) => {
+      const listingData = ebayListingData[sku] || {};
+      if (!listingData.price) {
+        missingPrice.push(sku);
+        return;
+      }
+
+      let conditionId = listingData.condition_id || listingData.condition || "1000";
+      if (typeof conditionId === "string") {
+        conditionId = conditionId.trim();
+      }
+      conditionId = parseInt(conditionId, 10);
+      if (Number.isNaN(conditionId)) {
+        conditionId = 1000;
+      }
+
+      const requestBody = {
+        sku,
+        price: parseFloat(listingData.price),
+        quantity: parseInt(listingData.quantity || "1"),
+        condition_id: conditionId,
+        schedule_days: 0,
+      };
+
+      if (listingData.condition_description && listingData.condition_description.trim()) {
+        requestBody.condition_description = listingData.condition_description.trim();
+      }
+      if (listingData.modified_sku && listingData.modified_sku.trim()) {
+        requestBody.ebay_sku = listingData.modified_sku.trim();
+      }
+      if (listingData.schedule_date) {
+        const scheduleDays = Math.ceil((new Date(listingData.schedule_date) - new Date()) / (1000 * 60 * 60 * 24));
+        requestBody.schedule_days = Math.max(0, scheduleDays);
+      }
+      if (listingData.ean && listingData.ean.trim()) {
+        requestBody.ean = listingData.ean.trim();
+      }
+
+      listings.push(requestBody);
+    });
+
+    if (missingPrice.length > 0) {
+      alert(`Missing price for: ${missingPrice.join(", ")}`);
+      return;
+    }
+
+    if (!confirm(`Create ${listings.length} eBay listings now?`)) return;
+
+    setBulkEbayListingCreating(true);
+    try {
+      const res = await fetch("/api/ebay/listings/batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ listings })
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || "Batch create failed");
+      }
+
+      const data = await res.json();
+      alert(`✅ Created ${data.successful_count} listings, ${data.failed_count} failed`);
+    } catch (e) {
+      alert(`❌ ${e.message}`);
+    } finally {
+      setBulkEbayListingCreating(false);
+    }
+  };
+
+  const handleBulkEbayListingSaveAndCreate = async () => {
+    // First save all changes
+    await handleBulkEbayListingSaveTable();
+    // Then immediately create listings with the saved data
+    setTimeout(() => handleBulkEbayCreateListings(), 500);
+  };
+
+  useEffect(() => {
+    if (!bulkEbayListingOpen) return;
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    skus.forEach((sku) => {
+      // Load listing data
+      loadEbayListingData(sku);
+      // Load product details for cost and OP calculations
+      loadProductDetails(sku);
+      // Load eBay image orders for validation
+      loadEbayImageOrders(sku);
+      // Load eBay schema for fee information
+      const cacheBust = Date.now();
+      fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}?t=${cacheBust}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(schemaData => {
+          if (schemaData) {
+            setEbaySchemas(prev => ({ ...prev, [sku]: schemaData }));
+          }
+        })
+        .catch(e => console.error("Failed to load schema:", e));
+    });
+  }, [bulkEbayListingOpen, selectedSkusForEbayListingEdit]);
+
   // eBay functions
   const loadEbayData = async (sku) => {
     try {
@@ -738,6 +929,9 @@ export default function SkuBatchPage() {
       
       // Load eBay image orders
       await loadEbayImageOrders(sku);
+
+      // Load eBay listing draft data
+      await loadEbayListingData(sku);
       
       // Load schema for SKU (with cache bust)
       const cacheBust = Date.now();
@@ -1186,14 +1380,284 @@ export default function SkuBatchPage() {
   const topPadding = (() => {
     const hasImageRibbon = totalSelectedImages > 0;
     const hasEnrichmentRibbon = selectedSkusForEnrichment.size > 0;
+    const hasEbayListingRibbon = selectedSkusForEbayListingEdit.size > 0;
     const hasEbayRibbon = selectedSkusForEbayEnrichment.size > 0;
     
-    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasEbayRibbon].filter(Boolean).length;
+    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasEbayListingRibbon, hasEbayRibbon].filter(Boolean).length;
     return ribbonCount * 50;
   })();
 
   return (
     <div style={{ width: "100%", maxWidth: "2200px", margin: "0 auto", padding: "0 16px", boxSizing: "border-box", paddingTop: topPadding, transition: "padding-top 0.2s ease" }}>
+      <Modal open={bulkEbayListingOpen} onClose={() => setBulkEbayListingOpen(false)}>
+        <div style={{ width: "95vw", maxWidth: "1400px" }}>
+          <div style={{ fontSize: 16, fontWeight: "bold", marginBottom: 8 }}>Bulk Edit eBay Listing Fields</div>
+          <div style={{ fontSize: 12, color: "#666", marginBottom: 12 }}>
+            Edit prices, shipping, quantities, conditions, and other fields for {selectedSkusForEbayListingEdit.size} selected SKU(s)
+          </div>
+
+          {/* Warning for SKUs without eBay image orders */}
+          {(() => {
+            const skusWithoutImages = Array.from(selectedSkusForEbayListingEdit).filter(sku => {
+              const ebayImages = ebayImageOrders[sku] || {};
+              return Object.keys(ebayImages).length === 0;
+            });
+            return skusWithoutImages.length > 0 ? (
+              <div style={{ padding: 10, background: "#ffebee", border: "1px solid #ef5350", borderRadius: 4, marginBottom: 12, color: "#d32f2f", fontSize: 11 }}>
+                <span style={{ fontWeight: "bold" }}>⚠️ {skusWithoutImages.length} SKU(s) without eBay image orders:</span> {skusWithoutImages.join(", ")} — These images have not been marked with eBay sequence numbers yet.
+              </div>
+            ) : null;
+          })()}
+
+          <div style={{ overflowX: "auto", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflow: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
+              <thead>
+                <tr style={{ background: "#f5f5f5", borderBottom: "2px solid #e0e0e0", position: "sticky", top: 0 }}>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", minWidth: 80 }}>Image</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>SKU</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>Total Cost</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>OP</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>Fee</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>Comm%</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#1976d2" }}>Price</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#1976d2" }}>Shipping</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#2e7d32" }}>Net Profit</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#2e7d32" }}>Margin%</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Qty</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Cond</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Cond Note</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>EAN</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Mod SKU</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", whiteSpace: "nowrap" }}>Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.from(selectedSkusForEbayListingEdit).map((sku) => {
+                  const listingData = ebayListingData[sku] || {};
+                  const totalCostNet = toNumber(getDetailValue(sku, "Price Data", "Total Cost Net"));
+                  const opValue = toNumber(getDetailValue(sku, "OP", "OP"));
+                  const fees = ebaySchemas[sku]?.metadata?.fees || {};
+                  const paymentFee = toNumber(fees.payment_fee);
+                  const salesCommission = toNumber(fees.sales_commission_percentage);
+                  const sellingPrice = toNumber(listingData.price || 0);
+                  const shippingCosts = toNumber(listingData.shipping_costs_net || 0);
+                  const netProfit = (sellingPrice / 1.19) - (sellingPrice * salesCommission) - paymentFee - shippingCosts - totalCostNet;
+                  const netProfitMargin = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : 0;
+                  
+                  // Check if SKU has images with eBay order numbers
+                  const ebayImages = ebayImageOrders[sku] || {};
+                  const hasValidImages = Object.keys(ebayImages).length > 0;
+                  const firstImagePath = items.find(item => item.sku === sku)?.data?.images?.[0]?.filename;
+                  const allImages = items.find(item => item.sku === sku)?.data?.images || [];
+                  
+                  // Find image with eBay order 1
+                  const ebayOrders = ebayImageOrders[sku] || {};
+                  const imageWithOrder1 = allImages.find(img => ebayOrders[img.filename] === 1);
+                  const displayImage = imageWithOrder1 || allImages[0]; // Fallback to first image
+                  
+                  return (
+                    <tr key={sku} style={{ borderBottom: "1px solid #e0e0e0", background: hasValidImages ? "white" : "#fff8f8" }}>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center" }}>
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+                          {displayImage?.thumb_url ? (
+                            <img
+                              src={`${displayImage.thumb_url}&t=${Date.now()}`}
+                              alt={displayImage.filename}
+                              style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 3, border: "1px solid #ddd", cursor: "pointer" }}
+                              onClick={() => setPreview({ sku, img: displayImage })}
+                              onError={(e) => { e.target.style.display = "none"; }}
+                              title={`${displayImage.filename} (Order: ${ebayOrders[displayImage.filename] || 'N/A'})`}
+                            />
+                          ) : (
+                            <div style={{ width: 60, height: 60, background: "#f0f0f0", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", color: "#999", fontSize: 10 }}>
+                              No img
+                            </div>
+                          )}
+                          {!hasValidImages && (
+                            <span style={{ fontSize: 8, color: "#d32f2f", fontWeight: "bold", background: "#ffebee", padding: "2px 4px", borderRadius: 2 }}>
+                              No eBay orders
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td style={{ padding: 6, fontWeight: "bold", borderRight: "1px solid #e0e0e0", fontSize: 10 }}>{sku}</td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 9, background: "#f0f8ff" }}>
+                        € {Number.isFinite(totalCostNet) ? totalCostNet.toFixed(2) : "0.00"}
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 9, background: "#f0f8ff" }}>
+                        {Number.isFinite(opValue) ? opValue.toFixed(2) : "0.00"}
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 9, background: "#f0f8ff" }}>
+                        € {Number.isFinite(paymentFee) ? paymentFee.toFixed(2) : "0.00"}
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 9, background: "#f0f8ff" }}>
+                        {Number.isFinite(salesCommission) ? (salesCommission * 100).toFixed(1) : "0.0"}%
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 70 }}>
+                        <input
+                          type="number"
+                          step="0.01"
+                          value={listingData.price ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), price: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #1976d2", borderRadius: 2, boxSizing: "border-box", fontSize: 10 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 70 }}>
+                        <input
+                          type="number"
+                          step="0.01"
+                          value={listingData.shipping_costs_net ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), shipping_costs_net: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #1976d2", borderRadius: 2, boxSizing: "border-box", fontSize: 10 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 10, fontWeight: "bold", color: netProfit >= 0 ? "#2e7d32" : "#d32f2f", background: "#fff" }}>
+                        € {Number.isFinite(netProfit) ? netProfit.toFixed(2) : "0.00"}
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center", fontSize: 10, fontWeight: "bold", color: netProfitMargin >= 0 ? "#2e7d32" : "#d32f2f", background: "#fff" }}>
+                        {Number.isFinite(netProfitMargin) ? netProfitMargin.toFixed(1) : "0.0"}%
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 50 }}>
+                        <input
+                          type="number"
+                          min="1"
+                          value={listingData.quantity ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), quantity: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 10 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 50 }}>
+                        <select
+                          value={listingData.condition_id ?? "1000"}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), condition_id: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 9 }}
+                        >
+                          <option value="">-- Select --</option>
+                          <option value="1000">1000 - New</option>
+                          <option value="1500">1500 - New other</option>
+                          <option value="1750">1750 - New with defects</option>
+                          <option value="2000">2000 - Certified Refurbished</option>
+                          <option value="2500">2500 - Seller Refurbished</option>
+                          <option value="2750">2750 - Like New</option>
+                          <option value="3000">3000 - Used</option>
+                          <option value="4000">4000 - Very Good</option>
+                          <option value="5000">5000 - Good</option>
+                          <option value="6000">6000 - Acceptable</option>
+                          <option value="7000">7000 - For parts / not working</option>
+                        </select>
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 100 }}>
+                        <input
+                          type="text"
+                          value={listingData.condition_description ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), condition_description: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 9 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 70 }}>
+                        <input
+                          type="text"
+                          value={listingData.ean ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), ean: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 9 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 80 }}>
+                        <input
+                          type="text"
+                          value={listingData.modified_sku ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), modified_sku: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 9 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, minWidth: 140 }}>
+                        <input
+                          type="datetime-local"
+                          value={listingData.schedule_date ?? ""}
+                          onChange={(e) => setEbayListingData(prev => ({
+                            ...prev,
+                            [sku]: { ...(prev[sku] || {}), schedule_date: e.target.value }
+                          }))}
+                          style={{ width: "100%", padding: 3, border: "1px solid #ddd", borderRadius: 2, boxSizing: "border-box", fontSize: 8 }}
+                        />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
+            <button
+              onClick={() => setBulkEbayListingOpen(false)}
+              disabled={bulkEbayListingSaving || bulkEbayListingCreating}
+              style={{ padding: "8px 12px", opacity: (bulkEbayListingSaving || bulkEbayListingCreating) ? 0.6 : 1 }}
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleBulkEbayListingSaveTable}
+              disabled={bulkEbayListingSaving || bulkEbayListingCreating}
+              style={{ padding: "8px 12px", background: "#ff6b00", color: "white", border: "none", borderRadius: 4, cursor: (bulkEbayListingSaving || bulkEbayListingCreating) ? "not-allowed" : "pointer" }}
+            >
+              {bulkEbayListingSaving ? "Saving..." : "Save All"}
+            </button>
+            <button
+              onClick={handleBulkEbayListingSaveAndCreate}
+              disabled={bulkEbayListingSaving || bulkEbayListingCreating}
+              style={{ padding: "8px 12px", background: "#4CAF50", color: "white", border: "none", borderRadius: 4, cursor: (bulkEbayListingSaving || bulkEbayListingCreating) ? "not-allowed" : "pointer" }}
+            >
+              {bulkEbayListingSaving ? "Saving..." : bulkEbayListingCreating ? "Creating..." : "Save & Create All"}
+            </button>
+          </div>
+        </div>
+      </Modal>
+
+      {/* Image Preview Modal */}
+      <Modal open={!!preview} onClose={() => setPreview(null)}>
+        <div style={{ textAlign: "center" }}>
+          {preview?.img?.full_url || preview?.img?.thumb_url ? (
+            <>
+              <div style={{ marginBottom: 12 }}>
+                <h3 style={{ margin: "0 0 4px 0" }}>{preview?.img?.filename}</h3>
+                <div style={{ fontSize: 12, color: "#666" }}>
+                  SKU: {preview?.sku} | Order: {ebayImageOrders[preview?.sku]?.[preview?.img?.filename] || "N/A"}
+                </div>
+              </div>
+              <img
+                src={`${preview.img.full_url || preview.img.thumb_url}&t=${Date.now()}`}
+                alt={preview.img.filename}
+                style={{ maxWidth: "90vw", maxHeight: "70vh", objectFit: "contain" }}
+              />
+            </>
+          ) : (
+            <div style={{ padding: 20, color: "#999" }}>No image available</div>
+          )}
+        </div>
+      </Modal>
+
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
         <Link to="/skus">← Back to list</Link>
         <h3 style={{ margin: 0 }}>Batch view ({selectedSkus.length} SKUs)</h3>
@@ -1467,6 +1931,101 @@ export default function SkuBatchPage() {
         </div>
       )}
 
+      {/* eBay Listing Bulk Edit Panel */}
+      {selectedSkusForEbayListingEdit.size > 0 && (
+        <div style={{
+          position: "fixed",
+          top: (() => {
+            let offset = 0;
+            if (totalSelectedImages > 0) offset += 50;
+            if (selectedSkusForEnrichment.size > 0) offset += 50;
+            return offset;
+          })(),
+          left: 0,
+          right: 0,
+          zIndex: 98,
+          background: "#fff3e0",
+          padding: 6,
+          borderRadius: 0,
+          marginBottom: 8,
+          border: "none",
+          borderBottom: "2px solid #ff6b00",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+        }}>
+          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
+            📦 eBay Listing Drafts: {selectedSkusForEbayListingEdit.size} SKU(s)
+          </div>
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
+            <button
+              onClick={() => {
+                if (selectedSkusForEbayListingEdit.size === items.length) {
+                  setSelectedSkusForEbayListingEdit(new Set());
+                } else {
+                  const allSkus = new Set(items.map(item => item.sku));
+                  setSelectedSkusForEbayListingEdit(allSkus);
+                }
+              }}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#ef6c00",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              {selectedSkusForEbayListingEdit.size === items.length ? "Deselect All" : "Select All"}
+            </button>
+            <button
+              onClick={() => setBulkEbayListingOpen(true)}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#ff6b00",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              ✏️ Bulk Edit
+            </button>
+            <button
+              onClick={handleBulkEbayCreateListings}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#d84315",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              📤 Bulk Create
+            </button>
+            <button
+              onClick={() => setSelectedSkusForEbayListingEdit(new Set())}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                cursor: "pointer",
+                background: "#666",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+              }}
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Enrichment results */}
       {enrichmentResults && (
         <div style={{
@@ -1495,6 +2054,7 @@ export default function SkuBatchPage() {
             let offset = 0;
             if (totalSelectedImages > 0) offset += 50;
             if (selectedSkusForEnrichment.size > 0) offset += 50;
+            if (selectedSkusForEbayListingEdit.size > 0) offset += 50;
             return offset;
           })(),
           left: 0,
@@ -1626,6 +2186,13 @@ export default function SkuBatchPage() {
                     onChange={() => toggleSkuForEnrichment(sku)}
                     style={{ width: 18, height: 18, cursor: "pointer" }}
                     title="Select for AI Product Details & eBay Fields enrichment"
+                  />
+                  <input
+                    type="checkbox"
+                    checked={selectedSkusForEbayListingEdit.has(sku)}
+                    onChange={() => toggleSkuForEbayListingEdit(sku)}
+                    style={{ width: 18, height: 18, cursor: "pointer" }}
+                    title="Select for bulk eBay listing edit"
                   />
                   <h4 style={{ margin: 0 }}>SKU: <span style={{ fontFamily: "ui-monospace" }}>{sku}</span></h4>
                   {jsonStatus[sku] !== undefined && (

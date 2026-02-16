@@ -1,0 +1,126 @@
+{
+  "JAL00278": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU399420-47-53-040126020020",
+      "Invoice Date": "04.01.2026"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Meik Mangni Rubber Boots Women's Short Rain Boots Waterproof Ankle Boots Chelsea Boots Fashion Garden Shoes with Non-Slip Sole, Khaki, Size: 37 EU"
+    },
+    "Price Data": {
+      "Price Net": 4.0,
+      "Shipping Net": 1.63,
+      "Total Cost Net": 5.63
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Meik Mangni",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00278 (1).jpg"
+        },
+        {
+          "filename": "JAL00278 (2).jpg"
+        },
+        {
+          "filename": "JAL00278 (3).jpg"
+        },
+        {
+          "filename": "JAL00278 (4).jpg"
+        },
+        {
+          "filename": "JAL00278 (5).jpg"
+        },
+        {
+          "filename": "JAL00278 (6).jpg"
+        },
+        {
+          "filename": "JAL00278 (7).jpg"
+        },
+        {
+          "filename": "JAL00278 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00278 (6).jpg"
+        },
+        {
+          "filename": "JAL00278 (5).jpg"
+        },
+        {
+          "filename": "JAL00278 (3).jpg"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    }
+  }
+}

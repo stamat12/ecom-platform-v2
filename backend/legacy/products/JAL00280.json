@@ -1,0 +1,147 @@
+{
+  "JAL00280": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU400924-47-53-050126020219",
+      "Invoice Date": "05.01.2026"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Women's Slingback Pumps with Mid Heel – Pointed Toe Dress Shoes, Silver EU 39"
+    },
+    "Price Data": {
+      "Price Net": 3.68,
+      "Shipping Net": 3.61,
+      "Total Cost Net": 7.29
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Greatonu",
+      "Color": "Silber",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese eleganten Slingback-Pumps haben eine spitze Form und einen mittelhohen Absatz. Sie sind in einem schimmernden Silberton gehalten und bieten sowohl Stil als auch Komfort. Die Schnalle an der Ferse sorgt für einen sicheren Halt.",
+      "Keywords": "Slingback Pumps Damen Silber",
+      "Materials": "Textil"
+    },
+    "OP": {
+      "OP": 47.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00280 (1).jpg"
+        },
+        {
+          "filename": "JAL00280 (10).jpg"
+        },
+        {
+          "filename": "JAL00280 (11).jpg"
+        },
+        {
+          "filename": "JAL00280 (12).jpg"
+        },
+        {
+          "filename": "JAL00280 (13).jpg"
+        },
+        {
+          "filename": "JAL00280 (14).jpg"
+        },
+        {
+          "filename": "JAL00280 (15).jpg"
+        },
+        {
+          "filename": "JAL00280 (16).jpg"
+        },
+        {
+          "filename": "JAL00280 (2).jpg"
+        },
+        {
+          "filename": "JAL00280 (3).jpg"
+        },
+        {
+          "filename": "JAL00280 (4).jpg"
+        },
+        {
+          "filename": "JAL00280 (5).jpg"
+        },
+        {
+          "filename": "JAL00280 (6).jpg"
+        },
+        {
+          "filename": "JAL00280 (7).jpg"
+        },
+        {
+          "filename": "JAL00280 (8).jpg"
+        },
+        {
+          "filename": "JAL00280 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00280 (4).jpg"
+        },
+        {
+          "filename": "JAL00280 (11).jpg"
+        },
+        {
+          "filename": "JAL00280 (6).jpg"
+        }
+      ]
+    }
+  }
+}

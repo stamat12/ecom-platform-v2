@@ -45,6 +45,50 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ015 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ015 (6).jpg"
+        },
+        {
+          "filename": "HANVINBTJ015 (8).jpg"
+        },
+        {
+          "filename": "HANVINBTJ015 (1).jpg"
+        },
+        {
+          "filename": "HANVINBTJ015 (10).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "Größe": "XL",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Schwarz",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "Polyester",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "Vietnam",
+        "Isoliermaterial": "Synthetik",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

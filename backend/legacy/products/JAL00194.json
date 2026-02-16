@@ -1,0 +1,135 @@
+{
+  "JAL00194": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Bruno Marc Men's Lace-Up Shoes Comfortable Dress Shoes Men Business Office, Size 47, Black, BMUMOX2508"
+    },
+    "Price Data": {
+      "Price Net": 3.68,
+      "Shipping Net": 1.12,
+      "Total Cost Net": 4.8
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": 197458545747.0
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Bruno Marc",
+      "Color": "Schwarz",
+      "Size": "US: 13"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus schwarzem Leder gefertigt und haben eine klassische Schnürung. Sie verfügen über eine bequeme Innensohle und eine robuste Gummisohle. Die Rückseite hat eine praktische Schlaufe für einfaches Anziehen.",
+      "Keywords": "BMUMOX2508 Schnürschuhe Herren",
+      "Materials": "Leder"
+    },
+    "OP": {
+      "OP": 46.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00194 (1).jpg"
+        },
+        {
+          "filename": "JAL00194 (10).jpg"
+        },
+        {
+          "filename": "JAL00194 (11).jpg"
+        },
+        {
+          "filename": "JAL00194 (12).jpg"
+        },
+        {
+          "filename": "JAL00194 (2).jpg"
+        },
+        {
+          "filename": "JAL00194 (3).jpg"
+        },
+        {
+          "filename": "JAL00194 (4).jpg"
+        },
+        {
+          "filename": "JAL00194 (5).jpg"
+        },
+        {
+          "filename": "JAL00194 (6).jpg"
+        },
+        {
+          "filename": "JAL00194 (7).jpg"
+        },
+        {
+          "filename": "JAL00194 (8).jpg"
+        },
+        {
+          "filename": "JAL00194 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00194 (3).jpg"
+        },
+        {
+          "filename": "JAL00194 (8).jpg"
+        },
+        {
+          "filename": "JAL00194 (6).jpg"
+        },
+        {
+          "filename": "JAL00194 (10).jpg"
+        },
+        {
+          "filename": "JAL00194 (12).jpg"
+        }
+      ]
+    }
+  }
+}

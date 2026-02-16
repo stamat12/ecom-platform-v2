@@ -45,6 +45,45 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ010 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (9).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "Größe": "XL",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Blau",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Ursprungsland": "China",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Muster": "Ohne Muster",
+        "Kragenart": "V-Ausschnitt",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

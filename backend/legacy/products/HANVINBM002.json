@@ -21,7 +21,7 @@
       "eBay Category ID": "11484"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Sehr Gut"
@@ -45,6 +45,81 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM002 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM002 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM002 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "HANVINBM002 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qSsAAeSwTLlpkkgz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM002 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/i3sAAeSwAeBpkkg2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM002 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v3cAAeSwm2Zpkkg7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM002 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oU0AAeSwoSBpkkg-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM002 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l54AAeSwr75pkkhA/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Chaps",
+        "Größe": "L",
+        "Stil": "Pullover",
+        "Abteilung": "Herren",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Produktart": "Pullover",
+        "Material": "Baumwolle",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Ursprungsland": "Indonesien",
+        "Gewebeart": "Strick",
+        "Jahreszeit": "Herbst",
+        "Strickart": "Grobstrick",
+        "Vintage": "Nein",
+        "Muster": "Ohne Muster",
+        "Passform": "Regular",
+        "Besonderheiten": "Alle Jahreszeiten",
+        "Ärmellänge": "Langarm",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "24",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Keine auffälligen Gebrauchsspuren erkennbar, bitte Bilder beachten.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-22T23:26"
     }
   }
 }

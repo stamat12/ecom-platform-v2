@@ -45,6 +45,34 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM012 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (5).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "L.L.Bean",
+        "Abteilung": "Herren",
+        "Größe": "36",
+        "Farbe": "Grau"
+      },
+      "optional": {
+        "Ärmellänge": "Langarm",
+        "Material": "Baumwolle",
+        "Produktart": "Geknöpftes Hemd",
+        "Textilpflege": "Maschinenwäsche",
+        "Ursprungsland": "Malaysia"
+      }
     }
   }
 }

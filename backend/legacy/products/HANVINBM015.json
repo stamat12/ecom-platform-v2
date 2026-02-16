@@ -45,6 +45,75 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBM015 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM015 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM015 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM015 (3).jpg"
+        }
+      ],
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM015 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM015 (2).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM015 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM015 (2).jpg",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 2
+      }
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz",
+        "Größe": "XL",
+        "Marke": "Lee"
+      },
+      "optional": {
+        "Produktart": "Polo",
+        "Ärmellänge": "Kurzarm",
+        "Material": "100% Baumwolle",
+        "Passform": "Regular",
+        "Muster": "Gestreift",
+        "Ausschnitt": "Kragen",
+        "Besonderheiten": "Atmungsaktiv",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Knopf",
+        "Kragenart": "Button-Down Kragen",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }

@@ -21,7 +21,7 @@
       "eBay Category ID": "57988"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Gut"
@@ -47,7 +47,97 @@
       "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
-      "main_images": []
+      "main_images": [
+        {
+          "filename": "HANVINBM005 (8).jpg"
+        },
+        {
+          "filename": "HANVINBM005 (9).jpg"
+        },
+        {
+          "filename": "HANVINBM005 (7).jpg"
+        },
+        {
+          "filename": "HANVINBM005 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "HANVINBM005 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oB4AAeSwAIZpkkhL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ztEAAeSwyBdpkkhO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mh0AAeSwbkBpkkhS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~9oAAeSw-pZpkkhW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4uMAAeSwXLtpkkha/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xrsAAeSwi5dpkkhg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mm8AAeSwbkBpkkhl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM005 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/naAAAeSwOe5pkkhr/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "S*",
+        "Größe": "2XL",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Blau",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Herbst",
+        "Futtermaterial": "Polyester",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "Mikrofaser",
+        "Ursprungsland": "Vietnam",
+        "Isoliermaterial": "Synthetik",
+        "Jacken-/Mantellänge": "Lang",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Keine auffälligen Gebrauchsspuren erkennbar, bitte Bilder beachten.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-22T23:26"
     }
   }
 }

@@ -1,0 +1,79 @@
+{
+  "JAL00113": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNWE299560733",
+      "ISIN": "b0c5dgwg2b",
+      "Supplier Title": "Women's Mid Heel Pointed Court Shoes Elegant Stilettos Mid Heel Wedding Shoes Dance Heel Patent Leather High Heels"
+    },
+    "Price Data": {
+      "Price Net": 4.5,
+      "Shipping Net": 0.41,
+      "Total Cost Net": 4.91
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Rimhold",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 43.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": []
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "JAL00252": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Sharllen Men's Walking Shoes, Lightweight Tennis Shoes, Fashion Sneakers, Training Gym Running Shoes, White, 46.5 EU"
+    },
+    "Price Data": {
+      "Price Net": 3.37,
+      "Shipping Net": 1.2,
+      "Total Cost Net": 4.57
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "sharllen",
+      "Color": "Weiß",
+      "Size": "46"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus einem atmungsaktiven Material gefertigt und haben eine flexible Sohle. Sie verfügen über eine bequeme Passform und sind ideal für den Alltag. Die Ferse ist in einem braunen Farbton gehalten, was einen schönen Kontrast zum weißen Obermaterial bietet.",
+      "Keywords": "sharllen Sneakers Unisex",
+      "Materials": "Textil"
+    },
+    "OP": {
+      "OP": 51.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00252 (1).jpg"
+        },
+        {
+          "filename": "JAL00252 (10).jpg"
+        },
+        {
+          "filename": "JAL00252 (11).jpg"
+        },
+        {
+          "filename": "JAL00252 (2).jpg"
+        },
+        {
+          "filename": "JAL00252 (3).jpg"
+        },
+        {
+          "filename": "JAL00252 (4).jpg"
+        },
+        {
+          "filename": "JAL00252 (5).jpg"
+        },
+        {
+          "filename": "JAL00252 (6).jpg"
+        },
+        {
+          "filename": "JAL00252 (7).jpg"
+        },
+        {
+          "filename": "JAL00252 (8).jpg"
+        },
+        {
+          "filename": "JAL00252 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00252 (8).jpg"
+        },
+        {
+          "filename": "JAL00252 (5).jpg"
+        },
+        {
+          "filename": "JAL00252 (3).jpg"
+        },
+        {
+          "filename": "JAL00252 (11).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "JAL00195": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU341709-47-53-111125020406",
+      "Invoice Date": "11.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "C.Paravano Flat Shoes for Women Flat Women's Ballerinas Pointed Flat Shoes - Comfortable and Elegant Flats for Everyday and Leisure (40, Gray)"
+    },
+    "Price Data": {
+      "Price Net": 2.13,
+      "Shipping Net": 2.67,
+      "Total Cost Net": 4.8
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "C.Paravano",
+      "Color": "Grau",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese eleganten Ballerinas haben eine spitze Form und eine dekorative Schnalle. Sie sind aus weichem Leder gefertigt und bieten einen hohen Tragekomfort. Die Gummisohle sorgt für gute Rutschfestigkeit.",
+      "Keywords": "Ballerinas Damen grau",
+      "Materials": "Leder, Gummi"
+    },
+    "OP": {
+      "OP": 139.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00195 (1).jpg"
+        },
+        {
+          "filename": "JAL00195 (10).jpg"
+        },
+        {
+          "filename": "JAL00195 (11).jpg"
+        },
+        {
+          "filename": "JAL00195 (12).jpg"
+        },
+        {
+          "filename": "JAL00195 (13).jpg"
+        },
+        {
+          "filename": "JAL00195 (2).jpg"
+        },
+        {
+          "filename": "JAL00195 (3).jpg"
+        },
+        {
+          "filename": "JAL00195 (4).jpg"
+        },
+        {
+          "filename": "JAL00195 (5).jpg"
+        },
+        {
+          "filename": "JAL00195 (6).jpg"
+        },
+        {
+          "filename": "JAL00195 (7).jpg"
+        },
+        {
+          "filename": "JAL00195 (8).jpg"
+        },
+        {
+          "filename": "JAL00195 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00195 (11).jpg"
+        },
+        {
+          "filename": "JAL00195 (7).jpg"
+        }
+      ]
+    }
+  }
+}

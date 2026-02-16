@@ -536,5 +536,47 @@
     "ContactURL": "https://www.jansport.com/contact-us.html",
     "cached_at": "2026-02-15T20:55:32.799379",
     "original_brand": "Jansport"
+  },
+  "kappa": {
+    "CompanyName": "BasicNet S.p.A.",
+    "Street1": "Corso Regio Parco, 39",
+    "Street2": "",
+    "CityName": "Turin",
+    "StateOrProvince": "",
+    "PostalCode": "10152",
+    "Country": "IT",
+    "Phone": "00390114561111",
+    "Email": "info@basicnet.com",
+    "ContactURL": "https://www.kappa.com/contact",
+    "cached_at": "2026-02-15T22:32:13.977910",
+    "original_brand": "Kappa"
+  },
+  "chaps ralph lauren": {
+    "CompanyName": "Ralph Lauren Corporation",
+    "Street1": "650 Madison Avenue",
+    "Street2": "",
+    "CityName": "New York",
+    "StateOrProvince": "NY",
+    "PostalCode": "10022",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.ralphlauren.com/contact-us",
+    "cached_at": "2026-02-15T23:27:15.169797",
+    "original_brand": "Chaps Ralph Lauren"
+  },
+  "starter": {
+    "CompanyName": "Iconix Brand Group, Inc.",
+    "Street1": "1450 Broadway",
+    "Street2": "Floor 3",
+    "CityName": "New York",
+    "StateOrProvince": "NY",
+    "PostalCode": "10018",
+    "Country": "US",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "https://www.iconixbrand.com/contact/",
+    "cached_at": "2026-02-15T23:27:57.111297",
+    "original_brand": "Starter"
   }
 }

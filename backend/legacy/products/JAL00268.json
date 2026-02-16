@@ -1,0 +1,159 @@
+{
+  "JAL00268": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU350271-47-53-181125020419",
+      "Invoice Date": "18.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "GRITION Hiking Sandals Women Comfortable Closed Toe Lightweight Outdoor Sports Sandals Adjustable Breathable Waterproof For Beach Summer Gray 38EU"
+    },
+    "Price Data": {
+      "Price Net": 2.85,
+      "Shipping Net": 0.81,
+      "Total Cost Net": 3.66
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Grition",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": 54.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 19,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00268 (1).jpg"
+        },
+        {
+          "filename": "JAL00268 (10).jpg"
+        },
+        {
+          "filename": "JAL00268 (11).jpg"
+        },
+        {
+          "filename": "JAL00268 (12).jpg"
+        },
+        {
+          "filename": "JAL00268 (13).jpg"
+        },
+        {
+          "filename": "JAL00268 (14).jpg"
+        },
+        {
+          "filename": "JAL00268 (15).jpg"
+        },
+        {
+          "filename": "JAL00268 (16).jpg"
+        },
+        {
+          "filename": "JAL00268 (17).jpg"
+        },
+        {
+          "filename": "JAL00268 (18).jpg"
+        },
+        {
+          "filename": "JAL00268 (19).jpg"
+        },
+        {
+          "filename": "JAL00268 (2).jpg"
+        },
+        {
+          "filename": "JAL00268 (3).jpg"
+        },
+        {
+          "filename": "JAL00268 (4).jpg"
+        },
+        {
+          "filename": "JAL00268 (5).jpg"
+        },
+        {
+          "filename": "JAL00268 (6).jpg"
+        },
+        {
+          "filename": "JAL00268 (7).jpg"
+        },
+        {
+          "filename": "JAL00268 (8).jpg"
+        },
+        {
+          "filename": "JAL00268 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00268 (2).jpg"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "JAL00198": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU341709-47-53-111125020406",
+      "Invoice Date": "11.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Allegra K Women's Mary Jane Pumps with Round Toe and Chunky Heel Beige 39"
+    },
+    "Price Data": {
+      "Price Net": 4.57,
+      "Shipping Net": 2.84,
+      "Total Cost Net": 7.41
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Allegra K",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 51.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": []
+    }
+  }
+}

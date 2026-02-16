@@ -1,0 +1,132 @@
+{
+  "JAL00221": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU346552-47-53-151125020312",
+      "Invoice Date": "15.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "C.Paravano Flat Sandals with Pointed Toe Leather Kitten Flats Sandals Wedding Party Dating Slingback Women's Flat Adjustable Ankle Strap (Red, 38)"
+    },
+    "Price Data": {
+      "Price Net": 4.08,
+      "Shipping Net": 2.26,
+      "Total Cost Net": 6.34
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "C.Paravano",
+      "Color": "Rot",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese eleganten Slingback-Schuhe haben eine spitze Zehenform und sind aus glänzendem Lackleder gefertigt. Sie verfügen über einen bequemen, gepolsterten Innenbereich aus Lammleder. Die Absatzhöhe beträgt 2,5 cm, was sie ideal für den Alltag macht.",
+      "Keywords": "C.Paravano Slingback Schuhe Damen",
+      "Materials": "Leder"
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00221 (1).jpg"
+        },
+        {
+          "filename": "JAL00221 (10).jpg"
+        },
+        {
+          "filename": "JAL00221 (11).jpg"
+        },
+        {
+          "filename": "JAL00221 (2).jpg"
+        },
+        {
+          "filename": "JAL00221 (3).jpg"
+        },
+        {
+          "filename": "JAL00221 (4).jpg"
+        },
+        {
+          "filename": "JAL00221 (5).jpg"
+        },
+        {
+          "filename": "JAL00221 (6).jpg"
+        },
+        {
+          "filename": "JAL00221 (7).jpg"
+        },
+        {
+          "filename": "JAL00221 (8).jpg"
+        },
+        {
+          "filename": "JAL00221 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "JAL00221 (11).jpg"
+        }
+      ]
+    }
+  }
+}

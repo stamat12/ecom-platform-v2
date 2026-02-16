@@ -57,7 +57,36 @@
         {
           "filename": "HANVINBM016 (6).jpg"
         }
-      ]
+      ],
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM016 (2)_1_lanczos_4x.png",
+          "source": "HANVINBM016 (2).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-3-pro-image-preview_real_HANVINBM016 (4)_1_lanczos_4x.png",
+          "source": "HANVINBM016 (4).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 2
+      }
     },
     "eBay Fields": {
       "required": {
@@ -82,7 +111,12 @@
         "Kragenart": "Button-Down Kragen",
         "Textilpflege": "Maschinenwäsche",
         "Personalisieren": "Nein",
-        "Handgefertigt": "Nein"
+        "Handgefertigt": "Nein",
+        "Brustumfang": "100 cm",
+        "Shirt-Länge": "75 cm",
+        "Modell": "Tommy Hilfiger Golf",
+        "Passform": "Regular",
+        "Aktivität": "Golf"
       }
     }
   }

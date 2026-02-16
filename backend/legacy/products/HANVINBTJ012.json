@@ -45,6 +45,59 @@
     },
     "Warehouse": {
       "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ012 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ012 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ012 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ012 (5).jpg"
+        },
+        {
+          "filename": "HANVINBTJ012 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ012 (9).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "adidas",
+        "Größe": "XL",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Grau",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Besonderheiten": "Atmungsaktiv",
+        "Gewebeart": "Mikrofaser",
+        "Thema": "Sport",
+        "Ursprungsland": "Kambodscha",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Aktivität": "Golf",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Muster": "Ohne Muster",
+        "Akzente": "Logo",
+        "Passform": "Regular",
+        "Kragenart": "Stehkragen",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein",
+        "Textilpflege": "Maschinenwäsche"
+      }
     }
   }
 }
