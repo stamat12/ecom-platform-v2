@@ -118,7 +118,7 @@ LISTINGS_CACHE_DURATION_HOURS = 6
 # Enrichment Prompt Template
 EBAY_FIELD_ENRICHMENT_PROMPT = """Du bist ein Produktdaten-Spezialist für eBay-Listings.
 
-Aufgabe: Fülle die folgenden eBay-Produktfelder AUSSCHLIESSLICH basierend auf den bereitgestellten Produktfotos aus.
+Aufgabe: Fülle die folgenden eBay-Produktfelder basierend auf den bereitgestellten Produktfotos UND verfügbaren Produktinformationen aus.
 
 Kategorie: {category_name}
 eBay Kategorie ID: {category_id}
@@ -131,15 +131,18 @@ OPTIONALE FELDER (falls erkennbar):
 
 AKTUELLE WERTE (bereits ausgefüllt):
 {current_values}
+{additional_context}
 
 WICHTIGE REGELN:
 1. Fülle NUR leere Felder aus - überschreibe KEINE bereits ausgefüllten Werte
-2. Verwende wenn möglich die erlaubten Werte aus der Liste
-3. Wenn erlaubte Werte angegeben sind, wähle EXAKT einen davon
-4. Wenn keine erlaubten Werte angegeben sind, gib eine präzise Beschreibung
-5. Antworte auf Deutsch
-6. Wenn du ein Feld nicht sicher bestimmen kannst, lasse es leer
-7. Gib NUR die Felder zurück, die du ausfüllen möchtest
+2. Nutze die manuell hinzugefügten Produktinformationen (falls vorhanden) - diese sind zuverlässig und oft nicht auf den Bildern sichtbar
+3. Kombiniere Bildinformationen mit den manuellen Daten für präzisere Ergebnisse
+4. Verwende wenn möglich die erlaubten Werte aus der Liste
+5. Wenn erlaubte Werte angegeben sind, wähle EXAKT einen davon
+6. Wenn keine erlaubten Werte angegeben sind, gib eine präzise Beschreibung
+7. Antworte auf Deutsch
+8. Wenn du ein Feld nicht sicher bestimmen kannst, lasse es leer
+9. Gib NUR die Felder zurück, die du ausfüllen möchtest
 
 Antworte im folgenden JSON-Format:
 {{

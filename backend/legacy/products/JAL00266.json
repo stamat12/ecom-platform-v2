@@ -17,7 +17,8 @@
       "Total Cost Net": 3.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
       "EAN": null
@@ -127,6 +128,29 @@
           "filename": "3.png"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Greatonu",
+        "EU-Schuhgröße": "39",
+        "Stil": "Pumps",
+        "Farbe": "Rosa",
+        "Abteilung": "Damen",
+        "Obermaterial": "Kunstleder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "8",
+        "UK-Schuhgröße": "5.5",
+        "US-Schuhgröße": "8",
+        "Schuhspitze": "Geschlossen",
+        "Anlass": "Elegant",
+        "Schuhweite": "Standard",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Verschluss": "Schnalle",
+        "Vintage": "Nein"
+      }
     }
   }
 }

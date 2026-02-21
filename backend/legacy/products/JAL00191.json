@@ -1,26 +1,27 @@
 {
   "JAL00191": {
     "Invoice Data": {
-      "Buying Entity": null,
+      "Buying Entity": "",
       "Supplier": "JLI Trading Limited",
       "Invoice": "JEU338379-47-53-081125020412",
       "Invoice Date": "08.11.2025"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
+      "Supplier Number": "",
+      "ISIN": "",
       "Supplier Title": "C.Paravano Mary Jane Ballerinas | Elegant Flat Shoes for Women | Strappy Ballerinas (39.5, White)"
     },
     "Price Data": {
-      "Price Net": 9.72,
-      "Shipping Net": 0.68,
-      "Total Cost Net": 10.4
+      "Price Net": "9.72",
+      "Shipping Net": "0.68",
+      "Total Cost Net": "10.4"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -132,7 +133,106 @@
         {
           "filename": "JAL00191 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/idgAAeSwExhpk7gs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mVUAAeSwvTlpk7gu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/T5gAAeSw8s5pk7gw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/URoAAeSw17tpk7gx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tHYAAeSwv~Rpk7gz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Vm8AAeSwmOFpk7g3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (10).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VoEAAeSwmOFpk7g6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wssAAeSwRihpk7g9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (12).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bPYAAeSwkI1pk7hA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/i7YAAeSwLixpk7hE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (5).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZSAAAeSwG6xpk7hH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00191 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/syQAAeSwcZVpk7hK/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "C.Paravano",
+        "EU-Schuhgröße": "39,5",
+        "Stil": "Ballerina",
+        "Abteilung": "Damen",
+        "Farbe": "Elfenbeinfarben",
+        "Obermaterial": "Leder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Leder",
+        "Innensohlenmaterial": "Schaumstoff",
+        "UK-Schuhgröße": "6",
+        "AU-Schuhgröße": "6",
+        "US-Schuhgröße": "8,5",
+        "Jahreszeit": "Frühling",
+        "Verschluss": "Slip-On",
+        "Schuhspitze": "Mandelförmig",
+        "Anlass": "Freizeit",
+        "Besonderheiten": "Komfort",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "China",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "68",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:33"
     }
   }
 }

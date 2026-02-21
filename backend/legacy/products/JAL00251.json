@@ -17,7 +17,8 @@
       "Total Cost Net": 4.5
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
       "EAN": null
@@ -124,6 +125,31 @@
           "filename": "JAL00251 (9).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "sharllen",
+        "EU-Schuhgröße": "45",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Braun"
+      },
+      "optional": {
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Stoff",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "Atmungsaktiv",
+        "Signiert": "Nein",
+        "Muster": "Ohne Muster"
+      }
     }
   }
 }

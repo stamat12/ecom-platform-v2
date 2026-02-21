@@ -17,7 +17,8 @@
       "Total Cost Net": 3.66
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
       "EAN": null
@@ -169,6 +170,10 @@
           "filename": "5.png"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {}
     }
   }
 }

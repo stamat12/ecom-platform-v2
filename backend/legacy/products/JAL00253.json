@@ -17,7 +17,8 @@
       "Total Cost Net": 4.35
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
       "EAN": null
@@ -121,6 +122,22 @@
           "filename": "JAL00253 (1).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "sharllen",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "7",
+        "Stil": "Sneaker",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Verschluss": "Schnürung"
+      }
     }
   }
 }

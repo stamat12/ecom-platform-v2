@@ -17,7 +17,8 @@
       "Total Cost Net": 7.12
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
       "EAN": null
@@ -139,6 +140,33 @@
           "filename": "5.png"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Ortho+rest",
+        "EU-Schuhgröße": "39",
+        "Stil": "Pumps",
+        "Farbe": "Marinenblau",
+        "Abteilung": "Damen"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "8.5",
+        "US-Schuhgröße": "8.5",
+        "Schuhspitze": "Geschlossen",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Individualisiert": "Nein",
+        "Anlass": "Freizeit",
+        "Besonderheiten": "Anti-Rutsch",
+        "Verschluss": "Slip-On",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "China",
+        "Jahreszeit": "Frühling",
+        "Personalisieren": "Nein",
+        "Herstellernummer": "DE7601"
+      }
     }
   }
 }

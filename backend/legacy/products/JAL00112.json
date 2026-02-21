@@ -21,7 +21,7 @@
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etikett"
@@ -109,7 +109,84 @@
         {
           "filename": "JAL00112 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00112 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s~MAAeSwW4xpk7i6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00112 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WzkAAeSwfVVpk7i-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00112 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/udAAAeSw-HZpk7jC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00112 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/g84AAeSwu15pk7jF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00112 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/g7gAAeSwIaRpk7jI/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Meik Mangni",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Damen",
+        "Farbe": "Beige",
+        "Stil": "Zehentrenner",
+        "Obermaterial": "Kunststoff"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Modell": "",
+        "Produktlinie": "",
+        "Innensohlenmaterial": "Synthetik",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Absatzart": "Flach",
+        "AU-Schuhgröße": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Individualisiert": "",
+        "Charakter": "",
+        "Schuhweite": "",
+        "Besonderheiten": "",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Akzente": "",
+        "Verschluss": "Slip-On",
+        "Thema": "",
+        "Ursprungsland": "",
+        "Muster": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "26",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:34"
     }
   }
 }

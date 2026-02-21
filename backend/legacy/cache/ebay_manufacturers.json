@@ -578,5 +578,33 @@
     "ContactURL": "https://www.iconixbrand.com/contact/",
     "cached_at": "2026-02-15T23:27:57.111297",
     "original_brand": "Starter"
+  },
+  "fitville": {
+    "CompanyName": "FitVille",
+    "Street1": "",
+    "Street2": "",
+    "CityName": "",
+    "StateOrProvince": "",
+    "PostalCode": "",
+    "Country": "DE",
+    "Phone": "",
+    "Email": "",
+    "ContactURL": "",
+    "cached_at": "2026-02-17T01:35:01.379492",
+    "original_brand": "FitVille"
+  },
+  "bruno marc": {
+    "CompanyName": "Top Glory Trading Group Inc.",
+    "Street1": "17800 Castleton St",
+    "Street2": "Suite 180",
+    "CityName": "City of Industry",
+    "StateOrProvince": "CA",
+    "PostalCode": "91748",
+    "Country": "US",
+    "Phone": "",
+    "Email": "support@brunomarcshoes.com",
+    "ContactURL": "https://www.brunomarcshoes.com/pages/contact-us",
+    "cached_at": "2026-02-17T01:36:53.784163",
+    "original_brand": "Bruno Marc"
   }
 }

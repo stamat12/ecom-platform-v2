@@ -21,7 +21,7 @@
       "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -121,7 +121,79 @@
         {
           "filename": "4.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/fr4AAeSwPxNpk7if/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WGMAAeSwQUNpk7ih/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uWMAAeSwrhBpk7ik/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VdEAAeSw1kNpk7im/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gWUAAeSwgIBpk7ip/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00183 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p8kAAeSw-wFpk7is/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00183 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jpAAAeSw2iRpk7iw/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "C.Paravano",
+        "EU-Schuhgröße": "38,5",
+        "Stil": "Slingback",
+        "Abteilung": "Damen",
+        "Farbe": "Braun",
+        "Obermaterial": "Synthetik",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Leder",
+        "Innensohlenmaterial": "Leder",
+        "UK-Schuhgröße": "5",
+        "AU-Schuhgröße": "5",
+        "US-Schuhgröße": "8",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Schnalle",
+        "Schuhspitze": "Spitz",
+        "Anlass": "Freizeit",
+        "Besonderheiten": "Gepolstert",
+        "Muster": "Leopardenmuster"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "65",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:34"
     }
   }
 }

@@ -17,7 +17,8 @@
       "Total Cost Net": 3.66
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
     },
     "EAN": {
       "EAN": null
@@ -184,6 +185,29 @@
           "filename": "5.png"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Grition",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Grau",
+        "Stil": "Zehentrenner",
+        "Obermaterial": "PU"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Innensohlenmaterial": "Synthetik",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Absatzart": "Flach",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "7",
+        "Besonderheiten": "Anti-Rutsch, Schnell trocknend, Antibakteriell",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Klettverschluss"
+      }
     }
   }
 }

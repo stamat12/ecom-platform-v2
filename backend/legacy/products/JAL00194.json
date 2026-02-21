@@ -1,26 +1,27 @@
 {
   "JAL00194": {
     "Invoice Data": {
-      "Buying Entity": null,
+      "Buying Entity": "",
       "Supplier": "JLI Trading Limited",
       "Invoice": "JEU338379-47-53-081125020412",
       "Invoice Date": "08.11.2025"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
+      "Supplier Number": "",
+      "ISIN": "",
       "Supplier Title": "Bruno Marc Men's Lace-Up Shoes Comfortable Dress Shoes Men Business Office, Size 47, Black, BMUMOX2508"
     },
     "Price Data": {
-      "Price Net": 3.68,
-      "Shipping Net": 1.12,
-      "Total Cost Net": 4.8
+      "Price Net": "3.68",
+      "Shipping Net": "1.12",
+      "Total Cost Net": "4.8"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
-      "EAN": 197458545747.0
+      "EAN": "197458545747.0"
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -129,7 +130,107 @@
         {
           "filename": "JAL00194 (12).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "5.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZvsAAeSwJ05pk7gE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VFsAAeSwnnppk7gG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YekAAeSwvmdpk7gI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/fE8AAeSwmDRpk7gK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/U6YAAeSwR-xpk7gM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Tu4AAeSw8s5pk7gP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4a0AAeSwqVJpk7gS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sxcAAeSwxdVpk7gV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cjYAAeSwB7tpk7gZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rx0AAeSwUxNpk7gc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (5).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ffMAAeSwVQlpk7gg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00194 (3).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gZEAAeSw~n5pk7gj/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Bruno Marc",
+        "EU-Schuhgröße": "47",
+        "Abteilung": "Herren",
+        "Stil": "Halbschuhe",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "AU-Schuhgröße": "13",
+        "UK-Schuhgröße": "12",
+        "US-Schuhgröße": "13",
+        "Futtermaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Gummi",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Produktart": "Freizeitschuh",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "Komfort",
+        "Ursprungsland": "China",
+        "Anlass": "Freizeit",
+        "Schuhspitze": "Runde Form",
+        "Muster": "Ohne Muster",
+        "Herstellernummer": "BMUMOX2508"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "38",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "197458545747.0",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:33"
     }
   }
 }

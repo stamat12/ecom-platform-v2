@@ -113,6 +113,13 @@ export default function SkuBatchPage() {
   const [ebayCategoryLoading, setEbayCategoryLoading] = useState({}); // { sku: boolean }
   const categorySearchTimers = useRef({});
 
+  // Filter state
+  const [showFilters, setShowFilters] = useState(false);
+  const [selectedStatusFilters, setSelectedStatusFilters] = useState(new Set());
+  const [selectedLagerFilters, setSelectedLagerFilters] = useState(new Set());
+  const [selectedBrandFilters, setSelectedBrandFilters] = useState(new Set());
+  const [completionFilter, setCompletionFilter] = useState(null); // null | "empty" | "low" | "medium" | "high" | "complete"
+
   const conditionLabelById = {
     "1000": "New",
     "1500": "New other",
@@ -603,6 +610,119 @@ export default function SkuBatchPage() {
     const found = findDetailFieldInDetails(details, fieldName);
     return found?.value ?? "";
   };
+
+  // Get unique Status values from all productDetails
+  const getAvailableStatusValues = useMemo(() => {
+    const statuses = new Set();
+    Object.values(productDetails).forEach((details) => {
+      if (details?.categories) {
+        for (const category of details.categories) {
+          if (!Array.isArray(category.fields)) continue;
+          const statusField = category.fields.find((f) => f.name === "Status");
+          if (statusField?.value) {
+            statuses.add(statusField.value);
+          }
+        }
+      }
+    });
+    // Add "empty" option if some SKUs have no status
+    const allSkusHaveStatus = items.every(item => {
+      const status = getDetailValueByName(item.sku, "Status");
+      return status && status.trim() !== "";
+    });
+    if (!allSkusHaveStatus) {
+      statuses.add("empty");
+    }
+    return Array.from(statuses).sort();
+  }, [productDetails, items]);
+
+  // Get unique values for a field
+  const getAvailableFieldValues = (fieldName) => {
+    const values = new Set();
+    Object.values(productDetails).forEach((details) => {
+      if (details?.categories) {
+        for (const category of details.categories) {
+          if (!Array.isArray(category.fields)) continue;
+          const field = category.fields.find((f) => f.name === fieldName);
+          if (field?.value) {
+            values.add(field.value);
+          }
+        }
+      }
+    });
+    return Array.from(values).sort();
+  };
+
+  // Get available Lager values
+  const getAvailableLagerValues = useMemo(() => {
+    return getAvailableFieldValues("Lager");
+  }, [productDetails]);
+
+  // Get available Brand values
+  const getAvailableBrandValues = useMemo(() => {
+    return getAvailableFieldValues("Brand");
+  }, [productDetails]);
+
+  // Check if SKU passes current filters
+  const passesFilters = (sku) => {
+    // Status filter
+    if (selectedStatusFilters.size > 0) {
+      const status = getDetailValueByName(sku, "Status") || "empty";
+      if (!selectedStatusFilters.has(status)) {
+        return false;
+      }
+    }
+
+    // Lager filter
+    if (selectedLagerFilters && selectedLagerFilters.size > 0) {
+      const lager = getDetailValueByName(sku, "Lager") || "empty";
+      if (!selectedLagerFilters.has(lager)) {
+        return false;
+      }
+    }
+
+    // Brand filter
+    if (selectedBrandFilters && selectedBrandFilters.size > 0) {
+      const brand = getDetailValueByName(sku, "Brand") || "empty";
+      if (!selectedBrandFilters.has(brand)) {
+        return false;
+      }
+    }
+
+    // Completion filter
+    if (completionFilter !== null) {
+      const completion = productDetails[sku]?.completion_percentage || 0;
+      switch (completionFilter) {
+        case "empty":
+          if (completion !== 0) return false;
+          break;
+        case "low":
+          if (completion === 0 || completion >= 33) return false;
+          break;
+        case "medium":
+          if (completion < 33 || completion >= 66) return false;
+          break;
+        case "high":
+          if (completion < 66 || completion === 100) return false;
+          break;
+        case "complete":
+          if (completion !== 100) return false;
+          break;
+        default:
+          break;
+      }
+    }
+
+    return true;
+  };
+
+  // Filter items based on current filters
+  const filteredItems = useMemo(() => {
+    if (selectedStatusFilters.size === 0 && selectedLagerFilters.size === 0 && selectedBrandFilters.size === 0 && completionFilter === null) {
+      return items;
+    }
+    return items.filter((item) => passesFilters(item.sku));
+  }, [items, selectedStatusFilters, selectedLagerFilters, selectedBrandFilters, completionFilter, productDetails]);
 
   const applyProductCategorySelection = (sku, item) => {
     setBulkProductDetailsEdits((prev) => {
@@ -1547,6 +1667,16 @@ export default function SkuBatchPage() {
     };
   }, []);
 
+  // Preload product details for all SKUs to populate filters
+  useEffect(() => {
+    if (items.length === 0) return;
+    items.forEach(item => {
+      if (!productDetails[item.sku]) {
+        loadProductDetails(item.sku);
+      }
+    });
+  }, [items]);
+
   if (selectedSkus.length === 0) {
     return (
       <div>
@@ -2053,7 +2183,7 @@ export default function SkuBatchPage() {
               setSelectedSkusForEnrichment(new Set());
               setSelectedSkusForEbayEnrichment(new Set());
             } else {
-              const allSkus = new Set(items.map(item => item.sku));
+              const allSkus = new Set(filteredItems.map(item => item.sku));
               setSelectedSkusForEnrichment(allSkus);
               setSelectedSkusForEbayEnrichment(allSkus);
             }
@@ -2061,7 +2191,7 @@ export default function SkuBatchPage() {
           style={{
             padding: "6px 12px",
             fontSize: 13,
-            background: (selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length) ? "#666" : "#4CAF50",
+            background: (selectedSkusForEnrichment.size === filteredItems.length && selectedSkusForEbayEnrichment.size === filteredItems.length) ? "#666" : "#4CAF50",
             color: "white",
             border: "none",
             borderRadius: 4,
@@ -2069,7 +2199,7 @@ export default function SkuBatchPage() {
             fontWeight: "bold",
           }}
         >
-          {(selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
+          {(selectedSkusForEnrichment.size === filteredItems.length && selectedSkusForEbayEnrichment.size === filteredItems.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
         </button>
         <button
           onClick={handleBulkGenerateMissingJson}
@@ -2096,9 +2226,9 @@ export default function SkuBatchPage() {
         </button>
         <button
           onClick={() => {
-            // Calculate total available images
+            // Calculate total available images from filtered items
             const allImages = {};
-            items.forEach(item => {
+            filteredItems.forEach(item => {
               if (item.data && item.data.images) {
                 allImages[item.sku] = item.data.images.map(img => img.filename);
               }
@@ -2129,7 +2259,7 @@ export default function SkuBatchPage() {
           }}
         >
           {(() => {
-            const maxTotal = items.reduce((sum, item) => 
+            const maxTotal = filteredItems.reduce((sum, item) => 
               sum + (item.data?.images?.length || 0), 0
             );
             const allSelected = totalSelectedImages === maxTotal && maxTotal > 0;
@@ -2614,6 +2744,222 @@ export default function SkuBatchPage() {
         </div>
       )}
 
+      {/* Filter Panel */}
+      <div style={{
+        background: "#f9f9f9",
+        padding: 12,
+        borderRadius: 8,
+        marginBottom: 16,
+        border: "2px solid #e0e0e0",
+      }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+          <button
+            onClick={() => setShowFilters(!showFilters)}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontWeight: "bold",
+              color: "#2196F3",
+              fontSize: 14,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              padding: 0,
+            }}
+          >
+            <span style={{ fontSize: 16, transform: showFilters ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
+            🔍 Filters {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null) && `(${selectedStatusFilters.size + selectedLagerFilters.size + selectedBrandFilters.size + (completionFilter !== null ? 1 : 0)} active)`}
+          </button>
+          <div style={{ fontSize: 12, color: "#666" }}>
+            Showing {filteredItems.length} / {items.length} SKU(s)
+          </div>
+        </div>
+
+        {showFilters && (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 16 }}>
+            {/* Status Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Status</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {getAvailableStatusValues.map((status) => (
+                  <label key={status} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedStatusFilters.has(status)}
+                      onChange={(e) => {
+                        const newFilters = new Set(selectedStatusFilters);
+                        if (e.target.checked) {
+                          newFilters.add(status);
+                        } else {
+                          newFilters.delete(status);
+                        }
+                        setSelectedStatusFilters(newFilters);
+                      }}
+                      style={{ cursor: "pointer" }}
+                    />
+                    <span>{status}</span>
+                  </label>
+                ))}
+                {getAvailableStatusValues.length === 0 && (
+                  <div style={{ fontSize: 11, color: "#999" }}>(No statuses assigned)</div>
+                )}
+              </div>
+            </div>
+
+            {/* Lager Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Lager</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {getAvailableLagerValues.map((lager) => (
+                  <label key={lager} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedLagerFilters.has(lager)}
+                      onChange={(e) => {
+                        const newFilters = new Set(selectedLagerFilters);
+                        if (e.target.checked) {
+                          newFilters.add(lager);
+                        } else {
+                          newFilters.delete(lager);
+                        }
+                        setSelectedLagerFilters(newFilters);
+                      }}
+                      style={{ cursor: "pointer" }}
+                    />
+                    <span>{lager}</span>
+                  </label>
+                ))}
+                {getAvailableLagerValues.length === 0 && (
+                  <div style={{ fontSize: 11, color: "#999" }}>(No lager values assigned)</div>
+                )}
+              </div>
+            </div>
+
+            {/* Brand Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Brand</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {getAvailableBrandValues.map((brand) => (
+                  <label key={brand} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedBrandFilters.has(brand)}
+                      onChange={(e) => {
+                        const newFilters = new Set(selectedBrandFilters);
+                        if (e.target.checked) {
+                          newFilters.add(brand);
+                        } else {
+                          newFilters.delete(brand);
+                        }
+                        setSelectedBrandFilters(newFilters);
+                      }}
+                      style={{ cursor: "pointer" }}
+                    />
+                    <span>{brand}</span>
+                  </label>
+                ))}
+                {getAvailableBrandValues.length === 0 && (
+                  <div style={{ fontSize: 11, color: "#999" }}>(No brands assigned)</div>
+                )}
+              </div>
+            </div>
+
+            {/* Completion Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Completion</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === null}
+                    onChange={() => setCompletionFilter(null)}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>All</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === "empty"}
+                    onChange={() => setCompletionFilter("empty")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Empty (0%)</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === "low"}
+                    onChange={() => setCompletionFilter("low")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Low (1-32%)</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === "medium"}
+                    onChange={() => setCompletionFilter("medium")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Medium (33-65%)</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === "high"}
+                    onChange={() => setCompletionFilter("high")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>High (66-99%)</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="completion"
+                    checked={completionFilter === "complete"}
+                    onChange={() => setCompletionFilter("complete")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Complete (100%)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Clear filters button */}
+        {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null) && (
+          <button
+            onClick={() => {
+              setSelectedStatusFilters(new Set());
+              setSelectedLagerFilters(new Set());
+              setSelectedBrandFilters(new Set());
+              setCompletionFilter(null);
+            }}
+            style={{
+              marginTop: 12,
+              padding: "6px 12px",
+              fontSize: 12,
+              background: "#ff6b6b",
+              color: "white",
+              border: "none",
+              borderRadius: 4,
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Clear All Filters
+          </button>
+        )}
+      </div>
+
       {items.length === 0 && (
         <div style={{
           padding: 24,
@@ -2628,7 +2974,7 @@ export default function SkuBatchPage() {
         </div>
       )}
 
-      {items.map(({ sku, data, error }) => {
+      {filteredItems.map(({ sku, data, error }) => {
         const images = Array.isArray(data?.images) ? data.images : [];
         const conditionFromProduct = getDetailValue(sku, "Product Condition", "Condition");
         const totalCostNet = toNumber(getDetailValue(sku, "Price Data", "Total Cost Net"));

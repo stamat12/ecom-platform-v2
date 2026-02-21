@@ -44,7 +44,7 @@
       "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",
@@ -134,14 +134,14 @@
       ],
       "eBay Images": [
         {
-          "filename": "1.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/j-gAAeSwoG9pXuGp/$_1.JPG?set_id=8800005007"
-        },
-        {
           "filename": "studio_restoration_ultra_gpt_real_IMG_9226_1_upscaled_x4.jpg",
           "order": 1,
           "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xA4AAeSwqwppXuGn/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/j-gAAeSwoG9pXuGp/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "2.png",
@@ -164,13 +164,14 @@
           "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGoAAeSwEdBpXuGx/$_1.JPG?set_id=8800005007"
         },
         {
+          "filename": "studio_restoration_ultra_gpt_real_IMG_9221_1_upscaled_x4.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/U40AAeSwGjNpk61V/$_1.JPG?set_id=8800005007"
+        },
+        {
           "filename": "studio_restoration_real_IMG_9225_1_upscaled_x4.jpg",
           "order": 8,
           "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1J4AAeSwudppXuHG/$_1.PNG?set_id=8800005007"
-        },
-        {
-          "filename": "studio_restoration_ultra_gpt_real_IMG_9221_1_upscaled_x4.jpg",
-          "order": 7
         },
         {
           "filename": "IMG_9224.jpg",
@@ -188,47 +189,41 @@
         "Stil": "Halbschuhe"
       },
       "optional": {
-        "UK-Schuhgröße": "",
-        "AU-Schuhgröße": "",
-        "US-Schuhgröße": "",
-        "Modell": "",
+        "UK-Schuhgröße": "1",
+        "AU-Schuhgröße": "1",
+        "US-Schuhgröße": "1",
+        "Modell": "Kyopp",
         "Obermaterial": "Baumwolle",
         "Abteilung": "Unisex Kinder",
-        "Vintage": "",
+        "Vintage": "Nein",
         "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
-        "Produktlinie": "",
+        "Produktlinie": "Barfußschuh",
         "Charakter": "",
         "Jahreszeit": "Sommer",
         "Charakter Familie": "",
-        "Innensohlenmaterial": "",
-        "Futtermaterial": "",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Futtermaterial": "Baumwolle",
         "Laufsohlenmaterial": "Gummi",
-        "Thema": "",
+        "Thema": "Wassersport",
         "Verschluss": "Schnürung",
         "Besonderheiten": "Atmungsaktiv",
         "Gewebeart": "",
         "Dämpfungsgrad": "",
         "Akzente": "",
         "Anlass": "Freizeit",
-        "Schuhweite": "",
+        "Schuhweite": "M",
         "Stollentyp": "",
-        "Aktivität": "",
-        "Handgefertigt": "",
-        "Muster": "",
-        "Herstellungsjahr": "",
+        "Aktivität": "Wassersport",
+        "Handgefertigt": "Nein",
+        "Muster": "Ohne Muster",
+        "Herstellungsjahr": "2023",
         "Sprengung": "",
-        "Ursprungsland": "",
+        "Ursprungsland": "China",
         "Absatzart": "Flach",
         "Herstellernummer": "",
-        "Pronation": "",
+        "Pronation": "Neutral",
         "Schuhschaft-Typ": "Low Top",
         "Schuhspitze": "Geschlossen"
-      },
-      "pricing": {
-        "Shipping Costs Net": "9.42",
-        "Selling Price Total": "28.0",
-        "Net Profit": "8.739411764705883",
-        "Net Profit Margin": "526.4705882352941"
       }
     }
   }

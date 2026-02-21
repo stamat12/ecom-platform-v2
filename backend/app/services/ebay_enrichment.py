@@ -147,9 +147,29 @@ def _build_enrichment_prompt(
     category_id: str,
     required_aspects: List[Dict[str, Any]],
     optional_aspects: List[Dict[str, Any]],
-    current_fields: Dict[str, str]
+    current_fields: Dict[str, str],
+    product_json: Dict[str, Any] = None
 ) -> str:
     """Build enrichment prompt for OpenAI"""
+    
+    # Extract Intern Product Info and Intern Generated Info if available
+    intern_product_info = ""
+    if product_json:
+        intern_data = product_json.get("Intern Product Info", {})
+        if intern_data:
+            intern_product_info = "Manuell hinzugefügte Produktinformationen:\n"
+            for key, value in intern_data.items():
+                if value and str(value).strip():
+                    intern_product_info += f"  - {key}: {value}\n"
+    
+    intern_generated_info = ""
+    if product_json:
+        intern_gen = product_json.get("Intern Generated Info", {})
+        if intern_gen:
+            intern_generated_info = "Manuell eingegebene oder generierte Informationen:\n"
+            for key, value in intern_gen.items():
+                if value and str(value).strip():
+                    intern_generated_info += f"  - {key}: {value}\n"
     
     # Format required fields
     required_lines = []
@@ -180,12 +200,22 @@ def _build_enrichment_prompt(
     # Format current values
     current_values = json.dumps(current_fields, ensure_ascii=False, indent=2)
     
+    # Build additional context
+    additional_context = ""
+    if intern_product_info or intern_generated_info:
+        additional_context = "\nZUSÄTZLICHE KONTEXTINFORMATIONEN (manuell hinzugefügt):\n"
+        if intern_product_info:
+            additional_context += intern_product_info + "\n"
+        if intern_generated_info:
+            additional_context += intern_generated_info
+    
     return EBAY_FIELD_ENRICHMENT_PROMPT.format(
         category_name=category_name,
         category_id=category_id,
         required_fields=required_fields,
         optional_fields=optional_fields,
-        current_values=current_values
+        current_values=current_values,
+        additional_context=additional_context
     )
 
 
@@ -324,7 +354,7 @@ def enrich_ebay_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     # Build prompt
     all_field_names = [a.get("name") for a in required_aspects + optional_aspects if a.get("name")]
     system_prompt = _build_enrichment_prompt(
-        category_name, category_id, required_aspects, optional_aspects, current_fields
+        category_name, category_id, required_aspects, optional_aspects, current_fields, product_json
     )
     
     # Call OpenAI

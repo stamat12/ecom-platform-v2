@@ -21,7 +21,7 @@
       "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -127,7 +127,106 @@
         {
           "filename": "1.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00184 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eEIAAeSwoNppk7h4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s-kAAeSwlNdpk7h7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (9).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZBcAAeSwG7ppk7h-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/frsAAeSwML9pk7iA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cW0AAeSw3oFpk7iC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~qkAAeSw2NRpk7iE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/viEAAeSw7Rtpk7iG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5nIAAeSwAiNpk7iJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (6).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cCQAAeSwmvdpk7iM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (4).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cxoAAeSw6m9pk7iP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ty0AAeSw3nZpk7iS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00184 (12).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/77MAAeSwmItpk7iW/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "C.Paravano",
+        "EU-Schuhgröße": "38",
+        "Stil": "Ballerina",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Lackleder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Lammfell",
+        "Innensohlenmaterial": "Leder",
+        "UK-Schuhgröße": "5",
+        "AU-Schuhgröße": "5",
+        "US-Schuhgröße": "7.5",
+        "Verschluss": "Riemen",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Schuhspitze": "Quadratisch",
+        "Anlass": "Elegant",
+        "Akzente": "Dekorative Schnalle",
+        "Besonderheiten": "Gepolstert",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "67",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:34"
     }
   }
 }

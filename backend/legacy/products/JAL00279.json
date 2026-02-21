@@ -17,7 +17,8 @@
       "Total Cost Net": 6.78
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
       "EAN": 6927990258300.0
@@ -28,22 +29,22 @@
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "Elegantpark",
-      "Color": "",
+      "Color": "Weiß",
       "Size": "40"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Die Schuhe sind aus satinartigem Material gefertigt und haben einen eleganten Look. Sie verfügen über einen stabilen Absatz und eine schicke Schnalle. Die Innensohle ist gepolstert für zusätzlichen Komfort.",
+      "Keywords": "Pumps Damen",
+      "Materials": "Satin"
     },
     "OP": {
       "OP": "41.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",
@@ -112,6 +113,37 @@
           "filename": "JAL00279 (1).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Elegantpark",
+        "EU-Schuhgröße": "40",
+        "Stil": "Pumps",
+        "Farbe": "Weiß",
+        "Abteilung": "Damen",
+        "Obermaterial": "Satin"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "Laufsohlenmaterial": "Gummi",
+        "Innensohlenmaterial": "Schaumstoff",
+        "Futtermaterial": "Kunstleder",
+        "Schuhspitze": "Geschlossen",
+        "Akzente": "Schnalle",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Anlass": "Hochzeit",
+        "Schuhweite": "Standard",
+        "Besonderheiten": "Komfort",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "China",
+        "Jahreszeit": "Frühling",
+        "Personalisieren": "Nein",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
     }
   }
 }

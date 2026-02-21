@@ -17,10 +17,11 @@
       "Total Cost Net": 4.8
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -138,7 +139,96 @@
         {
           "filename": "JAL00195 (7).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/MuEAAeSwX~Bpk7fg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/fpoAAeSw7l5pk7fh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/ujAAAeSwFrxpk7fj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/NTAwWDUwMA==/z/TzMAAeSwNlBpk7fl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YKkAAeSwG7ppk7fn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (2).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VB8AAeSw0gNpk7fq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZkcAAeSwJ05pk7fu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fzsAAeSwgeJpk7fy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sDkAAeSwMDtpk7f1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (12).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uuMAAeSw9MVpk7f4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00195 (13).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dKkAAeSwOcNpk7f7/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "C.Paravano",
+        "EU-Schuhgröße": "40",
+        "Stil": "Ballerina",
+        "Abteilung": "Damen",
+        "Farbe": "Mintgrün",
+        "Obermaterial": "Leder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Lammfell",
+        "Innensohlenmaterial": "Memory Foam",
+        "Schuhweite": "Standard",
+        "Verschluss": "Slip-On",
+        "Schuhspitze": "Spitz",
+        "Anlass": "Elegant",
+        "Besonderheiten": "Komfort",
+        "Ursprungsland": "China"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "72",
+      "Shipping Costs Net": "9.4",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-02-28T01:33"
     }
   }
 }

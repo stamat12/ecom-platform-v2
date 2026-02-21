@@ -17,7 +17,8 @@
       "Total Cost Net": 5.63
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
     },
     "EAN": {
       "EAN": null
@@ -28,22 +29,22 @@
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "Meik Mangni",
-      "Color": "",
+      "Color": "Khaki",
       "Size": "37"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Diese Gummistiefel sind in einem eleganten Khaki-Ton gehalten. Sie verfügen über eine rutschfeste Sohle und sind ideal für nasses Wetter. Der Innenbereich ist atmungsaktiv und sorgt für hohen Tragekomfort.",
+      "Keywords": "Gummistiefel Damen",
+      "Materials": "PVC"
     },
     "OP": {
       "OP": "35.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
       "schema_version": "1.0",
@@ -121,6 +122,29 @@
           "filename": "4.png"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Meik Mangni",
+        "EU-Schuhgröße": "37",
+        "Abteilung": "Damen",
+        "Farbe": "Beige",
+        "Obermaterial": "PVC",
+        "Stil": "Gummistiefel",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)"
+      },
+      "optional": {
+        "Produktart": "Stiefel",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Synthetik",
+        "Innensohlenmaterial": "Synthetik",
+        "Schuhschaft-Typ": "Knöchel",
+        "Jahreszeit": "Herbst",
+        "Besonderheiten": "Wasserdicht",
+        "Verschluss": "Slip-On",
+        "Schuhspitze": "Geschlossen",
+        "Anlass": "Freizeit"
+      }
     }
   }
 }

@@ -2,9 +2,50 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [],
-      "column_filters": {},
-      "filter_mode": {},
+      "selected_columns": [
+        "SKU (Old)",
+        "Supplier Title",
+        "Brand",
+        "Color",
+        "Status",
+        "Json",
+        "Category",
+        "Lager",
+        "Sold",
+        "Ebay Listing",
+        "Folder Images",
+        "Json Phone Images"
+      ],
+      "column_filters": {
+        "Lager": [
+          "Tausch",
+          "Stamen",
+          "Geschenk Papa",
+          "Mama Geschenk",
+          "Geschenk Mama",
+          "Defekt",
+          "Verloren",
+          "Sliven",
+          "Recycled"
+        ],
+        "Sold": [
+          "No"
+        ],
+        "Ebay Listing": "false",
+        "Folder Images": {
+          "min": "1",
+          "max": ""
+        },
+        "Json": "true",
+        "SKU (Old)": "JAL",
+        "Json Phone Images": {
+          "min": "1",
+          "max": ""
+        }
+      },
+      "filter_mode": {
+        "Lager": "exclude"
+      },
       "page_size": 50,
       "column_widths": {},
       "emptyFilters": {}
