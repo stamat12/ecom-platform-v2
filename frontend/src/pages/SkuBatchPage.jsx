@@ -113,6 +113,13 @@ export default function SkuBatchPage() {
   const [ebayCategoryLoading, setEbayCategoryLoading] = useState({}); // { sku: boolean }
   const categorySearchTimers = useRef({});
 
+  // eBay subsection expansion state
+  const [ebaySubsectionExpanded, setEbaySubsectionExpanded] = useState({}); // { "sku/section": boolean }
+  // eBay SEO fields state
+  const [ebaySeoFields, setEbaySeoFields] = useState({}); // { sku: { product_type, keyword_1, keyword_2, keyword_3 } }
+  const [ebayEditingSeo, setEbayEditingSeo] = useState({}); // { sku: boolean }
+  const [ebaySavingSeo, setEbaySavingSeo] = useState({}); // { sku: boolean }
+
   // Filter state
   const [showFilters, setShowFilters] = useState(false);
   const [selectedStatusFilters, setSelectedStatusFilters] = useState(new Set());
@@ -1235,6 +1242,9 @@ export default function SkuBatchPage() {
       // Load eBay listing draft data
       await loadEbayListingData(sku);
       
+      // Load eBay SEO fields
+      await loadEbaySeoFields(sku);
+      
       // Load schema for SKU (with cache bust)
       const cacheBust = Date.now();
       const schemaRes = await fetch(`/api/ebay/schemas/sku/${encodeURIComponent(sku)}?t=${cacheBust}`);
@@ -1610,6 +1620,51 @@ export default function SkuBatchPage() {
       alert(`Error: ${e.message}`);
     } finally {
       setEbaySavingFields(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
+  const loadEbaySeoFields = async (sku) => {
+    try {
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-seo?t=${Date.now()}`);
+      if (res.ok) {
+        const data = await res.json();
+        setEbaySeoFields(prev => ({ ...prev, [sku]: data }));
+      } else {
+        // Initialize with empty fields if not found
+        setEbaySeoFields(prev => ({ ...prev, [sku]: { product_type: "", keyword_1: "", keyword_2: "", keyword_3: "" } }));
+      }
+    } catch (e) {
+      console.error("Failed to load eBay SEO fields:", e);
+    }
+  };
+
+  const handleSaveEbaySeoFields = async (sku) => {
+    try {
+      setEbaySavingSeo(prev => ({ ...prev, [sku]: true }));
+      const currentData = ebaySeoFields[sku] || {};
+      
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-seo`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          product_type: currentData.product_type || "",
+          keyword_1: currentData.keyword_1 || "",
+          keyword_2: currentData.keyword_2 || "",
+          keyword_3: currentData.keyword_3 || ""
+        })
+      });
+      
+      if (res.ok) {
+        alert(`✅ ${sku}: eBay SEO fields saved!`);
+        setEbayEditingSeo(prev => ({ ...prev, [sku]: false }));
+      } else {
+        const err = await res.json();
+        alert(`❌ ${err.detail || "Failed to save SEO fields"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbaySavingSeo(prev => ({ ...prev, [sku]: false }));
     }
   };
 
@@ -3637,233 +3692,406 @@ export default function SkuBatchPage() {
                       )}
                     </div>
 
-                    {/* Category Info */}
-                    {ebayFields[sku] && (
-                      <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
-                        <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebayFields[sku].category || "No Category"}</div>
-                        <div style={{ color: "#666" }}>ID: {ebayFields[sku].categoryId || "N/A"}</div>
-                        {ebayFields[sku].error_message && (
-                          <div style={{ color: "#d32f2f", marginTop: 4, fontSize: 9 }}>⚠️ {ebayFields[sku].error_message}</div>
-                        )}
-                      </div>
-                    )}
+                    <div style={{ marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, overflow: "hidden" }}>
+                      <button
+                        onClick={() => setEbaySubsectionExpanded(prev => ({
+                          ...prev,
+                          [`${sku}/ebay-fields`]: !(prev[`${sku}/ebay-fields`] !== false)
+                        }))}
+                        style={{
+                          width: "100%",
+                          background: "#f8f9fa",
+                          border: "none",
+                          borderBottom: "1px solid #e0e0e0",
+                          cursor: "pointer",
+                          padding: "10px 12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          fontWeight: "bold",
+                          color: "#d32f2f",
+                          fontSize: 12,
+                        }}
+                      >
+                        <span>1. eBay Fields</span>
+                        <span style={{ transform: (ebaySubsectionExpanded[`${sku}/ebay-fields`] !== false) ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▶</span>
+                      </button>
 
-                    {/* eBay Fields Display */}
-                    {ebayFields[sku] && (
-                      <div style={{ marginBottom: 12 }}>
-                        {/* Show message if no fields available */}
-                        {(!ebayFields[sku].required_fields || Object.keys(ebayFields[sku].required_fields).length === 0) && 
-                         (!ebayFields[sku].optional_fields || Object.keys(ebayFields[sku].optional_fields).length === 0) && (
-                          <div style={{ padding: 12, background: "#fff9e6", border: "1px solid #ffc107", borderRadius: 4, fontSize: 10, color: "#666" }}>
-                            ⚠️ No eBay fields schema loaded. {ebayFields[sku].message || "Please check if the category is set correctly and has a valid schema."}
-                          </div>
-                        )}
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 12 }}>
-                          {/* Required Fields */}
-                          {ebayFields[sku].required_fields && Object.keys(ebayFields[sku].required_fields).length > 0 && (
-                            <div>
-                              <div style={{ fontSize: 10, fontWeight: "bold", color: "#d32f2f", marginBottom: 6 }}>
-                                Required Fields ({Object.keys(ebayFields[sku].required_fields).length})
-                              </div>
-                              <div style={{ maxHeight: 300, overflow: "auto" }}>
-                                {Object.entries(ebayFields[sku].required_fields).map(([name, fieldObj]) => {
-                                  const fieldValue = typeof fieldObj === 'object' ? fieldObj.value : fieldObj;
-                                  const fieldDescription = typeof fieldObj === 'object' ? fieldObj.description : '';
-                                  const fieldOptions = typeof fieldObj === 'object' ? fieldObj.options : [];
-                                  return (
-                                    <div key={name} style={{ marginBottom: 6, padding: 6, background: "#fff8f8", borderRadius: 3 }}>
-                                      <div style={{ fontSize: 9, fontWeight: "600", color: "#d32f2f", marginBottom: 3 }}>{name}</div>
-                                      {fieldDescription && (
-                                        <div style={{ fontSize: 8, color: "#999", marginBottom: 3, fontStyle: "italic" }}>{fieldDescription}</div>
-                                      )}
-                                      {ebayEditingFields[sku] ? (
-                                        fieldOptions && fieldOptions.length > 0 ? (
-                                          <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-                                            <select
-                                              value={(() => {
-                                                const currentVal = ebayEditedFields[sku]?.required?.hasOwnProperty(name)
-                                                  ? ebayEditedFields[sku]?.required?.[name]
-                                                  : (fieldValue ?? "");
-                                                return fieldOptions.includes(currentVal) ? currentVal : "";
-                                              })()}
-                                              onChange={(e) => setEbayEditedFields(prev => ({
-                                                ...prev,
-                                                [sku]: {
-                                                  ...(prev[sku] || {}),
-                                                  required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
-                                                }
-                                              }))}
-                                              style={{
-                                                width: "45%",
-                                                padding: "4px 6px",
-                                                fontSize: 9,
-                                                border: "1px solid #d32f2f",
-                                                borderRadius: 3,
-                                                fontFamily: "monospace"
-                                              }}
-                                            >
-                                              <option value="">-- Custom --</option>
-                                              {fieldOptions.map(opt => (
-                                                <option key={opt} value={opt}>{opt}</option>
-                                              ))}
-                                            </select>
-                                            <input
-                                              type="text"
-                                              value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
-                                              onChange={(e) => setEbayEditedFields(prev => ({
-                                                ...prev,
-                                                [sku]: {
-                                                  ...(prev[sku] || {}),
-                                                  required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
-                                                }
-                                              }))}
-                                              placeholder="Custom value"
-                                              style={{
-                                                width: "55%",
-                                                padding: "4px 6px",
-                                                fontSize: 9,
-                                                border: "1px solid #d32f2f",
-                                                borderRadius: 3,
-                                                fontFamily: "monospace"
-                                              }}
-                                            />
-                                          </div>
-                                        ) : (
-                                          <input
-                                            type="text"
-                                            value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
-                                            onChange={(e) => setEbayEditedFields(prev => ({
-                                              ...prev,
-                                              [sku]: {
-                                                ...(prev[sku] || {}),
-                                                required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
-                                              }
-                                            }))}
-                                            style={{
-                                              width: "100%",
-                                              padding: "4px 6px",
-                                              fontSize: 9,
-                                              border: "1px solid #d32f2f",
-                                              borderRadius: 3,
-                                              fontFamily: "monospace"
-                                            }}
-                                          />
-                                        )
-                                      ) : (
-                                        <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{fieldValue || <em style={{ color: "#999" }}>empty</em>}</div>
-                                      )}
-                                    </div>
-                                  );
-                                })}
-                              </div>
+                      {(ebaySubsectionExpanded[`${sku}/ebay-fields`] !== false) && (
+                        <div style={{ padding: 10, background: "#fff" }}>
+                          {/* Category Info */}
+                          {ebayFields[sku] && (
+                            <div style={{ marginBottom: 12, padding: 8, background: "#f5f5f5", borderRadius: 4, fontSize: 10 }}>
+                              <div style={{ fontWeight: "bold", marginBottom: 4 }}>{ebayFields[sku].category || "No Category"}</div>
+                              <div style={{ color: "#666" }}>ID: {ebayFields[sku].categoryId || "N/A"}</div>
+                              {ebayFields[sku].error_message && (
+                                <div style={{ color: "#d32f2f", marginTop: 4, fontSize: 9 }}>⚠️ {ebayFields[sku].error_message}</div>
+                              )}
                             </div>
                           )}
 
-                          {/* Optional Fields */}
-                          {ebayFields[sku].optional_fields && Object.keys(ebayFields[sku].optional_fields).length > 0 && (
-                            <div>
-                              <div style={{ fontSize: 10, fontWeight: "bold", color: "#1976d2", marginBottom: 6 }}>
-                                Optional Fields ({Object.keys(ebayFields[sku].optional_fields).length})
-                              </div>
-                              <div style={{ maxHeight: 300, overflow: "auto" }}>
-                                {Object.entries(ebayFields[sku].optional_fields).map(([name, fieldObj]) => {
-                                  const fieldValue = typeof fieldObj === 'object' ? fieldObj.value : fieldObj;
-                                  const fieldDescription = typeof fieldObj === 'object' ? fieldObj.description : '';
-                                  const fieldOptions = typeof fieldObj === 'object' ? fieldObj.options : [];
-                                  return (
-                                    <div key={name} style={{ marginBottom: 6, padding: 6, background: "#f8f8ff", borderRadius: 3 }}>
-                                      <div style={{ fontSize: 9, fontWeight: "600", color: "#1976d2", marginBottom: 3 }}>{name}</div>
-                                      {fieldDescription && (
-                                        <div style={{ fontSize: 8, color: "#999", marginBottom: 3, fontStyle: "italic" }}>{fieldDescription}</div>
-                                      )}
-                                      {ebayEditingFields[sku] ? (
-                                        fieldOptions && fieldOptions.length > 0 ? (
-                                          <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-                                            <select
-                                              value={(() => {
-                                                const currentVal = ebayEditedFields[sku]?.optional?.hasOwnProperty(name)
-                                                  ? ebayEditedFields[sku]?.optional?.[name]
-                                                  : (fieldValue ?? "");
-                                                return fieldOptions.includes(currentVal) ? currentVal : "";
-                                              })()}
-                                              onChange={(e) => setEbayEditedFields(prev => ({
-                                                ...prev,
-                                                [sku]: {
-                                                  ...(prev[sku] || {}),
-                                                  optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
-                                                }
-                                              }))}
-                                              style={{
-                                                width: "45%",
-                                                padding: "4px 6px",
-                                                fontSize: 9,
-                                                border: "1px solid #1976d2",
-                                                borderRadius: 3,
-                                                fontFamily: "monospace"
-                                              }}
-                                            >
-                                              <option value="">-- Custom --</option>
-                                              {fieldOptions.map(opt => (
-                                                <option key={opt} value={opt}>{opt}</option>
-                                              ))}
-                                            </select>
-                                            <input
-                                              type="text"
-                                              value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
-                                              onChange={(e) => setEbayEditedFields(prev => ({
-                                                ...prev,
-                                                [sku]: {
-                                                  ...(prev[sku] || {}),
-                                                  optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
-                                                }
-                                              }))}
-                                              placeholder="Custom value"
-                                              style={{
-                                                width: "55%",
-                                                padding: "4px 6px",
-                                                fontSize: 9,
-                                                border: "1px solid #1976d2",
-                                                borderRadius: 3,
-                                                fontFamily: "monospace"
-                                              }}
-                                            />
-                                          </div>
-                                        ) : (
-                                          <input
-                                            type="text"
-                                            value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
-                                            onChange={(e) => setEbayEditedFields(prev => ({
-                                              ...prev,
-                                              [sku]: {
-                                                ...(prev[sku] || {}),
-                                                optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
-                                              }
-                                            }))}
-                                            style={{
-                                              width: "100%",
-                                              padding: "4px 6px",
-                                              fontSize: 9,
-                                              border: "1px solid #1976d2",
-                                              borderRadius: 3,
-                                              fontFamily: "monospace"
-                                            }}
-                                          />
-                                        )
-                                      ) : (
-                                        <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{fieldValue || <em style={{ color: "#999" }}>empty</em>}</div>
-                                      )}
+                          {/* eBay Fields Display */}
+                          {ebayFields[sku] && (
+                            <div style={{ marginBottom: 12 }}>
+                              {/* Show message if no fields available */}
+                              {(!ebayFields[sku].required_fields || Object.keys(ebayFields[sku].required_fields).length === 0) &&
+                               (!ebayFields[sku].optional_fields || Object.keys(ebayFields[sku].optional_fields).length === 0) && (
+                                <div style={{ padding: 12, background: "#fff9e6", border: "1px solid #ffc107", borderRadius: 4, fontSize: 10, color: "#666" }}>
+                                  ⚠️ No eBay fields schema loaded. {ebayFields[sku].message || "Please check if the category is set correctly and has a valid schema."}
+                                </div>
+                              )}
+                              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 12 }}>
+                                {/* Required Fields */}
+                                {ebayFields[sku].required_fields && Object.keys(ebayFields[sku].required_fields).length > 0 && (
+                                  <div>
+                                    <div style={{ fontSize: 10, fontWeight: "bold", color: "#d32f2f", marginBottom: 6 }}>
+                                      Required Fields ({Object.keys(ebayFields[sku].required_fields).length})
                                     </div>
-                                  );
-                                })}
+                                    <div style={{ maxHeight: 300, overflow: "auto" }}>
+                                      {Object.entries(ebayFields[sku].required_fields).map(([name, fieldObj]) => {
+                                        const fieldValue = typeof fieldObj === 'object' ? fieldObj.value : fieldObj;
+                                        const fieldDescription = typeof fieldObj === 'object' ? fieldObj.description : '';
+                                        const fieldOptions = typeof fieldObj === 'object' ? fieldObj.options : [];
+                                        return (
+                                          <div key={name} style={{ marginBottom: 6, padding: 6, background: "#fff8f8", borderRadius: 3 }}>
+                                            <div style={{ fontSize: 9, fontWeight: "600", color: "#d32f2f", marginBottom: 3 }}>{name}</div>
+                                            {fieldDescription && (
+                                              <div style={{ fontSize: 8, color: "#999", marginBottom: 3, fontStyle: "italic" }}>{fieldDescription}</div>
+                                            )}
+                                            {ebayEditingFields[sku] ? (
+                                              fieldOptions && fieldOptions.length > 0 ? (
+                                                <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                                                  <select
+                                                    value={(() => {
+                                                      const currentVal = ebayEditedFields[sku]?.required?.hasOwnProperty(name)
+                                                        ? ebayEditedFields[sku]?.required?.[name]
+                                                        : (fieldValue ?? "");
+                                                      return fieldOptions.includes(currentVal) ? currentVal : "";
+                                                    })()}
+                                                    onChange={(e) => setEbayEditedFields(prev => ({
+                                                      ...prev,
+                                                      [sku]: {
+                                                        ...(prev[sku] || {}),
+                                                        required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                                      }
+                                                    }))}
+                                                    style={{
+                                                      width: "45%",
+                                                      padding: "4px 6px",
+                                                      fontSize: 9,
+                                                      border: "1px solid #d32f2f",
+                                                      borderRadius: 3,
+                                                      fontFamily: "monospace"
+                                                    }}
+                                                  >
+                                                    <option value="">-- Custom --</option>
+                                                    {fieldOptions.map(opt => (
+                                                      <option key={opt} value={opt}>{opt}</option>
+                                                    ))}
+                                                  </select>
+                                                  <input
+                                                    type="text"
+                                                    value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
+                                                    onChange={(e) => setEbayEditedFields(prev => ({
+                                                      ...prev,
+                                                      [sku]: {
+                                                        ...(prev[sku] || {}),
+                                                        required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                                      }
+                                                    }))}
+                                                    placeholder="Custom value"
+                                                    style={{
+                                                      width: "55%",
+                                                      padding: "4px 6px",
+                                                      fontSize: 9,
+                                                      border: "1px solid #d32f2f",
+                                                      borderRadius: 3,
+                                                      fontFamily: "monospace"
+                                                    }}
+                                                  />
+                                                </div>
+                                              ) : (
+                                                <input
+                                                  type="text"
+                                                  value={ebayEditedFields[sku]?.required?.hasOwnProperty(name) ? ebayEditedFields[sku]?.required?.[name] : (fieldValue ?? '')}
+                                                  onChange={(e) => setEbayEditedFields(prev => ({
+                                                    ...prev,
+                                                    [sku]: {
+                                                      ...(prev[sku] || {}),
+                                                      required: { ...(prev[sku]?.required || {}), [name]: e.target.value }
+                                                    }
+                                                  }))}
+                                                  style={{
+                                                    width: "100%",
+                                                    padding: "4px 6px",
+                                                    fontSize: 9,
+                                                    border: "1px solid #d32f2f",
+                                                    borderRadius: 3,
+                                                    fontFamily: "monospace"
+                                                  }}
+                                                />
+                                              )
+                                            ) : (
+                                              <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{fieldValue || <em style={{ color: "#999" }}>empty</em>}</div>
+                                            )}
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Optional Fields */}
+                                {ebayFields[sku].optional_fields && Object.keys(ebayFields[sku].optional_fields).length > 0 && (
+                                  <div>
+                                    <div style={{ fontSize: 10, fontWeight: "bold", color: "#1976d2", marginBottom: 6 }}>
+                                      Optional Fields ({Object.keys(ebayFields[sku].optional_fields).length})
+                                    </div>
+                                    <div style={{ maxHeight: 300, overflow: "auto" }}>
+                                      {Object.entries(ebayFields[sku].optional_fields).map(([name, fieldObj]) => {
+                                        const fieldValue = typeof fieldObj === 'object' ? fieldObj.value : fieldObj;
+                                        const fieldDescription = typeof fieldObj === 'object' ? fieldObj.description : '';
+                                        const fieldOptions = typeof fieldObj === 'object' ? fieldObj.options : [];
+                                        return (
+                                          <div key={name} style={{ marginBottom: 6, padding: 6, background: "#f8f8ff", borderRadius: 3 }}>
+                                            <div style={{ fontSize: 9, fontWeight: "600", color: "#1976d2", marginBottom: 3 }}>{name}</div>
+                                            {fieldDescription && (
+                                              <div style={{ fontSize: 8, color: "#999", marginBottom: 3, fontStyle: "italic" }}>{fieldDescription}</div>
+                                            )}
+                                            {ebayEditingFields[sku] ? (
+                                              fieldOptions && fieldOptions.length > 0 ? (
+                                                <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                                                  <select
+                                                    value={(() => {
+                                                      const currentVal = ebayEditedFields[sku]?.optional?.hasOwnProperty(name)
+                                                        ? ebayEditedFields[sku]?.optional?.[name]
+                                                        : (fieldValue ?? "");
+                                                      return fieldOptions.includes(currentVal) ? currentVal : "";
+                                                    })()}
+                                                    onChange={(e) => setEbayEditedFields(prev => ({
+                                                      ...prev,
+                                                      [sku]: {
+                                                        ...(prev[sku] || {}),
+                                                        optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                                      }
+                                                    }))}
+                                                    style={{
+                                                      width: "45%",
+                                                      padding: "4px 6px",
+                                                      fontSize: 9,
+                                                      border: "1px solid #1976d2",
+                                                      borderRadius: 3,
+                                                      fontFamily: "monospace"
+                                                    }}
+                                                  >
+                                                    <option value="">-- Custom --</option>
+                                                    {fieldOptions.map(opt => (
+                                                      <option key={opt} value={opt}>{opt}</option>
+                                                    ))}
+                                                  </select>
+                                                  <input
+                                                    type="text"
+                                                    value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
+                                                    onChange={(e) => setEbayEditedFields(prev => ({
+                                                      ...prev,
+                                                      [sku]: {
+                                                        ...(prev[sku] || {}),
+                                                        optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                                      }
+                                                    }))}
+                                                    placeholder="Custom value"
+                                                    style={{
+                                                      width: "55%",
+                                                      padding: "4px 6px",
+                                                      fontSize: 9,
+                                                      border: "1px solid #1976d2",
+                                                      borderRadius: 3,
+                                                      fontFamily: "monospace"
+                                                    }}
+                                                  />
+                                                </div>
+                                              ) : (
+                                                <input
+                                                  type="text"
+                                                  value={ebayEditedFields[sku]?.optional?.hasOwnProperty(name) ? ebayEditedFields[sku]?.optional?.[name] : (fieldValue ?? '')}
+                                                  onChange={(e) => setEbayEditedFields(prev => ({
+                                                    ...prev,
+                                                    [sku]: {
+                                                      ...(prev[sku] || {}),
+                                                      optional: { ...(prev[sku]?.optional || {}), [name]: e.target.value }
+                                                    }
+                                                  }))}
+                                                  style={{
+                                                    width: "100%",
+                                                    padding: "4px 6px",
+                                                    fontSize: 9,
+                                                    border: "1px solid #1976d2",
+                                                    borderRadius: 3,
+                                                    fontFamily: "monospace"
+                                                  }}
+                                                />
+                                              )
+                                            ) : (
+                                              <div style={{ fontSize: 9, color: "#333", marginTop: 2 }}>{fieldValue || <em style={{ color: "#999" }}>empty</em>}</div>
+                                            )}
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           )}
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
 
-                    {/* Create Listing Section */}
-                    <div style={{ borderTop: "1px solid #e0e0e0", paddingTop: 12 }}>
+                    <div style={{ marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, overflow: "hidden" }}>
+                      <button
+                        onClick={() => setEbaySubsectionExpanded(prev => ({
+                          ...prev,
+                          [`${sku}/ebay-seo`]: !(prev[`${sku}/ebay-seo`] !== false)
+                        }))}
+                        style={{
+                          width: "100%",
+                          background: "#f8f9fa",
+                          border: "none",
+                          borderBottom: "1px solid #e0e0e0",
+                          cursor: "pointer",
+                          padding: "10px 12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          fontWeight: "bold",
+                          color: "#7b1fa2",
+                          fontSize: 12,
+                        }}
+                      >
+                        <span>2. eBay SEO</span>
+                        <span style={{ transform: (ebaySubsectionExpanded[`${sku}/ebay-seo`] !== false) ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▶</span>
+                      </button>
+
+                      {(ebaySubsectionExpanded[`${sku}/ebay-seo`] !== false) && (
+                        <div style={{ padding: 10, background: "#fff" }}>
+                          <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
+                            {!ebayEditingSeo[sku] ? (
+                              <button
+                                onClick={() => setEbayEditingSeo(prev => ({ ...prev, [sku]: true }))}
+                                style={{
+                                  padding: "7px 12px",
+                                  fontSize: 11,
+                                  background: "#ff9800",
+                                  color: "white",
+                                  border: "none",
+                                  borderRadius: 4,
+                                  cursor: "pointer",
+                                  fontWeight: "bold"
+                                }}
+                              >
+                                ✏️ Edit SEO
+                              </button>
+                            ) : (
+                              <>
+                                <button
+                                  onClick={() => handleSaveEbaySeoFields(sku)}
+                                  disabled={ebaySavingSeo[sku]}
+                                  style={{
+                                    padding: "7px 12px",
+                                    fontSize: 11,
+                                    background: "#4CAF50",
+                                    color: "white",
+                                    border: "none",
+                                    borderRadius: 4,
+                                    cursor: ebaySavingSeo[sku] ? "not-allowed" : "pointer",
+                                    fontWeight: "bold"
+                                  }}
+                                >
+                                  {ebaySavingSeo[sku] ? "Saving..." : "💾 Save SEO"}
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    setEbayEditingSeo(prev => ({ ...prev, [sku]: false }));
+                                    loadEbaySeoFields(sku);
+                                  }}
+                                  style={{
+                                    padding: "7px 12px",
+                                    fontSize: 11,
+                                    background: "#999",
+                                    color: "white",
+                                    border: "none",
+                                    borderRadius: 4,
+                                    cursor: "pointer",
+                                    fontWeight: "bold"
+                                  }}
+                                >
+                                  Cancel
+                                </button>
+                              </>
+                            )}
+                          </div>
+
+                          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                            {[
+                              { key: "product_type", label: "Product Type" },
+                              { key: "keyword_1", label: "Keyword 1" },
+                              { key: "keyword_2", label: "Keyword 2" },
+                              { key: "keyword_3", label: "Keyword 3" },
+                            ].map(({ key, label }) => (
+                              <div key={key} style={{ padding: 8, background: "#faf5ff", borderRadius: 4 }}>
+                                <label style={{ fontSize: 10, fontWeight: "600", display: "block", marginBottom: 4, color: "#7b1fa2" }}>{label}</label>
+                                {ebayEditingSeo[sku] ? (
+                                  <input
+                                    type="text"
+                                    value={ebaySeoFields[sku]?.[key] || ""}
+                                    onChange={(e) => setEbaySeoFields(prev => ({
+                                      ...prev,
+                                      [sku]: {
+                                        ...(prev[sku] || {}),
+                                        [key]: e.target.value
+                                      }
+                                    }))}
+                                    style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #ce93d8", borderRadius: 3 }}
+                                  />
+                                ) : (
+                                  <div style={{ fontSize: 10, color: "#333", minHeight: 18 }}>
+                                    {ebaySeoFields[sku]?.[key] || <em style={{ color: "#999" }}>empty</em>}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div style={{ marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, overflow: "hidden" }}>
+                      <button
+                        onClick={() => setEbaySubsectionExpanded(prev => ({
+                          ...prev,
+                          [`${sku}/create-ebay-listing-fields`]: !(prev[`${sku}/create-ebay-listing-fields`] !== false)
+                        }))}
+                        style={{
+                          width: "100%",
+                          background: "#f8f9fa",
+                          border: "none",
+                          borderBottom: "1px solid #e0e0e0",
+                          cursor: "pointer",
+                          padding: "10px 12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          fontWeight: "bold",
+                          color: "#ff6b00",
+                          fontSize: 12,
+                        }}
+                      >
+                        <span>3. Create eBay Listing fields</span>
+                        <span style={{ transform: (ebaySubsectionExpanded[`${sku}/create-ebay-listing-fields`] !== false) ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▶</span>
+                      </button>
+
+                      {(ebaySubsectionExpanded[`${sku}/create-ebay-listing-fields`] !== false) && (
+                      <div style={{ paddingTop: 12, paddingLeft: 10, paddingRight: 10, paddingBottom: 10 }}>
                       <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>Create eBay Listing</div>
 
                       <div style={{ background: "#f4f8ff", padding: 8, borderRadius: 6, border: "1px solid #e3ecff", marginBottom: 8 }}>
@@ -4123,6 +4351,8 @@ export default function SkuBatchPage() {
                       >
                         {ebayCreatingListing[sku] ? "Creating..." : "📤 Create Listing"}
                       </button>
+                      </div>
+                      )}
                     </div>
                   </div>
                 )}

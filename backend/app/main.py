@@ -983,6 +983,67 @@ def save_ebay_fields_for_sku(sku: str, request: dict):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+def _read_ebay_seo_data(product_json: dict) -> dict:
+    section = product_json.get("eBay SEO", {})
+    if not isinstance(section, dict):
+        section = {}
+
+    return {
+        "product_type": section.get("Product Type", ""),
+        "keyword_1": section.get("Keyword 1", ""),
+        "keyword_2": section.get("Keyword 2", ""),
+        "keyword_3": section.get("Keyword 3", ""),
+    }
+
+
+@app.get("/api/skus/{sku}/ebay-seo")
+def get_ebay_seo_fields_for_sku(sku: str):
+    """Get eBay SEO fields for SKU JSON file."""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json
+
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+
+        return _read_ebay_seo_data(product_json)
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/skus/{sku}/ebay-seo")
+def save_ebay_seo_fields_for_sku(sku: str, request: dict):
+    """Save eBay SEO fields to SKU JSON file."""
+    try:
+        from app.repositories.sku_json_repo import read_sku_json, write_sku_json
+
+        product_json = read_sku_json(sku)
+        if not product_json:
+            raise HTTPException(status_code=404, detail=f"No JSON found for SKU {sku}")
+
+        if "eBay SEO" not in product_json or not isinstance(product_json.get("eBay SEO"), dict):
+            product_json["eBay SEO"] = {}
+
+        seo_section = product_json["eBay SEO"]
+        seo_section["Product Type"] = request.get("product_type", "")
+        seo_section["Keyword 1"] = request.get("keyword_1", "")
+        seo_section["Keyword 2"] = request.get("keyword_2", "")
+        seo_section["Keyword 3"] = request.get("keyword_3", "")
+
+        write_sku_json(sku, product_json)
+
+        return {
+            "success": True,
+            "message": "eBay SEO fields saved successfully"
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 def _read_ebay_listing_data(product_json: dict) -> dict:
     section = product_json.get("Ebay Listing", {})
     if not isinstance(section, dict):
