@@ -3,7 +3,10 @@
     "category_name": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Körbe, Blumentöpfe, -kästen & Untersetzer",
     "category_id": "20518",
     "marketplace": "EBAY_DE",
-    "fees": {}
+    "fees": {
+      "payment_fee": 0.35,
+      "sales_commission_percentage": 0.0
+    }
   },
   "schema": {
     "required": [

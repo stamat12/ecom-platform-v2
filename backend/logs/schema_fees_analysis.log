@@ -1,0 +1,100 @@
+======================================================================
+Schema Fees Analysis - 2026-02-21 15:38:03
+======================================================================
+
+📖 Loading category mapping...
+✅ Loaded category mapping with 17073 categories
+   Created lookup for 17073 categories
+
+📁 Scanning schema folder...
+   Found 53 schema files
+
+======================================================================
+ANALYSIS RESULTS
+======================================================================
+
+📋 EbayCat_11483_EBAY_DE.json
+   Category ID: 11483
+   Category: /Kleidung & Accessoires/Herren/Herrenmode/Jeans
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_11484_EBAY_DE.json
+   Category ID: 11484
+   Category: /Kleidung & Accessoires/Herren/Herrenmode/Pullover & Strick
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_155226_EBAY_DE.json
+   Category ID: 155226
+   Category: /Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_185101_EBAY_DE.json
+   Category ID: 185101
+   Category: /Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_20518_EBAY_DE.json
+   Category ID: 20518
+   Category: /Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Körbe, Blumentöpfe, -kästen & Untersetzer
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: NULL%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_260954_EBAY_DE.json
+   Category ID: 260954
+   Category: 
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_53112_EBAY_DE.json
+   Category ID: 53112
+   Category: /Business & Industrie/Elektronik & Messtechnik/Elektrische Steckdosen & Stecker/Elektrische Steckdosen & Buchsen
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: NULL%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_63864_EBAY_DE.json
+   Category ID: 63864
+   Category: /Kleidung & Accessoires/Damen/Damenmode/Röcke
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+📋 EbayCat_63867_EBAY_DE.json
+   Category ID: 63867
+   Category: /Kleidung & Accessoires/Damen/Damenmode/Bademode
+   ✅ Found in mapping:
+      - Payment Fee: €0.35
+      - Sales Commission: 0.12%
+   ✅ FIXED - Added fees to schema file
+
+======================================================================
+SUMMARY
+======================================================================
+Total schemas scanned: 53
+Schemas with missing fees: 9
+Successfully fixed: 9
+Errors: 0
+
+✅ All categories have fees in the mapping!
+
+======================================================================
+Log saved to: C:\Users\stame\OneDrive\TRADING_SEGMENT\ecom-platform-v2\backend\logs\schema_fees_analysis.log
+======================================================================

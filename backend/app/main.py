@@ -31,7 +31,7 @@ from app.services.folder_images_cache import get_last_update_time as get_folder_
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
 from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing
 from app.services.ebay_category_search import search_ebay_categories
-from app.services.ebay_listings_computation import compute_ebay_listings
+from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
 from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db
@@ -1556,11 +1556,28 @@ def debug_db_tables():
     return result
 
 
-@app.get("/api/skus/ebay-listings/compute")
-def compute_ebay_listings_endpoint():
-    """Fetch eBay listings and update cache with SSE progress updates"""
+@app.get("/api/skus/ebay-listings/compute-fast")
+def compute_ebay_listings_fast_endpoint():
+    """Fast fetch eBay listings (no detail lookups) with SSE progress updates"""
     def event_stream():
-        for progress in compute_ebay_listings():
+        for progress in compute_ebay_listings_fast():
+            yield f"data: {json.dumps(progress)}\n\n"
+    
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
+
+@app.get("/api/skus/ebay-listings/compute-detailed")
+def compute_ebay_listings_detailed_endpoint():
+    """Detailed fetch eBay listings (with parallel detail lookups) with SSE progress updates"""
+    def event_stream():
+        for progress in compute_ebay_listings_detailed():
             yield f"data: {json.dumps(progress)}\n\n"
     
     return StreamingResponse(

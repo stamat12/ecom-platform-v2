@@ -1,0 +1,728 @@
+2026-02-21 14:01:39,719 INFO app.services.ebay_listings_computation: [SSE] Fetch eBay Listings button triggered - OAuth token acquired
+2026-02-21 14:01:39,719 INFO app.services.ebay_listings_computation: [FETCH] Start GetMyeBaySelling: site_id=77, entries_per_page=200
+2026-02-21 14:01:43,660 INFO app.services.ebay_listings_computation: [FETCH] Page 1/7 processed, page_items=200, accumulated=200
+2026-02-21 14:01:43,660 INFO app.services.ebay_listings_computation: [SSE] Progress page=1/7 count=200
+2026-02-21 14:01:47,779 INFO app.services.ebay_listings_computation: [FETCH] Page 2/7 processed, page_items=200, accumulated=400
+2026-02-21 14:01:47,779 INFO app.services.ebay_listings_computation: [SSE] Progress page=2/7 count=400
+2026-02-21 14:01:51,410 INFO app.services.ebay_listings_computation: [FETCH] Page 3/7 processed, page_items=200, accumulated=600
+2026-02-21 14:01:51,410 INFO app.services.ebay_listings_computation: [SSE] Progress page=3/7 count=600
+2026-02-21 14:01:54,850 INFO app.services.ebay_listings_computation: [FETCH] Page 4/7 processed, page_items=200, accumulated=800
+2026-02-21 14:01:54,850 INFO app.services.ebay_listings_computation: [SSE] Progress page=4/7 count=800
+2026-02-21 14:01:58,373 INFO app.services.ebay_listings_computation: [FETCH] Page 5/7 processed, page_items=200, accumulated=1000
+2026-02-21 14:01:58,374 INFO app.services.ebay_listings_computation: [SSE] Progress page=5/7 count=1000
+2026-02-21 14:02:02,009 INFO app.services.ebay_listings_computation: [FETCH] Page 6/7 processed, page_items=200, accumulated=1200
+2026-02-21 14:02:02,009 INFO app.services.ebay_listings_computation: [SSE] Progress page=6/7 count=1200
+2026-02-21 14:02:05,363 INFO app.services.ebay_listings_computation: [FETCH] Page 7/7 processed, page_items=200, accumulated=1400
+2026-02-21 14:02:05,365 INFO app.services.ebay_listings_computation: [SSE] Progress page=7/7 count=1400
+2026-02-21 14:02:05,365 INFO app.services.ebay_listings_computation: [FETCH] Completed: total_pages=7, total_listings=1400
+2026-02-21 14:02:05,447 INFO app.services.ebay_listings_computation: [SSE] Cache updated successfully: listings=1400
+2026-02-21 14:07:23,366 INFO app.services.ebay_listings_computation: [SSE] Fetch eBay Listings button triggered - OAuth token acquired
+2026-02-21 14:07:23,366 INFO app.services.ebay_listings_computation: [FETCH] Start GetMyeBaySelling: site_id=77, entries_per_page=200
+2026-02-21 14:13:27,016 INFO app.services.ebay_listings_computation: [FETCH] Page 1/7 processed, page_items=200, accumulated=200, detail_lookups=200
+2026-02-21 14:13:27,016 INFO app.services.ebay_listings_computation: [SSE] Progress page=1/7 count=200
+2026-02-21 14:17:44,692 INFO app.services.ebay_listings_computation: [SSE] Fetch eBay Listings button triggered - OAuth token acquired
+2026-02-21 14:17:44,693 INFO app.services.ebay_listings_computation: [FETCH] Start GetMyeBaySelling: site_id=77, entries_per_page=200
+2026-02-21 14:17:44,693 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=1
+2026-02-21 14:17:44,693 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 1...
+2026-02-21 14:17:48,650 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 1, parsing XML...
+2026-02-21 14:17:48,663 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 1...
+2026-02-21 14:17:48,664 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 1/300 for item_id=136348875263 (item 1/200 on page 1)
+2026-02-21 14:17:50,491 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875263
+2026-02-21 14:17:50,491 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 2/300 for item_id=136348875280 (item 2/200 on page 1)
+2026-02-21 14:17:52,414 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875280
+2026-02-21 14:17:52,415 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 3/300 for item_id=136348875286 (item 3/200 on page 1)
+2026-02-21 14:17:54,372 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875286
+2026-02-21 14:17:54,372 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 4/300 for item_id=136348875296 (item 4/200 on page 1)
+2026-02-21 14:17:56,260 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875296
+2026-02-21 14:17:56,261 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 5/300 for item_id=136348875301 (item 5/200 on page 1)
+2026-02-21 14:17:58,188 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875301
+2026-02-21 14:17:58,188 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 6/300 for item_id=136348875319 (item 6/200 on page 1)
+2026-02-21 14:17:59,974 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136348875319
+2026-02-21 14:17:59,975 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 7/300 for item_id=136633954840 (item 7/200 on page 1)
+2026-02-21 14:18:01,743 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136633954840
+2026-02-21 14:18:01,743 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 8/300 for item_id=136770707201 (item 8/200 on page 1)
+2026-02-21 14:18:03,681 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136770707201
+2026-02-21 14:18:03,683 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 9/300 for item_id=136634106560 (item 9/200 on page 1)
+2026-02-21 14:18:05,624 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136634106560
+2026-02-21 14:18:05,625 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 10/300 for item_id=136039095216 (item 10/200 on page 1)
+2026-02-21 14:18:07,669 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136039095216
+2026-02-21 14:18:07,669 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 11/300 for item_id=136635175755 (item 11/200 on page 1)
+2026-02-21 14:18:09,358 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136635175755
+2026-02-21 14:18:09,359 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 12/300 for item_id=136637207847 (item 12/200 on page 1)
+2026-02-21 14:18:11,056 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637207847
+2026-02-21 14:18:11,057 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 13/300 for item_id=136637226230 (item 13/200 on page 1)
+2026-02-21 14:18:12,858 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637226230
+2026-02-21 14:18:12,859 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 14/300 for item_id=136637226295 (item 14/200 on page 1)
+2026-02-21 14:18:14,748 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637226295
+2026-02-21 14:18:14,748 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 15/300 for item_id=136637226353 (item 15/200 on page 1)
+2026-02-21 14:18:17,014 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637226353
+2026-02-21 14:18:17,014 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 16/300 for item_id=136637226597 (item 16/200 on page 1)
+2026-02-21 14:18:18,714 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637226597
+2026-02-21 14:18:18,715 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 17/300 for item_id=136637376892 (item 17/200 on page 1)
+2026-02-21 14:18:20,400 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637376892
+2026-02-21 14:18:20,400 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 18/300 for item_id=136637663255 (item 18/200 on page 1)
+2026-02-21 14:18:22,048 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637663255
+2026-02-21 14:18:22,049 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 19/300 for item_id=136637663501 (item 19/200 on page 1)
+2026-02-21 14:18:23,532 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637663501
+2026-02-21 14:18:23,532 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 20/300 for item_id=136637933580 (item 20/200 on page 1)
+2026-02-21 14:18:25,178 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136637933580
+2026-02-21 14:18:25,178 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 21/300 for item_id=136042683169 (item 21/200 on page 1)
+2026-02-21 14:18:27,031 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136042683169
+2026-02-21 14:18:27,031 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 22/300 for item_id=136198039824 (item 22/200 on page 1)
+2026-02-21 14:18:28,668 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136198039824
+2026-02-21 14:18:28,668 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 23/300 for item_id=136198081472 (item 23/200 on page 1)
+2026-02-21 14:18:30,194 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136198081472
+2026-02-21 14:18:30,195 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 24/300 for item_id=136198177065 (item 24/200 on page 1)
+2026-02-21 14:18:32,257 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136198177065
+2026-02-21 14:18:32,257 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 25/300 for item_id=136198241748 (item 25/200 on page 1)
+2026-02-21 14:18:34,090 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136198241748
+2026-02-21 14:18:34,091 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 26/300 for item_id=136639604899 (item 26/200 on page 1)
+2026-02-21 14:18:35,829 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136639604899
+2026-02-21 14:18:35,829 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 27/300 for item_id=136496729658 (item 27/200 on page 1)
+2026-02-21 14:18:37,672 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729658
+2026-02-21 14:18:37,672 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 28/300 for item_id=136496729662 (item 28/200 on page 1)
+2026-02-21 14:18:39,467 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729662
+2026-02-21 14:18:39,467 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 29/300 for item_id=136496729664 (item 29/200 on page 1)
+2026-02-21 14:18:41,280 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729664
+2026-02-21 14:18:41,280 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 30/300 for item_id=136496729665 (item 30/200 on page 1)
+2026-02-21 14:18:42,938 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729665
+2026-02-21 14:18:42,938 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 31/300 for item_id=136496729666 (item 31/200 on page 1)
+2026-02-21 14:18:44,637 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729666
+2026-02-21 14:18:44,637 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 32/300 for item_id=136496729667 (item 32/200 on page 1)
+2026-02-21 14:18:46,388 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729667
+2026-02-21 14:18:46,389 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 33/300 for item_id=136496729668 (item 33/200 on page 1)
+2026-02-21 14:18:48,021 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729668
+2026-02-21 14:18:48,021 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 34/300 for item_id=136496729672 (item 34/200 on page 1)
+2026-02-21 14:18:49,766 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729672
+2026-02-21 14:18:49,766 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 35/300 for item_id=136496729677 (item 35/200 on page 1)
+2026-02-21 14:18:51,303 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136496729677
+2026-02-21 14:18:51,303 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 36/300 for item_id=136639972460 (item 36/200 on page 1)
+2026-02-21 14:18:52,860 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136639972460
+2026-02-21 14:18:52,860 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 37/300 for item_id=136639972467 (item 37/200 on page 1)
+2026-02-21 14:18:54,460 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136639972467
+2026-02-21 14:18:54,460 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 38/300 for item_id=136640141979 (item 38/200 on page 1)
+2026-02-21 14:18:56,273 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136640141979
+2026-02-21 14:18:56,273 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 39/300 for item_id=136048254866 (item 39/200 on page 1)
+2026-02-21 14:18:57,976 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048254866
+2026-02-21 14:18:57,976 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 40/300 for item_id=136048345365 (item 40/200 on page 1)
+2026-02-21 14:18:59,601 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048345365
+2026-02-21 14:18:59,601 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 41/300 for item_id=136203695142 (item 41/200 on page 1)
+2026-02-21 14:19:01,270 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203695142
+2026-02-21 14:19:01,270 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 42/300 for item_id=136203695275 (item 42/200 on page 1)
+2026-02-21 14:19:03,058 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203695275
+2026-02-21 14:19:03,058 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 43/300 for item_id=136203695282 (item 43/200 on page 1)
+2026-02-21 14:19:04,649 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203695282
+2026-02-21 14:19:04,649 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 44/300 for item_id=136203695358 (item 44/200 on page 1)
+2026-02-21 14:19:06,325 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203695358
+2026-02-21 14:19:06,325 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 45/300 for item_id=136203696150 (item 45/200 on page 1)
+2026-02-21 14:19:07,985 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203696150
+2026-02-21 14:19:07,985 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 46/300 for item_id=136203696598 (item 46/200 on page 1)
+2026-02-21 14:19:09,768 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203696598
+2026-02-21 14:19:09,768 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 47/300 for item_id=136203696647 (item 47/200 on page 1)
+2026-02-21 14:19:11,276 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203696647
+2026-02-21 14:19:11,276 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 48/300 for item_id=136203696658 (item 48/200 on page 1)
+2026-02-21 14:19:13,057 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136203696658
+2026-02-21 14:19:13,057 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 49/300 for item_id=136356407305 (item 49/200 on page 1)
+2026-02-21 14:19:14,626 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136356407305
+2026-02-21 14:19:14,626 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 50/300 for item_id=136048762812 (item 50/200 on page 1)
+2026-02-21 14:19:16,331 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048762812
+2026-02-21 14:19:16,331 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 51/300 for item_id=136356506672 (item 51/200 on page 1)
+2026-02-21 14:19:17,877 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136356506672
+2026-02-21 14:19:17,877 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 52/300 for item_id=136048947445 (item 52/200 on page 1)
+2026-02-21 14:19:19,726 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048947445
+2026-02-21 14:19:19,726 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 53/300 for item_id=136048959279 (item 53/200 on page 1)
+2026-02-21 14:19:21,267 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048959279
+2026-02-21 14:19:21,267 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 54/300 for item_id=136048959482 (item 54/200 on page 1)
+2026-02-21 14:19:22,913 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048959482
+2026-02-21 14:19:22,913 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 55/300 for item_id=136356527870 (item 55/200 on page 1)
+2026-02-21 14:19:24,687 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136356527870
+2026-02-21 14:19:24,687 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 56/300 for item_id=136356531115 (item 56/200 on page 1)
+2026-02-21 14:19:26,958 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136356531115
+2026-02-21 14:19:26,958 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 57/300 for item_id=136356534710 (item 57/200 on page 1)
+2026-02-21 14:19:30,357 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136356534710
+2026-02-21 14:19:30,357 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 58/300 for item_id=136049540476 (item 58/200 on page 1)
+2026-02-21 14:19:31,951 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136049540476
+2026-02-21 14:19:31,951 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 59/300 for item_id=136755589507 (item 59/200 on page 1)
+2026-02-21 14:19:33,733 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136755589507
+2026-02-21 14:19:33,733 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 60/300 for item_id=136777961161 (item 60/200 on page 1)
+2026-02-21 14:19:35,353 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777961161
+2026-02-21 14:19:35,353 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 61/300 for item_id=136777961437 (item 61/200 on page 1)
+2026-02-21 14:19:36,987 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777961437
+2026-02-21 14:19:36,987 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 62/300 for item_id=136777962066 (item 62/200 on page 1)
+2026-02-21 14:19:39,026 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777962066
+2026-02-21 14:19:39,026 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 63/300 for item_id=136777963436 (item 63/200 on page 1)
+2026-02-21 14:19:40,843 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777963436
+2026-02-21 14:19:40,843 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 64/300 for item_id=136777967405 (item 64/200 on page 1)
+2026-02-21 14:19:42,733 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777967405
+2026-02-21 14:19:42,733 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 65/300 for item_id=136777968615 (item 65/200 on page 1)
+2026-02-21 14:19:44,613 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777968615
+2026-02-21 14:19:44,613 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 66/300 for item_id=136777966135 (item 66/200 on page 1)
+2026-02-21 14:19:46,250 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777966135
+2026-02-21 14:19:46,250 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 67/300 for item_id=136777969568 (item 67/200 on page 1)
+2026-02-21 14:19:47,865 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777969568
+2026-02-21 14:19:47,865 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 68/300 for item_id=136777970190 (item 68/200 on page 1)
+2026-02-21 14:19:49,463 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777970190
+2026-02-21 14:19:49,463 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 69/300 for item_id=136777971515 (item 69/200 on page 1)
+2026-02-21 14:19:51,141 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777971515
+2026-02-21 14:19:51,141 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 70/300 for item_id=136777973349 (item 70/200 on page 1)
+2026-02-21 14:19:52,723 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777973349
+2026-02-21 14:19:52,723 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 71/300 for item_id=136778021940 (item 71/200 on page 1)
+2026-02-21 14:19:54,339 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778021940
+2026-02-21 14:19:54,339 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 72/300 for item_id=136777983640 (item 72/200 on page 1)
+2026-02-21 14:19:55,927 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777983640
+2026-02-21 14:19:55,927 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 73/300 for item_id=136777988267 (item 73/200 on page 1)
+2026-02-21 14:19:57,714 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777988267
+2026-02-21 14:19:57,714 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 74/300 for item_id=136777992210 (item 74/200 on page 1)
+2026-02-21 14:19:59,593 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136777992210
+2026-02-21 14:19:59,593 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 75/300 for item_id=136778004637 (item 75/200 on page 1)
+2026-02-21 14:20:01,372 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778004637
+2026-02-21 14:20:01,372 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 76/300 for item_id=136645278613 (item 76/200 on page 1)
+2026-02-21 14:20:03,088 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136645278613
+2026-02-21 14:20:03,088 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 77/300 for item_id=136778214624 (item 77/200 on page 1)
+2026-02-21 14:20:04,778 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214624
+2026-02-21 14:20:04,779 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 78/300 for item_id=136778214628 (item 78/200 on page 1)
+2026-02-21 14:20:06,720 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214628
+2026-02-21 14:20:06,720 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 79/300 for item_id=136778214649 (item 79/200 on page 1)
+2026-02-21 14:20:08,329 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214649
+2026-02-21 14:20:08,329 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 80/300 for item_id=136778214654 (item 80/200 on page 1)
+2026-02-21 14:20:10,153 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214654
+2026-02-21 14:20:10,153 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 81/300 for item_id=136778214655 (item 81/200 on page 1)
+2026-02-21 14:20:11,846 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214655
+2026-02-21 14:20:11,847 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 82/300 for item_id=136778214659 (item 82/200 on page 1)
+2026-02-21 14:20:13,697 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214659
+2026-02-21 14:20:13,697 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 83/300 for item_id=136778214709 (item 83/200 on page 1)
+2026-02-21 14:20:15,740 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778214709
+2026-02-21 14:20:15,740 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 84/300 for item_id=136778215564 (item 84/200 on page 1)
+2026-02-21 14:20:17,652 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778215564
+2026-02-21 14:20:17,652 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 85/300 for item_id=136778224799 (item 85/200 on page 1)
+2026-02-21 14:20:19,775 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224799
+2026-02-21 14:20:19,775 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 86/300 for item_id=136778224812 (item 86/200 on page 1)
+2026-02-21 14:20:21,456 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224812
+2026-02-21 14:20:21,457 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 87/300 for item_id=136778224853 (item 87/200 on page 1)
+2026-02-21 14:20:23,042 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224853
+2026-02-21 14:20:23,042 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 88/300 for item_id=136778224879 (item 88/200 on page 1)
+2026-02-21 14:20:24,551 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224879
+2026-02-21 14:20:24,551 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 89/300 for item_id=136778224947 (item 89/200 on page 1)
+2026-02-21 14:20:26,285 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224947
+2026-02-21 14:20:26,285 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 90/300 for item_id=136778224963 (item 90/200 on page 1)
+2026-02-21 14:20:27,965 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224963
+2026-02-21 14:20:27,966 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 91/300 for item_id=136778224992 (item 91/200 on page 1)
+2026-02-21 14:20:29,727 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778224992
+2026-02-21 14:20:29,727 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 92/300 for item_id=136778225013 (item 92/200 on page 1)
+2026-02-21 14:20:32,037 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778225013
+2026-02-21 14:20:32,037 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 93/300 for item_id=136778225083 (item 93/200 on page 1)
+2026-02-21 14:20:33,878 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778225083
+2026-02-21 14:20:33,879 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 94/300 for item_id=136357011291 (item 94/200 on page 1)
+2026-02-21 14:20:36,143 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011291
+2026-02-21 14:20:36,143 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 95/300 for item_id=136357011298 (item 95/200 on page 1)
+2026-02-21 14:20:38,214 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011298
+2026-02-21 14:20:38,215 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 96/300 for item_id=136357011300 (item 96/200 on page 1)
+2026-02-21 14:20:40,156 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011300
+2026-02-21 14:20:40,156 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 97/300 for item_id=136357011303 (item 97/200 on page 1)
+2026-02-21 14:20:42,069 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011303
+2026-02-21 14:20:42,070 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 98/300 for item_id=136357011304 (item 98/200 on page 1)
+2026-02-21 14:20:43,823 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011304
+2026-02-21 14:20:43,823 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 99/300 for item_id=136357011305 (item 99/200 on page 1)
+2026-02-21 14:20:45,568 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011305
+2026-02-21 14:20:45,568 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 100/300 for item_id=136357011306 (item 100/200 on page 1)
+2026-02-21 14:20:47,412 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011306
+2026-02-21 14:20:47,413 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 101/300 for item_id=136357011307 (item 101/200 on page 1)
+2026-02-21 14:20:49,036 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011307
+2026-02-21 14:20:49,037 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 102/300 for item_id=136357011317 (item 102/200 on page 1)
+2026-02-21 14:20:51,097 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011317
+2026-02-21 14:20:51,097 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 103/300 for item_id=136357011318 (item 103/200 on page 1)
+2026-02-21 14:20:52,662 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136357011318
+2026-02-21 14:20:52,663 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 104/300 for item_id=136205289496 (item 104/200 on page 1)
+2026-02-21 14:20:54,306 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205289496
+2026-02-21 14:20:54,306 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 105/300 for item_id=136205317679 (item 105/200 on page 1)
+2026-02-21 14:20:55,966 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205317679
+2026-02-21 14:20:55,966 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 106/300 for item_id=136205359404 (item 106/200 on page 1)
+2026-02-21 14:20:57,770 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205359404
+2026-02-21 14:20:57,771 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 107/300 for item_id=136205392176 (item 107/200 on page 1)
+2026-02-21 14:20:59,719 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205392176
+2026-02-21 14:20:59,720 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 108/300 for item_id=136205398657 (item 108/200 on page 1)
+2026-02-21 14:21:01,387 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205398657
+2026-02-21 14:21:01,388 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 109/300 for item_id=136501242413 (item 109/200 on page 1)
+2026-02-21 14:21:02,996 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242413
+2026-02-21 14:21:02,997 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 110/300 for item_id=136501242431 (item 110/200 on page 1)
+2026-02-21 14:21:04,835 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242431
+2026-02-21 14:21:04,835 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 111/300 for item_id=136501242437 (item 111/200 on page 1)
+2026-02-21 14:21:06,575 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242437
+2026-02-21 14:21:06,575 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 112/300 for item_id=136501242435 (item 112/200 on page 1)
+2026-02-21 14:21:08,314 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242435
+2026-02-21 14:21:08,314 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 113/300 for item_id=136501242443 (item 113/200 on page 1)
+2026-02-21 14:21:09,983 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242443
+2026-02-21 14:21:09,983 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 114/300 for item_id=136501242455 (item 114/200 on page 1)
+2026-02-21 14:21:11,898 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242455
+2026-02-21 14:21:11,899 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 115/300 for item_id=136501242460 (item 115/200 on page 1)
+2026-02-21 14:21:13,964 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242460
+2026-02-21 14:21:13,964 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 116/300 for item_id=136501242461 (item 116/200 on page 1)
+2026-02-21 14:21:15,684 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242461
+2026-02-21 14:21:15,684 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 117/300 for item_id=136501242463 (item 117/200 on page 1)
+2026-02-21 14:21:17,435 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242463
+2026-02-21 14:21:17,436 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 118/300 for item_id=136501242466 (item 118/200 on page 1)
+2026-02-21 14:21:19,576 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242466
+2026-02-21 14:21:19,577 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 119/300 for item_id=136501242470 (item 119/200 on page 1)
+2026-02-21 14:21:21,217 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136501242470
+2026-02-21 14:21:21,217 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 120/300 for item_id=136205483338 (item 120/200 on page 1)
+2026-02-21 14:21:22,776 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136205483338
+2026-02-21 14:21:22,777 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 121/300 for item_id=136778567212 (item 121/200 on page 1)
+2026-02-21 14:21:24,481 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567212
+2026-02-21 14:21:24,481 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 122/300 for item_id=136778567471 (item 122/200 on page 1)
+2026-02-21 14:21:26,154 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567471
+2026-02-21 14:21:26,154 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 123/300 for item_id=136778567676 (item 123/200 on page 1)
+2026-02-21 14:21:27,997 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567676
+2026-02-21 14:21:27,997 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 124/300 for item_id=136778567715 (item 124/200 on page 1)
+2026-02-21 14:21:29,794 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567715
+2026-02-21 14:21:29,794 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 125/300 for item_id=136778567757 (item 125/200 on page 1)
+2026-02-21 14:21:31,608 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567757
+2026-02-21 14:21:31,609 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 126/300 for item_id=136778567853 (item 126/200 on page 1)
+2026-02-21 14:21:33,738 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136778567853
+2026-02-21 14:21:33,738 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 127/300 for item_id=136646310091 (item 127/200 on page 1)
+2026-02-21 14:21:35,366 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136646310091
+2026-02-21 14:21:35,366 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 128/300 for item_id=136646326277 (item 128/200 on page 1)
+2026-02-21 14:21:36,870 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136646326277
+2026-02-21 14:21:36,870 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 129/300 for item_id=136646646460 (item 129/200 on page 1)
+2026-02-21 14:21:38,646 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136646646460
+2026-02-21 14:21:38,646 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 130/300 for item_id=136502676200 (item 130/200 on page 1)
+2026-02-21 14:21:40,162 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136502676200
+2026-02-21 14:21:40,163 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 131/300 for item_id=136048536417 (item 131/200 on page 1)
+2026-02-21 14:21:41,698 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048536417
+2026-02-21 14:21:41,698 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 132/300 for item_id=136048558370 (item 132/200 on page 1)
+2026-02-21 14:21:43,436 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048558370
+2026-02-21 14:21:43,436 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 133/300 for item_id=136648490122 (item 133/200 on page 1)
+2026-02-21 14:21:45,147 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136648490122
+2026-02-21 14:21:45,148 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 134/300 for item_id=136048778553 (item 134/200 on page 1)
+2026-02-21 14:21:46,823 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048778553
+2026-02-21 14:21:46,824 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 135/300 for item_id=136048788516 (item 135/200 on page 1)
+2026-02-21 14:21:48,622 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136048788516
+2026-02-21 14:21:48,623 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 136/300 for item_id=136649473477 (item 136/200 on page 1)
+2026-02-21 14:21:50,613 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473477
+2026-02-21 14:21:50,613 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 137/300 for item_id=136649473478 (item 137/200 on page 1)
+2026-02-21 14:21:52,261 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473478
+2026-02-21 14:21:52,262 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 138/300 for item_id=136649473479 (item 138/200 on page 1)
+2026-02-21 14:21:53,899 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473479
+2026-02-21 14:21:53,900 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 139/300 for item_id=136649473482 (item 139/200 on page 1)
+2026-02-21 14:21:55,530 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473482
+2026-02-21 14:21:55,530 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 140/300 for item_id=136649473483 (item 140/200 on page 1)
+2026-02-21 14:21:57,371 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473483
+2026-02-21 14:21:57,371 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 141/300 for item_id=136649473484 (item 141/200 on page 1)
+2026-02-21 14:21:59,105 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473484
+2026-02-21 14:21:59,106 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 142/300 for item_id=136649473485 (item 142/200 on page 1)
+2026-02-21 14:22:00,851 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473485
+2026-02-21 14:22:00,852 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 143/300 for item_id=136649473486 (item 143/200 on page 1)
+2026-02-21 14:22:02,426 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473486
+2026-02-21 14:22:02,426 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 144/300 for item_id=136649473487 (item 144/200 on page 1)
+2026-02-21 14:22:04,167 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473487
+2026-02-21 14:22:04,168 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 145/300 for item_id=136649473488 (item 145/200 on page 1)
+2026-02-21 14:22:06,126 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473488
+2026-02-21 14:22:06,127 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 146/300 for item_id=136649473489 (item 146/200 on page 1)
+2026-02-21 14:22:07,652 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473489
+2026-02-21 14:22:07,652 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 147/300 for item_id=136649473490 (item 147/200 on page 1)
+2026-02-21 14:22:09,761 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473490
+2026-02-21 14:22:09,761 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 148/300 for item_id=136649473495 (item 148/200 on page 1)
+2026-02-21 14:22:11,278 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473495
+2026-02-21 14:22:11,278 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 149/300 for item_id=136649473496 (item 149/200 on page 1)
+2026-02-21 14:22:13,135 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473496
+2026-02-21 14:22:13,135 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 150/300 for item_id=136649473497 (item 150/200 on page 1)
+2026-02-21 14:22:14,868 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649473497
+2026-02-21 14:22:14,868 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 151/300 for item_id=136211168800 (item 151/200 on page 1)
+2026-02-21 14:22:16,468 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168800
+2026-02-21 14:22:16,468 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 152/300 for item_id=136211168801 (item 152/200 on page 1)
+2026-02-21 14:22:17,956 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168801
+2026-02-21 14:22:17,956 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 153/300 for item_id=136211168802 (item 153/200 on page 1)
+2026-02-21 14:22:19,609 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168802
+2026-02-21 14:22:19,610 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 154/300 for item_id=136211168807 (item 154/200 on page 1)
+2026-02-21 14:22:21,946 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168807
+2026-02-21 14:22:21,946 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 155/300 for item_id=136211168809 (item 155/200 on page 1)
+2026-02-21 14:22:23,549 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168809
+2026-02-21 14:22:23,549 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 156/300 for item_id=136211168810 (item 156/200 on page 1)
+2026-02-21 14:22:25,284 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168810
+2026-02-21 14:22:25,284 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 157/300 for item_id=136211168811 (item 157/200 on page 1)
+2026-02-21 14:22:26,792 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168811
+2026-02-21 14:22:26,793 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 158/300 for item_id=136211168812 (item 158/200 on page 1)
+2026-02-21 14:22:29,040 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168812
+2026-02-21 14:22:29,041 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 159/300 for item_id=136211168815 (item 159/200 on page 1)
+2026-02-21 14:22:30,788 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168815
+2026-02-21 14:22:30,788 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 160/300 for item_id=136211168817 (item 160/200 on page 1)
+2026-02-21 14:22:33,094 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168817
+2026-02-21 14:22:33,095 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 161/300 for item_id=136211168818 (item 161/200 on page 1)
+2026-02-21 14:22:35,052 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168818
+2026-02-21 14:22:35,053 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 162/300 for item_id=136211168813 (item 162/200 on page 1)
+2026-02-21 14:22:36,675 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168813
+2026-02-21 14:22:36,675 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 163/300 for item_id=136211168821 (item 163/200 on page 1)
+2026-02-21 14:22:38,621 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136211168821
+2026-02-21 14:22:38,621 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 164/300 for item_id=136649842927 (item 164/200 on page 1)
+2026-02-21 14:22:40,218 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136649842927
+2026-02-21 14:22:40,218 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 165/300 for item_id=136361996707 (item 165/200 on page 1)
+2026-02-21 14:22:41,882 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136361996707
+2026-02-21 14:22:41,882 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 166/300 for item_id=135855036227 (item 166/200 on page 1)
+2026-02-21 14:22:43,449 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135855036227
+2026-02-21 14:22:43,449 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 167/300 for item_id=135855101800 (item 167/200 on page 1)
+2026-02-21 14:22:45,403 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135855101800
+2026-02-21 14:22:45,403 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 168/300 for item_id=136652273890 (item 168/200 on page 1)
+2026-02-21 14:22:47,851 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136652273890
+2026-02-21 14:22:47,851 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 169/300 for item_id=136652273949 (item 169/200 on page 1)
+2026-02-21 14:22:49,617 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136652273949
+2026-02-21 14:22:49,617 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 170/300 for item_id=136652273994 (item 170/200 on page 1)
+2026-02-21 14:22:51,269 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136652273994
+2026-02-21 14:22:51,269 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 171/300 for item_id=136652274062 (item 171/200 on page 1)
+2026-02-21 14:22:53,069 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136652274062
+2026-02-21 14:22:53,070 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 172/300 for item_id=136652274122 (item 172/200 on page 1)
+2026-02-21 14:22:54,703 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136652274122
+2026-02-21 14:22:54,703 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 173/300 for item_id=136363077586 (item 173/200 on page 1)
+2026-02-21 14:22:56,547 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136363077586
+2026-02-21 14:22:56,547 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 174/300 for item_id=136363077589 (item 174/200 on page 1)
+2026-02-21 14:22:58,217 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136363077589
+2026-02-21 14:22:58,218 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 175/300 for item_id=136653318173 (item 175/200 on page 1)
+2026-02-21 14:23:00,044 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653318173
+2026-02-21 14:23:00,044 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 176/300 for item_id=136653318174 (item 176/200 on page 1)
+2026-02-21 14:23:01,714 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653318174
+2026-02-21 14:23:01,715 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 177/300 for item_id=136653373982 (item 177/200 on page 1)
+2026-02-21 14:23:03,256 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653373982
+2026-02-21 14:23:03,257 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 178/300 for item_id=136653400136 (item 178/200 on page 1)
+2026-02-21 14:23:04,968 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653400136
+2026-02-21 14:23:04,968 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 179/300 for item_id=136653478943 (item 179/200 on page 1)
+2026-02-21 14:23:06,570 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653478943
+2026-02-21 14:23:06,571 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 180/300 for item_id=136653790879 (item 180/200 on page 1)
+2026-02-21 14:23:08,435 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653790879
+2026-02-21 14:23:08,435 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 181/300 for item_id=136653790901 (item 181/200 on page 1)
+2026-02-21 14:23:10,440 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653790901
+2026-02-21 14:23:10,441 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 182/300 for item_id=136653927652 (item 182/200 on page 1)
+2026-02-21 14:23:12,253 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136653927652
+2026-02-21 14:23:12,253 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 183/300 for item_id=136654001929 (item 183/200 on page 1)
+2026-02-21 14:23:14,111 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136654001929
+2026-02-21 14:23:14,111 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 184/300 for item_id=136654015361 (item 184/200 on page 1)
+2026-02-21 14:23:15,703 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136654015361
+2026-02-21 14:23:15,703 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 185/300 for item_id=136654326975 (item 185/200 on page 1)
+2026-02-21 14:23:17,500 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136654326975
+2026-02-21 14:23:17,500 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 186/300 for item_id=136654404229 (item 186/200 on page 1)
+2026-02-21 14:23:19,236 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136654404229
+2026-02-21 14:23:19,237 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 187/300 for item_id=136365295541 (item 187/200 on page 1)
+2026-02-21 14:23:21,001 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136365295541
+2026-02-21 14:23:21,001 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 188/300 for item_id=135860485482 (item 188/200 on page 1)
+2026-02-21 14:23:22,568 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135860485482
+2026-02-21 14:23:22,568 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 189/300 for item_id=136216863791 (item 189/200 on page 1)
+2026-02-21 14:23:25,161 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136216863791
+2026-02-21 14:23:25,161 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 190/300 for item_id=136216890884 (item 190/200 on page 1)
+2026-02-21 14:23:27,000 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136216890884
+2026-02-21 14:23:27,001 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 191/300 for item_id=136216905237 (item 191/200 on page 1)
+2026-02-21 14:23:28,824 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136216905237
+2026-02-21 14:23:28,824 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 192/300 for item_id=136217048317 (item 192/200 on page 1)
+2026-02-21 14:23:30,702 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136217048317
+2026-02-21 14:23:30,702 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 193/300 for item_id=136217053416 (item 193/200 on page 1)
+2026-02-21 14:23:32,609 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136217053416
+2026-02-21 14:23:32,609 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 194/300 for item_id=136217168994 (item 194/200 on page 1)
+2026-02-21 14:23:34,261 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136217168994
+2026-02-21 14:23:34,262 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 195/300 for item_id=136217184354 (item 195/200 on page 1)
+2026-02-21 14:23:35,889 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136217184354
+2026-02-21 14:23:35,889 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 196/300 for item_id=136217204326 (item 196/200 on page 1)
+2026-02-21 14:23:37,312 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136217204326
+2026-02-21 14:23:37,312 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 197/300 for item_id=136059112877 (item 197/200 on page 1)
+2026-02-21 14:23:39,092 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136059112877
+2026-02-21 14:23:39,093 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 198/300 for item_id=136059124531 (item 198/200 on page 1)
+2026-02-21 14:23:40,806 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136059124531
+2026-02-21 14:23:40,806 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 199/300 for item_id=136059127142 (item 199/200 on page 1)
+2026-02-21 14:23:42,266 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136059127142
+2026-02-21 14:23:42,267 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 200/300 for item_id=136368772873 (item 200/200 on page 1)
+2026-02-21 14:23:44,173 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368772873
+2026-02-21 14:23:44,174 INFO app.services.ebay_listings_computation: [FETCH] Page 1/7 processed, page_items=200, accumulated=200, detail_lookups=200
+2026-02-21 14:23:44,174 INFO app.services.ebay_listings_computation: [SSE] Progress page=1/7 count=200
+2026-02-21 14:23:44,175 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=2
+2026-02-21 14:23:44,175 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 2...
+2026-02-21 14:23:47,324 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 2, parsing XML...
+2026-02-21 14:23:47,332 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 2...
+2026-02-21 14:23:47,333 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 201/300 for item_id=136368772922 (item 1/200 on page 2)
+2026-02-21 14:23:48,912 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368772922
+2026-02-21 14:23:48,912 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 202/300 for item_id=136368772968 (item 2/200 on page 2)
+2026-02-21 14:23:50,490 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368772968
+2026-02-21 14:23:50,490 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 203/300 for item_id=136368772970 (item 3/200 on page 2)
+2026-02-21 14:23:52,059 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368772970
+2026-02-21 14:23:52,059 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 204/300 for item_id=136368773171 (item 4/200 on page 2)
+2026-02-21 14:23:53,836 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368773171
+2026-02-21 14:23:53,836 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 205/300 for item_id=136368773510 (item 5/200 on page 2)
+2026-02-21 14:23:55,496 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136368773510
+2026-02-21 14:23:55,497 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 206/300 for item_id=136369467528 (item 6/200 on page 2)
+2026-02-21 14:23:57,204 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136369467528
+2026-02-21 14:23:57,204 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 207/300 for item_id=136369527224 (item 7/200 on page 2)
+2026-02-21 14:23:58,926 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136369527224
+2026-02-21 14:23:58,926 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 208/300 for item_id=136369536801 (item 8/200 on page 2)
+2026-02-21 14:24:00,465 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136369536801
+2026-02-21 14:24:00,466 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 209/300 for item_id=136370160006 (item 9/200 on page 2)
+2026-02-21 14:24:02,513 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370160006
+2026-02-21 14:24:02,513 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 210/300 for item_id=136370251926 (item 10/200 on page 2)
+2026-02-21 14:24:04,054 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370251926
+2026-02-21 14:24:04,055 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 211/300 for item_id=136370251936 (item 11/200 on page 2)
+2026-02-21 14:24:05,740 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370251936
+2026-02-21 14:24:05,740 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 212/300 for item_id=136370448671 (item 12/200 on page 2)
+2026-02-21 14:24:07,534 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448671
+2026-02-21 14:24:07,534 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 213/300 for item_id=136370448699 (item 13/200 on page 2)
+2026-02-21 14:24:09,571 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448699
+2026-02-21 14:24:09,571 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 214/300 for item_id=136370448716 (item 14/200 on page 2)
+2026-02-21 14:24:11,216 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448716
+2026-02-21 14:24:11,216 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 215/300 for item_id=136370448717 (item 15/200 on page 2)
+2026-02-21 14:24:13,008 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448717
+2026-02-21 14:24:13,008 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 216/300 for item_id=136370448730 (item 16/200 on page 2)
+2026-02-21 14:24:14,855 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448730
+2026-02-21 14:24:14,855 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 217/300 for item_id=136370448735 (item 17/200 on page 2)
+2026-02-21 14:24:16,423 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448735
+2026-02-21 14:24:16,424 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 218/300 for item_id=136370448740 (item 18/200 on page 2)
+2026-02-21 14:24:18,088 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448740
+2026-02-21 14:24:18,088 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 219/300 for item_id=136370448741 (item 19/200 on page 2)
+2026-02-21 14:24:19,524 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448741
+2026-02-21 14:24:19,524 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 220/300 for item_id=136370448745 (item 20/200 on page 2)
+2026-02-21 14:24:21,148 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448745
+2026-02-21 14:24:21,148 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 221/300 for item_id=136370448782 (item 21/200 on page 2)
+2026-02-21 14:24:22,753 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448782
+2026-02-21 14:24:22,753 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 222/300 for item_id=136370448790 (item 22/200 on page 2)
+2026-02-21 14:24:24,595 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448790
+2026-02-21 14:24:24,595 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 223/300 for item_id=136370448825 (item 23/200 on page 2)
+2026-02-21 14:24:26,475 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448825
+2026-02-21 14:24:26,475 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 224/300 for item_id=136370448862 (item 24/200 on page 2)
+2026-02-21 14:24:28,431 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136370448862
+2026-02-21 14:24:28,431 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 225/300 for item_id=136063084631 (item 25/200 on page 2)
+2026-02-21 14:24:30,268 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136063084631
+2026-02-21 14:24:30,268 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 226/300 for item_id=136063088179 (item 26/200 on page 2)
+2026-02-21 14:24:32,365 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136063088179
+2026-02-21 14:24:32,365 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 227/300 for item_id=136063089847 (item 27/200 on page 2)
+2026-02-21 14:24:34,154 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136063089847
+2026-02-21 14:24:34,154 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 228/300 for item_id=136371157347 (item 28/200 on page 2)
+2026-02-21 14:24:35,933 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136371157347
+2026-02-21 14:24:35,933 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 229/300 for item_id=136371159431 (item 29/200 on page 2)
+2026-02-21 14:24:37,645 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136371159431
+2026-02-21 14:24:37,645 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 230/300 for item_id=136063966290 (item 30/200 on page 2)
+2026-02-21 14:24:40,034 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136063966290
+2026-02-21 14:24:40,035 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 231/300 for item_id=136063966418 (item 31/200 on page 2)
+2026-02-21 14:24:42,090 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136063966418
+2026-02-21 14:24:42,090 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 232/300 for item_id=136223362121 (item 32/200 on page 2)
+2026-02-21 14:24:44,390 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223362121
+2026-02-21 14:24:44,390 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 233/300 for item_id=136371433408 (item 33/200 on page 2)
+2026-02-21 14:24:46,576 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136371433408
+2026-02-21 14:24:46,577 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 234/300 for item_id=136223472372 (item 34/200 on page 2)
+2026-02-21 14:24:48,223 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472372
+2026-02-21 14:24:48,223 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 235/300 for item_id=136223472376 (item 35/200 on page 2)
+2026-02-21 14:24:50,041 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472376
+2026-02-21 14:24:50,042 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 236/300 for item_id=136223472381 (item 36/200 on page 2)
+2026-02-21 14:24:51,786 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472381
+2026-02-21 14:24:51,786 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 237/300 for item_id=136223472382 (item 37/200 on page 2)
+2026-02-21 14:24:54,012 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472382
+2026-02-21 14:24:54,012 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 238/300 for item_id=136223472384 (item 38/200 on page 2)
+2026-02-21 14:24:55,815 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472384
+2026-02-21 14:24:55,815 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 239/300 for item_id=136223472392 (item 39/200 on page 2)
+2026-02-21 14:24:57,294 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472392
+2026-02-21 14:24:57,295 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 240/300 for item_id=136223472393 (item 40/200 on page 2)
+2026-02-21 14:24:59,131 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472393
+2026-02-21 14:24:59,132 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 241/300 for item_id=136223472404 (item 41/200 on page 2)
+2026-02-21 14:25:00,854 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472404
+2026-02-21 14:25:00,854 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 242/300 for item_id=136223472405 (item 42/200 on page 2)
+2026-02-21 14:25:02,534 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472405
+2026-02-21 14:25:02,534 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 243/300 for item_id=136223472406 (item 43/200 on page 2)
+2026-02-21 14:25:04,252 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223472406
+2026-02-21 14:25:04,252 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 244/300 for item_id=136223766982 (item 44/200 on page 2)
+2026-02-21 14:25:06,062 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223766982
+2026-02-21 14:25:06,062 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 245/300 for item_id=136223767049 (item 45/200 on page 2)
+2026-02-21 14:25:07,752 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223767049
+2026-02-21 14:25:07,752 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 246/300 for item_id=136223767458 (item 46/200 on page 2)
+2026-02-21 14:25:09,579 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136223767458
+2026-02-21 14:25:09,579 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 247/300 for item_id=136224461423 (item 47/200 on page 2)
+2026-02-21 14:25:11,356 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136224461423
+2026-02-21 14:25:11,356 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 248/300 for item_id=136224461524 (item 48/200 on page 2)
+2026-02-21 14:25:13,165 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136224461524
+2026-02-21 14:25:13,165 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 249/300 for item_id=136373661415 (item 49/200 on page 2)
+2026-02-21 14:25:14,964 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136373661415
+2026-02-21 14:25:14,965 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 250/300 for item_id=136373661432 (item 50/200 on page 2)
+2026-02-21 14:25:16,751 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136373661432
+2026-02-21 14:25:16,751 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 251/300 for item_id=136374314170 (item 51/200 on page 2)
+2026-02-21 14:25:18,538 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136374314170
+2026-02-21 14:25:18,539 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 252/300 for item_id=136226835029 (item 52/200 on page 2)
+2026-02-21 14:25:20,203 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835029
+2026-02-21 14:25:20,204 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 253/300 for item_id=136226835065 (item 53/200 on page 2)
+2026-02-21 14:25:21,731 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835065
+2026-02-21 14:25:21,732 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 254/300 for item_id=136226835121 (item 54/200 on page 2)
+2026-02-21 14:25:23,397 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835121
+2026-02-21 14:25:23,397 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 255/300 for item_id=136226835182 (item 55/200 on page 2)
+2026-02-21 14:25:25,130 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835182
+2026-02-21 14:25:25,131 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 256/300 for item_id=136226835211 (item 56/200 on page 2)
+2026-02-21 14:25:27,038 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835211
+2026-02-21 14:25:27,039 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 257/300 for item_id=136226835225 (item 57/200 on page 2)
+2026-02-21 14:25:28,796 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835225
+2026-02-21 14:25:28,796 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 258/300 for item_id=136226835247 (item 58/200 on page 2)
+2026-02-21 14:25:30,482 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835247
+2026-02-21 14:25:30,483 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 259/300 for item_id=136226835337 (item 59/200 on page 2)
+2026-02-21 14:25:32,421 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835337
+2026-02-21 14:25:32,422 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 260/300 for item_id=136226835362 (item 60/200 on page 2)
+2026-02-21 14:25:34,262 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835362
+2026-02-21 14:25:34,262 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 261/300 for item_id=136226835643 (item 61/200 on page 2)
+2026-02-21 14:25:36,824 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835643
+2026-02-21 14:25:36,825 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 262/300 for item_id=136226835826 (item 62/200 on page 2)
+2026-02-21 14:25:38,552 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136226835826
+2026-02-21 14:25:38,553 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 263/300 for item_id=135872893131 (item 63/200 on page 2)
+2026-02-21 14:25:40,413 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135872893131
+2026-02-21 14:25:40,413 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 264/300 for item_id=135872893134 (item 64/200 on page 2)
+2026-02-21 14:25:42,146 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135872893134
+2026-02-21 14:25:42,147 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 265/300 for item_id=135872893136 (item 65/200 on page 2)
+2026-02-21 14:25:43,889 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=135872893136
+2026-02-21 14:25:43,889 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 266/300 for item_id=136230390619 (item 66/200 on page 2)
+2026-02-21 14:25:45,533 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136230390619
+2026-02-21 14:25:45,533 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 267/300 for item_id=136230404255 (item 67/200 on page 2)
+2026-02-21 14:25:47,115 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136230404255
+2026-02-21 14:25:47,115 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 268/300 for item_id=136230465224 (item 68/200 on page 2)
+2026-02-21 14:25:48,839 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136230465224
+2026-02-21 14:25:48,839 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 269/300 for item_id=136230487005 (item 69/200 on page 2)
+2026-02-21 14:25:50,407 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136230487005
+2026-02-21 14:25:50,407 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 270/300 for item_id=136230489346 (item 70/200 on page 2)
+2026-02-21 14:25:52,483 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136230489346
+2026-02-21 14:25:52,484 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 271/300 for item_id=136386846405 (item 71/200 on page 2)
+2026-02-21 14:25:54,226 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136386846405
+2026-02-21 14:25:54,226 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 272/300 for item_id=136393019471 (item 72/200 on page 2)
+2026-02-21 14:25:56,039 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136393019471
+2026-02-21 14:25:56,039 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 273/300 for item_id=136393019475 (item 73/200 on page 2)
+2026-02-21 14:25:57,704 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136393019475
+2026-02-21 14:25:57,705 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 274/300 for item_id=136393019477 (item 74/200 on page 2)
+2026-02-21 14:25:59,358 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136393019477
+2026-02-21 14:25:59,358 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 275/300 for item_id=136393019481 (item 75/200 on page 2)
+2026-02-21 14:26:01,085 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136393019481
+2026-02-21 14:26:01,085 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 276/300 for item_id=136241991893 (item 76/200 on page 2)
+2026-02-21 14:26:02,832 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136241991893
+2026-02-21 14:26:02,832 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 277/300 for item_id=136241991898 (item 77/200 on page 2)
+2026-02-21 14:26:04,378 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136241991898
+2026-02-21 14:26:04,378 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 278/300 for item_id=136241991901 (item 78/200 on page 2)
+2026-02-21 14:26:06,154 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136241991901
+2026-02-21 14:26:06,155 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 279/300 for item_id=136669121387 (item 79/200 on page 2)
+2026-02-21 14:26:07,940 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121387
+2026-02-21 14:26:07,940 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 280/300 for item_id=136669121391 (item 80/200 on page 2)
+2026-02-21 14:26:09,615 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121391
+2026-02-21 14:26:09,615 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 281/300 for item_id=136669121395 (item 81/200 on page 2)
+2026-02-21 14:26:11,345 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121395
+2026-02-21 14:26:11,347 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 282/300 for item_id=136669121397 (item 82/200 on page 2)
+2026-02-21 14:26:12,921 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121397
+2026-02-21 14:26:12,921 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 283/300 for item_id=136669121399 (item 83/200 on page 2)
+2026-02-21 14:26:14,551 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121399
+2026-02-21 14:26:14,551 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 284/300 for item_id=136669121401 (item 84/200 on page 2)
+2026-02-21 14:26:16,864 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121401
+2026-02-21 14:26:16,864 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 285/300 for item_id=136669121402 (item 85/200 on page 2)
+2026-02-21 14:26:18,481 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121402
+2026-02-21 14:26:18,481 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 286/300 for item_id=136669121405 (item 86/200 on page 2)
+2026-02-21 14:26:20,158 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121405
+2026-02-21 14:26:20,158 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 287/300 for item_id=136669121406 (item 87/200 on page 2)
+2026-02-21 14:26:21,890 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121406
+2026-02-21 14:26:21,890 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 288/300 for item_id=136669121407 (item 88/200 on page 2)
+2026-02-21 14:26:23,565 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121407
+2026-02-21 14:26:23,565 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 289/300 for item_id=136669121408 (item 89/200 on page 2)
+2026-02-21 14:26:25,182 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136669121408
+2026-02-21 14:26:25,182 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 290/300 for item_id=136236933918 (item 90/200 on page 2)
+2026-02-21 14:26:26,802 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136236933918
+2026-02-21 14:26:26,803 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 291/300 for item_id=136236937220 (item 91/200 on page 2)
+2026-02-21 14:26:28,341 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136236937220
+2026-02-21 14:26:28,341 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 292/300 for item_id=136233854674 (item 92/200 on page 2)
+2026-02-21 14:26:29,809 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854674
+2026-02-21 14:26:29,809 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 293/300 for item_id=136233854677 (item 93/200 on page 2)
+2026-02-21 14:26:31,403 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854677
+2026-02-21 14:26:31,404 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 294/300 for item_id=136233854678 (item 94/200 on page 2)
+2026-02-21 14:26:32,984 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854678
+2026-02-21 14:26:32,984 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 295/300 for item_id=136233854679 (item 95/200 on page 2)
+2026-02-21 14:26:34,581 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854679
+2026-02-21 14:26:34,582 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 296/300 for item_id=136233854680 (item 96/200 on page 2)
+2026-02-21 14:26:36,419 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854680
+2026-02-21 14:26:36,419 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 297/300 for item_id=136233854683 (item 97/200 on page 2)
+2026-02-21 14:26:38,274 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854683
+2026-02-21 14:26:38,274 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 298/300 for item_id=136233854685 (item 98/200 on page 2)
+2026-02-21 14:26:39,937 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854685
+2026-02-21 14:26:39,937 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 299/300 for item_id=136233854690 (item 99/200 on page 2)
+2026-02-21 14:26:41,543 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854690
+2026-02-21 14:26:41,543 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup 300/300 for item_id=136233854694 (item 100/200 on page 2)
+2026-02-21 14:26:43,289 INFO app.services.ebay_listings_computation: [FETCH] Detail lookup succeeded for item_id=136233854694
+2026-02-21 14:26:43,296 INFO app.services.ebay_listings_computation: [FETCH] Page 2/7 processed, page_items=200, accumulated=400, detail_lookups=300
+2026-02-21 14:26:43,296 INFO app.services.ebay_listings_computation: [SSE] Progress page=2/7 count=400
+2026-02-21 14:26:43,296 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=3
+2026-02-21 14:26:43,296 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 3...
+2026-02-21 14:26:46,724 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 3, parsing XML...
+2026-02-21 14:26:46,732 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 3...
+2026-02-21 14:26:46,745 INFO app.services.ebay_listings_computation: [FETCH] Page 3/7 processed, page_items=200, accumulated=600, detail_lookups=300
+2026-02-21 14:26:46,745 INFO app.services.ebay_listings_computation: [SSE] Progress page=3/7 count=600
+2026-02-21 14:26:46,746 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=4
+2026-02-21 14:26:46,746 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 4...
+2026-02-21 14:26:50,482 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 4, parsing XML...
+2026-02-21 14:26:50,556 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 4...
+2026-02-21 14:26:50,570 INFO app.services.ebay_listings_computation: [FETCH] Page 4/7 processed, page_items=200, accumulated=800, detail_lookups=300
+2026-02-21 14:26:50,570 INFO app.services.ebay_listings_computation: [SSE] Progress page=4/7 count=800
+2026-02-21 14:26:50,571 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=5
+2026-02-21 14:26:50,571 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 5...
+2026-02-21 14:26:54,133 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 5, parsing XML...
+2026-02-21 14:26:54,142 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 5...
+2026-02-21 14:26:54,155 INFO app.services.ebay_listings_computation: [FETCH] Page 5/7 processed, page_items=200, accumulated=1000, detail_lookups=300
+2026-02-21 14:26:54,156 INFO app.services.ebay_listings_computation: [SSE] Progress page=5/7 count=1000
+2026-02-21 14:26:54,156 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=6
+2026-02-21 14:26:54,156 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 6...
+2026-02-21 14:26:57,495 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 6, parsing XML...
+2026-02-21 14:26:57,503 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 6...
+2026-02-21 14:26:57,516 INFO app.services.ebay_listings_computation: [FETCH] Page 6/7 processed, page_items=200, accumulated=1200, detail_lookups=300
+2026-02-21 14:26:57,516 INFO app.services.ebay_listings_computation: [SSE] Progress page=6/7 count=1200
+2026-02-21 14:26:57,517 INFO app.services.ebay_listings_computation: [FETCH] Preparing GetMyeBaySelling request: page=7
+2026-02-21 14:26:57,517 INFO app.services.ebay_listings_computation: [FETCH] Calling post_trading for page 7...
+2026-02-21 14:27:00,898 INFO app.services.ebay_listings_computation: [FETCH] Received response for page 7, parsing XML...
+2026-02-21 14:27:00,908 INFO app.services.ebay_listings_computation: [FETCH] Processing 200 items from page 7...
+2026-02-21 14:27:00,921 INFO app.services.ebay_listings_computation: [FETCH] Page 7/7 processed, page_items=200, accumulated=1400, detail_lookups=300
+2026-02-21 14:27:00,921 INFO app.services.ebay_listings_computation: [SSE] Progress page=7/7 count=1400
+2026-02-21 14:27:00,922 INFO app.services.ebay_listings_computation: [FETCH] Completed: total_pages=7, total_listings=1400, detail_lookups=300 (max=300)
+2026-02-21 14:27:01,006 INFO app.services.ebay_listings_computation: [SSE] Cache updated successfully: listings=1400
+2026-02-21 14:49:41,407 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Detailed Fetch eBay Listings button triggered - OAuth token acquired
+2026-02-21 14:49:41,408 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Start GetMyeBaySelling with parallel detail lookups: site_id=77, entries_per_page=200, parallel=10
+2026-02-21 14:49:41,408 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=1
+2026-02-21 14:49:41,408 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 1...
+2026-02-21 14:49:45,355 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 1, parsing XML...
+2026-02-21 14:49:45,368 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 1...
+2026-02-21 14:49:45,398 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 1)...
+2026-02-21 14:50:32,562 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 1
+2026-02-21 14:50:32,562 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 1/7 processed, page_items=200, accumulated=200, total_detail_lookups=200
+2026-02-21 14:50:32,562 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=1/7 count=200 detail_lookups=200
+2026-02-21 14:50:32,563 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=2
+2026-02-21 14:50:32,564 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 2...
+2026-02-21 14:50:36,118 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 2, parsing XML...
+2026-02-21 14:50:36,131 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 2...
+2026-02-21 14:50:36,147 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 2)...
+2026-02-21 14:51:25,807 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 2
+2026-02-21 14:51:25,807 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 2/7 processed, page_items=200, accumulated=400, total_detail_lookups=400
+2026-02-21 14:51:25,808 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=2/7 count=400 detail_lookups=400
+2026-02-21 14:51:25,808 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=3
+2026-02-21 14:51:25,809 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 3...
+2026-02-21 14:51:29,288 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 3, parsing XML...
+2026-02-21 14:51:29,295 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 3...
+2026-02-21 14:51:29,309 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 3)...
+2026-02-21 14:52:14,423 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 3
+2026-02-21 14:52:14,424 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 3/7 processed, page_items=200, accumulated=600, total_detail_lookups=600
+2026-02-21 14:52:14,424 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=3/7 count=600 detail_lookups=600
+2026-02-21 14:52:14,425 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=4
+2026-02-21 14:52:14,425 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 4...
+2026-02-21 14:52:17,878 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 4, parsing XML...
+2026-02-21 14:52:17,885 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 4...
+2026-02-21 14:52:17,898 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 4)...
+2026-02-21 14:53:11,403 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 4
+2026-02-21 14:53:11,403 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 4/7 processed, page_items=200, accumulated=800, total_detail_lookups=800
+2026-02-21 14:53:11,404 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=4/7 count=800 detail_lookups=800
+2026-02-21 14:53:11,405 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=5
+2026-02-21 14:53:11,405 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 5...
+2026-02-21 14:53:15,198 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 5, parsing XML...
+2026-02-21 14:53:15,214 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 5...
+2026-02-21 14:53:15,249 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 5)...
+2026-02-21 14:54:07,142 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 5
+2026-02-21 14:54:07,143 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 5/7 processed, page_items=200, accumulated=1000, total_detail_lookups=1000
+2026-02-21 14:54:07,143 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=5/7 count=1000 detail_lookups=1000
+2026-02-21 14:54:07,144 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=6
+2026-02-21 14:54:07,144 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 6...
+2026-02-21 14:54:11,232 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 6, parsing XML...
+2026-02-21 14:54:11,246 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 6...
+2026-02-21 14:54:11,278 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 6)...
+2026-02-21 14:55:03,642 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 6
+2026-02-21 14:55:03,644 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 6/7 processed, page_items=200, accumulated=1200, total_detail_lookups=1200
+2026-02-21 14:55:03,644 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=6/7 count=1200 detail_lookups=1200
+2026-02-21 14:55:03,645 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Preparing GetMyeBaySelling request: page=7
+2026-02-21 14:55:03,645 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Calling post_trading for page 7...
+2026-02-21 14:55:07,742 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Received response for page 7, parsing XML...
+2026-02-21 14:55:07,757 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Processing 200 items from page 7...
+2026-02-21 14:55:07,791 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Starting parallel detail lookups for 200 items (page 7)...
+2026-02-21 14:55:58,739 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed 200 detail lookups for page 7
+2026-02-21 14:55:58,739 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Page 7/7 processed, page_items=200, accumulated=1400, total_detail_lookups=1400
+2026-02-21 14:55:58,739 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Progress page=7/7 count=1400 detail_lookups=1400
+2026-02-21 14:55:58,739 INFO app.services.ebay_listings_computation: [DETAILED-FETCH] Completed: total_pages=7, total_listings=1400, total_detail_lookups=1400
+2026-02-21 14:55:58,875 INFO app.services.ebay_listings_computation: [SSE-DETAILED] Cache updated successfully: listings=1400, detail_lookups=1400

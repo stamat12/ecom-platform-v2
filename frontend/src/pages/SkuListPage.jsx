@@ -529,19 +529,23 @@ export default function SkuListPage() {
     }
   };
 
-  const computeEbayListings = async () => {
+  const computeEbayListingsFast = async () => {
     setEbayListingsComputing(true);
     try {
-      const eventSource = new EventSource("/api/skus/ebay-listings/compute");
+      const eventSource = new EventSource("/api/skus/ebay-listings/compute-fast");
       
       eventSource.onmessage = (event) => {
         try {
           const progress = JSON.parse(event.data);
           setEbayListingsProgress(progress);
-          if (progress.status === "completed") {
+          if (progress.status === "complete") {
             setEbayListingsStatus(progress);
             eventSource.close();
-            alert(`✅ Synced eBay listings for ${progress.processed} SKUs`);
+            alert(`✅ Fast fetch completed: ${progress.count} eBay listings synced (${progress.total_pages} pages)`);
+            setEbayListingsComputing(false);
+          } else if (progress.status === "error") {
+            eventSource.close();
+            alert(`❌ Error: ${progress.message}`);
             setEbayListingsComputing(false);
           }
         } catch (e) {
@@ -554,7 +558,42 @@ export default function SkuListPage() {
         setEbayListingsComputing(false);
       };
     } catch (error) {
-      console.error("Error computing eBay listings:", error);
+      console.error("Error computing eBay listings (fast):", error);
+      alert(`Error: ${error.message}`);
+      setEbayListingsComputing(false);
+    }
+  };
+
+  const computeEbayListingsDetailed = async () => {
+    setEbayListingsComputing(true);
+    try {
+      const eventSource = new EventSource("/api/skus/ebay-listings/compute-detailed");
+      
+      eventSource.onmessage = (event) => {
+        try {
+          const progress = JSON.parse(event.data);
+          setEbayListingsProgress(progress);
+          if (progress.status === "complete") {
+            setEbayListingsStatus(progress);
+            eventSource.close();
+            alert(`✅ Detailed fetch completed: ${progress.count} eBay listings synced with ${progress.detail_lookups} enrichments (${progress.total_pages} pages)`);
+            setEbayListingsComputing(false);
+          } else if (progress.status === "error") {
+            eventSource.close();
+            alert(`❌ Error: ${progress.message}`);
+            setEbayListingsComputing(false);
+          }
+        } catch (e) {
+          console.error("Error parsing progress:", e);
+        }
+      };
+
+      eventSource.onerror = () => {
+        eventSource.close();
+        setEbayListingsComputing(false);
+      };
+    } catch (error) {
+      console.error("Error computing eBay listings (detailed):", error);
       alert(`Error: ${error.message}`);
       setEbayListingsComputing(false);
     }
@@ -748,28 +787,36 @@ export default function SkuListPage() {
           </div>
         )}
         <button
-          onClick={computeEbayListings}
+          onClick={computeEbayListingsFast}
           disabled={ebayListingsComputing}
           style={{ padding: "6px 10px", background: "#FF9800", color: "white", border: "none", borderRadius: 4, cursor: ebayListingsComputing ? "not-allowed" : "pointer" }}
         >
-          {ebayListingsComputing ? "Fetching..." : "Fetch eBay Listings"}
+          {ebayListingsComputing ? "Fetching..." : "⚡ Fast Fetch eBay"}
+        </button>
+        <button
+          onClick={computeEbayListingsDetailed}
+          disabled={ebayListingsComputing}
+          style={{ padding: "6px 10px", background: "#ff6b00", color: "white", border: "none", borderRadius: 4, cursor: ebayListingsComputing ? "not-allowed" : "pointer" }}
+        >
+          {ebayListingsComputing ? "Fetching..." : "🔍 Detailed Fetch eBay"}
         </button>
         {ebayListingsStatus.last_update && (
           <span style={{ fontSize: "0.9em", color: "#666" }}>
             Last eBay sync: {new Date(ebayListingsStatus.last_update).toLocaleString()}
           </span>
         )}
-        {ebayListingsComputing && ebayListingsProgress.total > 0 && (
-          <div style={{ flex: 1, maxWidth: 300 }}>
+        {ebayListingsComputing && ebayListingsProgress.page && ebayListingsProgress.total_pages && (
+          <div style={{ flex: 1, maxWidth: 400 }}>
             <div style={{ fontSize: "0.9em", marginBottom: 4 }}>
-              Processing: {ebayListingsProgress.current} / {ebayListingsProgress.total}
+              Page {ebayListingsProgress.page} / {ebayListingsProgress.total_pages} 
+              {ebayListingsProgress.detail_lookups !== undefined && ` • ${ebayListingsProgress.detail_lookups} enrichments`}
             </div>
             <div style={{ width: "100%", height: 20, background: "#e0e0e0", borderRadius: 4, overflow: "hidden" }}>
               <div
                 style={{
                   height: "100%",
                   background: "#FF9800",
-                  width: `${(ebayListingsProgress.current / ebayListingsProgress.total) * 100}%`,
+                  width: `${(ebayListingsProgress.page / ebayListingsProgress.total_pages) * 100}%`,
                   transition: "width 0.3s ease"
                 }}
               />

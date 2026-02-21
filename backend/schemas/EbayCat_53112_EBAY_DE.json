@@ -3,7 +3,10 @@
     "category_name": "/Business & Industrie/Elektronik & Messtechnik/Elektrische Steckdosen & Stecker/Elektrische Steckdosen & Buchsen",
     "category_id": "53112",
     "marketplace": "EBAY_DE",
-    "fees": {}
+    "fees": {
+      "payment_fee": 0.35,
+      "sales_commission_percentage": 0.0
+    }
   },
   "schema": {
     "required": [],

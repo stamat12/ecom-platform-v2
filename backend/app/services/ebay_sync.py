@@ -7,6 +7,7 @@ import requests
 import xml.etree.ElementTree as ET
 from typing import List, Dict, Any, Optional
 from datetime import datetime
+from urllib.parse import urlparse
 
 from app.config.ebay_config import (
     get_api_endpoint,
@@ -21,6 +22,90 @@ from app.services.ebay_oauth import get_access_token
 logger = logging.getLogger(__name__)
 
 NS = {"e": "urn:ebay:apis:eBLBaseComponents"}
+
+
+def _clean_text(value: str) -> str:
+    return (value or "").strip()
+
+
+def _parse_int(value: str) -> Optional[int]:
+    try:
+        return int((value or "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _parse_float(value: str) -> Optional[float]:
+    try:
+        return float((value or "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _parse_bool(value: str) -> Optional[bool]:
+    val = (value or "").strip().lower()
+    if val in {"true", "1", "yes"}:
+        return True
+    if val in {"false", "0", "no"}:
+        return False
+    return None
+
+
+def _marketplace_from_url(view_url: str) -> str:
+    if not view_url:
+        return ""
+    host = urlparse(view_url).netloc.lower()
+    if "ebay." in host:
+        return host.split("ebay.")[-1].upper()
+    return ""
+
+
+def _extract_listing_from_item(item: ET.Element) -> Dict[str, Any]:
+    item_id = _clean_text(item.findtext("e:ItemID", default="", namespaces=NS))
+    sku = _clean_text(item.findtext("e:SKU", default="", namespaces=NS))
+    title = _clean_text(item.findtext("e:Title", default="", namespaces=NS))
+    site = _clean_text(item.findtext("e:Site", default="", namespaces=NS))
+    view_url = _clean_text(item.findtext("e:ListingDetails/e:ViewItemURL", default="", namespaces=NS))
+
+    current_price_node = item.find("e:SellingStatus/e:CurrentPrice", namespaces=NS)
+    current_price_value = _clean_text(current_price_node.text if current_price_node is not None else "")
+    current_price_currency = _clean_text(current_price_node.attrib.get("currencyID", "") if current_price_node is not None else "")
+
+    picture_urls = [
+        _clean_text(node.text or "")
+        for node in item.findall("e:PictureDetails/e:PictureURL", namespaces=NS)
+        if _clean_text(node.text or "")
+    ]
+    primary_image_url = _clean_text(item.findtext("e:PictureDetails/e:GalleryURL", default="", namespaces=NS))
+    if not primary_image_url and picture_urls:
+        primary_image_url = picture_urls[0]
+
+    marketplace = site or _marketplace_from_url(view_url)
+
+    return {
+        "item_id": item_id,
+        "sku": sku,
+        "title": title,
+        "marketplace": marketplace,
+        "site": site,
+        "view_url": view_url,
+        "price": _parse_float(current_price_value),
+        "currency": current_price_currency or None,
+        "quantity_total": _parse_int(item.findtext("e:Quantity", default="", namespaces=NS)),
+        "quantity_available": _parse_int(item.findtext("e:SellingStatus/e:QuantityAvailable", default="", namespaces=NS)),
+        "quantity_sold": _parse_int(item.findtext("e:SellingStatus/e:QuantitySold", default="", namespaces=NS)),
+        "listing_status": _clean_text(item.findtext("e:SellingStatus/e:ListingStatus", default="", namespaces=NS)) or None,
+        "listing_type": _clean_text(item.findtext("e:ListingType", default="", namespaces=NS)) or None,
+        "start_time": _clean_text(item.findtext("e:ListingDetails/e:StartTime", default="", namespaces=NS)) or None,
+        "end_time": _clean_text(item.findtext("e:ListingDetails/e:EndTime", default="", namespaces=NS)) or None,
+        "condition_id": _parse_int(item.findtext("e:ConditionID", default="", namespaces=NS)),
+        "condition_name": _clean_text(item.findtext("e:ConditionDisplayName", default="", namespaces=NS)) or None,
+        "category_id": _clean_text(item.findtext("e:PrimaryCategory/e:CategoryID", default="", namespaces=NS)) or None,
+        "category_name": _clean_text(item.findtext("e:PrimaryCategory/e:CategoryName", default="", namespaces=NS)) or None,
+        "best_offer_enabled": _parse_bool(item.findtext("e:BestOfferDetails/e:BestOfferEnabled", default="", namespaces=NS)),
+        "primary_image_url": primary_image_url or None,
+        "image_urls": picture_urls,
+    }
 
 
 def get_ebay_token() -> str:
@@ -52,7 +137,7 @@ def _ensure_success(root: ET.Element, call_name: str) -> None:
         )
 
 
-def fetch_active_listings_from_ebay(entries_per_page: int = 200) -> List[Dict[str, str]]:
+def fetch_active_listings_from_ebay(entries_per_page: int = 200) -> List[Dict[str, Any]]:
     """
     Fetch all active eBay listings from API
     
@@ -63,7 +148,7 @@ def fetch_active_listings_from_ebay(entries_per_page: int = 200) -> List[Dict[st
     
     token = get_ebay_token()
     endpoint = get_api_endpoint()
-    results: List[Dict[str, str]] = []
+    results: List[Dict[str, Any]] = []
     page = 1
     
     while True:
@@ -94,19 +179,7 @@ def fetch_active_listings_from_ebay(entries_per_page: int = 200) -> List[Dict[st
         items = root.findall(".//e:ActiveList/e:ItemArray/e:Item", namespaces=NS)
         
         for item in items:
-            item_id = (item.findtext("e:ItemID", default="", namespaces=NS) or "").strip()
-            sku = (item.findtext("e:SKU", default="", namespaces=NS) or "").strip()
-            title = (item.findtext("e:Title", default="", namespaces=NS) or "").strip()
-            marketplace = (item.findtext("e:Site", default="", namespaces=NS) or "").strip()
-            view_url = (item.findtext("e:ListingDetails/e:ViewItemURL", default="", namespaces=NS) or "").strip()
-            
-            results.append({
-                "item_id": item_id,
-                "sku": sku,
-                "title": title,
-                "marketplace": marketplace,
-                "view_url": view_url,
-            })
+            results.append(_extract_listing_from_item(item))
         
         # Check pagination
         total_pages_text = root.findtext(
