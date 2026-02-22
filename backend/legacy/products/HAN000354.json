@@ -316,6 +316,40 @@
           "filename": "HAN000354 (7) - Kopie.jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "S. Oliver",
+        "Größe": "S",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Windbreaker",
+        "Farbe": "Grün",
+        "Außenmaterial": "Baumwollmischung"
+      },
+      "optional": {
+        "Jahreszeit": "Frühling",
+        "Futtermaterial": "100% Polyester",
+        "Besonderheiten": "Durchgehender Reißverschluss",
+        "Gewebeart": "Mikrofaser",
+        "Isoliermaterial": "Synthetik",
+        "Jacken-/Mantellänge": "Kurz",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Vintage": "Nein",
+        "Größenkategorie": "Normalgröße",
+        "Muster": "Ohne Muster",
+        "Akzente": "Logo",
+        "Passform": "Regular",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Keyword 1": "Herrenjacke",
+      "Keyword 2": "Outdoorjacke",
+      "Keyword 3": "Windjacke",
+      "Product Model": ""
     }
   }
 }

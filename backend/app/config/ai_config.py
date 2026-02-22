@@ -3,6 +3,9 @@ AI enrichment configuration for product details.
 Centralized location for prompts, models, and business rules.
 """
 
+import json
+from pathlib import Path
+
 # AI Models
 OPENAI_MODEL = "gpt-4o-mini"  # Vision-capable model for product field completion
 GEMINI_MODEL = "gemini-1.5-pro"  # For EAN/price extraction
@@ -18,19 +21,7 @@ ENRICHABLE_FIELDS = [
     "Materials",
 ]
 
-# Map field names to their JSON locations
-FIELD_TARGETS = {
-    "Gender": ("Intern Product Info", "Gender"),
-    "Brand": ("Intern Product Info", "Brand"),
-    "Color": ("Intern Product Info", "Color"),
-    "Size": ("Intern Product Info", "Size"),
-    "More Details": ("Intern Generated Info", "More details"),
-    "Keywords": ("Intern Generated Info", "Keywords"),
-    "Materials": ("Intern Generated Info", "Materials"),
-}
-
-# OpenAI Vision Prompt for field completion
-OPENAI_PROMPT = (
+_DEFAULT_OPENAI_PROMPT = (
     "Du vervollständigst Produktattribute AUSSCHLIESSLICH anhand der Hauptfotos (alle gegebenen Bilder).\n"
     f"Gib NUR ein striktes JSON-Objekt mit GENAU diesen Schlüsseln zurück: {ENRICHABLE_FIELDS}.\n"
     "Regeln:\n"
@@ -44,6 +35,42 @@ OPENAI_PROMPT = (
     "- Lege nur Werte fest, die visuell erkennbar und plausibel sind. Wenn unsicher: leerer String.\n"
     "- Keine zusätzlichen Schlüssel oder Kommentare – nur das JSON.\n"
 )
+
+
+def _load_enrichment_prompts() -> dict:
+    data_path = Path(__file__).resolve().parents[2] / "data" / "enrichment_prompts.json"
+    try:
+        with data_path.open("r", encoding="utf-8") as f:
+            loaded = json.load(f)
+        return loaded if isinstance(loaded, dict) else {}
+    except Exception:
+        return {}
+
+
+_ENRICHMENT_PROMPTS = _load_enrichment_prompts()
+
+
+def _prompt_value(key: str, default: str) -> str:
+    raw = _ENRICHMENT_PROMPTS.get(key)
+    if isinstance(raw, str):
+        return raw
+    if isinstance(raw, list):
+        return "\n".join(str(line) for line in raw)
+    return default
+
+# Map field names to their JSON locations
+FIELD_TARGETS = {
+    "Gender": ("Intern Product Info", "Gender"),
+    "Brand": ("Intern Product Info", "Brand"),
+    "Color": ("Intern Product Info", "Color"),
+    "Size": ("Intern Product Info", "Size"),
+    "More Details": ("Intern Generated Info", "More details"),
+    "Keywords": ("Intern Generated Info", "Keywords"),
+    "Materials": ("Intern Generated Info", "Materials"),
+}
+
+# OpenAI Vision Prompt for field completion
+OPENAI_PROMPT = _prompt_value("ai_product_details_prompt", _DEFAULT_OPENAI_PROMPT)
 
 # Gender code mapping
 GENDER_CODE_MAP = {

@@ -84,7 +84,6 @@ export default function SkuBatchPage() {
   const [enrichmentResults, setEnrichmentResults] = useState(null); // null | { total, succeeded, failed, results }
 
   // eBay Enrichment state
-  const [selectedSkusForEbayEnrichment, setSelectedSkusForEbayEnrichment] = useState(new Set()); // Set of SKUs for eBay enrichment
   const [ebayEnrichmentInProgress, setEbayEnrichmentInProgress] = useState(false);
   const [ebayEnrichmentResults, setEbayEnrichmentResults] = useState(null);
 
@@ -101,6 +100,7 @@ export default function SkuBatchPage() {
   const [ebayImageOrders, setEbayImageOrders] = useState({}); // { sku: { filename: order_number } }
   const [ebayValidations, setEbayValidations] = useState({}); // { sku: validation }
   const [ebayEnriching, setEbayEnriching] = useState({}); // { sku: boolean }
+  const [ebaySeoEnriching, setEbaySeoEnriching] = useState({}); // { sku: boolean }
   const [ebayEditingFields, setEbayEditingFields] = useState({}); // { sku: boolean }
   const [ebayEditedFields, setEbayEditedFields] = useState({}); // { sku: { required: {}, optional: {} } }
   const [ebaySavingFields, setEbaySavingFields] = useState({}); // { sku: boolean }
@@ -116,7 +116,7 @@ export default function SkuBatchPage() {
   // eBay subsection expansion state
   const [ebaySubsectionExpanded, setEbaySubsectionExpanded] = useState({}); // { "sku/section": boolean }
   // eBay SEO fields state
-  const [ebaySeoFields, setEbaySeoFields] = useState({}); // { sku: { product_type, keyword_1, keyword_2, keyword_3 } }
+  const [ebaySeoFields, setEbaySeoFields] = useState({}); // { sku: { product_type, product_model, keyword_1, keyword_2, keyword_3 } }
   const [ebayEditingSeo, setEbayEditingSeo] = useState({}); // { sku: boolean }
   const [ebaySavingSeo, setEbaySavingSeo] = useState({}); // { sku: boolean }
 
@@ -826,28 +826,14 @@ export default function SkuBatchPage() {
 
   const toggleSkuForEnrichment = (sku) => {
     const newSet = new Set(selectedSkusForEnrichment);
-    const newEbaySet = new Set(selectedSkusForEbayEnrichment);
-    
-    if (newSet.has(sku)) {
-      newSet.delete(sku);
-      newEbaySet.delete(sku);
-    } else {
-      newSet.add(sku);
-      newEbaySet.add(sku);
-    }
-    
-    setSelectedSkusForEnrichment(newSet);
-    setSelectedSkusForEbayEnrichment(newEbaySet);
-  };
 
-  const toggleSkuForEbayEnrichment = (sku) => {
-    const newSet = new Set(selectedSkusForEbayEnrichment);
     if (newSet.has(sku)) {
       newSet.delete(sku);
     } else {
       newSet.add(sku);
     }
-    setSelectedSkusForEbayEnrichment(newSet);
+
+    setSelectedSkusForEnrichment(newSet);
   };
 
   const toggleSkuForEbayListingEdit = (sku) => {
@@ -914,7 +900,7 @@ export default function SkuBatchPage() {
   };
 
   const handleEbayEnrichAll = async () => {
-    if (selectedSkusForEbayEnrichment.size === 0) {
+    if (selectedSkusForEnrichment.size === 0) {
       alert("No SKUs selected for eBay enrichment");
       return;
     }
@@ -925,7 +911,7 @@ export default function SkuBatchPage() {
     let failed = 0;
 
     try {
-      for (const sku of selectedSkusForEbayEnrichment) {
+      for (const sku of selectedSkusForEnrichment) {
         try {
           const res = await fetch(`/api/ebay/enrich`, {
             method: "POST",
@@ -947,9 +933,53 @@ export default function SkuBatchPage() {
         }
       }
 
-      setEbayEnrichmentResults({ total: selectedSkusForEbayEnrichment.size, succeeded, failed, results });
+      setEbayEnrichmentResults({ total: selectedSkusForEnrichment.size, succeeded, failed, results, mode: "fields" });
       setTimeout(() => setEbayEnrichmentResults(null), 10000);
-      setSelectedSkusForEbayEnrichment(new Set());
+      setSelectedSkusForEnrichment(new Set());
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbayEnrichmentInProgress(false);
+    }
+  };
+
+  const handleEbaySeoEnrichAll = async () => {
+    if (selectedSkusForEnrichment.size === 0) {
+      alert("No SKUs selected for eBay SEO enrichment");
+      return;
+    }
+
+    setEbayEnrichmentInProgress(true);
+    const results = {};
+    let succeeded = 0;
+    let failed = 0;
+
+    try {
+      for (const sku of selectedSkusForEnrichment) {
+        try {
+          const res = await fetch(`/api/ebay/enrich-seo`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ sku }),
+          });
+          const result = await res.json();
+
+          if (res.ok && result.success) {
+            results[sku] = { success: true, message: `SEO +${result.updated_seo_fields || 0}` };
+            succeeded++;
+          } else {
+            results[sku] = { success: false, message: result.detail || "Failed" };
+            failed++;
+          }
+        } catch (e) {
+          results[sku] = { success: false, message: e.message };
+          failed++;
+        }
+      }
+
+      setEbayEnrichmentResults({ total: selectedSkusForEnrichment.size, succeeded, failed, results, mode: "seo" });
+      setTimeout(() => setEbayEnrichmentResults(null), 10000);
+      setSelectedSkusForEnrichment(new Set());
     } catch (e) {
       alert(`Error: ${e.message}`);
     } finally {
@@ -1390,6 +1420,31 @@ export default function SkuBatchPage() {
     }
   };
 
+  const handleEbaySeoEnrich = async (sku) => {
+    try {
+      setEbaySeoEnriching(prev => ({ ...prev, [sku]: true }));
+      const res = await fetch("/api/ebay/enrich-seo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sku, force: false })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        alert(`✅ ${sku}: SEO enriched (${data.updated_seo_fields || 0} fields)`);
+        await new Promise(resolve => setTimeout(resolve, 300));
+        await loadEbaySeoFields(sku);
+      } else {
+        const err = await res.json();
+        alert(`❌ ${sku}: ${err.detail || "SEO enrichment failed"}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setEbaySeoEnriching(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
   const handleConditionNoteAi = async (sku) => {
     const listingData = ebayListingData[sku] || {};
     let conditionId = listingData.condition_id || listingData.condition || "1000";
@@ -1631,7 +1686,7 @@ export default function SkuBatchPage() {
         setEbaySeoFields(prev => ({ ...prev, [sku]: data }));
       } else {
         // Initialize with empty fields if not found
-        setEbaySeoFields(prev => ({ ...prev, [sku]: { product_type: "", keyword_1: "", keyword_2: "", keyword_3: "" } }));
+        setEbaySeoFields(prev => ({ ...prev, [sku]: { product_type: "", product_model: "", keyword_1: "", keyword_2: "", keyword_3: "" } }));
       }
     } catch (e) {
       console.error("Failed to load eBay SEO fields:", e);
@@ -1648,6 +1703,7 @@ export default function SkuBatchPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           product_type: currentData.product_type || "",
+          product_model: currentData.product_model || "",
           keyword_1: currentData.keyword_1 || "",
           keyword_2: currentData.keyword_2 || "",
           keyword_3: currentData.keyword_3 || ""
@@ -1749,9 +1805,8 @@ export default function SkuBatchPage() {
     const hasEnrichmentRibbon = selectedSkusForEnrichment.size > 0;
     const hasProductDetailsRibbon = selectedSkusForProductDetailsEdit.size > 0;
     const hasEbayListingRibbon = selectedSkusForEbayListingEdit.size > 0;
-    const hasEbayRibbon = selectedSkusForEbayEnrichment.size > 0;
-    
-    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasProductDetailsRibbon, hasEbayListingRibbon, hasEbayRibbon].filter(Boolean).length;
+
+    const ribbonCount = [hasImageRibbon, hasEnrichmentRibbon, hasProductDetailsRibbon, hasEbayListingRibbon].filter(Boolean).length;
     return ribbonCount * 50;
   })();
 
@@ -2233,20 +2288,18 @@ export default function SkuBatchPage() {
         <h3 style={{ margin: 0 }}>Batch view ({selectedSkus.length} SKUs)</h3>
         <button
           onClick={() => {
-            const allSelected = selectedSkusForEnrichment.size === items.length && selectedSkusForEbayEnrichment.size === items.length;
+            const allSelected = selectedSkusForEnrichment.size === filteredItems.length;
             if (allSelected) {
               setSelectedSkusForEnrichment(new Set());
-              setSelectedSkusForEbayEnrichment(new Set());
             } else {
               const allSkus = new Set(filteredItems.map(item => item.sku));
               setSelectedSkusForEnrichment(allSkus);
-              setSelectedSkusForEbayEnrichment(allSkus);
             }
           }}
           style={{
             padding: "6px 12px",
             fontSize: 13,
-            background: (selectedSkusForEnrichment.size === filteredItems.length && selectedSkusForEbayEnrichment.size === filteredItems.length) ? "#666" : "#4CAF50",
+            background: (selectedSkusForEnrichment.size === filteredItems.length) ? "#666" : "#4CAF50",
             color: "white",
             border: "none",
             borderRadius: 4,
@@ -2254,7 +2307,7 @@ export default function SkuBatchPage() {
             fontWeight: "bold",
           }}
         >
-          {(selectedSkusForEnrichment.size === filteredItems.length && selectedSkusForEbayEnrichment.size === filteredItems.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
+          {(selectedSkusForEnrichment.size === filteredItems.length) ? "✓ Deselect All SKUs" : "Select All SKUs"}
         </button>
         <button
           onClick={handleBulkGenerateMissingJson}
@@ -2442,7 +2495,7 @@ export default function SkuBatchPage() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}>
           <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
-            🤖 AI Product Details: {selectedSkusForEnrichment.size} SKU(s)
+            🤖 AI + ⭐ eBay Enrichment: {selectedSkusForEnrichment.size} SKU(s)
           </div>
           <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
@@ -2482,6 +2535,38 @@ export default function SkuBatchPage() {
               }}
             >
               {enrichmentInProgress ? "Enriching..." : "✨ Enrich"}
+            </button>
+            <button
+              onClick={handleEbayEnrichAll}
+              disabled={ebayEnrichmentInProgress || selectedSkusForEnrichment.size === 0}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: ebayEnrichmentInProgress ? "#ccc" : "#FF9800",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                fontWeight: "bold",
+                cursor: ebayEnrichmentInProgress || selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {ebayEnrichmentInProgress ? "Enriching..." : "⭐ eBay Fields"}
+            </button>
+            <button
+              onClick={handleEbaySeoEnrichAll}
+              disabled={ebayEnrichmentInProgress || selectedSkusForEnrichment.size === 0}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: ebayEnrichmentInProgress ? "#ccc" : "#8e24aa",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                fontWeight: "bold",
+                cursor: ebayEnrichmentInProgress || selectedSkusForEnrichment.size === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {ebayEnrichmentInProgress ? "Enriching..." : "🔍 SEO Only"}
             </button>
             <button
               onClick={() => setSelectedSkusForEnrichment(new Set())}
@@ -2697,88 +2782,6 @@ export default function SkuBatchPage() {
         </div>
       )}
 
-      {/* eBay Enrichment Panel */}
-      {selectedSkusForEbayEnrichment.size > 0 && (
-        <div style={{
-          position: "fixed",
-          top: (() => {
-            let offset = 0;
-            if (totalSelectedImages > 0) offset += 50;
-            if (selectedSkusForEnrichment.size > 0) offset += 50;
-            if (selectedSkusForEbayListingEdit.size > 0) offset += 50;
-            return offset;
-          })(),
-          left: 0,
-          right: 0,
-          zIndex: 98,
-          background: "#fff3e0",
-          padding: 6,
-          borderRadius: 0,
-          marginBottom: 8,
-          border: "none",
-          borderBottom: "2px solid #FF9800",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
-        }}>
-          <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
-            ⭐ eBay Fields: {selectedSkusForEbayEnrichment.size} SKU(s)
-          </div>
-          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
-            <button
-              onClick={() => {
-                if (selectedSkusForEbayEnrichment.size === items.length) {
-                  setSelectedSkusForEbayEnrichment(new Set());
-                } else {
-                  const allSkus = new Set(items.map(item => item.sku));
-                  setSelectedSkusForEbayEnrichment(allSkus);
-                }
-              }}
-              style={{
-                padding: "4px 8px",
-                fontSize: 11,
-                background: "#F57C00",
-                color: "white",
-                border: "none",
-                borderRadius: 3,
-                cursor: "pointer",
-                fontWeight: "bold",
-              }}
-            >
-              {selectedSkusForEbayEnrichment.size === items.length ? "Clear" : "All"}
-            </button>
-            <button
-              onClick={handleEbayEnrichAll}
-              disabled={ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0}
-              style={{
-                padding: "4px 8px",
-                fontSize: 11,
-                background: ebayEnrichmentInProgress ? "#ccc" : "#FF9800",
-                color: "white",
-                border: "none",
-                borderRadius: 3,
-                fontWeight: "bold",
-                cursor: ebayEnrichmentInProgress || selectedSkusForEbayEnrichment.size === 0 ? "not-allowed" : "pointer",
-              }}
-            >
-              {ebayEnrichmentInProgress ? "Enriching..." : "⭐ Enrich"}
-            </button>
-            <button
-              onClick={() => setSelectedSkusForEbayEnrichment(new Set())}
-              style={{
-                padding: "4px 8px",
-                fontSize: 11,
-                cursor: "pointer",
-                background: "#666",
-                color: "white",
-                border: "none",
-                borderRadius: 3,
-              }}
-            >
-              Clear
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* eBay Enrichment results */}
       {ebayEnrichmentResults && (
         <div style={{
@@ -2789,7 +2792,7 @@ export default function SkuBatchPage() {
           border: `2px solid ${ebayEnrichmentResults.failed === 0 ? "#FF9800" : "#FF5722"}`,
         }}>
           <div style={{ fontWeight: "bold", marginBottom: 8 }}>
-            {ebayEnrichmentResults.failed === 0 ? "✅" : "⚠️"} eBay Enrichment: {ebayEnrichmentResults.succeeded} succeeded, {ebayEnrichmentResults.failed} failed
+            {ebayEnrichmentResults.failed === 0 ? "✅" : "⚠️"} {ebayEnrichmentResults.mode === "seo" ? "eBay SEO Enrichment" : "eBay Fields Enrichment"}: {ebayEnrichmentResults.succeeded} succeeded, {ebayEnrichmentResults.failed} failed
           </div>
           {Object.entries(ebayEnrichmentResults.results).map(([s, res]) => (
             <div key={s} style={{ fontSize: 12, padding: "4px 0", color: res.success ? "#FF9800" : "#FF3D00" }}>
@@ -3572,7 +3575,7 @@ export default function SkuBatchPage() {
                     <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
                       <button
                         onClick={() => handleEbayEnrich(sku)}
-                        disabled={ebayEnriching[sku] || ebayEditingFields[sku]}
+                        disabled={ebayEnriching[sku] || ebaySeoEnriching[sku] || ebayEditingFields[sku]}
                         style={{
                           flex: 1,
                           minWidth: 120,
@@ -3582,11 +3585,29 @@ export default function SkuBatchPage() {
                           color: "white",
                           border: "none",
                           borderRadius: 4,
-                          cursor: (ebayEnriching[sku] || ebayEditingFields[sku]) ? "not-allowed" : "pointer",
+                          cursor: (ebayEnriching[sku] || ebaySeoEnriching[sku] || ebayEditingFields[sku]) ? "not-allowed" : "pointer",
                           fontWeight: "bold"
                         }}
                       >
                         {ebayEnriching[sku] ? "🤖 Enriching..." : "🤖 Auto-Fill"}
+                      </button>
+                      <button
+                        onClick={() => handleEbaySeoEnrich(sku)}
+                        disabled={ebaySeoEnriching[sku] || ebayEnriching[sku] || ebayEditingFields[sku]}
+                        style={{
+                          flex: 1,
+                          minWidth: 140,
+                          padding: "8px 12px",
+                          fontSize: 11,
+                          background: "#8e24aa",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 4,
+                          cursor: (ebaySeoEnriching[sku] || ebayEnriching[sku] || ebayEditingFields[sku]) ? "not-allowed" : "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        {ebaySeoEnriching[sku] ? "🔍 SEO..." : "🔍 SEO Only"}
                       </button>
                       <button
                         onClick={() => validateEbayFields(sku)}
@@ -4034,6 +4055,7 @@ export default function SkuBatchPage() {
                           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
                             {[
                               { key: "product_type", label: "Product Type" },
+                              { key: "product_model", label: "Product Model" },
                               { key: "keyword_1", label: "Keyword 1" },
                               { key: "keyword_2", label: "Keyword 2" },
                               { key: "keyword_3", label: "Keyword 3" },
@@ -4086,13 +4108,15 @@ export default function SkuBatchPage() {
                           fontSize: 12,
                         }}
                       >
-                        <span>3. Create eBay Listing fields</span>
+                        <span>3. eBay Listing</span>
                         <span style={{ transform: (ebaySubsectionExpanded[`${sku}/create-ebay-listing-fields`] !== false) ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▶</span>
                       </button>
 
                       {(ebaySubsectionExpanded[`${sku}/create-ebay-listing-fields`] !== false) && (
                       <div style={{ paddingTop: 12, paddingLeft: 10, paddingRight: 10, paddingBottom: 10 }}>
-                      <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>Create eBay Listing</div>
+                      <div style={{ fontSize: 11, fontWeight: "bold", marginBottom: 8, color: "#ff6b00" }}>
+                        {ebayListingData[sku]?.de_listing_title || "—"}
+                      </div>
 
                       <div style={{ background: "#f4f8ff", padding: 8, borderRadius: 6, border: "1px solid #e3ecff", marginBottom: 8 }}>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>

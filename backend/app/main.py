@@ -96,7 +96,13 @@ app = FastAPI(title="Ecom Platform API", version="1.0")
 # Setup CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173",
+        "http://localhost:8000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -751,6 +757,23 @@ def enrich_ebay_fields(request: EbayEnrichRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+@app.post("/api/ebay/enrich-seo")
+def enrich_ebay_seo_only(request: EbayEnrichRequest):
+    """Enrich only eBay SEO fields (Product Type, Keyword 1-3) from product title."""
+    try:
+        result = ebay_enrichment.enrich_ebay_seo_fields(request.sku, force=request.force)
+        return {
+            "success": result.get("success", False),
+            "sku": result.get("sku", request.sku),
+            "updated_seo_fields": result.get("updated_seo_fields", 0),
+            "seo_fields": result.get("seo_fields", {}),
+            "title_used": result.get("title_used", ""),
+            "message": result.get("message", "SEO enrichment completed"),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
 @app.post("/api/ebay/enrich/batch", response_model=EbayBatchEnrichResponse)
 def enrich_ebay_fields_batch(request: EbayBatchEnrichRequest):
     """Enrich eBay fields for multiple SKUs"""
@@ -984,15 +1007,49 @@ def save_ebay_fields_for_sku(sku: str, request: dict):
 
 
 def _read_ebay_seo_data(product_json: dict) -> dict:
-    section = product_json.get("eBay SEO", {})
-    if not isinstance(section, dict):
-        section = {}
+    def _normalize_key(s: str) -> str:
+        return "".join(ch for ch in str(s).lower() if ch.isalnum())
+
+    def _to_str(v):
+        if v is None:
+            return ""
+        if isinstance(v, dict) and "value" in v:
+            inner = v.get("value")
+            return "" if inner is None else str(inner).strip()
+        return str(v).strip()
+
+    section = {}
+    section_candidates = ["eBay SEO", "Ebay SEO", "ebay seo", "SEO", "eBaySEO", "EbaySEO"]
+    for candidate in section_candidates:
+        value = product_json.get(candidate)
+        if isinstance(value, dict):
+            section = value
+            break
+
+    if not section:
+        for key, value in product_json.items():
+            if not isinstance(value, dict):
+                continue
+            nk = _normalize_key(key)
+            if nk in {"ebayseo", "seo"}:
+                section = value
+                break
+
+    normalized_map = { _normalize_key(k): v for k, v in section.items() } if isinstance(section, dict) else {}
+
+    def _pick(*aliases: str) -> str:
+        for alias in aliases:
+            val = normalized_map.get(_normalize_key(alias))
+            if _to_str(val):
+                return _to_str(val)
+        return ""
 
     return {
-        "product_type": section.get("Product Type", ""),
-        "keyword_1": section.get("Keyword 1", ""),
-        "keyword_2": section.get("Keyword 2", ""),
-        "keyword_3": section.get("Keyword 3", ""),
+        "product_type": _pick("Product Type", "ProductType", "Type", "Produktart"),
+        "product_model": _pick("Product Model", "ProductModel", "Model", "Modell"),
+        "keyword_1": _pick("Keyword 1", "Keyword1", "KeyWord1", "Suchbegriff 1"),
+        "keyword_2": _pick("Keyword 2", "Keyword2", "KeyWord2", "Suchbegriff 2"),
+        "keyword_3": _pick("Keyword 3", "Keyword3", "KeyWord3", "Suchbegriff 3"),
     }
 
 
@@ -1028,6 +1085,7 @@ def save_ebay_seo_fields_for_sku(sku: str, request: dict):
 
         seo_section = product_json["eBay SEO"]
         seo_section["Product Type"] = request.get("product_type", "")
+        seo_section["Product Model"] = request.get("product_model", "")
         seo_section["Keyword 1"] = request.get("keyword_1", "")
         seo_section["Keyword 2"] = request.get("keyword_2", "")
         seo_section["Keyword 3"] = request.get("keyword_3", "")
@@ -1098,6 +1156,7 @@ def get_ebay_listing_data(sku: str):
     """Get stored eBay listing data for a SKU."""
     try:
         from app.repositories.sku_json_repo import read_sku_json
+        from app.services.ebay_listings_cache import get_de_listing_title_for_sku
 
         product_json = read_sku_json(sku)
         if not product_json:
@@ -1106,7 +1165,10 @@ def get_ebay_listing_data(sku: str):
         return {
             "success": True,
             "sku": sku,
-            "data": _read_ebay_listing_data(product_json),
+            "data": {
+                **_read_ebay_listing_data(product_json),
+                "de_listing_title": get_de_listing_title_for_sku(sku) or "",
+            },
         }
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -1507,6 +1569,242 @@ def get_ebay_listings_status():
         "last_update": last_update,
         "has_cache": last_update is not None,
         "listings_count": count
+    }
+
+
+def _extract_lookup_sku(raw_sku):
+    """Extract a primary SKU token from listing SKU for JSON lookup."""
+    if not raw_sku:
+        return ""
+
+    sku_value = str(raw_sku).strip()
+    if not sku_value:
+        return ""
+
+    if "," in sku_value:
+        sku_value = sku_value.split(",", 1)[0].strip()
+
+    if " - " in sku_value:
+        sku_value = sku_value.split(" - ", 1)[0].strip()
+    elif "-" in sku_value:
+        parts = [part.strip() for part in sku_value.split("-") if part.strip()]
+        if len(parts) == 2:
+            sku_value = parts[0]
+
+    return sku_value
+
+
+def _get_listing_sku_json_mapping(raw_sku):
+    """Map count_main_images and eBay SEO fields from SKU JSON."""
+    mapped = {
+        "count_main_images": None,
+        "ebay_seo_product_type": "",
+        "ebay_seo_keyword_1": "",
+        "ebay_seo_keyword_2": "",
+        "ebay_seo_keyword_3": "",
+        "ebay_seo_product_model": "",
+    }
+
+    lookup_sku = _extract_lookup_sku(raw_sku)
+    if not lookup_sku:
+        return mapped
+
+    try:
+        sku_json = read_sku_json(lookup_sku)
+        if not sku_json:
+            return mapped
+
+        product = sku_json.get(lookup_sku, sku_json)
+        if not isinstance(product, dict):
+            return mapped
+
+        images_data = product.get("Images", {})
+        if isinstance(images_data, dict):
+            summary = images_data.get("summary", {})
+            if isinstance(summary, dict):
+                mapped["count_main_images"] = summary.get("count_main_images")
+
+        ebay_seo = product.get("eBay SEO", {})
+        if isinstance(ebay_seo, dict):
+            mapped["ebay_seo_product_type"] = ebay_seo.get("Product Type", "")
+            mapped["ebay_seo_keyword_1"] = ebay_seo.get("Keyword 1", "")
+            mapped["ebay_seo_keyword_2"] = ebay_seo.get("Keyword 2", "")
+            mapped["ebay_seo_keyword_3"] = ebay_seo.get("Keyword 3", "")
+            mapped["ebay_seo_product_model"] = ebay_seo.get("Product Model", "")
+    except Exception:
+        return mapped
+
+    return mapped
+
+
+@app.get("/api/ebay-cache/de-listings")
+def get_de_ebay_listings(
+    page: int = Query(1, ge=1),
+    limit: int = Query(200, ge=10, le=500),
+    search_sku: str = Query(""),
+    search_title: str = Query(""),
+    min_price: float = Query(0, ge=0),
+    max_price: float = Query(999999, ge=0),
+    min_profit_margin: float = Query(-999999),
+    max_profit_margin: float = Query(999999),
+    listing_status: str = Query(""),
+    condition: str = Query(""),
+    sort_by: str = Query("sku"),  # sku, price, profit_margin, date
+    sort_order: str = Query("asc"),  # asc, desc
+    column_filters: str = Query("{}"),  # JSON string containing per-column filters
+):
+    """Get DE marketplace eBay listings with filters and pagination"""
+    import json
+    import re
+    from datetime import datetime
+    
+    cache = read_ebay_cache()
+    all_listings = cache.get("listings", []) if cache else []
+    
+    # Parse column filters JSON
+    try:
+        col_filters = json.loads(column_filters) if column_filters else {}
+    except json.JSONDecodeError:
+        col_filters = {}
+    
+    # Filter for DE marketplace only
+    de_listings = [l for l in all_listings if l.get("marketplace") == "DE"]
+    
+    # Apply search filters
+    if search_sku:
+        search_sku_lower = search_sku.lower()
+        de_listings = [l for l in de_listings if search_sku_lower in str(l.get("sku", "")).lower()]
+    
+    if search_title:
+        search_title_lower = search_title.lower()
+        de_listings = [l for l in de_listings if search_title_lower in str(l.get("title", "")).lower()]
+    
+    # Apply price filter
+    if min_price > 0 or max_price < 999999:
+        de_listings = [l for l in de_listings if min_price <= l.get("price", 0) <= max_price]
+    
+    # Apply profit margin filter
+    if min_profit_margin > -999999 or max_profit_margin < 999999:
+        de_listings = [
+            l for l in de_listings
+            if min_profit_margin <= l.get("profit_analysis", {}).get("net_profit_margin_percent", -999999) <= max_profit_margin
+        ]
+    
+    # Apply listing status filter
+    if listing_status:
+        de_listings = [l for l in de_listings if l.get("listing_status") == listing_status]
+    
+    # Apply condition filter
+    if condition:
+        condition_lower = condition.lower()
+        de_listings = [l for l in de_listings if condition_lower in str(l.get("condition_name", "")).lower()]
+    
+    # Enrich ALL listings with SKU JSON data BEFORE applying column filters
+    # (so column filters can use count_main_images and eBay SEO fields)
+    enriched_listings = []
+    for listing in de_listings:
+        listing_copy = dict(listing)
+        listing_copy.update(_get_listing_sku_json_mapping(listing.get("sku")))
+        enriched_listings.append(listing_copy)
+    de_listings = enriched_listings
+    
+    # Apply per-column filters
+    for column_id, filter_config in col_filters.items():
+        if not filter_config or not any(v for v in filter_config.values() if v not in [None, ""]):
+            continue
+        
+        # Helper to get nested field value
+        def get_field_value(listing, field_path):
+            parts = field_path.split('.')
+            value = listing
+            for part in parts:
+                if isinstance(value, dict):
+                    value = value.get(part)
+                else:
+                    return None
+            return value
+        
+        # Text filters
+        if "text" in filter_config and filter_config["text"]:
+            text_val = str(filter_config["text"]).lower()
+            de_listings = [
+                l for l in de_listings
+                if text_val in str(get_field_value(l, column_id) or "").lower()
+            ]
+        
+        # Numeric range filters
+        if "min" in filter_config and filter_config["min"] is not None:
+            min_val = filter_config["min"]
+            de_listings = [
+                l for l in de_listings
+                if (get_field_value(l, column_id) or 0) >= min_val
+            ]
+        
+        if "max" in filter_config and filter_config["max"] is not None:
+            max_val = filter_config["max"]
+            de_listings = [
+                l for l in de_listings
+                if (get_field_value(l, column_id) or 0) <= max_val
+            ]
+        
+        # Date range filters
+        if "from" in filter_config and filter_config["from"]:
+            from_date_str = filter_config["from"]
+            de_listings = [
+                l for l in de_listings
+                if str(get_field_value(l, column_id) or "") >= from_date_str
+            ]
+        
+        if "to" in filter_config and filter_config["to"]:
+            to_date_str = filter_config["to"]
+            de_listings = [
+                l for l in de_listings
+                if str(get_field_value(l, column_id) or "") <= to_date_str
+            ]
+        
+        # Boolean filters
+        if "value" in filter_config and filter_config["value"] is not None:
+            bool_val = filter_config["value"]
+            de_listings = [
+                l for l in de_listings
+                if bool(get_field_value(l, column_id)) == bool_val
+            ]
+    
+    # Sort
+    sort_key = "sku"
+    if sort_by == "price":
+        sort_key = "price"
+    elif sort_by == "profit_margin":
+        de_listings = sorted(
+            de_listings,
+            key=lambda x: x.get("profit_analysis", {}).get("net_profit_margin_percent", 0),
+            reverse=(sort_order == "desc")
+        )
+    elif sort_by == "date":
+        de_listings = sorted(
+            de_listings,
+            key=lambda x: x.get("start_time", ""),
+            reverse=(sort_order == "desc")
+        )
+    else:  # sku or price as default
+        de_listings = sorted(
+            de_listings,
+            key=lambda x: x.get(sort_key, ""),
+            reverse=(sort_order == "desc")
+        )
+    
+    # Paginate
+    total = len(de_listings)
+    start = (page - 1) * limit
+    end = start + limit
+    paginated = de_listings[start:end]
+    
+    return {
+        "total": total,
+        "page": page,
+        "limit": limit,
+        "pages": (total + limit - 1) // limit,
+        "listings": paginated
     }
 
 

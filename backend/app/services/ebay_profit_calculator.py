@@ -84,18 +84,15 @@ def _load_total_cost_net_cache() -> Dict[str, float]:
         return _TOTAL_COST_NET_CACHE
 
     try:
+        # Use the correct database location: legacy/cache/inventory.db
         legacy_dir = Path(__file__).resolve().parents[2] / "legacy"
-        if str(legacy_dir) not in sys.path:
-            sys.path.insert(0, str(legacy_dir))
+        db_path = legacy_dir / "cache" / "inventory.db"
+        
+        # Column names in the database
+        sku_col = "SKU (Old)"
+        cost_col = "Total Cost Net"
 
-        import config  # type: ignore
-        from app.services.excel_inventory import _get_db_path
-
-        db_path = _get_db_path()
-        sku_col = config.SKU_COLUMN
-        cost_col = config.TOTAL_COST_NET_COLUMN
-
-        conn = sqlite3.connect(db_path)
+        conn = sqlite3.connect(str(db_path))
         conn.row_factory = sqlite3.Row
         try:
             # Verify columns exist in DB
@@ -104,7 +101,7 @@ def _load_total_cost_net_cache() -> Dict[str, float]:
                 raise RuntimeError(f"Missing columns in inventory DB: {sku_col}, {cost_col}")
 
             rows = conn.execute(
-                f"SELECT \"{sku_col}\", \"{cost_col}\" FROM inventory"
+                f'SELECT "{sku_col}", "{cost_col}" FROM inventory'
             ).fetchall()
         finally:
             conn.close()
@@ -124,20 +121,47 @@ def _load_total_cost_net_cache() -> Dict[str, float]:
             cost_map[sku] = cost_value
 
         _TOTAL_COST_NET_CACHE = cost_map
-        logger.info("[COST] Loaded Total Cost Net for %s SKUs", len(cost_map))
+        logger.info("[COST] Loaded Total Cost Net for %s SKUs from inventory.db", len(cost_map))
     except Exception as e:
-        logger.warning("[COST] Error loading Total Cost Net from inventory DB: %s", e)
+        logger.warning("[COST] Error loading Total Cost Net from inventory.db: %s", e)
         _TOTAL_COST_NET_CACHE = {}
 
     return _TOTAL_COST_NET_CACHE
 
 
 def get_total_cost_net_for_sku(sku: Optional[str]) -> float:
-    """Get Total Cost Net for a SKU from inventory database."""
+    """
+    Get Total Cost Net for a SKU from inventory database.
+    
+    Handles multi-SKU listings:
+    - Comma-separated (,) = individual separate SKUs
+    - Dash-separated ( - ) = multiple SKUs forming an array
+    - Dash-range (P0010036-P0010040) = range of SKUs
+    - Hybrid = mix of both
+    
+    For multi-SKU, returns the average cost across all SKUs.
+    """
     if not sku:
         return 0.0
 
     normalized_sku = str(sku).strip()
+    
+    # Check if this is a multi-SKU listing
+    is_multi_sku = False
+    
+    if "," in normalized_sku or " - " in normalized_sku:
+        # Comma-separated or space-dash-separated
+        is_multi_sku = True
+    elif "-" in normalized_sku:
+        # Could be a range like "P0010036-P0010040" - check with regex
+        import re
+        if re.search(r'[A-Z]\d+-[A-Z]?\d+', normalized_sku):
+            is_multi_sku = True
+    
+    if is_multi_sku:
+        return _get_average_cost_for_multi_sku(normalized_sku)
+    
+    # Single SKU - use original logic
     cost_map = _load_total_cost_net_cache()
     if normalized_sku in cost_map:
         return float(cost_map.get(normalized_sku, 0.0))
@@ -157,6 +181,172 @@ def get_total_cost_net_for_sku(sku: Optional[str]) -> float:
         logger.warning("[COST] Failed to read product JSON for SKU=%s: %s", normalized_sku, e)
 
     return 0.0
+
+
+def _get_average_cost_for_multi_sku(sku_string: str) -> float:
+    """
+    Calculate average Total Cost Net for multi-SKU listings.
+    
+    Supports:
+    - Comma-separated: "SKU1,SKU2,SKU3"
+    - Dash-separated: "SKU1 - SKU2 - SKU3"
+    - Range format: "P0010482-P0010490" (expands to P0010482...P0010490)
+    - Hybrid: "SKU1,SKU2 - SKU3"
+    """
+    if not sku_string:
+        return 0.0
+    
+    # Parse SKUs from different formats
+    skus = []
+    
+    # First split by comma if it exists
+    if "," in sku_string:
+        parts = sku_string.split(",")
+        for part in parts:
+            part = part.strip()
+            # Each part might contain dash-separated SKUs or ranges
+            if " - " in part:
+                # Space-dash-separated (explicit list)
+                sub_skus = [s.strip() for s in part.split(" - ")]
+                skus.extend(sub_skus)
+            elif "-" in part:
+                # Could be a range like "P0010482-P0010490"
+                range_skus = _expand_sku_range(part)
+                if range_skus:
+                    skus.extend(range_skus)
+                else:
+                    skus.append(part)
+            else:
+                skus.append(part)
+    else:
+        # No comma - try dash separation
+        if " - " in sku_string:
+            # Space-dash-separated
+            parts = sku_string.split(" - ")
+            skus.extend([s.strip() for s in parts])
+        elif "-" in sku_string:
+            # Could be a range like "P0010482-P0010490"
+            range_skus = _expand_sku_range(sku_string)
+            if range_skus:
+                skus.extend(range_skus)
+            else:
+                skus.append(sku_string)
+        else:
+            skus.append(sku_string)
+    
+    # Remove empty strings
+    skus = [s for s in skus if s]
+    
+    if not skus:
+        logger.warning("[COST] Could not parse multi-SKU string: %s", sku_string)
+        return 0.0
+    
+    logger.info("[COST] Multi-SKU detected with %d SKUs: %s (from: %s)", len(skus), skus[:3] if len(skus) > 3 else skus, sku_string)
+    
+    # Get cost for each SKU
+    costs = []
+    cost_map = _load_total_cost_net_cache()
+    found_count = 0
+    
+    for single_sku in skus:
+        single_sku = single_sku.strip()
+        cost = 0.0
+        
+        # Try cost map first
+        if single_sku in cost_map:
+            cost = float(cost_map.get(single_sku, 0.0))
+            found_count += 1
+            logger.debug("[COST] Found %s in cache: €%.2f", single_sku, cost)
+        else:
+            # Try product JSON
+            try:
+                products_dir = Path(__file__).resolve().parents[2] / "legacy" / "products"
+                json_path = products_dir / f"{single_sku}.json"
+                if json_path.exists():
+                    with open(json_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    product = data.get(single_sku, data)
+                    price_data = product.get("Price Data", {})
+                    cost_value = price_data.get("Total Cost Net", 0.0)
+                    cost = float(cost_value) if cost_value is not None else 0.0
+                    if cost > 0:
+                        found_count += 1
+                        logger.debug("[COST] Found %s in JSON: €%.2f", single_sku, cost)
+            except Exception as e:
+                logger.debug("[COST] Failed to read product JSON for SKU=%s: %s", single_sku, e)
+        
+        if cost > 0:
+            costs.append(cost)
+    
+    # Calculate average
+    if not costs:
+        logger.warning("[COST] No costs found for any SKU in: %s (checked %d SKUs, found %d)", 
+                      sku_string, len(skus), found_count)
+        return 0.0
+    
+    average_cost = sum(costs) / len(costs)
+    logger.info("[COST] Multi-SKU (%s) average cost: €%.2f (found costs for %d of %d SKUs)", 
+                sku_string, average_cost, len(costs), len(skus))
+    
+    return average_cost
+
+
+def _expand_sku_range(sku_range: str) -> list:
+    """
+    Expand a SKU range like 'P0010482-P0010490' into individual SKUs.
+    
+    Returns empty list if not a valid range format.
+    """
+    sku_range = sku_range.strip()
+    
+    if "-" not in sku_range:
+        return []
+    
+    # Split by dash
+    parts = sku_range.split("-")
+    
+    if len(parts) != 2:
+        # More than one dash, not a simple range
+        return []
+    
+    start_sku = parts[0].strip()
+    end_sku = parts[1].strip()
+    
+    # Extract prefix and numeric parts
+    # E.g., "P0010482" -> prefix="P", number=10482
+    import re
+    start_match = re.match(r"^([A-Za-z]*)(\d+)$", start_sku)
+    end_match = re.match(r"^([A-Za-z]*)(\d+)$", end_sku)
+    
+    if not start_match or not end_match:
+        # Not a valid range format
+        return []
+    
+    start_prefix, start_num = start_match.groups()
+    end_prefix, end_num = end_match.groups()
+    
+    # Prefixes must match
+    if start_prefix != end_prefix:
+        return []
+    
+    start_num = int(start_num)
+    end_num = int(end_num)
+    
+    # Validate range
+    if start_num >= end_num or (end_num - start_num) > 1000:
+        # Invalid range or suspiciously large
+        logger.warning("[COST] Invalid SKU range: %s (span=%d)", sku_range, end_num - start_num)
+        return []
+    
+    # Generate range
+    num_digits = len(parts[0].split(start_prefix)[1]) if start_prefix else len(str(start_num))
+    skus = []
+    for i in range(start_num, end_num + 1):
+        sku = f"{start_prefix}{str(i).zfill(num_digits)}"
+        skus.append(sku)
+    
+    logger.debug("[COST] Expanded range %s into %d SKUs", sku_range, len(skus))
+    return skus
 
 
 def _is_germany_marketplace(marketplace: str) -> bool:

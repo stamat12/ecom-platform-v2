@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-21T17:00:41.454317",
+  "timestamp": "2026-02-21T21:36:23.628419",
   "listings": [
     {
       "item_id": "136348875263",
@@ -2771,9 +2771,9 @@
         "sales_commission": 3.12,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.98,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 1.66,
+        "net_profit": 7.32,
+        "net_profit_margin_percent": 442.02
       }
     },
     {
@@ -5213,9 +5213,9 @@
         "sales_commission": 4.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 15.46,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 7.08,
+        "net_profit": 8.38,
+        "net_profit_margin_percent": 118.39
       }
     },
     {
@@ -5472,9 +5472,9 @@
         "sales_commission": 4.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 15.46,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 5.9,
+        "net_profit": 9.56,
+        "net_profit_margin_percent": 162.06
       }
     },
     {
@@ -7026,9 +7026,9 @@
         "sales_commission": 6.6,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 29.87,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 31.48,
+        "net_profit": -1.61,
+        "net_profit_margin_percent": -5.11
       }
     },
     {
@@ -9320,9 +9320,9 @@
         "sales_commission": 7.31,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.18,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 31.48,
+        "net_profit": -0.3,
+        "net_profit_margin_percent": -0.95
       }
     },
     {
@@ -9579,9 +9579,9 @@
         "sales_commission": 7.37,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.1,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 31.48,
+        "net_profit": -0.38,
+        "net_profit_margin_percent": -1.21
       }
     },
     {
@@ -9653,9 +9653,9 @@
         "sales_commission": 7.25,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.27,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 31.48,
+        "net_profit": -0.21,
+        "net_profit_margin_percent": -0.66
       }
     },
     {
@@ -14685,9 +14685,9 @@
         "sales_commission": 2.64,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 6.1,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 0.83,
+        "net_profit": 5.27,
+        "net_profit_margin_percent": 634.63
       }
     },
     {
@@ -14722,9 +14722,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 2.31,
+        "net_profit": 5.95,
+        "net_profit_margin_percent": 257.38
       }
     },
     {
@@ -14759,9 +14759,9 @@
         "sales_commission": 2.64,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 6.1,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 0.73,
+        "net_profit": 5.37,
+        "net_profit_margin_percent": 735.26
       }
     },
     {
@@ -15610,9 +15610,9 @@
         "sales_commission": 4.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 15.46,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 10.62,
+        "net_profit": 4.84,
+        "net_profit_margin_percent": 45.59
       }
     },
     {
@@ -18607,9 +18607,9 @@
         "sales_commission": 2.4,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 4.66,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 1.0,
+        "net_profit_margin_percent": 27.23
       }
     },
     {
@@ -18644,9 +18644,9 @@
         "sales_commission": 2.4,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 4.66,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 1.0,
+        "net_profit_margin_percent": 27.23
       }
     },
     {
@@ -21308,9 +21308,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 4.6,
+        "net_profit_margin_percent": 125.64
       }
     },
     {
@@ -21345,9 +21345,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -21382,9 +21382,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -21530,9 +21530,9 @@
         "sales_commission": 6.6,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 29.87,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 26.21,
+        "net_profit_margin_percent": 716.08
       }
     },
     {
@@ -21641,9 +21641,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 4.6,
+        "net_profit_margin_percent": 125.64
       }
     },
     {
@@ -22492,9 +22492,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -22825,9 +22825,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -22862,9 +22862,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 4.6,
+        "net_profit_margin_percent": 125.64
       }
     },
     {
@@ -22899,9 +22899,9 @@
         "sales_commission": 7.31,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.18,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 27.52,
+        "net_profit_margin_percent": 751.9
       }
     },
     {
@@ -22936,9 +22936,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -22973,9 +22973,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 4.6,
+        "net_profit_margin_percent": 125.64
       }
     },
     {
@@ -23454,9 +23454,9 @@
         "sales_commission": 3.0,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 8.26,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 4.6,
+        "net_profit_margin_percent": 125.64
       }
     },
     {
@@ -25119,9 +25119,9 @@
         "sales_commission": 11.4,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 58.68,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 26.37,
+        "net_profit": 32.31,
+        "net_profit_margin_percent": 122.53
       }
     },
     {
@@ -25230,9 +25230,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 22.53,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.65,
+        "net_profit": 13.88,
+        "net_profit_margin_percent": 160.39
       }
     },
     {
@@ -25415,9 +25415,9 @@
         "sales_commission": 7.25,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.27,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 27.61,
+        "net_profit_margin_percent": 754.4
       }
     },
     {
@@ -25600,9 +25600,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 22.53,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.85,
+        "net_profit": 13.68,
+        "net_profit_margin_percent": 154.61
       }
     },
     {
@@ -25637,9 +25637,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 22.53,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 7.38,
+        "net_profit": 15.16,
+        "net_profit_margin_percent": 205.53
       }
     },
     {
@@ -25748,9 +25748,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -26044,9 +26044,9 @@
         "sales_commission": 3.36,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 10.42,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 6.76,
+        "net_profit_margin_percent": 184.68
       }
     },
     {
@@ -26266,9 +26266,9 @@
         "sales_commission": 7.37,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 31.1,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.66,
+        "net_profit": 27.44,
+        "net_profit_margin_percent": 749.61
       }
     },
     {
@@ -27080,9 +27080,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.59,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 7.38,
+        "net_profit": 17.22,
+        "net_profit_margin_percent": 233.45
       }
     },
     {
@@ -27228,9 +27228,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.59,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.65,
+        "net_profit": 15.94,
+        "net_profit_margin_percent": 184.19
       }
     },
     {
@@ -27413,9 +27413,9 @@
         "sales_commission": 12.19,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 59.92,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 26.37,
+        "net_profit": 33.55,
+        "net_profit_margin_percent": 127.22
       }
     },
     {
@@ -27598,9 +27598,9 @@
         "sales_commission": 12.09,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 60.05,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 26.37,
+        "net_profit": 33.68,
+        "net_profit_margin_percent": 127.71
       }
     },
     {
@@ -27635,9 +27635,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.56,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 7.38,
+        "net_profit": 17.18,
+        "net_profit_margin_percent": 232.99
       }
     },
     {
@@ -27672,9 +27672,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.56,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.65,
+        "net_profit": 15.9,
+        "net_profit_margin_percent": 183.8
       }
     },
     {
@@ -27931,9 +27931,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.52,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 7.38,
+        "net_profit": 17.15,
+        "net_profit_margin_percent": 232.54
       }
     },
     {
@@ -28042,9 +28042,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.52,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.65,
+        "net_profit": 15.87,
+        "net_profit_margin_percent": 183.41
       }
     },
     {
@@ -28523,9 +28523,9 @@
         "sales_commission": 5.4,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 22.67,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.72,
+        "net_profit": 13.95,
+        "net_profit_margin_percent": 159.92
       }
     },
     {
@@ -28782,9 +28782,9 @@
         "sales_commission": 6.04,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 24.08,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.72,
+        "net_profit": 15.36,
+        "net_profit_margin_percent": 176.15
       }
     },
     {
@@ -29041,9 +29041,9 @@
         "sales_commission": 6.13,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 23.92,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.72,
+        "net_profit": 15.2,
+        "net_profit_margin_percent": 174.28
       }
     },
     {
@@ -29152,9 +29152,9 @@
         "sales_commission": 12.29,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 59.78,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 26.37,
+        "net_profit": 33.41,
+        "net_profit_margin_percent": 126.71
       }
     },
     {
@@ -30151,9 +30151,9 @@
         "sales_commission": 4.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 15.46,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.52,
+        "net_profit": 11.95,
+        "net_profit_margin_percent": 339.86
       }
     },
     {
@@ -32186,9 +32186,9 @@
         "sales_commission": 13.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 69.49,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 22.06,
+        "net_profit": 47.43,
+        "net_profit_margin_percent": 215.04
       }
     },
     {
@@ -33888,9 +33888,9 @@
         "sales_commission": 14.02,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.69,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 22.06,
+        "net_profit": 48.63,
+        "net_profit_margin_percent": 220.5
       }
     },
     {
@@ -36848,9 +36848,9 @@
         "sales_commission": 15.6,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 83.89,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 23.41,
+        "net_profit": 60.48,
+        "net_profit_margin_percent": 258.35
       }
     },
     {
@@ -37329,9 +37329,9 @@
         "sales_commission": 13.2,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 69.49,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 21.64,
+        "net_profit": 47.85,
+        "net_profit_margin_percent": 221.1
       }
     },
     {
@@ -37662,9 +37662,9 @@
         "sales_commission": 14.13,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.54,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 22.06,
+        "net_profit": 48.49,
+        "net_profit_margin_percent": 219.83
       }
     },
     {
@@ -39660,9 +39660,9 @@
         "sales_commission": 14.02,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.69,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 21.64,
+        "net_profit": 49.05,
+        "net_profit_margin_percent": 226.67
       }
     },
     {
@@ -39956,9 +39956,9 @@
         "sales_commission": 14.13,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.54,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 21.64,
+        "net_profit": 48.9,
+        "net_profit_margin_percent": 225.99
       }
     },
     {
@@ -40030,9 +40030,9 @@
         "sales_commission": 13.91,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.83,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 22.06,
+        "net_profit": 48.78,
+        "net_profit_margin_percent": 221.14
       }
     },
     {
@@ -40067,9 +40067,9 @@
         "sales_commission": 13.91,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 70.83,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 21.64,
+        "net_profit": 49.19,
+        "net_profit_margin_percent": 227.32
       }
     },
     {
@@ -40363,9 +40363,9 @@
         "sales_commission": 5.76,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 24.83,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.72,
+        "net_profit": 16.11,
+        "net_profit_margin_percent": 184.7
       }
     },
     {
@@ -40400,9 +40400,9 @@
         "sales_commission": 5.76,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 24.83,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.93,
+        "net_profit": 15.9,
+        "net_profit_margin_percent": 178.01
       }
     },
     {
@@ -40474,9 +40474,9 @@
         "sales_commission": 5.76,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 24.83,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 8.72,
+        "net_profit": 16.11,
+        "net_profit_margin_percent": 184.7
       }
     },
     {
@@ -44951,9 +44951,9 @@
         "sales_commission": 23.16,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 129.27,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 41.3,
+        "net_profit": 87.97,
+        "net_profit_margin_percent": 213.01
       }
     },
     {
@@ -47689,9 +47689,9 @@
         "sales_commission": 24.15,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 130.31,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 41.3,
+        "net_profit": 89.01,
+        "net_profit_margin_percent": 215.52
       }
     },
     {
@@ -48022,9 +48022,9 @@
         "sales_commission": 23.95,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 130.54,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 41.3,
+        "net_profit": 89.24,
+        "net_profit_margin_percent": 216.07
       }
     },
     {
@@ -48133,9 +48133,9 @@
         "sales_commission": 24.34,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 11.5,
-        "total_cost_net": 0.0,
-        "net_profit": 130.09,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 41.3,
+        "net_profit": 88.79,
+        "net_profit_margin_percent": 214.98
       }
     },
     {
@@ -49983,9 +49983,9 @@
         "sales_commission": 0.0,
         "sales_commission_percentage": 0.0,
         "shipping_costs_net": 9.4,
-        "total_cost_net": 0.0,
-        "net_profit": 24.21,
-        "net_profit_margin_percent": 0.0
+        "total_cost_net": 3.82,
+        "net_profit": 20.39,
+        "net_profit_margin_percent": 533.89
       }
     },
     {

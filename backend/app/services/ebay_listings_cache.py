@@ -122,6 +122,71 @@ def get_sku_has_listing(sku: str) -> Optional[bool]:
     return False
 
 
+def _sku_matches_listing_sku(normalized_sku: str, listing_sku: str) -> bool:
+    if not listing_sku:
+        return False
+
+    individual_skus = [s.strip() for s in listing_sku.split(',')]
+    for individual_sku in individual_skus:
+        if not individual_sku:
+            continue
+
+        if individual_sku == normalized_sku:
+            return True
+
+        if '-' in individual_sku:
+            parts = individual_sku.split('-')
+            if len(parts) == 2:
+                start_sku, end_sku = parts[0].strip(), parts[1].strip()
+                start_prefix = ''.join([c for c in start_sku if not c.isdigit()])
+                end_prefix = ''.join([c for c in end_sku if not c.isdigit()])
+                if start_prefix == end_prefix:
+                    start_num_str = start_sku[len(start_prefix):]
+                    end_num_str = end_sku[len(end_prefix):]
+                    try:
+                        start_num = int(start_num_str)
+                        end_num = int(end_num_str)
+                        check_prefix = ''.join([c for c in normalized_sku if not c.isdigit()])
+                        check_num_str = normalized_sku[len(check_prefix):]
+                        if check_prefix == start_prefix:
+                            try:
+                                check_num = int(check_num_str)
+                                if start_num <= check_num <= end_num:
+                                    return True
+                            except ValueError:
+                                pass
+                    except ValueError:
+                        pass
+
+    return False
+
+
+def get_de_listing_title_for_sku(sku: str) -> Optional[str]:
+    """Return DE marketplace listing title for SKU from cache, if available."""
+    cache = read_cache()
+    if cache is None:
+        return None
+
+    listings = cache.get('listings', []) or []
+    normalized_sku = (sku or "").strip()
+
+    for listing in listings:
+        listing_sku = (listing.get('sku') or '').strip()
+        if not _sku_matches_listing_sku(normalized_sku, listing_sku):
+            continue
+
+        marketplace = str(listing.get('marketplace') or '').strip().upper()
+        site = str(listing.get('site') or '').strip().lower()
+        if marketplace == 'DE' or site == 'germany':
+            title = listing.get('title')
+            if title is not None:
+                title_text = str(title).strip()
+                if title_text:
+                    return title_text
+
+    return None
+
+
 def get_last_update_time() -> Optional[str]:
     """
     Get the timestamp of the last cache update.

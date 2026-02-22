@@ -681,39 +681,81 @@ def _build_manufacturer_xml(manufacturer_info: Optional[Dict[str, Any]]) -> str:
 
 
 def build_title_from_product(product_json: Dict[str, Any], sku: str) -> str:
-    """Build title: Brand + Keywords + Color + Size"""
-    product_info = product_json.get("Intern Product Info", {})
-    generated_info = product_json.get("Intern Generated Info", {})
+    """Build title: Brand + Model + Product Type + Gender (translated) + Color + Size + Keyword 1/2/3 + Condition
+    Max 80 chars. Truncate by priority: remove Condition, then Keyword 3, then Keyword 2, then error."""
     
+    product_info = product_json.get("Intern Product Info", {})
+    seo_section = product_json.get("eBay SEO", {}) or {}
+    condition_section = product_json.get("Product Condition", {}) or {}
+    
+    # Extract components
     brand = str(product_info.get("Brand", "") or "").strip()
-    keywords = str(generated_info.get("Keywords", "") or "").strip()
+    model = str(seo_section.get("Product Model", "") or "").strip()
+    product_type = str(seo_section.get("Product Type", "") or "").strip()
     color = str(product_info.get("Color", "") or "").strip()
     size = str(product_info.get("Size", "") or "").strip()
+    keyword_1 = str(seo_section.get("Keyword 1", "") or "").strip()
+    keyword_2 = str(seo_section.get("Keyword 2", "") or "").strip()
+    keyword_3 = str(seo_section.get("Keyword 3", "") or "").strip()
+    condition = str(condition_section.get("Condition", "") or "").strip()
+    gender_code = str(product_info.get("Gender", "") or "").strip()
     
-    if not keywords:
-        raise ValueError(f"Keywords missing in JSON for SKU {sku}")
+    # Gender code translation
+    gender_map = {
+        "M": "Herren",
+        "F": "Damen",
+        "U": "Unisex",
+        "KB": "Jungen",
+        "KG": "Mädchen",
+        "KU": "Kinder Unisex",
+    }
+    gender_label = gender_map.get(gender_code, "")
     
-    # Build title parts
+    # At least product_type is required
+    if not product_type:
+        raise ValueError(f"Product Type missing in eBay SEO for SKU {sku}")
+    
+    # Build title parts in exact order
     parts = []
-    if brand and keywords:
-        parts.append(f"{brand} {keywords}".strip())
-    elif keywords:
-        parts.append(keywords)
-    
+    if brand:
+        parts.append(brand)
+    if model:
+        parts.append(model)
+    if product_type:
+        parts.append(product_type)
+    if gender_label:
+        parts.append(gender_label)
     if color:
         parts.append(color)
-    
     if size:
-        parts.append(f"Größe {size}")
+        parts.append(size)
+    if keyword_1:
+        parts.append(keyword_1)
+    if keyword_2:
+        parts.append(keyword_2)
+    if keyword_3:
+        parts.append(keyword_3)
+    if condition:
+        parts.append(condition)
     
-    title = ", ".join(parts)
+    title = " ".join(parts)
     
-    # Optimize length
-    if len(title) > 80 and size:
-        title = title.replace(f"Größe {size}", size)
+    # Truncate with priority: Condition first, then Keyword 3, then Keyword 2
+    if len(title) > 80 and condition and condition in parts:
+        parts.remove(condition)
+        title = " ".join(parts)
     
+    if len(title) > 80 and keyword_3 and keyword_3 in parts:
+        parts.remove(keyword_3)
+        title = " ".join(parts)
+    
+    if len(title) > 80 and keyword_2 and keyword_2 in parts:
+        parts.remove(keyword_2)
+        title = " ".join(parts)
+    
+    # If still too long, raise error
     if len(title) > 80:
-        raise ValueError(f"Title exceeds 80 chars for SKU {sku}: {title}")
+        raise ValueError(f"Title exceeds 80 chars for SKU {sku} even after removing Condition, Keyword 3, and Keyword 2. Current: {title} ({len(title)} chars)")
     
     return title
 

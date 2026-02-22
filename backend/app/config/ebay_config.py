@@ -2,6 +2,8 @@
 eBay API and business configuration
 """
 import os
+import json
+from pathlib import Path
 from typing import Dict
 
 # eBay API Endpoints
@@ -116,7 +118,7 @@ MANUFACTURERS_CACHE_FILE = "cache/ebay_manufacturers.json"
 LISTINGS_CACHE_DURATION_HOURS = 6
 
 # Enrichment Prompt Template
-EBAY_FIELD_ENRICHMENT_PROMPT = """Du bist ein Produktdaten-Spezialist für eBay-Listings.
+_DEFAULT_EBAY_FIELD_ENRICHMENT_PROMPT = """Du bist ein Produktdaten-Spezialist für eBay-Listings.
 
 Aufgabe: Fülle die folgenden eBay-Produktfelder basierend auf den bereitgestellten Produktfotos UND verfügbaren Produktinformationen aus.
 
@@ -135,84 +137,69 @@ AKTUELLE WERTE (bereits ausgefüllt):
 
 WICHTIGE REGELN:
 1. Fülle NUR leere Felder aus - überschreibe KEINE bereits ausgefüllten Werte
-2. Nutze die manuell hinzugefügten Produktinformationen (falls vorhanden) - diese sind zuverlässig und oft nicht auf den Bildern sichtbar
-3. Kombiniere Bildinformationen mit den manuellen Daten für präzisere Ergebnisse
-4. Verwende wenn möglich die erlaubten Werte aus der Liste
-5. Wenn erlaubte Werte angegeben sind, wähle EXAKT einen davon
-6. Wenn keine erlaubten Werte angegeben sind, gib eine präzise Beschreibung
-7. Antworte auf Deutsch
-8. Wenn du ein Feld nicht sicher bestimmen kannst, lasse es leer
-9. Gib NUR die Felder zurück, die du ausfüllen möchtest
+2. Nutze die manuell hinzugefügten Produktinformationen (falls vorhanden)
+3. Verwende wenn möglich die erlaubten Werte aus der Liste
+4. Wenn du ein Feld nicht sicher bestimmen kannst, lasse es leer
+5. Antworte auf Deutsch
 
 Antworte im folgenden JSON-Format:
 {{
   "required": {{
-    "Feldname1": "Wert1",
-    "Feldname2": "Wert2"
+    "Feldname1": "Wert1"
   }},
   "optional": {{
-    "Feldname3": "Wert3"
+    "Feldname2": "Wert2"
   }}
 }}
 """
 
-# Manufacturer Lookup Prompt
-MANUFACTURER_LOOKUP_PROMPT = """
-You are a research assistant helping an e-commerce seller in the EU.
-
-Task:
+_DEFAULT_MANUFACTURER_LOOKUP_PROMPT = """You are a research assistant helping an e-commerce seller in the EU.
 Find the OFFICIAL manufacturer or main company information for the brand "{brand}".
-Try to find:
-1. The main company/headquarters in the EU / DACH region
-2. OR the official EU distributor/representative
-3. OR the international headquarters if brand is based outside EU
+Return ONLY valid JSON, no explanation, no comments."""
 
-Search Strategy:
-- Check the official brand website for contact/imprint/about pages
-- Look for "Contact", "About Us", "Impressum", "Imprint" sections
-- For smaller brands, the company address might be on their online shop footer
-- If main HQ is outside EU (e.g. USA, China), try to find their EU office/distributor
-
-IMPORTANT:
-- If you CANNOT find ANY real information after thorough search, return: {{"error": "No verified manufacturer data found"}}
-- Do NOT generate placeholder, example, or fake data like "Musterstraße", "info@example.com", etc.
-- It's OK if you can't find phone/email - just provide address info you can verify
-- Provide what you CAN find, don't reject partial data
-
-Return ONLY a JSON object with these EXACT keys:
-
-- "CompanyName": Full legal name of the company (string)
-- "Street1": Main street and house number (string)
-- "Street2": Additional address line if needed, otherwise "" (string)
-- "CityName": City (string)
-- "StateOrProvince": State, province or Bundesland if applicable, otherwise "" (string)
-- "PostalCode": Postal code (string)
-- "Country": 2-letter country code like "DE", "AT", "UK", "FR", "IT", "NL", etc. (string)
-- "Phone": Main customer service or company phone (optional, use "" if not found) (string)
-- "Email": Official contact email (optional, use "" if not found) (string)
-- "ContactURL": Official contact/support page URL (optional, use "" if not found) (string)
-
-RULES:
-- "Country" MUST be a 2-letter country code (e.g. "DE", "AT", "FR", "UK", "ES", "IT", "NL").
-- "Phone" if found, MUST include country code starting with "00" (not "+"), no spaces/brackets/dashes. Example: "0049301234567"
-- "Phone", "Email", "ContactURL" can be "" if you can't find them - focus on getting address right
-
-Output:
-Return ONLY valid JSON, no explanation, no comments.
-"""
-
-# Condition Description Prompt
-CONDITION_NOTE_PROMPT = """
-Du bist ein eBay-Verkaeufer. Schreibe eine kurze Zustandsbeschreibung (1-2 Saetze) basierend nur auf den Bildern.
-
+_DEFAULT_CONDITION_NOTE_PROMPT = """Du bist ein eBay-Verkaeufer. Schreibe eine kurze Zustandsbeschreibung (1-2 Saetze) basierend nur auf den Bildern.
 Zustand: {condition_label} (ID {condition_id})
-
 Regeln:
 - Nur sichtbare Merkmale oder Gebrauchsspuren nennen.
 - Wenn nichts Sicheres erkennbar ist, schreibe: "Keine auffaelligen Gebrauchsspuren erkennbar, bitte Bilder beachten."
 - Kein Markdown, keine Emojis, keine Aufzaehlungen.
 - Antworte nur mit dem Text, ohne Anfuehrungszeichen.
 """
+
+_DEFAULT_EBAY_SEO_ENRICHMENT_PROMPT = """You are an expert eBay Germany product classifier.
+Extract exactly these fields as JSON only:
+product_type, product_model, keyword_1, keyword_2, keyword_3.
+All output must be in German.
+Do not include brand, color, size, or condition words.
+"""
+
+
+def _load_enrichment_prompts() -> dict:
+    data_path = Path(__file__).resolve().parents[2] / "data" / "enrichment_prompts.json"
+    try:
+        with data_path.open("r", encoding="utf-8") as f:
+            loaded = json.load(f)
+        return loaded if isinstance(loaded, dict) else {}
+    except Exception:
+        return {}
+
+
+_ENRICHMENT_PROMPTS = _load_enrichment_prompts()
+
+
+def _prompt_value(key: str, default: str) -> str:
+    raw = _ENRICHMENT_PROMPTS.get(key)
+    if isinstance(raw, str):
+        return raw
+    if isinstance(raw, list):
+        return "\n".join(str(line) for line in raw)
+    return default
+
+
+EBAY_FIELD_ENRICHMENT_PROMPT = _prompt_value("ebay_field_enrichment_prompt", _DEFAULT_EBAY_FIELD_ENRICHMENT_PROMPT)
+EBAY_SEO_ENRICHMENT_PROMPT = _prompt_value("ebay_seo_enrichment_prompt", _DEFAULT_EBAY_SEO_ENRICHMENT_PROMPT)
+MANUFACTURER_LOOKUP_PROMPT = _prompt_value("manufacturer_lookup_prompt", _DEFAULT_MANUFACTURER_LOOKUP_PROMPT)
+CONDITION_NOTE_PROMPT = _prompt_value("condition_note_prompt", _DEFAULT_CONDITION_NOTE_PROMPT)
 
 # Listing Description HTML Template (exact match from old project)
 LISTING_DESCRIPTION_TEMPLATE = (

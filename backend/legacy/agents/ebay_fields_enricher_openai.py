@@ -35,6 +35,86 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 MODEL = config.MODEL_FIELD_COMPLETION  # e.g., "gpt-4o-mini"
 
+SEO_FIELD_KEYS = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"]
+
+_DEFAULT_SEO_ENRICHMENT_PROMPT = """
+You are an expert eBay Germany product classifier.
+
+Your task is to analyze product titles and extract:
+
+- product_type
+- product_model
+- keyword_1
+- keyword_2
+- keyword_3
+
+Your goal is to maximize search visibility on eBay.de using realistic buyer search terms.
+
+You MUST follow these strict rules:
+
+OUTPUT FORMAT:
+
+- Output ONLY valid JSON.
+- Output exactly these 5 fields:
+	product_type, product_model, keyword_1, keyword_2, keyword_3
+- All output must be in German.
+- Use singular form for product_type.
+- Capitalize nouns properly.
+
+PRODUCT TYPE RULES:
+
+- product_type must be the main item category.
+- Choose the most specific product type possible.
+- Do NOT include brand names.
+- Do NOT include color.
+- Do NOT include size.
+- Do NOT include condition words like Neu or Gebraucht.
+
+PRODUCT MODEL RULES:
+
+- product_model should be the most likely model designation from title (if available).
+- If no clear model is present, return empty string.
+- Do NOT include color, size, or condition.
+
+KEYWORD RULES:
+
+- keyword_1, keyword_2, keyword_3 must be alternative search terms.
+- They must describe the same product.
+- Use realistic eBay search keywords.
+- Do NOT include brand names.
+- Do NOT include colors.
+- Do NOT include sizes.
+- Do NOT include condition.
+
+IMPORTANT:
+
+- Keywords must help buyers find the product.
+- Do NOT repeat product_type as keyword unless absolutely necessary.
+- Choose the most likely product type based on the title.
+
+Always output valid JSON only.
+""".strip()
+
+
+def _load_enrichment_prompts() -> dict:
+	prompts_path = config.PROJECT_ROOT.parent / "data" / "enrichment_prompts.json"
+	try:
+		with prompts_path.open("r", encoding="utf-8") as f:
+			loaded = json.load(f)
+		return loaded if isinstance(loaded, dict) else {}
+	except Exception:
+		return {}
+
+
+_LOADED_ENRICHMENT_PROMPTS = _load_enrichment_prompts()
+_RAW_SEO_PROMPT = _LOADED_ENRICHMENT_PROMPTS.get("ebay_seo_enrichment_prompt")
+if isinstance(_RAW_SEO_PROMPT, list):
+	SEO_ENRICHMENT_PROMPT = "\n".join(str(line) for line in _RAW_SEO_PROMPT)
+elif isinstance(_RAW_SEO_PROMPT, str):
+	SEO_ENRICHMENT_PROMPT = _RAW_SEO_PROMPT
+else:
+	SEO_ENRICHMENT_PROMPT = _DEFAULT_SEO_ENRICHMENT_PROMPT
+
 
 # ---------------------------------------------------------
 # File & image helpers
@@ -207,6 +287,74 @@ def _extract_fields_from_images(
 		return {}
 
 
+def _extract_title_for_seo(record: Dict[str, Any], sku: str) -> str:
+	candidates: List[str] = []
+
+	def _push(value: Any) -> None:
+		if value is None:
+			return
+		text = str(value).strip()
+		if text:
+			candidates.append(text)
+
+	for key in ["Title", "Product Title", "Titel", "Name", "Product Name", "eBay Title", "Ebay Title"]:
+		_push(record.get(key))
+
+	intern_product = record.get("Intern Product Info", {})
+	if isinstance(intern_product, dict):
+		for key in ["Title", "Product Title", "Titel", "Name", "Model", "Product Name"]:
+			_push(intern_product.get(key))
+
+	intern_generated = record.get("Intern Generated Info", {})
+	if isinstance(intern_generated, dict):
+		for key in ["Title", "Product Title", "Titel", "Name", "SEO Title", "Keywords"]:
+			_push(intern_generated.get(key))
+
+	ebay_listing = record.get("Ebay Listing", {})
+	if isinstance(ebay_listing, dict):
+		for key in ["Title", "Listing Title", "eBay Title", "Ebay Title"]:
+			_push(ebay_listing.get(key))
+
+	if candidates:
+		return candidates[0]
+
+	raise ValueError(f"No product title found for {sku}")
+
+
+def _extract_seo_from_title(title: str) -> Dict[str, str]:
+	try:
+		response = client.chat.completions.create(
+			model=MODEL,
+			response_format={"type": "json_object"},
+			temperature=0.1,
+			max_tokens=300,
+			messages=[
+				{"role": "system", "content": SEO_ENRICHMENT_PROMPT},
+				{
+					"role": "user",
+					"content": (
+						"Produkt-Titel:\n"
+						f"{title}\n\n"
+						"Liefere ausschließlich JSON mit genau diesen Keys: "
+						"product_type, product_model, keyword_1, keyword_2, keyword_3"
+					),
+				},
+			],
+		)
+		raw = response.choices[0].message.content
+		parsed = json.loads(raw) if raw else {}
+		return {
+			"product_type": str(parsed.get("product_type") or "").strip(),
+			"product_model": str(parsed.get("product_model") or "").strip(),
+			"keyword_1": str(parsed.get("keyword_1") or "").strip(),
+			"keyword_2": str(parsed.get("keyword_2") or "").strip(),
+			"keyword_3": str(parsed.get("keyword_3") or "").strip(),
+		}
+	except Exception as ex:
+		print(f"[ERROR] eBay SEO extraction failed: {ex}")
+		return {k: "" for k in SEO_FIELD_KEYS}
+
+
 # ---------------------------------------------------------
 # Public API
 # ---------------------------------------------------------
@@ -268,6 +416,29 @@ def fill_ebay_fields_for_sku(sku: str, product_json_path: Path) -> Dict[str, Any
 	if "Ebay" in record and "Fields" in record.get("Ebay", {}):
 		del record["Ebay"]
 
+	# Enrich SEO fields from title (fill only empty values)
+	existing_seo = record.get("eBay SEO", {}) if isinstance(record.get("eBay SEO", {}), dict) else {}
+	current_seo = {
+		"product_type": str(existing_seo.get("Product Type") or "").strip(),
+		"product_model": str(existing_seo.get("Product Model") or "").strip(),
+		"keyword_1": str(existing_seo.get("Keyword 1") or "").strip(),
+		"keyword_2": str(existing_seo.get("Keyword 2") or "").strip(),
+		"keyword_3": str(existing_seo.get("Keyword 3") or "").strip(),
+	}
+	title = _extract_title_for_seo(record, sku)
+	proposed_seo = _extract_seo_from_title(title)
+	for key in SEO_FIELD_KEYS:
+		if not current_seo.get(key) and proposed_seo.get(key):
+			current_seo[key] = proposed_seo[key]
+
+	record["eBay SEO"] = {
+		"Product Type": current_seo.get("product_type", ""),
+		"Product Model": current_seo.get("product_model", ""),
+		"Keyword 1": current_seo.get("keyword_1", ""),
+		"Keyword 2": current_seo.get("keyword_2", ""),
+		"Keyword 3": current_seo.get("keyword_3", ""),
+	}
+
 	data[sku] = record
 	_atomic_dump(product_json_path, data)
 
@@ -277,4 +448,5 @@ def fill_ebay_fields_for_sku(sku: str, product_json_path: Path) -> Dict[str, Any
 		"optional_fields": merged_optional,
 		"missing_required": list(missing_required),
 		"used_images": len(image_paths),
+		"seo_fields": current_seo,
 	}

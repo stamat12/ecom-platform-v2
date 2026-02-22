@@ -6,6 +6,7 @@ import SkuBatchPage from "./pages/SkuBatchPage.jsx";
 import DbToExcelPage from "./pages/DbToExcelPage.jsx";
 import CleanupDatabasePage from "./pages/CleanupDatabasePage.jsx";
 import PromptManagerPage from "./pages/PromptManagerPage.jsx";
+import EbayListingsCachePage from "./pages/EbayListingsCachePage.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,11 @@ export default function App() {
             🧹 Cleanup DB
           </span>
         </Link>
+        <Link to="/ebay-cache" style={{ textDecoration: "none" }}>
+          <span style={{ padding: "8px 16px", backgroundColor: "#17a2b8", color: "white", borderRadius: "4px", fontSize: "14px" }}>
+            🛒 eBay Cache
+          </span>
+        </Link>
         <Link to="/prompts" style={{ textDecoration: "none" }}>
           <span style={{ padding: "8px 16px", backgroundColor: "#6c757d", color: "white", borderRadius: "4px", fontSize: "14px" }}>
             Prompts
@@ -40,6 +46,7 @@ export default function App() {
         <Route path="/db-to-excel" element={<DbToExcelPage />} />
         <Route path="/cleanup-db" element={<CleanupDatabasePage />} />
         <Route path="/prompts" element={<PromptManagerPage />} />
+        <Route path="/ebay-cache" element={<EbayListingsCachePage />} />
       </Routes>
     </div>
   );
