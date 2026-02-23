@@ -28,6 +28,118 @@ _openai_client: Optional[OpenAI] = None
 SEO_FIELD_KEYS = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"]
 
 
+def _parse_hybrid_sku(sku_string: str) -> List[str]:
+    """
+    Parse hybrid SKU formats and return list of individual SKUs.
+    
+    Supports:
+    - Comma-separated: "SKU1,SKU2,SKU3"
+    - Dash-separated: "SKU1 - SKU2 - SKU3"
+    - Range format: "P0010482-P0010490" (expands to P0010482...P0010490)
+    - Hybrid: "SKU1,SKU2 - SKU3"
+    """
+    import re
+    
+    if not sku_string:
+        return []
+    
+    normalized = str(sku_string).strip()
+    skus = []
+    
+    # First split by comma if it exists
+    if "," in normalized:
+        parts = normalized.split(",")
+        for part in parts:
+            part = part.strip()
+            # Each part might contain dash-separated SKUs or ranges
+            if " - " in part:
+                # Space-dash-separated (explicit list)
+                sub_skus = [s.strip() for s in part.split(" - ")]
+                skus.extend(sub_skus)
+            elif "-" in part:
+                # Could be a range like "P0010482-P0010490"
+                range_skus = _expand_sku_range(part)
+                if range_skus:
+                    skus.extend(range_skus)
+                else:
+                    skus.append(part)
+            else:
+                skus.append(part)
+    else:
+        # No comma - try dash separation
+        if " - " in normalized:
+            # Space-dash-separated
+            parts = normalized.split(" - ")
+            skus.extend([s.strip() for s in parts])
+        elif "-" in normalized:
+            # Could be a range like "P0010482-P0010490"
+            range_skus = _expand_sku_range(normalized)
+            if range_skus:
+                skus.extend(range_skus)
+            else:
+                skus.append(normalized)
+        else:
+            skus.append(normalized)
+    
+    # Remove empty strings
+    skus = [s for s in skus if s.strip()]
+    return skus if skus else [sku_string]
+
+
+def _expand_sku_range(sku_range: str) -> List[str]:
+    """
+    Expand a SKU range like 'P0010482-P0010490' into individual SKUs.
+    Returns empty list if not a valid range format.
+    """
+    import re
+    
+    sku_range = sku_range.strip()
+    if "-" not in sku_range:
+        return []
+    
+    # Split by dash
+    parts = sku_range.split("-")
+    if len(parts) != 2:
+        return []  # More than one dash, not a simple range
+    
+    start_sku = parts[0].strip()
+    end_sku = parts[1].strip()
+    
+    # Extract prefix and numeric parts
+    start_match = re.match(r"^([A-Za-z]*)(\d+)$", start_sku)
+    end_match = re.match(r"^([A-Za-z]*)(\d+)$", end_sku)
+    
+    if not start_match or not end_match:
+        return []  # Not a valid range format
+    
+    start_prefix, start_num_str = start_match.groups()
+    end_prefix, end_num_str = end_match.groups()
+    
+    # Prefixes must match
+    if start_prefix != end_prefix:
+        return []
+    
+    # Preserve original digit width from the start SKU string
+    num_digits = len(start_num_str)  # e.g., "00246" -> 5 digits
+    
+    start_num = int(start_num_str)
+    end_num = int(end_num_str)
+    
+    # Validate range
+    if start_num >= end_num or (end_num - start_num) > 1000:
+        logger.warning(f"[SKU] Invalid range: {sku_range} (span={end_num - start_num})")
+        return []
+    
+    # Generate range with proper padding
+    skus = []
+    for i in range(start_num, end_num + 1):
+        sku = f"{start_prefix}{str(i).zfill(num_digits)}"
+        skus.append(sku)
+    
+    logger.debug(f"[SKU] Expanded range {sku_range} into {len(skus)} SKUs: {skus[:3]}...")
+    return skus
+
+
 def get_openai_client() -> OpenAI:
     """Get or create OpenAI client"""
     global _openai_client
@@ -257,9 +369,148 @@ def _call_openai_text_json(system_prompt: str, user_prompt: str) -> Dict[str, st
 
 
 def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
+    """
+    Enrich SEO fields for a single SKU or hybrid SKU.
+    
+    For hybrid SKUs:
+    - Generates SEO using ONLY the first SKU's images + text (to save API tokens)
+    - Copies the same SEO fields to all other SKUs with JSON files
+    - Skips SKUs without JSON files gracefully
+    """
+    # Parse hybrid SKUs
+    individual_skus = _parse_hybrid_sku(sku)
+    
+    if not individual_skus:
+        raise ValueError(f"Could not parse SKU: {sku}")
+    
+    if len(individual_skus) > 1:
+        logger.info(f"[SEO] Hybrid SKU detected: {sku} -> {individual_skus}")
+    
+    # Filter to only SKUs that have JSON files
+    from app.repositories.sku_json_repo import _sku_json_path
+    skus_with_json = []
+    skus_without_json = []
+    
+    for individual_sku in individual_skus:
+        json_path = _sku_json_path(individual_sku)
+        if json_path.exists():
+            skus_with_json.append(individual_sku)
+        else:
+            skus_without_json.append(individual_sku)
+    
+    if not skus_with_json:
+        return {
+            "success": False,
+            "sku": sku,
+            "individual_skus": individual_skus,
+            "skus_with_json": [],
+            "skus_without_json": skus_without_json,
+            "all_results": [],
+            "seo_fields": {},
+            "updated_seo_fields": 0,
+            "title_used": "",
+            "message": f"No JSON files found for any SKU: {', '.join(individual_skus)}",
+        }
+    
+    logger.info(f"[SEO] Processing {len(skus_with_json)} SKU(s) with JSON files (skipping {len(skus_without_json)})")
+    
+    # Process ONLY the first SKU with image analysis (to save tokens)
+    first_sku = skus_with_json[0]
+    first_result = _enrich_single_sku_seo(first_sku, force)
+    
+    all_results = [first_result]
+    
+    # For remaining SKUs, copy the same SEO fields without re-generating
+    if len(skus_with_json) > 1:
+        logger.info(f"[SEO] Copying SEO from {first_sku} to {len(skus_with_json)-1} other SKU(s)")
+        seo_fields_to_copy = first_result.get("seo_fields", {})
+        
+        for other_sku in skus_with_json[1:]:
+            # Copy without re-generating (no image analysis needed)
+            result = _copy_seo_to_sku(other_sku, seo_fields_to_copy, force)
+            all_results.append(result)
+    
+    # If hybrid, log summary
+    if len(individual_skus) > 1:
+        successful = sum(1 for r in all_results if r.get("success"))
+        logger.info(f"[SEO] Hybrid SEO complete: {successful}/{len(skus_with_json)} SKU(s) processed")
+    
+    # Display first result
+    display_result = first_result if first_result.get("success") else all_results[0] if all_results else {}
+    
+    return {
+        "success": bool(first_result.get("success")),
+        "sku": sku,
+        "individual_skus": individual_skus,
+        "skus_with_json": skus_with_json,
+        "skus_without_json": skus_without_json,
+        "all_results": all_results,
+        "seo_fields": display_result.get("seo_fields", {}),
+        "updated_seo_fields": display_result.get("updated_seo_fields", 0),
+        "title_used": display_result.get("title_used", ""),
+        "message": f"Generated SEO from {first_sku} and copied to {len(skus_with_json)} SKU(s)" + 
+                   (f" (skipped {len(skus_without_json)} without JSON)" if skus_without_json else ""),
+    }
+
+
+def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False) -> Dict[str, Any]:
+    """Copy SEO fields to a SKU without re-generating (saves tokens)."""
     product_json = read_sku_json(sku)
     if not product_json:
-        raise ValueError(f"No product JSON found for SKU {sku}")
+        return {
+            "success": False,
+            "sku": sku,
+            "error": f"No product JSON found for SKU {sku}",
+            "seo_fields": {},
+            "updated_seo_fields": 0,
+        }
+    
+    current = _read_ebay_seo_fields(product_json)
+    
+    # Determine which fields will be updated
+    if force:
+        # Force overwrite all fields
+        merged = seo_fields
+    else:
+        # Only fill empty fields (preserve existing values)
+        merged = _merge_fill_only_seo(current, seo_fields)
+    
+    # Count updates
+    updated_count = sum(1 for key in SEO_FIELD_KEYS if (current.get(key) or "").strip() != (merged.get(key) or "").strip())
+    
+    # Write SEO fields to product JSON
+    _write_ebay_seo_fields(product_json, merged)
+    
+    # Save back to file
+    json_path = _sku_json_path(sku)
+    full_data = {sku: product_json}
+    temp_path = json_path.with_suffix(".tmp.json")
+    with temp_path.open("w", encoding="utf-8") as f:
+        json.dump(full_data, f, ensure_ascii=False, indent=2)
+    temp_path.replace(json_path)
+    
+    logger.info(f"[SEO] Copied SEO to {sku} ({updated_count} fields updated)")
+    
+    return {
+        "success": True,
+        "sku": sku,
+        "seo_fields": merged,
+        "updated_seo_fields": updated_count,
+        "title_used": "(copied from first SKU, no title generation)",
+    }
+
+
+def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
+    """Enrich SEO fields for a single SKU."""
+    product_json = read_sku_json(sku)
+    if not product_json:
+        return {
+            "success": False,
+            "sku": sku,
+            "error": f"No product JSON found for SKU {sku}",
+            "seo_fields": {},
+            "updated_seo_fields": 0,
+        }
 
     current = _read_ebay_seo_fields(product_json)
     if not force and all((current.get(k) or "").strip() for k in SEO_FIELD_KEYS):
@@ -268,7 +519,7 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
             "sku": sku,
             "seo_fields": current,
             "updated_seo_fields": 0,
-            "message": "SEO fields already filled",
+            "title_used": _extract_title_for_seo(product_json, sku),
         }
 
     # Collect main images for vision analysis
@@ -276,7 +527,13 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     
     title = _extract_title_for_seo(product_json, sku)
     if not title:
-        raise ValueError(f"No product title found for SKU {sku}")
+        return {
+            "success": False,
+            "sku": sku,
+            "error": f"No product title found for SKU {sku}",
+            "seo_fields": {},
+            "updated_seo_fields": 0,
+        }
     
     # If we have images, use vision API with images + title
     if image_paths:
@@ -337,6 +594,14 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     with temp_path.open("w", encoding="utf-8") as f:
         json.dump(full_data, f, ensure_ascii=False, indent=2)
     temp_path.replace(json_path)
+    
+    return {
+        "success": True,
+        "sku": sku,
+        "seo_fields": merged,
+        "updated_seo_fields": updated_count,
+        "title_used": title,
+    }
 
     return {
         "success": True,

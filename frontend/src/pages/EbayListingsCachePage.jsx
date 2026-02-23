@@ -29,6 +29,8 @@ const ALL_COLUMNS = [
   { id: "site", label: "Site", default: false },
   { id: "view_url", label: "Link", default: false },
   { id: "count_main_images", label: "Count Main Images", default: false },
+  { id: "ebay_seo_title", label: "eBay SEO Title", default: false },
+  { id: "title_matches_ebay_seo_title", label: "Title = eBay SEO Title", default: false },
   { id: "ebay_seo_product_type", label: "eBay SEO Product Type", default: false },
   { id: "ebay_seo_product_model", label: "eBay SEO Product Model", default: false },
   { id: "ebay_seo_keyword_1", label: "eBay SEO Keyword 1", default: false },
@@ -373,12 +375,57 @@ const formatCellValue = (value, columnId) => {
   if (columnId === "best_offer_enabled") {
     return value ? "Yes" : "No";
   }
+
+  if (columnId === "title_matches_ebay_seo_title") {
+    if (value === "Not generated") return "Not generated";
+    if (value === "Yes" || value === "No") return value;
+    return value ? "Yes" : "No";
+  }
+
+  if (columnId === "ebay_seo_title") {
+    return String(value);
+  }
   
   if (typeof value === "string" && value.length > 50) {
     return value.substring(0, 47) + "...";
   }
   
   return String(value);
+};
+
+const COMPACT_COLUMNS = new Set([
+  "count_main_images",
+  "title_matches_ebay_seo_title",
+  "ebay_seo_product_type",
+  "ebay_seo_product_model",
+  "ebay_seo_keyword_1",
+  "ebay_seo_keyword_2",
+  "ebay_seo_keyword_3",
+  "quantity_total",
+  "quantity_sold",
+]);
+
+const getHeaderStyle = (columnId) => {
+  const baseStyle = {
+    padding: "12px",
+    textAlign: columnId === "image" ? "center" : "left",
+    fontSize: "12px",
+    fontWeight: "bold",
+    whiteSpace: "nowrap",
+  };
+
+  if (COMPACT_COLUMNS.has(columnId)) {
+    return {
+      ...baseStyle,
+      width: "120px",
+      maxWidth: "120px",
+      whiteSpace: "normal",
+      lineHeight: "1.25",
+      wordBreak: "break-word",
+    };
+  }
+
+  return baseStyle;
 };
 
 const getCellStyle = (columnId, value) => {
@@ -411,6 +458,36 @@ const getCellStyle = (columnId, value) => {
       borderRadius: "4px",
       fontSize: "11px",
       display: "inline-block",
+    };
+  }
+
+  if (columnId === "title_matches_ebay_seo_title") {
+    const color = value === "Not generated" ? "#6c757d" : value === "Yes" || value === true ? "#28a745" : "#dc3545";
+    return {
+      ...baseStyle,
+      fontWeight: "bold",
+      color,
+      whiteSpace: "nowrap",
+    };
+  }
+
+  if (columnId === "ebay_seo_title") {
+    return {
+      ...baseStyle,
+      whiteSpace: "normal",
+      wordBreak: "break-word",
+      maxWidth: "300px",
+      lineHeight: "1.35",
+    };
+  }
+
+  if (COMPACT_COLUMNS.has(columnId)) {
+    return {
+      ...baseStyle,
+      maxWidth: "120px",
+      whiteSpace: "normal",
+      wordBreak: "break-word",
+      lineHeight: "1.25",
     };
   }
   
@@ -482,6 +559,8 @@ export default function EbayListingsCachePage() {
   // Selected SKUs for bulk operations
   const [selectedSkus, setSelectedSkus] = useState(new Set());
   const [seoGenerating, setSeoGenerating] = useState(false);
+  const [titleGenerating, setTitleGenerating] = useState(false);
+  const [titleUpdatingEbay, setTitleUpdatingEbay] = useState(false);
 
   // Toggle SKU selection
   const toggleSkuSelection = (sku) => {
@@ -496,13 +575,82 @@ export default function EbayListingsCachePage() {
     });
   };
 
-  // Select/deselect all visible SKUs
+  // Select/deselect all visible SKUs on current page
   const toggleSelectAll = () => {
-    if (selectedSkus.size === listings.length && listings.length > 0) {
-      setSelectedSkus(new Set());
+    const currentPageSkus = listings.map(l => l.sku);
+    const allCurrentPageSelected = currentPageSkus.every(sku => selectedSkus.has(sku));
+    
+    const newSet = new Set(selectedSkus);
+    
+    if (allCurrentPageSelected) {
+      // Deselect all from current page
+      currentPageSkus.forEach(sku => newSet.delete(sku));
     } else {
-      setSelectedSkus(new Set(listings.map(l => l.sku)));
+      // Select all from current page
+      currentPageSkus.forEach(sku => newSet.add(sku));
     }
+    
+    setSelectedSkus(newSet);
+  };
+
+  // Helper to check if all current page SKUs are selected
+  const areAllCurrentPageSelected = () => {
+    return listings.length > 0 && listings.every(l => selectedSkus.has(l.sku));
+  };
+
+  const postSkuAction = async (sku, endpoint) => {
+    try {
+      const response = await fetch(`${API_BASE}${endpoint}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sku, force: false }),
+      });
+
+      const payload = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        return {
+          sku,
+          success: false,
+          message: payload?.detail || payload?.message || `HTTP ${response.status}`,
+        };
+      }
+
+      return {
+        sku,
+        ...payload,
+        success: payload?.success !== false,
+      };
+    } catch (err) {
+      return { sku, success: false, message: err.message || "Unknown network error" };
+    }
+  };
+
+  const formatFailures = (failedResults) => {
+    if (!failedResults.length) return "";
+    const maxRows = 12;
+    const lines = [];
+    
+    for (const r of failedResults.slice(0, maxRows)) {
+      // Handle skipped SKUs (ones without JSON files)
+      if (r.skus_without_json && Array.isArray(r.skus_without_json) && r.skus_without_json.length > 0) {
+        lines.push(`- ${r.sku}: Skipped ${r.skus_without_json.length} SKU(s) without JSON: ${r.skus_without_json.join(", ")}`);
+      }
+      
+      // If this result has individual SKU statuses (hybrid SKU), show those
+      if (r.skus_status && Array.isArray(r.skus_status)) {
+        const failedSkus = r.skus_status.filter(s => !s.success);
+        for (const sku of failedSkus) {
+          lines.push(`  - ${sku.sku}: ${sku.error || "Failed"}`);
+        }
+      } else if (!r.success && !r.skus_without_json?.length) {
+        // Regular failure (not skipped)
+        lines.push(`- ${r.sku}: ${r.message || "Unknown error"}`);
+      }
+    }
+    
+    const more = failedResults.length > maxRows ? `\n...and ${failedResults.length - maxRows} more` : "";
+    return lines.length > 0 ? `\n\nFailed/Skipped SKUs:\n${lines.join("\n")}${more}` : "";
   };
 
   // Bulk generate SEO fields
@@ -517,28 +665,17 @@ export default function EbayListingsCachePage() {
     
     try {
       const skusArray = Array.from(selectedSkus);
-      
-      // Call the batch SEO endpoint if it exists, otherwise call individual endpoints
-      const results = await Promise.all(
-        skusArray.map(sku =>
-          fetch(`${API_BASE}/api/ebay/enrich-seo`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ sku, force: false }),
-          })
-            .then(r => r.json())
-            .then(data => ({ sku, ...data }))
-            .catch(err => ({ sku, success: false, message: err.message }))
-        )
-      );
+      const results = await Promise.all(skusArray.map(sku => postSkuAction(sku, "/api/ebay/enrich-seo")));
 
       const successful = results.filter(r => r.success).length;
-      const failed = results.filter(r => !r.success).length;
+      const failedResults = results.filter(r => !r.success);
+      const failed = failedResults.length;
 
       let message = `SEO generation complete: ${successful} successful`;
       if (failed > 0) {
         message += `, ${failed} failed`;
       }
+      message += formatFailures(failedResults);
       
       alert(message);
 
@@ -551,6 +688,76 @@ export default function EbayListingsCachePage() {
       setSeoGenerating(false);
     }
   };
+
+  // Bulk generate assembled eBay Title and save to eBay SEO
+  const bulkGenerateTitle = async () => {
+    if (selectedSkus.size === 0) {
+      alert("Please select at least one SKU");
+      return;
+    }
+
+    setTitleGenerating(true);
+    setError(null);
+
+    try {
+      const skusArray = Array.from(selectedSkus);
+      const results = await Promise.all(skusArray.map(sku => postSkuAction(sku, "/api/ebay/enrich-title")));
+
+      const successful = results.filter(r => r.success).length;
+      const failedResults = results.filter(r => !r.success);
+      const failed = failedResults.length;
+
+      let message = `Title generation complete: ${successful} successful`;
+      if (failed > 0) {
+        message += `, ${failed} failed`;
+      }
+      message += formatFailures(failedResults);
+
+      alert(message);
+
+      fetchListings(page);
+      setSelectedSkus(new Set());
+    } catch (err) {
+      setError(`Failed to generate title: ${err.message}`);
+    } finally {
+      setTitleGenerating(false);
+    }
+  };
+
+  // Bulk update live eBay listing titles for selected SKUs
+  const bulkUpdateEbayTitles = async () => {
+    if (selectedSkus.size === 0) {
+      alert("Please select at least one SKU");
+      return;
+    }
+
+    setTitleUpdatingEbay(true);
+    setError(null);
+
+    try {
+      const skusArray = Array.from(selectedSkus);
+      const results = await Promise.all(skusArray.map(sku => postSkuAction(sku, "/api/ebay/revise-title")));
+
+      const successful = results.filter(r => r.success).length;
+      const failedResults = results.filter(r => !r.success);
+      const failed = failedResults.length;
+
+      let message = `eBay title update complete: ${successful} successful`;
+      if (failed > 0) {
+        message += `, ${failed} failed`;
+      }
+      message += formatFailures(failedResults);
+
+      alert(message);
+      fetchListings(page);
+      setSelectedSkus(new Set());
+    } catch (err) {
+      setError(`Failed to update eBay titles: ${err.message}`);
+    } finally {
+      setTitleUpdatingEbay(false);
+    }
+  };
+
 
   const fetchListings = async (pageNum = 1) => {
     setLoading(true);
@@ -659,6 +866,15 @@ export default function EbayListingsCachePage() {
 
   const getCellValue = (listing, columnId) => {
     if (columnId === "image") return listing.primary_image_url;
+
+    if (columnId === "title_matches_ebay_seo_title") {
+      if (listing.ebay_seo_title === null || listing.ebay_seo_title === undefined || String(listing.ebay_seo_title).trim() === "") {
+        return "Not generated";
+      }
+      const normalize = (text) => String(text || "").trim().replace(/\s+/g, " ").toLowerCase();
+      return normalize(listing.title) === normalize(listing.ebay_seo_title) ? "Yes" : "No";
+    }
+
     if (columnId.startsWith("profit.")) {
       const profitKey = columnId.replace("profit.", "");
       return listing.profit_analysis?.[profitKey];
@@ -867,6 +1083,37 @@ export default function EbayListingsCachePage() {
             {seoGenerating ? "⏳ Generating..." : "📝 SEO"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
           </button>
           <button
+            onClick={bulkGenerateTitle}
+            disabled={selectedSkus.size === 0 || titleGenerating}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#2e7d32",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: selectedSkus.size === 0 ? "default" : "pointer",
+              fontWeight: "bold"
+            }}
+          >
+            {titleGenerating ? "⏳ Generating..." : "🏷️ Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+          </button>
+          <button
+            onClick={bulkUpdateEbayTitles}
+            disabled={selectedSkus.size === 0 || titleUpdatingEbay}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#d32f2f",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: selectedSkus.size === 0 ? "default" : "pointer",
+              fontWeight: "bold"
+            }}
+            title="Update live eBay listing titles for selected SKUs"
+          >
+            {titleUpdatingEbay ? "⏳ Updating eBay..." : "🚀 Update eBay Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+          </button>
+          <button
             onClick={() => setShowColumnSelector(true)}
             style={{ padding: "8px 16px", backgroundColor: "#0066cc", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}
           >
@@ -895,22 +1142,16 @@ export default function EbayListingsCachePage() {
                     >
                       <input
                         type="checkbox"
-                        checked={selectedSkus.size === listings.length && listings.length > 0}
+                        checked={areAllCurrentPageSelected()}
                         onChange={toggleSelectAll}
-                        title="Select all SKUs on this page"
+                        title="Select/deselect all SKUs on this page"
                         style={{ cursor: "pointer" }}
                       />
                     </th>
                     {visibleColumns.map(colId => (
                       <th
                         key={colId}
-                        style={{
-                          padding: "12px",
-                          textAlign: colId === "image" ? "center" : "left",
-                          fontSize: "12px",
-                          fontWeight: "bold",
-                          whiteSpace: "nowrap",
-                        }}
+                        style={getHeaderStyle(colId)}
                       >
                         {getColumnLabel(colId)}
                       </th>

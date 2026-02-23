@@ -180,6 +180,53 @@ def _merge_missing_fields(base: Dict[str, Any], details: Dict[str, Any]) -> Dict
     return merged
 
 
+def _listing_cache_key(payload: Dict[str, Any]) -> str:
+    item_id = str(payload.get("item_id") or "").strip()
+    if item_id:
+        return f"item:{item_id}"
+    sku = str(payload.get("sku") or "").strip()
+    marketplace = str(payload.get("marketplace") or "").strip().upper()
+    return f"sku:{sku}|m:{marketplace}"
+
+
+def _merge_preserve_existing_when_missing(new_payload: Dict[str, Any], existing_payload: Dict[str, Any]) -> Dict[str, Any]:
+    merged = dict(new_payload)
+
+    for key, existing_value in (existing_payload or {}).items():
+        new_value = merged.get(key)
+
+        if isinstance(new_value, dict) and isinstance(existing_value, dict):
+            nested = dict(new_value)
+            for nested_key, nested_existing in existing_value.items():
+                if _is_missing(nested.get(nested_key)) and not _is_missing(nested_existing):
+                    nested[nested_key] = nested_existing
+            merged[key] = nested
+            continue
+
+        if _is_missing(new_value) and not _is_missing(existing_value):
+            merged[key] = existing_value
+
+    return merged
+
+
+def _merge_fast_with_existing_cache(fast_listings: List[Dict[str, Any]], existing_listings: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    existing_index: Dict[str, Dict[str, Any]] = {}
+    for existing in (existing_listings or []):
+        key = _listing_cache_key(existing)
+        if key:
+            existing_index[key] = existing
+
+    merged_listings: List[Dict[str, Any]] = []
+    for listing in (fast_listings or []):
+        existing = existing_index.get(_listing_cache_key(listing))
+        if existing:
+            merged_listings.append(_merge_preserve_existing_when_missing(listing, existing))
+        else:
+            merged_listings.append(listing)
+
+    return merged_listings
+
+
 def post_trading(
     call_name: str,
     oauth_token: str,
@@ -559,6 +606,9 @@ def compute_ebay_listings_fast() -> Generator[Dict, None, None]:
             elif progress['status'] == 'complete':
                 # Save to cache
                 listings = progress['listings']
+                existing_cache = ebay_listings_cache.read_cache() or {}
+                existing_listings = existing_cache.get("listings", []) or []
+                listings = _merge_fast_with_existing_cache(listings, existing_listings)
                 # Enrich with profit calculations
                 listings = _enrich_listings_with_profit(listings)
                 ebay_listings_cache.write_cache(listings)

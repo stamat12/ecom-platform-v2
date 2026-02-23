@@ -120,8 +120,21 @@
       ]
     },
     "eBay Fields": {
-      "required": {"Marke": "VATPAVE", "Abteilung": "Herren", "Größe": "XL", "Farbe": "Dunkelblau"},
+      "required": {
+        "Marke": "VATPAVE",
+        "Abteilung": "Herren",
+        "Größe": "XL",
+        "Farbe": "Dunkelblau"
+      },
       "optional": "{'Ärmellänge': 'Kurzarm', 'Material': 'Baumwolle', 'Muster': 'Ohne Muster', 'Gewebeart': 'Gewebe', 'Passform': 'Regular', 'Produktart': 'Geknöpftes Hemd', 'Ausschnitt': 'Kragen', 'Jahreszeit': 'Sommer', 'Kragenart': 'Kentkragen', 'Anlass': 'Freizeit', 'Textilpflege': 'Maschinenwäsche'}"
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "",
+      "Keyword 1": "Herrenhemd",
+      "Keyword 2": "Kragenhemd",
+      "Keyword 3": "Langarmhemd",
+      "eBay Title": "Vatpave Hemd Herren Dunkelblau XL Herrenhemd Kragenhemd Langarmhemd Brandneu"
     }
   }
 }

@@ -759,16 +759,73 @@ def enrich_ebay_fields(request: EbayEnrichRequest):
 
 @app.post("/api/ebay/enrich-seo")
 def enrich_ebay_seo_only(request: EbayEnrichRequest):
-    """Enrich only eBay SEO fields (Product Type, Keyword 1-3) from product title."""
+    """Enrich only eBay SEO fields (Product Type, Keyword 1-3) from product title.
+    
+    For hybrid SKUs (multiple individual SKUs):
+    - Enriches only SKUs that have JSON files
+    - Skips SKUs without JSON files gracefully
+    - Returns data from first successful SKU for display
+    """
     try:
         result = ebay_enrichment.enrich_ebay_seo_fields(request.sku, force=request.force)
-        return {
+        
+        # Extract per-SKU results
+        all_results = result.get("all_results", [])
+        response = {
             "success": result.get("success", False),
             "sku": result.get("sku", request.sku),
+            "individual_skus": result.get("individual_skus", [request.sku]),
+            "skus_with_json": result.get("skus_with_json", []),
+            "skus_without_json": result.get("skus_without_json", []),
             "updated_seo_fields": result.get("updated_seo_fields", 0),
             "seo_fields": result.get("seo_fields", {}),
             "title_used": result.get("title_used", ""),
             "message": result.get("message", "SEO enrichment completed"),
+        }
+        
+        # Add per-SKU results if hybrid
+        if all_results and len(all_results) > 1:
+            response["skus_status"] = [
+                {
+                    "sku": r.get("sku", ""),
+                    "success": r.get("success", False),
+                    "error": r.get("error", ""),
+                    "updated_seo_fields": r.get("updated_seo_fields", 0),
+                }
+                for r in all_results
+            ]
+        
+        return response
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/enrich-title")
+def enrich_ebay_title_only(request: EbayEnrichRequest):
+    """Assemble eBay title and save it to eBay SEO section."""
+    try:
+        result = ebay_listing.generate_and_save_ebay_title(request.sku)
+        return {
+            "success": result.get("success", False),
+            "sku": result.get("sku", request.sku),
+            "ebay_title": result.get("ebay_title", ""),
+            "message": result.get("message", "eBay title generated"),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/revise-title")
+def revise_ebay_title_only(request: EbayEnrichRequest):
+    """Generate title from SKU JSON and push it to live eBay listing."""
+    try:
+        result = ebay_listing.revise_ebay_listing_title(request.sku)
+        return {
+            "success": result.get("success", False),
+            "sku": result.get("sku", request.sku),
+            "item_id": result.get("item_id", ""),
+            "ebay_title": result.get("ebay_title", ""),
+            "message": result.get("message", "eBay title revised"),
         }
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -1598,6 +1655,7 @@ def _get_listing_sku_json_mapping(raw_sku):
     """Map count_main_images and eBay SEO fields from SKU JSON."""
     mapped = {
         "count_main_images": None,
+        "ebay_seo_title": "",
         "ebay_seo_product_type": "",
         "ebay_seo_keyword_1": "",
         "ebay_seo_keyword_2": "",
@@ -1626,6 +1684,7 @@ def _get_listing_sku_json_mapping(raw_sku):
 
         ebay_seo = product.get("eBay SEO", {})
         if isinstance(ebay_seo, dict):
+            mapped["ebay_seo_title"] = ebay_seo.get("eBay Title", "")
             mapped["ebay_seo_product_type"] = ebay_seo.get("Product Type", "")
             mapped["ebay_seo_keyword_1"] = ebay_seo.get("Keyword 1", "")
             mapped["ebay_seo_keyword_2"] = ebay_seo.get("Keyword 2", "")
@@ -1705,12 +1764,22 @@ def get_de_ebay_listings(
     for listing in de_listings:
         listing_copy = dict(listing)
         listing_copy.update(_get_listing_sku_json_mapping(listing.get("sku")))
+
+        title_value = str(listing_copy.get("title") or "").strip()
+        seo_title_value = str(listing_copy.get("ebay_seo_title") or "").strip()
+        if not seo_title_value:
+            listing_copy["title_matches_ebay_seo_title"] = "Not generated"
+        else:
+            normalized_title = " ".join(title_value.split()).lower()
+            normalized_seo_title = " ".join(seo_title_value.split()).lower()
+            listing_copy["title_matches_ebay_seo_title"] = "Yes" if normalized_title == normalized_seo_title else "No"
+
         enriched_listings.append(listing_copy)
     de_listings = enriched_listings
     
     # Apply per-column filters
     for column_id, filter_config in col_filters.items():
-        if not filter_config or not any(v for v in filter_config.values() if v not in [None, ""]):
+        if not filter_config or not any((v is not None and v != "") for v in filter_config.values()):
             continue
         
         # Helper to get nested field value
@@ -1725,11 +1794,31 @@ def get_de_ebay_listings(
             return value
         
         # Text filters
+        if "has_value" in filter_config and filter_config["has_value"] is not None:
+            has_value = bool(filter_config["has_value"])
+            if has_value:
+                de_listings = [
+                    l for l in de_listings
+                    if str(get_field_value(l, column_id) or "").strip() != ""
+                ]
+            else:
+                de_listings = [
+                    l for l in de_listings
+                    if str(get_field_value(l, column_id) or "").strip() == ""
+                ]
+
         if "text" in filter_config and filter_config["text"]:
             text_val = str(filter_config["text"]).lower()
             de_listings = [
                 l for l in de_listings
                 if text_val in str(get_field_value(l, column_id) or "").lower()
+            ]
+
+        if "exact" in filter_config and filter_config["exact"]:
+            exact_val = str(filter_config["exact"]).strip().lower()
+            de_listings = [
+                l for l in de_listings
+                if str(get_field_value(l, column_id) or "").strip().lower() == exact_val
             ]
         
         # Numeric range filters

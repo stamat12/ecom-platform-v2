@@ -29,7 +29,7 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Coolshark",
-      "Color": "Schwarz und Weiß",
+      "Color": "Schwarz Weiß",
       "Size": "Bis zu 7,2 Zoll"
     },
     "Intern Generated Info": {
@@ -215,6 +215,14 @@
         "Net Profit": "15.544117647058822",
         "Net Profit Margin": "289.46215357651437"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Gamecontroller",
+      "Product Model": "JK02",
+      "Keyword 1": "Smartphone Controller",
+      "Keyword 2": "Gaming",
+      "Keyword 3": "",
+      "eBay Title": "Coolshark JK02 Gamecontroller Schwarz Weiß Bis zu 7,2 Zoll Smartphone Controller"
     }
   }
 }

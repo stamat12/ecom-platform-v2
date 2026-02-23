@@ -43,8 +43,9 @@ from app.config.ebay_config import (
     LISTING_SHIPPING_INFO
 )
 from app.repositories import ebay_cache_repo
-from app.repositories.sku_json_repo import read_sku_json, _sku_json_path
+from app.repositories.sku_json_repo import read_sku_json, write_sku_json, _sku_json_path
 from app.services.image_listing import list_images_for_sku
+from app.services.ebay_listings_cache import read_cache
 from app.services.ebay_oauth import get_access_token
 
 logger = logging.getLogger(__name__)
@@ -758,6 +759,191 @@ def build_title_from_product(product_json: Dict[str, Any], sku: str) -> str:
         raise ValueError(f"Title exceeds 80 chars for SKU {sku} even after removing Condition, Keyword 3, and Keyword 2. Current: {title} ({len(title)} chars)")
     
     return title
+
+
+def generate_and_save_ebay_title(sku: str) -> Dict[str, Any]:
+    """Build eBay title from product data and store it in eBay SEO section.
+    
+    For hybrid SKUs:
+    - Generates title from ONLY the first SKU
+    - Copies the same title to all other SKUs with JSON files
+    - Skips SKUs without JSON files gracefully
+    """
+    # Import hybrid SKU parsing from enrichment service
+    from app.services.ebay_enrichment import _parse_hybrid_sku
+    from pathlib import Path
+    
+    # Parse hybrid SKUs
+    individual_skus = _parse_hybrid_sku(sku)
+    
+    if not individual_skus:
+        raise ValueError(f"Could not parse SKU: {sku}")
+    
+    # Filter to only SKUs that have JSON files
+    from app.repositories.sku_json_repo import _sku_json_path
+    skus_with_json = []
+    skus_without_json = []
+    
+    for individual_sku in individual_skus:
+        json_path = _sku_json_path(individual_sku)
+        if json_path.exists():
+            skus_with_json.append(individual_sku)
+        else:
+            skus_without_json.append(individual_sku)
+    
+    if not skus_with_json:
+        return {
+            "success": False,
+            "sku": sku,
+            "ebay_title": "",
+            "message": f"No JSON files found for any SKU: {', '.join(individual_skus)}",
+        }
+    
+    # Generate title from FIRST SKU only
+    first_sku = skus_with_json[0]
+    product_json = read_sku_json(first_sku)
+    if not product_json:
+        return {
+            "success": False,
+            "sku": sku,
+            "ebay_title": "",
+            "message": f"No product JSON found for first SKU {first_sku}",
+        }
+    
+    assembled_title = build_title_from_product(product_json, first_sku)
+    
+    if "eBay SEO" not in product_json or not isinstance(product_json.get("eBay SEO"), dict):
+        product_json["eBay SEO"] = {}
+    
+    product_json["eBay SEO"]["eBay Title"] = assembled_title
+    write_sku_json(first_sku, product_json)
+    
+    # Copy title to all other SKUs with JSON files (without regenerating)
+    if len(skus_with_json) > 1:
+        for other_sku in skus_with_json[1:]:
+            other_json = read_sku_json(other_sku)
+            if other_json:
+                if "eBay SEO" not in other_json or not isinstance(other_json.get("eBay SEO"), dict):
+                    other_json["eBay SEO"] = {}
+                other_json["eBay SEO"]["eBay Title"] = assembled_title
+                write_sku_json(other_sku, other_json)
+    
+    return {
+        "success": True,
+        "sku": sku,
+        "individual_skus": individual_skus,
+        "skus_with_json": skus_with_json,
+        "skus_without_json": skus_without_json,
+        "ebay_title": assembled_title,
+        "message": f"Generated title from {first_sku} and saved to {len(skus_with_json)} SKU(s)" + 
+                   (f" (skipped {len(skus_without_json)} without JSON)" if skus_without_json else ""),
+    }
+
+
+def _extract_lookup_sku(raw_sku: str) -> str:
+    """Extract primary SKU token for JSON lookup from listing SKU formats."""
+    if not raw_sku:
+        return ""
+
+    sku_value = str(raw_sku).strip()
+    if not sku_value:
+        return ""
+
+    if "," in sku_value:
+        sku_value = sku_value.split(",", 1)[0].strip()
+
+    if " - " in sku_value:
+        sku_value = sku_value.split(" - ", 1)[0].strip()
+    elif "-" in sku_value:
+        parts = [part.strip() for part in sku_value.split("-") if part.strip()]
+        if len(parts) == 2:
+            sku_value = parts[0]
+
+    return sku_value
+
+
+def _find_de_item_id_for_listing_sku(listing_sku: str) -> Optional[str]:
+    """Find DE marketplace item_id from listings cache by exact listing SKU."""
+    cache = read_cache()
+    if not cache:
+        return None
+
+    target = str(listing_sku or "").strip()
+    if not target:
+        return None
+
+    for listing in (cache.get("listings", []) or []):
+        sku = str(listing.get("sku") or "").strip()
+        if sku != target:
+            continue
+
+        marketplace = str(listing.get("marketplace") or "").strip().upper()
+        site = str(listing.get("site") or "").strip().lower()
+        if marketplace != "DE" and site != "germany":
+            continue
+
+        item_id = str(listing.get("item_id") or "").strip()
+        if item_id:
+            return item_id
+
+    return None
+
+
+def revise_ebay_listing_title(sku: str) -> Dict[str, Any]:
+    """Generate title from SKU JSON and push it to live eBay listing via Trading API."""
+    listing_sku = str(sku or "").strip()
+    if not listing_sku:
+        raise ValueError("SKU is required")
+
+    lookup_sku = _extract_lookup_sku(listing_sku)
+    if not lookup_sku:
+        raise ValueError(f"Could not extract lookup SKU from '{listing_sku}'")
+
+    generated = generate_and_save_ebay_title(lookup_sku)
+    title = str(generated.get("ebay_title") or "").strip()
+    if not title:
+        raise ValueError(f"Generated title is empty for SKU {lookup_sku}")
+
+    item_id = _find_de_item_id_for_listing_sku(listing_sku)
+    if not item_id:
+        raise ValueError(f"No DE listing item_id found in cache for SKU {listing_sku}")
+
+    token = get_ebay_token()
+    endpoint = get_api_endpoint()
+
+    xml_body = f"""<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<ReviseFixedPriceItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+  <RequesterCredentials>
+    <eBayAuthToken>{token}</eBayAuthToken>
+  </RequesterCredentials>
+  <Item>
+    <ItemID>{html.escape(item_id)}</ItemID>
+    <Title>{html.escape(title)}</Title>
+  </Item>
+</ReviseFixedPriceItemRequest>"""
+
+    headers = _build_headers("ReviseFixedPriceItem")
+    response = requests.post(endpoint, headers=headers, data=xml_body.encode("utf-8"), timeout=60)
+    response.raise_for_status()
+
+    text = response.text
+    ack_match = re.search(r"<Ack>(.*?)</Ack>", text)
+    ack = (ack_match.group(1).strip() if ack_match else "").lower()
+
+    if ack not in {"success", "warning"}:
+        short = re.search(r"<ShortMessage>(.*?)</ShortMessage>", text)
+        long_msg = re.search(r"<LongMessage>(.*?)</LongMessage>", text)
+        err_msg = (long_msg.group(1) if long_msg else short.group(1) if short else "Unknown eBay API error")
+        raise ValueError(f"eBay ReviseFixedPriceItem failed: {err_msg}")
+
+    return {
+        "success": True,
+        "sku": listing_sku,
+        "lookup_sku": lookup_sku,
+        "item_id": item_id,
+        "ebay_title": title,
+        "message": "eBay title updated on live listing",
+    }
 
 
 def build_description_html(product_json: Dict[str, Any], title: str) -> str:

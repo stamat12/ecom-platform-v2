@@ -120,8 +120,33 @@
       ]
     },
     "eBay Fields": {
-      "required": {"Marke": "VATPAVE", "Abteilung": "Herren", "Größe": "L", "Farbe": "Dunkelblau"},
-      "optional": {"Ärmellänge": "Kurzarm", "Material": "Baumwolle", "Muster": "Ohne Muster", "Gewebeart": "Gewebe", "Passform": "Regular", "Produktart": "Geknöpftes Hemd", "Ausschnitt": "Kragen", "Jahreszeit": "Sommer", "Kragenart": "Kentkragen", "Anlass": "Freizeit", "Textilpflege": "Maschinenwäsche"}
+      "required": {
+        "Marke": "VATPAVE",
+        "Abteilung": "Herren",
+        "Größe": "L",
+        "Farbe": "Dunkelblau"
+      },
+      "optional": {
+        "Ärmellänge": "Kurzarm",
+        "Material": "Baumwolle",
+        "Muster": "Ohne Muster",
+        "Gewebeart": "Gewebe",
+        "Passform": "Regular",
+        "Produktart": "Geknöpftes Hemd",
+        "Ausschnitt": "Kragen",
+        "Jahreszeit": "Sommer",
+        "Kragenart": "Kentkragen",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "",
+      "Keyword 1": "Kurzarmhemd",
+      "Keyword 2": "Freizeithemd",
+      "Keyword 3": "Button-Down-Hemd",
+      "eBay Title": "Vatpave Hemd Herren Dunkelblau L Kurzarmhemd Freizeithemd Button-Down-Hemd"
     }
   }
 }

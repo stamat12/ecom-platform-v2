@@ -48,6 +48,26 @@ export const AdvancedFilters = ({
     }));
   };
 
+  const handleTextPresenceFilter = (columnId, value) => {
+    setFilterValues(prev => ({
+      ...prev,
+      [columnId]: {
+        ...prev[columnId],
+        has_value: value === "" ? null : value === "true"
+      }
+    }));
+  };
+
+  const handleTextExactFilter = (columnId, value) => {
+    setFilterValues(prev => ({
+      ...prev,
+      [columnId]: {
+        ...prev[columnId],
+        exact: value === "" ? null : value
+      }
+    }));
+  };
+
   const handleNumberRange = (columnId, field, value) => {
     setFilterValues(prev => ({
       ...prev,
@@ -104,8 +124,49 @@ export const AdvancedFilters = ({
 
     switch (type) {
       case "text":
+        if (columnId === "title_matches_ebay_seo_title") {
+          return (
+            <div style={{ padding: "12px 0", borderBottom: "1px solid #e0e0e0" }}>
+              <select
+                value={filterState.exact || ""}
+                onChange={(e) => handleTextExactFilter(columnId, e.target.value)}
+                style={{
+                  width: "100%",
+                  padding: "8px",
+                  border: "1px solid #ddd",
+                  borderRadius: "4px",
+                  boxSizing: "border-box",
+                  fontSize: "13px"
+                }}
+              >
+                <option value="">Any</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Not generated">Not generated</option>
+              </select>
+            </div>
+          );
+        }
+
         return (
           <div style={{ padding: "12px 0", borderBottom: "1px solid #e0e0e0" }}>
+            <select
+              value={filterState.has_value === null || filterState.has_value === undefined ? "" : filterState.has_value ? "true" : "false"}
+              onChange={(e) => handleTextPresenceFilter(columnId, e.target.value)}
+              style={{
+                width: "100%",
+                padding: "8px",
+                border: "1px solid #ddd",
+                borderRadius: "4px",
+                boxSizing: "border-box",
+                fontSize: "13px",
+                marginBottom: "8px"
+              }}
+            >
+              <option value="">Any</option>
+              <option value="true">Has value (not —)</option>
+              <option value="false">Empty only (—)</option>
+            </select>
             <input
               type="text"
               placeholder={`Search ${columnConfig.label}...`}

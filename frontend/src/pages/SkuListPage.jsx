@@ -787,43 +787,6 @@ export default function SkuListPage() {
           </div>
         )}
         <button
-          onClick={computeEbayListingsFast}
-          disabled={ebayListingsComputing}
-          style={{ padding: "6px 10px", background: "#FF9800", color: "white", border: "none", borderRadius: 4, cursor: ebayListingsComputing ? "not-allowed" : "pointer" }}
-        >
-          {ebayListingsComputing ? "Fetching..." : "⚡ Fast Fetch eBay"}
-        </button>
-        <button
-          onClick={computeEbayListingsDetailed}
-          disabled={ebayListingsComputing}
-          style={{ padding: "6px 10px", background: "#ff6b00", color: "white", border: "none", borderRadius: 4, cursor: ebayListingsComputing ? "not-allowed" : "pointer" }}
-        >
-          {ebayListingsComputing ? "Fetching..." : "🔍 Detailed Fetch eBay"}
-        </button>
-        {ebayListingsStatus.last_update && (
-          <span style={{ fontSize: "0.9em", color: "#666" }}>
-            Last eBay sync: {new Date(ebayListingsStatus.last_update).toLocaleString()}
-          </span>
-        )}
-        {ebayListingsComputing && ebayListingsProgress.page && ebayListingsProgress.total_pages && (
-          <div style={{ flex: 1, maxWidth: 400 }}>
-            <div style={{ fontSize: "0.9em", marginBottom: 4 }}>
-              Page {ebayListingsProgress.page} / {ebayListingsProgress.total_pages} 
-              {ebayListingsProgress.detail_lookups !== undefined && ` • ${ebayListingsProgress.detail_lookups} enrichments`}
-            </div>
-            <div style={{ width: "100%", height: 20, background: "#e0e0e0", borderRadius: 4, overflow: "hidden" }}>
-              <div
-                style={{
-                  height: "100%",
-                  background: "#FF9800",
-                  width: `${(ebayListingsProgress.page / ebayListingsProgress.total_pages) * 100}%`,
-                  transition: "width 0.3s ease"
-                }}
-              />
-            </div>
-          </div>
-        )}
-        <button
           onClick={updateDbFromJsons}
           disabled={inventoryDbUpdating}
           style={{ padding: "6px 10px", cursor: inventoryDbUpdating ? "not-allowed" : "pointer", background: "#2e7d32", color: "white", border: "none", borderRadius: 4 }}
