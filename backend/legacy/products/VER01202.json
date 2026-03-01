@@ -1,0 +1,71 @@
+{
+  "VER01202": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411389,
+      "Invoice Date": "2024-11-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774378,
+      "ISIN": null,
+      "Supplier Title": "Quicksilver Fleece Jacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 20.48
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Quicksilver",
+      "Color": "Blau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Kapuzenfleece Herren mit Reißverschluss",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 95.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 019"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01202 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01202 (6).JPG"
+        },
+        {
+          "filename": "VER01202 (5).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "EQYFT04825",
+      "Keyword 1": "Fleecejacke",
+      "Keyword 2": "Kapuze",
+      "Keyword 3": "Outdoorjacke",
+      "eBay Title": "Quicksilver EQYFT04825 Jacke Herren Blau S Fleecejacke Kapuze Outdoorjacke"
+    }
+  }
+}

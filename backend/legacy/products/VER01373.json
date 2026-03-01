@@ -1,0 +1,68 @@
+{
+  "VER01373": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503528,
+      "Invoice Date": "2025-03-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 389502,
+      "ISIN": null,
+      "Supplier Title": "Slipper Gr. 42"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 3.95
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Espadrilles für Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01373 (5).JPG"
+        },
+        {
+          "filename": "VER01373 (3).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Slip-On",
+      "Keyword 2": "Freizeitschuh",
+      "Keyword 3": "Sommerschuh",
+      "eBay Title": "Schuh Damen Schwarz 42 Slip-On Freizeitschuh Sommerschuh Neu"
+    }
+  }
+}

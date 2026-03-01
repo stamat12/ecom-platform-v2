@@ -1,0 +1,67 @@
+{
+  "VER01716": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 690125,
+      "Invoice Date": "2025-06-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665305,
+      "ISIN": null,
+      "Supplier Title": "Oberteil Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.57,
+      "Total Cost Net": 5.29
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Kinder/Mädchen/Mode für Mädchen/Fitnessmode/Sporttops",
+      "eBay Category ID": "260978"
+    },
+    "EAN": {
+      "EAN": 196156395821.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "KG",
+      "Brand": "Nike",
+      "Color": "Helllila",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Sport-Bustier mit Musterprägung, Doppelträger & atmungsaktivem Mesh",
+      "Keywords": "Oberteil Mädchen",
+      "Materials": "Polyester, Elastan"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01716 (4).jpg"
+        },
+        {
+          "filename": "VER01716 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "HAN000414": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412361,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 378098,
+      "ISIN": null,
+      "Supplier Title": "Even & Odd Damen Schuhe Gr.41"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 8.14
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Even&Odd",
+      "Color": "Schwarz",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Slipper",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000414 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000413 (1).JPG"
+        },
+        {
+          "filename": "HAN000414 (5)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Hausschuh",
+      "Keyword 2": "Pantoffel",
+      "Keyword 3": "Schlappen",
+      "eBay Title": "Even&Odd Schuh Damen Schwarz 41 Hausschuh Pantoffel Schlappen Neu mit Karton"
+    }
+  }
+}

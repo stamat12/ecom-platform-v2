@@ -1,0 +1,71 @@
+{
+  "VER01694": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2506832,
+      "Invoice Date": "2025-06-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 814762,
+      "ISIN": null,
+      "Supplier Title": "Palladium pallashock lol org 2 Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 15.75
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Palladium",
+      "Color": "Schwarz",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Pallashock Lo Org 2",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 75.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01694 (12).jpg"
+        },
+        {
+          "filename": "VER01694 (3).jpg"
+        },
+        {
+          "filename": "VER01694 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "PALLASHOCK LO ORG 2",
+      "Keyword 1": "Sneaker",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Sportliche Schuhe",
+      "eBay Title": "Palladium PALLASHOCK LO ORG 2 Schuh Damen Schwarz 39 Sneaker Freizeitschuhe"
+    }
+  }
+}

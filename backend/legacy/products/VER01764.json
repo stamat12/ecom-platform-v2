@@ -1,0 +1,67 @@
+{
+  "VER01764": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 691018,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 452609,
+      "ISIN": null,
+      "Supplier Title": "Freizeitschuhe Größe 42,5"
+    },
+    "Price Data": {
+      "Price Net": 24.78,
+      "Shipping Net": 1.0,
+      "Total Cost Net": 25.78
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Nike",
+      "Color": "Schwarz",
+      "Size": "42.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Modell: Nike Air Zoom SuperRep Go 3 Trainingsschuh",
+      "Keywords": "Air Zoom SuperRep Go 3 Trainingsschuh",
+      "Materials": "Textil (Flyknit), Synthetik"
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01764 (5).jpg"
+        },
+        {
+          "filename": "VER01764 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

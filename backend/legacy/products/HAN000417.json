@@ -1,0 +1,71 @@
+{
+  "HAN000417": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412360,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 755942,
+      "ISIN": null,
+      "Supplier Title": "Sweet shoes Damenschuh Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 5.64
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Sweet Shoes",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen Pumps",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000417 (4)_wb.jpg"
+        },
+        {
+          "filename": "HAN000417 (6)_wb.jpg"
+        },
+        {
+          "filename": "HAN000417 (8)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Pumps",
+      "Keyword 3": "Büroschuhe",
+      "eBay Title": "Sweet Shoes Schuh Damen Schwarz 37 Damen Schuhe Pumps Büroschuhe Neu mit Karton"
+    }
+  }
+}

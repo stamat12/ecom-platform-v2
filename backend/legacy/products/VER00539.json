@@ -1,0 +1,74 @@
+{
+  "VER00539": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2309301,
+      "Invoice Date": "2023-09-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 656554,
+      "ISIN": null,
+      "Supplier Title": "1 Paar LAB Highheels Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.66,
+      "Total Cost Net": 9.83
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": 5904618462814.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "LAB",
+      "Color": "Weinrot",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische spitze Pumps mit Stiletto-Absatz in Lack-Optik. Style-Nr.: W22-OBD00E. Auf der Innensohle steht \"Colour Cherie\".",
+      "Keywords": "Lack-Pumps",
+      "Materials": "Obermaterial: Synthetik; Futter: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_9944.JPG"
+        },
+        {
+          "filename": "IMG_9946.JPG"
+        },
+        {
+          "filename": "IMG_9948.JPG"
+        },
+        {
+          "filename": "IMG_9949.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "High Heels",
+      "Keyword 3": "Spitze Schuhe",
+      "eBay Title": "LAB Pumps Damen Weinrot 39 Damen Schuhe High Heels Spitze Schuhe"
+    }
+  }
+}

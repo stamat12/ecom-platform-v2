@@ -54,7 +54,9 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 14,
-        "count_enhanced": 1
+        "count_enhanced": 1,
+        "has_main_images": true,
+        "count_main_images": 2
       },
       "stock": [],
       "phone": [
@@ -105,7 +107,23 @@
         {
           "filename": "studio_restoration_real_VER02070 (14)_1.jpg"
         }
+      ],
+      "main_images": [
+        {
+          "filename": "VER02070 (3).jpg"
+        },
+        {
+          "filename": "VER02070 (7).jpg"
+        }
       ]
+    },
+    "eBay SEO": {
+      "Product Type": "Parka",
+      "Product Model": "JWHGREAT PADDED",
+      "Keyword 1": "Winterjacke",
+      "Keyword 2": "dicke Jacke",
+      "Keyword 3": "Pufferjacke",
+      "eBay Title": "Jack&Jones JWHGREAT PADDED Parka Herren Schwarz M Winterjacke dicke Jacke"
     }
   }
 }

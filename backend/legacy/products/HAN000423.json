@@ -1,0 +1,74 @@
+{
+  "HAN000423": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412360,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 781351,
+      "ISIN": null,
+      "Supplier Title": "Zign Handtasche ca.37x27cm"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 15.64
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Zign",
+      "Color": "Braun",
+      "Size": "37x27 cm"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Handtasche",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000423 (1).JPG"
+        },
+        {
+          "filename": "HAN000423 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000423 (4).JPG"
+        },
+        {
+          "filename": "HAN000423 (5).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Handtasche",
+      "Product Model": "",
+      "Keyword 1": "Damentasche",
+      "Keyword 2": "Schultertasche",
+      "Keyword 3": "Tote Bag",
+      "eBay Title": "Zign Handtasche Damen Braun 37x27 cm Damentasche Schultertasche Tote Bag"
+    }
+  }
+}

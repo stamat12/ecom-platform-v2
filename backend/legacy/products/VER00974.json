@@ -1,0 +1,71 @@
+{
+  "VER00974": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24051760,
+      "Invoice Date": "2024-05-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 669432,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. J Lindbergh Skijacke Größe M"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 0.58,
+      "Total Cost Net": 46.41
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Wintersport/Bekleidung/Mäntel, Jacken & Westen",
+      "eBay Category ID": "26346"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "J.Lindeberg",
+      "Color": "Blau / Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Hochwertige Skijacke mit Kapuze und Schneefang. Artikel-Nr: 66WS370780410. Maße ca.: Brustweite 50cm, Ärmellänge 62cm.",
+      "Keywords": "Sitkin Skijacke",
+      "Materials": "Obermaterial: 100% Polyester; Futter: 100% Polyamid; Füllung: 100% Polyester"
+    },
+    "OP": {
+      "OP": 550.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_6080.jpg"
+        },
+        {
+          "filename": "IMG_6085.jpg"
+        },
+        {
+          "filename": "IMG_6086.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "W Skihose JZ 2L",
+      "Keyword 1": "Skijacke",
+      "Keyword 2": "Winterjacke",
+      "Keyword 3": "Funktionsjacke",
+      "eBay Title": "J.Lindeberg W Skihose JZ 2L Jacke Damen Blau / Schwarz M Skijacke Winterjacke"
+    }
+  }
+}

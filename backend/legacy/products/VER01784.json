@@ -1,0 +1,67 @@
+{
+  "VER01784": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25062248,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 814740,
+      "ISIN": null,
+      "Supplier Title": "COS 927198 Schuh Größe 45"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 1.12,
+      "Total Cost Net": 26.12
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "COS",
+      "Color": "Schwarz",
+      "Size": "45"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese klassischen Mokassins aus geschmeidigem, genarbtem Leder haben eine mandelförmige Zehenpartie, sichtbare Nähte und passende Schnürsenkel.",
+      "Keywords": "Mokassins aus genarbtem Leder",
+      "Materials": "Obermaterial & Futter: 100 % Leder, Sohle: 100 % thermoplastischer Gummi"
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01784 (2).jpg"
+        },
+        {
+          "filename": "VER01784 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

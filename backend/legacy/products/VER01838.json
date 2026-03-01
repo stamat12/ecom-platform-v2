@@ -1,0 +1,67 @@
+{
+  "VER01838": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2507930,
+      "Invoice Date": "2025-07-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 819235,
+      "ISIN": null,
+      "Supplier Title": "Remote D1C01 03 Sneaker Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 17.06
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 4061811332526.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Remonte",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Sportlicher Sneaker mit modischer Plateausohle, praktischem Reißverschluss neben der Schnürung und einer herausnehmbaren Innensohle.",
+      "Keywords": "D1C01-03 Sneaker",
+      "Materials": "Obermaterial: Lederimitat, Futter: Synthetik, Innensohle: Synthetik, Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01838 (5).jpg"
+        },
+        {
+          "filename": "VER01838 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

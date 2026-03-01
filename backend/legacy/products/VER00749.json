@@ -1,0 +1,71 @@
+{
+  "VER00749": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666416,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Sneaker Gr. 39"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 3.04
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Sneaker für besondere Anlässe (z.B. Hochzeit). Seitenteile aus transparenter Spitze mit schillernden Pailletten. Breite Organza-Schnürsenkel.",
+      "Keywords": "Braut-Sneaker",
+      "Materials": "Obermaterial: Synthetik, Textil; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1993.JPG"
+        },
+        {
+          "filename": "IMG_1992.JPG"
+        },
+        {
+          "filename": "IMG_1990.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Laufschuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Sportliche Schuhe",
+      "eBay Title": "Sneaker Damen Weiß 39 Laufschuhe Freizeitschuhe Sportliche Schuhe"
+    }
+  }
+}

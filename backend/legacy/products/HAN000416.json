@@ -1,0 +1,77 @@
+{
+  "HAN000416": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412361,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 378161,
+      "ISIN": null,
+      "Supplier Title": "Next Pumps wide fit Gr.41"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 8.14
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Next",
+      "Color": "Schwarz",
+      "Size": "F"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Forever Comfort Mid Court Pumps",
+      "Materials": "Obermaterial: Leder\nInnenmaterial: Synthetik\nDecksohle: Synthetik\nSohle: Kunststoff\nFütterungsdicke: Kalt gefüttert"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000416 (10)_wb.jpg"
+        },
+        {
+          "filename": "HAN000416 (12)_wb.jpg"
+        },
+        {
+          "filename": "HAN000416 (1).jpg"
+        },
+        {
+          "filename": "HAN000416 (4).jpg"
+        },
+        {
+          "filename": "HAN000416 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "ED/0504",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "High Heels",
+      "Keyword 3": "Spitze Schuhe",
+      "eBay Title": "Next ED/0504 Pumps Schwarz F Damen Schuhe High Heels Spitze Schuhe"
+    }
+  }
+}

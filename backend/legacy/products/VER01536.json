@@ -1,0 +1,71 @@
+{
+  "VER01536": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041488,
+      "Invoice Date": "2025-04-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 741621,
+      "ISIN": null,
+      "Supplier Title": "Blue seven Kleid Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.56,
+      "Total Cost Net": 10.56
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": 4068846233450.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Blue Seven",
+      "Color": "Dunkelblau",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Hemdblusenkleid, kurzarm, durchgeknöpft, knielang",
+      "Keywords": "Kleid",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01536 (5).jpg"
+        },
+        {
+          "filename": "VER01536 (6).jpg"
+        },
+        {
+          "filename": "VER01536 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "184153X5",
+      "Keyword 1": "Damenkleid",
+      "Keyword 2": "Sommerkleid",
+      "Keyword 3": "Knopfkleid",
+      "eBay Title": "Blue Seven 184153X5 Kleid Damen Dunkelblau 42 Damenkleid Sommerkleid Knopfkleid"
+    }
+  }
+}

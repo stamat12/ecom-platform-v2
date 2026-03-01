@@ -1,0 +1,74 @@
+{
+  "VER01269": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2501175,
+      "Invoice Date": "2025-01-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 776354,
+      "ISIN": null,
+      "Supplier Title": "Triumph Underwear Größe M"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 3.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/Slips, Strings & Panties",
+      "eBay Category ID": "63854"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Triumph",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Briefs",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01269 (4).JPG"
+        },
+        {
+          "filename": "VER01269 (5).JPG"
+        },
+        {
+          "filename": "VER01269 (1).JPG"
+        },
+        {
+          "filename": "VER01269 (3).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Damenunterhose",
+      "Product Model": "Feel of Modal Midi",
+      "Keyword 1": "Unterwäsche",
+      "Keyword 2": "Höschen",
+      "Keyword 3": "Modal",
+      "eBay Title": "Triumph Feel of Modal Midi Damenunterhose Damen Schwarz M Unterwäsche Höschen"
+    }
+  }
+}

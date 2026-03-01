@@ -1,0 +1,71 @@
+{
+  "VER01510": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 806725,
+      "ISIN": null,
+      "Supplier Title": "Rieker Z1082-25 Damen Stiefeletten Gr. 40"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 18.09
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Rieker",
+      "Color": "Braun",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Kurzstiefel",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01510 (6).jpg"
+        },
+        {
+          "filename": "VER01510 (5).jpg"
+        },
+        {
+          "filename": "VER01510 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "Z1082-25",
+      "Keyword 1": "Winterstiefel",
+      "Keyword 2": "Damenstiefel",
+      "Keyword 3": "Wasserdichte Stiefel",
+      "eBay Title": "Rieker Z1082-25 Stiefel Damen Braun 40 Winterstiefel Damenstiefel"
+    }
+  }
+}

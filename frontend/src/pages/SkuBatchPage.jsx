@@ -504,6 +504,7 @@ export default function SkuBatchPage() {
     setRotating((prev) => ({ ...prev, [key]: true }));
 
     try {
+      // Step 1: Rotate the image on backend
       const res = await fetch(
         `/api/images/${encodeURIComponent(sku)}/${encodeURIComponent(filename)}/rotate`,
         {
@@ -513,25 +514,94 @@ export default function SkuBatchPage() {
         }
       );
 
-      if (!res.ok) throw new Error("Rotation failed");
+      if (!res.ok) throw new Error(`Rotation API failed with status ${res.status}`);
       const result = await res.json();
 
+      console.log(`Rotation result for ${sku}/${filename}:`, result);
+
       if (result.success) {
-        // Refresh images for this SKU
+        // Step 2: Refresh images for this SKU
         const safeSku = encodeURIComponent(sku);
-        const refreshRes = await fetch(`/api/skus/${safeSku}/images`);
-        if (refreshRes.ok) {
+        try {
+          const refreshRes = await fetch(`/api/skus/${safeSku}/images`);
+          
+          if (!refreshRes.ok) {
+            throw new Error(`Images API failed with status ${refreshRes.status}`);
+          }
+          
           const refreshData = await refreshRes.json();
+          console.log(`Refreshed images for ${sku}:`, refreshData);
+
+          if (!refreshData || !refreshData.images || !Array.isArray(refreshData.images)) {
+            throw new Error("Invalid refresh response structure");
+          }
+          
+          // Add cache-busting timestamp to image URLs to force browser reload
+          const timestamp = Date.now();
+          const updatedImages = refreshData.images.map((img) => ({
+            ...img,
+            thumb_url: img.thumb_url ? `${img.thumb_url}&t=${timestamp}` : img.thumb_url,
+            preview_url: img.preview_url ? `${img.preview_url}&t=${timestamp}` : img.preview_url,
+            original_url: img.original_url ? `${img.original_url}&t=${timestamp}` : img.original_url,
+            display_url: img.display_url ? `${img.display_url}&t=${timestamp}` : img.display_url,
+            url: img.url ? `${img.url}&t=${timestamp}` : img.url,
+          }));
+
+          const updatedData = {
+            ...refreshData,
+            images: updatedImages
+          };
+
           setItems((prev) =>
-            prev.map((item) =>
-              item.sku === sku ? { ...item, data: refreshData, error: null } : item
-            )
+            prev.map((item) => {
+              if (item.sku === sku) {
+                console.log(`Updating items data for ${sku} with ${updatedImages.length} images`);
+                return { ...item, data: updatedData, error: null };
+              }
+              return item;
+            })
           );
+          
+          console.log(`✓ Image rotation complete for ${sku}/${filename} (${degrees}°)`);
+        } catch (refreshErr) {
+          console.error("Failed to refresh images after rotation:", refreshErr);
+          
+          // Try a simple retry with a delay
+          setTimeout(async () => {
+            try {
+              const retryRes = await fetch(`/api/skus/${safeSku}/images`);
+              if (retryRes.ok) {
+                const retryData = await retryRes.json();
+                console.log("Retry successful:", retryData);
+                
+                const timestamp = Date.now();
+                const retryImages = retryData.images.map((img) => ({
+                  ...img,
+                  thumb_url: img.thumb_url ? `${img.thumb_url}&t=${timestamp}` : img.thumb_url,
+                  preview_url: img.preview_url ? `${img.preview_url}&t=${timestamp}` : img.preview_url,
+                  original_url: img.original_url ? `${img.original_url}&t=${timestamp}` : img.original_url,
+                }));
+                
+                setItems((prev) =>
+                  prev.map((item) =>
+                    item.sku === sku 
+                      ? { ...item, data: { ...retryData, images: retryImages }, error: null } 
+                      : item
+                  )
+                );
+              }
+            } catch (retryErr) {
+              console.error("Retry failed:", retryErr);
+              alert(`Image rotated but refreshing failed. Please refresh the page to see the rotated image.`);
+            }
+          }, 1000);
         }
       } else {
+        console.warn(`Rotation not successful:`, result.message);
         alert(result.message || "Rotation failed");
       }
     } catch (e) {
+      console.error("Rotation error:", e);
       alert(`Error: ${e.message}`);
     } finally {
       setRotating((prev) => ({ ...prev, [key]: false }));

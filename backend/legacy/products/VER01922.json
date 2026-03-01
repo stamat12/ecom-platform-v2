@@ -1,0 +1,67 @@
+{
+  "VER01922": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-14313-62",
+      "Invoice Date": "2025-07-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 296,
+      "ISIN": null,
+      "Supplier Title": "Paar Freizeitschuhe Satorisan, Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 18.88,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 18.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 4250962402120.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (leicht verschmutzt)"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Satorisan",
+      "Color": "Weiß / Grün",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Canvas-Sneaker mit Lederdetails. Leichte gelbliche Verfärbungen am Stoff (siehe Fotos). Grüne Innen- und Laufsohle.",
+      "Keywords": "Heisei Sneaker",
+      "Materials": "Obermaterial: Textil, Leder; Futter: Textil; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 109.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01922 (11).jpg"
+        },
+        {
+          "filename": "VER01922 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

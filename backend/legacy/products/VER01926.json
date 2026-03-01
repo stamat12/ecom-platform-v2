@@ -1,0 +1,73 @@
+{
+  "VER01926": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-14313-62",
+      "Invoice Date": "2025-07-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 439,
+      "ISIN": null,
+      "Supplier Title": "Paar Stiefeletten Dclab Milonia, Gr. 36"
+    },
+    "Price Data": {
+      "Price Net": 21.24,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 21.24
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": 7436944933662.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "P.d.C. lab",
+      "Color": "Schwarz",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Gefütterte Lederstiefel mit klobiger, gewellter Profilsohle und seitlichem Reißverschluss.",
+      "Keywords": "Milonia 10 Stiefel",
+      "Materials": "Obermaterial: Leder; Futter: Warmfutter; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 179.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01926 (11).jpg"
+        },
+        {
+          "filename": "VER01926 (3).jpg"
+        },
+        {
+          "filename": "VER01926 (9).jpg"
+        },
+        {
+          "filename": "VER01926 (13).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

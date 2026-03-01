@@ -1,0 +1,78 @@
+{
+  "VER01663": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051443,
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 810136,
+      "ISIN": null,
+      "Supplier Title": "Napapijri Jacke Größe L"
+    },
+    "Price Data": {
+      "Price Net": 41.67,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 42.03
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": 196248839943.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Napapijri",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Gefütterte Steppjacke mit Kapuze und Thermo-Fibre™-Isolierung ohne Daunen. Hergestellt aus mindestens 70% recyceltem Material.",
+      "Keywords": "Box Puffer Jacket Steppjacke",
+      "Materials": "Oberstoff: 100% Polyamid, Futter: 100% Polyester, Füllung: 100% Polyester"
+    },
+    "OP": {
+      "OP": 239.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01663 (3).jpg"
+        },
+        {
+          "filename": "VER01663 (12).jpg"
+        },
+        {
+          "filename": "VER01663 (13).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER01663 (12).jpg",
+          "order": 7,
+          "eBay URL": ""
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "",
+      "Keyword 1": "Steppjacke",
+      "Keyword 2": "Pufferjacke",
+      "Keyword 3": "Winterjacke",
+      "eBay Title": "Napapijri Jacke Herren Schwarz L Steppjacke Pufferjacke Winterjacke"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "VER00914": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24042065,
+      "Invoice Date": "2024-04-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 648078,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Levi's Jeans Größe 29x32"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 1.0,
+      "Total Cost Net": 19.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
+    },
+    "EAN": {
+      "EAN": 5401105153366.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Levi's",
+      "Color": "Schwarz",
+      "Size": "29/32"
+    },
+    "Intern Generated Info": {
+      "More details": "Locker geschnittene Carpenter Jeans (Stay Loose Fit) aus der Premium-Linie. Artikelnummer: A46750001.",
+      "Keywords": "Premium Stay Loose Carpenter Jeans",
+      "Materials": "77% Baumwolle, 23% Hanf"
+    },
+    "OP": {
+      "OP": 130.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "20240503_112440185_iOS.jpg"
+        },
+        {
+          "filename": "20240503_112509908_iOS.jpg"
+        },
+        {
+          "filename": "IMG_4528.JPG"
+        },
+        {
+          "filename": "20240503_112448490_iOS.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jeans",
+      "Product Model": "511",
+      "Keyword 1": "Herrenjeans",
+      "Keyword 2": "Dunkle Jeans",
+      "Keyword 3": "Slim Fit Jeans",
+      "eBay Title": "Levi's 511 Jeans Herren Schwarz 29/32 Herrenjeans Dunkle Jeans Slim Fit Jeans"
+    }
+  }
+}

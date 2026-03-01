@@ -64,12 +64,34 @@ def rotate_image(sku: str, filename: str, degrees: int) -> dict:
     try:
         # Open and rotate image
         with Image.open(image_path) as img:
+            # Try to preserve EXIF data
+            exif_data = img.getexif() if hasattr(img, 'getexif') else None
+            
             # Convert rotation degrees to PIL format
             # PIL rotates counter-clockwise, so we need to negate for clockwise rotation
             rotated = img.rotate(-degrees, expand=True)
             
-            # Save rotated image
-            rotated.save(image_path, quality=95, optimize=True)
+            # Save rotated image with appropriate format
+            # Determine format from extension
+            fmt = image_path.suffix.lower()
+            if fmt in ['.jpg', '.jpeg']:
+                save_kwargs = {'quality': 95, 'optimize': True}
+                save_format = 'JPEG'
+            elif fmt == '.png':
+                save_kwargs = {'optimize': True}
+                save_format = 'PNG'
+            elif fmt == '.webp':
+                save_kwargs = {'quality': 95}
+                save_format = 'WEBP'
+            else:
+                save_kwargs = {}
+                save_format = None
+            
+            # Save the rotated image
+            if save_format:
+                rotated.save(image_path, format=save_format, **save_kwargs)
+            else:
+                rotated.save(image_path, **save_kwargs)
         
         return {
             "success": True,
@@ -91,7 +113,7 @@ def rotate_image(sku: str, filename: str, degrees: int) -> dict:
 
 def clear_image_cache(sku: str, filename: str) -> None:
     """
-    Clear cached thumbnails for an image after rotation.
+    Clear cached thumbnails and variants for an image after rotation.
     
     Args:
         sku: The SKU identifier
@@ -99,11 +121,25 @@ def clear_image_cache(sku: str, filename: str) -> None:
     """
     from app.services.image_serving import CACHE_ROOT
     
-    # Remove all cached variants
-    for variant in ["thumb_256", "thumb_512"]:
+    # Remove all cached variants - be comprehensive
+    variants = ["thumb_256", "thumb_512", "original", "display", "preview"]
+    for variant in variants:
         cached = CACHE_ROOT / variant / sku / filename
         if cached.exists():
             try:
                 cached.unlink()
-            except Exception:
+                import logging
+                logging.info(f"Cleared cache: {cached}")
+            except Exception as e:
+                import logging
+                logging.warning(f"Failed to clear cache {cached}: {e}")
                 pass  # Ignore cache clearing errors
+    
+    # Also try to clear parent directories if empty
+    for variant in variants:
+        try:
+            sku_cache_dir = CACHE_ROOT / variant / sku
+            if sku_cache_dir.exists() and not any(sku_cache_dir.iterdir()):
+                sku_cache_dir.rmdir()
+        except Exception:
+            pass

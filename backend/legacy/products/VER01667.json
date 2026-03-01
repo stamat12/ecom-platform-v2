@@ -1,0 +1,68 @@
+{
+  "VER01667": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051443,
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 810178,
+      "ISIN": null,
+      "Supplier Title": "Adidas Swimshorts Größe L"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 9.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Bademode",
+      "eBay Category ID": "15690"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Adidas",
+      "Color": "Braun",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Washed Oot Cix Badeshorts",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01667 (5).jpg"
+        },
+        {
+          "filename": "VER01667 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badehose",
+      "Product Model": "IX7586",
+      "Keyword 1": "Schwimmshorts",
+      "Keyword 2": "Strandhose",
+      "Keyword 3": "Sporthose",
+      "eBay Title": "Adidas IX7586 Badehose Herren Braun L Schwimmshorts Strandhose Sporthose"
+    }
+  }
+}

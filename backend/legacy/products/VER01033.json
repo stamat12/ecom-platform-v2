@@ -1,0 +1,68 @@
+{
+  "VER01033": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24051304,
+      "Invoice Date": "2024-05-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716029,
+      "ISIN": null,
+      "Supplier Title": "Oceansapart Fleece Bomber Jacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 21.45
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": 4066967075921.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Oceans Apart",
+      "Color": "Cremeweiß",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Jacke aus Materialmix: Teddyfleece am Körper und gesteppter Stoff an Ärmeln/Kapuze. Farbname: natural-cream.",
+      "Keywords": "Joelie Fleecejacke",
+      "Materials": "100% Recyceltes Polyester"
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_5420.JPG"
+        },
+        {
+          "filename": "IMG_5421.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "Joelle Fleece",
+      "Keyword 1": "Fleecejacke",
+      "Keyword 2": "Damenjacke",
+      "Keyword 3": "Winterjacke",
+      "eBay Title": "Oceans Apart Joelle Fleece Jacke Damen Cremeweiß S Fleecejacke Damenjacke"
+    }
+  }
+}

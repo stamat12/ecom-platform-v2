@@ -1,0 +1,77 @@
+{
+  "JAL00052": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spFBH5T0G5W",
+      "ISIN": "b095lgqqkt",
+      "Supplier Title": "Clogs Women's Mules Summer Slippers Breathable Non-Slip Soft Sole Garden Shoes Sandals, Red B, 41 EU"
+    },
+    "Price Data": {
+      "Price Net": 1.05,
+      "Shipping Net": 0.45,
+      "Total Cost Net": 1.5
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Sisttke",
+      "Color": "Rot",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Atmungsaktive Clogs mit weicher, rutschfester Sohle und verstellbarem Fersenriemen.",
+      "Keywords": "Clogs",
+      "Materials": "Mesh, MD"
+    },
+    "OP": {
+      "OP": 36.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Clogs",
+      "Keyword 2": "Hausschuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Sisttke Schuh Damen Rot 41 Clogs Hausschuhe Freizeitschuhe Kundenretour"
+    }
+  }
+}

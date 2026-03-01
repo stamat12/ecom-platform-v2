@@ -1,0 +1,68 @@
+{
+  "VER01473": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 125,
+      "ISIN": null,
+      "Supplier Title": "Damen Kleid Tommy Hilfiger, Gr. 38"
+    },
+    "Price Data": {
+      "Price Net": 35.0,
+      "Shipping Net": 6.3,
+      "Total Cost Net": 41.3
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": 8720642732898.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Dunkelblau",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Sportliches Blusenkleid aus Bio-Baumwoll-Popeline. Farbname: Desert Sky. Artikelnummer: WW0WW37876.",
+      "Keywords": "Poplin Sport Blusenkleid",
+      "Materials": "96% Bio-Baumwolle, 4% Elasthan"
+    },
+    "OP": {
+      "OP": 130.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_2073.jpg"
+        },
+        {
+          "filename": "IMG_2075.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "WOMWN376DWS",
+      "Keyword 1": "Damenkleid",
+      "Keyword 2": "Langarmkleid",
+      "Keyword 3": "Shirtkleid",
+      "eBay Title": "Tommy Hilfiger WOMWN376DWS Kleid Damen Dunkelblau 38 Damenkleid Langarmkleid"
+    }
+  }
+}

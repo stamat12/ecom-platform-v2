@@ -1,0 +1,73 @@
+{
+  "VER01888": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 145967,
+      "ISIN": null,
+      "Supplier Title": "Jeanshose Größe 36"
+    },
+    "Price Data": {
+      "Price Net": 5.9,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 6.45
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jeans",
+      "eBay Category ID": "11483"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Armani Jeans",
+      "Color": "Dunkelblau",
+      "Size": "36/34"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische 5-Pocket-Jeans in schmaler Passform (Slim Fit) mit Knopfleiste.",
+      "Keywords": "J23 Slim Fit Jeans",
+      "Materials": "99% Baumwolle, 1% Elasthan"
+    },
+    "OP": {
+      "OP": 200.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01888 (5).jpg"
+        },
+        {
+          "filename": "VER01888 (1).jpg"
+        },
+        {
+          "filename": "VER01888 (3).jpg"
+        },
+        {
+          "filename": "VER01888 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

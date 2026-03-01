@@ -1,0 +1,71 @@
+{
+  "VER02021": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826956,
+      "ISIN": null,
+      "Supplier Title": "Converse A09461C Sneaker Größe 38,5"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 17.4
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 194435153902.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Altrosa",
+      "Size": "38.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Star Player 76 ist aus hochwertigem Wildleder gefertigt und verfügt über eine OrthoLite-Dämpfung für ganztägigen Tragekomfort.",
+      "Keywords": "Star Player 76 OX Sneaker",
+      "Materials": "Obermaterial: Wildleder, Futter: Textil, Sohle: Gummi"
+    },
+    "OP": {
+      "OP": 85.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02021 (9).jpg"
+        },
+        {
+          "filename": "VER02021 (4).jpg"
+        },
+        {
+          "filename": "VER02021 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Star Player 76 Ox",
+      "Keyword 1": "Freizeitschuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Converse Star Player 76 Ox Sneaker Unisex Altrosa 38.5 Freizeitschuhe"
+    }
+  }
+}

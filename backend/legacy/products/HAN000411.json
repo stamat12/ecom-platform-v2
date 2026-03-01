@@ -1,0 +1,71 @@
+{
+  "HAN000411": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412361,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 378042,
+      "ISIN": null,
+      "Supplier Title": "Toms Slipper Gr.37"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 8.14
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Toms",
+      "Color": "Beige",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Alpargata Rope 2.0 Espadrille",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000411 (5)_wb.jpg"
+        },
+        {
+          "filename": "HAN000411 (7)_wb.jpg"
+        },
+        {
+          "filename": "HAN000411 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Alpargata Rope 2.0",
+      "Keyword 1": "Espadrilles",
+      "Keyword 2": "Damen Schuhe",
+      "Keyword 3": "bequeme Schuhe",
+      "eBay Title": "Toms Alpargata Rope 2.0 Schuh Damen Beige 37 Espadrilles Damen Schuhe"
+    }
+  }
+}

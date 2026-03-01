@@ -1,0 +1,64 @@
+{
+  "VER01746": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13632-90",
+      "Invoice Date": "2025-05-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 4414,
+      "ISIN": null,
+      "Supplier Title": "Nike Poloshirt Academy 21 rot"
+    },
+    "Price Data": {
+      "Price Net": 7.08,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 7.08
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Rot",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Academy 21 Poloshirt Herren",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 38.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 017"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01746 (6)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

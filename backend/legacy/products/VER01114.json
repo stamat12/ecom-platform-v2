@@ -1,0 +1,77 @@
+{
+  "VER01114": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2410975,
+      "Invoice Date": "2024-10-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 760892,
+      "ISIN": null,
+      "Supplier Title": "Ray-Ban Sonnenbrille"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 46.45
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herren-Accessoires/Sonnenbrillen & -zubehör/Sonnenbrillen",
+      "eBay Category ID": "79720"
+    },
+    "EAN": {
+      "EAN": 8053672728952.0
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Ray-Ban",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische runde Metall-Sonnenbrille. Inklusive Original-Etui und Reinigungstuch. Modell: RB3447. Farbcode: 9001/A5.",
+      "Keywords": "RB3447 Round Metal Sonnenbrille",
+      "Materials": "Gestell: Metall; Gläser: Kristallglas"
+    },
+    "OP": {
+      "OP": 155.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_7828.JPG"
+        },
+        {
+          "filename": "IMG_7829.JPG"
+        },
+        {
+          "filename": "IMG_7830.JPG"
+        },
+        {
+          "filename": "IMG_7831.JPG"
+        },
+        {
+          "filename": "IMG_7833.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sonnenbrille",
+      "Product Model": "RB 3447",
+      "Keyword 1": "rund",
+      "Keyword 2": "Metall",
+      "Keyword 3": "UV-Schutz",
+      "eBay Title": "Ray-Ban RB 3447 Sonnenbrille Unisex rund Metall UV-Schutz Neu"
+    }
+  }
+}

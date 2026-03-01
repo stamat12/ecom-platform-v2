@@ -1,0 +1,71 @@
+{
+  "VER00774": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 673523,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Betset Johnson Damen High Sandalen Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 6.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Baldowski",
+      "Color": "Champagner",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Elegante spitze Pumps mit Allover-Glitzer und großer Logo-Schnalle auf der Vorderseite. Stiletto-Absatz. Made in EU.",
+      "Keywords": "Glitzer-Pumps",
+      "Materials": "Obermaterial: Textil; Futter und Decksohle: Leder; Laufsohle: Hochwertiger Kunststoff"
+    },
+    "OP": {
+      "OP": 140.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1852.JPG"
+        },
+        {
+          "filename": "IMG_1853.JPG"
+        },
+        {
+          "filename": "IMG_1851.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "High Heels",
+      "Keyword 3": "Glitzer Schuhe",
+      "eBay Title": "Baldowski Pumps Damen Champagner 37 Damen Schuhe High Heels Glitzer Schuhe"
+    }
+  }
+}

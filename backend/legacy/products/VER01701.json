@@ -1,0 +1,67 @@
+{
+  "VER01701": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2506832,
+      "Invoice Date": "2025-06-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 820279,
+      "ISIN": null,
+      "Supplier Title": "Nike Bra Größe L"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 7.42
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Sport-BHs",
+      "eBay Category ID": "185083"
+    },
+    "EAN": {
+      "EAN": 196975013579.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Hellblau",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Nike Trail Sport-BH mit Mesh-Einsätzen und Rückentasche für Schlüssel etc.",
+      "Keywords": "Trail Sport BH",
+      "Materials": "Polyester, Elastan"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01701 (5).jpg"
+        },
+        {
+          "filename": "VER01701 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

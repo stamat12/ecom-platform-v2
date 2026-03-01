@@ -1,0 +1,80 @@
+{
+  "VER01224": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411808,
+      "Invoice Date": "2024-11-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774538,
+      "ISIN": null,
+      "Supplier Title": "Hunkemöller sleep Short Größe XS"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 5.48
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/Slips, Strings & Panties",
+      "eBay Category ID": "63854"
+    },
+    "EAN": {
+      "EAN": 8720676907688.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hunkemöller",
+      "Color": "Violett",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Loungewear-Shorts aus weichem Velours mit Spitzenbesatz am Saum und Satin-Kordelzug.",
+      "Keywords": "Velours Scallop Lace Shorts",
+      "Materials": "95% Polyester, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01224 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01224 (6).JPG"
+        },
+        {
+          "filename": "VER01224 (7).JPG"
+        },
+        {
+          "filename": "VER01224 (8).JPG"
+        },
+        {
+          "filename": "VER01224 (1).JPG"
+        },
+        {
+          "filename": "VER01224 (9).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "Short Velours Scallop Lac",
+      "Keyword 1": "Velours Hose",
+      "Keyword 2": "kurze Hose",
+      "Keyword 3": "Hosen mit Spitze",
+      "eBay Title": "Hunkemöller Short Velours Scallop Lac Hose Damen Violett XS Velours Hose"
+    }
+  }
+}

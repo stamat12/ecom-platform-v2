@@ -1,0 +1,68 @@
+{
+  "VER01641": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716873,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Samt Oberteil Größe S"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 4.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Pink",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Bandeau-Top, Samt-Optik, Logo aus Strasssteinen",
+      "Keywords": "Sway Top",
+      "Materials": "70% Polyester, 30% Elasthan"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01641 (2).jpg"
+        },
+        {
+          "filename": "VER01641 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Haarband",
+      "Product Model": "SWAY",
+      "Keyword 1": "Stirnband",
+      "Keyword 2": "Haaraccessoire",
+      "Keyword 3": "Modeaccessoire",
+      "eBay Title": "Von Dutch SWAY Haarband Damen Pink S Stirnband Haaraccessoire Modeaccessoire"
+    }
+  }
+}

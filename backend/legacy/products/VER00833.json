@@ -1,0 +1,74 @@
+{
+  "VER00833": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24022259,
+      "Invoice Date": "2024-02-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665086,
+      "ISIN": null,
+      "Supplier Title": "Just Fab Damen Schuhe  Gr. 6"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.49,
+      "Total Cost Net": 2.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": 17119426379.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "JustFab",
+      "Color": "Leopard",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Chunky Loafer / Slipper mit dicker Profilsohle und Leopardenmuster.",
+      "Keywords": "Danica Loafer",
+      "Materials": "Obermaterial: Textil; Futter: Textil; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4886.JPG"
+        },
+        {
+          "filename": "IMG_4888.JPG"
+        },
+        {
+          "filename": "IMG_4890.JPG"
+        },
+        {
+          "filename": "IMG_4884.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Danica",
+      "Keyword 1": "Flats",
+      "Keyword 2": "Leopardenmuster",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "JustFab Danica Schuh Damen Leopard 36 Flats Leopardenmuster Damen Schuhe"
+    }
+  }
+}

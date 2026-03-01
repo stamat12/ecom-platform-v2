@@ -1,0 +1,71 @@
+{
+  "JAL00059": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE829357219",
+      "ISIN": "b0ctpsms31",
+      "Supplier Title": "Lifewit 145L Laundry Hamper with 2 Compartments, Foldable Large Laundry Basket with Lid and 2 Removable Laundry Bags for Clothes, Laundry, Bathroom, Gray"
+    },
+    "Price Data": {
+      "Price Net": 2.11,
+      "Shipping Net": 1.28,
+      "Total Cost Net": 3.39
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Badezimmer/Badezimmerzubehör/Badezimmer-Körbe & Aufbewahrung",
+      "eBay Category ID": "260610"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Lifewit",
+      "Color": "Grau",
+      "Size": "145 L"
+    },
+    "Intern Generated Info": {
+      "More details": "Großer Wäschekorb mit 2 Fächern zur Trennung von heller und dunkler Wäsche.",
+      "Keywords": "145L Laundry Hamper Wäschekorb",
+      "Materials": "Stoff"
+    },
+    "OP": {
+      "OP": 33.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Wäschekorb",
+      "Product Model": "",
+      "Keyword 1": "Wäschetrennung",
+      "Keyword 2": "Wäschebehälter",
+      "Keyword 3": "Wäscheaufbewahrung",
+      "eBay Title": "Lifewit Wäschekorb Unisex Grau 145 L Wäschetrennung Wäschebehälter"
+    }
+  }
+}

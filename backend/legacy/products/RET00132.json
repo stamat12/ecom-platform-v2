@@ -1,0 +1,68 @@
+{
+  "RET00132": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK216952512",
+      "ISIN": "B07TWFCZ8W",
+      "Supplier Title": "Rayher 62888505 Holzbausatz 3D-Motivrahmen Skifahrer, FSC zertifiziert, natur, 24 x 24 cm, Tiefe 6,3 cm, Set 20teilig, zum basteln und bemalen"
+    },
+    "Price Data": {
+      "Price Net": 3.4,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 3.92
+    },
+    "Ebay Category": {
+      "Category": "/Spielzeug/Puzzles & Geduldspiele/3D Puzzles",
+      "eBay Category ID": "19186"
+    },
+    "EAN": {
+      "EAN": 4006166825699.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Originalverpackung"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "3D-Motivrahmen Skifahrer, FSC zertifiziert, natur, 24 x 24 cm, Tiefe 6,3 cm, Set 20teilig, zum basteln und bemalen",
+      "Keywords": "Rayher Holzbausatz",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 16.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00132 (4).jpg"
+        },
+        {
+          "filename": "RET00132 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bausatz",
+      "Product Model": "3D-Motivrahmen",
+      "Keyword 1": "Holzrahmen",
+      "Keyword 2": "DIY Set",
+      "Keyword 3": "Bastelset",
+      "eBay Title": "3D-Motivrahmen Bausatz Holzrahmen DIY Set Bastelset Neu mit Originalverpackung"
+    }
+  }
+}

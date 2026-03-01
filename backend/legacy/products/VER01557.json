@@ -1,0 +1,71 @@
+{
+  "VER01557": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13765-04",
+      "Invoice Date": "2025-05-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 36,
+      "ISIN": null,
+      "Supplier Title": "Damen Badeanzug Triumph, Gr. 40C"
+    },
+    "Price Data": {
+      "Price Net": 12.0,
+      "Shipping Net": 2.16,
+      "Total Cost Net": 14.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Triumph",
+      "Color": "Mehrfarbig",
+      "Size": "40C"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Fizz Badeanzug",
+      "Materials": "82% Polyamide; 18% Elastane"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01557 (3).jpg"
+        },
+        {
+          "filename": "VER01557 (5).jpg"
+        },
+        {
+          "filename": "VER01557 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "Summer Fizz OP 02 pt",
+      "Keyword 1": "Damen Badeanzug",
+      "Keyword 2": "schwimmen",
+      "Keyword 3": "Badebekleidung",
+      "eBay Title": "Triumph Summer Fizz OP 02 pt Badeanzug Damen Mehrfarbig 40C Damen Badeanzug"
+    }
+  }
+}

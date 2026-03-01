@@ -1,0 +1,74 @@
+{
+  "VER00896": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24041485,
+      "Invoice Date": "2024-04-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 292547,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. G Star Jeans Kate Größe 30x30"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 0.44,
+      "Total Cost Net": 20.44
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
+    },
+    "EAN": {
+      "EAN": 8719768144917.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "G-Star Raw",
+      "Color": "Blau",
+      "Size": "30/30"
+    },
+    "Intern Generated Info": {
+      "More details": "Boyfriend Fit Jeans aus \"Elto Pure Stretch Denim\". Farbname: Vintage Azure. Artikelnummer: D15264-C052-A802.",
+      "Keywords": "Kate Boyfriend Jeans",
+      "Materials": "99% Baumwolle, 1% Elasthan"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4334.JPG"
+        },
+        {
+          "filename": "IMG_4336.JPG"
+        },
+        {
+          "filename": "IMG_4337.JPG"
+        },
+        {
+          "filename": "IMG_4338.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jeans",
+      "Product Model": "Boyfriend",
+      "Keyword 1": "Damenjeans",
+      "Keyword 2": "Stretchjeans",
+      "Keyword 3": "Vintagejeans",
+      "eBay Title": "G-Star Raw Boyfriend Jeans Damen Blau 30/30 Damenjeans Stretchjeans Vintagejeans"
+    }
+  }
+}

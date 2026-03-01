@@ -1,0 +1,68 @@
+{
+  "VER01607": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716661,
+      "ISIN": null,
+      "Supplier Title": "Alba Moda Rock Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 8.7
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Röcke",
+      "eBay Category ID": "63864"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Alba Moda",
+      "Color": "Beige",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Knielanger Rock mit Tunnelzug und Bindeband",
+      "Keywords": "Knielganger Rock",
+      "Materials": "65% Lyocell, 30% Polyester, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01607 (1).jpg"
+        },
+        {
+          "filename": "VER01607 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Rock",
+      "Product Model": "",
+      "Keyword 1": "Damenrock",
+      "Keyword 2": "Hochzeitsrock",
+      "Keyword 3": "Sommerrock",
+      "eBay Title": "Alba Moda Rock Damen Beige 40 Damenrock Hochzeitsrock Sommerrock"
+    }
+  }
+}

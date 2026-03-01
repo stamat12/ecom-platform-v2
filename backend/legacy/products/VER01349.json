@@ -1,0 +1,71 @@
+{
+  "VER01349": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503147,
+      "Invoice Date": "2025-03-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 790799,
+      "ISIN": null,
+      "Supplier Title": "Gabor Pumps Größe US 6"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 17.29
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Gabor",
+      "Color": "Marinenblau",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Absatz 55 cm",
+      "Keywords": "elegante Pumps",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01349 (4).JPG"
+        },
+        {
+          "filename": "VER01349 (3).JPG"
+        },
+        {
+          "filename": "VER01349 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Samtchevreau",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "bequeme Schuhe",
+      "eBay Title": "Gabor Samtchevreau Pumps Damen Marinenblau 36 Damen Schuhe Absatzschuhe"
+    }
+  }
+}

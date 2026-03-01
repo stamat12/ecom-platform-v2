@@ -1,0 +1,71 @@
+{
+  "VER01228": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411808,
+      "Invoice Date": "2024-11-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774665,
+      "ISIN": null,
+      "Supplier Title": "Hunkemöller String Größe M"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 2.98
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/Slips, Strings & Panties",
+      "eBay Category ID": "63854"
+    },
+    "EAN": {
+      "EAN": 8720285149660.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hunkemöller",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Nahtloser Baumwoll-String, der unter Kleidung unsichtbar ist. Teil der \"Together Tomorrow\" Kollektion.",
+      "Keywords": "Invisible Cotton String",
+      "Materials": "88% Baumwolle, 12% Elasthan"
+    },
+    "OP": {
+      "OP": 9.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01228 (4).JPG"
+        },
+        {
+          "filename": "VER01228 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01228 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Slip",
+      "Product Model": "175460/12Q124",
+      "Keyword 1": "Damenunterwäsche",
+      "Keyword 2": "String",
+      "Keyword 3": "Unterhose",
+      "eBay Title": "Hunkemöller 175460/12Q124 Slip Damen Schwarz M Damenunterwäsche String Unterhose"
+    }
+  }
+}

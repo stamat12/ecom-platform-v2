@@ -1,0 +1,74 @@
+{
+  "VER01535": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041488,
+      "Invoice Date": "2025-04-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 741993,
+      "ISIN": null,
+      "Supplier Title": "Anna Field Overall Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.56,
+      "Total Cost Net": 6.39
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Overalls",
+      "eBay Category ID": "3009"
+    },
+    "EAN": {
+      "EAN": 5059489738375.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Anna Field",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Ärmellos, Knoten-Detail vorne, Reißverschluss hinten",
+      "Keywords": "Overall",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 20.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01535 (3).jpg"
+        },
+        {
+          "filename": "VER01535 (4).jpg"
+        },
+        {
+          "filename": "VER01535 (5).jpg"
+        },
+        {
+          "filename": "VER01535 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jumpsuit",
+      "Product Model": "",
+      "Keyword 1": "Einteiler",
+      "Keyword 2": "Damen Jumpsuit",
+      "Keyword 3": "Kombination",
+      "eBay Title": "Anna Field Jumpsuit Damen Schwarz XL Einteiler Damen Jumpsuit Kombination"
+    }
+  }
+}

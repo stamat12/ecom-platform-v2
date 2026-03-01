@@ -1,0 +1,58 @@
+{
+  "VER02100": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 2536714,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 333984,
+      "ISIN": null,
+      "Supplier Title": "Hose 3/4 - Jersey Hose, Größe M"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.82,
+      "Total Cost Net": 2.49
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": 4068947030623.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tchibo",
+      "Color": "Mehrfarbig",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Viskose-Stretch-Qualität, Beinabschluss mit angesetztem Bündchen, Eingrifftaschen",
+      "Keywords": "MT30 Jerseyhose",
+      "Materials": "95% Viskose, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 19.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 012"
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "MT30",
+      "Keyword 1": "Jerseyhose",
+      "Keyword 2": "Sporthose",
+      "Keyword 3": "Freizeithose",
+      "eBay Title": "Tchibo MT30 Hose Damen Mehrfarbig M Jerseyhose Sporthose Freizeithose"
+    }
+  }
+}

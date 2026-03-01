@@ -1,0 +1,77 @@
+{
+  "VER01303": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502405,
+      "Invoice Date": "2025-02-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 735849,
+      "ISIN": null,
+      "Supplier Title": "Odlo underwear Größe M"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.19,
+      "Total Cost Net": 7.69
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Odlo",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Performance Sport Underwear Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01303 (4).jpg"
+        },
+        {
+          "filename": "VER01303 (6).jpg"
+        },
+        {
+          "filename": "VER01303 (5).jpg"
+        },
+        {
+          "filename": "VER01303 (7).jpg"
+        },
+        {
+          "filename": "VER01303 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sportunterwäsche",
+      "Product Model": "X-LIGHT",
+      "Keyword 1": "Damenunterwäsche",
+      "Keyword 2": "Funktionsunterwäsche",
+      "Keyword 3": "Sportbekleidung",
+      "eBay Title": "Odlo X-LIGHT Sportunterwäsche Damen Schwarz M Damenunterwäsche"
+    }
+  }
+}

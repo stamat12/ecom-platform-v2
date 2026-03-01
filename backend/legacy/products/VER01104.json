@@ -1,0 +1,71 @@
+{
+  "VER01104": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24091492,
+      "Invoice Date": "2024-09-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 763751,
+      "ISIN": null,
+      "Supplier Title": "Pat Calvin Herrenschuhe Gr. 44"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.83,
+      "Total Cost Net": 19.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Business-Schuhe",
+      "eBay Category ID": "53120"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pat Calvin",
+      "Color": "Beige",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Lässiger Derby-Schnürschuh aus perforiertem Veloursleder mit kontrastfarbener Sohle.",
+      "Keywords": "Schnürschuhe",
+      "Materials": "Obermaterial: Veloursleder; Futter: Leder; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_6954.JPG"
+        },
+        {
+          "filename": "IMG_6959.JPG"
+        },
+        {
+          "filename": "IMG_6956.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Herren Schuhe",
+      "Keyword 2": "Lederschuhe",
+      "Keyword 3": "Schnürschuhe",
+      "eBay Title": "Pat Calvin Schuh Herren Beige 44 Herren Schuhe Lederschuhe Schnürschuhe"
+    }
+  }
+}

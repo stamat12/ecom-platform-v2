@@ -1,0 +1,71 @@
+{
+  "VER02023": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826965,
+      "ISIN": null,
+      "Supplier Title": "Steve Madden Elevate 1 Sneaker Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 17.4
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 8720857388770.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Steve Madden",
+      "Color": "Schwarz",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Elevate 1 Sneaker",
+      "Materials": "Obermaterial: Textil, Synthetik; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02023 (2).jpg"
+        },
+        {
+          "filename": "VER02023 (10).jpg"
+        },
+        {
+          "filename": "VER02023 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sportschuh",
+      "Product Model": "Elevate 1",
+      "Keyword 1": "Laufschuhe",
+      "Keyword 2": "Sneaker",
+      "Keyword 3": "Trainingsschuhe",
+      "eBay Title": "Steve Madden Elevate 1 Sportschuh Herren Schwarz 41 Laufschuhe Sneaker"
+    }
+  }
+}

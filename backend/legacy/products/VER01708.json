@@ -1,0 +1,67 @@
+{
+  "VER01708": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 690125,
+      "Invoice Date": "2025-06-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665217,
+      "ISIN": null,
+      "Supplier Title": "T-Shirt Größe S"
+    },
+    "Price Data": {
+      "Price Net": 5.9,
+      "Shipping Net": 0.57,
+      "Total Cost Net": 6.47
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Mehrfarbig",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Loose Fit, gesticktes Logo, „The Nike Tee“ – Label im Nacken",
+      "Keywords": "T-shirt",
+      "Materials": "100 % Baumwolle"
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01708 (4).jpg"
+        },
+        {
+          "filename": "VER01708 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

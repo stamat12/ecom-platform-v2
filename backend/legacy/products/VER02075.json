@@ -1,0 +1,71 @@
+{
+  "VER02075": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25091376,
+      "Invoice Date": "2025-09-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 855049,
+      "ISIN": null,
+      "Supplier Title": "Vans Sneaker Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 15.48
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 196571215537.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Vans",
+      "Color": "Weiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Modell: Og Sk8-Mid Lx, Farbe: White/White",
+      "Keywords": "Vans OG Sk8-Mid LX Sneaker",
+      "Materials": "Obermaterial: Wildleder, Canvas; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 95.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02075 (5).jpg"
+        },
+        {
+          "filename": "VER02075 (7).jpg"
+        },
+        {
+          "filename": "VER02075 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Sk8-Mid Lx",
+      "Keyword 1": "Hochschuh",
+      "Keyword 2": "Skate Schuhe",
+      "Keyword 3": "Canvas Schuhe",
+      "eBay Title": "Vans Sk8-Mid Lx Sneaker Unisex Weiß 40 Hochschuh Skate Schuhe Canvas Schuhe"
+    }
+  }
+}

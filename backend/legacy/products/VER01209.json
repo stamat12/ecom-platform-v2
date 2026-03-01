@@ -1,0 +1,71 @@
+{
+  "VER01209": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411389,
+      "Invoice Date": "2024-11-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774480,
+      "ISIN": null,
+      "Supplier Title": "Cavalli Class Poloshirt Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 14.17,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 14.65
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Cavalli Class",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Poloshirt Herren",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 017"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01209 (2)_wb.jpg"
+        },
+        {
+          "filename": "VER01209 (3).JPG"
+        },
+        {
+          "filename": "VER01209 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Polohemd",
+      "Product Model": "K8002",
+      "Keyword 1": "Kurzarm Polo",
+      "Keyword 2": "Herren Polohemd",
+      "Keyword 3": "Sport Polo",
+      "eBay Title": "Cavalli Class K8002 Polohemd Herren Schwarz XL Kurzarm Polo Herren Polohemd"
+    }
+  }
+}

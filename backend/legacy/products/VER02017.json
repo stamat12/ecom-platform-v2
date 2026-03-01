@@ -1,0 +1,70 @@
+{
+  "VER02017": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 825172,
+      "ISIN": null,
+      "Supplier Title": "Tommy Hilfiger elevated court Sneaker Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 22.5,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 23.23
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 8720645595991.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Weiß",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieser Court-Sneaker aus einem Ledermix mit dezentem Branding und einer Cupsohle mit Struktur sorgt für einen coolen Look.",
+      "Keywords": "Sneaker",
+      "Materials": "Obermaterial: 90 % Leder, 10 % Polyurethan; Futter: 100 % recycelter Polyester"
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02017 (12).jpg"
+        },
+        {
+          "filename": "VER02017 (2).jpg"
+        },
+        {
+          "filename": "VER02017 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

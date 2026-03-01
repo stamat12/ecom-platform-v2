@@ -1,0 +1,74 @@
+{
+  "VER01486": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 326,
+      "ISIN": null,
+      "Supplier Title": "Herren Jacke Killtec, Gr. M"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 4.5,
+      "Total Cost Net": 29.5
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Killtec",
+      "Color": "Marinenblau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Winterjacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01486 (3).jpg"
+        },
+        {
+          "filename": "VER01486 (5).jpg"
+        },
+        {
+          "filename": "VER01486 (6).jpg"
+        },
+        {
+          "filename": "VER01486 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "37558",
+      "Keyword 1": "Winterjacke",
+      "Keyword 2": "Daunenjacke",
+      "Keyword 3": "Outdoorjacke",
+      "eBay Title": "Killtec 37558 Jacke Herren Marinenblau M Winterjacke Daunenjacke Outdoorjacke"
+    }
+  }
+}

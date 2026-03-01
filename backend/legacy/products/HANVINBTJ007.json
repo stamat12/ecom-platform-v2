@@ -1,0 +1,74 @@
+{
+  "HANVINBTJ007": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Schwarz",
+      "Size": "XXL"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Trainingsjacke mit Mesh-Futter und Reißverschlusstaschen",
+      "Keywords": "Nike Fit Storm Trainingsjacke",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ007 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ007 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ007 (8).jpg"
+        },
+        {
+          "filename": "HANVINBTJ007 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "FitStorm",
+      "Keyword 1": "Sportjacke",
+      "Keyword 2": "Windjacke",
+      "Keyword 3": "Laufjacke",
+      "eBay Title": "Nike FitStorm Jacke Herren Schwarz XXL Sportjacke Windjacke Laufjacke Gut"
+    }
+  }
+}

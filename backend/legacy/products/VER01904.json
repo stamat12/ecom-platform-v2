@@ -1,0 +1,67 @@
+{
+  "VER01904": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 155237,
+      "ISIN": null,
+      "Supplier Title": "Damenbekleidung Größe L"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 5.27
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": 8445110196603.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Desigual",
+      "Color": "Mehrfarbig",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Figurbetontes, langärmeliges Strickkleid mit Cut-Outs an der Taille und meliertem Garn.",
+      "Keywords": "Odissey Strickkleid",
+      "Materials": "50% Viskose, 29% Polyester, 21% Polyamid"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01904 (3).jpg"
+        },
+        {
+          "filename": "VER01904 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

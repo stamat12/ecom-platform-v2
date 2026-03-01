@@ -1,0 +1,65 @@
+{
+  "VER01045": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24061662,
+      "Invoice Date": "2024-06-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 727315,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Chic Tantra Blazer Größe L"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 2.0,
+      "Total Cost Net": 12.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "CHIC by tantra",
+      "Color": "Orange",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Taillierter Blazer in leuchtendem Orange. Zweireiher-Optik mit silbernen Knöpfen.",
+      "Keywords": "Blazer",
+      "Materials": "95% Polyester, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_6855.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Blazer",
+      "Product Model": "",
+      "Keyword 1": "Damenjacke",
+      "Keyword 2": "Anzugjacke",
+      "Keyword 3": "modischer Blazer",
+      "eBay Title": "CHIC by tantra Blazer Damen Orange L Damenjacke Anzugjacke modischer Blazer"
+    }
+  }
+}

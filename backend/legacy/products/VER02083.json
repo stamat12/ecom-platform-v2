@@ -1,0 +1,74 @@
+{
+  "VER02083": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-15572-41",
+      "Invoice Date": "2025-10-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 707,
+      "ISIN": null,
+      "Supplier Title": "Damen Schuhe Lavorazione, Gr. 42, I1025311"
+    },
+    "Price Data": {
+      "Price Net": 16.0,
+      "Shipping Net": 2.7,
+      "Total Cost Net": 18.7
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Lamica",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Kniehohe Stiefel mit spitzer Kappe und Blockabsatz. Reißverschluss an der Innenseite. Dekorative Riemen am Knöchel.",
+      "Keywords": "Stiefel",
+      "Materials": "Obermaterial: Sonstige Materialien, Futter: Sonstige Materialien, Laufsohle: Sonstige Materialien"
+    },
+    "OP": {
+      "OP": 250.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02083 (7).jpg"
+        },
+        {
+          "filename": "VER02083 (4).jpg"
+        },
+        {
+          "filename": "VER02083 (2).jpg"
+        },
+        {
+          "filename": "VER02083 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "",
+      "Keyword 1": "Damenstiefel",
+      "Keyword 2": "Lederstiefel",
+      "Keyword 3": "Knöchelstiefel",
+      "eBay Title": "Lamica Stiefel Damen Schwarz 42 Damenstiefel Lederstiefel Knöchelstiefel"
+    }
+  }
+}

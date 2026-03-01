@@ -1,0 +1,74 @@
+{
+  "VER01025": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24052325,
+      "Invoice Date": "2024-05-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 718780,
+      "ISIN": null,
+      "Supplier Title": "About You Damen Pumps Gr. 39"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.91,
+      "Total Cost Net": 5.08
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": 4063571281434.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "About You",
+      "Color": "Beige",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Plateau-Sandaletten mit Blockabsatz und Fesselriemchen in Veloursleder-Optik. Gekreuzte Riemen vorne.",
+      "Keywords": "Sia Plateau-Sandaletten",
+      "Materials": "Obermaterial: Textil; Futter: Textil; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_5308.JPG"
+        },
+        {
+          "filename": "IMG_5309.JPG"
+        },
+        {
+          "filename": "IMG_5306.JPG"
+        },
+        {
+          "filename": "IMG_5305.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "High Heel",
+      "Product Model": "AYO2565001",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Plateau Sandalen",
+      "Keyword 3": "Abend Schuhe",
+      "eBay Title": "About You AYO2565001 High Heel Damen Beige 39 Damen Schuhe Plateau Sandalen"
+    }
+  }
+}

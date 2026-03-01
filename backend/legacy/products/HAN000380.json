@@ -1,0 +1,74 @@
+{
+  "HAN000380": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24102121,
+      "Invoice Date": "2024-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 755905,
+      "ISIN": null,
+      "Supplier Title": "Under Armour uA W infinite Größe 37,5"
+    },
+    "Price Data": {
+      "Price Net": 28.33,
+      "Shipping Net": 0.79,
+      "Total Cost Net": 29.12
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Fitness- & Laufschuhe/Damenschuhe",
+      "eBay Category ID": "158953"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Under Armour",
+      "Color": "Braun/Weiß",
+      "Size": "37.5"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Laufschuhe Infinite Pro Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000380 (1)_wb.jpg"
+        },
+        {
+          "filename": "HAN000380 (3).JPG"
+        },
+        {
+          "filename": "HAN000380 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000380 (8).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Laufschuh",
+      "Product Model": "HOVR Infinite Pro",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Trainingsschuhe",
+      "Keyword 3": "Fitness Schuhe",
+      "eBay Title": "Under Armour HOVR Infinite Pro Laufschuh Damen Braun/Weiß 37.5 Sport Schuhe"
+    }
+  }
+}

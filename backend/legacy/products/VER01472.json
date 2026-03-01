@@ -1,0 +1,71 @@
+{
+  "VER01472": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 65,
+      "ISIN": null,
+      "Supplier Title": "Damen Jeans Mavi, Gr. 27/33"
+    },
+    "Price Data": {
+      "Price Net": 12.0,
+      "Shipping Net": 2.16,
+      "Total Cost Net": 14.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Mavi",
+      "Color": "Blau",
+      "Size": "27/33"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Jeans Barcelona Slit",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01472 (3).jpg"
+        },
+        {
+          "filename": "VER01472 (1).jpg"
+        },
+        {
+          "filename": "VER01472 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jeans",
+      "Product Model": "Barcelona Slit",
+      "Keyword 1": "Hoch geschnittene Jeans",
+      "Keyword 2": "Weite Jeans",
+      "Keyword 3": "Ripped Jeans",
+      "eBay Title": "Mavi Barcelona Slit Jeans Damen Blau 27/33 Hoch geschnittene Jeans Weite Jeans"
+    }
+  }
+}

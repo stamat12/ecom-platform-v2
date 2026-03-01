@@ -1,0 +1,74 @@
+{
+  "VER01279": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 2519693,
+      "Invoice Date": "2025-01-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 646579,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Hemd Größe S"
+    },
+    "Price Data": {
+      "Price Net": 3.54,
+      "Shipping Net": 1.33,
+      "Total Cost Net": 4.87
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "J. Crew",
+      "Color": "Weiß",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen Hemd",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01279 (3).JPG"
+        },
+        {
+          "filename": "VER01279 (1).JPG"
+        },
+        {
+          "filename": "VER01279 (5).JPG"
+        },
+        {
+          "filename": "VER01279 (4).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "AW686",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Bluse",
+      "Keyword 3": "Klassisches Hemd",
+      "eBay Title": "J. Crew AW686 Hemd Damen Weiß S Langarmhemd Bluse Klassisches Hemd"
+    }
+  }
+}

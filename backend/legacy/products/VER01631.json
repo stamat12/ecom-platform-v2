@@ -1,0 +1,68 @@
+{
+  "VER01631": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716889,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Shirt Größe S"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 5.36
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Rosa",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Crop-Top, gerippt, Kontrastnähte, Print-Logo",
+      "Keywords": "Ami T-Shirt",
+      "Materials": "95% Baumwolle, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01631 (3).jpg"
+        },
+        {
+          "filename": "VER01631 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "",
+      "Keyword 1": "Damen T-Shirt",
+      "Keyword 2": "kurzarm Shirt",
+      "Keyword 3": "modisches Oberteil",
+      "eBay Title": "Von Dutch T-Shirt Damen Rosa S Damen T-Shirt kurzarm Shirt modisches Oberteil"
+    }
+  }
+}

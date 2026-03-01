@@ -1,0 +1,68 @@
+{
+  "RET00083": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK218912617",
+      "ISIN": "B09HHHZYLB",
+      "Supplier Title": "EGLO Weihnachtsstern für innen, Dekostern beleuchtet aus Papier zum Aufhängen, Fenster-Leuchtstern in Weiß, 3D Adventsstern mit Kabel, E14"
+    },
+    "Price Data": {
+      "Price Net": 5.98,
+      "Shipping Net": 0.93,
+      "Total Cost Net": 6.91
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Feste & Besondere Anlässe/Jahreszeitliche Dekoration/Christbaum- & Feiertagsschmuck",
+      "eBay Category ID": "166725"
+    },
+    "EAN": {
+      "EAN": 9008606224531.0
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Eglo",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Beleuchtet aus Papier zum Aufhängen, Fenster-Leuchtstern in Weiß, 3D Adventsstern mit Kabel, E14",
+      "Keywords": "Weihnachtsstern für innen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 29.9
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00083 (2)_wb.jpg"
+        },
+        {
+          "filename": "RET00083 (4)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Weihnachtsstern",
+      "Product Model": "",
+      "Keyword 1": "Lichterstern",
+      "Keyword 2": "Dekoleuchte",
+      "Keyword 3": "Weihnachtsdekoration",
+      "eBay Title": "Eglo Weihnachtsstern Lichterstern Dekoleuchte Weihnachtsdekoration"
+    }
+  }
+}

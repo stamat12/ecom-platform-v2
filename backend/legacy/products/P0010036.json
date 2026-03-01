@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 7,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -80,7 +82,21 @@
           "filename": "PXL_20250526_172545740.jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_172405869.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172421135.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172428121.jpg"
+        },
+        {
+          "filename": "PXL_20250526_172545740.jpg"
+        }
+      ]
     },
     "eBay Fields": {
       "required": {
@@ -100,6 +116,14 @@
         "Textilpflege": "Maschinenwäsche",
         "Modell": "Dryfor Apparel"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "2245",
+      "Keyword 1": "Sportshirt",
+      "Keyword 2": "Funktionsshirt",
+      "Keyword 3": "Atmungsaktives Shirt",
+      "eBay Title": "Nordblanc 2245 T-Shirt Herren Rot S Sportshirt Funktionsshirt"
     }
   }
 }

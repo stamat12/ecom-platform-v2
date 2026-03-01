@@ -54,7 +54,9 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 12,
-        "count_enhanced": 1
+        "count_enhanced": 1,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -99,7 +101,26 @@
         {
           "filename": "studio_restoration_real_VER02071 (7)_1.jpg"
         }
+      ],
+      "main_images": [
+        {
+          "filename": "VER02071 (7).jpg"
+        },
+        {
+          "filename": "VER02071 (1).jpg"
+        },
+        {
+          "filename": "VER02071 (11).jpg"
+        }
       ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sweatshirt",
+      "Product Model": "Balu",
+      "Keyword 1": "Langarmshirt",
+      "Keyword 2": "Pullover",
+      "Keyword 3": "Kapuzenpullover",
+      "eBay Title": "G-Star RAW Balu Sweatshirt Herren Beige M Langarmshirt Pullover Kapuzenpullover"
     }
   }
 }

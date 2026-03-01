@@ -1,0 +1,68 @@
+{
+  "VER01581": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 689226,
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 708098,
+      "ISIN": null,
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.5,
+      "Total Cost Net": 2.17
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Pink Intimo",
+      "Color": "Mehrfarbig",
+      "Size": "60"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Zweiteiliger Badeanzug",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 22.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01581 (13).jpg"
+        },
+        {
+          "filename": "VER01581 (27).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bikini",
+      "Product Model": "TT006",
+      "Keyword 1": "Badeanzug",
+      "Keyword 2": "Schwimmbekleidung",
+      "Keyword 3": "Bikinioberteil",
+      "eBay Title": "Pink Intimo TT006 Bikini Damen Mehrfarbig 60 Badeanzug Schwimmbekleidung"
+    }
+  }
+}

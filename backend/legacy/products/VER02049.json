@@ -1,0 +1,68 @@
+{
+  "VER02049": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25082189,
+      "Invoice Date": "2025-08-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 842078,
+      "ISIN": null,
+      "Supplier Title": "Red point Denim GILET Größe 54"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 0.42,
+      "Total Cost Net": 17.09
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": 4099509668497.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Redpoint Denim",
+      "Color": "Braun",
+      "Size": "54"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Weste im Cargo-Stil mit Stehkragen und vielen praktischen Taschen.",
+      "Keywords": "Buster Weste",
+      "Materials": "Oberstoff: 100% Baumwolle, Futter: 100% Polyester"
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02049 (2).jpg"
+        },
+        {
+          "filename": "VER02049 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Weste",
+      "Product Model": "Buster",
+      "Keyword 1": "Ärmellose Jacke",
+      "Keyword 2": "Outdoor Weste",
+      "Keyword 3": "Taschen Weste",
+      "eBay Title": "Redpoint Denim Buster Weste Herren Braun 54 Ärmellose Jacke Outdoor Weste"
+    }
+  }
+}

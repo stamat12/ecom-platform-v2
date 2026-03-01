@@ -1,0 +1,67 @@
+{
+  "VER01906": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 155250,
+      "ISIN": null,
+      "Supplier Title": "Damenbekleidung Größe M"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 5.27
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Pullover & Strick",
+      "eBay Category ID": "63866"
+    },
+    "EAN": {
+      "EAN": 8447144184067.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Mango",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Feinstrick-Cardigan in offener Form ohne Verschluss. Artikelnummer: 77010578.",
+      "Keywords": "Izalma Cardigan",
+      "Materials": "83% Viskose, 17% Polyamid"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01906 (3).jpg"
+        },
+        {
+          "filename": "VER01906 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

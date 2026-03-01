@@ -1,0 +1,68 @@
+{
+  "HAN000063": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "sports-4less",
+      "Invoice": "202406003-INT",
+      "Invoice Date": "2024-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 3.5,
+      "Shipping Net": 0.84,
+      "Total Cost Net": 4.34
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Kurze Sporthosen",
+      "eBay Category ID": "260955"
+    },
+    "EAN": {
+      "EAN": 4064047517323.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "adidas",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Trainingsshorts aus feuchtigkeitsableitendem AEROREADY-Material. Hergestellt aus recycelten Materialien. Tonale 3-Streifen an der Seite.",
+      "Keywords": "Pacer Trainingsshorts",
+      "Materials": "100% Recyceltes Polyester"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4737.jpg"
+        },
+        {
+          "filename": "IMG_4735.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Shorts",
+      "Product Model": "GT1186",
+      "Keyword 1": "Sportshorts",
+      "Keyword 2": "Trainingsshorts",
+      "Keyword 3": "Freizeithosen",
+      "eBay Title": "adidas GT1186 Shorts Damen Schwarz L Sportshorts Trainingsshorts Freizeithosen"
+    }
+  }
+}

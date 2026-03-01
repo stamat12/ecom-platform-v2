@@ -1,0 +1,71 @@
+{
+  "VER00513": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2309301,
+      "Invoice Date": "2023-09-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 321188,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Girotti Damenschuhe Größe 38"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.66,
+      "Total Cost Net": 8.99
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Girotti",
+      "Color": "Schwarz",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Klassische Block Heel Schuhe",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 279.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_0086_wb.jpg"
+        },
+        {
+          "filename": "IMG_0088_wb.jpg"
+        },
+        {
+          "filename": "IMG_0091_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Blockabsatz Schuhe",
+      "Keyword 2": "Klassische Schuhe",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "Girotti Schuh Schwarz 38 Blockabsatz Schuhe Klassische Schuhe Damen Schuhe"
+    }
+  }
+}

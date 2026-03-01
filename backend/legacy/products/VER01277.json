@@ -1,0 +1,74 @@
+{
+  "VER01277": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 2519693,
+      "Invoice Date": "2025-01-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 578038,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Skijacke Größe XXL"
+    },
+    "Price Data": {
+      "Price Net": 66.08,
+      "Shipping Net": 1.33,
+      "Total Cost Net": 67.41
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Wintersport/Bekleidung/Mäntel, Jacken & Westen",
+      "eBay Category ID": "26346"
+    },
+    "EAN": {
+      "EAN": 3607684612924.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Rossignol",
+      "Color": "Blau",
+      "Size": "XXL"
+    },
+    "Intern Generated Info": {
+      "More details": "Technische Skijacke mit 20.000er Wassersäule. Ausgestattet mit Schneefang, Skipasstasche und Handgamaschen. Farbname: Dark Navy.",
+      "Keywords": "Velika Skijacke",
+      "Materials": "Obermaterial: 100% Polyester; Isolierung: 100% Polyester"
+    },
+    "OP": {
+      "OP": 450.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01277 (2).JPG"
+        },
+        {
+          "filename": "VER01277 (12).JPG"
+        },
+        {
+          "filename": "VER01277 (7).JPG"
+        },
+        {
+          "filename": "VER01277 (8).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "VELIKAJKT",
+      "Keyword 1": "Wasserdichte Jacke",
+      "Keyword 2": "Winddichte Jacke",
+      "Keyword 3": "Skijacke",
+      "eBay Title": "Rossignol VELIKAJKT Jacke Herren Blau XXL Wasserdichte Jacke Winddichte Jacke"
+    }
+  }
+}

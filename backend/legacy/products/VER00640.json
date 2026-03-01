@@ -1,0 +1,71 @@
+{
+  "VER00640": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2310486,
+      "Invoice Date": "2023-10-06T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 182027,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Fabletics Top Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 0.83,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 1.2
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Sport-BHs",
+      "eBay Category ID": "59315"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Fabletics",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Sport-BH für leichte Belastung. Schillernder Stoff (Iridescent) in Lederoptik. Verstellbare Träger. Farbname: Black Mirage.",
+      "Keywords": "Morgan Iridescent Sport-BH",
+      "Materials": "75% Polyester, 25% Elasthan"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_3134.JPG"
+        },
+        {
+          "filename": "IMG_3135.JPG"
+        },
+        {
+          "filename": "IMG_3132.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sport-BH",
+      "Product Model": "",
+      "Keyword 1": "Sportoberteil",
+      "Keyword 2": "Sport-Bustier",
+      "Keyword 3": "Fitness-BH",
+      "eBay Title": "Fabletics Sport-BH Damen Schwarz XL Sportoberteil Sport-Bustier Fitness-BH"
+    }
+  }
+}

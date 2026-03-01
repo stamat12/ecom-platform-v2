@@ -1,0 +1,74 @@
+{
+  "VER00745": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666318,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Be Mine Bridal Neima Gr. UK 5"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 3.87
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Be Mine",
+      "Color": "Elfenbein",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Elegante Brautschuhe in Satin-Optik. Spitz zulaufendes d'Orsay-Design mit Blockabsatz und Fesselriemchen.",
+      "Keywords": "Neima Brautschuhe",
+      "Materials": "Obermaterial: Textil (Satin); Futter: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1872.JPG"
+        },
+        {
+          "filename": "IMG_1875.JPG"
+        },
+        {
+          "filename": "IMG_1877.JPG"
+        },
+        {
+          "filename": "IMG_1870.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Neima",
+      "Keyword 1": "Blockabsatzschuhe",
+      "Keyword 2": "Brautschuhe",
+      "Keyword 3": "Satin Schuhe",
+      "eBay Title": "Be Mine Neima Schuh Damen Elfenbein 38 Blockabsatzschuhe Brautschuhe"
+    }
+  }
+}

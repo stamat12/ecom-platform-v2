@@ -1,0 +1,73 @@
+{
+  "VER01781": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25062248,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 811697,
+      "ISIN": null,
+      "Supplier Title": "Anna Field Stiefelette Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 11.67,
+      "Shipping Net": 1.1,
+      "Total Cost Net": 12.77
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": 4059895262679.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Anna Field",
+      "Color": "Beige",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische Stiefelette mit Blockabsatz und seitlichem Reißverschluss.",
+      "Keywords": "Stiefelette",
+      "Materials": "Obermaterial: Wildleder, Futter: Leder und Textil, Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01781 (11).jpg"
+        },
+        {
+          "filename": "VER01781 (4).jpg"
+        },
+        {
+          "filename": "VER01781 (7).jpg"
+        },
+        {
+          "filename": "VER01781 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

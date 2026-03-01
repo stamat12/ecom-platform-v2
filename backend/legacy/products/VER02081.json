@@ -1,0 +1,71 @@
+{
+  "VER02081": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 696357,
+      "Invoice Date": "2025-10-06T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 156437,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. T-Shirt S"
+    },
+    "Price Data": {
+      "Price Net": 5.9,
+      "Shipping Net": 2.66,
+      "Total Cost Net": 8.56
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": 196975381241.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Jordan",
+      "Color": "Weiß",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "T-Shirt mit gesticktem Air Jordan 1 Sneaker auf der Brust und Jumpman Logo am Ärmel.",
+      "Keywords": "Flight Essentials T-Shirt",
+      "Materials": "Baumwolle"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02081 (2).jpg"
+        },
+        {
+          "filename": "VER02081 (7).jpg"
+        },
+        {
+          "filename": "VER02081 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "FN5982-100",
+      "Keyword 1": "Herren T-Shirt",
+      "Keyword 2": "Sport T-Shirt",
+      "Keyword 3": "Baumwolle T-Shirt",
+      "eBay Title": "Jordan FN5982-100 T-Shirt Herren Weiß S Herren T-Shirt Sport T-Shirt"
+    }
+  }
+}

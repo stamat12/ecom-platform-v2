@@ -1,0 +1,71 @@
+{
+  "VER01506": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 805885,
+      "ISIN": null,
+      "Supplier Title": "Tamaris M2373841 Sneaker Größe 36"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 18.09
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tamaris",
+      "Color": "Weiß",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Sneaker",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01506 (5).jpg"
+        },
+        {
+          "filename": "VER01506 (4).jpg"
+        },
+        {
+          "filename": "VER01506 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "M2373841",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Leder Sneaker",
+      "Keyword 3": "Sport Schuhe",
+      "eBay Title": "Tamaris M2373841 Sneaker Damen Weiß 36 Damen Schuhe Leder Sneaker Sport Schuhe"
+    }
+  }
+}

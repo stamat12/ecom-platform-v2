@@ -1,0 +1,68 @@
+{
+  "VER01619": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716519,
+      "ISIN": null,
+      "Supplier Title": "Nakd One shoulder Shirt Größe M"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 4.54
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": 7325944740335.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "NA-KD",
+      "Color": "Weiß",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Einarmiges, geripptes Crop-Top",
+      "Keywords": "Einarmiges Crop-Top",
+      "Materials": "95% Viskose, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01619 (3).jpg"
+        },
+        {
+          "filename": "VER01619 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Oberteil",
+      "Product Model": "One Shoulder Rib Top",
+      "Keyword 1": "Langarmshirt",
+      "Keyword 2": "Rippshirt",
+      "Keyword 3": "Damenoberteil",
+      "eBay Title": "NA-KD One Shoulder Rib Top Oberteil Damen Weiß M Langarmshirt Rippshirt"
+    }
+  }
+}

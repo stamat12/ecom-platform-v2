@@ -1,0 +1,71 @@
+{
+  "VER01027": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24052370,
+      "Invoice Date": "2024-05-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 726788,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Néonail Kosmetikkoffer Ca. 25x20x17cm"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 15.0
+    },
+    "Ebay Category": {
+      "Category": "/Reisen/Reisekoffer & -taschen/Beauty-Cases",
+      "eBay Category ID": "26124"
+    },
+    "EAN": {
+      "EAN": 5903274026210.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "NeoNail",
+      "Color": "Schwarz",
+      "Size": "24x20x17 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Kosmetikkoffer mit 3D-Diamant-Prägung und ausklappbaren Fächern. Abschließbar, inklusive Schlüssel.",
+      "Keywords": "Diamond Kosmetikkoffer",
+      "Materials": "Aluminium, Kunststoff, Samt-Innenfutter"
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "PXL_20250801_103956561.jpg"
+        },
+        {
+          "filename": "PXL_20250801_104011497.jpg"
+        },
+        {
+          "filename": "IMG_7362.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Aufbewahrungskiste",
+      "Product Model": "",
+      "Keyword 1": "Schmuckkoffer",
+      "Keyword 2": "Organizer",
+      "Keyword 3": "Kosmetikkoffer",
+      "eBay Title": "NeoNail Aufbewahrungskiste Damen Schwarz 24x20x17 cm Schmuckkoffer Organizer"
+    }
+  }
+}

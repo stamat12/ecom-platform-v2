@@ -1,0 +1,74 @@
+{
+  "VER01251": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24121537,
+      "Invoice Date": "2024-12-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 727701,
+      "ISIN": null,
+      "Supplier Title": "Chasin Parka Größe M"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 46.38
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Chasin",
+      "Color": "Dunkelgrün",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Return Parka",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 280.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01251 (3).JPG"
+        },
+        {
+          "filename": "VER01251 (10).JPG"
+        },
+        {
+          "filename": "VER01251 (9).JPG"
+        },
+        {
+          "filename": "VER01251 (11).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Parka",
+      "Product Model": "RETURN PARKA",
+      "Keyword 1": "Wetterfester Parka",
+      "Keyword 2": "Damen Parka",
+      "Keyword 3": "Winterjacke",
+      "eBay Title": "Chasin RETURN PARKA Parka Herren Dunkelgrün M Wetterfester Parka Damen Parka"
+    }
+  }
+}

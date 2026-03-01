@@ -1,0 +1,67 @@
+{
+  "VER01975": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 693179,
+      "Invoice Date": "2025-08-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152096,
+      "ISIN": null,
+      "Supplier Title": "Leggings Damengröße S"
+    },
+    "Price Data": {
+      "Price Net": 11.8,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 12.33
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Hosen & Leggings",
+      "eBay Category ID": "59280"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Pink",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Nike Go Leggings sind eng anliegende Laufhosen mit mittelhohem Bund und festem Halt. Sie bieten mehrere Taschen für die sichere Aufbewahrung von wichtigen Dingen.",
+      "Keywords": "Go Leggings",
+      "Materials": "78 % Polyester, 22 % Elastan"
+    },
+    "OP": {
+      "OP": 99.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01975 (2).jpg"
+        },
+        {
+          "filename": "VER01975 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

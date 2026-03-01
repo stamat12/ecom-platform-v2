@@ -1,0 +1,68 @@
+{
+  "VER01674": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051874,
+      "Invoice Date": "2025-05-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716977,
+      "ISIN": null,
+      "Supplier Title": "H&M Mama Kleid Größe S"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 5.36
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": 20334109397185.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Schwarz",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Kurzarm, V-Ausschnitt, elastische Taille, Knielänge",
+      "Keywords": "Mama Kleid",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01674 (4).jpg"
+        },
+        {
+          "filename": "VER01674 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "",
+      "Keyword 1": "Damenkleid",
+      "Keyword 2": "Punkte",
+      "Keyword 3": "Sommerkleid",
+      "eBay Title": "H&M Kleid Damen Schwarz S Damenkleid Punkte Sommerkleid Neu mit Etiketten"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "VER01432": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25032156,
+      "Invoice Date": "2025-03-31T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 801902,
+      "ISIN": null,
+      "Supplier Title": "Reebok Lite 4 Sneaker Größe 38,5 men"
+    },
+    "Price Data": {
+      "Price Net": 11.67,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 12.04
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Reebok",
+      "Color": "Weiß",
+      "Size": "38.5"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Lite 4 Sneakers",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01432 (6).jpg"
+        },
+        {
+          "filename": "VER01432 (5).jpg"
+        },
+        {
+          "filename": "VER01432 (3).jpg"
+        },
+        {
+          "filename": "VER01432 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Laufschuh",
+      "Product Model": "Lite 4",
+      "Keyword 1": "Sport Schuh",
+      "Keyword 2": "Trainingsschuh",
+      "Keyword 3": "Freizeitschuh",
+      "eBay Title": "Reebok Lite 4 Laufschuh Herren Weiß 38.5 Sport Schuh Trainingsschuh"
+    }
+  }
+}

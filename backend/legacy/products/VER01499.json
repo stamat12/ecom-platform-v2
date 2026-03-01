@@ -1,0 +1,68 @@
+{
+  "VER01499": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 795908,
+      "ISIN": null,
+      "Supplier Title": "Tommy Hilfiger Boots Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 22.5,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 23.92
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Schwarz",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Stiefeletten Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 200.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01499 (3).jpg"
+        },
+        {
+          "filename": "VER01499 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "Elevated Chunky",
+      "Keyword 1": "Hochschaftstiefel",
+      "Keyword 2": "Chunky Boots",
+      "Keyword 3": "Modische Stiefel",
+      "eBay Title": "Tommy Hilfiger Elevated Chunky Stiefel Damen Schwarz 41 Hochschaftstiefel"
+    }
+  }
+}

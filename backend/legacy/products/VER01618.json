@@ -1,0 +1,68 @@
+{
+  "VER01618": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716872,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Samt Oberteil Größe XS"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 4.54
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Pink",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Bandeau-Top, Samt-Optik, Logo aus Strasssteinen",
+      "Keywords": "Sway Top",
+      "Materials": "70% Polyester, 30% Elasthan"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01618 (3).jpg"
+        },
+        {
+          "filename": "VER01618 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bandeau",
+      "Product Model": "SWANY",
+      "Keyword 1": "Oberteil",
+      "Keyword 2": "Damenmode",
+      "Keyword 3": "Trägershirt",
+      "eBay Title": "Von Dutch SWANY Bandeau Damen Pink XS Oberteil Damenmode Trägershirt"
+    }
+  }
+}

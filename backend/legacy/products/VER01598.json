@@ -1,0 +1,68 @@
+{
+  "VER01598": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 689226,
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 708264,
+      "ISIN": null,
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.5,
+      "Total Cost Net": 2.17
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Katia Swimwear",
+      "Color": "Blau",
+      "Size": "54"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Zweiteiliger Bikini",
+      "Materials": "82% Polyamide; 18% Elastane"
+    },
+    "OP": {
+      "OP": 22.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01598 (3).jpg"
+        },
+        {
+          "filename": "VER01598 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bikini",
+      "Product Model": "DY7798",
+      "Keyword 1": "Badeanzug",
+      "Keyword 2": "Schwimmbekleidung",
+      "Keyword 3": "Bikinioberteil",
+      "eBay Title": "Katia Swimwear DY7798 Bikini Damen Blau 54 Badeanzug Schwimmbekleidung"
+    }
+  }
+}

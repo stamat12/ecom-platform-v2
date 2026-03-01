@@ -1,0 +1,68 @@
+{
+  "JAL00061": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spYl8v9F22t",
+      "ISIN": "b0drcpqz2v",
+      "Supplier Title": "GRACE KARIN Casual Printed Women's Dress Wrap Dress for Summer Casual Dress for Party Beach Orange Diamond L"
+    },
+    "Price Data": {
+      "Price Net": 1.26,
+      "Shipping Net": 0.38,
+      "Total Cost Net": 1.64
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Grace Karin",
+      "Color": "Orange",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Ärmelloses Sommerkleid mit V-Ausschnitt, Rautenmuster und gesmokter Taille. Das Kleid ist gefüttert.",
+      "Keywords": "Kleid",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 42.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 012"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "",
+      "Keyword 1": "Sommerkleid",
+      "Keyword 2": "Maxikleid",
+      "Keyword 3": "Damenkleid",
+      "eBay Title": "Grace Karin Kleid Damen Orange L Sommerkleid Maxikleid Damenkleid Kundenretour"
+    }
+  }
+}

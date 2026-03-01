@@ -1,0 +1,71 @@
+{
+  "VER01695": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2506832,
+      "Invoice Date": "2025-06-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 814772,
+      "ISIN": null,
+      "Supplier Title": "Puma skye Sneaker Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 20.75
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Puma",
+      "Color": "Weiß",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Skye Sneakers Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01695 (1).jpg"
+        },
+        {
+          "filename": "VER01695 (3).jpg"
+        },
+        {
+          "filename": "VER01695 (7)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Skye",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Puma Skye Sneaker Damen Weiß 37 Damen Schuhe Sport Schuhe Freizeitschuhe"
+    }
+  }
+}

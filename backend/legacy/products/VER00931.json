@@ -1,0 +1,77 @@
+{
+  "VER00931": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2405307,
+      "Invoice Date": "2024-05-06T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 721064,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Ikonta Zeiss Ikone Antike Kompakt-Klappkamera 520/18 Vintage Kamera,"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.78,
+      "Total Cost Net": 9.11
+    },
+    "Ebay Category": {
+      "Category": "/Foto & Camcorder/Photographica/Alte Kameras/Klappkameras",
+      "eBay Category ID": "11717"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Zeiss Ikon",
+      "Color": "Schwarz",
+      "Size": "6x9 cm (120er Film)"
+    },
+    "Intern Generated Info": {
+      "More details": "Vintage Faltkamera, ca. 1930er Jahre. Nutzt 120er Rollfilm. Mit ausklappbarem Sportsucher.",
+      "Keywords": "Ikonta 520/2 Faltkamera",
+      "Materials": "Metallgehäuse, Lederbalgen, Glaslinse"
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4792.JPG"
+        },
+        {
+          "filename": "IMG_4791.JPG"
+        },
+        {
+          "filename": "IMG_4793.JPG"
+        },
+        {
+          "filename": "IMG_4794.JPG"
+        },
+        {
+          "filename": "IMG_4796.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kamera",
+      "Product Model": "",
+      "Keyword 1": "Film Kamera",
+      "Keyword 2": "Vintage Kamera",
+      "Keyword 3": "Analoge Kamera",
+      "eBay Title": "Zeiss Ikon Kamera Unisex Schwarz 6x9 cm (120er Film) Film Kamera Vintage Kamera"
+    }
+  }
+}

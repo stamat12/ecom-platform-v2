@@ -1,0 +1,67 @@
+{
+  "VER01940": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2508680,
+      "Invoice Date": "2025-08-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 841507,
+      "ISIN": null,
+      "Supplier Title": "S Oliver Hemd Größe M"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.9,
+      "Total Cost Net": 10.07
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "s.Oliver",
+      "Color": "Dunkelblau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Leinenhemd mit Regular Fit und Button-Down-Kragen.",
+      "Keywords": "Hemd",
+      "Materials": "100% Leinen"
+    },
+    "OP": {
+      "OP": 49.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01940 (2).jpg"
+        },
+        {
+          "filename": "VER01940 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

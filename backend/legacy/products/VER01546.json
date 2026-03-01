@@ -1,0 +1,68 @@
+{
+  "VER01546": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13345-38",
+      "Invoice Date": "2025-04-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 66,
+      "ISIN": null,
+      "Supplier Title": "Jacke Lundhags Lo Ms, Gr. S, N31-10-3-2"
+    },
+    "Price Data": {
+      "Price Net": 40.0,
+      "Shipping Net": 7.2,
+      "Total Cost Net": 47.2
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Herren/Jacken & Westen",
+      "eBay Category ID": "181358"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Lundhags",
+      "Color": "Rot",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Extrem leichtes, wasserdichtes 3-Lagen-Gewebe aus recyceltem Polyester, das eine hervorragende Kombination aus Komfort und Schutz bietet. Das minimalistische Design sorgt für geringes Gewicht und Packbarkeit. Die clevere Konstruktion des Musters sorgt für Bewegungsfreiheit.\nLeichter Stretch sorgt für zusätzlichen Komfort. Eine geräumige Brusttasche mit Reißverschluss Elastische Ärmelbündchen und unterer Saum",
+      "Keywords": "Lo Ms Jacke Herren",
+      "Materials": "Lundhags Waterproof (LWP) 3-lagig 78 RM (100 % Polyester – recycelt, Polyestermembran, bluesign®-zertifiziert). Wassersäule: 20.000 mm. Feuchtigkeitsdurchlässigkeit: 25.000 g/m2/24h. "
+    },
+    "OP": {
+      "OP": 320.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01546 (3).jpg"
+        },
+        {
+          "filename": "VER01546 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "Lo Ms Jacket",
+      "Keyword 1": "Wanderjacke",
+      "Keyword 2": "Regenjacke",
+      "Keyword 3": "Outdoorjacke",
+      "eBay Title": "Lundhags Lo Ms Jacket Jacke Herren Rot S Wanderjacke Regenjacke Outdoorjacke"
+    }
+  }
+}

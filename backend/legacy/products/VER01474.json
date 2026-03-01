@@ -1,0 +1,71 @@
+{
+  "VER01474": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 126,
+      "ISIN": null,
+      "Supplier Title": "Damen Shorts The North Face, Gr. 8"
+    },
+    "Price Data": {
+      "Price Net": 18.0,
+      "Shipping Net": 3.24,
+      "Total Cost Net": 21.24
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Shorts & Bermudas",
+      "eBay Category ID": "11555"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "The North Face",
+      "Color": "Rosa",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "W Project Sht",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01474 (1).jpg"
+        },
+        {
+          "filename": "VER01474 (3).jpg"
+        },
+        {
+          "filename": "VER01474 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Shorts",
+      "Product Model": "W Project SHT",
+      "Keyword 1": "Damen Shorts",
+      "Keyword 2": "Freizeithose",
+      "Keyword 3": "Sommer Shorts",
+      "eBay Title": "The North Face W Project SHT Shorts Damen Rosa M Damen Shorts Freizeithose"
+    }
+  }
+}

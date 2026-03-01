@@ -1,0 +1,71 @@
+{
+  "VER02101": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 2536714,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 333989,
+      "ISIN": null,
+      "Supplier Title": "Hose 3/4 - Jersey-Hose, Größe S"
+    },
+    "Price Data": {
+      "Price Net": 0.83,
+      "Shipping Net": 0.82,
+      "Total Cost Net": 1.66
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": 4068947030562.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tchibo",
+      "Color": "Blau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Viskose-Stretch-Qualität, Eingrifftaschen, Beinabschluss mit angesetztem Bündchen, eingelegte Falten auf der Vorderseite",
+      "Keywords": "MT30 Hose",
+      "Materials": "95% Viskose, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 29.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 012"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02101 (4).jpg"
+        },
+        {
+          "filename": "VER02101 (5).jpg"
+        },
+        {
+          "filename": "VER02101 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "3/4-Jerseyhose",
+      "Keyword 1": "Jerseyhose",
+      "Keyword 2": "Cropped Hose",
+      "Keyword 3": "Damenhose",
+      "eBay Title": "Tchibo 3/4-Jerseyhose Hose Damen Blau S Jerseyhose Cropped Hose Damenhose"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "VER01594": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 689226,
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 708216,
+      "ISIN": null,
+      "Supplier Title": "Badeanzug Größe"
+    },
+    "Price Data": {
+      "Price Net": 0.83,
+      "Shipping Net": 0.5,
+      "Total Cost Net": 1.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Rot",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Zweiteiliger Bikini",
+      "Materials": "82% Polyamide; 18% Elastane"
+    },
+    "OP": {
+      "OP": 16.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01594 (3).jpg"
+        },
+        {
+          "filename": "VER01594 (25).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bikini",
+      "Product Model": "",
+      "Keyword 1": "Badeanzug",
+      "Keyword 2": "Schwimmbekleidung",
+      "Keyword 3": "Bikinioberteil",
+      "eBay Title": "Bikini Damen Rot 42 Badeanzug Schwimmbekleidung Bikinioberteil Neu mit Etiketten"
+    }
+  }
+}

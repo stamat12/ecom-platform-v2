@@ -54,7 +54,9 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 12,
-        "count_enhanced": 1
+        "count_enhanced": 1,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -100,7 +102,26 @@
           "filename": "studio_restoration_real_VER02074 (10)_1_upscaled_x4.jpg",
           "upscaled": true
         }
+      ],
+      "main_images": [
+        {
+          "filename": "VER02074 (2).jpg"
+        },
+        {
+          "filename": "VER02074 (5).jpg"
+        },
+        {
+          "filename": "VER02074 (7).jpg"
+        }
       ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Orinoco2 Penny",
+      "Keyword 1": "Penny Loafer",
+      "Keyword 2": "Lederschuhe",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "Clarks Orinoco2 Penny Schuh Damen Braun 40 Penny Loafer Lederschuhe Damen Schuhe"
     }
   }
 }

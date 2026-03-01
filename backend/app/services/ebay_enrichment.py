@@ -6,6 +6,8 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, Any, List, Optional
+from datetime import datetime
+from uuid import uuid4
 from openai import OpenAI
 import os
 
@@ -26,6 +28,42 @@ logger = logging.getLogger(__name__)
 _openai_client: Optional[OpenAI] = None
 
 SEO_FIELD_KEYS = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"]
+
+_seo_debug_logger: Optional[logging.Logger] = None
+
+
+def _get_seo_debug_logger() -> logging.Logger:
+    global _seo_debug_logger
+    if _seo_debug_logger is not None:
+        return _seo_debug_logger
+
+    debug_logger = logging.getLogger("ebay_seo_debug")
+    debug_logger.setLevel(logging.INFO)
+    debug_logger.propagate = False
+
+    if not debug_logger.handlers:
+        logs_dir = Path(__file__).resolve().parents[2] / "logs"
+        logs_dir.mkdir(parents=True, exist_ok=True)
+        log_file = logs_dir / "ebay_seo_debug.log"
+        handler = logging.FileHandler(log_file, encoding="utf-8")
+        handler.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
+        debug_logger.addHandler(handler)
+
+    _seo_debug_logger = debug_logger
+    return _seo_debug_logger
+
+
+def _seo_debug(event: str, trace_id: str, **fields: Any) -> None:
+    payload = {
+        "event": event,
+        "trace_id": trace_id,
+        "ts": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+    }
+    payload.update(fields)
+    try:
+        _get_seo_debug_logger().info(json.dumps(payload, ensure_ascii=False, default=str))
+    except Exception as e:
+        logger.warning(f"Failed to write SEO debug log for event={event}: {e}")
 
 
 def _parse_hybrid_sku(sku_string: str) -> List[str]:
@@ -339,8 +377,17 @@ def _extract_title_for_seo(product_json: Dict[str, Any], sku: str) -> str:
     return ""
 
 
-def _call_openai_text_json(system_prompt: str, user_prompt: str) -> Dict[str, str]:
+def _call_openai_text_json(system_prompt: str, user_prompt: str, trace_id: Optional[str] = None, sku: str = "") -> Dict[str, str]:
     try:
+        if trace_id:
+            _seo_debug(
+                "openai_text_request",
+                trace_id,
+                sku=sku,
+                prompt_preview=user_prompt[:400],
+                model=EBAY_ENRICHMENT_MODEL,
+                max_tokens=300,
+            )
         client = get_openai_client()
         response = client.chat.completions.create(
             model=EBAY_ENRICHMENT_MODEL,
@@ -354,17 +401,33 @@ def _call_openai_text_json(system_prompt: str, user_prompt: str) -> Dict[str, st
         )
         raw = response.choices[0].message.content
         if not raw:
+            if trace_id:
+                _seo_debug("openai_text_empty_response", trace_id, sku=sku)
             return {}
+        if trace_id:
+            _seo_debug("openai_text_raw_response", trace_id, sku=sku, raw_preview=str(raw)[:800])
         parsed = json.loads(raw)
         if not isinstance(parsed, dict):
+            if trace_id:
+                _seo_debug("openai_text_non_dict_response", trace_id, sku=sku, parsed_type=type(parsed).__name__)
             return {}
         cleaned: Dict[str, str] = {}
         for key in SEO_FIELD_KEYS:
             value = parsed.get(key)
             cleaned[key] = "" if value is None else str(value).strip()
+        if trace_id:
+            _seo_debug(
+                "openai_text_parsed",
+                trace_id,
+                sku=sku,
+                filled_keys=[k for k, v in cleaned.items() if v],
+                empty_keys=[k for k, v in cleaned.items() if not v],
+            )
         return cleaned
     except Exception as e:
         logger.error(f"OpenAI SEO extraction failed: {e}")
+        if trace_id:
+            _seo_debug("openai_text_error", trace_id, sku=sku, error=str(e))
         return {}
 
 
@@ -377,8 +440,12 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     - Copies the same SEO fields to all other SKUs with JSON files
     - Skips SKUs without JSON files gracefully
     """
+    trace_id = uuid4().hex[:12]
+    _seo_debug("seo_enrich_start", trace_id, sku=sku, force=force)
+
     # Parse hybrid SKUs
     individual_skus = _parse_hybrid_sku(sku)
+    _seo_debug("seo_enrich_parsed_skus", trace_id, input_sku=sku, individual_skus=individual_skus)
     
     if not individual_skus:
         raise ValueError(f"Could not parse SKU: {sku}")
@@ -399,6 +466,12 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
             skus_without_json.append(individual_sku)
     
     if not skus_with_json:
+        _seo_debug(
+            "seo_enrich_no_json",
+            trace_id,
+            individual_skus=individual_skus,
+            skus_without_json=skus_without_json,
+        )
         return {
             "success": False,
             "sku": sku,
@@ -413,10 +486,16 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
         }
     
     logger.info(f"[SEO] Processing {len(skus_with_json)} SKU(s) with JSON files (skipping {len(skus_without_json)})")
+    _seo_debug(
+        "seo_enrich_json_filter",
+        trace_id,
+        skus_with_json=skus_with_json,
+        skus_without_json=skus_without_json,
+    )
     
     # Process ONLY the first SKU with image analysis (to save tokens)
     first_sku = skus_with_json[0]
-    first_result = _enrich_single_sku_seo(first_sku, force)
+    first_result = _enrich_single_sku_seo(first_sku, force, trace_id=trace_id)
     
     all_results = [first_result]
     
@@ -427,7 +506,7 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
         
         for other_sku in skus_with_json[1:]:
             # Copy without re-generating (no image analysis needed)
-            result = _copy_seo_to_sku(other_sku, seo_fields_to_copy, force)
+            result = _copy_seo_to_sku(other_sku, seo_fields_to_copy, force, trace_id=trace_id)
             all_results.append(result)
     
     # If hybrid, log summary
@@ -438,7 +517,7 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     # Display first result
     display_result = first_result if first_result.get("success") else all_results[0] if all_results else {}
     
-    return {
+    response = {
         "success": bool(first_result.get("success")),
         "sku": sku,
         "individual_skus": individual_skus,
@@ -451,12 +530,25 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
         "message": f"Generated SEO from {first_sku} and copied to {len(skus_with_json)} SKU(s)" + 
                    (f" (skipped {len(skus_without_json)} without JSON)" if skus_without_json else ""),
     }
+    _seo_debug(
+        "seo_enrich_complete",
+        trace_id,
+        success=response.get("success", False),
+        first_sku=first_sku,
+        updated_seo_fields=response.get("updated_seo_fields", 0),
+        seo_fields=response.get("seo_fields", {}),
+        skus_with_json=skus_with_json,
+        skus_without_json=skus_without_json,
+    )
+    return response
 
 
-def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False) -> Dict[str, Any]:
+def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False, trace_id: Optional[str] = None) -> Dict[str, Any]:
     """Copy SEO fields to a SKU without re-generating (saves tokens)."""
     product_json = read_sku_json(sku)
     if not product_json:
+        if trace_id:
+            _seo_debug("seo_copy_no_json", trace_id, sku=sku)
         return {
             "success": False,
             "sku": sku,
@@ -477,6 +569,17 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False) 
     
     # Count updates
     updated_count = sum(1 for key in SEO_FIELD_KEYS if (current.get(key) or "").strip() != (merged.get(key) or "").strip())
+    if trace_id:
+        _seo_debug(
+            "seo_copy_pre_save",
+            trace_id,
+            sku=sku,
+            force=force,
+            updated_count=updated_count,
+            current=current,
+            incoming=seo_fields,
+            merged=merged,
+        )
     
     # Write SEO fields to product JSON
     _write_ebay_seo_fields(product_json, merged)
@@ -490,6 +593,8 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False) 
     temp_path.replace(json_path)
     
     logger.info(f"[SEO] Copied SEO to {sku} ({updated_count} fields updated)")
+    if trace_id:
+        _seo_debug("seo_copy_complete", trace_id, sku=sku, updated_count=updated_count)
     
     return {
         "success": True,
@@ -500,10 +605,12 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False) 
     }
 
 
-def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
+def _enrich_single_sku_seo(sku: str, force: bool = False, trace_id: Optional[str] = None) -> Dict[str, Any]:
     """Enrich SEO fields for a single SKU."""
     product_json = read_sku_json(sku)
     if not product_json:
+        if trace_id:
+            _seo_debug("seo_single_no_json", trace_id, sku=sku)
         return {
             "success": False,
             "sku": sku,
@@ -513,7 +620,12 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
         }
 
     current = _read_ebay_seo_fields(product_json)
+    if trace_id:
+        _seo_debug("seo_single_current_fields", trace_id, sku=sku, current=current, force=force)
+
     if not force and all((current.get(k) or "").strip() for k in SEO_FIELD_KEYS):
+        if trace_id:
+            _seo_debug("seo_single_skip_already_filled", trace_id, sku=sku, current=current)
         return {
             "success": True,
             "sku": sku,
@@ -524,9 +636,19 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
 
     # Collect main images for vision analysis
     image_paths = _collect_main_image_paths(sku, product_json)
+    if trace_id:
+        _seo_debug(
+            "seo_single_images_collected",
+            trace_id,
+            sku=sku,
+            image_count=len(image_paths),
+            image_paths=[str(p) for p in image_paths],
+        )
     
     title = _extract_title_for_seo(product_json, sku)
     if not title:
+        if trace_id:
+            _seo_debug("seo_single_no_title", trace_id, sku=sku)
         return {
             "success": False,
             "sku": sku,
@@ -538,6 +660,8 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
     # If we have images, use vision API with images + title
     if image_paths:
         logger.info(f"Using vision API with {len(image_paths)} images for SEO enrichment of {sku}")
+        if trace_id:
+            _seo_debug("seo_single_using_vision", trace_id, sku=sku, image_count=len(image_paths), title_preview=title[:200])
         
         # Build prompt that includes title context for vision analysis
         user_prompt_vision = (
@@ -550,7 +674,7 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
             "product_type, product_model, keyword_1, keyword_2, keyword_3"
         )
         
-        proposed = _call_openai_vision(image_paths, EBAY_SEO_ENRICHMENT_PROMPT, SEO_FIELD_KEYS)
+        proposed = _call_openai_vision(image_paths, EBAY_SEO_ENRICHMENT_PROMPT, SEO_FIELD_KEYS, trace_id=trace_id, sku=sku)
         
         # If vision returns nothing, fallback to text-based approach
         if not proposed:
@@ -561,17 +685,28 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
                 "Liefere ausschließlich JSON mit genau diesen Keys: "
                 "product_type, product_model, keyword_1, keyword_2, keyword_3"
             )
-            proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text)
+            proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text, trace_id=trace_id, sku=sku)
     else:
         # No images available, use text-based approach
         logger.info(f"No images found for {sku}, using text-based SEO enrichment")
+        if trace_id:
+            _seo_debug("seo_single_no_images_text_mode", trace_id, sku=sku, title_preview=title[:200])
         user_prompt_text = (
             "Produkt-Titel:\n"
             f"{title}\n\n"
             "Liefere ausschließlich JSON mit genau diesen Keys: "
             "product_type, product_model, keyword_1, keyword_2, keyword_3"
         )
-        proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text)
+        proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text, trace_id=trace_id, sku=sku)
+
+    if trace_id:
+        _seo_debug(
+            "seo_single_proposed_fields",
+            trace_id,
+            sku=sku,
+            proposed=proposed,
+            proposed_filled_keys=[k for k, v in proposed.items() if str(v or "").strip()],
+        )
     
     if force:
         merged = {
@@ -585,6 +720,14 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
         merged = _merge_fill_only_seo(current, proposed)
 
     updated_count = sum(1 for key in SEO_FIELD_KEYS if (current.get(key) or "").strip() != (merged.get(key) or "").strip())
+    if trace_id:
+        _seo_debug(
+            "seo_single_merged_fields",
+            trace_id,
+            sku=sku,
+            merged=merged,
+            updated_count=updated_count,
+        )
 
     _write_ebay_seo_fields(product_json, merged)
 
@@ -594,6 +737,8 @@ def _enrich_single_sku_seo(sku: str, force: bool = False) -> Dict[str, Any]:
     with temp_path.open("w", encoding="utf-8") as f:
         json.dump(full_data, f, ensure_ascii=False, indent=2)
     temp_path.replace(json_path)
+    if trace_id:
+        _seo_debug("seo_single_saved", trace_id, sku=sku, json_path=str(json_path), updated_count=updated_count)
     
     return {
         "success": True,
@@ -693,7 +838,9 @@ def _build_enrichment_prompt(
 def _call_openai_vision(
     image_paths: List[Path],
     system_prompt: str,
-    field_names: List[str]
+    field_names: List[str],
+    trace_id: Optional[str] = None,
+    sku: str = "",
 ) -> Dict[str, str]:
     """
     Call OpenAI vision API to extract field values from images
@@ -703,6 +850,8 @@ def _call_openai_vision(
     """
     if not image_paths:
         logger.warning("No images provided for vision extraction")
+        if trace_id:
+            _seo_debug("openai_vision_no_images", trace_id, sku=sku)
         return {}
     
     try:
@@ -720,9 +869,13 @@ def _call_openai_vision(
                 })
             except Exception as e:
                 logger.warning(f"Failed to encode image {img_path}: {e}")
+                if trace_id:
+                    _seo_debug("openai_vision_encode_failed", trace_id, sku=sku, image_path=str(img_path), error=str(e))
         
         if not content:
             logger.error("No images successfully encoded")
+            if trace_id:
+                _seo_debug("openai_vision_all_encode_failed", trace_id, sku=sku)
             return {}
         
         # Add text instruction
@@ -747,7 +900,11 @@ def _call_openai_vision(
         raw = response.choices[0].message.content
         if not raw:
             logger.warning("Empty response from OpenAI")
+            if trace_id:
+                _seo_debug("openai_vision_empty_response", trace_id, sku=sku)
             return {}
+        if trace_id:
+            _seo_debug("openai_vision_raw_response", trace_id, sku=sku, raw_preview=str(raw)[:800], image_count=len(image_paths))
         
         parsed = json.loads(raw)
         
@@ -769,10 +926,21 @@ def _call_openai_vision(
         cleaned = {k: str(v).strip() for k, v in result.items() if k in field_names and v}
         
         logger.info(f"OpenAI extracted {len(cleaned)} field values from {len(image_paths)} images")
+        if trace_id:
+            _seo_debug(
+                "openai_vision_parsed",
+                trace_id,
+                sku=sku,
+                extracted_fields=cleaned,
+                extracted_count=len(cleaned),
+                expected_fields=field_names,
+            )
         return cleaned
         
     except Exception as e:
         logger.error(f"OpenAI vision extraction failed: {e}")
+        if trace_id:
+            _seo_debug("openai_vision_error", trace_id, sku=sku, error=str(e), image_count=len(image_paths))
         return {}
 
 

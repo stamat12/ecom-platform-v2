@@ -1,0 +1,70 @@
+{
+  "VER01974": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 693179,
+      "Invoice Date": "2025-08-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152087,
+      "ISIN": null,
+      "Supplier Title": "Leggings Damen Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 10.62,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 11.15
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Hosen & Leggings",
+      "eBay Category ID": "59280"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Lila",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Nike Go Dri-FIT Run Division Epic Luxe Leggings bieten geschmeidigen, stützenden Tragekomfort und schweißableitendes Material für ein trockenes Tragegefühl. Mehrere Taschen bieten sicheren Stauraum.",
+      "Keywords": "Laufleggings Epic Luxe",
+      "Materials": "75 % Polyester, 25 % Elastan"
+    },
+    "OP": {
+      "OP": 99.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01974 (2).jpg"
+        },
+        {
+          "filename": "VER01974 (4).jpg"
+        },
+        {
+          "filename": "VER01974 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

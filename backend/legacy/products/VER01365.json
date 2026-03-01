@@ -1,0 +1,68 @@
+{
+  "VER01365": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503147,
+      "Invoice Date": "2025-03-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 765156,
+      "ISIN": null,
+      "Supplier Title": "Na-Kd Squared Toe Strappy Heels Gr. 39"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 3.12
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "NA-KD",
+      "Color": "Silber",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Riemchenabsätze mit quadratischer Spitze",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01364 (11).JPG"
+        },
+        {
+          "filename": "VER01364 (12).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "Abend Sandalen",
+      "Keyword 3": "Hohe Absätze",
+      "eBay Title": "NA-KD Sandale Damen Silber 39 Damen Sandalen Abend Sandalen Hohe Absätze"
+    }
+  }
+}

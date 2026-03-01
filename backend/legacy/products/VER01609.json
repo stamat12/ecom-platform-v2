@@ -1,0 +1,71 @@
+{
+  "VER01609": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716726,
+      "ISIN": null,
+      "Supplier Title": "Kamoni Bikini Größe S"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 4.54
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Kamoni",
+      "Color": "Blau",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Zweiteiliger Bikini",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01609 (3).jpg"
+        },
+        {
+          "filename": "VER01609 (5).jpg"
+        },
+        {
+          "filename": "VER01609 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bikini",
+      "Product Model": "",
+      "Keyword 1": "Bikini Oberteil",
+      "Keyword 2": "Bikini Unterteil",
+      "Keyword 3": "Badeanzug",
+      "eBay Title": "Kamoni Bikini Damen Blau S Bikini Oberteil Bikini Unterteil Badeanzug"
+    }
+  }
+}

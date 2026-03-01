@@ -1,0 +1,68 @@
+{
+  "VER00898": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24041485,
+      "Invoice Date": "2024-04-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 292573,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Zero Blazer Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 13.33,
+      "Shipping Net": 0.44,
+      "Total Cost Net": 13.77
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 55722511258.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "zero",
+      "Color": "Gelb",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Blazer mit Wabenstruktur, zwei aufgesetzten Taschen und Zwei-Knopf-Verschluss. Artikelnummer: 03-1004298.",
+      "Keywords": "Blazer",
+      "Materials": "55% Polyester, 43% Baumwolle, 2% Elasthan"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4393.JPG"
+        },
+        {
+          "filename": "IMG_4394.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Blazer",
+      "Product Model": "",
+      "Keyword 1": "Damenjacke",
+      "Keyword 2": "Sommerblazer",
+      "Keyword 3": "leichte Jacke",
+      "eBay Title": "zero Blazer Damen Gelb 40 Damenjacke Sommerblazer leichte Jacke"
+    }
+  }
+}

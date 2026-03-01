@@ -1,0 +1,68 @@
+{
+  "VER00384": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2307934,
+      "Invoice Date": "2023-07-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 297227,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Damenschuhe Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.51,
+      "Total Cost Net": 2.18
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Beige",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Stiefeletten",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_8036.JPG"
+        },
+        {
+          "filename": "IMG_8034.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "",
+      "Keyword 1": "Damenstiefel",
+      "Keyword 2": "Modische Stiefel",
+      "Keyword 3": "Zipper Stiefel",
+      "eBay Title": "Stiefel Damen Beige 37 Damenstiefel Modische Stiefel Zipper Stiefel"
+    }
+  }
+}

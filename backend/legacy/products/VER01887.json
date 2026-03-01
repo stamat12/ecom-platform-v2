@@ -1,0 +1,67 @@
+{
+  "VER01887": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 145966,
+      "ISIN": null,
+      "Supplier Title": "Jeanshose Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 5.27
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
+    },
+    "EAN": {
+      "EAN": 4055315928793.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Bonita",
+      "Color": "Dunkelblau",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische 5-Pocket-Jeans in schmaler Passform (Slim Fit) mit normaler Leibhöhe und schmalem Bein.",
+      "Keywords": "Slim Fit Jeans",
+      "Materials": "81% Baumwolle, 17% Polyester, 2% Elasthan"
+    },
+    "OP": {
+      "OP": 89.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01887 (3).jpg"
+        },
+        {
+          "filename": "VER01887 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

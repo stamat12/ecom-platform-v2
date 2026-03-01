@@ -1,0 +1,67 @@
+{
+  "VER01939": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2508680,
+      "Invoice Date": "2025-08-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 841431,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein Hemd Größe 39 slim fit"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.9,
+      "Total Cost Net": 19.23
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Klassische Hemden",
+      "eBay Category ID": "57991"
+    },
+    "EAN": {
+      "EAN": 8719856168407.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Calvin Klein",
+      "Color": "Hellblau / Weiß gestreift",
+      "Size": "39 (M)"
+    },
+    "Intern Generated Info": {
+      "More details": "Langärmeliges Oxford-Hemd in schmaler Passform (Slim Fit). Artikelnummer: K10K109883.",
+      "Keywords": "Oxford Hemd",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": 89.9
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01939 (6).jpg"
+        },
+        {
+          "filename": "VER01939 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

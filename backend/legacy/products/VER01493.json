@@ -1,0 +1,65 @@
+{
+  "VER01493": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 806358,
+      "ISIN": null,
+      "Supplier Title": "Logitech H390 USB Computer Headset"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 9.75
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Notebook- & Desktop-Zubehör/Headsets",
+      "eBay Category ID": "80183"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Verpackung"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Logitech",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Komfortables Design\nMikrofon mit Rauschunterdrückung\nDrehbares Mikrofon\nLautstärkeregler am Kabel\nRein digitale Wiedergabe mit USB",
+      "Keywords": "H390 Headset",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01493 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Headset",
+      "Product Model": "H390",
+      "Keyword 1": "USB Kopfhörer",
+      "Keyword 2": "Computer Headset",
+      "Keyword 3": "Mikrofon",
+      "eBay Title": "Logitech H390 Headset USB Kopfhörer Computer Headset Mikrofon Neu mit Verpackung"
+    }
+  }
+}

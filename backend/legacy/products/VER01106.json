@@ -1,0 +1,68 @@
+{
+  "VER01106": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24091492,
+      "Invoice Date": "2024-09-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 736231,
+      "ISIN": null,
+      "Supplier Title": "Pieces Shirt Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.83,
+      "Total Cost Net": 4.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": 5714926692663.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Pieces",
+      "Color": "Altrosa",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Geripptes Langarmshirt mit Knopfleiste (Henley-Stil). Style-Nummer: 17101437. Farbname: Apple Butter.",
+      "Keywords": "Kittels Langarmshirt",
+      "Materials": "85% Viskose, 15% Polyester"
+    },
+    "OP": {
+      "OP": 20.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_7370.JPG"
+        },
+        {
+          "filename": "IMG_7371.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Langarmshirt",
+      "Product Model": "PCKITTE LS TOP NOOS",
+      "Keyword 1": "Damenoberteil",
+      "Keyword 2": "T-Shirt",
+      "Keyword 3": "Rippshirt",
+      "eBay Title": "Pieces PCKITTE LS TOP NOOS Langarmshirt Damen Altrosa XL Damenoberteil T-Shirt"
+    }
+  }
+}

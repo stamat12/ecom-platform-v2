@@ -1,0 +1,68 @@
+{
+  "VER01675": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051874,
+      "Invoice Date": "2025-05-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716995,
+      "ISIN": null,
+      "Supplier Title": "Red cycling products Radtrikot Größe S"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 9.53
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Radsport/Fahrradbekleidung/Tops, T-Shirts & Trikots",
+      "eBay Category ID": "177851"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Bioracer Speedwear",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Hochwertiges Radtrikot mit Rückentaschen und Belüftungselementen",
+      "Keywords": "Radtrikot",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01675 (4).jpg"
+        },
+        {
+          "filename": "VER01675 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Radtrikot",
+      "Product Model": "",
+      "Keyword 1": "Fahrradbekleidung",
+      "Keyword 2": "Sportshirt",
+      "Keyword 3": "Radsport",
+      "eBay Title": "Bioracer Speedwear Radtrikot Herren Schwarz M Fahrradbekleidung Sportshirt"
+    }
+  }
+}

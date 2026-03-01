@@ -1,0 +1,65 @@
+{
+  "VER01158": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411137,
+      "Invoice Date": "2024-11-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 760138,
+      "ISIN": null,
+      "Supplier Title": "MTP N8 Laptop Stand"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.63,
+      "Total Cost Net": 4.8
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Monitore, Projektoren & Zubehör/Monitor-Halterungen & -Ständer",
+      "eBay Category ID": "51052"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "MTP",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Der tragbare Laptop-Ständer ist 6-fach höhenverstellbar und faltbar.",
+      "Keywords": "N8 Multifunktionaler Laptophalter",
+      "Materials": "Aluminiumlegierung, Silikon"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01158 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Laptopständer",
+      "Product Model": "N8",
+      "Keyword 1": "tragbarer Laptopständer",
+      "Keyword 2": "verstellbarer Laptopständer",
+      "Keyword 3": "multifunktionaler Laptopständer",
+      "eBay Title": "MTP N8 Laptopständer tragbarer Laptopständer verstellbarer Laptopständer"
+    }
+  }
+}

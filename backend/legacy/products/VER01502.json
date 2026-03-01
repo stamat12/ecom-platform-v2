@@ -1,0 +1,71 @@
+{
+  "VER01502": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 795938,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein HMOHM01624 Sneaker Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 27.5,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 28.92
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Calvin Klein",
+      "Color": "Weiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Lace Up Sneaker Low",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 160.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01502 (6).jpg"
+        },
+        {
+          "filename": "VER01502 (3).jpg"
+        },
+        {
+          "filename": "VER01502 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "HM0HM01624",
+      "Keyword 1": "Lace Up Schuhe",
+      "Keyword 2": "Sportliche Schuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Calvin Klein HM0HM01624 Sneaker Damen Weiß 40 Lace Up Schuhe Sportliche Schuhe"
+    }
+  }
+}

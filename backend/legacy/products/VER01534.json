@@ -1,0 +1,71 @@
+{
+  "VER01534": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041488,
+      "Invoice Date": "2025-04-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 742025,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein Shirt Größe L"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.56,
+      "Total Cost Net": 10.56
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": 8720107152618.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Calvin Klein Jeans",
+      "Color": "Elfenbein",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "V-Ausschnitt, Logo-Stickerei vorne",
+      "Keywords": "T-Shirt Damen",
+      "Materials": "100% Übergangsbaumwolle"
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01534 (3).jpg"
+        },
+        {
+          "filename": "VER01534 (1).jpg"
+        },
+        {
+          "filename": "VER01534 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "",
+      "Keyword 1": "V-Ausschnitt T-Shirt",
+      "Keyword 2": "Damenoberteil",
+      "Keyword 3": "Baumwollshirt",
+      "eBay Title": "Calvin Klein Jeans T-Shirt Damen Elfenbein L V-Ausschnitt T-Shirt Damenoberteil"
+    }
+  }
+}

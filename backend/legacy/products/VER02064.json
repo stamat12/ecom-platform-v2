@@ -1,0 +1,71 @@
+{
+  "VER02064": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2509750,
+      "Invoice Date": "2025-09-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 848590,
+      "ISIN": null,
+      "Supplier Title": "Converse Sneaker Größe 36"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 18.81
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Converse",
+      "Color": "Weiß",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Die leichte, vorgeformte Plateausohle verleiht dir zusätzliche Höhe, ohne dich zu beschweren.",
+      "Keywords": "Chuck Taylor Plateau Canvas Sneaker",
+      "Materials": "Obermaterial: Canvas, Futter: Textil, Sohle: Gummi"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02064 (4).jpg"
+        },
+        {
+          "filename": "VER02064 (6).jpg"
+        },
+        {
+          "filename": "VER02064 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "CTAS Lift Ox",
+      "Keyword 1": "Canvas Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Sportliche Schuhe",
+      "eBay Title": "Converse CTAS Lift Ox Sneaker Damen Weiß 36 Canvas Schuhe Freizeitschuhe"
+    }
+  }
+}

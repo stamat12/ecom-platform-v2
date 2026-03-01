@@ -1,0 +1,64 @@
+{
+  "VER01851": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2507930,
+      "Invoice Date": "2025-07-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 825023,
+      "ISIN": null,
+      "Supplier Title": "Fashion Winterschuhe Größe 44"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 3.72
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": null,
+      "Color": "Schwarz",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Gefütterte High-Top Winter-Sneaker mit dicker Profilsohle und Kunstfell-Futter.",
+      "Keywords": "Winterstiefel",
+      "Materials": "Obermaterial: Synthetik; Futter: Textil (Warmfutter); Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01851 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "VER01723": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 690125,
+      "Invoice Date": "2025-06-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665548,
+      "ISIN": null,
+      "Supplier Title": "Pullover Größe M"
+    },
+    "Price Data": {
+      "Price Net": 11.8,
+      "Shipping Net": 0.57,
+      "Total Cost Net": 12.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155226"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Dunkelrot",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Gesticktes Swoosh-Logo",
+      "Keywords": "Hoodie",
+      "Materials": "80 % Baumwolle, 20 % Polyester"
+    },
+    "OP": {
+      "OP": 65.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01723 (4).jpg"
+        },
+        {
+          "filename": "VER01723 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

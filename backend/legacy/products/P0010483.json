@@ -1,0 +1,57 @@
+{
+  "P0010483": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V250100098",
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": "HANNBBMU2250REDDIAMXL015",
+      "Supplier Title": "NBBMU2250 RED DIAMOND XL"
+    },
+    "Price Data": {
+      "Price Net": null,
+      "Shipping Net": null,
+      "Total Cost Net": 0.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nordblanc",
+      "Color": "Rot",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Funktionale Herren-Unterhose in langer Form mit elastischem Bund und atmungsaktivem Material, ideal für Wintersport und Outdoor-Aktivitäten.",
+      "Keywords": "NBBMU2250 Thermohose",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 014"
+    },
+    "eBay SEO": {
+      "Product Type": "Thermohose",
+      "Product Model": "NBBMU2250",
+      "Keyword 1": "Wärmhose",
+      "Keyword 2": "Winterhose",
+      "Keyword 3": "Kälteschutzhose",
+      "eBay Title": "Nordblanc NBBMU2250 Thermohose Herren Rot XL Wärmhose Winterhose Kälteschutzhose"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "VER01615": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716863,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Top Größe XS"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 5.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Orange",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Sydney Crop Top",
+      "Materials": "95% Baumwolle, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01615 (3).jpg"
+        },
+        {
+          "filename": "VER01615 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Top",
+      "Product Model": "Sydney",
+      "Keyword 1": "Ärmelloses Oberteil",
+      "Keyword 2": "Damenoberteil",
+      "Keyword 3": "Sporttop",
+      "eBay Title": "Von Dutch Sydney Top Damen Orange XS Ärmelloses Oberteil Damenoberteil Sporttop"
+    }
+  }
+}

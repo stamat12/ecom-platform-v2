@@ -1,0 +1,74 @@
+{
+  "JAL00074": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spW73w0954B",
+      "ISIN": "b01kdx7zns",
+      "Supplier Title": "Gloria Wears Men's Traditional Leather Trousers Knee-Length with Straps (46 Dark Brown)"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 1.3,
+      "Total Cost Net": 6.02
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Trachtenmode/Lederhosen & Hosen",
+      "eBay Category ID": "80968"
+    },
+    "EAN": {
+      "EAN": 791374901900.0
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Gloria Wears",
+      "Color": "Dunkelbraun",
+      "Size": "46"
+    },
+    "Intern Generated Info": {
+      "More details": "Traditionelle Kniebund-Lederhose für Herren mit abnehmbaren Trägern und aufwendiger Stickerei.",
+      "Keywords": "Trachtenhose",
+      "Materials": "Leder"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 020"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Lederhose",
+      "Product Model": "",
+      "Keyword 1": "Trachtenhose",
+      "Keyword 2": "Bayerische Hose",
+      "Keyword 3": "Herren Lederhose",
+      "eBay Title": "Gloria Wears Lederhose Herren Dunkelbraun 46 Trachtenhose Bayerische Hose"
+    }
+  }
+}

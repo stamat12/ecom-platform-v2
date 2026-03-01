@@ -1,0 +1,67 @@
+{
+  "VER01929": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2508681,
+      "Invoice Date": "2025-08-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 521336,
+      "ISIN": null,
+      "Supplier Title": "Ganter KarlaLuise sensitiv Calf-Leder"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.9,
+      "Total Cost Net": 5.9
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": 9010903065575.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Ganter",
+      "Color": "Schwarz",
+      "Size": "37.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Bequeme Halbschuhe mit Klettverschluss in Weite K/L (Breit). Mit \"Sensitiv\"-Ausstattung, ideal für empfindliche Füße.\nUK Größe: UK 4½",
+      "Keywords": "KarlaLuise Klettschuhe",
+      "Materials": "Obermaterial: Kalbsleder; Futter: Leder; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 149.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01929 (3).jpg"
+        },
+        {
+          "filename": "VER01929 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

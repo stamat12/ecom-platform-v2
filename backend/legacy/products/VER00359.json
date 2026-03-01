@@ -1,0 +1,77 @@
+{
+  "VER00359": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2307119,
+      "Invoice Date": "2023-07-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 323024,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Boss Sweater Größe L"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.56,
+      "Total Cost Net": 21.39
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Pullover & Strick",
+      "eBay Category ID": "63866"
+    },
+    "EAN": {
+      "EAN": 4063535546487.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hugo Boss",
+      "Color": "Hellbeige",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Relaxed-Fit-Sweatshirt aus Material-Mix mit Stehkragen. Style-Nummer: 50477670.",
+      "Keywords": "C_Egarment_RA Sweatshirt",
+      "Materials": "83% Baumwolle, 17% Polyester, Besatz: 100% Polyamid"
+    },
+    "OP": {
+      "OP": 180.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "20230707_142033011_iOS.jpg"
+        },
+        {
+          "filename": "20230707_142214340_iOS.jpg"
+        },
+        {
+          "filename": "20230707_142157156_iOS.jpg"
+        },
+        {
+          "filename": "81flFpzeTML._AC_SX569_.jpg"
+        },
+        {
+          "filename": "81XntT4wHNL._AC_SX569_.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sweatshirt",
+      "Product Model": "C_Egarment_RA",
+      "Keyword 1": "Pullover",
+      "Keyword 2": "Langarmshirt",
+      "Keyword 3": "Sportoberteil",
+      "eBay Title": "Hugo Boss C_Egarment_RA Sweatshirt Damen Hellbeige L Pullover Langarmshirt"
+    }
+  }
+}

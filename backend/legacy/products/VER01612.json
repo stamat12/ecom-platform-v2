@@ -1,0 +1,68 @@
+{
+  "VER01612": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716796,
+      "ISIN": null,
+      "Supplier Title": "Kamoni Badeanzug Größe S"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 5.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Kamoni",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Badeanzug",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01612 (2)_wb.jpg"
+        },
+        {
+          "filename": "VER01612 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "",
+      "Keyword 1": "Schwimmanzug",
+      "Keyword 2": "Bikini",
+      "Keyword 3": "Damen Badebekleidung",
+      "eBay Title": "Kamoni Badeanzug Damen Grün S Schwimmanzug Bikini Damen Badebekleidung"
+    }
+  }
+}

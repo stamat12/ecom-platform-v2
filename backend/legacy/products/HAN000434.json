@@ -1,0 +1,74 @@
+{
+  "HAN000434": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2501862,
+      "Invoice Date": "2025-01-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 670743,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Esprit Badeanzug Größe 34"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.71,
+      "Total Cost Net": 10.71
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Esprit",
+      "Color": "Schwarz",
+      "Size": "34"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Badeanzug",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000434 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000434 (4).JPG"
+        },
+        {
+          "filename": "HAN000434 (1).JPG"
+        },
+        {
+          "filename": "HAN000434 (5).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "SSN 0521",
+      "Keyword 1": "Schwimmbekleidung",
+      "Keyword 2": "Damen Badeanzug",
+      "Keyword 3": "Badebekleidung",
+      "eBay Title": "Esprit SSN 0521 Badeanzug Damen Schwarz 34 Schwimmbekleidung Damen Badeanzug"
+    }
+  }
+}

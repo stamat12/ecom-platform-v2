@@ -1,0 +1,67 @@
+{
+  "VER01711": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 690125,
+      "Invoice Date": "2025-06-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665277,
+      "ISIN": null,
+      "Supplier Title": "Langarmshirt Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 11.8,
+      "Shipping Net": 0.57,
+      "Total Cost Net": 12.37
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Tops & Trikots",
+      "eBay Category ID": "59333"
+    },
+    "EAN": {
+      "EAN": 196150286996.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Langarm Crop-Top mit elastischem Nike-Bund, sportlich & figurbetont",
+      "Keywords": "Langarm Crop-Top",
+      "Materials": "Baumwolle, Elastan"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01711 (3).jpg"
+        },
+        {
+          "filename": "VER01711 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

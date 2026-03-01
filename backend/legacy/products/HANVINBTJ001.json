@@ -1,0 +1,74 @@
+{
+  "HANVINBTJ001": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Sehr Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Starter",
+      "Color": "Rot",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Vintage Starter Diamond Collection MLB St. Louis Cardinals Kurzarm Windshirt / Batting Practice Jacke.",
+      "Keywords": "St. Louis Cardinals Diamond Collection Windshirt",
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ001 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ001 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ001 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ001 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Windjacke",
+      "Product Model": "",
+      "Keyword 1": "Sportjacke",
+      "Keyword 2": "Outdoorjacke",
+      "Keyword 3": "Atmungsaktive Jacke",
+      "eBay Title": "Starter Windjacke Herren Rot L Sportjacke Outdoorjacke Atmungsaktive Jacke"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER02030": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 827095,
+      "ISIN": null,
+      "Supplier Title": "Converse Sneaker Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 15.73
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": 1082886900017.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Converse",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Louie Lopez Pro ist von Retro-Tennis- und Skate-Styles inspiriert und wurde speziell für das Skateboarden entwickelt.",
+      "Keywords": "Louie Lopez Pro Sneaker",
+      "Materials": "Obermaterial: Wildleder; Futter: Textil; Sohle: Gummi"
+    },
+    "OP": {
+      "OP": 125.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02030 (2).jpg"
+        },
+        {
+          "filename": "VER02030 (6).jpg"
+        },
+        {
+          "filename": "VER02030 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Skateschuh",
+      "Product Model": "Loule Lopez Pro Suede",
+      "Keyword 1": "Skate Schuhe",
+      "Keyword 2": "Skateboard Schuhe",
+      "Keyword 3": "Sneaker",
+      "eBay Title": "Converse Loule Lopez Pro Suede Skateschuh Herren Schwarz 42 Skate Schuhe"
+    }
+  }
+}

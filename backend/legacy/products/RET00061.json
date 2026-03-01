@@ -1,0 +1,65 @@
+{
+  "RET00061": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK216684550",
+      "ISIN": "B09JSN693F",
+      "Supplier Title": "Gamer-Bettwäsche-Set für Jungen, Teenager, Gaming, Schmusetuch für Kinder, Mädchen, junge Männer, Eat Sleep Spiel, Wiederholung, Bettbezug, Spieler, Bettwäsche und Leinen-Bettbezug, Einzelbett"
+    },
+    "Price Data": {
+      "Price Net": 7.0,
+      "Shipping Net": 1.08,
+      "Total Cost Net": 8.09
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Bettwaren, -wäsche & Matratzen/Bettwäsche",
+      "eBay Category ID": "37644"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": null,
+      "Color": "Mehrfarbig",
+      "Size": "Einzelbett"
+    },
+    "Intern Generated Info": {
+      "More details": "2-teiliges Set bestehend aus 1x Bettbezug und 1x Kissenbezug.",
+      "Keywords": "Game Controller Bettwäsche Bettwäsche-Set",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 35.01
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00061 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Bettwäsche",
+      "Product Model": "",
+      "Keyword 1": "Spielbettwäsche",
+      "Keyword 2": "Gaming Bettwäsche",
+      "Keyword 3": "Bettbezug",
+      "eBay Title": "Bettwäsche Unisex Mehrfarbig Einzelbett Spielbettwäsche Gaming Bettwäsche"
+    }
+  }
+}

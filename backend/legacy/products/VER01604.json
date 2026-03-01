@@ -1,0 +1,71 @@
+{
+  "VER01604": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 805180,
+      "ISIN": null,
+      "Supplier Title": "Diesel S-Athos Low Damenschuhe Gr. 40"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 21.2
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Diesel",
+      "Color": "Grau",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "S-Athos Sneaker low",
+      "Materials": "Obermaterial: Polyester\nInnenmaterial: Textil\nDecksohle: Textil\nSohle: Kunststoff\nFütterungsdicke: Kalt gefüttert"
+    },
+    "OP": {
+      "OP": 160.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01604 (3).jpg"
+        },
+        {
+          "filename": "VER01604 (5).jpg"
+        },
+        {
+          "filename": "VER01604 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "S-Athos Low W",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Diesel S-Athos Low W Sneaker Damen Grau 40 Damen Schuhe Sport Schuhe"
+    }
+  }
+}

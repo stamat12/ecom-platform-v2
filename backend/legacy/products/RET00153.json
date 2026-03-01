@@ -1,0 +1,68 @@
+{
+  "RET00153": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE793562988",
+      "ISIN": "B08FBFCWJF",
+      "Supplier Title": "ilauke Christbaumkugeln Set 105 Teilig Weihnachtskugeln Gold aus Kunststoff - Weihnachtsbaum Deko Anhänger & Christbaumschmuck in Unterschiedlichen Größen für Weihnachtsbaum Party Home Hochzeit"
+    },
+    "Price Data": {
+      "Price Net": 2.95,
+      "Shipping Net": 0.46,
+      "Total Cost Net": 3.41
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Feste & Besondere Anlässe/Jahreszeitliche Dekoration/Christbaum- & Feiertagsschmuck",
+      "eBay Category ID": "166725"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Wie auf den Fotos (es kann sein, dass ein Paar Kugeln beschädigt sind)"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Weihnachtskugeln Gold aus Kunststoff - Weihnachtsbaum Deko Anhänger & Christbaumschmuck in Unterschiedlichen Größen für Weihnachtsbaum Party Home Hochzeit",
+      "Keywords": "Christbaumkugeln Set 105 Teilig",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 14.75
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00153 (4).jpg"
+        },
+        {
+          "filename": "RET00153 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Weihnachtsbaumkugel",
+      "Product Model": "",
+      "Keyword 1": "Dekoration",
+      "Keyword 2": "Christbaumkugeln",
+      "Keyword 3": "Baumschmuck",
+      "eBay Title": "Weihnachtsbaumkugel Dekoration Christbaumkugeln Baumschmuck"
+    }
+  }
+}

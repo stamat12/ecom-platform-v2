@@ -1,0 +1,71 @@
+{
+  "VER00911": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24042066,
+      "Invoice Date": "2024-04-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 674871,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Converse Hoodie Größe L"
+    },
+    "Price Data": {
+      "Price Net": 12.5,
+      "Shipping Net": 1.43,
+      "Total Cost Net": 13.93
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155226"
+    },
+    "EAN": {
+      "EAN": 194433621455.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Converse",
+      "Color": "Cremeweiß",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Locker geschnittener Kapuzenpullover (Loose Fit) mit \"Evergreen\" Wald-Grafik auf Brust und Ärmel.",
+      "Keywords": "Evergreen Graphic Hoodie",
+      "Materials": "80% Baumwolle, 20% Polyester"
+    },
+    "OP": {
+      "OP": 65.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4506.JPG"
+        },
+        {
+          "filename": "IMG_4510.JPG"
+        },
+        {
+          "filename": "IMG_4507.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kapuzenshirt",
+      "Product Model": "",
+      "Keyword 1": "Hoodie",
+      "Keyword 2": "Sweatshirt",
+      "Keyword 3": "Pullover",
+      "eBay Title": "Converse Kapuzenshirt Unisex Cremeweiß L Hoodie Sweatshirt Pullover"
+    }
+  }
+}

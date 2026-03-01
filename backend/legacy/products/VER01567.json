@@ -1,0 +1,68 @@
+{
+  "VER01567": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 687696,
+      "Invoice Date": "2025-04-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 573398,
+      "ISIN": null,
+      "Supplier Title": "T-Shirt Größe S"
+    },
+    "Price Data": {
+      "Price Net": 3.54,
+      "Shipping Net": 0.89,
+      "Total Cost Net": 4.43
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Adidas",
+      "Color": "Orange",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Ein Wochenende mit Freunden bedeutet nicht, auf Stil verzichten zu müssen. Dieses adidas T-Shirt verleiht einen authentischen 3-Streifen-Look. Für einen lässigen und klassischen Stil – egal wohin der Tag führt.\nAusschnitt: Rundhals\nMuster: Unifarben\nFunktion: Atmungsaktiv",
+      "Keywords": "Originals 3 Stripes T-Shirt",
+      "Materials": "Material Oberstoff: 100% Baumwolle"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01567 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01567 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "",
+      "Keyword 1": "Sportshirt",
+      "Keyword 2": "Freizeitshirt",
+      "Keyword 3": "Kurzarmshirt",
+      "eBay Title": "Adidas T-Shirt Damen Orange S Sportshirt Freizeitshirt Kurzarmshirt"
+    }
+  }
+}

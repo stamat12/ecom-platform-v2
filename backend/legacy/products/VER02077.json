@@ -1,0 +1,71 @@
+{
+  "VER02077": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25091966,
+      "Invoice Date": "2025-09-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 853703,
+      "ISIN": null,
+      "Supplier Title": "Logitech G213 RGB Gaming Tastatur"
+    },
+    "Price Data": {
+      "Price Net": 14.17,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 14.65
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/Zubehör/Tastaturen",
+      "eBay Category ID": "172510"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Logitech",
+      "Color": "Schwarz",
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Eine Gaming-Tastatur in Standardgröße mit bis zu viermal schnellerem Ansprechverhalten als bei herkömmlichen Tastaturen.",
+      "Keywords": "G213 Prodigy RGB Gaming Tastatur",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02077 (2).jpg"
+        },
+        {
+          "filename": "VER02077 (3).jpg"
+        },
+        {
+          "filename": "VER02077 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Tastatur",
+      "Product Model": "G213",
+      "Keyword 1": "Gaming Tastatur",
+      "Keyword 2": "RGB Tastatur",
+      "Keyword 3": "mechanische Tastatur",
+      "eBay Title": "Logitech G213 Tastatur Schwarz Gaming Tastatur RGB Tastatur mechanische Tastatur"
+    }
+  }
+}

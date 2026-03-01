@@ -56,7 +56,7 @@
         "count_phone": 9,
         "count_enhanced": 0,
         "has_main_images": true,
-        "count_main_images": 5
+        "count_main_images": 6
       },
       "stock": [],
       "phone": [
@@ -104,6 +104,9 @@
         },
         {
           "filename": "VER01859 (8).jpg"
+        },
+        {
+          "filename": "VER01859 (7).jpg"
         }
       ],
       "eBay Images": [

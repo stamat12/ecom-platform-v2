@@ -1,0 +1,68 @@
+{
+  "VER01644": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 807373,
+      "ISIN": null,
+      "Supplier Title": "Blowfish Malibu Schuhe Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 9.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Blowfisch Malibu",
+      "Color": "Weiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Espadrille",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01644 (4).jpg"
+        },
+        {
+          "filename": "VER01644 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Espadrille",
+      "Product Model": "",
+      "Keyword 1": "Schuhe",
+      "Keyword 2": "Sommer",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Blowfisch Malibu Espadrille Damen Weiß 40 Schuhe Sommer Freizeitschuhe"
+    }
+  }
+}

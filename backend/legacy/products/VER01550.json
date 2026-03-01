@@ -1,0 +1,71 @@
+{
+  "VER01550": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13345-38",
+      "Invoice Date": "2025-04-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 278,
+      "ISIN": null,
+      "Supplier Title": "Schneeschuhe Atlas Range-Trail 22, N32-3-1-1"
+    },
+    "Price Data": {
+      "Price Net": 40.0,
+      "Shipping Net": 7.2,
+      "Total Cost Net": 47.2
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Wintersport/Skifahren, Snowboarden & Schneeschuhwandern/Schuhe & Boots",
+      "eBay Category ID": "260740"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ATLAS",
+      "Color": "Grün",
+      "Size": "22W"
+    },
+    "Intern Generated Info": {
+      "More details": "Herstellername: Koch alpin GmbH\nAdresse: Volderer Brücke 9, 6068 Mils, Österreich\nEmail: office@kochalpin.at\nTel.: +43 (0)5223 45594-0",
+      "Keywords": "Schneeschuhe Range Trail",
+      "Materials": "Reactiv-Trac™ Frame\nWrapp™ Stretch Bindung\nTRAIL Toe Steigeisen\nPivot Limiter\n19° Fersenlift\nNytex Infinity Belag\nGewicht: 1,74 kg (Größe 26”)"
+    },
+    "OP": {
+      "OP": 220.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01550 (5).jpg"
+        },
+        {
+          "filename": "VER01550 (3).jpg"
+        },
+        {
+          "filename": "VER01550 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schneeschuh",
+      "Product Model": "Range-Trail 22",
+      "Keyword 1": "Winterausrüstung",
+      "Keyword 2": "Schneewanderung",
+      "Keyword 3": "Outdoor-Sport",
+      "eBay Title": "ATLAS Range-Trail 22 Schneeschuh Damen Grün 22W Winterausrüstung Schneewanderung"
+    }
+  }
+}

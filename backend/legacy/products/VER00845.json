@@ -1,0 +1,71 @@
+{
+  "VER00845": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24022259,
+      "Invoice Date": "2024-02-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 676739,
+      "ISIN": null,
+      "Supplier Title": "Isbael Highheels  Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.49,
+      "Total Cost Net": 2.99
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Isabel",
+      "Color": "Elfenbein",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Plateau-Pumps mit Peep-Toe und Stiletto-Absatz. Reich verziert mit Spitze und Perlen.",
+      "Keywords": "Brautschuhe",
+      "Materials": "Obermaterial: Textil (Satin, Spitze); Futter und Decksohle: Leder; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4851.JPG"
+        },
+        {
+          "filename": "IMG_4849.JPG"
+        },
+        {
+          "filename": "IMG_4850.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "",
+      "Keyword 1": "Schuhe",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Brautschuhe",
+      "eBay Title": "Isabel Pumps Damen Elfenbein 37 Schuhe Absatzschuhe Brautschuhe Neu mit Karton"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER00791": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2401035,
+      "Invoice Date": "2024-01-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 685530,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Amazonbasics USB Typ C zu USB A 2.0 Stecker Kabel 2.7m"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.31,
+      "Total Cost Net": 2.81
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/TV- & Heim-Audio-Zubehör/Videokabel & -stecker",
+      "eBay Category ID": "32834"
+    },
+    "EAN": {
+      "EAN": 841710146936.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Amazon Basics",
+      "Color": "Weiß",
+      "Size": "2,7 m"
+    },
+    "Intern Generated Info": {
+      "More details": "USB-C auf USB-A 2.0 Lade- und Datenkabel. ASIN: B01GGKYQ02.",
+      "Keywords": "USB-C Ladekabel",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": 10.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_2367.JPG"
+        },
+        {
+          "filename": "IMG_2369.JPG"
+        },
+        {
+          "filename": "IMG_2368.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "USB Kabel",
+      "Product Model": "",
+      "Keyword 1": "USB Typ C Kabel",
+      "Keyword 2": "USB A Kabel",
+      "Keyword 3": "Stecker Kabel",
+      "eBay Title": "Amazon Basics USB Kabel Unisex Weiß 2,7 m USB Typ C Kabel USB A Kabel"
+    }
+  }
+}

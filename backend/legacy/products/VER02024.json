@@ -1,0 +1,68 @@
+{
+  "VER02024": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 827046,
+      "ISIN": null,
+      "Supplier Title": "Gstar Raw Sneaker Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 19.06
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "G-Star Raw",
+      "Color": "Mehrfarbig",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Calow III Sneaker sind aus verschiedenen Materialien gefertigt und bieten eine robuste Außensohle für optimalen Halt.",
+      "Keywords": "Rackam Blocked Sneaker",
+      "Materials": "Obermaterial: 57% Rinds-Wildleder, 36% Textil (Polyester), 7% Polyurethan; Futter: 100% Textil (Polyester-Mesh); Einlegesohle: 100% Textil (Polyester-Mesh); Laufsohle: 100% Gummi"
+    },
+    "OP": {
+      "OP": 135.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02024 (3).jpg"
+        },
+        {
+          "filename": "VER02024 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Laufschuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "G-Star Raw Sneaker Unisex Mehrfarbig 41 Sport Schuhe Laufschuhe Freizeitschuhe"
+    }
+  }
+}

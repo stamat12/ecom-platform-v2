@@ -1,0 +1,77 @@
+{
+  "RET00168": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK216759364",
+      "ISIN": "B0B6F3QNZV",
+      "Supplier Title": "Duschvorhang Abstrakt Kunst, Uiiooazy Duschvorhang Terracotta Mitte des Jahrhunderts Monderne Minimalistisch Duschvorhänge Anti Schimmel Wasserdicht Polyester Stoff Bad Vorhang mit 12 Ringen 180x180cm"
+    },
+    "Price Data": {
+      "Price Net": 2.38,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 2.75
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Badezimmer/Dusch- & Badewannenzubehör/Duschvorhänge",
+      "eBay Category ID": "20441"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": null,
+      "Color": "Grün / Weiß",
+      "Size": "180x180 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Duschvorhang mit Farbverlauf. Wasserfest, schnelltrocknend und maschinenwaschbar. Inklusive 12 Aufhängeringen.",
+      "Keywords": "Duschvorhang",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": 11.98
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00168 (2)_wb.jpg"
+        },
+        {
+          "filename": "RET00168 (4).jpg"
+        },
+        {
+          "filename": "PXL_20251004_141222241.jpg"
+        },
+        {
+          "filename": "PXL_20251004_141208965.jpg"
+        },
+        {
+          "filename": "PXL_20251004_141227552.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Duschvorhang",
+      "Product Model": "",
+      "Keyword 1": "Badezimmer Vorhang",
+      "Keyword 2": "Wasserabweisend Vorhang",
+      "Keyword 3": "Maschinenwaschbar Vorhang",
+      "eBay Title": "Duschvorhang Unisex Grün / Weiß 180x180 cm Badezimmer Vorhang"
+    }
+  }
+}

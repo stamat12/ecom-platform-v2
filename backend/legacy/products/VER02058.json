@@ -1,0 +1,71 @@
+{
+  "VER02058": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2509750,
+      "Invoice Date": "2025-09-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 848478,
+      "ISIN": null,
+      "Supplier Title": "Nike Phantom GX 2 Academy tf Fußballschuhe Gr.42"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 20.48
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fußball/Schuhe",
+      "eBay Category ID": "19298"
+    },
+    "EAN": {
+      "EAN": 197600859906.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Silber",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Nike Phantom GX II Academy TF Fußballschuhe\nDie erweiterte NikeSkin-Touch-Zone bringt deinen Fuß noch näher an den Ball und sorgt für bessere Kontrolle beim Dribbeln und Passen bei nassen und trockenen Bedingungen.",
+      "Keywords": "Phantom GX II TF Fußballschuhe",
+      "Materials": "Obermaterial: Synthetik; Futter: Textil; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 130.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02058 (10).jpg"
+        },
+        {
+          "filename": "VER02058 (2).jpg"
+        },
+        {
+          "filename": "VER02058 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Fußballschuh",
+      "Product Model": "Phantom GX II",
+      "Keyword 1": "Kunstrasen Fußballschuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Fußball Schuhe",
+      "eBay Title": "Nike Phantom GX II Fußballschuh Herren Silber 42 Kunstrasen Fußballschuhe"
+    }
+  }
+}

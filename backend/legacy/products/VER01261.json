@@ -1,0 +1,71 @@
+{
+  "VER01261": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24122132,
+      "Invoice Date": "2024-12-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 384519,
+      "ISIN": null,
+      "Supplier Title": "H&M Damen Pumps Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 3.05
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Beige",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Blockabsatz Slingpumps",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01261 (5).JPG"
+        },
+        {
+          "filename": "VER01261 (3).JPG"
+        },
+        {
+          "filename": "VER01261 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Pumps",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "H&M Schuh Damen Beige 37 Pumps Absatzschuhe Damen Schuhe Neu mit Etiketten"
+    }
+  }
+}

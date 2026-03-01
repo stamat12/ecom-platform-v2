@@ -1,0 +1,71 @@
+{
+  "VER00920": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24042338,
+      "Invoice Date": "2024-04-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 718745,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Graceland Pantoletten Gr. 42"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 1.0,
+      "Total Cost Net": 4.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": 4064593134261.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Graceland",
+      "Color": "Hellblau",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Modische Pantoletten mit einem gepolsterten, gesteppten Riemen.",
+      "Keywords": "Pantoletten",
+      "Materials": "Obermaterial: Synthetik; Innenmaterial: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 20.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4918.JPG"
+        },
+        {
+          "filename": "IMG_4919.JPG"
+        },
+        {
+          "filename": "IMG_4921.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hausschuhe",
+      "Product Model": "",
+      "Keyword 1": "Badeschuhe",
+      "Keyword 2": "Pantoletten",
+      "Keyword 3": "Schlappen",
+      "eBay Title": "Graceland Hausschuhe Damen Hellblau 42 Badeschuhe Pantoletten Schlappen"
+    }
+  }
+}

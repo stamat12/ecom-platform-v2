@@ -1,0 +1,71 @@
+{
+  "VER02043": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081930,
+      "Invoice Date": "2025-08-25T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 438300,
+      "ISIN": null,
+      "Supplier Title": "Ecco Offroad Yucatan W Brick/Chili Red Gr. 41"
+    },
+    "Price Data": {
+      "Price Net": 21.67,
+      "Shipping Net": 0.71,
+      "Total Cost Net": 22.38
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Rot",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Dank der RECEPTOR® Technologie bietet diese robuste Outdoor-Sandale bei jedem Schritt hervorragende Stabilität und dynamische Unterstützung.",
+      "Keywords": "Offroad Yucatan Sandalen",
+      "Materials": "Obermaterial: Nubukleder, Textil; Futter: Textil; Decksohle: Mikrofaser; Laufsohle: PU / Gummi"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02043 (2).jpg"
+        },
+        {
+          "filename": "VER02043 (9).jpg"
+        },
+        {
+          "filename": "VER02043 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "Offroad Yucatan W",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "Wanderschuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "ECCO Offroad Yucatan W Sandale Damen Rot 41 Damen Sandalen Wanderschuhe"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "VER01936": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2508680,
+      "Invoice Date": "2025-08-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 843930,
+      "ISIN": null,
+      "Supplier Title": "Anon Elderberry XL"
+    },
+    "Price Data": {
+      "Price Net": 33.33,
+      "Shipping Net": 0.9,
+      "Total Cost Net": 34.23
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Wintersport/Bekleidung/Ski- & Snowboardhelme",
+      "eBay Category ID": "36260"
+    },
+    "EAN": {
+      "EAN": 9010510539946.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Anon",
+      "Color": "Taupe / Rosa",
+      "Size": "XL (63-64 cm)"
+    },
+    "Intern Generated Info": {
+      "More details": "Ski-/Snowboardhelm mit WaveCel®-Sicherheitstechnologie und BOA® Fit System zur Größenanpassung. Farbname: Elderberry.",
+      "Keywords": "Windham Wavecel Skihelm",
+      "Materials": "In-Mold-Polycarbonatschale, EPS- und WaveCel®-Futter"
+    },
+    "OP": {
+      "OP": 199.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01936 (4).jpg"
+        },
+        {
+          "filename": "VER01936 (7).jpg"
+        },
+        {
+          "filename": "VER01936 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

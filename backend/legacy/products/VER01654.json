@@ -1,0 +1,71 @@
+{
+  "VER01654": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 813472,
+      "ISIN": null,
+      "Supplier Title": "Reebok Club C Grounds UK Unisex Gr. 42,5"
+    },
+    "Price Data": {
+      "Price Net": 24.17,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 24.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Reebok",
+      "Color": "Blau",
+      "Size": "42.5"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Club C Grounds UK Sneaker",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01654 (15).jpg"
+        },
+        {
+          "filename": "VER01654 (13).jpg"
+        },
+        {
+          "filename": "VER01654 (12).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Club C Grounds",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Reebok Club C Grounds Sneaker Unisex Blau 42.5 Sport Schuhe Freizeitschuhe"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "VER01348": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-12503-159",
+      "Invoice Date": "2025-01-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 3375,
+      "ISIN": null,
+      "Supplier Title": "Jako Trainingsoberteil 1/2-Zip Power grün/weiß, Gr. M"
+    },
+    "Price Data": {
+      "Price Net": 7.08,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 7.08
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Fitnessmode/Sport-Kapuzenpullover & -Sweatshirts",
+      "eBay Category ID": "155183"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Jako",
+      "Color": "Grün",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Trainingsoberteil 1/2-Zip Power",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01348 (3).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sportshirt",
+      "Product Model": "",
+      "Keyword 1": "Trainingsshirt",
+      "Keyword 2": "Langarmshirt",
+      "Keyword 3": "Fußballshirt",
+      "eBay Title": "Jako Sportshirt Herren Grün M Trainingsshirt Langarmshirt Fußballshirt"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER01403": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25031687,
+      "Invoice Date": "2025-03-25T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 384374,
+      "ISIN": null,
+      "Supplier Title": "Ecco Soft 7W Schuhe Gr. 36"
+    },
+    "Price Data": {
+      "Price Net": 11.67,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 12.04
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Mehrfarbig",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Sneaker Soft 7 Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 105.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01403 (5).jpg"
+        },
+        {
+          "filename": "VER01403 (4).jpg"
+        },
+        {
+          "filename": "VER01403 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Fleur",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Sportliche Schuhe",
+      "Keyword 3": "Blumenmuster",
+      "eBay Title": "ECCO Fleur Sneaker Damen Mehrfarbig 37 Damen Schuhe Sportliche Schuhe"
+    }
+  }
+}

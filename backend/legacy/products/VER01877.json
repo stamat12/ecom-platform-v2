@@ -1,0 +1,82 @@
+{
+  "VER01877": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25071231,
+      "Invoice Date": "2025-07-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826615,
+      "ISIN": null,
+      "Supplier Title": "Elektronagnetventil MCM WE1-W2B5"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.4,
+      "Total Cost Net": 2.9
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Heizen, Klima & Sanitär/Wasser/Ventile",
+      "eBay Category ID": "259858"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "MCM",
+      "Color": "Blau / Silber",
+      "Size": "3-fach"
+    },
+    "Intern Generated Info": {
+      "More details": "3-fach Magnetventil. Ersatzteil-Nr. evtl. WE1-W2B5. Auf Bauteil aufgedruckt: TYPE 702/F.",
+      "Keywords": "TYPE 702/F Magnetventil",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01877 (5).jpg"
+        },
+        {
+          "filename": "VER01877 (6).jpg"
+        },
+        {
+          "filename": "VER01877 (7).jpg"
+        },
+        {
+          "filename": "VER01877 (8).jpg"
+        },
+        {
+          "filename": "VER01877 (4).jpg"
+        },
+        {
+          "filename": "VER01877 (3).jpg"
+        },
+        {
+          "filename": "VER01877 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

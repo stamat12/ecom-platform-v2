@@ -1,0 +1,74 @@
+{
+  "VER00757": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666555,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Damen Schuhe Gr. 39"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 2.21
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Peep-Toe Sandaletten mit Stiletto-Absatz und Fesselriemchen in Kroko-Optik.",
+      "Keywords": "Sandaletten",
+      "Materials": "Obermaterial: Synthetik in Kroko-Optik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_2018.JPG"
+        },
+        {
+          "filename": "IMG_2019.JPG"
+        },
+        {
+          "filename": "IMG_2017.JPG"
+        },
+        {
+          "filename": "IMG_2021.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "",
+      "Keyword 1": "Absatzschuhe",
+      "Keyword 2": "Offene Schuhe",
+      "Keyword 3": "Damen Sandalen",
+      "eBay Title": "Sandale Damen Weiß 39 Absatzschuhe Offene Schuhe Damen Sandalen"
+    }
+  }
+}

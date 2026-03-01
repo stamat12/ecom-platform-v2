@@ -1,0 +1,68 @@
+{
+  "VER01624": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716880,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Minikleid Größe M"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 10.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Ärmelloses Bodycon-Kleid, Logo-Print, Kontrastnähte",
+      "Keywords": "Kyrie Minikleid",
+      "Materials": "Baumwoll-Elasthan-Mix"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01624 (3).jpg"
+        },
+        {
+          "filename": "VER01624 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "KYRIE",
+      "Keyword 1": "Damenkleid",
+      "Keyword 2": "Sommerkleid",
+      "Keyword 3": "Sportkleid",
+      "eBay Title": "Von Dutch KYRIE Kleid Damen Schwarz M Damenkleid Sommerkleid Sportkleid"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "VER01782": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25062248,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 811720,
+      "ISIN": null,
+      "Supplier Title": "Geox spherica Slipper Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 1.12,
+      "Total Cost Net": 21.95
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": 8056206900356.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Geox",
+      "Color": "Braun",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Bequemer Slipper aus Wildleder mit der patentierten, atmungsaktiven Sohle.",
+      "Keywords": "Geox Spherica EC1 A Slipper",
+      "Materials": "Obermaterial: Wildleder, Sohle: Gummi"
+    },
+    "OP": {
+      "OP": 139.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01782 (10).jpg"
+        },
+        {
+          "filename": "VER01782 (12).jpg"
+        },
+        {
+          "filename": "VER01782 (4).jpg"
+        },
+        {
+          "filename": "VER01782 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

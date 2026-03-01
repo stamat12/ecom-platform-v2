@@ -1,0 +1,71 @@
+{
+  "VER01142": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24102134,
+      "Invoice Date": "2024-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 756049,
+      "ISIN": null,
+      "Supplier Title": "Bianco Sandale Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 13.33,
+      "Shipping Net": 0.63,
+      "Total Cost Net": 13.96
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": 5715389267610.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Fehlern"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Bianco",
+      "Color": "Cremeweiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Spitze Slingback-Ballerinas in Lack-Optik. Breiter Riemen mit Ösen. Leichter Kratzer an der Spitze (siehe Foto). Made in Portugal.",
+      "Keywords": "BIAFMA Sling-Ballerinas",
+      "Materials": "Obermaterial: Leder; Futter: Leder; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01142 (5).JPG"
+        },
+        {
+          "filename": "VER01142 (6).JPG"
+        },
+        {
+          "filename": "VER01142 (3).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "BF818",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Pumps",
+      "Keyword 3": "Slingback",
+      "eBay Title": "Bianco BF818 Schuh Damen Cremeweiß 40 Damen Schuhe Pumps Slingback"
+    }
+  }
+}

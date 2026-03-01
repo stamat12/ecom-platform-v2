@@ -1,0 +1,71 @@
+{
+  "VER02022": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826961,
+      "ISIN": null,
+      "Supplier Title": "Karl Lagerfeld KL80108 900 Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 22.5,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 23.23
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": 5056272353417.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Karl Lagerfeld",
+      "Color": "Schwarz",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Slip-on-Espadrilles aus Canvas mit kontrastierender Zehenkappe und dem charakteristischen KARL LAGERFELD Logo.",
+      "Keywords": "Kamini Slip On Espadrilles",
+      "Materials": "Obermaterial: 85% Baumwolle, 15% Polyurethan; Futter: 100% Polyurethan; Sohle: 100% Gummi; Innensohle: 100% Jute"
+    },
+    "OP": {
+      "OP": 140.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02022 (10).jpg"
+        },
+        {
+          "filename": "VER02022 (2).jpg"
+        },
+        {
+          "filename": "VER02022 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Espadrille",
+      "Product Model": "Kamini",
+      "Keyword 1": "Slip On",
+      "Keyword 2": "Leinenschuhe",
+      "Keyword 3": "Sommer Schuhe",
+      "eBay Title": "Karl Lagerfeld Kamini Espadrille Damen Schwarz 40 Slip On Leinenschuhe"
+    }
+  }
+}

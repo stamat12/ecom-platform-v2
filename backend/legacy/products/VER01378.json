@@ -1,0 +1,68 @@
+{
+  "VER01378": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503528,
+      "Invoice Date": "2025-03-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 360182,
+      "ISIN": null,
+      "Supplier Title": "Bama Damen Sandalen 37"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 8.12
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Bama",
+      "Color": "Rot",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen Sandalen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01378 (2).JPG"
+        },
+        {
+          "filename": "VER01378 (4).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "bequeme Schuhe",
+      "Keyword 3": "Riemchensandalen",
+      "eBay Title": "Bama Sandale Damen Rot 37 Damen Sandalen bequeme Schuhe Riemchensandalen"
+    }
+  }
+}

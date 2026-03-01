@@ -1,0 +1,67 @@
+{
+  "VER01720": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 690125,
+      "Invoice Date": "2025-06-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 665411,
+      "ISIN": null,
+      "Supplier Title": "T-Shirt Größe M"
+    },
+    "Price Data": {
+      "Price Net": 8.26,
+      "Shipping Net": 0.57,
+      "Total Cost Net": 8.83
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Rot",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Sticklogo auf der Brust",
+      "Keywords": "T-Shirt",
+      "Materials": "100 % Baumwolle"
+    },
+    "OP": {
+      "OP": 24.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01720 (4).jpg"
+        },
+        {
+          "filename": "VER01720 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

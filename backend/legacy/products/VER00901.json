@@ -1,0 +1,71 @@
+{
+  "VER00901": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24041485,
+      "Invoice Date": "2024-04-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 603175,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Liu jo Milano Hose Größe 40=34"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.44,
+      "Total Cost Net": 18.77
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": 8056156342718.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Liu Jo",
+      "Color": "Altrosa",
+      "Size": "34"
+    },
+    "Intern Generated Info": {
+      "More details": "Schmal geschnittene Stoffhose (Skinny Fit). Italienische Größe 40. Artikelnummer: I69147 T7896. Farbname: Cannella.",
+      "Keywords": "Skinny Hose",
+      "Materials": "88% Polyester, 12% Elasthan"
+    },
+    "OP": {
+      "OP": 140.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4381.JPG"
+        },
+        {
+          "filename": "IMG_4382.JPG"
+        },
+        {
+          "filename": "IMG_4383.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "Pantalone Skinny",
+      "Keyword 1": "Damenhose",
+      "Keyword 2": "Schlanke Hose",
+      "Keyword 3": "Büro Hose",
+      "eBay Title": "Liu Jo Pantalone Skinny Hose Damen Altrosa 34 Damenhose Schlanke Hose Büro Hose"
+    }
+  }
+}

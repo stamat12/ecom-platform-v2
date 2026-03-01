@@ -1,0 +1,74 @@
+{
+  "VER02035": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 844746,
+      "ISIN": null,
+      "Supplier Title": "Armani Exchange Damen Schuhe Gr. 38"
+    },
+    "Price Data": {
+      "Price Net": 30.0,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 30.73
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 8059515751954.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Armani Exchange",
+      "Color": "Mehrfarbig",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Mehrfarbiger Sneaker im Running-Stil mit seitlichem Maxi-Logo und kontrastierenden Details.",
+      "Keywords": "Sneaker XDX031 XCC62",
+      "Materials": "Obermaterial: 100% Polyurethan, 100% Polyamid, 100% Polyester; Futter: 100% Polyester; Innensohle: 100% Polyester; Sohle: 100% Gummi."
+    },
+    "OP": {
+      "OP": 130.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02035 (10).jpg"
+        },
+        {
+          "filename": "VER02035 (13).jpg"
+        },
+        {
+          "filename": "VER02035 (12).jpg"
+        },
+        {
+          "filename": "VER02035 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "XDX031 XCC62",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Armani Exchange XDX031 XCC62 Sneaker Damen Mehrfarbig 38 Sport Schuhe"
+    }
+  }
+}

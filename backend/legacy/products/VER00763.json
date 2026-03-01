@@ -1,0 +1,77 @@
+{
+  "VER00763": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666596,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Julietta Slipper Gr. 40"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 3.87
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Julietta",
+      "Color": "Korallrot",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Bequeme Slipper mit Ziertroddeln und sommerlichem Lochmuster. Komfort-Weite H für etwas kräftigere Füße.",
+      "Keywords": "Mokassin",
+      "Materials": "Obermaterial: Textil; Futter: Textil; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1828.JPG"
+        },
+        {
+          "filename": "IMG_1830.JPG"
+        },
+        {
+          "filename": "IMG_1827.JPG"
+        },
+        {
+          "filename": "IMG_1826.JPG"
+        },
+        {
+          "filename": "IMG_1831.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Mokassin",
+      "Product Model": "1005049394",
+      "Keyword 1": "Damen Mokassin",
+      "Keyword 2": "bequeme Schuhe",
+      "Keyword 3": "freizeitschuhe",
+      "eBay Title": "Julietta 1005049394 Mokassin Damen Korallrot 40 Damen Mokassin bequeme Schuhe"
+    }
+  }
+}

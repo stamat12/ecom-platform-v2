@@ -1,0 +1,71 @@
+{
+  "VER00531": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2309301,
+      "Invoice Date": "2023-09-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 656524,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Sandalen Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.66,
+      "Total Cost Net": 2.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Beige",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Sandaletten mit Blockabsatz und Peep-Toe. Das Fesselriemchen ist mit goldfarbenen Zierelementen versehen.",
+      "Keywords": "Sandaletten",
+      "Materials": "Obermaterial: Textil in Veloursleder-Optik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_9966.JPG"
+        },
+        {
+          "filename": "IMG_9967.JPG"
+        },
+        {
+          "filename": "IMG_9969.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "Offene Schuhe",
+      "Keyword 3": "Absatzschuhe",
+      "eBay Title": "Sandale Damen Beige 39 Damen Sandalen Offene Schuhe Absatzschuhe"
+    }
+  }
+}

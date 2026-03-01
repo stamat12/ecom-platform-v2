@@ -1,0 +1,77 @@
+{
+  "RET00019": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK216462444",
+      "ISIN": "B0B1QPKMYG",
+      "Supplier Title": "Killtec Mädchen Ksw 155 Grls Jckt Skijacke Funktionsjacke mit Kapuze und Schneefang, Türkis, 164 EU"
+    },
+    "Price Data": {
+      "Price Net": 17.66,
+      "Shipping Net": 2.73,
+      "Total Cost Net": 20.39
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Wintersport/Bekleidung/Mäntel, Jacken & Westen",
+      "eBay Category ID": "26346"
+    },
+    "EAN": {
+      "EAN": 4066224035484.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "KG",
+      "Brand": "Killtec",
+      "Color": "Türkis",
+      "Size": "164"
+    },
+    "Intern Generated Info": {
+      "More details": "Mädchen Skijacke mit Kapuze und Schneefang; Funktionsjacke für optimalen Schutz bei winterlichen Aktivitäten; stilvolles Design in Türkis.",
+      "Keywords": "Mädchen Ksw Skijacke",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": 88.29
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 019"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00019 (10)_wb.jpg"
+        },
+        {
+          "filename": "RET00019 (13).jpg"
+        },
+        {
+          "filename": "RET00019 (3).jpg"
+        },
+        {
+          "filename": "RET00019 (4).jpg"
+        },
+        {
+          "filename": "RET00019 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "Allround",
+      "Keyword 1": "Wasserdichte Jacke",
+      "Keyword 2": "Atmungsaktive Jacke",
+      "Keyword 3": "Winddichte Jacke",
+      "eBay Title": "Killtec Allround Jacke Mädchen Türkis 164 Wasserdichte Jacke Atmungsaktive Jacke"
+    }
+  }
+}

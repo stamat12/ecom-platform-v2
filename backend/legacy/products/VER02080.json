@@ -1,0 +1,77 @@
+{
+  "VER02080": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 696357,
+      "Invoice Date": "2025-10-06T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 156413,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. T-Shirt S"
+    },
+    "Price Data": {
+      "Price Net": 10.62,
+      "Shipping Net": 2.67,
+      "Total Cost Net": 13.29
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Lacoste",
+      "Color": "Mehrfarbig",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Farben: Dunkelblau, Weiß, Grün. Ultra-Dry-Technologie. UPF 30 Sonnenschutz.",
+      "Keywords": "Sport Colorblock Polo Poloshirt",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": 75.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02080 (2).jpg"
+        },
+        {
+          "filename": "VER02080 (13).jpg"
+        },
+        {
+          "filename": "VER02080 (12).jpg"
+        },
+        {
+          "filename": "VER02080 (11).jpg"
+        },
+        {
+          "filename": "VER02080 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Poloshirt",
+      "Product Model": "FR 3",
+      "Keyword 1": "Sportshirt",
+      "Keyword 2": "Tennisoberteil",
+      "Keyword 3": "Atmungsaktives Shirt",
+      "eBay Title": "Lacoste FR 3 Poloshirt Herren Mehrfarbig S Sportshirt Tennisoberteil"
+    }
+  }
+}

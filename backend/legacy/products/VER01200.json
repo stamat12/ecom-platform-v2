@@ -1,0 +1,74 @@
+{
+  "VER01200": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411389,
+      "Invoice Date": "2024-11-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774275,
+      "ISIN": null,
+      "Supplier Title": "Winter Rock Größe 46"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 10.48
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Röcke",
+      "eBay Category ID": "63864"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Alba Moda",
+      "Color": "Weiß/Schwarz",
+      "Size": "46"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Rock in Boucléqualität",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01200 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01200 (1).JPG"
+        },
+        {
+          "filename": "VER01200 (5)_wb.jpg"
+        },
+        {
+          "filename": "VER01200 (6).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Rock",
+      "Product Model": "",
+      "Keyword 1": "Damenrock",
+      "Keyword 2": "Tweedrock",
+      "Keyword 3": "Minirock",
+      "eBay Title": "Alba Moda Rock Damen Weiß/Schwarz 46 Damenrock Tweedrock Minirock"
+    }
+  }
+}

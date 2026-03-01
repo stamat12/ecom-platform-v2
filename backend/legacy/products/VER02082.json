@@ -1,0 +1,71 @@
+{
+  "VER02082": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-15572-41",
+      "Invoice Date": "2025-10-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 470,
+      "ISIN": null,
+      "Supplier Title": "Damen Schuhe SWISS line, Gr. 36, 7640146953124"
+    },
+    "Price Data": {
+      "Price Net": 14.0,
+      "Shipping Net": 2.7,
+      "Total Cost Net": 16.7
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 7640146953124.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "SWISS line",
+      "Color": "Mehrfarbig",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Sneaker mit Karomuster und Wildleder-Details. Die Sohlenkonstruktion soll entlasten, stabilisieren, dämpfen und die natürliche Abrollbewegung unterstützen.",
+      "Keywords": "Sneaker",
+      "Materials": "Obermaterial: Textil, Wildleder; Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02082 (4).jpg"
+        },
+        {
+          "filename": "VER02082 (3).jpg"
+        },
+        {
+          "filename": "VER02082 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "SWISS line Sneaker Damen Mehrfarbig 36 Sport Schuhe Freizeitschuhe Laufschuhe"
+    }
+  }
+}

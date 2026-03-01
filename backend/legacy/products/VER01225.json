@@ -1,0 +1,71 @@
+{
+  "VER01225": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411808,
+      "Invoice Date": "2024-11-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 774543,
+      "ISIN": null,
+      "Supplier Title": "Miracle Women Badeanzug Größe 80D"
+    },
+    "Price Data": {
+      "Price Net": 12.5,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 12.98
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Miracle Woman",
+      "Color": "Schwarz",
+      "Size": "85D"
+    },
+    "Intern Generated Info": {
+      "More details": "Einteiliger Badeanzug mit Bügel-Cups und verstellbaren Trägern. Gemusterter Rüschen-Besatz am Dekolleté. Made in EU.",
+      "Keywords": "Badeanzug",
+      "Materials": "92% Polyester, 8% Elasthan"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01225 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01225 (6).JPG"
+        },
+        {
+          "filename": "VER01225 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "",
+      "Keyword 1": "Schwimmbekleidung",
+      "Keyword 2": "Damen Badeanzug",
+      "Keyword 3": "Badebekleidung",
+      "eBay Title": "Miracle Woman Badeanzug Damen Schwarz 85D Schwimmbekleidung Damen Badeanzug"
+    }
+  }
+}

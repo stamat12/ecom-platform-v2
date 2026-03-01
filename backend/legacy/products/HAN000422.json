@@ -1,0 +1,74 @@
+{
+  "HAN000422": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412360,
+      "Invoice Date": "2024-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 777388,
+      "ISIN": null,
+      "Supplier Title": "Nature by Menzo Rucksack ca.30x35cm"
+    },
+    "Price Data": {
+      "Price Net": 30.0,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 30.64
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Sporttaschen & Rucksäcke/Rucksäcke",
+      "eBay Category ID": "68814"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Nature by Menzo",
+      "Color": "Braun",
+      "Size": "30x35 cm"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "MB3 Rucksack Büffelleder",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "MB3-1_bearbeitet-1_019e967b-5c82-489d-93f3-56bfabaab5a1_700x802.jpg"
+        },
+        {
+          "filename": "MB3-4_bearbeitet-1_500x333.jpg"
+        },
+        {
+          "filename": "MB3-3_bearbeitet-1_500x650.jpg"
+        },
+        {
+          "filename": "HAN000422 (7).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Rucksack",
+      "Product Model": "",
+      "Keyword 1": "Lederrucksack",
+      "Keyword 2": "Schultasche",
+      "Keyword 3": "Tagesrucksack",
+      "eBay Title": "Nature by Menzo Rucksack Unisex Braun 30x35 cm Lederrucksack Schultasche"
+    }
+  }
+}

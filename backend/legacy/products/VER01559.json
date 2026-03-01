@@ -1,0 +1,71 @@
+{
+  "VER01559": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13765-04",
+      "Invoice Date": "2025-05-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 166,
+      "ISIN": null,
+      "Supplier Title": "Damen BH Calvin Klein, Gr. 70DD, A13539/P12475 ehem. POS 132"
+    },
+    "Price Data": {
+      "Price Net": 4.0,
+      "Shipping Net": 0.72,
+      "Total Cost Net": 4.72
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets",
+      "eBay Category ID": "63853"
+    },
+    "EAN": {
+      "EAN": 8719853921357.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Calvin Klein",
+      "Color": "Weiß",
+      "Size": "70DD"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen BH",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01559 (3).jpg"
+        },
+        {
+          "filename": "VER01559 (5).jpg"
+        },
+        {
+          "filename": "VER01559 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "BH",
+      "Product Model": "320DD",
+      "Keyword 1": "Demi BH",
+      "Keyword 2": "leicht gepolstert",
+      "Keyword 3": "Unterwäsche",
+      "eBay Title": "Calvin Klein 320DD BH Damen Weiß 70DD Demi BH leicht gepolstert Unterwäsche"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "VER01004": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24052120,
+      "Invoice Date": "2024-05-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 710607,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Dansi Spain 5680 Sandalen"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 1.15,
+      "Total Cost Net": 7.82
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Dansi",
+      "Color": "Pink",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Elegante Slingpumps mit T-Steg und spitzer Kappe aus feinem Veloursleder. Geschwungener Blockabsatz. Hecho en España. Mod/Ref: 5680.",
+      "Keywords": "5680 Slingpumps",
+      "Materials": "Obermaterial: Veloursleder; Futter und Decksohle: Leder; Laufsohle: Leder"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_5196.JPG"
+        },
+        {
+          "filename": "IMG_5197.JPG"
+        },
+        {
+          "filename": "IMG_5198.JPG"
+        },
+        {
+          "filename": "IMG_5199.JPG"
+        },
+        {
+          "filename": "IMG_5200.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "5680",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "T-Strap Sandalen",
+      "eBay Title": "Dansi 5680 Sandale Damen Pink 39 Damen Schuhe Absatzschuhe T-Strap Sandalen"
+    }
+  }
+}

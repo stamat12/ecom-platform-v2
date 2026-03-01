@@ -1,0 +1,68 @@
+{
+  "VER01266": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2501175,
+      "Invoice Date": "2025-01-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 776302,
+      "ISIN": null,
+      "Supplier Title": "Bershka Jeans Jacke Größe M"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 8.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Bershka",
+      "Color": "Blau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Jeansjacke Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01266 (3).JPG"
+        },
+        {
+          "filename": "VER01266 (4).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jeansjacke",
+      "Product Model": "",
+      "Keyword 1": "Denimjacke",
+      "Keyword 2": "Damenjacke",
+      "Keyword 3": "Kurzjacke",
+      "eBay Title": "Bershka Jeansjacke Damen Blau M Denimjacke Damenjacke Kurzjacke"
+    }
+  }
+}

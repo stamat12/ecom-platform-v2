@@ -1,0 +1,67 @@
+{
+  "VER01753": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 691794,
+      "Invoice Date": "2025-07-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 583351,
+      "ISIN": null,
+      "Supplier Title": "Damenblazer Slim Fit, Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.91,
+      "Total Cost Net": 6.74
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 8059524014965.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "LIU JO",
+      "Color": "Dunkelblau",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Langer Blazer aus technischem Stretch-Gewebe mit Reverskragen, Pattentaschen und Ein-Knopf-Verschluss.",
+      "Keywords": "Giacca Slim Fit Blazer",
+      "Materials": "Hauptgewebe: 97% Polyester, 3% Elasthan; Futter: 68% Acetat, 32% Polyester."
+    },
+    "OP": {
+      "OP": 250.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01753 (3).jpg"
+        },
+        {
+          "filename": "VER01753 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

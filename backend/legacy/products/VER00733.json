@@ -1,0 +1,71 @@
+{
+  "VER00733": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666551,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Sandalen High Heels Gr. 40"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 2.21
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Schwarz",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Peep-Toe Sandaletten mit Stiletto-Absatz und Fesselriemchen in Kroko-Optik.",
+      "Keywords": "Sandaletten",
+      "Materials": "Obermaterial: Synthetik; Futter: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 35.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1961.JPG"
+        },
+        {
+          "filename": "IMG_1959.JPG"
+        },
+        {
+          "filename": "IMG_1962.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "",
+      "Keyword 1": "Absatzschuhe",
+      "Keyword 2": "Damen Schuhe",
+      "Keyword 3": "Offene Schuhe",
+      "eBay Title": "Sandale Damen Schwarz 40 Absatzschuhe Damen Schuhe Offene Schuhe"
+    }
+  }
+}

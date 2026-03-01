@@ -1,0 +1,77 @@
+{
+  "JAL00026": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc43n758M",
+      "ISIN": "b0dftmblkd",
+      "Supplier Title": "maxvinci Plateau Sneaker Women's Canvas Shoes Thick Soles Fabric Shoes Low Top Sneakers Platform Sneakers Sports Shoes"
+    },
+    "Price Data": {
+      "Price Net": 1.28,
+      "Shipping Net": 0.84,
+      "Total Cost Net": 2.13
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "maxvinci",
+      "Color": "Mehrfarbig",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Damen Plateau Sneaker mit dicker Sohle und Farbverlauf von Rosa zu Blau.",
+      "Keywords": "Plateau Sneaker",
+      "Materials": "Obermaterial: Canvas, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 31.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Canvas Schuhe",
+      "Keyword 2": "Laufschuhe",
+      "Keyword 3": "Sport Schuhe",
+      "eBay Title": "maxvinci Sneaker Damen Mehrfarbig 41 Canvas Schuhe Laufschuhe Sport Schuhe"
+    }
+  }
+}

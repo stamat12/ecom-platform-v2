@@ -1,0 +1,68 @@
+{
+  "VER00418": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2307934,
+      "Invoice Date": "2023-07-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 641276,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Graceland Pumps Gr. 37"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 0.51,
+      "Total Cost Net": 3.01
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Graceland",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Sandaletten mit Blockabsatz und Fesselriemchen. Allover-Glitzer-Optik. Artikelnummer: 1 185 1018.",
+      "Keywords": "Glitzer Sandaletten",
+      "Materials": "Obermaterial: Synthetik; Innenmaterial: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_8057.JPG"
+        },
+        {
+          "filename": "IMG_8055.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "",
+      "Keyword 1": "Absatzschuhe",
+      "Keyword 2": "Damen Schuhe",
+      "Keyword 3": "Schicke Schuhe",
+      "eBay Title": "Graceland Pumps Damen Schwarz 37 Absatzschuhe Damen Schuhe Schicke Schuhe"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "VER01074": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24081383,
+      "Invoice Date": "2024-08-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 741204,
+      "ISIN": null,
+      "Supplier Title": "Ellugun 5in1 Anti Cellulite Massage"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.5,
+      "Total Cost Net": 7.17
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Massage/Massagegeräte",
+      "eBay Category ID": "36449"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Ellugun",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Massagegerät Elekjack",
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_6899.JPG"
+        },
+        {
+          "filename": "IMG_6900.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Massagegerät",
+      "Product Model": "Ellugun",
+      "Keyword 1": "Anti-Cellulite",
+      "Keyword 2": "elektrisches Massagegerät",
+      "Keyword 3": "Körpermassage",
+      "eBay Title": "Ellugun Ellugun Massagegerät Anti-Cellulite elektrisches Massagegerät"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "VER01986": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 693179,
+      "Invoice Date": "2025-08-18T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 152146,
+      "ISIN": null,
+      "Supplier Title": "Sporthose Damengröße M"
+    },
+    "Price Data": {
+      "Price Net": 9.44,
+      "Shipping Net": 0.53,
+      "Total Cost Net": 9.97
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Kinder/Mädchen/Mode für Mädchen/Shorts",
+      "eBay Category ID": "15648"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "KG",
+      "Brand": "Nike",
+      "Color": "Schwarz",
+      "Size": "M (137-146)"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Nike Sportswear Essential Fleece Shorts bestehen aus weichem Fleece-Material für ein bequemes Tragegefühl. Sie haben einen elastischen Bund mit Kordelzug für eine individuelle Passform und Seitentaschen für die Hände.",
+      "Keywords": "Essential Fleece Shorts",
+      "Materials": "80 % Baumwolle, 20 % Polyester"
+    },
+    "OP": {
+      "OP": 29.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01986 (2).jpg"
+        },
+        {
+          "filename": "VER01986 (6).jpg"
+        },
+        {
+          "filename": "VER01986 (3).jpg"
+        },
+        {
+          "filename": "VER01986 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

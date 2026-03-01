@@ -1,0 +1,71 @@
+{
+  "VER02063": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2509750,
+      "Invoice Date": "2025-09-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 848589,
+      "ISIN": null,
+      "Supplier Title": "Converse Sneaker Größe 36"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 18.81
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 888755279069.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Converse",
+      "Color": "schwarz",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Der legendäre Chuck wurde mit einer leichten, geformten Plateausohle aktualisiert.",
+      "Keywords": "Chuck Taylor All Star Lift Ox Sneaker",
+      "Materials": "Obermaterial: Canvas, Innenfutter: Textil, Außensohle: Gummi"
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02063 (6).jpg"
+        },
+        {
+          "filename": "VER02063 (3).jpg"
+        },
+        {
+          "filename": "VER02063 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "CTAS Lift OX",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Sportliche Sneaker",
+      "eBay Title": "Converse CTAS Lift OX Sneaker Damen schwarz 36 Damen Schuhe Freizeitschuhe"
+    }
+  }
+}

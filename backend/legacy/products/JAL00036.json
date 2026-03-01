@@ -1,0 +1,74 @@
+{
+  "JAL00036": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK412164230",
+      "ISIN": "b0d2hzj6dj",
+      "Supplier Title": "Cusolemore Mary Jane Flat Shoes for Women with Arch Support and Hidden Wedge Heel, Ladies Ballet Flats White Size 40.5"
+    },
+    "Price Data": {
+      "Price Net": 2.24,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 2.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Cusolemore",
+      "Color": "Weiß",
+      "Size": "40.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Mary Jane Ballerinas mit Spange und verstecktem Keilabsatz.",
+      "Keywords": "Mary Jane Ballerinas",
+      "Materials": "Obermaterial: Kunstleder, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Ballerina",
+      "Keyword 2": "Mary Jane",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "Cusolemore Schuh Damen Weiß 40.5 Ballerina Mary Jane Damen Schuhe Kundenretour"
+    }
+  }
+}

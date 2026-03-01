@@ -1,0 +1,68 @@
+{
+  "VER01422": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25032156,
+      "Invoice Date": "2025-03-31T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 789058,
+      "ISIN": null,
+      "Supplier Title": "H&M Leinen Hemd Größe M"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 5.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "H",
+      "Brand": "H&M",
+      "Color": "Beige",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Leinen Hemd",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 18.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01422 (3).jpg"
+        },
+        {
+          "filename": "VER01422 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Gestreiftes Hemd",
+      "Keyword 3": "Freizeithemd",
+      "eBay Title": "H&M Hemd Beige M Langarmhemd Gestreiftes Hemd Freizeithemd Neu mit Etiketten"
+    }
+  }
+}

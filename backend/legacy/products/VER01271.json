@@ -1,0 +1,71 @@
+{
+  "VER01271": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2501175,
+      "Invoice Date": "2025-01-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 715795,
+      "ISIN": null,
+      "Supplier Title": "Golden camel Jcaxcake Größe M"
+    },
+    "Price Data": {
+      "Price Net": 12.5,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 13.05
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Golden Camel",
+      "Color": "Schwarz",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Herrenjacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01271 (3).JPG"
+        },
+        {
+          "filename": "VER01271 (6).JPG"
+        },
+        {
+          "filename": "VER01271 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "",
+      "Keyword 1": "Wetterjacke",
+      "Keyword 2": "Outdoorjacke",
+      "Keyword 3": "Herrenjacke",
+      "eBay Title": "Golden Camel Jacke Herren Schwarz M Wetterjacke Outdoorjacke Herrenjacke"
+    }
+  }
+}

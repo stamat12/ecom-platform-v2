@@ -1,0 +1,71 @@
+{
+  "VER01504": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 803995,
+      "ISIN": null,
+      "Supplier Title": "Ecco 83531302710 Sneaker Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 22.25
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Gelb",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Obermaterial: Leder\nInnenmaterial: Textil\nDecksohle: Textil\nSohle: Kunststoff\nFütterungsdicke: Kalt gefüttert\nSchuhspitze: Rund\nAbsatzform: Flach\nVerschluss: Schnürung\nVerschluss: Schnürung\nMuster: Unifarben\nDetails: Lyralochung\nFunktion: Atmungsaktiv\nInnensohle: Gepolstert\nArtikelnummer: EC111A0L2-B11",
+      "Keywords": "Exostride W Sneaker Low",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 160.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01504 (6).jpg"
+        },
+        {
+          "filename": "VER01504 (4).jpg"
+        },
+        {
+          "filename": "VER01504 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Exostrider W",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Damen Schuhe",
+      "eBay Title": "ECCO Exostrider W Sneaker Damen Gelb 41 Sport Schuhe Freizeitschuhe Damen Schuhe"
+    }
+  }
+}

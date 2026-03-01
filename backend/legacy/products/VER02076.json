@@ -1,0 +1,68 @@
+{
+  "VER02076": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25091376,
+      "Invoice Date": "2025-09-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 856174,
+      "ISIN": null,
+      "Supplier Title": "Gabor Loafer Größe 7"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 18.81
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Gabor",
+      "Color": "Weiß",
+      "Size": "40.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Eleganter Slipper aus weichem Kalbsleder mit markanter Kettenspange und Wechselfußbett.",
+      "Keywords": "Slipper 32.610.61",
+      "Materials": "Obermaterial: Kalbsleder, Futter: Leder, Decksohle: Leder, Laufsohle: TR-Sohle"
+    },
+    "OP": {
+      "OP": 85.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02076 (3).jpg"
+        },
+        {
+          "filename": "VER02076 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Loafer",
+      "Keyword 2": "Damen Schuhe",
+      "Keyword 3": "Komfort Schuhe",
+      "eBay Title": "Gabor Schuh Damen Weiß 40.5 Loafer Damen Schuhe Komfort Schuhe Neu ohne Karton"
+    }
+  }
+}

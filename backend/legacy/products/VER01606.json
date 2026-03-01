@@ -1,0 +1,68 @@
+{
+  "VER01606": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716529,
+      "ISIN": null,
+      "Supplier Title": "Gymshark Shorts Größe S"
+    },
+    "Price Data": {
+      "Price Net": 9.17,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 9.54
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Shorts & Radlerhosen",
+      "eBay Category ID": "59307"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Gymshark",
+      "Color": "Lila",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "„Lifting Club“ Grafik-Print (weiß), Tunnelzug am Bund",
+      "Keywords": "Shorts",
+      "Materials": "Baumwoll-Mix (vermutlich Baumwolle mit Elasthan)"
+    },
+    "OP": {
+      "OP": 38.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01606 (3).jpg"
+        },
+        {
+          "filename": "VER01606 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Shorts",
+      "Product Model": "",
+      "Keyword 1": "Sportshorts",
+      "Keyword 2": "Fitnessshorts",
+      "Keyword 3": "Trainingsshorts",
+      "eBay Title": "Gymshark Shorts Damen Lila S Sportshorts Fitnessshorts Trainingsshorts"
+    }
+  }
+}

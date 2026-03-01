@@ -1,0 +1,80 @@
+{
+  "HANVINBTJ003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Vao Papen GmbH",
+      "Invoice": 10654,
+      "Invoice Date": "2025-10-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.28,
+      "Total Cost Net": 10.28
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Gut"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Chaps Ralph Lauren",
+      "Color": "Orange",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte Windjacke mit Kapuze, durchgehendem Reißverschluss und Kordelzug am Saum. Großes Logo-Patch auf der Rückseite. In die eigene Rückentasche verstaubar.",
+      "Keywords": "Vintage Windbreaker",
+      "Materials": "100% Nylon"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HANVINBTJ003 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ003 (1).jpg"
+        },
+        {
+          "filename": "HANVINBTJ003 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ003 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ003 (8).jpg"
+        },
+        {
+          "filename": "HANVINBTJ003 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Windbreaker",
+      "Product Model": "",
+      "Keyword 1": "Sportjacke",
+      "Keyword 2": "Regenjacke",
+      "Keyword 3": "Outdoorjacke",
+      "eBay Title": "Chaps Ralph Lauren Windbreaker Herren Orange M Sportjacke Regenjacke"
+    }
+  }
+}

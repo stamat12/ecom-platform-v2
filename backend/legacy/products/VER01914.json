@@ -1,0 +1,67 @@
+{
+  "VER01914": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 155327,
+      "ISIN": null,
+      "Supplier Title": "Damenbekleidung Größe M"
+    },
+    "Price Data": {
+      "Price Net": 3.54,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 4.09
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten (verschmuzt)"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "ZARA",
+      "Color": "Beige",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Zweireihiger Trenchcoat mit Reverskragen, Gürtel zum Binden und Riegeln an den Ärmelenden.",
+      "Keywords": "Damen Trenchcoat",
+      "Materials": "48% Polyester, 41% Baumwolle, 11% Polyamid"
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01914 (3).jpg"
+        },
+        {
+          "filename": "VER01914 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "VER01046": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24061662,
+      "Invoice Date": "2024-06-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 727316,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Chic Tantra Hose Größe L"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 2.0,
+      "Total Cost Net": 10.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "CHIC by tantra",
+      "Color": "Orange",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Elegante Stoffhose mit geradem Bein und Bügelfalte. Passend zum Blazer SKU IMG_6855.",
+      "Keywords": "Stoffhose",
+      "Materials": "95% Polyester, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_6856.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "",
+      "Keyword 1": "Damenhose",
+      "Keyword 2": "Freizeithose",
+      "Keyword 3": "Chino",
+      "eBay Title": "CHIC by tantra Hose Damen Orange L Damenhose Freizeithose Chino"
+    }
+  }
+}

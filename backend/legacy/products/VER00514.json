@@ -1,0 +1,68 @@
+{
+  "VER00514": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2309301,
+      "Invoice Date": "2023-09-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 321210,
+      "ISIN": null,
+      "Supplier Title": "1 Paar SI Barcelona Boots Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 7.5,
+      "Shipping Net": 0.66,
+      "Total Cost Net": 8.16
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Si Barcelona",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Chelsea Boots aus Leder mit klobiger Profilsohle und elastischen Seiteneinsätzen.",
+      "Keywords": "Chelsea Boots",
+      "Materials": "Obermaterial: Leder; Futter und Decksohle: Leder; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 170.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_0080.JPG"
+        },
+        {
+          "filename": "IMG_0082.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "",
+      "Keyword 1": "Chelsea Stiefel",
+      "Keyword 2": "Lederstiefel",
+      "Keyword 3": "Winterstiefel",
+      "eBay Title": "Si Barcelona Stiefel Damen Schwarz 37 Chelsea Stiefel Lederstiefel Winterstiefel"
+    }
+  }
+}

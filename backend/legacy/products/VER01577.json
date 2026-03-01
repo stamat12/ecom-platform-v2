@@ -1,0 +1,71 @@
+{
+  "VER01577": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 688822,
+      "Invoice Date": "2025-05-20T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 181828,
+      "ISIN": null,
+      "Supplier Title": "Herrenhose Größe auf dem Foto"
+    },
+    "Price Data": {
+      "Price Net": 6.1,
+      "Shipping Net": 1.43,
+      "Total Cost Net": 7.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Hosen",
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Dickies",
+      "Color": "Beige",
+      "Size": "30x34"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "847 Work Hose",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01577 (3).jpg"
+        },
+        {
+          "filename": "VER01577 (4).jpg"
+        },
+        {
+          "filename": "VER01577 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "874",
+      "Keyword 1": "Arbeitshose",
+      "Keyword 2": "Chino",
+      "Keyword 3": "Freizeithose",
+      "eBay Title": "Dickies 874 Hose Herren Beige 30x34 Arbeitshose Chino Freizeithose"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "VER01789": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25062248,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 817763,
+      "ISIN": null,
+      "Supplier Title": "Reebok royal bb4509hi2 Größe 44"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.12,
+      "Total Cost Net": 17.79
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": 1200143169643.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Reebok",
+      "Color": "Weiß",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieser vom Basketball inspirierte Reebok Männerschuh bringt Retro-Vibes auf die Straße.",
+      "Keywords": "Royal BB4500 HI2 Sneaker",
+      "Materials": "Obermaterial aus Leder und Synthetik, Textilfutter, Gummiaußensohle"
+    },
+    "OP": {
+      "OP": 85.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01789 (5).jpg"
+        },
+        {
+          "filename": "VER01789 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

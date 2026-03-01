@@ -1,0 +1,71 @@
+{
+  "VER01487": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 366,
+      "ISIN": null,
+      "Supplier Title": "Damen Winterjacke The North Face, Gr. L"
+    },
+    "Price Data": {
+      "Price Net": 35.0,
+      "Shipping Net": 6.3,
+      "Total Cost Net": 41.3
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "The North Face",
+      "Color": "Mehrfarbig",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "W Liberty Sierra Jacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 275.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01487 (3).jpg"
+        },
+        {
+          "filename": "VER01487 (4).jpg"
+        },
+        {
+          "filename": "VER01487 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Daunenjacke",
+      "Product Model": "NFOA4M8SV32-L",
+      "Keyword 1": "Winterjacke",
+      "Keyword 2": "Wanderjacke",
+      "Keyword 3": "Outdoorjacke",
+      "eBay Title": "The North Face NFOA4M8SV32-L Daunenjacke Damen Mehrfarbig L Winterjacke"
+    }
+  }
+}

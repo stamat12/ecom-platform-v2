@@ -1,0 +1,68 @@
+{
+  "VER01495": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 765583,
+      "ISIN": null,
+      "Supplier Title": "S Oliver Badeanzug Größe 34A/B"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 9.75
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "34 A/B",
+      "Brand": "S. Oliver",
+      "Color": "Mehrfarbig",
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "INT Größe: XS A/B",
+      "Keywords": "Triangel Badeanzug in Fuchsia",
+      "Materials": "Obermaterial: 84% Polyamid - PA, 16% Elasthan"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01495 (2)_wb.jpg"
+        },
+        {
+          "filename": "VER01495 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "",
+      "Keyword 1": "Schwimmbekleidung",
+      "Keyword 2": "Damen Badeanzug",
+      "Keyword 3": "Badeanzug mit Trägern",
+      "eBay Title": "S. Oliver Badeanzug Mehrfarbig Schwimmbekleidung Damen Badeanzug"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER01359": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503147,
+      "Invoice Date": "2025-03-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 706802,
+      "ISIN": null,
+      "Supplier Title": "Scalpers Leinen Hemd Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 10.62
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Scalpers",
+      "Color": "Grün",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Leinen Hemd",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01359 (3).jpg"
+        },
+        {
+          "filename": "VER01359 (5).jpg"
+        },
+        {
+          "filename": "VER01359 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "Vintage",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Herrenhemd",
+      "Keyword 3": "Freizeithemd",
+      "eBay Title": "Scalpers Vintage Hemd Herren Grün 40 Langarmhemd Herrenhemd Freizeithemd"
+    }
+  }
+}

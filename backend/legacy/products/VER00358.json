@@ -1,0 +1,71 @@
+{
+  "VER00358": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2307119,
+      "Invoice Date": "2023-07-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 323023,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Pepe Jeans Trenchcoat Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 36.67,
+      "Shipping Net": 0.56,
+      "Total Cost Net": 37.23
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 8445512802100.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Pepe Jeans",
+      "Color": "Dunkelblau",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassischer zweireihiger Trenchcoat mit Gürtel. Style-Nummer: PL402158.",
+      "Keywords": "SALOME Trenchcoat",
+      "Materials": "Obermaterial: 98% Baumwolle, 2% Elasthan; Futter: 100% Polyester"
+    },
+    "OP": {
+      "OP": 180.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_0373.JPG"
+        },
+        {
+          "filename": "IMG_0377.JPG"
+        },
+        {
+          "filename": "IMG_0376.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Trenchcoat",
+      "Product Model": "PL402158 SALOME",
+      "Keyword 1": "Damenmantel",
+      "Keyword 2": "Wetterjacke",
+      "Keyword 3": "Modischer Mantel",
+      "eBay Title": "Pepe Jeans PL402158 SALOME Trenchcoat Damen Dunkelblau XL Damenmantel"
+    }
+  }
+}

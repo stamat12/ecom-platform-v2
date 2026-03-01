@@ -1,0 +1,67 @@
+{
+  "VER01796": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25062248,
+      "Invoice Date": "2025-06-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 811687,
+      "ISIN": null,
+      "Supplier Title": "Steve Madden Placid Sneaker Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 1.12,
+      "Total Cost Net": 21.95
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 8720857604573.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Steve Madden",
+      "Color": "Beige",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": "Chunky Sneaker im \"Dad Shoe\"-Stil aus einem Materialmix. Farbname: Beige/Multi.",
+      "Keywords": "Placid Sneaker",
+      "Materials": "Obermaterial: Veloursleder, Synthetik, Textil; Futter: Textil; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01796 (13).jpg"
+        },
+        {
+          "filename": "VER01796 (10).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

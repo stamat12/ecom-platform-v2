@@ -1,0 +1,68 @@
+{
+  "VER01416": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25031686,
+      "Invoice Date": "2025-03-25T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 435744,
+      "ISIN": null,
+      "Supplier Title": "Mango Hemd Größe M regular"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 8.7
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Freizeithemden & Shirts",
+      "eBay Category ID": "57990"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Mango",
+      "Color": "Marinenblau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Hemd",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01416 (3).jpg"
+        },
+        {
+          "filename": "VER01416 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "",
+      "Keyword 1": "Bluse",
+      "Keyword 2": "Kleidungsstück",
+      "Keyword 3": "Oberbekleidung",
+      "eBay Title": "Mango Hemd Herren Marinenblau M Bluse Kleidungsstück Oberbekleidung"
+    }
+  }
+}

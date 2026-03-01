@@ -1,0 +1,68 @@
+{
+  "VER01566": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 687696,
+      "Invoice Date": "2025-04-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 573384,
+      "ISIN": null,
+      "Supplier Title": "Blazer Größe 36"
+    },
+    "Price Data": {
+      "Price Net": 2.36,
+      "Shipping Net": 0.89,
+      "Total Cost Net": 3.25
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "H&M",
+      "Color": "Marinenblau",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Blazer",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01566 (2)_wb.jpg"
+        },
+        {
+          "filename": "VER01566 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Blazer",
+      "Product Model": "",
+      "Keyword 1": "Damenjacke",
+      "Keyword 2": "Businessjacke",
+      "Keyword 3": "Anzugjacke",
+      "eBay Title": "H&M Blazer Damen Marinenblau 36 Damenjacke Businessjacke Anzugjacke"
+    }
+  }
+}

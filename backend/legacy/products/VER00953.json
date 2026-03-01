@@ -1,0 +1,74 @@
+{
+  "VER00953": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2405935,
+      "Invoice Date": "2024-05-13T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 664757,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. YAS Kleid Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 11.67,
+      "Shipping Net": 0.5,
+      "Total Cost Net": 12.17
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": 5715308120125.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Y.A.S",
+      "Color": "Pink",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Midi-Trägerkleid aus Satin mit Wasserfallausschnitt und überkreuzten Trägern am Rücken. Style-Nummer: 26028285.",
+      "Keywords": "YASDOTTE Satinkleid",
+      "Materials": "50% Polyester, 50% Recyceltes Polyester"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_5353.JPG"
+        },
+        {
+          "filename": "IMG_5354.JPG"
+        },
+        {
+          "filename": "IMG_5355.JPG"
+        },
+        {
+          "filename": "IMG_5356 1.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "YASDOTTEACROSS STRAP MIDI DRESS",
+      "Keyword 1": "Sommerkleid",
+      "Keyword 2": "Abendkleid",
+      "Keyword 3": "Damenkleid",
+      "eBay Title": "Y.A.S YASDOTTEACROSS STRAP MIDI DRESS Kleid Damen Pink XL Sommerkleid Abendkleid"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "VER01806": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2507498,
+      "Invoice Date": "2025-07-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 832162,
+      "ISIN": null,
+      "Supplier Title": "Milagro Lampe MLP1149"
+    },
+    "Price Data": {
+      "Price Net": 13.33,
+      "Shipping Net": 0.71,
+      "Total Cost Net": 14.04
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Lampen",
+      "eBay Category ID": "112581"
+    },
+    "EAN": {
+      "EAN": 5902693746249.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "MILAGRO",
+      "Color": "Rosa",
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Deckenlampe mit Herzmotiven für Kinder",
+      "Keywords": "Deckenlampe für Kinderzimmer",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01806 (1).jpg"
+        },
+        {
+          "filename": "VER01806 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

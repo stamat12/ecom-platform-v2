@@ -1,0 +1,65 @@
+{
+  "VER01291": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502405,
+      "Invoice Date": "2025-02-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 735336,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Shirt Größe M"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.19,
+      "Total Cost Net": 3.52
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Weiß",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Anna T-Shirt",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01291 (13).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "",
+      "Keyword 1": "Shirt",
+      "Keyword 2": "Oberteil",
+      "Keyword 3": "Mode",
+      "eBay Title": "Von Dutch T-Shirt Damen Weiß M Shirt Oberteil Mode Neu mit Etiketten"
+    }
+  }
+}

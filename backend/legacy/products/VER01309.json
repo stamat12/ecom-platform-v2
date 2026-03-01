@@ -1,0 +1,68 @@
+{
+  "VER01309": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502405,
+      "Invoice Date": "2025-02-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 789389,
+      "ISIN": null,
+      "Supplier Title": "Mango Overall Größe L"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.19,
+      "Total Cost Net": 8.52
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Overalls",
+      "eBay Category ID": "3009"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Mango",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Overall",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01309 (3).jpg"
+        },
+        {
+          "filename": "VER01309 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jumpsuit",
+      "Product Model": "",
+      "Keyword 1": "Einteiler",
+      "Keyword 2": "Damenmode",
+      "Keyword 3": "Sommeroutfit",
+      "eBay Title": "Mango Jumpsuit Damen Schwarz L Einteiler Damenmode Sommeroutfit"
+    }
+  }
+}

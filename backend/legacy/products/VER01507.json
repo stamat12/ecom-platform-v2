@@ -1,0 +1,68 @@
+{
+  "VER01507": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 806774,
+      "ISIN": null,
+      "Supplier Title": "My Fashion Club Damen Stiefeletten Gr.39"
+    },
+    "Price Data": {
+      "Price Net": 2.5,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 3.92
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Gold",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Stiefeletten",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01507 (5).jpg"
+        },
+        {
+          "filename": "VER01507 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "",
+      "Keyword 1": "Cowboystiefel",
+      "Keyword 2": "Westernstiefel",
+      "Keyword 3": "Reiterstiefel",
+      "eBay Title": "Stiefel Damen Gold 39 Cowboystiefel Westernstiefel Reiterstiefel"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "VER01876": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25071231,
+      "Invoice Date": "2025-07-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826552,
+      "ISIN": null,
+      "Supplier Title": "Zyxel Dual Band Wireless DX3301-TO AX1800"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.4,
+      "Total Cost Net": 7.07
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Heimnetzwerke & Zubehör/Modem-Router-Kombinationen",
+      "eBay Category ID": "101270"
+    },
+    "EAN": {
+      "EAN": 4718937619228.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Zyxel",
+      "Color": "Weiß",
+      "Size": "WiFi 6 (AX1800)"
+    },
+    "Intern Generated Info": {
+      "More details": "VDSL2 Supervectoring Modem-Router mit WiFi 6. Unterstützt Geschwindigkeiten bis zu 1.8 Gbps. 4 Gigabit-LAN-Ports, 2 Telefonanschlüsse.",
+      "Keywords": "DX3301-T0 VDSL Modem Router",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": 130.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01876 (6).jpg"
+        },
+        {
+          "filename": "VER01876 (3).jpg"
+        },
+        {
+          "filename": "VER01876 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

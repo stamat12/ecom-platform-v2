@@ -1,0 +1,68 @@
+{
+  "VER01616": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716864,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Top Größe S"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 5.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Orange",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Sydney Crop Top",
+      "Materials": "95% Baumwolle, 5% Elasthan"
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01616 (3).jpg"
+        },
+        {
+          "filename": "VER01616 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Tanktop",
+      "Product Model": "Sydney",
+      "Keyword 1": "Damenoberteil",
+      "Keyword 2": "Sporttop",
+      "Keyword 3": "Trägershirt",
+      "eBay Title": "Von Dutch Sydney Tanktop Damen Orange S Damenoberteil Sporttop Trägershirt"
+    }
+  }
+}

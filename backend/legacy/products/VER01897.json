@@ -1,0 +1,67 @@
+{
+  "VER01897": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 155134,
+      "ISIN": null,
+      "Supplier Title": "Damenrock Größe M"
+    },
+    "Price Data": {
+      "Price Net": 7.08,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 7.63
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Röcke",
+      "eBay Category ID": "63864"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Zara",
+      "Color": "Rot",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Figurbetonter Strick-Minirock mit hohem Bund und dekorativem Gürtel mit goldfarbener Hakenschnalle.",
+      "Keywords": "Strickrock",
+      "Materials": "53% Viskose, 47% Polyamid"
+    },
+    "OP": {
+      "OP": 29.95
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01897 (5).jpg"
+        },
+        {
+          "filename": "VER01897 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

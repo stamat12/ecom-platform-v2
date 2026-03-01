@@ -1,0 +1,74 @@
+{
+  "VER01500": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 795909,
+      "ISIN": null,
+      "Supplier Title": "Reebok basketball Sneaker Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 18.09
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Reebok",
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "BB 4000 II Unisex",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 110.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01500 (7).jpg"
+        },
+        {
+          "filename": "VER01500 (6).jpg"
+        },
+        {
+          "filename": "VER01500 (3).jpg"
+        },
+        {
+          "filename": "VER01500 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Basketballschuh",
+      "Product Model": "BB 4000 II",
+      "Keyword 1": "Sport Schuh",
+      "Keyword 2": "Unisex Sneaker",
+      "Keyword 3": "Freizeitschuh",
+      "eBay Title": "Reebok BB 4000 II Basketballschuh Unisex Weiß 39 Sport Schuh Unisex Sneaker"
+    }
+  }
+}

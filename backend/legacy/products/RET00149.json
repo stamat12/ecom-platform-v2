@@ -1,0 +1,68 @@
+{
+  "RET00149": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK209737629",
+      "ISIN": "B0BMWT9WFY",
+      "Supplier Title": "Relaxdays Weihnachtskugeln 50er Set, glitzernde, Matte & glänzende Christbaumkugeln, Kunststoff, ∅ 3, 4 & 6 cm, rosa"
+    },
+    "Price Data": {
+      "Price Net": 3.0,
+      "Shipping Net": 0.46,
+      "Total Cost Net": 3.46
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Feste & Besondere Anlässe/Jahreszeitliche Dekoration/Christbaum- & Feiertagsschmuck",
+      "eBay Category ID": "166725"
+    },
+    "EAN": {
+      "EAN": 4052025979591.0
+    },
+    "Product Condition": {
+      "Condition": "Wie auf den Fotos (es kann sein, dass ein Paar Kugeln beschädigt sind)"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "glitzernde, Matte & glänzende Christbaumkugeln, Kunststoff, ∅ 3, 4 & 6 cm, rosa",
+      "Keywords": "Relaxdays Weihnachtskugeln 50er Set",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 14.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00149 (4).jpg"
+        },
+        {
+          "filename": "RET00149 (10).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Weihnachtskugel",
+      "Product Model": "",
+      "Keyword 1": "Weihnachtsbaumkugel",
+      "Keyword 2": "Dekoration",
+      "Keyword 3": "Baumschmuck",
+      "eBay Title": "Weihnachtskugel Weihnachtsbaumkugel Dekoration Baumschmuck"
+    }
+  }
+}

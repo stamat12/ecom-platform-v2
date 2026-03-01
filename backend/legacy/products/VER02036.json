@@ -1,0 +1,71 @@
+{
+  "VER02036": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 825166,
+      "ISIN": null,
+      "Supplier Title": "Tommy Hilfiger Sandalen Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 24.17,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 24.9
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": 8720638790662.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Ecru",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Sandaletten mit Keilabsatz, geschlossenem Zehenbereich und Fesselriemen.",
+      "Keywords": "Flag Closed Toe Mid Wedge Espad Sandalette",
+      "Materials": "Obermaterial: Textil, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02036 (2).jpg"
+        },
+        {
+          "filename": "VER02036 (8).jpg"
+        },
+        {
+          "filename": "VER02036 (11).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Espadrille",
+      "Product Model": "",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Wedges",
+      "Keyword 3": "Sommer Schuhe",
+      "eBay Title": "Tommy Hilfiger Espadrille Damen Ecru 40 Damen Schuhe Wedges Sommer Schuhe"
+    }
+  }
+}

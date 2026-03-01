@@ -1,0 +1,70 @@
+{
+  "VER02018": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 826952,
+      "ISIN": null,
+      "Supplier Title": "Nike SB chron 2 CNVS Sneaker Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 14.17,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 14.9
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 194958692452.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Nike",
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Nike SB Chron 2 Canvas ist ein würdiger Nachfolger seines Vorgängers und wurde mit einem neu gestalteten Schuhkragen und einer überarbeiteten Ferse für eine verbesserte Passform aktualisiert.",
+      "Keywords": "SB Chron 2 Canvas Sneaker",
+      "Materials": "Obermaterial: Canvas, Futter: Textil, Sohle: Gummi"
+    },
+    "OP": {
+      "OP": 65.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02018 (11).jpg"
+        },
+        {
+          "filename": "VER02018 (2).jpg"
+        },
+        {
+          "filename": "VER02018 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

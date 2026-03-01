@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 5,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
       },
       "stock": [],
       "phone": [
@@ -74,7 +76,18 @@
           "filename": "PXL_20250526_175318080.jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250526_174946639.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175018669.jpg"
+        },
+        {
+          "filename": "PXL_20250526_175318080.jpg"
+        }
+      ]
     },
     "eBay Fields": {
       "required": {
@@ -94,6 +107,14 @@
         "Textilpflege": "Maschinenwäsche",
         "Jahreszeit": "Sommer"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Shirt",
+      "Product Model": "NBBMU2245",
+      "Keyword 1": "Outdoor Hemd",
+      "Keyword 2": "Funktionsshirt",
+      "Keyword 3": "Schnelltrocknend",
+      "eBay Title": "Nordblanc NBBMU2245 Shirt Herren Blau M Outdoor Hemd Funktionsshirt"
     }
   }
 }

@@ -1,0 +1,71 @@
+{
+  "VER01693": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2506832,
+      "Invoice Date": "2025-06-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 814729,
+      "ISIN": null,
+      "Supplier Title": "Dr Martens Rikard 3 i Größe 41"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 25.75
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Dr. Martens",
+      "Color": "Schwarz",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Rikard 3i Herrenschuhe",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01693 (9).jpg"
+        },
+        {
+          "filename": "VER01693 (8)_wb.jpg"
+        },
+        {
+          "filename": "VER01693 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schnürschuh",
+      "Product Model": "Rikard 3i",
+      "Keyword 1": "Herren Schuhe",
+      "Keyword 2": "Lederschuhe",
+      "Keyword 3": "bequeme Schuhe",
+      "eBay Title": "Dr. Martens Rikard 3i Schnürschuh Herren Schwarz 41 Herren Schuhe Lederschuhe"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER02062": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2509750,
+      "Invoice Date": "2025-09-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 848580,
+      "ISIN": null,
+      "Supplier Title": "Reebok Club c85 Tennis Größe 42,5"
+    },
+    "Price Data": {
+      "Price Net": 21.67,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 22.15
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": 1200161254079.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Reebok",
+      "Color": "Beige",
+      "Size": "42.5"
+    },
+    "Intern Generated Info": {
+      "More details": "Farbbezeichnung des Herstellers: BEIGE/BLACK/WHITE",
+      "Keywords": "Reebok Club C 85 Sneaker",
+      "Materials": "Obermaterial: Textil, Futter: Textil, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02062 (5).jpg"
+        },
+        {
+          "filename": "VER02062 (4).jpg"
+        },
+        {
+          "filename": "VER02062 (2).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Tennisschuh",
+      "Product Model": "Club C 85",
+      "Keyword 1": "Sport Schuh",
+      "Keyword 2": "Freizeitschuh",
+      "Keyword 3": "Unisex Schuh",
+      "eBay Title": "Reebok Club C 85 Tennisschuh Unisex Beige 42.5 Sport Schuh Freizeitschuh"
+    }
+  }
+}

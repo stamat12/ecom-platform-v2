@@ -1,0 +1,71 @@
+{
+  "VER01605": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 803975,
+      "ISIN": null,
+      "Supplier Title": "Clarks CraftCup Court Damenschuhe Gr. 37½"
+    },
+    "Price Data": {
+      "Price Net": 20.83,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 21.2
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Clarks",
+      "Color": "Mehrfarbig",
+      "Size": "37.5"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "CraftCup Court Sneakers",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01605 (5).jpg"
+        },
+        {
+          "filename": "VER01605 (3).jpg"
+        },
+        {
+          "filename": "VER01605 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "CraftCup Court",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Clarks CraftCup Court Sneaker Damen Mehrfarbig 37.5 Sport Schuhe Freizeitschuhe"
+    }
+  }
+}

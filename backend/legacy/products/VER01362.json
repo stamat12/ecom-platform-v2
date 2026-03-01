@@ -1,0 +1,80 @@
+{
+  "VER01362": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2503147,
+      "Invoice Date": "2025-03-03T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 778649,
+      "ISIN": null,
+      "Supplier Title": "CTS Rugged Media Converter SRC-3002SFP"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 4.79
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Firmennetzwerke & Server/Switches & Hubs/Netzwerk-Switches",
+      "eBay Category ID": "51268"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Verpackung"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "CTS",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "1 x 100/1000Base-X SFP zu 1 x 10/100/1000Base-T RJ-45 robuster Medienkonverter\n\nModell: SRC-3002SFP\n\nBetrieb im erweiterten Temperaturbereich von -40 bis 75 °C\n\nKonvertiert 100/1000Base-X SFP auf 10/100/1000Base-T RJ-45\n\nVolle Kompatibilität mit IEEE 802.3, 802.3u, 802.3ab und 802.3z Standards\n\nUmgebungsbedingungen:\n\nBetrieb: -40 °C bis 75 °C\n\nLagerung: -40 °C bis 85 °C\n\nLuftfeuchtigkeit: 5 % bis 95 %, nicht kondensierend\n\nAbmessungen: 71 x 94 x 26 mm (B x T x H)\n\nGewicht: 190 g",
+      "Keywords": "Rugged Media Converter SRC-3002SFP",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 200.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01362 (5)_wb.jpg"
+        },
+        {
+          "filename": "VER01362 (2).JPG"
+        },
+        {
+          "filename": "VER01362 (4).JPG"
+        },
+        {
+          "filename": "VER01362 (7).JPG"
+        },
+        {
+          "filename": "VER01362 (6).JPG"
+        },
+        {
+          "filename": "VER01362 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Medienkonverter",
+      "Product Model": "SRC-3002SFP",
+      "Keyword 1": "SFP Medienkonverter",
+      "Keyword 2": "10/100/1000Base-T",
+      "Keyword 3": "Netzwerkadapter",
+      "eBay Title": "CTS SRC-3002SFP Medienkonverter SFP Medienkonverter 10/100/1000Base-T"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER00915": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24042065,
+      "Invoice Date": "2024-04-26T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 648089,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Camel active Jeans Größe 29x30"
+    },
+    "Price Data": {
+      "Price Net": 16.67,
+      "Shipping Net": 1.0,
+      "Total Cost Net": 17.67
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
+    },
+    "EAN": {
+      "EAN": 4064478489701.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "camel active",
+      "Color": "Blau",
+      "Size": "29/30"
+    },
+    "Intern Generated Info": {
+      "More details": "Herren-Jeans mit geradem Schnitt und mittlerer Leibhöhe (Straight Fit, Mid Waist). Modell: Houston. Artikelnummer: 388565.",
+      "Keywords": "Houston Straight Fit Jeans",
+      "Materials": "98% Baumwolle, 2% Elasthan"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "20240503_112240923_iOS.jpg"
+        },
+        {
+          "filename": "IMG_4522.JPG"
+        },
+        {
+          "filename": "20240503_112315263_iOS.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jeans",
+      "Product Model": "Straight Fit",
+      "Keyword 1": "Hosen",
+      "Keyword 2": "Denim",
+      "Keyword 3": "Freizeithosen",
+      "eBay Title": "camel active Straight Fit Jeans Herren Blau 29/30 Hosen Denim Freizeithosen"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "VER01556": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13765-04",
+      "Invoice Date": "2025-05-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 12,
+      "ISIN": null,
+      "Supplier Title": "Damen Push up BH Calvin Klein, Gr. 70D"
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 1.44,
+      "Total Cost Net": 9.44
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets",
+      "eBay Category ID": "63853"
+    },
+    "EAN": {
+      "EAN": 5051145000405.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Calvin Klein",
+      "Color": "Beige",
+      "Size": "32 0D"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieser BH besteht zu 79 % aus recyceltem Nylon, der durch die Aufarbeitung existierender Materialien entsteht.\n\n• Mikrofaser-Jersey\n• gepolsterte Push-up-Körbchen\n• unterstützende Bügel\n• abnehmbarer und verstellbarer Schulterriemen\n• Silikonband auf der Innenseite für zusätzlichen Halt\n• Hakenverschluss hinten\n• farblich passende, elastische Träger\n\nZusammensetzung und Pflege:\n79 % Nylon 21 % Elastan\n• Schonwaschgang\nnicht maschinell trocknen",
+      "Keywords": "Trägerloser Push-Up-BH",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01556 (4).jpg"
+        },
+        {
+          "filename": "VER01556 (5).jpg"
+        },
+        {
+          "filename": "VER01556 (6).jpg"
+        },
+        {
+          "filename": "VER01556 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "BH",
+      "Product Model": "F2660",
+      "Keyword 1": "Push-Up BH",
+      "Keyword 2": "Strapless BH",
+      "Keyword 3": "Damenunterwäsche",
+      "eBay Title": "Calvin Klein F2660 BH Damen Beige 32 0D Push-Up BH Strapless BH Damenunterwäsche"
+    }
+  }
+}

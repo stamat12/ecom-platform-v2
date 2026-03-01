@@ -1,0 +1,71 @@
+{
+  "VER00900": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24041485,
+      "Invoice Date": "2024-04-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 603173,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Hugo Boss Hose Größe 34"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.44,
+      "Total Cost Net": 25.44
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Hosen",
+      "eBay Category ID": "63863"
+    },
+    "EAN": {
+      "EAN": 4037557160341.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hugo Boss",
+      "Color": "Rosa",
+      "Size": "34"
+    },
+    "Intern Generated Info": {
+      "More details": "Weit geschnittene Hose (Wide Leg) mit hoher Taille und D-Ring-Gürtel. Artikelnummer: 50431006.",
+      "Keywords": "Hedaya Hose",
+      "Materials": "82% Triacetat, 18% Polyester"
+    },
+    "OP": {
+      "OP": 170.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4363.JPG"
+        },
+        {
+          "filename": "IMG_4365.JPG"
+        },
+        {
+          "filename": "IMG_4366.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "Hedaya",
+      "Keyword 1": "Damenhose",
+      "Keyword 2": "Schicke Hose",
+      "Keyword 3": "Modische Hose",
+      "eBay Title": "Hugo Boss Hedaya Hose Damen Rosa 34 Damenhose Schicke Hose Modische Hose"
+    }
+  }
+}

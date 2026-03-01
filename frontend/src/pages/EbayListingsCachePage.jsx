@@ -598,6 +598,83 @@ export default function EbayListingsCachePage() {
     return listings.length > 0 && listings.every(l => selectedSkus.has(l.sku));
   };
 
+  const expandSkuRange = (value) => {
+    const input = String(value || "").trim();
+    const match = input.match(/^([A-Za-z]*)(\d+)-([A-Za-z]*)(\d+)$/);
+    if (!match) return [];
+
+    const [, startPrefix, startNumRaw, endPrefix, endNumRaw] = match;
+    if (startPrefix !== endPrefix) return [];
+
+    const startNum = parseInt(startNumRaw, 10);
+    const endNum = parseInt(endNumRaw, 10);
+    if (!Number.isFinite(startNum) || !Number.isFinite(endNum)) return [];
+    if (startNum >= endNum || endNum - startNum > 1000) return [];
+
+    const width = startNumRaw.length;
+    const expanded = [];
+    for (let number = startNum; number <= endNum; number += 1) {
+      expanded.push(`${startPrefix}${String(number).padStart(width, "0")}`);
+    }
+    return expanded;
+  };
+
+  const parseHybridSku = (rawSku) => {
+    const normalized = String(rawSku || "").trim();
+    if (!normalized) return [];
+
+    const parsed = [];
+    const commaParts = normalized.split(",").map(part => part.trim()).filter(Boolean);
+
+    const processPart = (part) => {
+      if (part.includes(" - ")) {
+        part.split(" - ").map(token => token.trim()).filter(Boolean).forEach(token => parsed.push(token));
+        return;
+      }
+
+      if (part.includes("-")) {
+        const expanded = expandSkuRange(part);
+        if (expanded.length > 0) {
+          expanded.forEach(token => parsed.push(token));
+          return;
+        }
+      }
+
+      parsed.push(part);
+    };
+
+    if (commaParts.length > 0) {
+      commaParts.forEach(processPart);
+    } else {
+      processPart(normalized);
+    }
+
+    return Array.from(new Set(parsed));
+  };
+
+  const sendSelectedToSkuBatch = () => {
+    if (selectedSkus.size === 0) {
+      alert("Please select at least one SKU");
+      return;
+    }
+
+    const expandedSkus = [];
+    Array.from(selectedSkus).forEach((listingSku) => {
+      const parsed = parseHybridSku(listingSku);
+      if (parsed.length > 0) {
+        expandedSkus.push(...parsed);
+      }
+    });
+
+    const uniqueSkus = Array.from(new Set(expandedSkus));
+    if (uniqueSkus.length === 0) {
+      alert("No valid SKUs found in selection");
+      return;
+    }
+
+    navigate("/skus/batch", { state: { selectedSkus: uniqueSkus } });
+  };
+
   const postSkuAction = async (sku, endpoint) => {
     try {
       const response = await fetch(`${API_BASE}${endpoint}`, {
@@ -1112,6 +1189,22 @@ export default function EbayListingsCachePage() {
             title="Update live eBay listing titles for selected SKUs"
           >
             {titleUpdatingEbay ? "⏳ Updating eBay..." : "🚀 Update eBay Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+          </button>
+          <button
+            onClick={sendSelectedToSkuBatch}
+            disabled={selectedSkus.size === 0}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#0d6efd",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: selectedSkus.size === 0 ? "default" : "pointer",
+              fontWeight: "bold"
+            }}
+            title="Send selected SKUs to SKU Batch page (hybrid SKUs are expanded)"
+          >
+            📦 Send to SKU Batch {selectedSkus.size > 0 && `(${selectedSkus.size})`}
           </button>
           <button
             onClick={() => setShowColumnSelector(true)}

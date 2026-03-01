@@ -1,0 +1,68 @@
+{
+  "VER01230": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2411809,
+      "Invoice Date": "2024-11-12T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 377134,
+      "ISIN": null,
+      "Supplier Title": "Rubin Mikrofaser Geschirrtücher 3 Stück"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.48,
+      "Total Cost Net": 3.81
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Kochen & Genießen/Küchentextilien/Geschirrtücher",
+      "eBay Category ID": "20664"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Rubin (Rossmann)",
+      "Color": "Mehrfarbig",
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "3er-Set Geschirrtücher aus Mikrofaser mit Zitronen- und Blumenmuster. OEKO-TEX Standard 100 zertifiziert.",
+      "Keywords": "3 Stück Mikrofaser Geschirrtücher",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": 10.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01230 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01230 (1).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Geschirrtuch",
+      "Product Model": "",
+      "Keyword 1": "Mikrofaser Tücher",
+      "Keyword 2": "Küchentücher",
+      "Keyword 3": "Reinigungstücher",
+      "eBay Title": "Rubin (Rossmann) Geschirrtuch Unisex Mehrfarbig Mikrofaser Tücher Küchentücher"
+    }
+  }
+}

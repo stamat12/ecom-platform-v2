@@ -1,0 +1,71 @@
+{
+  "VER01555": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13765-04",
+      "Invoice Date": "2025-05-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 11,
+      "ISIN": null,
+      "Supplier Title": "Damen BH Panache, Gr. 65H"
+    },
+    "Price Data": {
+      "Price Net": 7.0,
+      "Shipping Net": 1.26,
+      "Total Cost Net": 8.26
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets",
+      "eBay Category ID": "63853"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Panache",
+      "Color": "Marinenblau",
+      "Size": "65"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Serene Full Cup BH",
+      "Materials": "65% Polyester, 18% Elastane, 17% Polyester"
+    },
+    "OP": {
+      "OP": 45.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01555 (4).jpg"
+        },
+        {
+          "filename": "VER01555 (6).jpg"
+        },
+        {
+          "filename": "VER01555 (3)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "BH",
+      "Product Model": "Serene",
+      "Keyword 1": "Vollschalen-BH",
+      "Keyword 2": "Damenunterwäsche",
+      "Keyword 3": "Unterwäsche",
+      "eBay Title": "Panache Serene BH Damen Marinenblau 65 Vollschalen-BH Damenunterwäsche"
+    }
+  }
+}

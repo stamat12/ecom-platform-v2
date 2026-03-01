@@ -1,0 +1,71 @@
+{
+  "VER01470": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 24,
+      "ISIN": null,
+      "Supplier Title": "Damen Winterjacke Pepe Jeans, Gr. S"
+    },
+    "Price Data": {
+      "Price Net": 20.0,
+      "Shipping Net": 3.6,
+      "Total Cost Net": 23.6
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Pepe Jeans",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Winterjacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01470 (3).jpg"
+        },
+        {
+          "filename": "VER01470 (4).jpg"
+        },
+        {
+          "filename": "VER01470 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "PM420645 HINDLEY RO",
+      "Keyword 1": "Winterjacke",
+      "Keyword 2": "Daunenjacke",
+      "Keyword 3": "Wasserabweisend",
+      "eBay Title": "Pepe Jeans PM420645 HINDLEY RO Jacke Herren Grün S Winterjacke Daunenjacke"
+    }
+  }
+}

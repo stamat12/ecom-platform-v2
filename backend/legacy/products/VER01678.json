@@ -1,0 +1,71 @@
+{
+  "VER01678": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051874,
+      "Invoice Date": "2025-05-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 434110,
+      "ISIN": null,
+      "Supplier Title": "Hunkemöller Teddy Pullover Größe S"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 8.69
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hunkemöller",
+      "Color": "Weiß",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Teddyfleece-Hoodie mit Kängurutasche und Kapuze",
+      "Keywords": "Teddyfleece-Hoodie",
+      "Materials": "100 % Polyester"
+    },
+    "OP": {
+      "OP": 36.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01678 (3).jpg"
+        },
+        {
+          "filename": "VER01678 (6).jpg"
+        },
+        {
+          "filename": "VER01678 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hoodie",
+      "Product Model": "Teddy Fleece",
+      "Keyword 1": "Fleece Hoodie",
+      "Keyword 2": "Kapuzenpullover",
+      "Keyword 3": "Teddyjacke",
+      "eBay Title": "Hunkemöller Teddy Fleece Hoodie Damen Weiß S Fleece Hoodie Kapuzenpullover"
+    }
+  }
+}

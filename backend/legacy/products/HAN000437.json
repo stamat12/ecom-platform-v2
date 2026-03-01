@@ -1,0 +1,71 @@
+{
+  "HAN000437": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25011719,
+      "Invoice Date": "2025-01-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 790630,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Palado Stiefelette Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 2.0,
+      "Total Cost Net": 27.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "palado",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Thasos Plateaustiefelette",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000437 (6)_wb.jpg"
+        },
+        {
+          "filename": "HAN000437 (3)_wb.jpg"
+        },
+        {
+          "filename": "HAN000437 (7)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Plateau-Stiefelette",
+      "Product Model": "",
+      "Keyword 1": "Stiefelette",
+      "Keyword 2": "Plateau",
+      "Keyword 3": "Schuhe",
+      "eBay Title": "palado Plateau-Stiefelette Damen Schwarz 37 Stiefelette Plateau Schuhe"
+    }
+  }
+}

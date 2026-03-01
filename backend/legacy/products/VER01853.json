@@ -1,0 +1,67 @@
+{
+  "VER01853": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2507930,
+      "Invoice Date": "2025-07-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 825072,
+      "ISIN": null,
+      "Supplier Title": "Dockers 49VR302 Schuhe Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 14.17,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 14.56
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Dockers",
+      "Color": "Dunkelblau",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Modische Stiefelette mit markanter Plateausohle und praktischem Reißverschluss an der Innenseite für einen leichten Einstieg.",
+      "Keywords": "51BY201 Stiefeletten",
+      "Materials": "Obermaterial: Synthetik, Innenmaterial: Textil, Decksohle: Textil, Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 75.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01848 (10).jpg"
+        },
+        {
+          "filename": "VER01848 (9).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

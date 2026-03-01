@@ -1,0 +1,68 @@
+{
+  "RET00003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK216571638",
+      "ISIN": "B0C462HK51",
+      "Supplier Title": "Jack Wolfskin Bergland 3 in 1 Jacke, Herren"
+    },
+    "Price Data": {
+      "Price Net": 44.99,
+      "Shipping Net": 6.97,
+      "Total Cost Net": 51.96
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": 4064993910919.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Jack Wolfskin",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Die BERGLAND 3IN1 JKT M ist eine vielseitige 3-in-1-Jacke für Herren, bestehend aus einer wasserdichten Außenjacke und einer wärmenden Innenjacke. Ideal für wechselnde Wetterbedingungen und Outdoor-Aktivitäten.",
+      "Keywords": "Outdoor Herren Jacke Bergland",
+      "Materials": "Material Oberstoff: 100% Polyamid; Material Füllung: 100% Polyester; Futter: 100% Polyester"
+    },
+    "OP": {
+      "OP": 224.96
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 019"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00003 (5).jpg"
+        },
+        {
+          "filename": "RET00003 (3)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "Bergland 3in1 Jkt",
+      "Keyword 1": "Wanderjacke",
+      "Keyword 2": "Regenjacke",
+      "Keyword 3": "Funktionsjacke",
+      "eBay Title": "Jack Wolfskin Bergland 3in1 Jkt Jacke Herren Schwarz XL Wanderjacke Regenjacke"
+    }
+  }
+}

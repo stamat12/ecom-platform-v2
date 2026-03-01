@@ -1,0 +1,68 @@
+{
+  "HAN000404": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24112263,
+      "Invoice Date": "2024-11-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 775476,
+      "ISIN": null,
+      "Supplier Title": "Hemd Größe 44"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.64,
+      "Total Cost Net": 3.97
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Klassische Hemden",
+      "eBay Category ID": "57991"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Ötscher",
+      "Color": "Schwarz",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Herren Hemd",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 018"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000404 (1).JPG"
+        },
+        {
+          "filename": "HAN000404 (5).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "HES3000/114",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Businesshemd",
+      "Keyword 3": "Kragenhemd",
+      "eBay Title": "Ötscher HES3000/114 Hemd Herren Schwarz 44 Langarmhemd Businesshemd Kragenhemd"
+    }
+  }
+}

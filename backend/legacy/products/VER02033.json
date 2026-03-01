@@ -1,0 +1,71 @@
+{
+  "VER02033": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25081441,
+      "Invoice Date": "2025-08-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 827124,
+      "ISIN": null,
+      "Supplier Title": "Geox Sneaker Größe 38"
+    },
+    "Price Data": {
+      "Price Net": 18.33,
+      "Shipping Net": 0.73,
+      "Total Cost Net": 19.06
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 8056206221024.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Geox",
+      "Color": "Taupe",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Bequemer und atmungsaktiver Sneaker für Damen mit Innenkeil und urbanem Look.",
+      "Keywords": "Ilde Sneaker",
+      "Materials": "Oberleder: 54% Leder-33% Synthetisch-13% Stoff, Futter: 80% Stoff-20% Synthetisch, Sohle: 100% Gummi, Innensohle: 100% Leder"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER02033 (8).jpg"
+        },
+        {
+          "filename": "VER02033 (4).jpg"
+        },
+        {
+          "filename": "VER02033 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "D36RAC",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "Geox D36RAC Sneaker Damen Taupe 38 Damen Schuhe Sport Schuhe Freizeitschuhe"
+    }
+  }
+}

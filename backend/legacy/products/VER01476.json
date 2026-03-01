@@ -1,0 +1,74 @@
+{
+  "VER01476": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 148,
+      "ISIN": null,
+      "Supplier Title": "Damen Kleid Calvin Klein, Gr. L"
+    },
+    "Price Data": {
+      "Price Net": 16.0,
+      "Shipping Net": 2.88,
+      "Total Cost Net": 18.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Calvin Klein",
+      "Color": "Orange",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Minikleid mit Strukturmuster",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 80.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01476 (3).jpg"
+        },
+        {
+          "filename": "VER01476 (4).jpg"
+        },
+        {
+          "filename": "VER01476 (5).jpg"
+        },
+        {
+          "filename": "VER01476 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "J20J221149",
+      "Keyword 1": "Damenkleid",
+      "Keyword 2": "Trägerkleid",
+      "Keyword 3": "Sommerkleid",
+      "eBay Title": "Calvin Klein J20J221149 Kleid Damen Orange L Damenkleid Trägerkleid Sommerkleid"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "VER01179": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2412909,
+      "Invoice Date": "2024-12-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 776117,
+      "ISIN": null,
+      "Supplier Title": "1 Stk.  Ombre Sweater Größe "
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 6.58
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Pullover & Strick",
+      "eBay Category ID": "11484"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Ombre",
+      "Color": "Grau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": 30.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01179 (3).jpg"
+        },
+        {
+          "filename": "VER01179 (2).jpg"
+        },
+        {
+          "filename": "VER01179 (5).jpg"
+        }
+      ]
+    }
+  }
+}

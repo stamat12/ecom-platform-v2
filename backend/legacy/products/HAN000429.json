@@ -1,0 +1,68 @@
+{
+  "HAN000429": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2501861,
+      "Invoice Date": "2025-01-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 356012,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Sandalen Gr.42"
+    },
+    "Price Data": {
+      "Price Net": 0.83,
+      "Shipping Net": 0.71,
+      "Total Cost Net": 1.54
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen Sandalen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000429 (4)_wb.jpg"
+        },
+        {
+          "filename": "HAN000429 (3)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandalette",
+      "Product Model": "",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "Schuhe mit Absatz",
+      "Keyword 3": "modische Sandalen",
+      "eBay Title": "Sandalette Damen Schwarz 42 Damen Sandalen Schuhe mit Absatz modische Sandalen"
+    }
+  }
+}

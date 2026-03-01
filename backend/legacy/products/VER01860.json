@@ -1,0 +1,67 @@
+{
+  "VER01860": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25071232,
+      "Invoice Date": "2025-07-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 438335,
+      "ISIN": null,
+      "Supplier Title": "Ecco Damenschuhe Sneaker Gr. 40"
+    },
+    "Price Data": {
+      "Price Net": 27.5,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 27.89
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": 194891602112.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ECCO",
+      "Color": "Weiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Modell „ECCO Soft Zero W“",
+      "Keywords": "Soft Zero W Sneaker",
+      "Materials": "Leder, Textil, Gummi"
+    },
+    "OP": {
+      "OP": 140.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01860 (6).jpg"
+        },
+        {
+          "filename": "VER01860 (1).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "VER01503": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25041278,
+      "Invoice Date": "2025-04-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 795952,
+      "ISIN": null,
+      "Supplier Title": "Patrizia Pepe Stiefelette 8y0093 l033 Größe 39"
+    },
+    "Price Data": {
+      "Price Net": 33.33,
+      "Shipping Net": 1.42,
+      "Total Cost Net": 34.75
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Patrizia Pepe",
+      "Color": "Beige",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": "Obermaterial: Kalbsleder\nInnenmaterial: Leder\nDecksohle: Leder\nSohle: Echtes Leder\nFütterungsdicke: Kalt gefüttert\nMaterialkonstruktion: Samt/samtige Stoffe\nPflegehinweise: Bitte vor dem ersten Tragen imprägnieren\nSchuhspitze: Spitz\nAbsatzform: Pfennigabsatz/Stiletto\nVerschluss: Reißverschluss\nMuster: Unifarben\nArtikelnummer: P1411N03B-B11",
+      "Keywords": "Stiefeletten",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 350.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01503 (6).jpg"
+        },
+        {
+          "filename": "VER01503 (7).jpg"
+        },
+        {
+          "filename": "VER01503 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefelette",
+      "Product Model": "8Y0093 L033",
+      "Keyword 1": "Damenstiefel",
+      "Keyword 2": "Ankle Boots",
+      "Keyword 3": "Fellstiefel",
+      "eBay Title": "Patrizia Pepe 8Y0093 L033 Stiefelette Damen Beige 39 Damenstiefel Ankle Boots"
+    }
+  }
+}

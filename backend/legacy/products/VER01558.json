@@ -1,0 +1,68 @@
+{
+  "VER01558": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13765-04",
+      "Invoice Date": "2025-05-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 38,
+      "ISIN": null,
+      "Supplier Title": "Damen Badeanzug Panache, Gr. 65F"
+    },
+    "Price Data": {
+      "Price Net": 9.0,
+      "Shipping Net": 1.62,
+      "Total Cost Net": 10.62
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Bademode",
+      "eBay Category ID": "63867"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Panache",
+      "Color": "Schwarz",
+      "Size": "65F"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Anya Badeanzug",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 90.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01558 (3).jpg"
+        },
+        {
+          "filename": "VER01558 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badeanzug",
+      "Product Model": "Anya",
+      "Keyword 1": "Schwimmbekleidung",
+      "Keyword 2": "Damen Badeanzug",
+      "Keyword 3": "Badeanzug mit Raffung",
+      "eBay Title": "Panache Anya Badeanzug Damen Schwarz 65F Schwimmbekleidung Damen Badeanzug"
+    }
+  }
+}

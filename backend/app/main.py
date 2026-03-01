@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from app.services.legacy_imports import add_legacy_to_syspath
 import json
+import logging
+from pathlib import Path
+from uuid import uuid4
 
 # Ensure legacy imports work
 add_legacy_to_syspath()
@@ -92,6 +95,40 @@ from app.services import ebay_oauth
 
 # Create FastAPI app
 app = FastAPI(title="Ecom Platform API", version="1.0")
+
+_seo_endpoint_logger: logging.Logger | None = None
+
+
+def _get_seo_endpoint_logger() -> logging.Logger:
+    global _seo_endpoint_logger
+    if _seo_endpoint_logger is not None:
+        return _seo_endpoint_logger
+
+    logger = logging.getLogger("ebay_seo_debug_endpoint")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+
+    if not logger.handlers:
+        logs_dir = Path(__file__).resolve().parents[1] / "logs"
+        logs_dir.mkdir(parents=True, exist_ok=True)
+        file_handler = logging.FileHandler(logs_dir / "ebay_seo_debug.log", encoding="utf-8")
+        file_handler.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
+        logger.addHandler(file_handler)
+
+    _seo_endpoint_logger = logger
+    return _seo_endpoint_logger
+
+
+def _log_seo_endpoint_event(event: str, trace_id: str, **payload) -> None:
+    body = {
+        "event": event,
+        "trace_id": trace_id,
+        **payload,
+    }
+    try:
+        _get_seo_endpoint_logger().info(json.dumps(body, ensure_ascii=False, default=str))
+    except Exception:
+        pass
 
 # Setup CORS
 app.add_middleware(
@@ -766,6 +803,13 @@ def enrich_ebay_seo_only(request: EbayEnrichRequest):
     - Skips SKUs without JSON files gracefully
     - Returns data from first successful SKU for display
     """
+    trace_id = uuid4().hex[:12]
+    _log_seo_endpoint_event(
+        "seo_endpoint_request",
+        trace_id,
+        request_sku=request.sku,
+        force=request.force,
+    )
     try:
         result = ebay_enrichment.enrich_ebay_seo_fields(request.sku, force=request.force)
         
@@ -794,9 +838,29 @@ def enrich_ebay_seo_only(request: EbayEnrichRequest):
                 }
                 for r in all_results
             ]
+
+        _log_seo_endpoint_event(
+            "seo_endpoint_response",
+            trace_id,
+            success=response.get("success", False),
+            request_sku=request.sku,
+            individual_skus=response.get("individual_skus", []),
+            skus_with_json=response.get("skus_with_json", []),
+            skus_without_json=response.get("skus_without_json", []),
+            updated_seo_fields=response.get("updated_seo_fields", 0),
+            seo_fields=response.get("seo_fields", {}),
+            message=response.get("message", ""),
+        )
         
         return response
     except Exception as e:
+        _log_seo_endpoint_event(
+            "seo_endpoint_error",
+            trace_id,
+            request_sku=request.sku,
+            force=request.force,
+            error=str(e),
+        )
         raise HTTPException(status_code=400, detail=str(e))
 
 
@@ -1678,9 +1742,9 @@ def _get_listing_sku_json_mapping(raw_sku):
 
         images_data = product.get("Images", {})
         if isinstance(images_data, dict):
-            summary = images_data.get("summary", {})
-            if isinstance(summary, dict):
-                mapped["count_main_images"] = summary.get("count_main_images")
+            main_images = images_data.get("main_images", [])
+            if isinstance(main_images, list):
+                mapped["count_main_images"] = len(main_images)
 
         ebay_seo = product.get("eBay SEO", {})
         if isinstance(ebay_seo, dict):

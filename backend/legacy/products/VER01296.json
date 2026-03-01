@@ -1,0 +1,65 @@
+{
+  "VER01296": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502405,
+      "Invoice Date": "2025-02-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 735342,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Shirt Größe L"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.19,
+      "Total Cost Net": 4.36
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Material Oberstoff: 100% Baumwolle\nMaterialkonstruktion: Ripp\nPflegehinweise: Maschinenwäsche bei 30 °C\n\nPassform: Schmal\nSchnitt: Tailliert\nLänge: Kurz\nÄrmellänge: Langarm, schulterfrei\nSchnitt: Asymmetrisch\nÄrmellänge: 58 cm bei Größe S\nGesamtlänge: 42 cm bei Größe S",
+      "Keywords": "Shirt Avery",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01296 (4)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Oberteil",
+      "Product Model": "",
+      "Keyword 1": "Langarmshirt",
+      "Keyword 2": "Damenoberteil",
+      "Keyword 3": "Crop Top",
+      "eBay Title": "Von Dutch Oberteil Damen Schwarz L Langarmshirt Damenoberteil Crop Top"
+    }
+  }
+}

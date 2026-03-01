@@ -1,0 +1,71 @@
+{
+  "VER00748": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2312119,
+      "Invoice Date": "2023-12-04T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 666371,
+      "ISIN": null,
+      "Supplier Title": "1 Paar Damen Stiefeletten Gr. 38"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 3.87
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Stiefel & Stiefeletten",
+      "eBay Category ID": "53557"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": null,
+      "Color": "Schwarz",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Stiefeletten mit extrem hohem Plateau-Keilabsatz in Lack-Optik. Seitlicher Reißverschluss und eckige Schuhspitze.",
+      "Keywords": "Plateau-Stiefeletten",
+      "Materials": "Obermaterial: Synthetik in Lackleder-Optik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_1783.JPG"
+        },
+        {
+          "filename": "IMG_1784.JPG"
+        },
+        {
+          "filename": "IMG_1788.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "",
+      "Keyword 1": "Plateau Stiefel",
+      "Keyword 2": "Schwarze Stiefel",
+      "Keyword 3": "Modische Stiefel",
+      "eBay Title": "Stiefel Damen Schwarz 38 Plateau Stiefel Schwarze Stiefel Modische Stiefel"
+    }
+  }
+}

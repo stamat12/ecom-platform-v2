@@ -1,0 +1,71 @@
+{
+  "VER01035": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24051304,
+      "Invoice Date": "2024-05-15T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 715969,
+      "ISIN": null,
+      "Supplier Title": "Comma Übergangsmantel Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 45.83,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 46.45
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 4099588077333.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "comma",
+      "Color": "Wollweiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Eleganter Woll-Mix-Mantel in offener Form mit Reverskragen und aufgesetztem Logo-Detail.",
+      "Keywords": "Wollmantel",
+      "Materials": "Oberstoff: 45% Wolle, 40% Polyester, 15% Viskose"
+    },
+    "OP": {
+      "OP": 230.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_5501.JPG"
+        },
+        {
+          "filename": "IMG_5506.JPG"
+        },
+        {
+          "filename": "IMG_5505.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Mantel",
+      "Product Model": "",
+      "Keyword 1": "Damenmantel",
+      "Keyword 2": "Wollmantel",
+      "Keyword 3": "langärmlig",
+      "eBay Title": "comma Mantel Damen Wollweiß 40 Damenmantel Wollmantel langärmlig"
+    }
+  }
+}

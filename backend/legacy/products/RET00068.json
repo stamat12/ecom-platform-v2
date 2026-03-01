@@ -1,0 +1,68 @@
+{
+  "RET00068": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK218804127",
+      "ISIN": "B08Z8DQ2TF",
+      "Supplier Title": "Holst Porzellan Porzellan Eierbecher-Set stapelbar mit Löffel 24-TLG, 12 Eier"
+    },
+    "Price Data": {
+      "Price Net": 6.9,
+      "Shipping Net": 1.07,
+      "Total Cost Net": 7.97
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Kochen & Genießen/Gedeckter Tisch/Eierbecher",
+      "eBay Category ID": "101426"
+    },
+    "EAN": {
+      "EAN": 4260563827643.0
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": "Holst Porzellan",
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Porzellan Eierbecher-Set ",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 34.49
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00068 (2)_wb.jpg"
+        },
+        {
+          "filename": "RET00068 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Eierbecher",
+      "Product Model": "Eierbecher",
+      "Keyword 1": "Frühstücksgeschirr",
+      "Keyword 2": "Porzellan Eierbecher",
+      "Keyword 3": "Eierbecher Set",
+      "eBay Title": "Holst Porzellan Eierbecher Eierbecher Frühstücksgeschirr Porzellan Eierbecher"
+    }
+  }
+}

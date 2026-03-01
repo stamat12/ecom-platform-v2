@@ -1,0 +1,74 @@
+{
+  "VER01480": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "AURENA GmbH",
+      "Invoice": "1-A-13028-47",
+      "Invoice Date": "2025-03-16T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 291,
+      "ISIN": null,
+      "Supplier Title": "Damen Winterjacke Tommy Jeans, Gr. S"
+    },
+    "Price Data": {
+      "Price Net": 30.0,
+      "Shipping Net": 5.4,
+      "Total Cost Net": 35.4
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Pufferjacke",
+      "Materials": "\t100% Nylon"
+    },
+    "OP": {
+      "OP": 150.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01480 (12).jpg"
+        },
+        {
+          "filename": "VER01480 (4).jpg"
+        },
+        {
+          "filename": "VER01480 (6).jpg"
+        },
+        {
+          "filename": "VER01480 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "DM0DM05426",
+      "Keyword 1": "Pufferjacke",
+      "Keyword 2": "Winterjacke",
+      "Keyword 3": "Daunenjacke",
+      "eBay Title": "Tommy Hilfiger DM0DM05426 Jacke Damen Grün S Pufferjacke Winterjacke Daunenjacke"
+    }
+  }
+}

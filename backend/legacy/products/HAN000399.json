@@ -1,0 +1,71 @@
+{
+  "HAN000399": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24102121,
+      "Invoice Date": "2024-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 755900,
+      "ISIN": null,
+      "Supplier Title": "S Oliver Sandale Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.79,
+      "Total Cost Net": 10.79
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": 4059258937819.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "s.Oliver",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Plateau-Sandale mit klobiger Profilsohle und verstellbarem Fesselriemen.",
+      "Keywords": "28701 Plateau-Sandale",
+      "Materials": "Obermaterial: Synthetik; Futter: Synthetik; Laufsohle: Synthetik"
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000399 (1).JPG"
+        },
+        {
+          "filename": "HAN000399 (1)_wb.jpg"
+        },
+        {
+          "filename": "HAN000399 (6)_wb.jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "28701-20",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "bequeme Schuhe",
+      "Keyword 3": "modische Sandalen",
+      "eBay Title": "s.Oliver 28701-20 Sandale Damen Schwarz 37 Damen Sandalen bequeme Schuhe"
+    }
+  }
+}

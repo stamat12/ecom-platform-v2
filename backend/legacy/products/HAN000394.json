@@ -1,0 +1,74 @@
+{
+  "HAN000394": {
+    "Invoice Data": {
+      "Buying Entity": "SIV Commerce Ltd.",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24102121,
+      "Invoice Date": "2024-10-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 756022,
+      "ISIN": null,
+      "Supplier Title": "Puma carina 2 Sneaker Größe 37"
+    },
+    "Price Data": {
+      "Price Net": 25.83,
+      "Shipping Net": 0.79,
+      "Total Cost Net": 26.62
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Puma",
+      "Color": "Beige",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Carina Sneakers Damen",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 55.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "HAN000394 (1)_wb.jpg"
+        },
+        {
+          "filename": "HAN000394 (3).JPG"
+        },
+        {
+          "filename": "HAN000394 (5)_wb.jpg"
+        },
+        {
+          "filename": "HAN000394 (8).JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Puma Sneaker Damen Beige 37 Sport Schuhe Freizeitschuhe Laufschuhe"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "JAL00049": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spB48X5Yw5X",
+      "ISIN": "b0d2wbcxdj",
+      "Supplier Title": "Hawkwell Women's Non-Slip Lightweight Nursing Shoes Comfortable Lace-Up Work Shoes, Black EU 40"
+    },
+    "Price Data": {
+      "Price Net": 4.06,
+      "Shipping Net": 0.59,
+      "Total Cost Net": 4.65
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Gesundheitsschuhe",
+      "eBay Category ID": "53548"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Hawkwell",
+      "Color": "Schwarz",
+      "Size": "EU 40"
+    },
+    "Intern Generated Info": {
+      "More details": "Leichte und bequeme Arbeitsschuhe für Damen mit rutschfester Sohle. Ideal für den Pflegebereich.",
+      "Keywords": "Bliss Style Arbeitsschuhe",
+      "Materials": "Obermaterial: Synthetik, Laufsohle: Gummi, Innensohle: Schaumstoff"
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Halbschuh",
+      "Keyword 2": "Freizeitschuh",
+      "Keyword 3": "Schnürschuh",
+      "eBay Title": "Hawkwell Schuh Damen Schwarz EU 40 Halbschuh Freizeitschuh Schnürschuh Brandneu"
+    }
+  }
+}

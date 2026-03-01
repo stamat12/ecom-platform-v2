@@ -1,0 +1,71 @@
+{
+  "VER00894": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 24041485,
+      "Invoice Date": "2024-04-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 292210,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Tommy Hilfiger Hose leicht verschmutzt  Größe 28x30"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.44,
+      "Total Cost Net": 15.44
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Hosen",
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": 8719254332821.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Beige",
+      "Size": "28/32"
+    },
+    "Intern Generated Info": {
+      "More details": "Klassische Chino-Hose aus Stretch-Twill, vermutlich in einer schmalen Passform (Slim Fit).",
+      "Keywords": "Chino-Hose",
+      "Materials": "97% Baumwolle, 3% Elasthan"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "IMG_4387.JPG"
+        },
+        {
+          "filename": "IMG_4390.JPG"
+        },
+        {
+          "filename": "IMG_4391.JPG"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "28 30",
+      "Keyword 1": "Chino",
+      "Keyword 2": "Freizeithose",
+      "Keyword 3": "Bequeme Hose",
+      "eBay Title": "Tommy Hilfiger 28 30 Hose Herren Beige 28/32 Chino Freizeithose Bequeme Hose"
+    }
+  }
+}

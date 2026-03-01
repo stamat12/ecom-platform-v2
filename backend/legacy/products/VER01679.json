@@ -1,0 +1,68 @@
+{
+  "VER01679": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051874,
+      "Invoice Date": "2025-05-27T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 434127,
+      "ISIN": null,
+      "Supplier Title": "Comma Jacke Größe 44"
+    },
+    "Price Data": {
+      "Price Net": 33.33,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 33.69
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": 4099589142948.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "comma,",
+      "Color": "Grau",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Gesteppte Outdoor-Jacke in melierter Tweed-Optik mit Stehkragen und Reißverschluss.",
+      "Keywords": "2134707 Steppjacke",
+      "Materials": "Oberstoff: 59% Polyester, 35% Polyacryl, 4% Wolle, 2% Metallisiertes Garn; Futter: 100% Polyamid; Füllung: 100% Polyester"
+    },
+    "OP": {
+      "OP": 179.99
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01679 (5).jpg"
+        },
+        {
+          "filename": "VER01679 (14).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "Outdoor-Jacke",
+      "Keyword 1": "Wanderjacke",
+      "Keyword 2": "Winterjacke",
+      "Keyword 3": "Damenjacke",
+      "eBay Title": "comma, Outdoor-Jacke Jacke Damen Grau 44 Wanderjacke Winterjacke Damenjacke"
+    }
+  }
+}

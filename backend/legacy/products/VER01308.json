@@ -1,0 +1,71 @@
+{
+  "VER01308": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502405,
+      "Invoice Date": "2025-02-07T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 789363,
+      "ISIN": null,
+      "Supplier Title": "Schmuddelwedda Softshelljacke Größe S"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.19,
+      "Total Cost Net": 25.19
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Schmuddelwedda",
+      "Color": "Grün",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Softshelljacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 160.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01308 (8).jpg"
+        },
+        {
+          "filename": "VER01308 (14).jpg"
+        },
+        {
+          "filename": "VER01308 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "34313677",
+      "Keyword 1": "Wetterjacke",
+      "Keyword 2": "Outdoorjacke",
+      "Keyword 3": "Damenjacke",
+      "eBay Title": "Schmuddelwedda 34313677 Jacke Damen Grün S Wetterjacke Outdoorjacke Damenjacke"
+    }
+  }
+}

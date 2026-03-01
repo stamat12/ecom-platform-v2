@@ -1,0 +1,71 @@
+{
+  "VER01322": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2502630,
+      "Invoice Date": "2025-02-11T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 707286,
+      "ISIN": null,
+      "Supplier Title": "Zara, Bandeau Kleid Größe XL"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.21,
+      "Total Cost Net": 6.04
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Zara",
+      "Color": "Schwarz",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Kleid",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01322 (3).jpg"
+        },
+        {
+          "filename": "VER01322 (4).jpg"
+        },
+        {
+          "filename": "VER01322 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Abendkleid",
+      "Product Model": "",
+      "Keyword 1": "Langkleid",
+      "Keyword 2": "Schulterfreies Kleid",
+      "Keyword 3": "Elegantes Kleid",
+      "eBay Title": "Zara Abendkleid Damen Schwarz XL Langkleid Schulterfreies Kleid Elegantes Kleid"
+    }
+  }
+}

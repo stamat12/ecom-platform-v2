@@ -1,0 +1,65 @@
+{
+  "VER01399": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25031076,
+      "Invoice Date": "2025-03-14T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 789554,
+      "ISIN": null,
+      "Supplier Title": "Gant Polo Shirt Größe M"
+    },
+    "Price Data": {
+      "Price Net": 15.83,
+      "Shipping Net": 0.62,
+      "Total Cost Net": 16.45
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "GANT",
+      "Color": "Pink",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Polo Shirt Herren",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01399 (3).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Poloshirt",
+      "Product Model": "",
+      "Keyword 1": "Herren Poloshirt",
+      "Keyword 2": "kurzarm Poloshirt",
+      "Keyword 3": "sportliches Poloshirt",
+      "eBay Title": "GANT Poloshirt Herren Pink M Herren Poloshirt kurzarm Poloshirt"
+    }
+  }
+}

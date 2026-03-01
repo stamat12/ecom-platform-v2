@@ -1,0 +1,71 @@
+{
+  "VER01665": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051443,
+      "Invoice Date": "2025-05-21T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 810174,
+      "ISIN": null,
+      "Supplier Title": "Adidas, Swimshorts Größe L"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 10.36
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Bademode",
+      "eBay Category ID": "15690"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Adidas",
+      "Color": "Rot",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "3S CLX Badeshorts",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 40.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01665 (3).jpg"
+        },
+        {
+          "filename": "VER01665 (9).jpg"
+        },
+        {
+          "filename": "VER01665 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Badehose",
+      "Product Model": "IX9805",
+      "Keyword 1": "Schwimmshorts",
+      "Keyword 2": "Sporthose",
+      "Keyword 3": "Freizeithose",
+      "eBay Title": "Adidas IX9805 Badehose Herren Rot L Schwimmshorts Sporthose Freizeithose"
+    }
+  }
+}

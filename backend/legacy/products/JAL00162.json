@@ -1,0 +1,74 @@
+{
+  "JAL00162": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU329385-47-53-011125020304",
+      "Invoice Date": "01.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc1Mk9K1M",
+      "ISIN": "b09924154j",
+      "Supplier Title": "Ronlap Foldable Transport Cart incl. 2 Expander Ropes, Foldable Transport Cart - Load Capacity 225KG Luggage Cart Storage Cart with 6 Wheels, Transport Aid Blue"
+    },
+    "Price Data": {
+      "Price Net": 4.2,
+      "Shipping Net": 9.61,
+      "Total Cost Net": 13.81
+    },
+    "Ebay Category": {
+      "Category": "/Business & Industrie/Transport & Logistik/Wagen, Karren & Stapler/Allzweckroller & Transporthunde",
+      "eBay Category ID": "184155"
+    },
+    "EAN": {
+      "EAN": 757837820140.0
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Ronlap",
+      "Color": "Blau",
+      "Size": "Faltmaß: 31.5 x 43.8 x 11.5 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Faltbar, 6 Räder (360° drehbar), 3-stufig verstellbarer Griff, ausziehbare Ladefläche, inkl. 2 Expanderseile, Tragfähigkeit 225 kg",
+      "Keywords": "Faltbare Transportkarre Transportkarre",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": 44.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Handwagen",
+      "Product Model": "",
+      "Keyword 1": "faltbarer Handwagen",
+      "Keyword 2": "Transportwagen",
+      "Keyword 3": "Lastenwagen",
+      "eBay Title": "Ronlap Handwagen Unisex Blau Faltmaß: 31.5 x 43.8 x 11.5 cm faltbarer Handwagen"
+    }
+  }
+}

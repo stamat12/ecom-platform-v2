@@ -1,0 +1,68 @@
+{
+  "RET00166": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "retouren-hero.de",
+      "Invoice": 202413043,
+      "Invoice Date": "2024-10-23T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK209737676",
+      "ISIN": "B0CJ9JFXSS",
+      "Supplier Title": "kolpop 12 Stück Flaschenlicht Batterie, Flaschen Lichterkette 2M 20LED Glas Korken Licht Lichterkette mit Batterie für außen/innen Deko Flaschenlichter DIY, Party, Hochzeit, Weihnachten - Warmweiß"
+    },
+    "Price Data": {
+      "Price Net": 2.48,
+      "Shipping Net": 0.38,
+      "Total Cost Net": 2.87
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Lichtschläuche & -ketten",
+      "eBay Category ID": "116022"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": "Flaschen Lichterkette 2M 20LED Glas Korken Licht Lichterkette mit Batterie für außen/innen Deko Flaschenlichter DIY, Party, Hochzeit, Weihnachten - Warmweiß",
+      "Keywords": "kolpop 11 Stück Flaschenlicht",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 12.43
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "RET00166 (4).jpg"
+        },
+        {
+          "filename": "RET00166 (7).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Lichterkette",
+      "Product Model": "Flaschenlichter",
+      "Keyword 1": "Batteriebetriebene Lichter",
+      "Keyword 2": "Dekorative Lichter",
+      "Keyword 3": "Lichter für Flaschen",
+      "eBay Title": "Flaschenlichter Lichterkette Batteriebetriebene Lichter Dekorative Lichter"
+    }
+  }
+}

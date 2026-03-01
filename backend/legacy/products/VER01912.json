@@ -1,0 +1,67 @@
+{
+  "VER01912": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 155315,
+      "ISIN": null,
+      "Supplier Title": "Bekleidung Größe S"
+    },
+    "Price Data": {
+      "Price Net": 1.18,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 1.73
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "eBay Category ID": "15687"
+    },
+    "EAN": {
+      "EAN": 5059883425634.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "MP",
+      "Color": "Schwarz",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "T-Shirt für Herren aus der \"Rest Day\" Kollektion. Farbname: Coffee.",
+      "Keywords": "Rest Day T-Shirt",
+      "Materials": "100% Baumwolle"
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01912 (5).jpg"
+        },
+        {
+          "filename": "VER01912 (4).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

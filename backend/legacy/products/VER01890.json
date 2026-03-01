@@ -1,0 +1,67 @@
+{
+  "VER01890": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 692758,
+      "Invoice Date": "2025-07-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 145974,
+      "ISIN": null,
+      "Supplier Title": "Hose Größe M"
+    },
+    "Price Data": {
+      "Price Net": 4.72,
+      "Shipping Net": 0.55,
+      "Total Cost Net": 5.27
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Hosen",
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": 5713927173065.0
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Indicode Jeans",
+      "Color": "Hellgrau",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Lässige Leinenhose mit Kordelzug und elastischem Bund. OEKO-TEX zertifiziert.",
+      "Keywords": "INVenedo Leinenhose",
+      "Materials": "55% Leinen, 45% Baumwolle"
+    },
+    "OP": {
+      "OP": 50.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01890 (3).jpg"
+        },
+        {
+          "filename": "VER01890 (6).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    }
+  }
+}

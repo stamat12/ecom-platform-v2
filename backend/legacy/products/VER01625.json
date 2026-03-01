@@ -1,0 +1,68 @@
+{
+  "VER01625": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25051174,
+      "Invoice Date": "2025-05-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 716881,
+      "ISIN": null,
+      "Supplier Title": "Von dutch Minikleid Größe XS"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.37,
+      "Total Cost Net": 10.37
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Kleider",
+      "eBay Category ID": "63861"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Von Dutch",
+      "Color": "Schwarz",
+      "Size": "XS"
+    },
+    "Intern Generated Info": {
+      "More details": "Ärmelloses Bodycon-Kleid, Logo-Print, Kontrastnähte",
+      "Keywords": "Kyrie Minikleid",
+      "Materials": "Baumwoll-Elasthan-Mix"
+    },
+    "OP": {
+      "OP": 70.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01625 (3).jpg"
+        },
+        {
+          "filename": "VER01625 (5).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Kleid",
+      "Product Model": "Kyrie",
+      "Keyword 1": "Sportkleid",
+      "Keyword 2": "Tankkleid",
+      "Keyword 3": "Damenkleid",
+      "eBay Title": "Von Dutch Kyrie Kleid Damen Schwarz XS Sportkleid Tankkleid Damenkleid"
+    }
+  }
+}

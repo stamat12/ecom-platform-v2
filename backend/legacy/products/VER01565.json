@@ -1,0 +1,71 @@
+{
+  "VER01565": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "ÖVG  Versteigerungs GmbH",
+      "Invoice": 687696,
+      "Invoice Date": "2025-04-24T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 573378,
+      "ISIN": null,
+      "Supplier Title": "Jacke Größe L"
+    },
+    "Price Data": {
+      "Price Net": 34.22,
+      "Shipping Net": 0.89,
+      "Total Cost Net": 35.11
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "63862"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Sandro",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Puffer Jacke",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 600.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "VER01565 (3)_wb.jpg"
+        },
+        {
+          "filename": "VER01565 (5).jpg"
+        },
+        {
+          "filename": "VER01565 (8).jpg"
+        }
+      ]
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "",
+      "Keyword 1": "Damenjacke",
+      "Keyword 2": "Winterjacke",
+      "Keyword 3": "Daunenjacke",
+      "eBay Title": "Sandro Jacke Damen Schwarz L Damenjacke Winterjacke Daunenjacke"
+    }
+  }
+}
