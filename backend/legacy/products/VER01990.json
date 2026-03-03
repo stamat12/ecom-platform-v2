@@ -57,11 +57,12 @@
       ]
     },
     "eBay SEO": {
-      "Product Type": "",
+      "Product Type": "Sporthose",
       "Product Model": "",
-      "Keyword 1": "",
-      "Keyword 2": "",
-      "Keyword 3": ""
+      "Keyword 1": "Leggings",
+      "Keyword 2": "Fitnesshose",
+      "Keyword 3": "Trainingshose",
+      "eBay Title": "Nike Sporthose Damen Khaki M Leggings Fitnesshose Trainingshose"
     }
   }
 }

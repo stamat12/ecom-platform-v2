@@ -60,11 +60,12 @@
       ]
     },
     "eBay SEO": {
-      "Product Type": "",
-      "Product Model": "",
-      "Keyword 1": "",
-      "Keyword 2": "",
-      "Keyword 3": ""
+      "Product Type": "Sneaker",
+      "Product Model": "DV2243-100",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Nike DV2243-100 Sneaker Damen Mehrfarbig 39 Sport Schuhe Freizeitschuhe"
     }
   }
 }

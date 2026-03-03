@@ -57,11 +57,12 @@
       ]
     },
     "eBay SEO": {
-      "Product Type": "",
-      "Product Model": "",
-      "Keyword 1": "",
-      "Keyword 2": "",
-      "Keyword 3": ""
+      "Product Type": "T-Shirt",
+      "Product Model": "The Nike Tee",
+      "Keyword 1": "Herren T-Shirt",
+      "Keyword 2": "Sportshirt",
+      "Keyword 3": "Kurzarmshirt",
+      "eBay Title": "Nike The Nike Tee T-Shirt Herren Rot M Herren T-Shirt Sportshirt Kurzarmshirt"
     }
   }
 }

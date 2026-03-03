@@ -108,10 +108,24 @@ def _get_seo_endpoint_logger() -> logging.Logger:
     logger.setLevel(logging.INFO)
     logger.propagate = False
 
-    if not logger.handlers:
-        logs_dir = Path(__file__).resolve().parents[1] / "logs"
-        logs_dir.mkdir(parents=True, exist_ok=True)
-        file_handler = logging.FileHandler(logs_dir / "ebay_seo_debug.log", encoding="utf-8")
+    logs_dir = Path(__file__).resolve().parents[1] / "logs"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    log_file = logs_dir / "ebay_seo_debug.log"
+
+    existing = [
+        h for h in logger.handlers
+        if isinstance(h, logging.FileHandler) and Path(getattr(h, "baseFilename", "")).resolve() == log_file.resolve()
+    ]
+    if len(existing) > 1:
+        for h in existing[1:]:
+            logger.removeHandler(h)
+            try:
+                h.close()
+            except Exception:
+                pass
+
+    if not existing:
+        file_handler = logging.FileHandler(log_file, encoding="utf-8")
         file_handler.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
         logger.addHandler(file_handler)
 

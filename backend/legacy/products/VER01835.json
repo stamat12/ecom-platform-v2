@@ -57,11 +57,12 @@
       ]
     },
     "eBay SEO": {
-      "Product Type": "",
-      "Product Model": "",
-      "Keyword 1": "",
-      "Keyword 2": "",
-      "Keyword 3": ""
+      "Product Type": "Sneaker",
+      "Product Model": "Street Court W",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "ECCO Street Court W Sneaker Damen Weiß 40 Sport Schuhe Freizeitschuhe Laufschuhe"
     }
   }
 }

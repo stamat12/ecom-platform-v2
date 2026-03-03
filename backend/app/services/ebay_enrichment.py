@@ -41,10 +41,24 @@ def _get_seo_debug_logger() -> logging.Logger:
     debug_logger.setLevel(logging.INFO)
     debug_logger.propagate = False
 
-    if not debug_logger.handlers:
-        logs_dir = Path(__file__).resolve().parents[2] / "logs"
-        logs_dir.mkdir(parents=True, exist_ok=True)
-        log_file = logs_dir / "ebay_seo_debug.log"
+    logs_dir = Path(__file__).resolve().parents[2] / "logs"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    log_file = logs_dir / "ebay_seo_debug.log"
+
+    # Ensure exactly one file handler for this file (prevents duplicate lines after reloads)
+    existing = [
+        h for h in debug_logger.handlers
+        if isinstance(h, logging.FileHandler) and Path(getattr(h, "baseFilename", "")).resolve() == log_file.resolve()
+    ]
+    if len(existing) > 1:
+        for h in existing[1:]:
+            debug_logger.removeHandler(h)
+            try:
+                h.close()
+            except Exception:
+                pass
+
+    if not existing:
         handler = logging.FileHandler(log_file, encoding="utf-8")
         handler.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
         debug_logger.addHandler(handler)
@@ -498,6 +512,30 @@ def enrich_ebay_seo_fields(sku: str, force: bool = False) -> Dict[str, Any]:
     first_result = _enrich_single_sku_seo(first_sku, force, trace_id=trace_id)
     
     all_results = [first_result]
+
+    # If first SKU failed, stop here and return explicit failure
+    if not first_result.get("success"):
+        failure_response = {
+            "success": False,
+            "sku": sku,
+            "individual_skus": individual_skus,
+            "skus_with_json": skus_with_json,
+            "skus_without_json": skus_without_json,
+            "all_results": all_results,
+            "seo_fields": first_result.get("seo_fields", {}),
+            "updated_seo_fields": first_result.get("updated_seo_fields", 0),
+            "title_used": first_result.get("title_used", ""),
+            "message": first_result.get("error") or first_result.get("message") or f"SEO generation failed for {first_sku}",
+        }
+        _seo_debug(
+            "seo_enrich_failed",
+            trace_id,
+            first_sku=first_sku,
+            error=failure_response["message"],
+            skus_with_json=skus_with_json,
+            skus_without_json=skus_without_json,
+        )
+        return failure_response
     
     # For remaining SKUs, copy the same SEO fields without re-generating
     if len(skus_with_json) > 1:
@@ -707,6 +745,25 @@ def _enrich_single_sku_seo(sku: str, force: bool = False, trace_id: Optional[str
             proposed=proposed,
             proposed_filled_keys=[k for k, v in proposed.items() if str(v or "").strip()],
         )
+
+    # If AI returned nothing and current SEO fields are empty, return failure instead of "success with empty"
+    if not any(str(proposed.get(k) or "").strip() for k in SEO_FIELD_KEYS):
+        current_has_values = any((current.get(k) or "").strip() for k in SEO_FIELD_KEYS)
+        if not current_has_values:
+            error_message = (
+                "SEO generation returned no values (likely AI quota/rate-limit or provider error). "
+                "See backend/logs/ebay_seo_debug.log for openai_*_error events."
+            )
+            if trace_id:
+                _seo_debug("seo_single_no_generated_values", trace_id, sku=sku, error=error_message)
+            return {
+                "success": False,
+                "sku": sku,
+                "error": error_message,
+                "seo_fields": current,
+                "updated_seo_fields": 0,
+                "title_used": title,
+            }
     
     if force:
         merged = {
