@@ -17,18 +17,19 @@
       "Total Cost Net": 25.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "F",
+      "Gender": "U",
       "Brand": "asics",
-      "Color": "Weiß/Blau",
+      "Color": "Weiß Blau",
       "Size": "40"
     },
     "Intern Generated Info": {
@@ -37,13 +38,13 @@
       "Materials": "Mesh, Wildleder"
     },
     "OP": {
-      "OP": null
+      "OP": "150"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -98,7 +99,88 @@
         {
           "filename": "VER02221 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02221 (6).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02221 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o3cAAeSwUjNpqECy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02221 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~qAAAeSw1JFpqEC2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02221 (4).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02221 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oV4AAeSwy5lpqEC-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02221 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ji8AAeSwykppqEDC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02221 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~9UAAeSwMQhpqEDF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02221 (3).jpg",
+          "order": 8,
+          "eBay URL": ""
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "asics",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß Blau"
+      },
+      "optional": {
+        "Herstellernummer": "1203A953-100",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "GEL-NYC",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "8.5",
+        "Obermaterial": "Mesh, Wildleder",
+        "Schuhschaft-Typ": "Low Top",
+        "Produktart": "Sportschuh",
+        "Verschluss": "Schnürung",
+        "Anlass": "Freizeit",
+        "Signiert": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sportschuh",
+      "Product Model": "GEL-NYC",
+      "Keyword 1": "Laufschuh",
+      "Keyword 2": "Sneaker",
+      "Keyword 3": "Freizeitschuh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "115",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

@@ -17,16 +17,17 @@
       "Total Cost Net": 6.43
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Anzüge",
+      "eBay Category ID": "3001"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "M",
       "Brand": "Pinarello",
       "Color": "Blau Rot",
       "Size": "S"
@@ -37,13 +38,13 @@
       "Materials": "Polyester"
     },
     "OP": {
-      "OP": null
+      "OP": "75"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -86,7 +87,60 @@
         {
           "filename": "VER02225 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02225 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/70cAAeSwZqVpqEEs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02225 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BqoAAeSwePBpqEEw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02225 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kZQAAeSwmS5pqEEz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02225 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CkUAAeSwJ9NpqEE3/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Pinarello",
+        "Größe": "S",
+        "Produktart": "Anzugjacke",
+        "Abteilung": "Herren",
+        "Farbe": "Blau Rot",
+        "Stil": "2-Teiler"
+      },
+      "optional": {
+        "Material": "Polyester",
+        "Ursprungsland": "Italien"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Radtrikot",
+      "Product Model": "Grassinger 2016",
+      "Keyword 1": "Fahrradbekleidung",
+      "Keyword 2": "Sportshirt",
+      "Keyword 3": "Radsport"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "52",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

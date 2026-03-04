@@ -17,18 +17,19 @@
       "Total Cost Net": 13.1
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Lockenstäbe & Glätteisen",
+      "eBay Category ID": "177659"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Remington",
-      "Color": "Schwarz, Gold",
+      "Color": "Schwarz Gold",
       "Size": ""
     },
     "Intern Generated Info": {
@@ -37,13 +38,13 @@
       "Materials": "Keramik, Kunststoff"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -86,7 +87,66 @@
         {
           "filename": "VER02230 (2).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02230 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/76oAAeSwBxdpqEGX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02230 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5MAAeSwqd9pqEGa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02230 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pmgAAeSwJMhpqEGd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02230 (4).JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zRwAAeSwDAJpqEGh/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Warmluftbürste",
+        "Marke": "Remington"
+      },
+      "optional": {
+        "Leistung": "1000W",
+        "Farbe": "Schwarz Gold",
+        "Material": "Keramik, Plastik",
+        "Abteilung": "Damen",
+        "Besonderheiten": "Ionen-Technologie, Schnellaufheizung, Cool-Tip-Spitze",
+        "Heizplattenmaterial": "Keramik",
+        "Fassdurchmesser": "50 mm",
+        "Temperaturstufen": "2",
+        "Größe": "Standard",
+        "Haartyp": "Alle Haartypen",
+        "Ursprungsland": "Unbekannt",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haarstyler",
+      "Product Model": "Sapphire Luxe",
+      "Keyword 1": "Haartrockner",
+      "Keyword 2": "Lockenstyler",
+      "Keyword 3": "Haartrockner mit Bürste"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

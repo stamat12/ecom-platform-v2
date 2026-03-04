@@ -17,13 +17,14 @@
       "Total Cost Net": 10.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets",
+      "eBay Category ID": "63853"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -37,13 +38,13 @@
       "Materials": "Polyester, Elasthan"
     },
     "OP": {
-      "OP": null
+      "OP": "50"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -89,7 +90,67 @@
         {
           "filename": "VER02207 (6).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02207 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~rIAAeSw2J9pqD-J/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02207 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DAwAAeSwEaNpqD-P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02207 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lyMAAeSwhHdpqD-T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02207 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qQkAAeSww-VpqD-Y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02207 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nmsAAeSwPqFpqD-b/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Triumph",
+        "Farbe": "Grün",
+        "Stil": "Sport-BH",
+        "Abteilung": "Damen",
+        "Größe": "75F",
+        "Produktart": "BH"
+      },
+      "optional": {
+        "Besonderheiten": "Atmungsaktiv",
+        "Material": "Polyester, Elasthan",
+        "Produktlinie": "Energy Lite",
+        "Bügelart": "Mit Bügel"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sport-BH",
+      "Product Model": "Energy Lite",
+      "Keyword 1": "Sport-Bustier",
+      "Keyword 2": "Fitness-BH",
+      "Keyword 3": "Sportunterwäsche"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

@@ -17,17 +17,18 @@
       "Total Cost Net": 8.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Damen/Shorts & Radlerhosen",
+      "eBay Category ID": "59307"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "GYMSHARK",
+      "Brand": "Gymshark",
       "Color": "Schwarz",
       "Size": "XS"
     },
@@ -37,13 +38,13 @@
       "Materials": "84% Nylon 16% Polyester"
     },
     "OP": {
-      "OP": null
+      "OP": "30"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -92,7 +93,75 @@
         {
           "filename": "VER02214 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02214 (4).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02214 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FgEAAeSwyG9pqD~8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02214 (6).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02214 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7NcAAeSwSEVpqEAD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02214 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xDQAAeSwkXJpqEAF/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Gymshark",
+        "Größe": "XS",
+        "Farbe": "Schwarz",
+        "Stil": "Athletisch",
+        "Abteilung": "Damen"
+      },
+      "optional": {
+        "Anlass": "Sport",
+        "Passform": "Slim",
+        "Aktivität": "Fitnessstudio & Training",
+        "Material": "84% Nylon, 16% Polyester",
+        "Vintage": "Nein",
+        "Gewebeart": "Elasthan",
+        "Verschluss": "Zum Überziehen",
+        "Jahreszeit": "Sommer",
+        "Textilpflege": "Maschinenwäsche",
+        "Akzente": "Logo",
+        "Handgefertigt": "Nein",
+        "Taschenart": "Keine",
+        "Bundhöhe": "Mittel (21,5-26,5 cm)"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sportshorts",
+      "Product Model": "Adapt Camo Seamless",
+      "Keyword 1": "Fitness Shorts",
+      "Keyword 2": "Trainingsshorts",
+      "Keyword 3": "Sportbekleidung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "34",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

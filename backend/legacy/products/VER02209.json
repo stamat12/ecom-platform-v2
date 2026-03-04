@@ -17,17 +17,18 @@
       "Total Cost Net": 6.43
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Jeans",
+      "eBay Category ID": "11554"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "None",
+      "Brand": "H&M",
       "Color": "Hellblau",
       "Size": "EUR 46"
     },
@@ -37,13 +38,13 @@
       "Materials": "Denim"
     },
     "OP": {
-      "OP": null
+      "OP": "45"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -89,7 +90,69 @@
         {
           "filename": "VER02209 (6).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02209 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/w-EAAeSwzNJpqD~H/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02209 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oGgAAeSwGBBpqD~N/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02209 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D5UAAeSwVbxpqD~S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02209 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oKIAAeSwGBBpqD~X/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02209 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~2IAAeSwIQ9pqD~a/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "H&M",
+        "Größe": "46",
+        "Abteilung": "Damen",
+        "Farbe": "Hellblau",
+        "Stil": "Weites Bein"
+      },
+      "optional": {
+        "Produktart": "Jeans",
+        "Passform": "Relaxed",
+        "Bundhöhe": "Mittel (21,5-26,5 cm)",
+        "Material": "Denim",
+        "Modell": "Barrel",
+        "Verschluss": "Knopf",
+        "Taschenart": "Five-Pocket-Style"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Jeans",
+      "Product Model": "Barrel",
+      "Keyword 1": "Herrenjeans",
+      "Keyword 2": "Loose Fit Jeans",
+      "Keyword 3": "Mid Waist Jeans"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

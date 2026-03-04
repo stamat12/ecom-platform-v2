@@ -17,17 +17,18 @@
       "Total Cost Net": 1.43
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BH-Zubehör",
+      "eBay Category ID": "163593"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "MAGIC BODYFASHION",
+      "Brand": "Magic Bodyfashion",
       "Color": "Hautfarben",
       "Size": "2L/3L"
     },
@@ -37,13 +38,13 @@
       "Materials": "Keine Angaben"
     },
     "OP": {
-      "OP": null
+      "OP": "17"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -92,7 +93,63 @@
         {
           "filename": "VER02212 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02212 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JBsAAeSwPsRpqD~h/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02212 (1).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/n5YAAeSws3xpqD~l/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02212 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-lQAAeSwI6dpqD~p/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02212 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02212 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-KEAAeSw8VZpqD~u/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Hautfarben",
+        "Größe": "2L/3L",
+        "Marke": "Magic Bodyfashion",
+        "Stil": "Brustwarzenabdeckungen"
+      },
+      "optional": {
+        "Abteilung": "Damen",
+        "Produktart": "BH-Accessoire"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Lift Cover",
+      "Product Model": "",
+      "Keyword 1": "Brustabdeckung",
+      "Keyword 2": "Nippelabdeckung",
+      "Keyword 3": "Brustlift"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

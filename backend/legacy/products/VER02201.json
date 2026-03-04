@@ -17,13 +17,14 @@
       "Total Cost Net": 6.43
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Allesschneider & Elektromesser",
+      "eBay Category ID": "20681"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff, Metall"
     },
     "OP": {
-      "OP": null
+      "OP": "15"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -89,7 +90,61 @@
         {
           "filename": "VER02201 (6).JPG"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02201 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/84kAAeSwOn9pqEIR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02201 (1).JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/D4YAAeSw0y9pqEIX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02201 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mQIAAeSwON5pqEIa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02201 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7sAAeSwdUVpqEId/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "Kitchen Ideas",
+        "Produktart": "Gemüseschneider Set",
+        "Farbe": "Grün",
+        "Anzahl der Scheiben": "1",
+        "Stromquelle": "Manuell",
+        "Material": "Kunststoff, Metall",
+        "Bestandteile inbegriffen": "Klingen, Handprotektor, Reibe, Schaber, Aufbewahrungsbehälter",
+        "Geeignete Lebensmittel": "Gemüse",
+        "Besonderheiten": "Multifunktional",
+        "Set enthält": "16 Teile"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Gemüseschneider",
+      "Product Model": "",
+      "Keyword 1": "Küchenhelfer",
+      "Keyword 2": "Gemüse Schneidegerät",
+      "Keyword 3": "Gemüseschneider Set"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

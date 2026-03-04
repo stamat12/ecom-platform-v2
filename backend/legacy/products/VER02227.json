@@ -17,13 +17,14 @@
       "Total Cost Net": 4.77
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -37,13 +38,13 @@
       "Materials": "Stoff Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "50"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -98,7 +99,83 @@
         {
           "filename": "VER02227 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02227 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7YAAeSwfKFpqEFT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yxEAAeSwDAJpqEFX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KmwAAeSwO2VpqEFb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/negAAeSwciBpqEFe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z-cAAeSwO6xpqEFi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/H6oAAeSwMD1pqEFk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02227 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/k5YAAeSwON5pqEFn/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Zara",
+        "Außenmaterial": "Baumwolle",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Beige Braun"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Kunstleder",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Beige",
+        "Henkel-/Riemenfarbe": "Braun",
+        "Verschluss": "Reißverschluss",
+        "Taschenbreite": "20 cm",
+        "Taschenhöhe": "25 cm",
+        "Taschentiefe": "10 cm",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Handtasche",
+      "Product Model": "",
+      "Keyword 1": "Damentasche",
+      "Keyword 2": "Schultertasche",
+      "Keyword 3": "Beuteltasche"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

@@ -17,13 +17,14 @@
       "Total Cost Net": 15.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "19759712725516"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "M",
@@ -37,13 +38,13 @@
       "Materials": "Textil, Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "150"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -95,7 +96,88 @@
         {
           "filename": "VER02224 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02224 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/B7kAAeSwtiBpqEER/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uRQAAeSwwXdpqEEV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oVQAAeSwZX9pqEEY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zt4AAeSwNYFpqEEc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Cj8AAeSw2J9pqEEf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zC0AAeSwVRppqEEi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02224 (3).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kb0AAeSwON5pqEEk/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "EU-Schuhgröße": "47",
+        "Abteilung": "Herren",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "UK-Schuhgröße": "11.5",
+        "US-Schuhgröße": "12.5",
+        "Stil": "Sneaker",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Herstellernummer": "FJ7791 600",
+        "Individualisiert": "Nein",
+        "Modell": "G.T. HUSTLE ACADEMY",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Textil",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Aktivität": "Laufen & Joggen",
+        "Ursprungsland": "Vietnam",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "Atmungsaktiv",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sportschuh",
+      "Product Model": "G.T. Hustle Academy",
+      "Keyword 1": "Sneaker",
+      "Keyword 2": "Laufschuh",
+      "Keyword 3": "Freizeitschuh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "95",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "19759712725516",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

@@ -17,13 +17,14 @@
       "Total Cost Net": 2.27
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Sport/Fitness & Jogging/Bekleidung/Kinder & Jugend/Sport-BHs",
+      "eBay Category ID": "261506"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -33,17 +34,17 @@
     },
     "Intern Generated Info": {
       "More details": "Der Sport-BH bietet starken Halt und ist ideal für intensive Aktivitäten. Er hat verstellbare Träger und einen breiten Unterbrustbereich für zusätzlichen Komfort. Das Material ist atmungsaktiv und sorgt für eine gute Feuchtigkeitsregulation.",
-      "Keywords": "Shock Absorber Sport-BH Damen",
+      "Keywords": "Sport-BH Damen",
       "Materials": "Polyester, Elasthan"
     },
     "OP": {
-      "OP": null
+      "OP": "35"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -95,7 +96,78 @@
         {
           "filename": "VER02215 (6).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02215 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/J4gAAeSwyIRpqEAO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02215 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DvsAAeSwO1hpqEAS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02215 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s~EAAeSwprZpqEAX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02215 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~tcAAeSwqjNpqEAb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02215 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGUAAeSwjchpqEAe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02215 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K~0AAeSw8EtpqEAh/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Schwarz",
+        "Größe": "75E",
+        "Marke": "Shock Absorber",
+        "Produktart": "BH"
+      },
+      "optional": {
+        "Stil": "Sport-BH",
+        "Abteilung": "Mädchen",
+        "Halt": "Kräftig",
+        "Körbchengröße": "E",
+        "Material": "Polyester, Elasthan",
+        "Bügelart": "Mit Bügel",
+        "Herstellernummer": "SN109 CA A0 ODT 1E4",
+        "Ursprungsland": "Frankreich",
+        "Körbchenform": "Vollschale",
+        "Textilpflege": "Maschinenwäsche",
+        "Träger-/Riemenart": "Normaler Träger",
+        "Verschluss": "Häkchen und Ösen"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sport-BH",
+      "Product Model": "SN109",
+      "Keyword 1": "Sport-Bustier",
+      "Keyword 2": "Lauf-BH",
+      "Keyword 3": "Fitness-BH"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

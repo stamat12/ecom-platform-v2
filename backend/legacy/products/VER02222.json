@@ -17,13 +17,14 @@
       "Total Cost Net": 23.1
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "5057794226678"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,17 +34,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe haben eine flexible Sohle und sind aus atmungsaktivem Textilmaterial gefertigt. Sie bieten einen minimalistischen Look und sind ideal für den Alltag. Die Innensohle ist rot und sorgt für zusätzlichen Komfort.",
-      "Keywords": "Gobi Dune Sneaker Unisex",
+      "Keywords": "Gobi Dune Sneaker barefoot ",
       "Materials": "Textil"
     },
     "OP": {
-      "OP": null
+      "OP": "200"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -101,7 +102,93 @@
         {
           "filename": "VER02222 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02222 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G74AAeSwMD1pqEDP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~gIAAeSwnCdpqEDT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u8YAAeSwcQFpqEDW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GDUAAeSwbodpqEDa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jbEAAeSwIQVpqEDd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BAMAAeSwkKxpqEDg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G3UAAeSwFENpqEDk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02222 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DKAAAeSwb6tpqEDn/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "VivoBarefoot",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Schattengrün"
+      },
+      "optional": {
+        "Herstellernummer": "209442-01",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "Gobi Dune",
+        "Modell": "Gobi Dune Sneaker JJF L",
+        "UK-Schuhgröße": "7",
+        "US-Schuhgröße": "9",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Textil",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Akzente": "Logo",
+        "Besonderheiten": "Atmungsaktiv",
+        "Anlass": "Freizeit",
+        "Aktivität": "Fitnessstudio & Training"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "Gobi Dune Sneaker JJF L",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Textilschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "145",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "5057794226678",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

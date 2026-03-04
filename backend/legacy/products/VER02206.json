@@ -17,13 +17,14 @@
       "Total Cost Net": 8.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Halbschuhe",
+      "eBay Category ID": "24087"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "M",
@@ -37,13 +38,13 @@
       "Materials": "Wildleder"
     },
     "OP": {
-      "OP": null
+      "OP": "40"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -101,7 +102,83 @@
         {
           "filename": "VER02206 (9).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02206 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IJUAAeSwAtNpqD9n/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mJoAAeSwxbxpqD9r/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-mkAAeSwqjNpqD9v/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFIAAeSwCTFpqD9z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/sTwAAeSwVZdpqD93/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v14AAeSwX1ZpqD96/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02206 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JRgAAeSwFYZpqD99/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Zara",
+        "EU-Schuhgröße": "45",
+        "Abteilung": "Herren",
+        "Stil": "Mokassin",
+        "Farbe": "Beige",
+        "Obermaterial": "Wildleder"
+      },
+      "optional": {
+        "AU-Schuhgröße": "12",
+        "UK-Schuhgröße": "11",
+        "US-Schuhgröße": "12",
+        "Laufsohlenmaterial": "Gummi",
+        "Produktart": "Freizeitschuh",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Verschluss": "Slip-On",
+        "Anlass": "Freizeit",
+        "Schuhspitze": "Runde Form"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Mokassin",
+      "Product Model": "Z2:Mokassin",
+      "Keyword 1": "Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Pantoffeln"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

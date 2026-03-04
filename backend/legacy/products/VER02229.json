@@ -17,33 +17,34 @@
       "Total Cost Net": 9.77
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "4064886029582"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "Jack Wolfskin",
-      "Color": "Vibrant Red",
+      "Color": "Rot",
       "Size": "XL"
     },
     "Intern Generated Info": {
       "More details": "Das T-Shirt hat kurze Ärmel und einen runden Halsausschnitt. Es ist aus leichtem, atmungsaktivem Material gefertigt. Ideal für Outdoor-Aktivitäten und sportliche Einsätze.",
       "Keywords": "NARROWS T W T-Shirt Damen",
-      "Materials": "None"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "50"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -86,7 +87,67 @@
         {
           "filename": "VER02229 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02229 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFwAAeSwJ9NpqEGD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02229 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8AQAAeSwAHNpqEGH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02229 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wcAAAeSw1olpqEGJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02229 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/om8AAeSwq7RpqEGM/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Jack Wolfskin",
+        "Produktart": "T-Shirt",
+        "Größe": "XL",
+        "Abteilung": "Damen",
+        "Farbe": "Rot",
+        "Stil": "Basic",
+        "Ärmellänge": "Kurzarm"
+      },
+      "optional": {
+        "Material": "100% Baumwolle",
+        "Gewebeart": "Jersey",
+        "Anlass": "Freizeit",
+        "Ausschnitt": "Runder Ausschnitt",
+        "Besonderheiten": "Atmungsaktiv",
+        "Passform": "Regular",
+        "Ursprungsland": "Bangladesch",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "NARROWS T W",
+      "Keyword 1": "Damen T-Shirt",
+      "Keyword 2": "Sportshirt",
+      "Keyword 3": "Funktionsshirt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "4064886029582",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

@@ -27,6 +27,10 @@ from app.services.image_enhancement import (
     save_gemini_models,
 )
 from app.services.product_detail import get_product_detail, update_product_detail
+from app.services.ebay_category_ai import (
+    detect_and_save_ebay_category_for_sku,
+    detect_and_save_ebay_category_for_skus,
+)
 from app.services.ai_enrichment import enrich_sku_fields, enrich_multiple_skus
 from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
@@ -637,6 +641,36 @@ def enrich_batch_skus(request: EnrichBatchRequest):
         failed=result.get("failed"),
         results=result.get("results")
     )
+
+
+@app.post("/api/ai/ebay-category/batch")
+def detect_ebay_category_batch(request: dict):
+    """Detect and save eBay category for multiple SKUs."""
+    skus = request.get("skus") if isinstance(request, dict) else None
+    use_images = bool(request.get("use_images", True)) if isinstance(request, dict) else True
+
+    if not isinstance(skus, list) or len(skus) == 0:
+        raise HTTPException(status_code=400, detail="At least one SKU required")
+
+    normalized_skus = [str(s).strip() for s in skus if str(s).strip()]
+    if not normalized_skus:
+        raise HTTPException(status_code=400, detail="At least one valid SKU required")
+
+    result = detect_and_save_ebay_category_for_skus(normalized_skus, use_images=use_images)
+    return result
+
+
+@app.post("/api/ai/ebay-category/{sku}")
+def detect_ebay_category_single(sku: str, request: dict | None = None):
+    """Detect and save eBay category (path + ID) for one SKU using AI and category DB."""
+    use_images = True
+    if isinstance(request, dict):
+        use_images = bool(request.get("use_images", True))
+
+    result = detect_and_save_ebay_category_for_sku(sku, use_images=use_images)
+    if not result.get("success"):
+        raise HTTPException(status_code=400, detail=result.get("message", "Category detection failed"))
+    return result
 
 
 @app.get("/api/ai/config", response_model=AIConfigResponse)

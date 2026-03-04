@@ -17,33 +17,34 @@
       "Total Cost Net": 8.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Halbschuhe & Ballerinas",
+      "eBay Category ID": "45333"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "ANNA FIELD",
+      "Brand": "Anna Field",
       "Color": "Schwarz",
       "Size": "37"
     },
     "Intern Generated Info": {
       "More details": "Diese eleganten Schuhe sind aus schwarzem Kunstleder gefertigt. Sie haben eine klassische Form mit einem kleinen Absatz. Die Schuhe sind ideal für formelle Anlässe oder das Büro.",
-      "Keywords": "ANNA FIELD Loafers Damen",
+      "Keywords": "Loafers Damen",
       "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "50"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -95,7 +96,85 @@
         {
           "filename": "VER02205 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02205 (8).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lK0AAeSwq7RpqD9K/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/HdgAAeSw16NpqD9N/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qcQAAeSw5WJpqD9Q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4RoAAeSwd59pqD9U/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ltYAAeSwlXFpqD9X/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qScAAeSwc0RpqD9a/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02205 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D4IAAeSwcxBpqD9c/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Anna Field",
+        "EU-Schuhgröße": "37",
+        "Stil": "Halbschuhe",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Obermaterial": "Kunstleder",
+        "Produktart": "Flacher Schuh"
+      },
+      "optional": {
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Innensohlenmaterial": "Kunstleder",
+        "UK-Schuhgröße": "4",
+        "AU-Schuhgröße": "4",
+        "US-Schuhgröße": "6.5",
+        "Schuhweite": "Standard",
+        "Jahreszeit": "Herbst",
+        "Verschluss": "Slip-On",
+        "Schuhspitze": "Mandelförmig",
+        "Anlass": "Business"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Loafer",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Büroschuhe",
+      "Keyword 3": "Absatzschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

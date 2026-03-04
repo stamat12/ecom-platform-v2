@@ -17,19 +17,20 @@
       "Total Cost Net": 5.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BHs & BH-Sets",
+      "eBay Category ID": "63853"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
       "Brand": "M&S",
-      "Color": "Soft Pink, Black, Navy",
-      "Size": "34E, 75F, 90F"
+      "Color": "Pink Schwarz Blau",
+      "Size": "EUR 75F"
     },
     "Intern Generated Info": {
       "More details": "Der BH hat gepolsterte Cups und verstellbare Träger. Er ist in verschiedenen Farben erhältlich, darunter Soft Pink, Schwarz und Marineblau. Ideal für den täglichen Gebrauch und bietet guten Halt.",
@@ -37,13 +38,13 @@
       "Materials": "Polyester, Elasthan"
     },
     "OP": {
-      "OP": null
+      "OP": "35"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -104,7 +105,82 @@
         {
           "filename": "VER02208 (6).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02208 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CioAAeSw20xpqD-m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02208 (10).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02208 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ne4AAeSw27lpqD-t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02208 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02208 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xBsAAeSwwNlpqD-0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02208 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ei4AAeSw3ylpqD-4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02208 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IcMAAeSwEG1pqD-7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02208 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m-MAAeSwkt9pqD--/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "M&S",
+        "Farbe": "Mehrfarbig",
+        "Stil": "Push-Up-BH",
+        "Abteilung": "Damen",
+        "Größe": "75F",
+        "Produktart": "BH-Set"
+      },
+      "optional": {
+        "Besonderheiten": "Gepolstert",
+        "Material": "Polyester, Elasthan",
+        "Träger-/Riemenart": "Normaler Träger",
+        "Bügelart": "Mit Bügel"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "BH",
+      "Product Model": "3 Teil Set",
+      "Keyword 1": "Damenunterwäsche",
+      "Keyword 2": "Bügel-BH",
+      "Keyword 3": "Vollschalen-BH"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

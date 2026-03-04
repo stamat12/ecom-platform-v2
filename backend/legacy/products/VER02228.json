@@ -17,13 +17,14 @@
       "Total Cost Net": 8.1
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
@@ -34,16 +35,16 @@
     "Intern Generated Info": {
       "More details": "Das T-Shirt hat einen runden Halsausschnitt und kurze Ärmel. Es besteht aus einem leichten, atmungsaktiven Material. Die Oberfläche ist glatt und hat eine leicht glänzende Optik.",
       "Keywords": "Nike One T-Shirt Damen",
-      "Materials": "None"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "30"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -92,7 +93,84 @@
         {
           "filename": "VER02228 (7).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02228 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qI8AAeSwu8RpqEFt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02228 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AOQAAeSwZzRpqEFx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02228 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vpQAAeSwOt5pqEF0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02228 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CnQAAeSwC1VpqEF3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02228 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/p~kAAeSw4-NpqEF6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02228 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IgkAAeSwXQJpqEF9/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "Produktart": "T-Shirt",
+        "Größe": "L",
+        "Abteilung": "Damen",
+        "Farbe": "Pink",
+        "Stil": "Basic",
+        "Ärmellänge": "Kurzarm"
+      },
+      "optional": {
+        "Material": "100% Baumwolle",
+        "Gewebeart": "Jersey",
+        "Ärmelart": "Kurzarm",
+        "Akzente": "Keine",
+        "Anlass": "Freizeit",
+        "Ausschnitt": "Rundhalsausschnitt",
+        "Muster": "Ohne Muster",
+        "Besonderheiten": "Atmungsaktiv",
+        "Passform": "Regular",
+        "Größenkategorie": "Normalgröße",
+        "Vintage": "Nein",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Pullover",
+        "Ursprungsland": "Indonesien",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "T-Shirt",
+      "Product Model": "DRI-FIT",
+      "Keyword 1": "Sportshirt",
+      "Keyword 2": "Damenoberteil",
+      "Keyword 3": "Funktionsshirt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "30",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

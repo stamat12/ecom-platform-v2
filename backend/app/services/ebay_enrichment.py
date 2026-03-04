@@ -882,14 +882,20 @@ def _build_enrichment_prompt(
         if intern_generated_info:
             additional_context += intern_generated_info
     
-    return EBAY_FIELD_ENRICHMENT_PROMPT.format(
-        category_name=category_name,
-        category_id=category_id,
-        required_fields=required_fields,
-        optional_fields=optional_fields,
-        current_values=current_values,
-        additional_context=additional_context
-    )
+    template = EBAY_FIELD_ENRICHMENT_PROMPT or ""
+    replacements = {
+        "category_name": category_name,
+        "category_id": category_id,
+        "required_fields": required_fields,
+        "optional_fields": optional_fields,
+        "current_values": current_values,
+        "additional_context": additional_context,
+    }
+
+    for key, value in replacements.items():
+        template = template.replace(f"{{{key}}}", "" if value is None else str(value))
+
+    return template
 
 
 def _call_openai_vision(

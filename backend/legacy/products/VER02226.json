@@ -17,18 +17,19 @@
       "Total Cost Net": 7.27
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Körperpflege/Deodorants",
+      "eBay Category ID": "29580"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "M",
       "Brand": "Biotherm",
-      "Color": "Blau",
+      "Color": "",
       "Size": "75 ml"
     },
     "Intern Generated Info": {
@@ -37,13 +38,13 @@
       "Materials": "Recyceltes Papier, Kunststoff"
     },
     "OP": {
-      "OP": null
+      "OP": "45"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -86,7 +87,63 @@
         {
           "filename": "VER02226 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02226 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/x-UAAeSwy3xpqEFB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02226 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/94AAAeSwR09pqEFE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02226 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qs0AAeSwYOVpqEFH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02226 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Biotherm"
+      },
+      "optional": {
+        "Formulierung": "Roll-On",
+        "Abteilung": "Herren",
+        "Produktart": "Antitranspirant",
+        "Gewicht": "75 ml",
+        "Produktlinie": "Homme",
+        "Ursprungsland": "Frankreich",
+        "Maßeinheit": "100ml",
+        "Anzahl der Einheiten": "2",
+        "Besonderheiten": "24 Stunden Schutz",
+        "Größe": "Standardgröße"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Deodorant",
+      "Product Model": "48H Day Control",
+      "Keyword 1": "Antitranspirant",
+      "Keyword 2": "Hautpflege",
+      "Keyword 3": "Schutz"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

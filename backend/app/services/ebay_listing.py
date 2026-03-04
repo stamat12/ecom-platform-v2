@@ -49,6 +49,13 @@ from app.services.ebay_listings_cache import read_cache
 from app.services.ebay_oauth import get_access_token
 
 logger = logging.getLogger(__name__)
+
+
+def _safe_prompt_replace(template: str, replacements: Dict[str, Any]) -> str:
+    text = template or ""
+    for key, value in (replacements or {}).items():
+        text = text.replace(f"{{{key}}}", "" if value is None else str(value))
+    return text
 logger = logging.getLogger(__name__)
 
 def _setup_file_logging() -> None:
@@ -396,7 +403,10 @@ def generate_condition_description(
 
     try:
         client = get_openai_client()
-        prompt = CONDITION_NOTE_PROMPT.format(condition_label=label, condition_id=condition_id)
+        prompt = _safe_prompt_replace(
+            CONDITION_NOTE_PROMPT,
+            {"condition_label": label, "condition_id": condition_id},
+        )
 
         content: List[dict] = [{"type": "text", "text": prompt}]
         for img_path in image_paths:
@@ -579,7 +589,7 @@ def get_manufacturer_info(brand: str, force_refresh: bool = False) -> Optional[D
     
     try:
         client = get_openai_client()
-        prompt = MANUFACTURER_LOOKUP_PROMPT.format(brand=brand)
+        prompt = _safe_prompt_replace(MANUFACTURER_LOOKUP_PROMPT, {"brand": brand})
         
         response = client.chat.completions.create(
             model=MANUFACTURER_LOOKUP_MODEL,

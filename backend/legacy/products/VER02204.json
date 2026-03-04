@@ -3,33 +3,34 @@
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "Goldgrube GmbH",
-      "Invoice": 25122574,
+      "Invoice": "25122574",
       "Invoice Date": "2025-12-29T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": 913194,
-      "ISIN": null,
+      "Supplier Number": "913194",
+      "ISIN": "",
       "Supplier Title": "Bershka Sneaker Gr 42, grau"
     },
     "Price Data": {
-      "Price Net": 5.0,
-      "Shipping Net": 0.6,
-      "Total Cost Net": 5.6
+      "Price Net": "5.0",
+      "Shipping Net": "0.6",
+      "Total Cost Net": "5.6"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu (leicht verschmutzt)"
     },
     "Intern Product Info": {
       "Gender": "U",
       "Brand": "Bershka",
       "Color": "Grau",
-      "Size": ""
+      "Size": "42"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe haben eine hohe Sohle und sind aus einem grauen Material gefertigt. Sie verfügen über eine Schnürung mit weißen Schnürsenkeln. Die Oberseite ist eine Kombination aus Textil und Kunstleder.",
@@ -37,13 +38,13 @@
       "Materials": "Textil Kunstleder"
     },
     "OP": {
-      "OP": null
+      "OP": "20"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -101,7 +102,112 @@
         {
           "filename": "VER02204 (9).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02204 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DxwAAeSwomBpqD8t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nDMAAeSw4v9pqD8w/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5DUAAeSwgvxpqD8z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DgoAAeSw7x1pqD82/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kcgAAeSwAuFpqD85/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-zgAAeSwIQ9pqD88/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qY0AAeSwAYxpqD8~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vvYAAeSwWK1pqD9B/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02204 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ci4AAeSwEaNpqD9E/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Bershka",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Grau"
+      },
+      "optional": {
+        "Herstellernummer": "",
+        "Individualisiert": "",
+        "Modell": "",
+        "Produktlinie": "",
+        "UK-Schuhgröße": "",
+        "US-Schuhgröße": "",
+        "Stil": "Sneaker",
+        "Charakter": "",
+        "Schuhschaft-Typ": "",
+        "Innensohlenmaterial": "",
+        "Obermaterial": "Textil Kunstleder",
+        "Produktart": "",
+        "Erscheinungsjahr": "",
+        "Vintage": "",
+        "Thema": "",
+        "Schuhweite": "",
+        "Herstellungsjahr": "",
+        "Laufsohlenmaterial": "",
+        "Futtermaterial": "",
+        "Anlass": "",
+        "Jahreszeit": "",
+        "Aktivität": "",
+        "Ursprungsland": "",
+        "Verschluss": "",
+        "Besonderheiten": "",
+        "Signiert": "",
+        "Muster": "",
+        "Stollentyp": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Pronation": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "26",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Die Schuhe wurden nur einmal kurz anprobiert und befinden sich in einem sehr guten Zustand. Es handelt sich nicht um gebrauchte Schuhe im üblichen Sinne, sondern lediglich um eine kurze Anprobe.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:12"
     }
   }
 }

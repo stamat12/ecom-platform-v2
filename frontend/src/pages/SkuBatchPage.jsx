@@ -77,6 +77,9 @@ export default function SkuBatchPage() {
   const [bulkProductDetailsOpen, setBulkProductDetailsOpen] = useState(false);
   const [bulkProductDetailsSaving, setBulkProductDetailsSaving] = useState(false);
   const [bulkProductDetailsEdits, setBulkProductDetailsEdits] = useState({}); // { sku: { fieldName: value } }
+  const [categoryDetectingBySku, setCategoryDetectingBySku] = useState({}); // { sku: boolean }
+  const [categoryDetectingBatch, setCategoryDetectingBatch] = useState(false);
+  const [categoryDetectUseImages, setCategoryDetectUseImages] = useState(true);
 
   // AI Enrichment state
   const [selectedSkusForEnrichment, setSelectedSkusForEnrichment] = useState(new Set()); // Set of SKUs to enrich
@@ -892,6 +895,135 @@ export default function SkuBatchPage() {
       return { ...prev, [sku]: updated };
     });
     setEbayCategorySuggestions((prev) => ({ ...prev, [sku]: [] }));
+  };
+
+  const applyDetectedCategoryToLocalState = (sku, categoryPath, categoryId) => {
+    if (!categoryPath) return;
+
+    setBulkProductDetailsEdits((prev) => {
+      const updates = { ...(prev[sku] || {}) };
+      updates.Category = categoryPath;
+
+      const details = productDetails[sku];
+      if (details?.categories) {
+        const categoryWithField = details.categories.find(cat =>
+          Array.isArray(cat.fields) && cat.fields.some(f => f.name === "Category")
+        );
+        const idField = categoryWithField?.fields?.find((f) => {
+          const n = String(f.name || "").toLowerCase();
+          return n.includes("category") && n.includes("id");
+        });
+        if (idField && categoryId) {
+          updates[idField.name] = String(categoryId);
+        }
+      }
+
+      return { ...prev, [sku]: updates };
+    });
+
+    setEditedFieldsState((prev) => {
+      const current = prev[sku] || {};
+      const ebayCategoryName = Object.keys(current).find((name) => name.toLowerCase().includes("category")) || "Ebay Category";
+      const categoryFields = current[ebayCategoryName] || {};
+      const updatedCategoryFields = {
+        ...categoryFields,
+        Category: categoryPath,
+      };
+
+      const idFieldName = Object.keys(categoryFields).find((name) => {
+        const n = name.toLowerCase();
+        return n.includes("category") && n.includes("id");
+      });
+      if (idFieldName && categoryId) {
+        updatedCategoryFields[idFieldName] = String(categoryId);
+      }
+
+      return {
+        ...prev,
+        [sku]: {
+          ...current,
+          [ebayCategoryName]: updatedCategoryFields,
+        },
+      };
+    });
+  };
+
+  const refreshProductDetailsForSku = async (sku) => {
+    try {
+      const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
+      if (res.ok) {
+        const detailsData = await res.json();
+        setProductDetails((prev) => ({ ...prev, [sku]: detailsData }));
+      }
+    } catch (e) {
+      console.error(`Failed to refresh details for ${sku}:`, e);
+    }
+  };
+
+  const handleDetectCategoryForSku = async (sku, options = {}) => {
+    const { silent = false } = options;
+    setCategoryDetectingBySku((prev) => ({ ...prev, [sku]: true }));
+    try {
+      const res = await fetch(`/api/ai/ebay-category/${encodeURIComponent(sku)}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ use_images: categoryDetectUseImages }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.detail || data.message || "Category detection failed");
+      }
+
+      applyDetectedCategoryToLocalState(sku, data.category_path, data.category_id);
+      await refreshProductDetailsForSku(sku);
+
+      if (!silent) {
+        alert(`✅ ${sku}: ${data.category_path}${data.category_id ? ` (ID ${data.category_id})` : ""}`);
+      }
+    } catch (e) {
+      if (!silent) {
+        alert(`❌ ${sku}: ${e.message}`);
+      }
+    } finally {
+      setCategoryDetectingBySku((prev) => ({ ...prev, [sku]: false }));
+    }
+  };
+
+  const handleDetectCategoryForSelectedSkus = async () => {
+    const skus = Array.from(selectedSkusForProductDetailsEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for product details");
+      return;
+    }
+
+    setCategoryDetectingBatch(true);
+    try {
+      const res = await fetch("/api/ai/ebay-category/batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ skus, use_images: categoryDetectUseImages }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.detail || data.message || "Batch category detection failed");
+      }
+
+      const results = Array.isArray(data.results) ? data.results : [];
+      const successful = results.filter((r) => r.success);
+      const failed = results.filter((r) => !r.success);
+
+      successful.forEach((r) => {
+        applyDetectedCategoryToLocalState(r.sku, r.category_path, r.category_id);
+      });
+      await Promise.all(successful.map((r) => refreshProductDetailsForSku(r.sku)));
+
+      alert(`✅ Category AI completed: ${successful.length} succeeded, ${failed.length} failed`);
+    } catch (e) {
+      alert(`❌ ${e.message}`);
+    } finally {
+      setCategoryDetectingBatch(false);
+    }
   };
 
   const toggleSkuForEnrichment = (sku) => {
@@ -2135,6 +2267,35 @@ export default function SkuBatchPage() {
             Edit product details for {selectedSkusForProductDetailsEdit.size} selected SKU(s)
           </div>
 
+          <label style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, marginBottom: 8, color: "#333" }}>
+            <input
+              type="checkbox"
+              checked={categoryDetectUseImages}
+              onChange={(e) => setCategoryDetectUseImages(e.target.checked)}
+            />
+            Use images for category AI
+          </label>
+
+          <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
+            <button
+              onClick={handleDetectCategoryForSelectedSkus}
+              disabled={categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0}
+              style={{
+                padding: "6px 12px",
+                fontSize: 12,
+                background: categoryDetectingBatch ? "#ccc" : "#7b1fa2",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0 ? "not-allowed" : "pointer",
+                fontWeight: "bold",
+              }}
+              title="Detect category for all rows in this bulk window"
+            >
+              {categoryDetectingBatch ? "Detecting Categories..." : "🤖 Detect Category for All Rows"}
+            </button>
+          </div>
+
           <div style={{ overflowX: "auto", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflow: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
               <thead>
@@ -2680,6 +2841,14 @@ export default function SkuBatchPage() {
           <div style={{ fontWeight: "bold", marginBottom: 4, fontSize: 11 }}>
             📋 Product Details: {selectedSkusForProductDetailsEdit.size} SKU(s)
           </div>
+          <label style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 11, marginBottom: 4, color: "#333" }}>
+            <input
+              type="checkbox"
+              checked={categoryDetectUseImages}
+              onChange={(e) => setCategoryDetectUseImages(e.target.checked)}
+            />
+            Use images for category AI
+          </label>
           <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
@@ -2717,6 +2886,23 @@ export default function SkuBatchPage() {
               }}
             >
               ✏️ Bulk Edit
+            </button>
+            <button
+              onClick={handleDetectCategoryForSelectedSkus}
+              disabled={categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: categoryDetectingBatch ? "#ccc" : "#7b1fa2",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0 ? "not-allowed" : "pointer",
+                fontWeight: "bold",
+              }}
+              title="Detect eBay category for selected SKUs"
+            >
+              {categoryDetectingBatch ? "Detecting..." : "🤖 Detect Category"}
             </button>
             <button
               onClick={() => setSelectedSkusForProductDetailsEdit(new Set())}
@@ -3417,76 +3603,99 @@ export default function SkuBatchPage() {
                                       {field.name}
                                     </label>
                                     {cat.name === "Ebay Category" && field.name === "Category" ? (
-                                      <div style={{ position: "relative" }}>
-                                        <input
-                                          type="text"
-                                          value={editedFieldsState[sku]?.[cat.name]?.[field.name] ?? field.value}
-                                          onChange={(e) => {
-                                            const value = e.target.value;
-                                            setEditedFieldsState(prev => ({
-                                              ...prev,
-                                              [sku]: {
-                                                ...(prev[sku] || {}),
-                                                [cat.name]: {
-                                                  ...(prev[sku]?.[cat.name] || {}),
-                                                  [field.name]: value
-                                                }
-                                              }
-                                            }));
-                                            searchEbayCategories(sku, value);
-                                          }}
-                                          placeholder="Type to search eBay categories..."
-                                          style={{
-                                            width: "100%",
-                                            padding: "6px 8px",
-                                            border: "1px solid #2196F3",
-                                            borderRadius: 3,
-                                            fontSize: 12,
-                                            fontFamily: "monospace",
-                                            boxSizing: "border-box"
-                                          }}
-                                        />
-                                        {(ebayCategoryLoading[sku] || (ebayCategorySuggestions[sku] && ebayCategorySuggestions[sku].length > 0)) && (
-                                          <div
-                                            style={{
-                                              position: "absolute",
-                                              top: "100%",
-                                              left: 0,
-                                              right: 0,
-                                              zIndex: 50,
-                                              background: "white",
-                                              border: "1px solid #e0e0e0",
-                                              borderTop: "none",
-                                              maxHeight: 220,
-                                              overflowY: "auto",
-                                              boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-                                            }}
-                                          >
-                                            {ebayCategoryLoading[sku] && (
-                                              <div style={{ padding: 8, fontSize: 11, color: "#666" }}>Searching...</div>
-                                            )}
-                                            {(ebayCategorySuggestions[sku] || []).map((item, idx) => (
+                                      <div>
+                                        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                                          <div style={{ position: "relative", flex: 1 }}>
+                                            <input
+                                              type="text"
+                                              value={editedFieldsState[sku]?.[cat.name]?.[field.name] ?? field.value}
+                                              onChange={(e) => {
+                                                const value = e.target.value;
+                                                setEditedFieldsState(prev => ({
+                                                  ...prev,
+                                                  [sku]: {
+                                                    ...(prev[sku] || {}),
+                                                    [cat.name]: {
+                                                      ...(prev[sku]?.[cat.name] || {}),
+                                                      [field.name]: value
+                                                    }
+                                                  }
+                                                }));
+                                                searchEbayCategories(sku, value);
+                                              }}
+                                              placeholder="Type to search eBay categories..."
+                                              style={{
+                                                width: "100%",
+                                                padding: "6px 8px",
+                                                border: "1px solid #2196F3",
+                                                borderRadius: 3,
+                                                fontSize: 12,
+                                                fontFamily: "monospace",
+                                                boxSizing: "border-box"
+                                              }}
+                                            />
+                                            {(ebayCategoryLoading[sku] || (ebayCategorySuggestions[sku] && ebayCategorySuggestions[sku].length > 0)) && (
                                               <div
-                                                key={`${item.category_id || item.label}-${idx}`}
-                                                onClick={() => applyEbayCategorySelection(sku, cat.name, field.name, item)}
                                                 style={{
-                                                  padding: "6px 8px",
-                                                  cursor: "pointer",
-                                                  fontSize: 11,
-                                                  borderTop: "1px solid #f0f0f0"
+                                                  position: "absolute",
+                                                  top: "100%",
+                                                  left: 0,
+                                                  right: 0,
+                                                  zIndex: 50,
+                                                  background: "white",
+                                                  border: "1px solid #e0e0e0",
+                                                  borderTop: "none",
+                                                  maxHeight: 220,
+                                                  overflowY: "auto",
+                                                  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
                                                 }}
                                               >
-                                                <div style={{ fontWeight: 600, color: "#333" }}>{item.label}</div>
-                                                {item.category_id && (
-                                                  <div style={{ fontSize: 10, color: "#777" }}>ID: {item.category_id}</div>
+                                                {ebayCategoryLoading[sku] && (
+                                                  <div style={{ padding: 8, fontSize: 11, color: "#666" }}>Searching...</div>
+                                                )}
+                                                {(ebayCategorySuggestions[sku] || []).map((item, idx) => (
+                                                  <div
+                                                    key={`${item.category_id || item.label}-${idx}`}
+                                                    onClick={() => applyEbayCategorySelection(sku, cat.name, field.name, item)}
+                                                    style={{
+                                                      padding: "6px 8px",
+                                                      cursor: "pointer",
+                                                      fontSize: 11,
+                                                      borderTop: "1px solid #f0f0f0"
+                                                    }}
+                                                  >
+                                                    <div style={{ fontWeight: 600, color: "#333" }}>{item.label}</div>
+                                                    {item.category_id && (
+                                                      <div style={{ fontSize: 10, color: "#777" }}>ID: {item.category_id}</div>
+                                                    )}
+                                                  </div>
+                                                ))}
+                                                {!ebayCategoryLoading[sku] && (ebayCategorySuggestions[sku] || []).length === 0 && (
+                                                  <div style={{ padding: 8, fontSize: 11, color: "#999" }}>No matches</div>
                                                 )}
                                               </div>
-                                            ))}
-                                            {!ebayCategoryLoading[sku] && (ebayCategorySuggestions[sku] || []).length === 0 && (
-                                              <div style={{ padding: 8, fontSize: 11, color: "#999" }}>No matches</div>
                                             )}
                                           </div>
-                                        )}
+                                          <button
+                                            type="button"
+                                            onClick={() => handleDetectCategoryForSku(sku)}
+                                            disabled={!!categoryDetectingBySku[sku]}
+                                            style={{
+                                              padding: "6px 8px",
+                                              border: "none",
+                                              borderRadius: 3,
+                                              background: categoryDetectingBySku[sku] ? "#ccc" : "#7b1fa2",
+                                              color: "white",
+                                              cursor: categoryDetectingBySku[sku] ? "not-allowed" : "pointer",
+                                              fontSize: 11,
+                                              fontWeight: "bold",
+                                              whiteSpace: "nowrap",
+                                            }}
+                                            title={`Detect best eBay category with AI (${categoryDetectUseImages ? "images + text" : "text only"})`}
+                                          >
+                                            {categoryDetectingBySku[sku] ? "..." : "🤖 Detect"}
+                                          </button>
+                                        </div>
                                       </div>
                                     ) : (
                                       <textarea

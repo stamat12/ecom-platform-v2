@@ -17,33 +17,34 @@
       "Total Cost Net": 10.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Blusen, Tops & Shirts",
+      "eBay Category ID": "53159"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "5712808749092"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "MSCH COPENHAGEN",
+      "Brand": "MSch Copenhagen",
       "Color": "Weiß",
-      "Size": "L/XL"
+      "Size": "L XL"
     },
     "Intern Generated Info": {
       "More details": "Das Hemd hat einen klassischen Kragen und lange Ärmel. Es ist aus einem leichten, durchscheinenden Material gefertigt. Die Knopfleiste verleiht dem Hemd einen eleganten Look.",
       "Keywords": "Maluca Shirt Hemd Damen",
-      "Materials": "Keine Angaben"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "59,95"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -92,7 +93,68 @@
         {
           "filename": "VER02232 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02232 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v1gAAeSw5jFpqEHS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02232 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y~UAAeSwy3xpqEHW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02232 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EhUAAeSwyAtpqEHZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02232 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rccAAeSw5nxpqEHc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02232 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wp0AAeSw4h1pqEHe/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "MSCH Copenhagen",
+        "Produktart": "Bluse",
+        "Größe": "L XL",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß",
+        "Stil": "Basic",
+        "Ärmellänge": "Langarm"
+      },
+      "optional": {
+        "Verschluss": "Knopf",
+        "Textilpflege": "Maschinenwäsche",
+        "Handgefertigt": "Nein",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "Maluca Shirt",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Bluse",
+      "Keyword 3": "Damenhemd"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "5712808749092",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

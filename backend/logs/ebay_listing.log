@@ -922,3 +922,620 @@
 2026-02-17 01:39:36,920 - INFO - Looking up manufacturer info for 'Meik Mangni' using AI...
 2026-02-17 01:39:37,555 - WARNING - AI returned error for 'Meik Mangni': No verified manufacturer data found
 2026-02-17 01:39:40,754 - INFO - Successfully created listing for SKU JAL00112, ItemID: 137043675106
+2026-03-04 15:18:18,388 - INFO - Creating eBay listing for SKU VER02204 at price 26.0€
+2026-03-04 15:18:18,443 - INFO - Listing condition for SKU VER02204: text='', id=1500, category_id=15709
+2026-03-04 15:18:18,444 - INFO - Uploading images for SKU VER02204 (max: 12)
+2026-03-04 15:18:18,461 - INFO - Image files found on disk for SKU VER02204: 10
+2026-03-04 15:18:18,462 - INFO - Uploading to eBay: VER02204 (7).jpg
+2026-03-04 15:18:22,033 - INFO - Uploaded image VER02204 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DxwAAeSw...
+2026-03-04 15:18:22,035 - INFO - Uploading to eBay: VER02204 (6).jpg
+2026-03-04 15:18:25,221 - INFO - Uploaded image VER02204 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nDMAAeSw...
+2026-03-04 15:18:25,223 - INFO - Uploading to eBay: VER02204 (3).jpg
+2026-03-04 15:18:28,105 - INFO - Uploaded image VER02204 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5DUAAeSw...
+2026-03-04 15:18:28,107 - INFO - Uploading to eBay: VER02204 (5).jpg
+2026-03-04 15:18:31,063 - INFO - Uploaded image VER02204 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DgoAAeSw...
+2026-03-04 15:18:31,064 - INFO - Uploading to eBay: VER02204 (4).jpg
+2026-03-04 15:18:34,178 - INFO - Uploaded image VER02204 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kcgAAeSw...
+2026-03-04 15:18:34,180 - INFO - Uploading to eBay: VER02204 (8).jpg
+2026-03-04 15:18:36,820 - INFO - Uploaded image VER02204 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-zgAAeSw...
+2026-03-04 15:18:36,822 - INFO - Uploading to eBay: VER02204 (9).jpg
+2026-03-04 15:18:39,866 - INFO - Uploaded image VER02204 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qY0AAeSw...
+2026-03-04 15:18:39,867 - INFO - Uploading to eBay: VER02204 (1).jpg
+2026-03-04 15:18:42,180 - INFO - Uploaded image VER02204 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vvYAAeSw...
+2026-03-04 15:18:42,183 - INFO - Uploading to eBay: VER02204 (10).jpg
+2026-03-04 15:18:44,544 - INFO - Uploaded image VER02204 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ci4AAeSw...
+2026-03-04 15:18:44,546 - INFO - Upload summary for SKU VER02204 -> uploaded: 9, cached: 0, urls: 9
+2026-03-04 15:18:44,552 - INFO - Saved 9 new eBay URLs to JSON
+2026-03-04 15:18:44,553 - INFO - Upload result for VER02204: {'success': True, 'sku': 'VER02204', 'uploaded_count': 9, 'cached_count': 0, 'total_count': 9, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DxwAAeSwomBpqD8t/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nDMAAeSw4v9pqD8w/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5DUAAeSwgvxpqD8z/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DgoAAeSw7x1pqD82/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kcgAAeSwAuFpqD85/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-zgAAeSwIQ9pqD88/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qY0AAeSwAYxpqD8~/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vvYAAeSwWK1pqD9B/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ci4AAeSwEaNpqD9E/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 9 new images, used 0 cached URLs'}
+2026-03-04 15:18:44,555 - INFO - Using cached manufacturer info for 'Bershka'
+2026-03-04 15:18:47,515 - INFO - Successfully created listing for SKU VER02204, ItemID: 137094257705
+2026-03-04 15:18:47,550 - INFO - Creating eBay listing for SKU VER02205 at price 42.0€
+2026-03-04 15:18:47,584 - INFO - Listing condition for SKU VER02205: text='', id=1000, category_id=45333
+2026-03-04 15:18:47,585 - INFO - Uploading images for SKU VER02205 (max: 12)
+2026-03-04 15:18:47,600 - INFO - Image files found on disk for SKU VER02205: 8
+2026-03-04 15:18:47,601 - INFO - Uploading to eBay: VER02205 (8).jpg
+2026-03-04 15:18:50,918 - INFO - Uploaded image VER02205 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lK0AAeSw...
+2026-03-04 15:18:50,919 - INFO - Uploading to eBay: VER02205 (7).jpg
+2026-03-04 15:18:53,884 - INFO - Uploaded image VER02205 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/HdgAAeSw...
+2026-03-04 15:18:53,886 - INFO - Uploading to eBay: VER02205 (3).jpg
+2026-03-04 15:18:57,247 - INFO - Uploaded image VER02205 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qcQAAeSw...
+2026-03-04 15:18:57,249 - INFO - Uploading to eBay: VER02205 (5).jpg
+2026-03-04 15:19:00,411 - INFO - Uploaded image VER02205 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4RoAAeSw...
+2026-03-04 15:19:00,412 - INFO - Uploading to eBay: VER02205 (4).jpg
+2026-03-04 15:19:03,639 - INFO - Uploaded image VER02205 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ltYAAeSw...
+2026-03-04 15:19:03,641 - INFO - Uploading to eBay: VER02205 (6).jpg
+2026-03-04 15:19:06,555 - INFO - Uploaded image VER02205 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qScAAeSw...
+2026-03-04 15:19:06,557 - INFO - Uploading to eBay: VER02205 (1).jpg
+2026-03-04 15:19:09,053 - INFO - Uploaded image VER02205 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D4IAAeSw...
+2026-03-04 15:19:09,055 - INFO - Upload summary for SKU VER02205 -> uploaded: 7, cached: 0, urls: 7
+2026-03-04 15:19:09,061 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-04 15:19:09,061 - INFO - Upload result for VER02205: {'success': True, 'sku': 'VER02205', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lK0AAeSwq7RpqD9K/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/HdgAAeSw16NpqD9N/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qcQAAeSw5WJpqD9Q/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4RoAAeSwd59pqD9U/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ltYAAeSwlXFpqD9X/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qScAAeSwc0RpqD9a/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D4IAAeSwcxBpqD9c/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-04 15:19:09,062 - INFO - Looking up manufacturer info for 'Anna Field' using AI...
+2026-03-04 15:19:12,918 - INFO - Manufacturer info extracted and cached for 'Anna Field'
+2026-03-04 15:19:15,984 - INFO - Successfully created listing for SKU VER02205, ItemID: 137094259562
+2026-03-04 15:19:16,017 - INFO - Creating eBay listing for SKU VER02206 at price 35.0€
+2026-03-04 15:19:16,045 - INFO - Listing condition for SKU VER02206: text='', id=1000, category_id=24087
+2026-03-04 15:19:16,046 - INFO - Uploading images for SKU VER02206 (max: 12)
+2026-03-04 15:19:16,060 - INFO - Image files found on disk for SKU VER02206: 9
+2026-03-04 15:19:16,061 - INFO - Uploading to eBay: VER02206 (7).jpg
+2026-03-04 15:19:19,698 - INFO - Uploaded image VER02206 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IJUAAeSw...
+2026-03-04 15:19:19,699 - INFO - Uploading to eBay: VER02206 (5).jpg
+2026-03-04 15:19:23,386 - INFO - Uploaded image VER02206 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mJoAAeSw...
+2026-03-04 15:19:23,388 - INFO - Uploading to eBay: VER02206 (4).jpg
+2026-03-04 15:19:27,349 - INFO - Uploaded image VER02206 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-mkAAeSw...
+2026-03-04 15:19:27,350 - INFO - Uploading to eBay: VER02206 (3).jpg
+2026-03-04 15:19:31,591 - INFO - Uploaded image VER02206 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFIAAeSw...
+2026-03-04 15:19:31,592 - INFO - Uploading to eBay: VER02206 (1).jpg
+2026-03-04 15:19:35,531 - INFO - Uploaded image VER02206 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/sTwAAeSw...
+2026-03-04 15:19:35,533 - INFO - Uploading to eBay: VER02206 (9).jpg
+2026-03-04 15:19:39,087 - INFO - Uploaded image VER02206 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v14AAeSw...
+2026-03-04 15:19:39,089 - INFO - Uploading to eBay: VER02206 (8).jpg
+2026-03-04 15:19:42,116 - INFO - Uploaded image VER02206 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JRgAAeSw...
+2026-03-04 15:19:42,117 - INFO - Upload summary for SKU VER02206 -> uploaded: 7, cached: 0, urls: 7
+2026-03-04 15:19:42,126 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-04 15:19:42,126 - INFO - Upload result for VER02206: {'success': True, 'sku': 'VER02206', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IJUAAeSwAtNpqD9n/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mJoAAeSwxbxpqD9r/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-mkAAeSwqjNpqD9v/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFIAAeSwCTFpqD9z/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/sTwAAeSwVZdpqD93/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v14AAeSwX1ZpqD96/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JRgAAeSwFYZpqD99/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-04 15:19:42,128 - INFO - Looking up manufacturer info for 'Zara' using AI...
+2026-03-04 15:19:44,888 - INFO - Manufacturer info extracted and cached for 'Zara'
+2026-03-04 15:19:48,847 - INFO - Successfully created listing for SKU VER02206, ItemID: 137094261563
+2026-03-04 15:19:48,881 - INFO - Creating eBay listing for SKU VER02207 at price 42.0€
+2026-03-04 15:19:48,914 - INFO - Listing condition for SKU VER02207: text='', id=1000, category_id=63853
+2026-03-04 15:19:48,914 - INFO - Uploading images for SKU VER02207 (max: 12)
+2026-03-04 15:19:48,927 - INFO - Image files found on disk for SKU VER02207: 6
+2026-03-04 15:19:48,927 - INFO - Uploading to eBay: VER02207 (4).jpg
+2026-03-04 15:19:53,926 - INFO - Uploaded image VER02207 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~rIAAeSw...
+2026-03-04 15:19:53,928 - INFO - Uploading to eBay: VER02207 (3).jpg
+2026-03-04 15:19:59,496 - INFO - Uploaded image VER02207 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DAwAAeSw...
+2026-03-04 15:19:59,499 - INFO - Uploading to eBay: VER02207 (6).jpg
+2026-03-04 15:20:04,030 - INFO - Uploaded image VER02207 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lyMAAeSw...
+2026-03-04 15:20:04,033 - INFO - Uploading to eBay: VER02207 (1).jpg
+2026-03-04 15:20:08,873 - INFO - Uploaded image VER02207 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qQkAAeSw...
+2026-03-04 15:20:08,875 - INFO - Uploading to eBay: VER02207 (5).jpg
+2026-03-04 15:20:12,415 - INFO - Uploaded image VER02207 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nmsAAeSw...
+2026-03-04 15:20:12,417 - INFO - Upload summary for SKU VER02207 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:20:12,426 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:20:12,426 - INFO - Upload result for VER02207: {'success': True, 'sku': 'VER02207', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~rIAAeSw2J9pqD-J/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DAwAAeSwEaNpqD-P/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lyMAAeSwhHdpqD-T/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qQkAAeSww-VpqD-Y/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nmsAAeSwPqFpqD-b/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:20:12,428 - INFO - Looking up manufacturer info for 'Triumph' using AI...
+2026-03-04 15:20:14,674 - INFO - Manufacturer info extracted and cached for 'Triumph'
+2026-03-04 15:20:17,876 - INFO - Successfully created listing for SKU VER02207, ItemID: 137094263837
+2026-03-04 15:20:17,909 - INFO - Creating eBay listing for SKU VER02208 at price 28.0€
+2026-03-04 15:20:17,949 - INFO - Listing condition for SKU VER02208: text='', id=1000, category_id=63853
+2026-03-04 15:20:17,950 - INFO - Uploading images for SKU VER02208 (max: 12)
+2026-03-04 15:20:17,969 - INFO - Image files found on disk for SKU VER02208: 10
+2026-03-04 15:20:17,969 - INFO - Uploading to eBay: VER02208 (1).jpg
+2026-03-04 15:20:22,741 - INFO - Uploaded image VER02208 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CioAAeSw...
+2026-03-04 15:20:22,744 - INFO - Uploading to eBay: VER02208 (10).jpg
+2026-03-04 15:20:25,599 - ERROR - Failed to upload VER02208 (10).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:20:25,599 - INFO - Uploading to eBay: VER02208 (4).jpg
+2026-03-04 15:20:29,888 - INFO - Uploaded image VER02208 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ne4AAeSw...
+2026-03-04 15:20:29,890 - INFO - Uploading to eBay: VER02208 (5).jpg
+2026-03-04 15:20:33,115 - ERROR - Failed to upload VER02208 (5).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:20:33,116 - INFO - Uploading to eBay: VER02208 (6).jpg
+2026-03-04 15:20:36,940 - INFO - Uploaded image VER02208 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xBsAAeSw...
+2026-03-04 15:20:36,941 - INFO - Uploading to eBay: VER02208 (7).jpg
+2026-03-04 15:20:41,020 - INFO - Uploaded image VER02208 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ei4AAeSw...
+2026-03-04 15:20:41,021 - INFO - Uploading to eBay: VER02208 (8).jpg
+2026-03-04 15:20:44,011 - INFO - Uploaded image VER02208 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IcMAAeSw...
+2026-03-04 15:20:44,013 - INFO - Uploading to eBay: VER02208 (3).jpg
+2026-03-04 15:20:47,063 - INFO - Uploaded image VER02208 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m-MAAeSw...
+2026-03-04 15:20:47,065 - INFO - Upload summary for SKU VER02208 -> uploaded: 6, cached: 0, urls: 6
+2026-03-04 15:20:47,073 - INFO - Saved 6 new eBay URLs to JSON
+2026-03-04 15:20:47,073 - INFO - Upload result for VER02208: {'success': True, 'sku': 'VER02208', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CioAAeSw20xpqD-m/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ne4AAeSw27lpqD-t/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xBsAAeSwwNlpqD-0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ei4AAeSw3ylpqD-4/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IcMAAeSwEG1pqD-7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m-MAAeSwkt9pqD--/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-03-04 15:20:47,074 - INFO - Looking up manufacturer info for 'M&S' using AI...
+2026-03-04 15:20:49,299 - INFO - Manufacturer info extracted and cached for 'M&S'
+2026-03-04 15:20:50,501 - ERROR - Failed to create listing for SKU VER02208: ['Code 37: Eingabedaten fÃ¼r Tag &lt;Item.Regulatory.Manufacturer.Country&gt; sind ungÃ¼ltig oder fehlen. Bitte lesen Sie die API-Dokumentation.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-APP-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-DEV-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-CERT-NAME&quot; existiert nicht.']
+2026-03-04 15:20:50,502 - INFO - Creating eBay listing for SKU VER02209 at price 35.0€
+2026-03-04 15:20:50,544 - INFO - Listing condition for SKU VER02209: text='', id=1000, category_id=11554
+2026-03-04 15:20:50,544 - INFO - Uploading images for SKU VER02209 (max: 12)
+2026-03-04 15:20:50,559 - INFO - Image files found on disk for SKU VER02209: 7
+2026-03-04 15:20:50,560 - INFO - Uploading to eBay: VER02209 (4).jpg
+2026-03-04 15:20:55,633 - INFO - Uploaded image VER02209 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/w-EAAeSw...
+2026-03-04 15:20:55,634 - INFO - Uploading to eBay: VER02209 (5).jpg
+2026-03-04 15:21:02,026 - INFO - Uploaded image VER02209 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oGgAAeSw...
+2026-03-04 15:21:02,028 - INFO - Uploading to eBay: VER02209 (1).jpg
+2026-03-04 15:21:06,572 - INFO - Uploaded image VER02209 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D5UAAeSw...
+2026-03-04 15:21:06,573 - INFO - Uploading to eBay: VER02209 (7).jpg
+2026-03-04 15:21:11,348 - INFO - Uploaded image VER02209 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oKIAAeSw...
+2026-03-04 15:21:11,351 - INFO - Uploading to eBay: VER02209 (6).jpg
+2026-03-04 15:21:15,152 - INFO - Uploaded image VER02209 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~2IAAeSw...
+2026-03-04 15:21:15,154 - INFO - Upload summary for SKU VER02209 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:21:15,162 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:21:15,162 - INFO - Upload result for VER02209: {'success': True, 'sku': 'VER02209', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/w-EAAeSwzNJpqD~H/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oGgAAeSwGBBpqD~N/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/D5UAAeSwVbxpqD~S/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oKIAAeSwGBBpqD~X/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~2IAAeSwIQ9pqD~a/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:21:15,163 - INFO - Using cached manufacturer info for 'H&M'
+2026-03-04 15:21:17,708 - ERROR - Failed to create listing for SKU VER02209: ['Code 21919303: Das Artikelmerkmal SchrittlÃ¤ngeÂ\xa0fehlt.Â\xa0FÃ¼gen Sie SchrittlÃ¤nge zu diesem Angebot hinzu, geben Sie einen gÃ¼ltigen Wert ein und versuchen Sie es dann noch einmal.']
+2026-03-04 15:21:17,709 - INFO - Creating eBay listing for SKU VER02212 at price 15.0€
+2026-03-04 15:21:17,740 - INFO - Listing condition for SKU VER02212: text='', id=1000, category_id=163593
+2026-03-04 15:21:17,741 - INFO - Uploading images for SKU VER02212 (max: 12)
+2026-03-04 15:21:17,752 - INFO - Image files found on disk for SKU VER02212: 6
+2026-03-04 15:21:17,752 - INFO - Uploading to eBay: VER02212 (3).jpg
+2026-03-04 15:21:21,562 - INFO - Uploaded image VER02212 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JBsAAeSw...
+2026-03-04 15:21:21,564 - INFO - Uploading to eBay: VER02212 (1).jpg
+2026-03-04 15:21:25,538 - INFO - Uploaded image VER02212 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/n5YAAeSw...
+2026-03-04 15:21:25,540 - INFO - Uploading to eBay: VER02212 (4).jpg
+2026-03-04 15:21:29,629 - INFO - Uploaded image VER02212 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-lQAAeSw...
+2026-03-04 15:21:29,630 - INFO - Uploading to eBay: VER02212 (5).jpg
+2026-03-04 15:21:32,366 - ERROR - Failed to upload VER02212 (5).jpg: 503 Server Error: Service Unavailable for url: https://api.ebay.com/ws/api.dll
+2026-03-04 15:21:32,368 - INFO - Uploading to eBay: VER02212 (6).jpg
+2026-03-04 15:21:34,948 - INFO - Uploaded image VER02212 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-KEAAeSw...
+2026-03-04 15:21:34,950 - INFO - Upload summary for SKU VER02212 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:21:34,958 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:21:34,958 - INFO - Upload result for VER02212: {'success': True, 'sku': 'VER02212', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JBsAAeSwPsRpqD~h/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/n5YAAeSws3xpqD~l/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-lQAAeSwI6dpqD~p/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-KEAAeSw8VZpqD~u/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:21:34,959 - INFO - Looking up manufacturer info for 'Magic Bodyfashion' using AI...
+2026-03-04 15:21:38,502 - INFO - Manufacturer info extracted and cached for 'Magic Bodyfashion'
+2026-03-04 15:21:41,682 - INFO - Successfully created listing for SKU VER02212, ItemID: 137094266168
+2026-03-04 15:21:41,716 - INFO - Creating eBay listing for SKU VER02214 at price 34.0€
+2026-03-04 15:21:41,758 - INFO - Listing condition for SKU VER02214: text='', id=1000, category_id=59307
+2026-03-04 15:21:41,759 - INFO - Uploading images for SKU VER02214 (max: 12)
+2026-03-04 15:21:41,776 - INFO - Image files found on disk for SKU VER02214: 6
+2026-03-04 15:21:41,776 - INFO - Uploading to eBay: VER02214 (4).jpg
+2026-03-04 15:21:44,667 - ERROR - Failed to upload VER02214 (4).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:21:44,669 - INFO - Uploading to eBay: VER02214 (5).jpg
+2026-03-04 15:21:49,144 - INFO - Uploaded image VER02214 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FgEAAeSw...
+2026-03-04 15:21:49,146 - INFO - Uploading to eBay: VER02214 (6).jpg
+2026-03-04 15:21:52,135 - ERROR - Failed to upload VER02214 (6).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:21:52,135 - INFO - Uploading to eBay: VER02214 (1).jpg
+2026-03-04 15:21:55,356 - INFO - Uploaded image VER02214 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7NcAAeSw...
+2026-03-04 15:21:55,357 - INFO - Uploading to eBay: VER02214 (3).jpg
+2026-03-04 15:21:57,849 - INFO - Uploaded image VER02214 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xDQAAeSw...
+2026-03-04 15:21:57,850 - INFO - Upload summary for SKU VER02214 -> uploaded: 3, cached: 0, urls: 3
+2026-03-04 15:21:57,857 - INFO - Saved 3 new eBay URLs to JSON
+2026-03-04 15:21:57,857 - INFO - Upload result for VER02214: {'success': True, 'sku': 'VER02214', 'uploaded_count': 3, 'cached_count': 0, 'total_count': 3, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FgEAAeSwyG9pqD~8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7NcAAeSwSEVpqEAD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xDQAAeSwkXJpqEAF/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 3 new images, used 0 cached URLs'}
+2026-03-04 15:21:57,858 - INFO - Using cached manufacturer info for 'Gymshark'
+2026-03-04 15:22:01,807 - INFO - Successfully created listing for SKU VER02214, ItemID: 137094266434
+2026-03-04 15:22:01,843 - INFO - Creating eBay listing for SKU VER02215 at price 28.0€
+2026-03-04 15:22:01,869 - INFO - Listing condition for SKU VER02215: text='', id=1000, category_id=261506
+2026-03-04 15:22:01,870 - INFO - Uploading images for SKU VER02215 (max: 12)
+2026-03-04 15:22:01,883 - INFO - Image files found on disk for SKU VER02215: 7
+2026-03-04 15:22:01,883 - INFO - Uploading to eBay: VER02215 (3).jpg
+2026-03-04 15:22:06,844 - INFO - Uploaded image VER02215 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/J4gAAeSw...
+2026-03-04 15:22:06,846 - INFO - Uploading to eBay: VER02215 (4).jpg
+2026-03-04 15:22:11,193 - INFO - Uploaded image VER02215 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DvsAAeSw...
+2026-03-04 15:22:11,195 - INFO - Uploading to eBay: VER02215 (6).jpg
+2026-03-04 15:22:15,818 - INFO - Uploaded image VER02215 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s~EAAeSw...
+2026-03-04 15:22:15,819 - INFO - Uploading to eBay: VER02215 (1).jpg
+2026-03-04 15:22:19,766 - INFO - Uploaded image VER02215 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~tcAAeSw...
+2026-03-04 15:22:19,768 - INFO - Uploading to eBay: VER02215 (7).jpg
+2026-03-04 15:22:23,016 - INFO - Uploaded image VER02215 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGUAAeSw...
+2026-03-04 15:22:23,018 - INFO - Uploading to eBay: VER02215 (5).jpg
+2026-03-04 15:22:26,112 - INFO - Uploaded image VER02215 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K~0AAeSw...
+2026-03-04 15:22:26,114 - INFO - Upload summary for SKU VER02215 -> uploaded: 6, cached: 0, urls: 6
+2026-03-04 15:22:26,121 - INFO - Saved 6 new eBay URLs to JSON
+2026-03-04 15:22:26,121 - INFO - Upload result for VER02215: {'success': True, 'sku': 'VER02215', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/J4gAAeSwyIRpqEAO/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DvsAAeSwO1hpqEAS/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s~EAAeSwprZpqEAX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~tcAAeSwqjNpqEAb/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGUAAeSwjchpqEAe/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K~0AAeSw8EtpqEAh/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-03-04 15:22:26,122 - INFO - Looking up manufacturer info for 'Shock Absorber' using AI...
+2026-03-04 15:22:30,048 - INFO - Manufacturer info extracted and cached for 'Shock Absorber'
+2026-03-04 15:22:31,126 - ERROR - Failed to create listing for SKU VER02215: ['Code 37: Eingabedaten fÃ¼r Tag &lt;Item.Regulatory.Manufacturer.Country&gt; sind ungÃ¼ltig oder fehlen. Bitte lesen Sie die API-Dokumentation.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-APP-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-DEV-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-CERT-NAME&quot; existiert nicht.']
+2026-03-04 15:22:31,129 - INFO - Creating eBay listing for SKU VER02216 at price 18.0€
+2026-03-04 15:22:31,160 - INFO - Listing condition for SKU VER02216: text='', id=1000, category_id=82597
+2026-03-04 15:22:31,160 - INFO - Uploading images for SKU VER02216 (max: 12)
+2026-03-04 15:22:31,169 - INFO - Image files found on disk for SKU VER02216: 4
+2026-03-04 15:22:31,169 - INFO - Uploading to eBay: VER02216 (1).jpg
+2026-03-04 15:22:35,797 - INFO - Uploaded image VER02216 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oSYAAeSw...
+2026-03-04 15:22:35,799 - INFO - Uploading to eBay: VER02216 (3).jpg
+2026-03-04 15:22:40,281 - INFO - Uploaded image VER02216 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5UAAeSw...
+2026-03-04 15:22:40,283 - INFO - Uploading to eBay: VER02216 (4).jpg
+2026-03-04 15:22:44,758 - INFO - Uploaded image VER02216 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nX0AAeSw...
+2026-03-04 15:22:44,760 - INFO - Upload summary for SKU VER02216 -> uploaded: 3, cached: 0, urls: 3
+2026-03-04 15:22:44,769 - INFO - Saved 3 new eBay URLs to JSON
+2026-03-04 15:22:44,769 - INFO - Upload result for VER02216: {'success': True, 'sku': 'VER02216', 'uploaded_count': 3, 'cached_count': 0, 'total_count': 3, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oSYAAeSwSFlpqEAr/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5UAAeSwgvFpqEAv/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nX0AAeSw99NpqEA0/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 3 new images, used 0 cached URLs'}
+2026-03-04 15:22:44,770 - INFO - Looking up manufacturer info for 'DUAIU' using AI...
+2026-03-04 15:22:45,716 - WARNING - AI returned error for 'DUAIU': No verified manufacturer data found
+2026-03-04 15:22:48,482 - ERROR - Failed to create listing for SKU VER02216: ['Code 21919301: Das Feld EAN fehlt. FÃ¼gen Sie bitte EAN zum Angebot hinzu und versuchen Sie es noch einmal.']
+2026-03-04 15:22:48,483 - INFO - Creating eBay listing for SKU VER02218 at price 115.0€
+2026-03-04 15:22:48,515 - INFO - Listing condition for SKU VER02218: text='', id=1000, category_id=95672
+2026-03-04 15:22:48,515 - INFO - Uploading images for SKU VER02218 (max: 12)
+2026-03-04 15:22:48,532 - INFO - Image files found on disk for SKU VER02218: 11
+2026-03-04 15:22:48,532 - INFO - Uploading to eBay: VER02218 (8).jpg
+2026-03-04 15:22:53,390 - INFO - Uploaded image VER02218 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oIgAAeSw...
+2026-03-04 15:22:53,392 - INFO - Uploading to eBay: VER02218 (7).jpg
+2026-03-04 15:23:00,069 - INFO - Uploaded image VER02218 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~QQAAeSw...
+2026-03-04 15:23:00,071 - INFO - Uploading to eBay: VER02218 (6).jpg
+2026-03-04 15:23:06,070 - INFO - Uploaded image VER02218 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jJUAAeSw...
+2026-03-04 15:23:06,071 - INFO - Uploading to eBay: VER02218 (9).jpg
+2026-03-04 15:23:09,115 - ERROR - Failed to upload VER02218 (9).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:23:09,115 - INFO - Uploading to eBay: VER02218 (1).jpg
+2026-03-04 15:23:13,030 - INFO - Uploaded image VER02218 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jssAAeSw...
+2026-03-04 15:23:13,031 - INFO - Uploading to eBay: VER02218 (10).jpg
+2026-03-04 15:23:16,831 - INFO - Uploaded image VER02218 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/np4AAeSw...
+2026-03-04 15:23:16,832 - INFO - Uploading to eBay: VER02218 (11).jpg
+2026-03-04 15:23:20,651 - INFO - Uploaded image VER02218 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ofcAAeSw...
+2026-03-04 15:23:20,652 - INFO - Uploading to eBay: VER02218 (5).jpg
+2026-03-04 15:23:24,950 - INFO - Uploaded image VER02218 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/og8AAeSw...
+2026-03-04 15:23:24,951 - INFO - Uploading to eBay: VER02218 (4).jpg
+2026-03-04 15:23:28,499 - INFO - Uploaded image VER02218 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mwcAAeSw...
+2026-03-04 15:23:28,501 - INFO - Upload summary for SKU VER02218 -> uploaded: 8, cached: 0, urls: 8
+2026-03-04 15:23:28,507 - INFO - Saved 8 new eBay URLs to JSON
+2026-03-04 15:23:28,507 - INFO - Upload result for VER02218: {'success': True, 'sku': 'VER02218', 'uploaded_count': 8, 'cached_count': 0, 'total_count': 8, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oIgAAeSw~WxpqEA9/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~QQAAeSww5NpqEBD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jJUAAeSwkshpqEBJ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jssAAeSwqGNpqEBQ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/np4AAeSw9KNpqEBU/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ofcAAeSwTyVpqEBY/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/og8AAeSwW5RpqEBc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mwcAAeSwq7RpqEBg/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 8 new images, used 0 cached URLs'}
+2026-03-04 15:23:28,508 - INFO - Looking up manufacturer info for 'asics' using AI...
+2026-03-04 15:23:31,615 - INFO - Manufacturer info extracted and cached for 'asics'
+2026-03-04 15:23:34,866 - INFO - Successfully created listing for SKU VER02218, ItemID: 137094268925
+2026-03-04 15:23:34,898 - INFO - Creating eBay listing for SKU VER02219 at price 115.0€
+2026-03-04 15:23:34,922 - INFO - Listing condition for SKU VER02219: text='', id=1000, category_id=95672
+2026-03-04 15:23:34,923 - INFO - Uploading images for SKU VER02219 (max: 12)
+2026-03-04 15:23:34,937 - INFO - Image files found on disk for SKU VER02219: 9
+2026-03-04 15:23:34,937 - INFO - Uploading to eBay: VER02219 (7).jpg
+2026-03-04 15:23:39,152 - INFO - Uploaded image VER02219 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JVkAAeSw...
+2026-03-04 15:23:39,153 - INFO - Uploading to eBay: VER02219 (6).jpg
+2026-03-04 15:23:43,342 - INFO - Uploaded image VER02219 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6K0AAeSw...
+2026-03-04 15:23:43,344 - INFO - Uploading to eBay: VER02219 (4).jpg
+2026-03-04 15:23:47,791 - INFO - Uploaded image VER02219 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yN0AAeSw...
+2026-03-04 15:23:47,794 - INFO - Uploading to eBay: VER02219 (5).jpg
+2026-03-04 15:23:52,591 - INFO - Uploaded image VER02219 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7XAAAeSw...
+2026-03-04 15:23:52,593 - INFO - Uploading to eBay: VER02219 (9).jpg
+2026-03-04 15:23:55,348 - ERROR - Failed to upload VER02219 (9).jpg: 503 Server Error: backend write error for url: https://api.ebay.com/ws/api.dll
+2026-03-04 15:23:55,350 - INFO - Uploading to eBay: VER02219 (1).jpg
+2026-03-04 15:23:58,206 - INFO - Uploaded image VER02219 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pSQAAeSw...
+2026-03-04 15:23:58,207 - INFO - Upload summary for SKU VER02219 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:23:58,214 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:23:58,214 - INFO - Upload result for VER02219: {'success': True, 'sku': 'VER02219', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JVkAAeSww8FpqEBq/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6K0AAeSwdDdpqEBv/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yN0AAeSw0e5pqEBz/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7XAAAeSwd6FpqEB4/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pSQAAeSwRr1pqEB9/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:23:58,216 - INFO - Using cached manufacturer info for 'asics'
+2026-03-04 15:24:00,988 - INFO - Successfully created listing for SKU VER02219, ItemID: 137094269943
+2026-03-04 15:24:01,020 - INFO - Creating eBay listing for SKU VER02220 at price 115.0€
+2026-03-04 15:24:01,044 - INFO - Listing condition for SKU VER02220: text='', id=1000, category_id=95672
+2026-03-04 15:24:01,044 - INFO - Uploading images for SKU VER02220 (max: 12)
+2026-03-04 15:24:01,058 - INFO - Image files found on disk for SKU VER02220: 9
+2026-03-04 15:24:01,059 - INFO - Uploading to eBay: VER02220 (7).jpg
+2026-03-04 15:24:05,302 - INFO - Uploaded image VER02220 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LqEAAeSw...
+2026-03-04 15:24:05,304 - INFO - Uploading to eBay: VER02220 (8).jpg
+2026-03-04 15:24:09,668 - INFO - Uploaded image VER02220 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/614AAeSw...
+2026-03-04 15:24:09,671 - INFO - Uploading to eBay: VER02220 (6).jpg
+2026-03-04 15:24:18,098 - INFO - Uploaded image VER02220 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JigAAeSw...
+2026-03-04 15:24:18,100 - INFO - Uploading to eBay: VER02220 (4).jpg
+2026-03-04 15:24:23,132 - INFO - Uploaded image VER02220 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pVIAAeSw...
+2026-03-04 15:24:23,134 - INFO - Uploading to eBay: VER02220 (5).jpg
+2026-03-04 15:24:28,378 - INFO - Uploaded image VER02220 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yRAAAeSw...
+2026-03-04 15:24:28,381 - INFO - Uploading to eBay: VER02220 (9).jpg
+2026-03-04 15:24:31,689 - INFO - Uploaded image VER02220 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BNUAAeSw...
+2026-03-04 15:24:31,692 - INFO - Uploading to eBay: VER02220 (1).jpg
+2026-03-04 15:24:35,514 - INFO - Uploaded image VER02220 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~h0AAeSw...
+2026-03-04 15:24:35,516 - INFO - Uploading to eBay: VER02220 (3).jpg
+2026-03-04 15:24:39,314 - INFO - Uploaded image VER02220 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nYUAAeSw...
+2026-03-04 15:24:39,317 - INFO - Upload summary for SKU VER02220 -> uploaded: 8, cached: 0, urls: 8
+2026-03-04 15:24:39,325 - INFO - Saved 8 new eBay URLs to JSON
+2026-03-04 15:24:39,325 - INFO - Upload result for VER02220: {'success': True, 'sku': 'VER02220', 'uploaded_count': 8, 'cached_count': 0, 'total_count': 8, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LqEAAeSwRbRpqECE/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/614AAeSw9s1pqECJ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JigAAeSw0v1pqECR/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pVIAAeSw4v9pqECW/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yRAAAeSwzNJpqECc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BNUAAeSw1-NpqECf/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~h0AAeSw1JFpqECj/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nYUAAeSwv5NpqECm/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 8 new images, used 0 cached URLs'}
+2026-03-04 15:24:39,326 - INFO - Using cached manufacturer info for 'asics'
+2026-03-04 15:24:42,834 - INFO - Successfully created listing for SKU VER02220, ItemID: 137094271259
+2026-03-04 15:24:42,870 - INFO - Creating eBay listing for SKU VER02221 at price 115.0€
+2026-03-04 15:24:42,898 - INFO - Listing condition for SKU VER02221: text='', id=1000, category_id=95672
+2026-03-04 15:24:42,898 - INFO - Uploading images for SKU VER02221 (max: 12)
+2026-03-04 15:24:42,917 - INFO - Image files found on disk for SKU VER02221: 9
+2026-03-04 15:24:42,917 - INFO - Uploading to eBay: VER02221 (6).jpg
+2026-03-04 15:24:45,948 - ERROR - Failed to upload VER02221 (6).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:24:45,949 - INFO - Uploading to eBay: VER02221 (7).jpg
+2026-03-04 15:24:50,395 - INFO - Uploaded image VER02221 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o3cAAeSw...
+2026-03-04 15:24:50,396 - INFO - Uploading to eBay: VER02221 (8).jpg
+2026-03-04 15:24:54,725 - INFO - Uploaded image VER02221 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~qAAAeSw...
+2026-03-04 15:24:54,727 - INFO - Uploading to eBay: VER02221 (4).jpg
+2026-03-04 15:24:57,640 - ERROR - Failed to upload VER02221 (4).jpg: HTTPSConnectionPool(host='api.ebay.com', port=443): Max retries exceeded with url: /ws/api.dll (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2427)')))
+2026-03-04 15:24:57,640 - INFO - Uploading to eBay: VER02221 (5).jpg
+2026-03-04 15:25:02,678 - INFO - Uploaded image VER02221 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oV4AAeSw...
+2026-03-04 15:25:02,679 - INFO - Uploading to eBay: VER02221 (9).jpg
+2026-03-04 15:25:06,524 - INFO - Uploaded image VER02221 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ji8AAeSw...
+2026-03-04 15:25:06,527 - INFO - Uploading to eBay: VER02221 (1).jpg
+2026-03-04 15:25:10,213 - INFO - Uploaded image VER02221 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~9UAAeSw...
+2026-03-04 15:25:10,214 - INFO - Uploading to eBay: VER02221 (3).jpg
+2026-03-04 15:25:12,725 - ERROR - Failed to upload VER02221 (3).jpg: 503 Server Error: Service Unavailable for url: https://api.ebay.com/ws/api.dll
+2026-03-04 15:25:12,728 - INFO - Upload summary for SKU VER02221 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:25:12,737 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:25:12,738 - INFO - Upload result for VER02221: {'success': True, 'sku': 'VER02221', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o3cAAeSwUjNpqECy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~qAAAeSw1JFpqEC2/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oV4AAeSwy5lpqEC-/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Ji8AAeSwykppqEDC/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~9UAAeSwMQhpqEDF/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:25:12,739 - INFO - Using cached manufacturer info for 'asics'
+2026-03-04 15:25:15,721 - INFO - Successfully created listing for SKU VER02221, ItemID: 137094272182
+2026-03-04 15:25:15,756 - INFO - Creating eBay listing for SKU VER02222 at price 145.0€
+2026-03-04 15:25:15,786 - INFO - Listing condition for SKU VER02222: text='', id=1000, category_id=95672
+2026-03-04 15:25:15,786 - INFO - Uploading images for SKU VER02222 (max: 12)
+2026-03-04 15:25:15,802 - INFO - Image files found on disk for SKU VER02222: 9
+2026-03-04 15:25:15,802 - INFO - Uploading to eBay: VER02222 (6).jpg
+2026-03-04 15:25:19,742 - INFO - Uploaded image VER02222 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G74AAeSw...
+2026-03-04 15:25:19,744 - INFO - Uploading to eBay: VER02222 (7).jpg
+2026-03-04 15:25:23,445 - INFO - Uploaded image VER02222 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~gIAAeSw...
+2026-03-04 15:25:23,447 - INFO - Uploading to eBay: VER02222 (5).jpg
+2026-03-04 15:25:27,173 - INFO - Uploaded image VER02222 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u8YAAeSw...
+2026-03-04 15:25:27,175 - INFO - Uploading to eBay: VER02222 (1).jpg
+2026-03-04 15:25:31,221 - INFO - Uploaded image VER02222 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GDUAAeSw...
+2026-03-04 15:25:31,223 - INFO - Uploading to eBay: VER02222 (8).jpg
+2026-03-04 15:25:33,893 - INFO - Uploaded image VER02222 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jbEAAeSw...
+2026-03-04 15:25:33,895 - INFO - Uploading to eBay: VER02222 (9).jpg
+2026-03-04 15:25:36,687 - INFO - Uploaded image VER02222 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BAMAAeSw...
+2026-03-04 15:25:36,688 - INFO - Uploading to eBay: VER02222 (4).jpg
+2026-03-04 15:25:40,448 - INFO - Uploaded image VER02222 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G3UAAeSw...
+2026-03-04 15:25:40,450 - INFO - Uploading to eBay: VER02222 (3).jpg
+2026-03-04 15:25:43,358 - INFO - Uploaded image VER02222 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DKAAAeSw...
+2026-03-04 15:25:43,360 - INFO - Upload summary for SKU VER02222 -> uploaded: 8, cached: 0, urls: 8
+2026-03-04 15:25:43,367 - INFO - Saved 8 new eBay URLs to JSON
+2026-03-04 15:25:43,367 - INFO - Upload result for VER02222: {'success': True, 'sku': 'VER02222', 'uploaded_count': 8, 'cached_count': 0, 'total_count': 8, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G74AAeSwMD1pqEDP/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~gIAAeSwnCdpqEDT/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u8YAAeSwcQFpqEDW/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GDUAAeSwbodpqEDa/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jbEAAeSwIQVpqEDd/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BAMAAeSwkKxpqEDg/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G3UAAeSwFENpqEDk/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DKAAAeSwb6tpqEDn/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 8 new images, used 0 cached URLs'}
+2026-03-04 15:25:43,368 - INFO - Looking up manufacturer info for 'VivoBarefoot' using AI...
+2026-03-04 15:25:45,032 - INFO - Manufacturer info extracted and cached for 'VivoBarefoot'
+2026-03-04 15:25:46,132 - ERROR - Failed to create listing for SKU VER02222: ['Code 37: Eingabedaten fÃ¼r Tag &lt;Item.Regulatory.Manufacturer.Country&gt; sind ungÃ¼ltig oder fehlen. Bitte lesen Sie die API-Dokumentation.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-APP-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-DEV-NAME&quot; existiert nicht.', 'Code 10011: Kopfzeile &quot;X-EBAY-API-CERT-NAME&quot; existiert nicht.']
+2026-03-04 15:25:46,134 - INFO - Creating eBay listing for SKU VER02223 at price 54.0€
+2026-03-04 15:25:46,169 - INFO - Listing condition for SKU VER02223: text='', id=1000, category_id=95672
+2026-03-04 15:25:46,170 - INFO - Uploading images for SKU VER02223 (max: 12)
+2026-03-04 15:25:46,192 - INFO - Image files found on disk for SKU VER02223: 11
+2026-03-04 15:25:46,192 - INFO - Uploading to eBay: VER02223 (8).jpg
+2026-03-04 15:25:49,757 - INFO - Uploaded image VER02223 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kS0AAeSw...
+2026-03-04 15:25:49,759 - INFO - Uploading to eBay: VER02223 (9).jpg
+2026-03-04 15:25:53,045 - INFO - Uploaded image VER02223 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/phgAAeSw...
+2026-03-04 15:25:53,047 - INFO - Uploading to eBay: VER02223 (5).jpg
+2026-03-04 15:25:56,441 - INFO - Uploaded image VER02223 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vh8AAeSw...
+2026-03-04 15:25:56,443 - INFO - Uploading to eBay: VER02223 (6).jpg
+2026-03-04 15:25:59,837 - INFO - Uploaded image VER02223 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oHAAAeSw...
+2026-03-04 15:25:59,839 - INFO - Uploading to eBay: VER02223 (7).jpg
+2026-03-04 15:26:02,937 - INFO - Uploaded image VER02223 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u3wAAeSw...
+2026-03-04 15:26:02,939 - INFO - Uploading to eBay: VER02223 (4).jpg
+2026-03-04 15:26:06,240 - INFO - Uploaded image VER02223 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GZoAAeSw...
+2026-03-04 15:26:06,242 - INFO - Uploading to eBay: VER02223 (11).jpg
+2026-03-04 15:26:09,265 - INFO - Uploaded image VER02223 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tCgAAeSw...
+2026-03-04 15:26:09,266 - INFO - Uploading to eBay: VER02223 (1).jpg
+2026-03-04 15:26:12,439 - INFO - Uploaded image VER02223 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~5kAAeSw...
+2026-03-04 15:26:12,442 - INFO - Uploading to eBay: VER02223 (10).jpg
+2026-03-04 15:26:15,239 - INFO - Uploaded image VER02223 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8WMAAeSw...
+2026-03-04 15:26:15,240 - INFO - Uploading to eBay: VER02223 (3).jpg
+2026-03-04 15:26:18,200 - INFO - Uploaded image VER02223 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A50AAeSw...
+2026-03-04 15:26:18,202 - INFO - Upload summary for SKU VER02223 -> uploaded: 10, cached: 0, urls: 10
+2026-03-04 15:26:18,209 - INFO - Saved 10 new eBay URLs to JSON
+2026-03-04 15:26:18,210 - INFO - Upload result for VER02223: {'success': True, 'sku': 'VER02223', 'uploaded_count': 10, 'cached_count': 0, 'total_count': 10, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kS0AAeSwkshpqEDt/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/phgAAeSwSFlpqEDw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vh8AAeSwCzBpqEDz/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oHAAAeSwgvFpqED3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u3wAAeSwk6BpqED6/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GZoAAeSwvdFpqED9/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tCgAAeSwH1RpqEEA/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~5kAAeSwnCdpqEEE/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8WMAAeSwq~1pqEEH/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A50AAeSwpZxpqEEJ/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 10 new images, used 0 cached URLs'}
+2026-03-04 15:26:18,212 - INFO - Using cached manufacturer info for 'Converse'
+2026-03-04 15:26:21,721 - INFO - Successfully created listing for SKU VER02223, ItemID: 137094274110
+2026-03-04 15:26:21,748 - INFO - Creating eBay listing for SKU VER02224 at price 95.0€
+2026-03-04 15:26:21,777 - INFO - Listing condition for SKU VER02224: text='', id=1000, category_id=15709
+2026-03-04 15:26:21,777 - INFO - Uploading images for SKU VER02224 (max: 12)
+2026-03-04 15:26:21,793 - INFO - Image files found on disk for SKU VER02224: 8
+2026-03-04 15:26:21,793 - INFO - Uploading to eBay: VER02224 (7).jpg
+2026-03-04 15:26:25,561 - INFO - Uploaded image VER02224 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/B7kAAeSw...
+2026-03-04 15:26:25,563 - INFO - Uploading to eBay: VER02224 (5).jpg
+2026-03-04 15:26:29,590 - INFO - Uploaded image VER02224 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uRQAAeSw...
+2026-03-04 15:26:29,593 - INFO - Uploading to eBay: VER02224 (6).jpg
+2026-03-04 15:26:33,185 - INFO - Uploaded image VER02224 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oVQAAeSw...
+2026-03-04 15:26:33,187 - INFO - Uploading to eBay: VER02224 (8).jpg
+2026-03-04 15:26:36,529 - INFO - Uploaded image VER02224 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zt4AAeSw...
+2026-03-04 15:26:36,531 - INFO - Uploading to eBay: VER02224 (1).jpg
+2026-03-04 15:26:39,612 - INFO - Uploaded image VER02224 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Cj8AAeSw...
+2026-03-04 15:26:39,614 - INFO - Uploading to eBay: VER02224 (4).jpg
+2026-03-04 15:26:42,837 - INFO - Uploaded image VER02224 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zC0AAeSw...
+2026-03-04 15:26:42,838 - INFO - Uploading to eBay: VER02224 (3).jpg
+2026-03-04 15:26:45,251 - INFO - Uploaded image VER02224 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kb0AAeSw...
+2026-03-04 15:26:45,252 - INFO - Upload summary for SKU VER02224 -> uploaded: 7, cached: 0, urls: 7
+2026-03-04 15:26:45,259 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-04 15:26:45,259 - INFO - Upload result for VER02224: {'success': True, 'sku': 'VER02224', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/B7kAAeSwtiBpqEER/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uRQAAeSwwXdpqEEV/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oVQAAeSwZX9pqEEY/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zt4AAeSwNYFpqEEc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Cj8AAeSw2J9pqEEf/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zC0AAeSwVRppqEEi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kb0AAeSwON5pqEEk/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-04 15:26:45,261 - INFO - Using cached manufacturer info for 'Nike'
+2026-03-04 15:26:49,670 - INFO - Successfully created listing for SKU VER02224, ItemID: 137094274989
+2026-03-04 15:26:49,707 - INFO - Creating eBay listing for SKU VER02225 at price 52.0€
+2026-03-04 15:26:49,745 - INFO - Listing condition for SKU VER02225: text='', id=1000, category_id=3001
+2026-03-04 15:26:49,746 - INFO - Uploading images for SKU VER02225 (max: 12)
+2026-03-04 15:26:49,757 - INFO - Image files found on disk for SKU VER02225: 5
+2026-03-04 15:26:49,758 - INFO - Uploading to eBay: VER02225 (3).jpg
+2026-03-04 15:26:53,249 - INFO - Uploaded image VER02225 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/70cAAeSw...
+2026-03-04 15:26:53,252 - INFO - Uploading to eBay: VER02225 (4).jpg
+2026-03-04 15:26:56,704 - INFO - Uploaded image VER02225 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BqoAAeSw...
+2026-03-04 15:26:56,707 - INFO - Uploading to eBay: VER02225 (1).jpg
+2026-03-04 15:26:59,804 - INFO - Uploaded image VER02225 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kZQAAeSw...
+2026-03-04 15:26:59,806 - INFO - Uploading to eBay: VER02225 (5).jpg
+2026-03-04 15:27:03,340 - INFO - Uploaded image VER02225 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CkUAAeSw...
+2026-03-04 15:27:03,341 - INFO - Upload summary for SKU VER02225 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:27:03,349 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:27:03,349 - INFO - Upload result for VER02225: {'success': True, 'sku': 'VER02225', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/70cAAeSwZqVpqEEs/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BqoAAeSwePBpqEEw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kZQAAeSwmS5pqEEz/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CkUAAeSwJ9NpqEE3/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:27:03,351 - INFO - Looking up manufacturer info for 'Pinarello' using AI...
+2026-03-04 15:27:06,776 - INFO - Manufacturer info extracted and cached for 'Pinarello'
+2026-03-04 15:27:10,131 - INFO - Successfully created listing for SKU VER02225, ItemID: 137094275682
+2026-03-04 15:27:10,167 - INFO - Creating eBay listing for SKU VER02226 at price 35.0€
+2026-03-04 15:27:10,204 - INFO - Listing condition for SKU VER02226: text='', id=1000, category_id=29580
+2026-03-04 15:27:10,204 - INFO - Uploading images for SKU VER02226 (max: 12)
+2026-03-04 15:27:10,219 - INFO - Image files found on disk for SKU VER02226: 5
+2026-03-04 15:27:10,219 - INFO - Uploading to eBay: VER02226 (3).jpg
+2026-03-04 15:27:13,571 - INFO - Uploaded image VER02226 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/x-UAAeSw...
+2026-03-04 15:27:13,574 - INFO - Uploading to eBay: VER02226 (4).jpg
+2026-03-04 15:27:16,684 - INFO - Uploaded image VER02226 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/94AAAeSw...
+2026-03-04 15:27:16,686 - INFO - Uploading to eBay: VER02226 (1).jpg
+2026-03-04 15:27:19,645 - INFO - Uploaded image VER02226 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qs0AAeSw...
+2026-03-04 15:27:19,647 - INFO - Uploading to eBay: VER02226 (5).jpg
+2026-03-04 15:27:21,639 - ERROR - Failed to upload VER02226 (5).jpg: Could not find FullURL in eBay response: <?xml version="1.0" encoding="UTF-8"?><UploadSiteHostedPicturesResponse   xmlns="urn:ebay:apis:eBLBaseComponents">  <Timestamp>2026-03-04T14:27:21.019Z</Timestamp>  <Ack>Failure</Ack>  <Errors>    <ShortMessage>Call usage limit has been reached.</ShortMessage>    <LongMessage>Your application has exceeded usage limit on this call, please make call to Developer Analytics API to check your call usage.</LongMessage>    <ErrorCode>518</ErrorCode>    <SeverityCode>Error</SeverityCode>    <ErrorClassi
+2026-03-04 15:27:21,641 - INFO - Upload summary for SKU VER02226 -> uploaded: 3, cached: 0, urls: 3
+2026-03-04 15:27:21,648 - INFO - Saved 3 new eBay URLs to JSON
+2026-03-04 15:27:21,648 - INFO - Upload result for VER02226: {'success': True, 'sku': 'VER02226', 'uploaded_count': 3, 'cached_count': 0, 'total_count': 3, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/x-UAAeSwy3xpqEFB/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/94AAAeSwR09pqEFE/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qs0AAeSwYOVpqEFH/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 3 new images, used 0 cached URLs'}
+2026-03-04 15:27:21,650 - INFO - Looking up manufacturer info for 'Biotherm' using AI...
+2026-03-04 15:27:23,187 - INFO - Manufacturer info extracted and cached for 'Biotherm'
+2026-03-04 15:27:25,402 - ERROR - Failed to create listing for SKU VER02226: ['Code 21919301: Das Feld EAN fehlt. FÃ¼gen Sie bitte EAN zum Angebot hinzu und versuchen Sie es noch einmal.']
+2026-03-04 15:27:25,404 - INFO - Creating eBay listing for SKU VER02227 at price 35.0€
+2026-03-04 15:27:25,439 - INFO - Listing condition for SKU VER02227: text='', id=1000, category_id=169291
+2026-03-04 15:27:25,440 - INFO - Uploading images for SKU VER02227 (max: 12)
+2026-03-04 15:27:25,454 - INFO - Image files found on disk for SKU VER02227: 8
+2026-03-04 15:27:25,454 - INFO - Uploading to eBay: VER02227 (7).jpg
+2026-03-04 15:27:32,084 - INFO - Uploaded image VER02227 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7YAAeSw...
+2026-03-04 15:27:32,087 - INFO - Uploading to eBay: VER02227 (6).jpg
+2026-03-04 15:27:35,965 - INFO - Uploaded image VER02227 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yxEAAeSw...
+2026-03-04 15:27:35,967 - INFO - Uploading to eBay: VER02227 (5).jpg
+2026-03-04 15:27:39,738 - INFO - Uploaded image VER02227 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KmwAAeSw...
+2026-03-04 15:27:39,741 - INFO - Uploading to eBay: VER02227 (8).jpg
+2026-03-04 15:27:42,886 - INFO - Uploaded image VER02227 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/negAAeSw...
+2026-03-04 15:27:42,889 - INFO - Uploading to eBay: VER02227 (1).jpg
+2026-03-04 15:27:46,379 - INFO - Uploaded image VER02227 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z-cAAeSw...
+2026-03-04 15:27:46,381 - INFO - Uploading to eBay: VER02227 (4).jpg
+2026-03-04 15:27:49,315 - INFO - Uploaded image VER02227 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/H6oAAeSw...
+2026-03-04 15:27:49,317 - INFO - Uploading to eBay: VER02227 (3).jpg
+2026-03-04 15:27:52,127 - INFO - Uploaded image VER02227 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/k5YAAeSw...
+2026-03-04 15:27:52,129 - INFO - Upload summary for SKU VER02227 -> uploaded: 7, cached: 0, urls: 7
+2026-03-04 15:27:52,136 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-04 15:27:52,136 - INFO - Upload result for VER02227: {'success': True, 'sku': 'VER02227', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7YAAeSwfKFpqEFT/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yxEAAeSwDAJpqEFX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KmwAAeSwO2VpqEFb/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/negAAeSwciBpqEFe/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z-cAAeSwO6xpqEFi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/H6oAAeSwMD1pqEFk/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/k5YAAeSwON5pqEFn/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-04 15:27:52,139 - INFO - Using cached manufacturer info for 'Zara'
+2026-03-04 15:27:54,727 - ERROR - Failed to create listing for SKU VER02227: ['Code 21919301: Das Feld EAN fehlt. FÃ¼gen Sie bitte EAN zum Angebot hinzu und versuchen Sie es noch einmal.']
+2026-03-04 15:27:54,729 - INFO - Creating eBay listing for SKU VER02228 at price 30.0€
+2026-03-04 15:27:54,760 - INFO - Listing condition for SKU VER02228: text='', id=1000, category_id=53159
+2026-03-04 15:27:54,760 - INFO - Uploading images for SKU VER02228 (max: 12)
+2026-03-04 15:27:54,772 - INFO - Image files found on disk for SKU VER02228: 7
+2026-03-04 15:27:54,773 - INFO - Uploading to eBay: VER02228 (3).jpg
+2026-03-04 15:27:58,042 - INFO - Uploaded image VER02228 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qI8AAeSw...
+2026-03-04 15:27:58,045 - INFO - Uploading to eBay: VER02228 (4).jpg
+2026-03-04 15:28:01,566 - INFO - Uploaded image VER02228 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AOQAAeSw...
+2026-03-04 15:28:01,568 - INFO - Uploading to eBay: VER02228 (5).jpg
+2026-03-04 15:28:04,494 - INFO - Uploaded image VER02228 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vpQAAeSw...
+2026-03-04 15:28:04,496 - INFO - Uploading to eBay: VER02228 (7).jpg
+2026-03-04 15:28:07,464 - INFO - Uploaded image VER02228 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CnQAAeSw...
+2026-03-04 15:28:07,466 - INFO - Uploading to eBay: VER02228 (1).jpg
+2026-03-04 15:28:10,564 - INFO - Uploaded image VER02228 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/p~kAAeSw...
+2026-03-04 15:28:10,566 - INFO - Uploading to eBay: VER02228 (6).jpg
+2026-03-04 15:28:13,726 - INFO - Uploaded image VER02228 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IgkAAeSw...
+2026-03-04 15:28:13,728 - INFO - Upload summary for SKU VER02228 -> uploaded: 6, cached: 0, urls: 6
+2026-03-04 15:28:13,734 - INFO - Saved 6 new eBay URLs to JSON
+2026-03-04 15:28:13,735 - INFO - Upload result for VER02228: {'success': True, 'sku': 'VER02228', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qI8AAeSwu8RpqEFt/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AOQAAeSwZzRpqEFx/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vpQAAeSwOt5pqEF0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CnQAAeSwC1VpqEF3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/p~kAAeSw4-NpqEF6/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IgkAAeSwXQJpqEF9/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-03-04 15:28:13,736 - INFO - Using cached manufacturer info for 'Nike'
+2026-03-04 15:28:16,955 - INFO - Successfully created listing for SKU VER02228, ItemID: 137094281094
+2026-03-04 15:28:16,984 - INFO - Creating eBay listing for SKU VER02229 at price 42.0€
+2026-03-04 15:28:17,012 - INFO - Listing condition for SKU VER02229: text='', id=1000, category_id=53159
+2026-03-04 15:28:17,012 - INFO - Uploading images for SKU VER02229 (max: 12)
+2026-03-04 15:28:17,023 - INFO - Image files found on disk for SKU VER02229: 5
+2026-03-04 15:28:17,023 - INFO - Uploading to eBay: VER02229 (3).jpg
+2026-03-04 15:28:20,135 - INFO - Uploaded image VER02229 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFwAAeSw...
+2026-03-04 15:28:20,136 - INFO - Uploading to eBay: VER02229 (4).jpg
+2026-03-04 15:28:23,353 - INFO - Uploaded image VER02229 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8AQAAeSw...
+2026-03-04 15:28:23,355 - INFO - Uploading to eBay: VER02229 (1).jpg
+2026-03-04 15:28:26,525 - INFO - Uploaded image VER02229 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wcAAAeSw...
+2026-03-04 15:28:26,526 - INFO - Uploading to eBay: VER02229 (5).jpg
+2026-03-04 15:28:29,268 - INFO - Uploaded image VER02229 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/om8AAeSw...
+2026-03-04 15:28:29,270 - INFO - Upload summary for SKU VER02229 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:28:29,276 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:28:29,277 - INFO - Upload result for VER02229: {'success': True, 'sku': 'VER02229', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DFwAAeSwJ9NpqEGD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8AQAAeSwAHNpqEGH/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wcAAAeSw1olpqEGJ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/om8AAeSwq7RpqEGM/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:28:29,278 - INFO - Looking up manufacturer info for 'Jack Wolfskin' using AI...
+2026-03-04 15:28:33,152 - INFO - Manufacturer info extracted and cached for 'Jack Wolfskin'
+2026-03-04 15:28:36,126 - INFO - Successfully created listing for SKU VER02229, ItemID: 137094283367
+2026-03-04 15:28:36,162 - INFO - Creating eBay listing for SKU VER02230 at price 60.0€
+2026-03-04 15:28:36,196 - INFO - Listing condition for SKU VER02230: text='', id=1500, category_id=177659
+2026-03-04 15:28:36,196 - INFO - Uploading images for SKU VER02230 (max: 12)
+2026-03-04 15:28:36,206 - INFO - Image files found on disk for SKU VER02230: 5
+2026-03-04 15:28:36,206 - INFO - Uploading to eBay: VER02230 (1).jpg
+2026-03-04 15:28:39,446 - INFO - Uploaded image VER02230 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/76oAAeSw...
+2026-03-04 15:28:39,447 - INFO - Uploading to eBay: VER02230 (2).jpg
+2026-03-04 15:28:42,768 - INFO - Uploaded image VER02230 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5MAAeSw...
+2026-03-04 15:28:42,770 - INFO - Uploading to eBay: VER02230 (3).jpg
+2026-03-04 15:28:46,147 - INFO - Uploaded image VER02230 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pmgAAeSw...
+2026-03-04 15:28:46,149 - INFO - Uploading to eBay: VER02230 (4).JPG
+2026-03-04 15:28:49,826 - INFO - Uploaded image VER02230 (4).JPG to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zRwAAeSw...
+2026-03-04 15:28:49,827 - INFO - Upload summary for SKU VER02230 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:28:49,836 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:28:49,836 - INFO - Upload result for VER02230: {'success': True, 'sku': 'VER02230', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/76oAAeSwBxdpqEGX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5MAAeSwqd9pqEGa/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pmgAAeSwJMhpqEGd/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zRwAAeSwDAJpqEGh/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:28:49,837 - INFO - Looking up manufacturer info for 'Remington' using AI...
+2026-03-04 15:28:52,625 - INFO - Manufacturer info extracted and cached for 'Remington'
+2026-03-04 15:28:54,987 - ERROR - Failed to create listing for SKU VER02230: ['Code 21919301: Das Feld EAN fehlt. FÃ¼gen Sie bitte EAN zum Angebot hinzu und versuchen Sie es noch einmal.']
+2026-03-04 15:28:54,989 - INFO - Creating eBay listing for SKU VER02231 at price 375.0€
+2026-03-04 15:28:55,018 - INFO - Listing condition for SKU VER02231: text='', id=1500, category_id=177662
+2026-03-04 15:28:55,018 - INFO - Uploading images for SKU VER02231 (max: 12)
+2026-03-04 15:28:55,040 - INFO - Image files found on disk for SKU VER02231: 13
+2026-03-04 15:28:55,041 - INFO - Uploading to eBay: VER02231 (5).JPG
+2026-03-04 15:28:59,816 - INFO - Uploaded image VER02231 (5).JPG to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zWwAAeSw...
+2026-03-04 15:28:59,818 - INFO - Uploading to eBay: VER02231 (6).jpg
+2026-03-04 15:29:03,493 - INFO - Uploaded image VER02231 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qiYAAeSw...
+2026-03-04 15:29:03,495 - INFO - Uploading to eBay: VER02231 (1).jpg
+2026-03-04 15:29:06,418 - INFO - Uploaded image VER02231 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uSoAAeSw...
+2026-03-04 15:29:06,419 - INFO - Uploading to eBay: VER02231 (3).JPG
+2026-03-04 15:29:09,460 - INFO - Uploaded image VER02231 (3).JPG to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/NusAAeSw...
+2026-03-04 15:29:09,462 - INFO - Uploading to eBay: VER02231 (7).jpg
+2026-03-04 15:29:11,995 - INFO - Uploaded image VER02231 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JfgAAeSw...
+2026-03-04 15:29:11,997 - INFO - Uploading to eBay: VER02231 (10).jpg
+2026-03-04 15:29:15,426 - INFO - Uploaded image VER02231 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0joAAeSw...
+2026-03-04 15:29:15,427 - INFO - Uploading to eBay: VER02231 (11).jpg
+2026-03-04 15:29:17,968 - INFO - Uploaded image VER02231 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qBwAAeSw...
+2026-03-04 15:29:17,969 - INFO - Uploading to eBay: VER02231 (12).jpg
+2026-03-04 15:29:20,874 - INFO - Uploaded image VER02231 (12).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Hf4AAeSw...
+2026-03-04 15:29:20,877 - INFO - Uploading to eBay: VER02231 (13).jpg
+2026-03-04 15:29:23,975 - INFO - Uploaded image VER02231 (13).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vCUAAeSw...
+2026-03-04 15:29:23,977 - INFO - Uploading to eBay: VER02231 (9).jpg
+2026-03-04 15:29:27,414 - INFO - Uploaded image VER02231 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-8IAAeSw...
+2026-03-04 15:29:27,416 - INFO - Uploading to eBay: VER02231 (8).jpg
+2026-03-04 15:29:30,931 - INFO - Uploaded image VER02231 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0bIAAeSw...
+2026-03-04 15:29:30,933 - INFO - Upload summary for SKU VER02231 -> uploaded: 11, cached: 0, urls: 11
+2026-03-04 15:29:30,943 - INFO - Saved 11 new eBay URLs to JSON
+2026-03-04 15:29:30,944 - INFO - Upload result for VER02231: {'success': True, 'sku': 'VER02231', 'uploaded_count': 11, 'cached_count': 0, 'total_count': 11, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zWwAAeSwdRtpqEGr/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qiYAAeSwxONpqEGv/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uSoAAeSwAZNpqEGy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/NusAAeSwRbRpqEG1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JfgAAeSwR51pqEG3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0joAAeSwO6xpqEG7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qBwAAeSw9KNpqEG9/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Hf4AAeSwVbxpqEHA/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vCUAAeSwprxpqEHD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-8IAAeSwbiZpqEHH/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0bIAAeSwIZNpqEHK/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 11 new images, used 0 cached URLs'}
+2026-03-04 15:29:30,945 - INFO - Looking up manufacturer info for 'Dyson' using AI...
+2026-03-04 15:29:33,420 - INFO - Manufacturer info extracted and cached for 'Dyson'
+2026-03-04 15:29:35,704 - ERROR - Failed to create listing for SKU VER02231: ['Code 21919301: Das Feld EAN fehlt. FÃ¼gen Sie bitte EAN zum Angebot hinzu und versuchen Sie es noch einmal.']
+2026-03-04 15:29:35,706 - INFO - Creating eBay listing for SKU VER02232 at price 45.0€
+2026-03-04 15:29:35,742 - INFO - Listing condition for SKU VER02232: text='', id=1000, category_id=53159
+2026-03-04 15:29:35,742 - INFO - Uploading images for SKU VER02232 (max: 12)
+2026-03-04 15:29:35,758 - INFO - Image files found on disk for SKU VER02232: 6
+2026-03-04 15:29:35,758 - INFO - Uploading to eBay: VER02232 (3).jpg
+2026-03-04 15:29:39,022 - INFO - Uploaded image VER02232 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v1gAAeSw...
+2026-03-04 15:29:39,024 - INFO - Uploading to eBay: VER02232 (4).jpg
+2026-03-04 15:29:42,525 - INFO - Uploaded image VER02232 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y~UAAeSw...
+2026-03-04 15:29:42,526 - INFO - Uploading to eBay: VER02232 (1).jpg
+2026-03-04 15:29:45,728 - INFO - Uploaded image VER02232 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EhUAAeSw...
+2026-03-04 15:29:45,729 - INFO - Uploading to eBay: VER02232 (5).jpg
+2026-03-04 15:29:48,779 - INFO - Uploaded image VER02232 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rccAAeSw...
+2026-03-04 15:29:48,780 - INFO - Uploading to eBay: VER02232 (6).jpg
+2026-03-04 15:29:51,157 - INFO - Uploaded image VER02232 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wp0AAeSw...
+2026-03-04 15:29:51,159 - INFO - Upload summary for SKU VER02232 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:29:51,167 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:29:51,167 - INFO - Upload result for VER02232: {'success': True, 'sku': 'VER02232', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v1gAAeSw5jFpqEHS/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/y~UAAeSwy3xpqEHW/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EhUAAeSwyAtpqEHZ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rccAAeSw5nxpqEHc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wp0AAeSw4h1pqEHe/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:29:51,169 - INFO - Looking up manufacturer info for 'MSch Copenhagen' using AI...
+2026-03-04 15:29:53,144 - INFO - Manufacturer info extracted and cached for 'MSch Copenhagen'
+2026-03-04 15:29:56,391 - INFO - Successfully created listing for SKU VER02232, ItemID: 137094292361
+2026-03-04 15:29:56,422 - INFO - Creating eBay listing for SKU VER02203 at price 29.99€
+2026-03-04 15:29:56,453 - INFO - Listing condition for SKU VER02203: text='', id=1000, category_id=55793
+2026-03-04 15:29:56,453 - INFO - Uploading images for SKU VER02203 (max: 12)
+2026-03-04 15:29:56,468 - INFO - Image files found on disk for SKU VER02203: 8
+2026-03-04 15:29:56,468 - INFO - Uploading to eBay: VER02203 (6).jpg
+2026-03-04 15:29:59,480 - ERROR - Failed to upload VER02203 (6).jpg: 503 Server Error: backend write error for url: https://api.ebay.com/ws/api.dll
+2026-03-04 15:29:59,482 - INFO - Uploading to eBay: VER02203 (7).jpg
+2026-03-04 15:30:03,775 - INFO - Uploaded image VER02203 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qr4AAeSw...
+2026-03-04 15:30:03,777 - INFO - Uploading to eBay: VER02203 (8).jpg
+2026-03-04 15:30:07,331 - INFO - Uploaded image VER02203 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qm8AAeSw...
+2026-03-04 15:30:07,332 - INFO - Uploading to eBay: VER02203 (4).jpg
+2026-03-04 15:30:10,250 - INFO - Uploaded image VER02203 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LiMAAeSw...
+2026-03-04 15:30:10,252 - INFO - Uploading to eBay: VER02203 (1).jpg
+2026-03-04 15:30:13,412 - INFO - Uploaded image VER02203 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9nkAAeSw...
+2026-03-04 15:30:13,414 - INFO - Uploading to eBay: VER02203 (3).jpg
+2026-03-04 15:30:16,431 - INFO - Uploaded image VER02203 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I6YAAeSw...
+2026-03-04 15:30:16,432 - INFO - Upload summary for SKU VER02203 -> uploaded: 5, cached: 0, urls: 5
+2026-03-04 15:30:16,440 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-04 15:30:16,442 - INFO - Upload result for VER02203: {'success': True, 'sku': 'VER02203', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qr4AAeSwH4RpqEHr/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qm8AAeSwKDdpqEHu/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LiMAAeSw7cppqEHy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9nkAAeSw9s1pqEH0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I6YAAeSwMD1pqEH4/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-04 15:30:16,443 - INFO - Using cached manufacturer info for 'About You'
+2026-03-04 15:30:19,844 - INFO - Successfully created listing for SKU VER02203, ItemID: 137094294415
+2026-03-04 15:30:19,872 - INFO - Creating eBay listing for SKU VER02202 at price 20.0€
+2026-03-04 15:30:19,903 - INFO - Listing condition for SKU VER02202: text='', id=1000, category_id=62107
+2026-03-04 15:30:19,904 - INFO - Uploading images for SKU VER02202 (max: 12)
+2026-03-04 15:30:19,913 - INFO - Image files found on disk for SKU VER02202: 5
+2026-03-04 15:30:19,914 - INFO - Uploading to eBay: VER02202 (5).jpg
+2026-03-04 15:30:23,330 - INFO - Uploaded image VER02202 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CYkAAeSw...
+2026-03-04 15:30:23,332 - INFO - Uploading to eBay: VER02202 (4).jpg
+2026-03-04 15:30:27,132 - INFO - Uploaded image VER02202 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pBUAAeSw...
+2026-03-04 15:30:27,133 - INFO - Uploading to eBay: VER02202 (3).jpg
+2026-03-04 15:30:30,692 - INFO - Uploaded image VER02202 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IMcAAeSw...
+2026-03-04 15:30:30,694 - INFO - Uploading to eBay: VER02202 (1).jpg
+2026-03-04 15:30:33,260 - INFO - Uploaded image VER02202 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/C08AAeSw...
+2026-03-04 15:30:33,262 - INFO - Upload summary for SKU VER02202 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:30:33,269 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:30:33,269 - INFO - Upload result for VER02202: {'success': True, 'sku': 'VER02202', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/CYkAAeSw8VZpqEH-/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pBUAAeSwL4ppqEIC/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/IMcAAeSwvdFpqEIG/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/C08AAeSwMotpqEII/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:30:37,738 - INFO - Successfully created listing for SKU VER02202, ItemID: 137094295933
+2026-03-04 15:30:37,773 - INFO - Creating eBay listing for SKU VER02201 at price 25.0€
+2026-03-04 15:30:37,803 - INFO - Listing condition for SKU VER02201: text='', id=1000, category_id=20681
+2026-03-04 15:30:37,803 - INFO - Uploading images for SKU VER02201 (max: 12)
+2026-03-04 15:30:37,817 - INFO - Image files found on disk for SKU VER02201: 6
+2026-03-04 15:30:37,817 - INFO - Uploading to eBay: VER02201 (2).jpg
+2026-03-04 15:30:41,423 - INFO - Uploaded image VER02201 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/84kAAeSw...
+2026-03-04 15:30:41,425 - INFO - Uploading to eBay: VER02201 (1).JPG
+2026-03-04 15:30:47,875 - INFO - Uploaded image VER02201 (1).JPG to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/D4YAAeSw...
+2026-03-04 15:30:47,877 - INFO - Uploading to eBay: VER02201 (3).jpg
+2026-03-04 15:30:50,522 - INFO - Uploaded image VER02201 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mQIAAeSw...
+2026-03-04 15:30:50,523 - INFO - Uploading to eBay: VER02201 (4).jpg
+2026-03-04 15:30:54,141 - INFO - Uploaded image VER02201 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7sAAeSw...
+2026-03-04 15:30:54,142 - INFO - Upload summary for SKU VER02201 -> uploaded: 4, cached: 0, urls: 4
+2026-03-04 15:30:54,148 - INFO - Saved 4 new eBay URLs to JSON
+2026-03-04 15:30:54,150 - INFO - Upload result for VER02201: {'success': True, 'sku': 'VER02201', 'uploaded_count': 4, 'cached_count': 0, 'total_count': 4, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/84kAAeSwOn9pqEIR/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/D4YAAeSw0y9pqEIX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mQIAAeSwON5pqEIa/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/o7sAAeSwdUVpqEId/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 4 new images, used 0 cached URLs'}
+2026-03-04 15:30:54,151 - INFO - Looking up manufacturer info for 'Kitchen Ideas' using AI...
+2026-03-04 15:30:55,001 - WARNING - AI returned error for 'Kitchen Ideas': No verified manufacturer data found
+2026-03-04 15:30:57,574 - ERROR - Failed to create listing for SKU VER02201: ['Code 21919303: Das Artikelmerkmal ModellÂ\xa0fehlt.Â\xa0FÃ¼gen Sie Modell zu diesem Angebot hinzu, geben Sie einen gÃ¼ltigen Wert ein und versuchen Sie es dann noch einmal.']

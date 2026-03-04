@@ -17,13 +17,14 @@
       "Total Cost Net": 118.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Haarglättungsprodukte",
+      "eBay Category ID": "177662"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "5025155073551"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -33,17 +34,17 @@
     },
     "Intern Generated Info": {
       "More details": "Der Dyson Corrale ist ein Haarglätter mit flexiblen Platten, die das Haar formen. Er bietet verbessertes Styling und weniger Abhängigkeit von Hitze. Der Glätter kann kabelgebunden oder kabellos verwendet werden.",
-      "Keywords": "Dyson Corrale Haarglätter",
+      "Keywords": "Corrale Haarglätter",
       "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "430"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -122,7 +123,92 @@
         {
           "filename": "VER02231 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02231 (5).JPG",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zWwAAeSwdRtpqEGr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qiYAAeSwxONpqEGv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/uSoAAeSwAZNpqEGy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (3).JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/NusAAeSwRbRpqEG1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JfgAAeSwR51pqEG3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (10).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0joAAeSwO6xpqEG7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qBwAAeSw9KNpqEG9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (12).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Hf4AAeSwVbxpqEHA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (13).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vCUAAeSwprxpqEHD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-8IAAeSwbiZpqEHH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02231 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0bIAAeSwIZNpqEHK/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Dyson",
+        "Produktart": "Haarglättungen Kit"
+      },
+      "optional": {
+        "Geeignet für": "Haar",
+        "Abteilung": "Damen",
+        "Ursprungsland": "Vereinigtes Königreich"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haarglätter",
+      "Product Model": "corrale",
+      "Keyword 1": "Haarglätter kabellos",
+      "Keyword 2": "Haarglätter mit flexiblen Platten",
+      "Keyword 3": "Haarglätter für glattes Haar"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "375",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "5025155073551",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }

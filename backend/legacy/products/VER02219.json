@@ -17,33 +17,34 @@
       "Total Cost Net": 25.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "F",
+      "Gender": "U",
       "Brand": "asics",
       "Color": "Weiß Blau",
       "Size": "38"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus einem atmungsaktiven Mesh-Material gefertigt. Sie verfügen über eine gepolsterte Sohle für zusätzlichen Komfort. Die Kombination aus Weiß und Blau verleiht ihnen ein modernes Aussehen.",
-      "Keywords": "asics Sneakers Damen",
+      "Keywords": "Sneakers Damen",
       "Materials": "Mesh, Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "150"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -98,7 +99,78 @@
         {
           "filename": "VER02219 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02219 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JVkAAeSww8FpqEBq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02219 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6K0AAeSwdDdpqEBv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02219 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yN0AAeSw0e5pqEBz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02219 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7XAAAeSwd6FpqEB4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02219 (9).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02219 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pSQAAeSwRr1pqEB9/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "asics",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß Blau"
+      },
+      "optional": {
+        "UK-Schuhgröße": "5,5",
+        "US-Schuhgröße": "7",
+        "Herstellernummer": "1203A95",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Baumwolle",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Frühling",
+        "Aktivität": "Laufen & Joggen",
+        "Ursprungsland": "Vietnam"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sportschuh",
+      "Product Model": "1203A953",
+      "Keyword 1": "Laufschuh",
+      "Keyword 2": "Sneaker",
+      "Keyword 3": "Trainingsschuh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "115",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

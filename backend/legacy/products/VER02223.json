@@ -17,13 +17,14 @@
       "Total Cost Net": 15.6
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "194433522533"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -33,17 +34,17 @@
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus robustem Canvas-Material gefertigt und haben eine klassische Schnürung. Sie verfügen über eine weiße Gummisohle und eine verstärkte Zehenkappe. Das Design ist schlicht und zeitlos, ideal für den Alltag.",
-      "Keywords": "Converse All Star Sneakers Unisex",
+      "Keywords": "Sneakers Unisex",
       "Materials": "Canvas, Gummi"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -104,7 +105,103 @@
         {
           "filename": "VER02223 (8).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02223 (8).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kS0AAeSwkshpqEDt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (9).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/phgAAeSwSFlpqEDw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vh8AAeSwCzBpqEDz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oHAAAeSwgvFpqED3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/u3wAAeSwk6BpqED6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GZoAAeSwvdFpqED9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tCgAAeSwH1RpqEEA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~5kAAeSwnCdpqEEE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8WMAAeSwq~1pqEEH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02223 (3).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A50AAeSwpZxpqEEJ/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Converse",
+        "EU-Schuhgröße": "38.5",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "A01607C",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "All Star",
+        "Modell": "Star Player 76 OX",
+        "UK-Schuhgröße": "5.5",
+        "US-Schuhgröße": "6",
+        "Obermaterial": "Canvas",
+        "Produktart": "Sportschuh",
+        "Futtermaterial": "Baumwolle",
+        "Laufsohlenmaterial": "Gummi",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Ganzjährig",
+        "Akzente": "Logo",
+        "Anlass": "Freizeit",
+        "Aktivität": "Laufen & Joggen",
+        "Ursprungsland": "Vietnam"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "A01607C",
+      "Keyword 1": "Freizeitschuhe",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Laufschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "54",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "194433522533",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

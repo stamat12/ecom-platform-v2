@@ -17,19 +17,20 @@
       "Total Cost Net": 2.27
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Make-up/Make-up-Utensilien/Pinsel",
+      "eBay Category ID": "82597"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
       "Brand": "DUAIU",
-      "Color": "Weiß mit Marmorierung",
-      "Size": "None"
+      "Color": "Weiß",
+      "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Das Set besteht aus mehreren Make-up-Pinseln mit einem eleganten Design. Die Griffe sind in einem marmorierten Weiß mit roségoldenen Akzenten gehalten. Die Pinsel sind für verschiedene Anwendungen geeignet, darunter Foundation, Lidschatten und Augenbrauen.",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff, synthetische Borsten"
     },
     "OP": {
-      "OP": null
+      "OP": "20"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -80,7 +81,55 @@
         {
           "filename": "VER02216 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02216 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oSYAAeSwSFlpqEAr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02216 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/m5UAAeSwgvFpqEAv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02216 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nX0AAeSw99NpqEA0/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Make-up Pinsel Set",
+        "Marke": "DUAIU"
+      },
+      "optional": {
+        "Farbe": "Weiß",
+        "Material": "Kunstfaser",
+        "Form": "Rund",
+        "Besonderheiten": "Tierversuchsfrei",
+        "Größe": "Standard",
+        "Hauttyp": "Alle Hauttypen"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Makeuppinsel",
+      "Product Model": "",
+      "Keyword 1": "Schminkpinsel",
+      "Keyword 2": "Pinselset",
+      "Keyword 3": "Kosmetikpinsel"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:13"
     }
   }
 }

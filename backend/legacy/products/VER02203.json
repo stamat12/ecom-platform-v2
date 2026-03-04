@@ -17,18 +17,19 @@
       "Total Cost Net": 8.93
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": null
+      "EAN": "4063571281441"
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "F",
-      "Brand": "ABOUT YOU",
-      "Color": "Nude",
+      "Brand": "About You",
+      "Color": "Beige",
       "Size": "40"
     },
     "Intern Generated Info": {
@@ -37,13 +38,13 @@
       "Materials": "Synthetik"
     },
     "OP": {
-      "OP": null
+      "OP": "30"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -95,7 +96,70 @@
         {
           "filename": "VER02203 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02203 (6).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "VER02203 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qr4AAeSwH4RpqEHr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02203 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qm8AAeSwKDdpqEHu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02203 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LiMAAeSw7cppqEHy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02203 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9nkAAeSw9s1pqEH0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02203 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I6YAAeSwMD1pqEH4/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "About You",
+        "EU-Schuhgröße": "40",
+        "Stil": "Pumps",
+        "Farbe": "Beige",
+        "Abteilung": "Damen",
+        "Obermaterial": "Synthetik"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "AYO2565001",
+      "Keyword 1": "Damen Sandalen",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Schuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "29.99",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "4063571281441",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-13T15:14"
     }
   }
 }
