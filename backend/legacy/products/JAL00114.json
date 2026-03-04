@@ -1,0 +1,148 @@
+{
+  "JAL00114": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE860932795",
+      "ISIN": "b09qgn8z7r",
+      "Supplier Title": "VANVENE Men's Cargo Work Pants, Lightweight Cotton Casual Joggers, Elastic Waist Drawstring Outdoor Trousers with Pockets, Khaki, 31-35"
+    },
+    "Price Data": {
+      "Price Net": 1.7,
+      "Shipping Net": 0.36,
+      "Total Cost Net": 2.06
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Hosen",
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Vanvene",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "34.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 15,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00114 (1).jpg"
+        },
+        {
+          "filename": "JAL00114 (10).jpg"
+        },
+        {
+          "filename": "JAL00114 (11).jpg"
+        },
+        {
+          "filename": "JAL00114 (12).jpg"
+        },
+        {
+          "filename": "JAL00114 (13).jpg"
+        },
+        {
+          "filename": "JAL00114 (14).jpg"
+        },
+        {
+          "filename": "JAL00114 (15).jpg"
+        },
+        {
+          "filename": "JAL00114 (2).jpg"
+        },
+        {
+          "filename": "JAL00114 (3).jpg"
+        },
+        {
+          "filename": "JAL00114 (4).jpg"
+        },
+        {
+          "filename": "JAL00114 (5).jpg"
+        },
+        {
+          "filename": "JAL00114 (6).jpg"
+        },
+        {
+          "filename": "JAL00114 (7).jpg"
+        },
+        {
+          "filename": "JAL00114 (8).jpg"
+        },
+        {
+          "filename": "JAL00114 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00114 (9).jpg"
+        }
+      ]
+    }
+  }
+}

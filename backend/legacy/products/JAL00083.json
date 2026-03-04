@@ -1,0 +1,124 @@
+{
+  "JAL00083": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNRP052485951",
+      "ISIN": "b0f87vhnvk",
+      "Supplier Title": "KVM Switch 2 PCs 1 Monitor 8K@60Hz/4K@240Hz DP1.4 KVM Switches, 2 in 1 out Displayport KVM with power supply and USB3.0 cable included"
+    },
+    "Price Data": {
+      "Price Net": 4.8,
+      "Shipping Net": 0.31,
+      "Total Cost Net": 5.11
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Kabel & Steckverbinder/KVM-Switches",
+      "eBay Category ID": "182096"
+    },
+    "EAN": {
+      "EAN": 679070076132.0
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Aoocoo",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der KVM-Switch ermöglicht den Anschluss von zwei Computern an einen Monitor und USB-Geräte. Er unterstützt eine Auflösung von bis zu 8K bei 60Hz. Die Steuerung erfolgt entweder über einen physischen Knopf oder eine kabelgebundene Fernbedienung.",
+      "Keywords": "KVM Switch USB3.0 2x1",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "60.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00083 (1).jpg"
+        },
+        {
+          "filename": "JAL00083 (2).jpg"
+        },
+        {
+          "filename": "JAL00083 (3).jpg"
+        },
+        {
+          "filename": "JAL00083 (4).jpg"
+        },
+        {
+          "filename": "JAL00083 (5).jpg"
+        },
+        {
+          "filename": "JAL00083 (6).jpg"
+        },
+        {
+          "filename": "JAL00083 (7).jpg"
+        },
+        {
+          "filename": "JAL00083 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00083 (3).jpg"
+        }
+      ]
+    }
+  }
+}

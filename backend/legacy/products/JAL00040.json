@@ -1,5 +1,5 @@
 {
-  "JAL00042": {
+  "JAL00040": {
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "JLI Trading Limited",
@@ -7,44 +7,44 @@
       "Invoice Date": "27.10.2025"
     },
     "Supplier Data": {
-      "Supplier Number": "spLc57Om6JL",
-      "ISIN": "b0d6vrv6rp",
-      "Supplier Title": "Sosenfer Slip-on Men's Shoes Sports Shoes Running Shoes Outdoor Casual Shoes Mesh Sneakers Lightweight Breathable Non-Slip Gym Jogging Shoes-HEISE-SHENHUIDI-43"
+      "Supplier Number": "LPNHK425666528",
+      "ISIN": "b0d9d1q5p2",
+      "Supplier Title": "Zhabtuc platform pumps 12.5 cm pointed closed toe stiletto slingback high heel for women evening shoes for confident feminine steps, silver, 40 EU"
     },
     "Price Data": {
-      "Price Net": 2.48,
-      "Shipping Net": 0.72,
-      "Total Cost Net": 3.19
+      "Price Net": 2.22,
+      "Shipping Net": 1.07,
+      "Total Cost Net": 3.29
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
-      "eBay Category ID": "15709"
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": ""
+      "EAN": null
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "U",
-      "Brand": "Sosenfer",
-      "Color": "Schwarz",
-      "Size": "43"
+      "Gender": "F",
+      "Brand": "Zhabtuc",
+      "Color": "Silber",
+      "Size": "40"
     },
     "Intern Generated Info": {
-      "More details": "Slip-on Herrenschuhe mit atmungsaktivem Mesh-Obermaterial und rutschfester Sohle.",
-      "Keywords": "Sportschuhe Leicht Atmungsaktiv",
-      "Materials": "Obermaterial: Mesh, Laufsohle: Gummi"
+      "More details": "Diese eleganten Slingback-Pumps sind aus glänzendem, silbernem Material gefertigt. Sie verfügen über einen hohen Absatz von 5 Zoll und eine Plattformhöhe von 0,98 Zoll. Ideal für besondere Anlässe oder Abendveranstaltungen.",
+      "Keywords": "Slingback Pumps Damen Silber",
+      "Materials": "Kunstleder"
     },
     "OP": {
-      "OP": "41.0"
+      "OP": "56.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": ""
     },
     "Warehouse": {
-      "Lager": "MENZELSTRAßE 10/2/4"
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",
@@ -53,7 +53,7 @@
         "has_phone": true,
         "has_enhanced": false,
         "count_stock": 5,
-        "count_phone": 8,
+        "count_phone": 7,
         "count_enhanced": 0,
         "has_main_images": true,
         "count_main_images": 6
@@ -77,28 +77,25 @@
       ],
       "phone": [
         {
-          "filename": "JAL00042 (1).jpg"
+          "filename": "JAL00040 (1).jpg"
         },
         {
-          "filename": "JAL00042 (2).jpg"
+          "filename": "JAL00040 (2).jpg"
         },
         {
-          "filename": "JAL00042 (3).jpg"
+          "filename": "JAL00040 (3).jpg"
         },
         {
-          "filename": "JAL00042 (4).jpg"
+          "filename": "JAL00040 (4).jpg"
         },
         {
-          "filename": "JAL00042 (5).jpg"
+          "filename": "JAL00040 (5).jpg"
         },
         {
-          "filename": "JAL00042 (6).jpg"
+          "filename": "JAL00040 (6).jpg"
         },
         {
-          "filename": "JAL00042 (7).jpg"
-        },
-        {
-          "filename": "JAL00042 (8).jpg"
+          "filename": "JAL00040 (7).jpg"
         }
       ],
       "enhanced": [],
@@ -119,19 +116,9 @@
           "filename": "5.png"
         },
         {
-          "filename": "JAL00042 (1).jpg"
+          "filename": "JAL00040 (2).jpg"
         }
       ]
-    },
-    "Ebay Listing": {
-      "Selling Price Total": "",
-      "Shipping Costs Net": "",
-      "Quantity": "",
-      "Condition ID": "",
-      "Condition Note": "",
-      "EAN": "",
-      "Modified SKU": "",
-      "Schedule Date": ""
     }
   }
 }

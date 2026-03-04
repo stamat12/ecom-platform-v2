@@ -1,5 +1,5 @@
 {
-  "JAL00070": {
+  "JAL00099": {
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "JLI Trading Limited",
@@ -7,41 +7,41 @@
       "Invoice Date": "29.10.2025"
     },
     "Supplier Data": {
-      "Supplier Number": "spL1ii194ol",
-      "ISIN": "b0d924jkpv",
-      "Supplier Title": "RUNBO 4-in-1 pH Meter Water – pH/TDS/EC/Temperature Meter for Aquarium, Pool, Drinking Water"
+      "Supplier Number": "LPNWE317998328",
+      "ISIN": "b0c286vky3",
+      "Supplier Title": "Diivoo WiFi Irrigation Programmer 2 Outlets, Automatic Irrigation Timer for Garden Irrigation Compatible with Alexa & Smart Life App, Suitable for Outdoor Irrigation"
     },
     "Price Data": {
-      "Price Net": 0.97,
-      "Shipping Net": 0.21,
-      "Total Cost Net": 1.17
+      "Price Net": 5.6,
+      "Shipping Net": 0.66,
+      "Total Cost Net": 6.26
     },
     "Ebay Category": {
-      "Category": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Feuchtemessgeräte & pH-Meter",
-      "eBay Category ID": "75670"
+      "Category": "/Garten & Terrasse/Bewässern/Bewässerungscomputer & Wasserzeitschaltuhren",
+      "eBay Category ID": "75672"
     },
     "EAN": {
-      "EAN": ""
+      "EAN": null
     },
     "Product Condition": {
-      "Condition": "Neu mit Karton"
+      "Condition": "Gebraucht"
     },
     "Intern Product Info": {
       "Gender": "",
-      "Brand": "Runbo",
-      "Color": "Blau Weiß",
+      "Brand": "Diivoo",
+      "Color": "",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Das Produkt ist ein Wasserqualitätsprüfgerät, das sowohl den pH-Wert als auch den TDS-Wert misst. Es verfügt über ein hintergrundbeleuchtetes Display für einfache Ablesbarkeit. Die Geräte sind tragbar und einfach zu bedienen, ideal für den Einsatz zu Hause oder unterwegs.",
-      "Keywords": "Wasserqualitätsprüfgerät pH TDS",
-      "Materials": "Kunststoff"
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
     },
     "OP": {
-      "OP": "25.0"
+      "OP": "70.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": ""
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -53,7 +53,7 @@
         "has_phone": true,
         "has_enhanced": false,
         "count_stock": 5,
-        "count_phone": 4,
+        "count_phone": 14,
         "count_enhanced": 0,
         "has_main_images": true,
         "count_main_images": 5
@@ -77,16 +77,46 @@
       ],
       "phone": [
         {
-          "filename": "JAL00070 (1).jpg"
+          "filename": "JAL00099 (1).jpg"
         },
         {
-          "filename": "JAL00070 (2).jpg"
+          "filename": "JAL00099 (10).jpg"
         },
         {
-          "filename": "JAL00070 (3).jpg"
+          "filename": "JAL00099 (11).jpg"
         },
         {
-          "filename": "JAL00070 (4).jpg"
+          "filename": "JAL00099 (12).jpg"
+        },
+        {
+          "filename": "JAL00099 (13).jpg"
+        },
+        {
+          "filename": "JAL00099 (14).jpg"
+        },
+        {
+          "filename": "JAL00099 (2).jpg"
+        },
+        {
+          "filename": "JAL00099 (3).jpg"
+        },
+        {
+          "filename": "JAL00099 (4).jpg"
+        },
+        {
+          "filename": "JAL00099 (5).jpg"
+        },
+        {
+          "filename": "JAL00099 (6).jpg"
+        },
+        {
+          "filename": "JAL00099 (7).jpg"
+        },
+        {
+          "filename": "JAL00099 (8).jpg"
+        },
+        {
+          "filename": "JAL00099 (9).jpg"
         }
       ],
       "enhanced": [],
@@ -107,16 +137,6 @@
           "filename": "5.png"
         }
       ]
-    },
-    "Ebay Listing": {
-      "Selling Price Total": "",
-      "Shipping Costs Net": "",
-      "Quantity": "",
-      "Condition ID": "",
-      "Condition Note": "",
-      "EAN": "",
-      "Modified SKU": "",
-      "Schedule Date": ""
     }
   }
 }

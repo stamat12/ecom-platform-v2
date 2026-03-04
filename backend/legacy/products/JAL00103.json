@@ -1,0 +1,115 @@
+{
+  "JAL00103": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNRP045132399",
+      "ISIN": "b09j2lnghy",
+      "Supplier Title": "Bseash 50L Lightweight Waterproof Hiking Backpack, Outdoor Sports Daypack Multifunctional Travel Bag for Climbing Camping Travel (Army Green - with Shoe Compartment)"
+    },
+    "Price Data": {
+      "Price Net": 7.0,
+      "Shipping Net": 0.75,
+      "Total Cost Net": 7.75
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Rucksäcke/Trekkingrucksäcke",
+      "eBay Category ID": "181379"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Bseash",
+      "Color": "Armeegrün",
+      "Size": "50 L"
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "Adventure 50L Wanderrucksack",
+      "Materials": "Nylon"
+    },
+    "OP": {
+      "OP": "38.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "IMG_9404.jpg"
+        },
+        {
+          "filename": "IMG_9405.jpg"
+        },
+        {
+          "filename": "IMG_9406.jpg"
+        },
+        {
+          "filename": "IMG_9407.jpg"
+        },
+        {
+          "filename": "IMG_9408.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "IMG_9404.jpg"
+        }
+      ]
+    }
+  }
+}

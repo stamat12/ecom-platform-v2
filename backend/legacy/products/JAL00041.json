@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
       },
       "stock": [
         {
@@ -102,7 +104,129 @@
           "filename": "JAL00041 (9).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00041 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00041 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/G~4AAeSw7cFpqG0-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2mgAAeSwzNJpqG1A/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2CsAAeSwdRtpqG1C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nIwAAeSw~0VpqG1E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xG4AAeSwprZpqG1G/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/paAAAeSwG55pqG1K/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/QW0AAeSw0uxpqG1P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qD0AAeSwhHdpqG1S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Nj8AAeSwJHppqG1V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/wpAAAeSwnahpqG1Y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/M7IAAeSw2KtpqG1c/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00041 (2).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OFoAAeSwXVZpqG1h/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Sosenfer",
+        "EU-Schuhgröße": "43",
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "Mesh",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Laufsohlenmaterial": "Gummi",
+        "Anlass": "Freizeit",
+        "Ursprungsland": "China",
+        "Verschluss": "Slip-On",
+        "Besonderheiten": "Atmungsaktiv, Leichtgewicht",
+        "Signiert": "Nein",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Laufschuhe",
+      "Keyword 3": "Freizeitschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "3",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "JAL00041, JAL00042, JAL00043",
+      "Schedule Date": "2026-03-14T18:29"
     }
   }
 }

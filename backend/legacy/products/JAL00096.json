@@ -1,5 +1,5 @@
 {
-  "JAL00070": {
+  "JAL00096": {
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "JLI Trading Limited",
@@ -7,41 +7,41 @@
       "Invoice Date": "29.10.2025"
     },
     "Supplier Data": {
-      "Supplier Number": "spL1ii194ol",
-      "ISIN": "b0d924jkpv",
-      "Supplier Title": "RUNBO 4-in-1 pH Meter Water – pH/TDS/EC/Temperature Meter for Aquarium, Pool, Drinking Water"
+      "Supplier Number": "LPNHE837826643",
+      "ISIN": "b0714lmhh7",
+      "Supplier Title": "US Solid 1/4\" G 220V 230V AC Brass Solenoid Valve Direct Acting for Water Air Gas Oil NC Brass Solenoid Valve"
     },
     "Price Data": {
-      "Price Net": 0.97,
-      "Shipping Net": 0.21,
-      "Total Cost Net": 1.17
+      "Price Net": 1.07,
+      "Shipping Net": 0.23,
+      "Total Cost Net": 1.3
     },
     "Ebay Category": {
-      "Category": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Feuchtemessgeräte & pH-Meter",
-      "eBay Category ID": "75670"
+      "Category": "/Business & Industrie/Hydraulik, Pneumatik & Pumpen/Ventile & Verteiler/Magnetventile",
+      "eBay Category ID": "124600"
     },
     "EAN": {
-      "EAN": ""
+      "EAN": 888107084051.0
     },
     "Product Condition": {
-      "Condition": "Neu mit Karton"
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
-      "Brand": "Runbo",
-      "Color": "Blau Weiß",
+      "Brand": "U.S. Solid",
+      "Color": "",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Das Produkt ist ein Wasserqualitätsprüfgerät, das sowohl den pH-Wert als auch den TDS-Wert misst. Es verfügt über ein hintergrundbeleuchtetes Display für einfache Ablesbarkeit. Die Geräte sind tragbar und einfach zu bedienen, ideal für den Einsatz zu Hause oder unterwegs.",
-      "Keywords": "Wasserqualitätsprüfgerät pH TDS",
-      "Materials": "Kunststoff"
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
     },
     "OP": {
-      "OP": "25.0"
+      "OP": "21.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": "Done"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -53,10 +53,10 @@
         "has_phone": true,
         "has_enhanced": false,
         "count_stock": 5,
-        "count_phone": 4,
+        "count_phone": 8,
         "count_enhanced": 0,
         "has_main_images": true,
-        "count_main_images": 5
+        "count_main_images": 6
       },
       "stock": [
         {
@@ -77,16 +77,28 @@
       ],
       "phone": [
         {
-          "filename": "JAL00070 (1).jpg"
+          "filename": "JAL00096 (1).jpg"
         },
         {
-          "filename": "JAL00070 (2).jpg"
+          "filename": "JAL00096 (2).jpg"
         },
         {
-          "filename": "JAL00070 (3).jpg"
+          "filename": "JAL00096 (3).jpg"
         },
         {
-          "filename": "JAL00070 (4).jpg"
+          "filename": "JAL00096 (4).jpg"
+        },
+        {
+          "filename": "JAL00096 (5).jpg"
+        },
+        {
+          "filename": "JAL00096 (6).jpg"
+        },
+        {
+          "filename": "JAL00096 (7).jpg"
+        },
+        {
+          "filename": "JAL00096 (8).jpg"
         }
       ],
       "enhanced": [],
@@ -105,18 +117,11 @@
         },
         {
           "filename": "5.png"
+        },
+        {
+          "filename": "JAL00096 (3).jpg"
         }
       ]
-    },
-    "Ebay Listing": {
-      "Selling Price Total": "",
-      "Shipping Costs Net": "",
-      "Quantity": "",
-      "Condition ID": "",
-      "Condition Note": "",
-      "EAN": "",
-      "Modified SKU": "",
-      "Schedule Date": ""
     }
   }
 }

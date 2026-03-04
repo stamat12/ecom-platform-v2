@@ -3,7 +3,10 @@
     "category_name": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Lockenstäbe & Glätteisen",
     "category_id": "177659",
     "marketplace": "EBAY_DE",
-    "fees": {}
+    "fees": {
+      "payment_fee": 0.35,
+      "sales_commission_percentage": 0.065
+    }
   },
   "schema": {
     "required": [

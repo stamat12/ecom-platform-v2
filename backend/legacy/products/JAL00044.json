@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -45,6 +45,16 @@
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
     }
   }
 }

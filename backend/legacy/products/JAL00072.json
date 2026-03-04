@@ -12,38 +12,39 @@
       "Supplier Title": "NORTIV 8 Men's Outdoor Shoes Hiking Boots Trekking Hiking Shoes Waterproof Mid Climbing Shoes Mountaineering Climbing Hiking Shoes Hiking Boots, Size 41, Army/Green/Black/Orange, 160448_M-E"
     },
     "Price Data": {
-      "Price Net": 9.51,
-      "Shipping Net": 1.35,
-      "Total Cost Net": 10.86
+      "Price Net": "9.51",
+      "Shipping Net": "1.35",
+      "Total Cost Net": "10.86"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Wanderschuhe/Herren",
+      "eBay Category ID": "181392"
     },
     "EAN": {
-      "EAN": 196020674281.0
+      "EAN": "196020674281.0"
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "U",
       "Brand": "Nortiv 8",
-      "Color": "",
-      "Size": ""
+      "Color": "Grün",
+      "Size": "41"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Die Schuhe sind aus einem robusten Softshell-Material gefertigt und bieten eine wasserdichte Innenausstattung. Sie verfügen über eine schützende Zehenkappe und einen gepolsterten Kragen für zusätzlichen Komfort. Die rutschfeste Gummisohle sorgt für guten Halt auf verschiedenen Untergründen.",
+      "Keywords": "Wanderschuhe Unisex",
+      "Materials": "Softshell, Gummi"
     },
     "OP": {
       "OP": "55.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -55,7 +56,7 @@
         "count_phone": 8,
         "count_enhanced": 0,
         "has_main_images": true,
-        "count_main_images": 7
+        "count_main_images": 5
       },
       "stock": [
         {
@@ -116,14 +117,102 @@
         },
         {
           "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VwIAAeSw8EtpqGy7/$_1.JPG?set_id=8800005007"
         },
         {
-          "filename": "IMG_9248.jpg"
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MiUAAeSwJHppqGy9/$_1.JPG?set_id=8800005007"
         },
         {
-          "filename": "IMG_9247.jpg"
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/F5cAAeSwjLdpqGy~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s2sAAeSwx0VpqGzB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MOYAAeSwlCRpqGzD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9247.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mHEAAeSwcrlpqGzI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9248.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s74AAeSwx0VpqGzM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9249.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vu0AAeSwnahpqGzQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9246.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Hi0AAeSwbiZpqGzV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9245.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/M28AAeSwpZxpqGzY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9244.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2sMAAeSw6YBpqGzd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9243.jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/waAAAeSw779pqGzh/$_1.JPG?set_id=8800005007"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nortiv 8"
+      },
+      "optional": {
+        "Farbe": "Grau",
+        "Modell": "SOFTSHELL",
+        "Material": "Wasserabweisend",
+        "Eigenschaften": "Schockabsorbierend, Verschleißfest, Anti-Rutsch",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Produktlinie": "SOFTSHELL",
+        "Schuhgröße": "EUR 43"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wanderschuh",
+      "Product Model": "Softshell",
+      "Keyword 1": "Outdoor Schuh",
+      "Keyword 2": "Trekking Schuh",
+      "Keyword 3": "Wasserdichter Schuh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "47",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "196020674281.0",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-14T18:29"
     }
   }
 }

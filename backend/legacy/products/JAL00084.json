@@ -1,0 +1,142 @@
+{
+  "JAL00084": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE961646215",
+      "ISIN": "b0bq3dv22k",
+      "Supplier Title": "Irrigation Computer with 2 Independently Controlled Outputs, Johgee Digital Water Timer with LCD Display, Auto/Manual Watering Controller"
+    },
+    "Price Data": {
+      "Price Net": 4.25,
+      "Shipping Net": 0.54,
+      "Total Cost Net": 4.79
+    },
+    "Ebay Category": {
+      "Category": "/Garten & Terrasse/Bewässern/Bewässerungscomputer & Wasserzeitschaltuhren",
+      "eBay Category ID": "75672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "johgee",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "37.0"
+    },
+    "Status": {
+      "Status": "Done"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00084 (1).jpg"
+        },
+        {
+          "filename": "JAL00084 (10).jpg"
+        },
+        {
+          "filename": "JAL00084 (11).jpg"
+        },
+        {
+          "filename": "JAL00084 (12).jpg"
+        },
+        {
+          "filename": "JAL00084 (13).jpg"
+        },
+        {
+          "filename": "JAL00084 (2).jpg"
+        },
+        {
+          "filename": "JAL00084 (3).jpg"
+        },
+        {
+          "filename": "JAL00084 (4).jpg"
+        },
+        {
+          "filename": "JAL00084 (5).jpg"
+        },
+        {
+          "filename": "JAL00084 (6).jpg"
+        },
+        {
+          "filename": "JAL00084 (7).jpg"
+        },
+        {
+          "filename": "JAL00084 (8).jpg"
+        },
+        {
+          "filename": "JAL00084 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00084 (4).jpg"
+        }
+      ]
+    }
+  }
+}

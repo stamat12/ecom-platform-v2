@@ -1,0 +1,109 @@
+{
+  "JAL00092": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHE848720717",
+      "ISIN": "b0c4pb7xt4",
+      "Supplier Title": "US Solid Solenoid Valve Brass Normally Open NO 10 bar - Electric Water Valve VITON (3/4\", 230V AC)"
+    },
+    "Price Data": {
+      "Price Net": "7.32",
+      "Shipping Net": "1.02",
+      "Total Cost Net": "8.34"
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Elektromaterial/Elektrische Kabel, Leitungen & Zubehör/Steckverbinder",
+      "eBay Category ID": "259301"
+    },
+    "EAN": {
+      "EAN": "888107106906"
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "U.S. Solid",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein elektromagnetisches Ventil mit einem Gehäuse aus Messing. Es hat eine Anschlussgröße von 3/4 Zoll und ist für einen Druckbereich von 0-10 BAR ausgelegt. Die Dichtungsmaterialien bestehen aus VITON (FKM) und das Ventil hat eine IP-Bewertung von IP65.",
+      "Keywords": "elektromagnetisches Ventil",
+      "Materials": "Messing, VITON"
+    },
+    "OP": {
+      "OP": "77.0"
+    },
+    "Status": {
+      "Status": "Done"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00092 (1).jpg"
+        },
+        {
+          "filename": "JAL00092 (2).jpg"
+        },
+        {
+          "filename": "JAL00092 (3).jpg"
+        },
+        {
+          "filename": "JAL00092 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00092 (1).jpg"
+        },
+        {
+          "filename": "JAL00092 (3).jpg"
+        }
+      ]
+    }
+  }
+}

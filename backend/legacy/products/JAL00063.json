@@ -17,30 +17,31 @@
       "Total Cost Net": 5.33
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Trachtenmode/Lederhosen & Hosen",
+      "eBay Category ID": "80968"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "M",
       "Brand": "Gloria Wears",
-      "Color": "",
-      "Size": ""
+      "Color": "Schwarz",
+      "Size": "50"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Diese schwarze Lederhose hat eine traditionelle Trachtenoptik mit aufwendigen Stickereien. Sie verfügt über verstellbare Träger und eine komfortable Passform. Ideal für festliche Anlässe oder das Oktoberfest.",
+      "Keywords": "Lederhose Trachten Herren",
+      "Materials": "Leder"
     },
     "OP": {
       "OP": "55.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 020"
@@ -53,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 2,
         "count_phone": 8,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
       },
       "stock": [
         {
@@ -89,7 +92,107 @@
           "filename": "JAL00063 (8).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "JAL00063 (8).jpg"
+        },
+        {
+          "filename": "JAL00063 (3).jpg"
+        },
+        {
+          "filename": "JAL00063 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDcy/z/Y0sAAeSw4c1pqHWY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/aqQAAeSw1-NpqHWb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0LcAAeSwBExpqHWe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2doAAeSwGvtpqHWi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/aewAAeSw8VZpqHWl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0IQAAeSw7tJpqHWo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/i0oAAeSwPsRpqHWs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/a2QAAeSwKFtpqHWv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2jMAAeSwJMhpqHWy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00063 (2).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jOEAAeSwDq5pqHW1/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Gloria Wears"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Größe": "50",
+        "Produktart": "Trachten Lederhose",
+        "Abteilung": "Herren",
+        "Material": "Baumwolle",
+        "Größenkategorie": "Normale Größe",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-14T18:29"
+    },
+    "eBay SEO": {
+      "Product Type": "Lederhose",
+      "Product Model": "",
+      "Keyword 1": "Trachtenhose",
+      "Keyword 2": "Bayerische Hose",
+      "Keyword 3": "Dirndl Zubehör"
     }
   }
 }

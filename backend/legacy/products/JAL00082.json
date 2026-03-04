@@ -1,0 +1,127 @@
+{
+  "JAL00082": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK387534056",
+      "ISIN": "b0dp5xs4k5",
+      "Supplier Title": "Wulibike Windbreaker Men's Cycling Windbreaker Ultralight Packable Softshell Cycling Jacket Summer Running Jacket Unisex Black A5=XL"
+    },
+    "Price Data": {
+      "Price Net": 2.99,
+      "Shipping Net": 0.13,
+      "Total Cost Net": 3.12
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Herren/Jacken & Westen",
+      "eBay Category ID": "181358"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Wulibike",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Jacke hat eine Kapuze und ist aus leichtem, knitterfreiem Material gefertigt. Sie verfügt über seitliche Reißverschlusstaschen und ein minimalistisches Design. Ideal für Outdoor-Aktivitäten und als Windschutz.",
+      "Keywords": "Wulibike Jacke Unisex",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": "41.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00082 (1).jpg"
+        },
+        {
+          "filename": "JAL00082 (10).jpg"
+        },
+        {
+          "filename": "JAL00082 (2).jpg"
+        },
+        {
+          "filename": "JAL00082 (3).jpg"
+        },
+        {
+          "filename": "JAL00082 (4).jpg"
+        },
+        {
+          "filename": "JAL00082 (5).jpg"
+        },
+        {
+          "filename": "JAL00082 (6).jpg"
+        },
+        {
+          "filename": "JAL00082 (7).jpg"
+        },
+        {
+          "filename": "JAL00082 (8).jpg"
+        },
+        {
+          "filename": "JAL00082 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00082 (4).jpg"
+        },
+        {
+          "filename": "JAL00082 (10).jpg"
+        },
+        {
+          "filename": "JAL00082 (6).jpg"
+        },
+        {
+          "filename": "JAL00082 (9).jpg"
+        }
+      ]
+    }
+  }
+}

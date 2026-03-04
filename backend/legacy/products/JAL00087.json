@@ -1,0 +1,153 @@
+{
+  "JAL00087": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNWE321018795",
+      "ISIN": "b0cphl8dht",
+      "Supplier Title": "Diivoo Irrigation Computer 2 Outputs, Water Timer with Rain Delayed/Manual & Automatic Mode, Flexible Irrigation Frequency Irrigation Timer, Irrigation Timer for Garden"
+    },
+    "Price Data": {
+      "Price Net": "3.55",
+      "Shipping Net": "0.55",
+      "Total Cost Net": "4.1"
+    },
+    "Ebay Category": {
+      "Category": "/Garten & Terrasse/Bewässern/Bewässerungscomputer & Wasserzeitschaltuhren",
+      "eBay Category ID": "75672"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Diivoo",
+      "Color": "Schwarz und Grün",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Diivoo Bewässerungscomputer hat zwei unabhängige Bewässerungszonen. Er ermöglicht eine programmierbare Bewässerung mit verschiedenen Zeitplänen. Das Gerät ist wasserdicht nach IP54 und bietet eine Regenverzögerungsfunktion.",
+      "Keywords": "Bewässerungscomputer Diivoo",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "40.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 20,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "JAL00087 (1).jpg"
+        },
+        {
+          "filename": "JAL00087 (10).jpg"
+        },
+        {
+          "filename": "JAL00087 (11).jpg"
+        },
+        {
+          "filename": "JAL00087 (12).jpg"
+        },
+        {
+          "filename": "JAL00087 (13).jpg"
+        },
+        {
+          "filename": "JAL00087 (14).jpg"
+        },
+        {
+          "filename": "JAL00087 (15).jpg"
+        },
+        {
+          "filename": "JAL00087 (16).jpg"
+        },
+        {
+          "filename": "JAL00087 (17).jpg"
+        },
+        {
+          "filename": "JAL00087 (18).jpg"
+        },
+        {
+          "filename": "JAL00087 (19).jpg"
+        },
+        {
+          "filename": "JAL00087 (2).jpg"
+        },
+        {
+          "filename": "JAL00087 (20).jpg"
+        },
+        {
+          "filename": "JAL00087 (3).jpg"
+        },
+        {
+          "filename": "JAL00087 (4).jpg"
+        },
+        {
+          "filename": "JAL00087 (5).jpg"
+        },
+        {
+          "filename": "JAL00087 (6).jpg"
+        },
+        {
+          "filename": "JAL00087 (7).jpg"
+        },
+        {
+          "filename": "JAL00087 (8).jpg"
+        },
+        {
+          "filename": "JAL00087 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00087 (1).jpg"
+        },
+        {
+          "filename": "JAL00087 (18).jpg"
+        },
+        {
+          "filename": "JAL00087 (4).jpg"
+        }
+      ]
+    }
+  }
+}

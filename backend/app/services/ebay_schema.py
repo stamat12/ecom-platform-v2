@@ -1,6 +1,7 @@
 """
 eBay category schema management service
 """
+import json
 import logging
 from typing import Dict, Any, List, Optional
 import requests
@@ -20,11 +21,117 @@ logger = logging.getLogger(__name__)
 
 # Cache for eBay API responses
 _ebay_api_cache: Dict[str, Any] = {}
+_category_mapping_by_id_cache: Optional[Dict[str, Dict[str, Any]]] = None
 
 
 def get_ebay_token() -> str:
     """Get eBay access token from environment"""
     return get_access_token()
+
+
+def _load_category_mapping_by_id() -> Dict[str, Dict[str, Any]]:
+    global _category_mapping_by_id_cache
+    if _category_mapping_by_id_cache is not None:
+        return _category_mapping_by_id_cache
+
+    mapping_file = ebay_schema_repo.SCHEMAS_DIR / "category_mapping.json"
+    if not mapping_file.exists():
+        logger.warning(f"Category mapping file not found: {mapping_file}")
+        _category_mapping_by_id_cache = {}
+        return _category_mapping_by_id_cache
+
+    try:
+        with mapping_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        rows = data.get("categoryMappings", []) if isinstance(data, dict) else []
+        lookup: Dict[str, Dict[str, Any]] = {}
+        for row in rows:
+            cat_id = str((row or {}).get("categoryId") or "").strip()
+            if cat_id:
+                lookup[cat_id] = row or {}
+        _category_mapping_by_id_cache = lookup
+        logger.info(f"Loaded {len(lookup)} category mappings from category_mapping.json")
+        return _category_mapping_by_id_cache
+    except Exception as e:
+        logger.error(f"Failed to load category mapping: {e}")
+        _category_mapping_by_id_cache = {}
+        return _category_mapping_by_id_cache
+
+
+def _coerce_optional_float(value: Any) -> Optional[float]:
+    if value is None:
+        return None
+    if isinstance(value, str) and not value.strip():
+        return None
+    try:
+        numeric = float(value)
+        if pd.isna(numeric):
+            return None
+        return numeric
+    except Exception:
+        return None
+
+
+def _normalize_mapping_fees(raw_fees: Dict[str, Any]) -> Dict[str, float]:
+    fees = raw_fees if isinstance(raw_fees, dict) else {}
+    payment_fee = _coerce_optional_float(fees.get("payment_fee"))
+    sales_commission = _coerce_optional_float(fees.get("sales_commission_up_to"))
+    if sales_commission is None:
+        sales_commission = _coerce_optional_float(fees.get("sales_commission_percentage"))
+
+    normalized: Dict[str, float] = {}
+    if payment_fee is not None:
+        normalized["payment_fee"] = payment_fee
+    if sales_commission is not None:
+        normalized["sales_commission_percentage"] = sales_commission
+    return normalized
+
+
+def _has_effective_fees(fees: Any) -> bool:
+    if not isinstance(fees, dict):
+        return False
+    return (
+        _coerce_optional_float(fees.get("payment_fee")) is not None
+        or _coerce_optional_float(fees.get("sales_commission_percentage")) is not None
+    )
+
+
+def _get_category_fees_from_mapping(category_id: str) -> Dict[str, float]:
+    lookup = _load_category_mapping_by_id()
+    entry = lookup.get(str(category_id).strip())
+    if not entry:
+        return {}
+    return _normalize_mapping_fees(entry.get("fees", {}))
+
+
+def _ensure_cached_schema_fees(category_id: str, cached: Dict[str, Any]) -> Dict[str, Any]:
+    if not isinstance(cached, dict):
+        return cached
+
+    metadata = cached.get("_metadata")
+    if not isinstance(metadata, dict):
+        metadata = {}
+        cached["_metadata"] = metadata
+
+    if _has_effective_fees(metadata.get("fees", {})):
+        return cached
+
+    fees = get_category_fees(category_id)
+    if not fees:
+        logger.warning(f"Schema {category_id} has missing fees and no fallback fees were found")
+        return cached
+
+    metadata["fees"] = fees
+    metadata.setdefault("category_id", category_id)
+    metadata.setdefault("marketplace", MARKETPLACE_ID)
+
+    schema_data = cached.get("schema", {}) if isinstance(cached.get("schema"), dict) else {"required": [], "optional": []}
+    saved = ebay_schema_repo.save_schema(category_id, schema_data, metadata)
+    if saved:
+        logger.info(f"Auto-filled missing fees for cached schema {category_id}: {fees}")
+    else:
+        logger.warning(f"Failed to persist auto-filled fees for schema {category_id}")
+    return cached
 
 
 def fetch_category_tree_id() -> str:
@@ -148,6 +255,11 @@ def get_category_fees(category_id: str) -> Dict[str, float]:
     Returns:
         Dict with payment_fee and sales_commission_percentage
     """
+    mapping_fees = _get_category_fees_from_mapping(category_id)
+    if mapping_fees:
+        logger.info(f"Using category_mapping fees for category {category_id}: {mapping_fees}")
+        return mapping_fees
+
     try:
         df = load_inventory_dataframe()
         
@@ -171,6 +283,10 @@ def get_category_fees(category_id: str) -> Dict[str, float]:
             if pd.notna(commission):
                 fees["sales_commission_percentage"] = float(commission)
         
+        if fees:
+            logger.info(f"Using inventory fees for category {category_id}: {fees}")
+        else:
+            logger.warning(f"No fees found in inventory for category {category_id}")
         return fees
         
     except Exception as e:
@@ -231,6 +347,7 @@ def get_schema(category_id: str, use_cache: bool = True, category_name: str = ""
     if use_cache:
         cached = ebay_schema_repo.get_schema(category_id)
         if cached:
+            cached = _ensure_cached_schema_fees(category_id, cached)
             logger.debug(f"Using cached schema for category {category_id}")
             return cached
     
@@ -479,38 +596,8 @@ async def get_schema_by_category_name(category_name: str) -> dict:
         # Step 4: Fetch schema from eBay API
         logger.info(f"Fetching eBay schema for category ID: {category_id}")
         try:
-            aspects_result = fetch_ebay_aspects_from_api(category_id)
-            
-            # Get fees from mapping, with fallback to defaults
-            payment_fee = fees_data.get("payment_fee", 0.35) if fees_data else 0.35
-            sales_commission_percentage = fees_data.get("sales_commission_up_to", 0.12) if fees_data else 0.12
-            
-            # Build schema JSON in old format
-            schema_to_save = {
-                "_metadata": {
-                    "category_name": category_name,
-                    "category_id": category_id,
-                    "marketplace": "EBAY_DE",
-                    "fees": {
-                        "payment_fee": payment_fee,
-                        "sales_commission_percentage": sales_commission_percentage
-                    }
-                },
-                "schema": {
-                    "required": aspects_result.get("required", []),
-                    "optional": aspects_result.get("optional", [])
-                }
-            }
-            
-            # Save to schemas folder with old naming convention
-            schema_file_name = f"EbayCat_{category_id}_EBAY_DE.json"
-            schema_file_path = schemas_dir / schema_file_name
-            
-            with open(schema_file_path, 'w', encoding='utf-8') as f:
-                import json
-                json.dump(schema_to_save, f, indent=2, ensure_ascii=False)
-            
-            logger.info(f"Saved new schema to {schema_file_path}")
+            schema_to_save = fetch_and_cache_schema(category_id, category_name)
+            schema_to_save = _ensure_cached_schema_fees(category_id, schema_to_save)
             
             return {
                 "categoryId": category_id,

@@ -12,19 +12,19 @@
       "Supplier Title": "Sosenfer Slip-on Men's Shoes Sports Shoes Running Shoes Outdoor Casual Shoes Mesh Sneakers Lightweight Breathable Non-Slip Gym Jogging Shoes-BAISE-40"
     },
     "Price Data": {
-      "Price Net": 2.48,
-      "Shipping Net": 0.53,
-      "Total Cost Net": 3.01
+      "Price Net": "2.48",
+      "Shipping Net": "0.53",
+      "Total Cost Net": "3.01"
     },
     "Ebay Category": {
       "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": "Neu mit Karton"
+      "Condition": "Neu ohne Karton"
     },
     "Intern Product Info": {
       "Gender": "U",
@@ -124,7 +124,110 @@
         {
           "filename": "JAL00047 (8).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00047 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vjgAAeSwAZNpqGzu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/PdsAAeSwCTFpqGzw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s4AAAeSwRr1pqGzy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/p0oAAeSwfKFpqGzz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/v~EAAeSwhgxpqGz1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3AkAAeSw83tpqGz3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NjgAAeSw2J9pqGz7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tSgAAeSwbc9pqGz-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NzMAAeSwrtFpqG0C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (5).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nFoAAeSwdippqG0F/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pJAAAeSw2jNpqG0I/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00047 (1).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1SMAAeSwlAFpqG0M/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Sosenfer",
+        "EU-Schuhgröße": "40",
+        "Abteilung": "Herren",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "Mesh",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Laufsohlenmaterial": "Gummi",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Ursprungsland": "China",
+        "Verschluss": "Slip-On",
+        "Besonderheiten": "Atmungsaktiv",
+        "Signiert": "Nein",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "",
+      "Keyword 1": "Sneaker",
+      "Keyword 2": "Sport Schuhe",
+      "Keyword 3": "Laufschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-14T18:29"
     }
   }
 }

@@ -53,7 +53,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 0,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [
         {
@@ -73,7 +75,21 @@
         }
       ],
       "phone": [],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
     }
   }
 }

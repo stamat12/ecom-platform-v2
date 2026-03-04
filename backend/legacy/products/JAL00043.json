@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -139,6 +139,16 @@
           "filename": "5.png"
         }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
     }
   }
 }

@@ -4,11 +4,13 @@ eBay item specifics enrichment service using OpenAI vision
 import base64
 import json
 import logging
+import random
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 from uuid import uuid4
-from openai import OpenAI
+from openai import OpenAI, APIConnectionError, APITimeoutError, APIStatusError, RateLimitError
 import os
 
 from app.config.ebay_config import (
@@ -30,6 +32,14 @@ _openai_client: Optional[OpenAI] = None
 SEO_FIELD_KEYS = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"]
 
 _seo_debug_logger: Optional[logging.Logger] = None
+
+_OPENAI_RETRY_ATTEMPTS = max(1, int(os.getenv("OPENAI_RETRY_ATTEMPTS", "4")))
+_OPENAI_RETRY_BASE_DELAY_SECONDS = max(0.1, float(os.getenv("OPENAI_RETRY_BASE_DELAY_SECONDS", "2.0")))
+_OPENAI_RETRY_MAX_DELAY_SECONDS = max(
+    _OPENAI_RETRY_BASE_DELAY_SECONDS,
+    float(os.getenv("OPENAI_RETRY_MAX_DELAY_SECONDS", "20.0")),
+)
+_OPENAI_RETRY_JITTER_SECONDS = max(0.0, float(os.getenv("OPENAI_RETRY_JITTER_SECONDS", "0.5")))
 
 
 def _get_seo_debug_logger() -> logging.Logger:
@@ -201,6 +211,107 @@ def get_openai_client() -> OpenAI:
             raise ValueError("OPENAI_API_KEY not found in environment")
         _openai_client = OpenAI(api_key=api_key)
     return _openai_client
+
+
+def _extract_retry_after_seconds(error: Exception) -> Optional[float]:
+    response = getattr(error, "response", None)
+    headers = getattr(response, "headers", None)
+    if not headers:
+        return None
+
+    raw_retry_after_ms = headers.get("retry-after-ms") or headers.get("x-ratelimit-reset-requests")
+    if raw_retry_after_ms:
+        try:
+            value = float(raw_retry_after_ms)
+            if value > 0:
+                if value > 1000:
+                    return value / 1000.0
+                return value
+        except (TypeError, ValueError):
+            pass
+
+    raw_retry_after = headers.get("retry-after")
+    if raw_retry_after:
+        try:
+            value = float(raw_retry_after)
+            return value if value > 0 else None
+        except (TypeError, ValueError):
+            return None
+    return None
+
+
+def _is_transient_openai_error(error: Exception) -> bool:
+    if isinstance(error, (RateLimitError, APIConnectionError, APITimeoutError)):
+        return True
+
+    if isinstance(error, APIStatusError):
+        status = getattr(error, "status_code", None)
+        return status in {408, 409, 429, 500, 502, 503, 504}
+
+    message = str(error).lower()
+    return any(token in message for token in ["rate limit", "429", "timeout", "temporar", "connection"])
+
+
+def _compute_retry_delay_seconds(attempt_index: int, retry_after_seconds: Optional[float] = None) -> float:
+    if retry_after_seconds and retry_after_seconds > 0:
+        return min(retry_after_seconds, _OPENAI_RETRY_MAX_DELAY_SECONDS)
+
+    exponential = _OPENAI_RETRY_BASE_DELAY_SECONDS * (2 ** attempt_index)
+    jitter = random.uniform(0, _OPENAI_RETRY_JITTER_SECONDS) if _OPENAI_RETRY_JITTER_SECONDS > 0 else 0.0
+    return min(exponential + jitter, _OPENAI_RETRY_MAX_DELAY_SECONDS)
+
+
+def _chat_completions_with_retry(
+    *,
+    model: str,
+    response_format: Dict[str, str],
+    temperature: float,
+    max_tokens: int,
+    messages: List[Dict[str, Any]],
+    trace_id: Optional[str] = None,
+    sku: str = "",
+    context: str = "openai",
+):
+    client = get_openai_client()
+
+    for attempt in range(_OPENAI_RETRY_ATTEMPTS):
+        try:
+            return client.chat.completions.create(
+                model=model,
+                response_format=response_format,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                messages=messages,
+            )
+        except Exception as error:
+            is_transient = _is_transient_openai_error(error)
+            is_last_attempt = attempt >= (_OPENAI_RETRY_ATTEMPTS - 1)
+
+            if not is_transient or is_last_attempt:
+                raise
+
+            retry_after_seconds = _extract_retry_after_seconds(error)
+            delay_seconds = _compute_retry_delay_seconds(attempt, retry_after_seconds)
+            logger.warning(
+                f"OpenAI transient error in {context} for SKU {sku or '-'} "
+                f"(attempt {attempt + 1}/{_OPENAI_RETRY_ATTEMPTS}): {error}. "
+                f"Retrying in {delay_seconds:.2f}s"
+            )
+            if trace_id:
+                _seo_debug(
+                    "openai_retry_scheduled",
+                    trace_id,
+                    sku=sku,
+                    context=context,
+                    attempt=attempt + 1,
+                    max_attempts=_OPENAI_RETRY_ATTEMPTS,
+                    delay_seconds=round(delay_seconds, 3),
+                    retry_after_seconds=retry_after_seconds,
+                    error=str(error),
+                )
+            time.sleep(delay_seconds)
+
+    raise RuntimeError("OpenAI retry loop exited unexpectedly")
 
 
 def _image_to_data_uri(image_path: Path) -> str:
@@ -402,8 +513,7 @@ def _call_openai_text_json(system_prompt: str, user_prompt: str, trace_id: Optio
                 model=EBAY_ENRICHMENT_MODEL,
                 max_tokens=300,
             )
-        client = get_openai_client()
-        response = client.chat.completions.create(
+        response = _chat_completions_with_retry(
             model=EBAY_ENRICHMENT_MODEL,
             response_format={"type": "json_object"},
             temperature=0.1,
@@ -412,6 +522,9 @@ def _call_openai_text_json(system_prompt: str, user_prompt: str, trace_id: Optio
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
+            trace_id=trace_id,
+            sku=sku,
+            context="seo_text",
         )
         raw = response.choices[0].message.content
         if not raw:
@@ -918,8 +1031,6 @@ def _call_openai_vision(
         return {}
     
     try:
-        client = get_openai_client()
-        
         # Build content with images
         content: List[dict] = []
         
@@ -947,8 +1058,18 @@ def _call_openai_vision(
             "text": f"Analysiere die Bilder und fülle die Felder aus. Erwartete Felder: {', '.join(field_names)}"
         })
         
+        if trace_id:
+            _seo_debug(
+                "openai_vision_request",
+                trace_id,
+                sku=sku,
+                image_count=len(image_paths),
+                model=EBAY_ENRICHMENT_MODEL,
+                max_tokens=EBAY_ENRICHMENT_MAX_TOKENS,
+            )
+
         # Call OpenAI
-        response = client.chat.completions.create(
+        response = _chat_completions_with_retry(
             model=EBAY_ENRICHMENT_MODEL,
             response_format={"type": "json_object"},
             temperature=EBAY_ENRICHMENT_TEMP,
@@ -956,7 +1077,10 @@ def _call_openai_vision(
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": content}
-            ]
+            ],
+            trace_id=trace_id,
+            sku=sku,
+            context="vision_fields",
         )
         
         # Parse response

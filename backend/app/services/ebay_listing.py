@@ -9,6 +9,7 @@ import os
 import re
 import time
 import requests
+from decimal import Decimal, InvalidOperation
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
@@ -72,6 +73,36 @@ def _is_transient_upload_error(error: Exception) -> bool:
         "temporarily unavailable",
     )
     return any(marker in message for marker in transient_markers)
+
+
+def _normalize_ean_for_ebay(raw: Any) -> str:
+    if raw is None:
+        return ""
+
+    text = str(raw).strip()
+    if not text:
+        return ""
+
+    lowered = text.lower()
+    if lowered in {"does not apply", "nicht zutreffend", "n/a", "na", "none", "null", "-"}:
+        return ""
+
+    compact = re.sub(r"\s+", "", text)
+    if re.fullmatch(r"\d+", compact):
+        return compact
+
+    decimal_zero_match = re.fullmatch(r"(\d+)[\.,]0+", compact)
+    if decimal_zero_match:
+        return decimal_zero_match.group(1)
+
+    try:
+        numeric = Decimal(compact.replace(",", "."))
+        if numeric >= 0 and numeric == numeric.to_integral_value():
+            return str(int(numeric))
+    except (InvalidOperation, ValueError, OverflowError):
+        pass
+
+    return ""
 
 def _setup_file_logging() -> None:
     """Configure file logging for eBay listing flow."""
@@ -1138,8 +1169,8 @@ def create_listing(
     
     # Resolve EAN from request first, then JSON fallbacks
     ean_section = product_json.get("EAN", {}) if isinstance(product_json.get("EAN", {}), dict) else {}
-    request_ean_clean = "" if ean is None else str(ean).strip()
-    json_ean_clean = "" if ean_section.get("EAN") is None else str(ean_section.get("EAN")).strip()
+    request_ean_clean = _normalize_ean_for_ebay(ean)
+    json_ean_clean = _normalize_ean_for_ebay(ean_section.get("EAN"))
 
     resolved_ean = request_ean_clean or json_ean_clean
 

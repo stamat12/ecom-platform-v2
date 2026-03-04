@@ -1,0 +1,121 @@
+{
+  "JAL00089": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK425185837",
+      "ISIN": "b0djy158cx",
+      "Supplier Title": "Fashion Sneakers for Women Men, Classic Casual Retro Trainers Shoes Low-Top Comfortable Breathable Walking Flat Tennis Shoes"
+    },
+    "Price Data": {
+      "Price Net": 1.74,
+      "Shipping Net": 0.59,
+      "Total Cost Net": 2.33
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "sharllen",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus einem weißen Material gefertigt und haben eine bequeme Passform. Die Sohle ist aus Gummi und bietet guten Halt. Sie sind ideal für den Alltag oder sportliche Aktivitäten.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Kunstleder Gummi"
+    },
+    "OP": {
+      "OP": "31.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00089 (1).jpg"
+        },
+        {
+          "filename": "JAL00089 (2).jpg"
+        },
+        {
+          "filename": "JAL00089 (3).jpg"
+        },
+        {
+          "filename": "JAL00089 (4).jpg"
+        },
+        {
+          "filename": "JAL00089 (5).jpg"
+        },
+        {
+          "filename": "JAL00089 (6).jpg"
+        },
+        {
+          "filename": "JAL00089 (7).jpg"
+        },
+        {
+          "filename": "JAL00089 (8).jpg"
+        },
+        {
+          "filename": "JAL00089 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00089 (7).jpg"
+        },
+        {
+          "filename": "JAL00089 (8).jpg"
+        },
+        {
+          "filename": "JAL00089 (5).jpg"
+        }
+      ]
+    }
+  }
+}

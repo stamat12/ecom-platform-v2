@@ -3,7 +3,10 @@
     "category_name": "/Kleidung & Accessoires/Damen/Damenmode/Unterwäsche/BH-Zubehör",
     "category_id": "163593",
     "marketplace": "EBAY_DE",
-    "fees": {}
+    "fees": {
+      "payment_fee": 0.35,
+      "sales_commission_percentage": 0.12
+    }
   },
   "schema": {
     "required": [

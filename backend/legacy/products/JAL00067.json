@@ -17,30 +17,31 @@
       "Total Cost Net": 1.17
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Feuchtemessgeräte & pH-Meter",
+      "eBay Category ID": "75670"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Runbo",
-      "Color": "",
+      "Color": "Blau Weiß",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Das Produkt ist ein Wasserqualitätsprüfgerät, das sowohl den pH-Wert als auch den TDS-Wert misst. Es verfügt über ein hintergrundbeleuchtetes Display für einfache Ablesbarkeit. Die Geräte sind tragbar und einfach zu bedienen, ideal für den Einsatz zu Hause oder unterwegs.",
+      "Keywords": "Wasserqualitätsprüfgerät pH TDS",
+      "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "25.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -112,6 +113,16 @@
           "filename": "JAL00067 (3).jpg"
         }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
     }
   }
 }

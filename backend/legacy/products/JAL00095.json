@@ -1,0 +1,145 @@
+{
+  "JAL00095": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNWE325993751",
+      "ISIN": "b0ct3gbzyn",
+      "Supplier Title": "MoFiz Men's Waterproof Jackets, Packable Lightweight Windbreaker Raincoat for Cycling, Running, Camping, Walking, Travel, Hiking, Black, Size EU XL"
+    },
+    "Price Data": {
+      "Price Net": 5.71,
+      "Shipping Net": 0.35,
+      "Total Cost Net": 6.06
+    },
+    "Ebay Category": {
+      "Category": "/Sport/Camping & Outdoor/Bekleidung/Herren/Jacken & Westen",
+      "eBay Category ID": "181358"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "MoFiz",
+      "Color": "Schwarz",
+      "Size": "L"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Jacke hat eine Kapuze und ist aus leichtem, wasserabweisendem Material gefertigt. Sie verfügt über zwei seitliche Reißverschlusstaschen und einen durchgehenden Reißverschluss. Die Ärmel sind elastisch und bieten einen bequemen Sitz.",
+      "Keywords": "MoFiz Jacke Unisex",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": "50.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00095 (1).jpg"
+        },
+        {
+          "filename": "JAL00095 (10).jpg"
+        },
+        {
+          "filename": "JAL00095 (11).jpg"
+        },
+        {
+          "filename": "JAL00095 (12).jpg"
+        },
+        {
+          "filename": "JAL00095 (13).jpg"
+        },
+        {
+          "filename": "JAL00095 (14).jpg"
+        },
+        {
+          "filename": "JAL00095 (2).jpg"
+        },
+        {
+          "filename": "JAL00095 (3).jpg"
+        },
+        {
+          "filename": "JAL00095 (4).jpg"
+        },
+        {
+          "filename": "JAL00095 (5).jpg"
+        },
+        {
+          "filename": "JAL00095 (6).jpg"
+        },
+        {
+          "filename": "JAL00095 (7).jpg"
+        },
+        {
+          "filename": "JAL00095 (8).jpg"
+        },
+        {
+          "filename": "JAL00095 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00095 (4).jpg"
+        },
+        {
+          "filename": "JAL00095 (14).jpg"
+        },
+        {
+          "filename": "JAL00095 (8).jpg"
+        },
+        {
+          "filename": "JAL00095 (12).jpg"
+        },
+        {
+          "filename": "JAL00095 (10).jpg"
+        },
+        {
+          "filename": "JAL00095 (1).jpg"
+        }
+      ]
+    }
+  }
+}

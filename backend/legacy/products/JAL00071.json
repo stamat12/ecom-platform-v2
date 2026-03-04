@@ -17,30 +17,31 @@
       "Total Cost Net": 1.17
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Garten & Terrasse/Pflanzenpflege, Boden & Zubehör/Feuchtemessgeräte & pH-Meter",
+      "eBay Category ID": "75670"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": "Kundenretour"
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Runbo",
-      "Color": "",
+      "Color": "Blau Weiß",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Das Produkt ist ein Wasserqualitätsprüfgerät, das sowohl den pH-Wert als auch den TDS-Wert misst. Es verfügt über ein hintergrundbeleuchtetes Display für einfache Ablesbarkeit. Die Geräte sind tragbar und einfach zu bedienen, ideal für den Einsatz zu Hause oder unterwegs.",
+      "Keywords": "Wasserqualitätsprüfgerät pH TDS",
+      "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "25.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -55,7 +56,7 @@
         "count_phone": 4,
         "count_enhanced": 0,
         "has_main_images": true,
-        "count_main_images": 7
+        "count_main_images": 5
       },
       "stock": [
         {
@@ -104,14 +105,86 @@
         },
         {
           "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/owAAAeSwgnhpqGym/$_1.JPG?set_id=8800005007"
         },
         {
-          "filename": "JAL00071 (2).jpg"
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/szQAAeSw31tpqGyn/$_1.JPG?set_id=8800005007"
         },
         {
-          "filename": "JAL00071 (4).jpg"
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/tdMAAeSwn-FpqGyp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FakAAeSwa25pqGyr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/24YAAeSwI0FpqGys/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00071 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sx0AAeSwq1ppqGyv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00071 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vIYAAeSwAZNpqGyy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00071 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rxsAAeSwbQhpqGy1/$_1.JPG?set_id=8800005007"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Produktart": "Bodenmessgerät",
+        "Angezeigte Messwerte": "pH, Temperatur, TDS",
+        "Material": "Kunststoff",
+        "Besonderheiten": "Hintergrundbeleuchtetes Display, Automatische Kalibrierung",
+        "Länge": "20 cm",
+        "Maßsystem": "Celsius",
+        "Messtechnik": "Elektrisch",
+        "Modell": "Runbo",
+        "Marke": "Runbo",
+        "Stromquelle": "Batterie",
+        "Höhe": "5 cm",
+        "Farbe": "Blau Weiß",
+        "Größe": "20 cm",
+        "Herstellergarantie": "1 Jahr"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wasserqualitätsprüfer",
+      "Product Model": "3-in-1 TDS",
+      "Keyword 1": "pH-Meter",
+      "Keyword 2": "TDS-Meter",
+      "Keyword 3": "Wassertester"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "5",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "JAL00067-JAL00071",
+      "Schedule Date": "2026-03-14T18:29"
     }
   }
 }

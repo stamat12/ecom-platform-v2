@@ -3,7 +3,9 @@
     "category_name": "/Haushaltsgeräte/Kleingeräte Küche/Allesschneider & Elektromesser",
     "category_id": "20681",
     "marketplace": "EBAY_DE",
-    "fees": {}
+    "fees": {
+      "payment_fee": 0.35
+    }
   },
   "schema": {
     "required": [

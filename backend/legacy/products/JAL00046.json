@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -118,6 +118,16 @@
           "filename": "JAL00046 (1).jpg"
         }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
     }
   }
 }

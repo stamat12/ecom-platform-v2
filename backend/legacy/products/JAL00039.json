@@ -1,5 +1,5 @@
 {
-  "JAL00042": {
+  "JAL00039": {
     "Invoice Data": {
       "Buying Entity": "Stamen Gochev",
       "Supplier": "JLI Trading Limited",
@@ -7,44 +7,44 @@
       "Invoice Date": "27.10.2025"
     },
     "Supplier Data": {
-      "Supplier Number": "spLc57Om6JL",
-      "ISIN": "b0d6vrv6rp",
-      "Supplier Title": "Sosenfer Slip-on Men's Shoes Sports Shoes Running Shoes Outdoor Casual Shoes Mesh Sneakers Lightweight Breathable Non-Slip Gym Jogging Shoes-HEISE-SHENHUIDI-43"
+      "Supplier Number": "LPNHK427978470",
+      "ISIN": "b0d9d67w74",
+      "Supplier Title": "FitVille Extra Wide Walking Shoes Women's Sports Shoes with Velcro Fastener Sneakers for Wide Feet Comfortable Running Shoes Orthopedic Leisure Shoes Fitness Jogging, Red, 39.5 EU, Wide"
     },
     "Price Data": {
-      "Price Net": 2.48,
-      "Shipping Net": 0.72,
-      "Total Cost Net": 3.19
+      "Price Net": 3.92,
+      "Shipping Net": 0.97,
+      "Total Cost Net": 4.89
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
-      "eBay Category ID": "15709"
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": ""
+      "EAN": null
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": "U",
-      "Brand": "Sosenfer",
-      "Color": "Schwarz",
-      "Size": "43"
+      "Gender": "F",
+      "Brand": "FitVille",
+      "Color": "Rot",
+      "Size": "39.5"
     },
     "Intern Generated Info": {
-      "More details": "Slip-on Herrenschuhe mit atmungsaktivem Mesh-Obermaterial und rutschfester Sohle.",
-      "Keywords": "Sportschuhe Leicht Atmungsaktiv",
-      "Materials": "Obermaterial: Mesh, Laufsohle: Gummi"
+      "More details": "Orthopädische Schuhe für breite Füße mit Klettverschluss. Rebound Core Technologie für Dämpfung und Komfort.",
+      "Keywords": "Rebound Core Walking Shoes V10 Sneaker",
+      "Materials": "Obermaterial: Wildleder, Mesh; Laufsohle: Gummi"
     },
     "OP": {
-      "OP": "41.0"
+      "OP": "53.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": "MENZELSTRAßE 10/2/4"
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",
@@ -53,7 +53,7 @@
         "has_phone": true,
         "has_enhanced": false,
         "count_stock": 5,
-        "count_phone": 8,
+        "count_phone": 7,
         "count_enhanced": 0,
         "has_main_images": true,
         "count_main_images": 6
@@ -77,28 +77,25 @@
       ],
       "phone": [
         {
-          "filename": "JAL00042 (1).jpg"
+          "filename": "IMG_9250.jpg"
         },
         {
-          "filename": "JAL00042 (2).jpg"
+          "filename": "IMG_9251.jpg"
         },
         {
-          "filename": "JAL00042 (3).jpg"
+          "filename": "IMG_9252.jpg"
         },
         {
-          "filename": "JAL00042 (4).jpg"
+          "filename": "IMG_9254.jpg"
         },
         {
-          "filename": "JAL00042 (5).jpg"
+          "filename": "IMG_9256.jpg"
         },
         {
-          "filename": "JAL00042 (6).jpg"
+          "filename": "IMG_9257.jpg"
         },
         {
-          "filename": "JAL00042 (7).jpg"
-        },
-        {
-          "filename": "JAL00042 (8).jpg"
+          "filename": "IMG_9258.jpg"
         }
       ],
       "enhanced": [],
@@ -119,19 +116,9 @@
           "filename": "5.png"
         },
         {
-          "filename": "JAL00042 (1).jpg"
+          "filename": "IMG_9250.jpg"
         }
       ]
-    },
-    "Ebay Listing": {
-      "Selling Price Total": "",
-      "Shipping Costs Net": "",
-      "Quantity": "",
-      "Condition ID": "",
-      "Condition Note": "",
-      "EAN": "",
-      "Modified SKU": "",
-      "Schedule Date": ""
     }
   }
 }

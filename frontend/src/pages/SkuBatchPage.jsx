@@ -129,6 +129,8 @@ export default function SkuBatchPage() {
   const [selectedLagerFilters, setSelectedLagerFilters] = useState(new Set());
   const [selectedBrandFilters, setSelectedBrandFilters] = useState(new Set());
   const [completionFilter, setCompletionFilter] = useState(null); // null | "empty" | "low" | "medium" | "high" | "complete"
+  const [requiredMissingFilter, setRequiredMissingFilter] = useState(null); // null | "missing" | "ready"
+  const [seoFilter, setSeoFilter] = useState(null); // null | "not5" | "1" | "2" | "3" | "4" | "5"
 
   const conditionLabelById = {
     "1000": "New",
@@ -451,6 +453,12 @@ export default function SkuBatchPage() {
         
         // Load eBay image orders for this SKU
         loadEbayImageOrders(sku);
+
+        // Load eBay validation summary so counts show even when collapsed
+        validateEbayFields(sku);
+
+        // Load eBay SEO summary so it can be shown while collapsed
+        loadEbaySeoFields(sku);
         
         return { sku, data, error: null };
       } catch (e) {
@@ -793,16 +801,56 @@ export default function SkuBatchPage() {
       }
     }
 
+    // eBay required fields filter
+    if (requiredMissingFilter !== null) {
+      const validation = ebayValidations[sku];
+      if (!validation) {
+        return false;
+      }
+      const missingRequiredCount = Number(validation?.missing_required?.length || 0);
+      if (requiredMissingFilter === "missing" && missingRequiredCount === 0) {
+        return false;
+      }
+      if (requiredMissingFilter === "ready" && missingRequiredCount > 0) {
+        return false;
+      }
+    }
+
+    // eBay SEO filter (exact filled count out of 5)
+    if (seoFilter !== null) {
+      const seoData = ebaySeoFields[sku] || {};
+      const seoKeys = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"];
+      const seoFilledCount = seoKeys.reduce((count, key) => {
+        const value = seoData[key];
+        return count + (value && String(value).trim() ? 1 : 0);
+      }, 0);
+
+      if (seoFilter === "not5") {
+        if (seoFilledCount === 5) {
+          return false;
+        }
+      } else if (seoFilledCount !== Number(seoFilter)) {
+        return false;
+      }
+    }
+
     return true;
   };
 
   // Filter items based on current filters
   const filteredItems = useMemo(() => {
-    if (selectedStatusFilters.size === 0 && selectedLagerFilters.size === 0 && selectedBrandFilters.size === 0 && completionFilter === null) {
+    if (
+      selectedStatusFilters.size === 0 &&
+      selectedLagerFilters.size === 0 &&
+      selectedBrandFilters.size === 0 &&
+      completionFilter === null &&
+      requiredMissingFilter === null &&
+      seoFilter === null
+    ) {
       return items;
     }
     return items.filter((item) => passesFilters(item.sku));
-  }, [items, selectedStatusFilters, selectedLagerFilters, selectedBrandFilters, completionFilter, productDetails]);
+  }, [items, selectedStatusFilters, selectedLagerFilters, selectedBrandFilters, completionFilter, requiredMissingFilter, seoFilter, productDetails, ebayValidations, ebaySeoFields]);
 
   const applyProductCategorySelection = (sku, item) => {
     setBulkProductDetailsEdits((prev) => {
@@ -3083,7 +3131,7 @@ export default function SkuBatchPage() {
             }}
           >
             <span style={{ fontSize: 16, transform: showFilters ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
-            🔍 Filters {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null) && `(${selectedStatusFilters.size + selectedLagerFilters.size + selectedBrandFilters.size + (completionFilter !== null ? 1 : 0)} active)`}
+            🔍 Filters {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null || requiredMissingFilter !== null || seoFilter !== null) && `(${selectedStatusFilters.size + selectedLagerFilters.size + selectedBrandFilters.size + (completionFilter !== null ? 1 : 0) + (requiredMissingFilter !== null ? 1 : 0) + (seoFilter !== null ? 1 : 0)} active)`}
           </button>
           <div style={{ fontSize: 12, color: "#666" }}>
             Showing {filteredItems.length} / {items.length} SKU(s)
@@ -3245,17 +3293,133 @@ export default function SkuBatchPage() {
                 </label>
               </div>
             </div>
+
+            {/* eBay Required Fields Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>eBay Required</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="requiredMissing"
+                    checked={requiredMissingFilter === null}
+                    onChange={() => setRequiredMissingFilter(null)}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>All</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="requiredMissing"
+                    checked={requiredMissingFilter === "missing"}
+                    onChange={() => setRequiredMissingFilter("missing")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Missing required</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="requiredMissing"
+                    checked={requiredMissingFilter === "ready"}
+                    onChange={() => setRequiredMissingFilter("ready")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Ready (no missing)</span>
+                </label>
+              </div>
+            </div>
+
+            {/* eBay SEO Filter */}
+            <div>
+              <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>eBay SEO</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === null}
+                    onChange={() => setSeoFilter(null)}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>All</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "not5"}
+                    onChange={() => setSeoFilter("not5")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>Not 5/5</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "1"}
+                    onChange={() => setSeoFilter("1")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>1/5</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "2"}
+                    onChange={() => setSeoFilter("2")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>2/5</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "3"}
+                    onChange={() => setSeoFilter("3")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>3/5</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "4"}
+                    onChange={() => setSeoFilter("4")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>4/5</span>
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                  <input
+                    type="radio"
+                    name="seoFilter"
+                    checked={seoFilter === "5"}
+                    onChange={() => setSeoFilter("5")}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <span>5/5</span>
+                </label>
+              </div>
+            </div>
           </div>
         )}
 
         {/* Clear filters button */}
-        {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null) && (
+        {(selectedStatusFilters.size > 0 || selectedLagerFilters.size > 0 || selectedBrandFilters.size > 0 || completionFilter !== null || requiredMissingFilter !== null || seoFilter !== null) && (
           <button
             onClick={() => {
               setSelectedStatusFilters(new Set());
               setSelectedLagerFilters(new Set());
               setSelectedBrandFilters(new Set());
               setCompletionFilter(null);
+              setRequiredMissingFilter(null);
+              setSeoFilter(null);
             }}
             style={{
               marginTop: 12,
@@ -3290,6 +3454,12 @@ export default function SkuBatchPage() {
 
       {filteredItems.map(({ sku, data, error }) => {
         const images = Array.isArray(data?.images) ? data.images : [];
+        const seoData = ebaySeoFields[sku] || {};
+        const seoKeys = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"];
+        const seoFilledCount = seoKeys.reduce((count, key) => {
+          const value = seoData[key];
+          return count + (value && String(value).trim() ? 1 : 0);
+        }, 0);
         const conditionFromProduct = getDetailValue(sku, "Product Condition", "Condition");
         const totalCostNet = toNumber(getDetailValue(sku, "Price Data", "Total Cost Net"));
         const opValue = toNumber(getDetailValue(sku, "OP", "OP"));
@@ -3820,7 +3990,7 @@ export default function SkuBatchPage() {
                   }}
                 >
                   <span style={{ fontSize: 18, transform: ebayExpanded[sku] ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
-                  ⭐ eBay Integration {ebayValidations[sku] && `(${ebayValidations[sku].filled_required}/${ebayValidations[sku].total_required})`}
+                  ⭐ eBay Integration {ebayValidations[sku] ? `(Req ${ebayValidations[sku].filled_required}/${ebayValidations[sku].total_required} • Opt ${ebayValidations[sku].filled_optional}/${ebayValidations[sku].total_optional} • SEO ${seoFilledCount}/5)` : `(SEO ${seoFilledCount}/5)`}
                 </button>
 
                 {ebayExpanded[sku] && (
