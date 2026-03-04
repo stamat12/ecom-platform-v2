@@ -712,6 +712,34 @@ export default function SkuListPage() {
     }
   };
 
+  const addMissingSkuRowsFromExcel = async () => {
+    if (!confirm("Add missing SKU rows from Excel (Inventory sheet) into database? Existing SKUs will not be changed.")) {
+      return;
+    }
+
+    setExcelSyncLoading(true);
+    try {
+      const res = await fetch("/api/excel/add-missing-skus", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        alert(
+          `✅ ${data.message}\nInserted: ${data.rows_inserted || 0}\nAlready existing: ${data.rows_existing || 0}\nInvalid SKU rows: ${data.rows_invalid_sku || 0}\nFailed: ${data.rows_failed || 0}`
+        );
+      } else {
+        alert(data.detail || data.message || "Failed to add missing SKU rows");
+      }
+    } catch (error) {
+      console.error("Error adding missing SKU rows:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setExcelSyncLoading(false);
+    }
+  };
+
   const selectAllSheets = () => {
     const updated = {};
     Object.entries(selectedSheets).forEach(([sheet, info]) => {
@@ -863,6 +891,23 @@ export default function SkuListPage() {
                 }}
               >
                 Deselect All Sheets
+              </button>
+              <button
+                onClick={addMissingSkuRowsFromExcel}
+                disabled={excelSyncLoading}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: 12,
+                  background: "#7b1fa2",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: excelSyncLoading ? "not-allowed" : "pointer",
+                  fontWeight: "bold"
+                }}
+                title="Insert only missing SKU rows from Excel Inventory sheet"
+              >
+                {excelSyncLoading ? "Working..." : "➕ Add Missing SKU Rows"}
               </button>
             </div>
 

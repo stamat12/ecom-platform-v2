@@ -1,0 +1,92 @@
+{
+  "VER02230": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2602109,
+      "Invoice Date": "2026-02-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 915171,
+      "ISIN": null,
+      "Supplier Title": "Remington Sapphire Luxe AS5805"
+    },
+    "Price Data": {
+      "Price Net": 12.5,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 13.1
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Remington",
+      "Color": "Schwarz, Gold",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Remington Sapphire Luxe Airstyler bietet eine keramische Beschichtung, die mit Saphir angereichert ist. Er hat eine Leistung von 1000 W für schnelles Trocknen und Stylen. Mit verschiedenen Aufsätzen für unterschiedliche Frisuren ist er vielseitig einsetzbar.",
+      "Keywords": "Sapphire Luxe Airstyler",
+      "Materials": "Keramik, Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02230 (1).jpg"
+        },
+        {
+          "filename": "VER02230 (2).jpg"
+        },
+        {
+          "filename": "VER02230 (3).jpg"
+        },
+        {
+          "filename": "VER02230 (4).JPG"
+        },
+        {
+          "filename": "VER02230 (5).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02230 (1).jpg"
+        },
+        {
+          "filename": "VER02230 (4).JPG"
+        },
+        {
+          "filename": "VER02230 (2).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "VER02219": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601670,
+      "Invoice Date": "2026-01-13T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 877965,
+      "ISIN": null,
+      "Supplier Title": "Asic gel NYC Größe 38"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 25.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "asics",
+      "Color": "Weiß Blau",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus einem atmungsaktiven Mesh-Material gefertigt. Sie verfügen über eine gepolsterte Sohle für zusätzlichen Komfort. Die Kombination aus Weiß und Blau verleiht ihnen ein modernes Aussehen.",
+      "Keywords": "asics Sneakers Damen",
+      "Materials": "Mesh, Gummi"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02219 (1).jpg"
+        },
+        {
+          "filename": "VER02219 (2).jpg"
+        },
+        {
+          "filename": "VER02219 (3).jpg"
+        },
+        {
+          "filename": "VER02219 (4).jpg"
+        },
+        {
+          "filename": "VER02219 (5).jpg"
+        },
+        {
+          "filename": "VER02219 (6).jpg"
+        },
+        {
+          "filename": "VER02219 (7).jpg"
+        },
+        {
+          "filename": "VER02219 (8).jpg"
+        },
+        {
+          "filename": "VER02219 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02219 (7).jpg"
+        },
+        {
+          "filename": "VER02219 (5).jpg"
+        },
+        {
+          "filename": "VER02219 (1).jpg"
+        }
+      ]
+    }
+  }
+}

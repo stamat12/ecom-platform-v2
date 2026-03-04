@@ -1,0 +1,92 @@
+{
+  "VER02202": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25122573,
+      "Invoice Date": "2025-12-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 910804,
+      "ISIN": null,
+      "Supplier Title": "Fashion Sandalen Gr. 36"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 2.27
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "None",
+      "Color": "Braun",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Sandalen sind aus braunem Kunstleder gefertigt. Sie haben breite Riemen und eine verstellbare Ferse. Die Sohle ist flach und bietet einen bequemen Tragekomfort.",
+      "Keywords": "Sandalen Damen",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02202 (1).jpg"
+        },
+        {
+          "filename": "VER02202 (2).jpg"
+        },
+        {
+          "filename": "VER02202 (3).jpg"
+        },
+        {
+          "filename": "VER02202 (4).jpg"
+        },
+        {
+          "filename": "VER02202 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02202 (5).jpg"
+        },
+        {
+          "filename": "VER02202 (4).jpg"
+        },
+        {
+          "filename": "VER02202 (1).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "VER02227": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2602108,
+      "Invoice Date": "2026-02-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 915985,
+      "ISIN": null,
+      "Supplier Title": "Zara Handtasche ca 30x23cm,beige-braun"
+    },
+    "Price Data": {
+      "Price Net": 4.17,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 4.77
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Zara",
+      "Color": "Beige Braun",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat eine Kombination aus beigem Stoff und braunem Kunstleder. Sie verfügt über einen langen, verstellbaren Schulterriemen. Die Tasche hat eine schlichte, elegante Form und eignet sich gut für den Alltag.",
+      "Keywords": "Tasche Handtasche Damen",
+      "Materials": "Stoff Kunstleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02227 (1).jpg"
+        },
+        {
+          "filename": "VER02227 (2).jpg"
+        },
+        {
+          "filename": "VER02227 (3).jpg"
+        },
+        {
+          "filename": "VER02227 (4).jpg"
+        },
+        {
+          "filename": "VER02227 (5).jpg"
+        },
+        {
+          "filename": "VER02227 (6).jpg"
+        },
+        {
+          "filename": "VER02227 (7).jpg"
+        },
+        {
+          "filename": "VER02227 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02227 (7).jpg"
+        },
+        {
+          "filename": "VER02227 (5).jpg"
+        },
+        {
+          "filename": "VER02227 (4).jpg"
+        },
+        {
+          "filename": "VER02227 (3).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "VER02207": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601409,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 822626,
+      "ISIN": null,
+      "Supplier Title": "Triumph Triaction BH Größe 75F"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 10.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Triumph",
+      "Color": "Grün",
+      "Size": "75F"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Sport-BH hat ein atmungsaktives Design mit Netzstruktur. Er bietet guten Halt und Komfort während des Trainings. Die Träger sind verstellbar und der BH hat einen elastischen Bund.",
+      "Keywords": "Energy Lite Sport-BH Damen",
+      "Materials": "Polyester, Elasthan"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02207 (1).jpg"
+        },
+        {
+          "filename": "VER02207 (2).jpg"
+        },
+        {
+          "filename": "VER02207 (3).jpg"
+        },
+        {
+          "filename": "VER02207 (4).jpg"
+        },
+        {
+          "filename": "VER02207 (5).jpg"
+        },
+        {
+          "filename": "VER02207 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02207 (4).jpg"
+        },
+        {
+          "filename": "VER02207 (5).jpg"
+        },
+        {
+          "filename": "VER02207 (6).jpg"
+        }
+      ]
+    }
+  }
+}

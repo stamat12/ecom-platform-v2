@@ -1,0 +1,101 @@
+{
+  "VER02203": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25122574,
+      "Invoice Date": "2025-12-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913186,
+      "ISIN": null,
+      "Supplier Title": "About You High Heels Gr 40, Nudefarbe"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 8.93
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ABOUT YOU",
+      "Color": "Nude",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Schuhe sind in einem zarten Nude-Ton gehalten und haben einen eleganten Blockabsatz. Die Riemen sind überkreuzt und sorgen für einen stilvollen Look. Ideal für besondere Anlässe oder festliche Veranstaltungen.",
+      "Keywords": "Schuhe Sandalen Damen",
+      "Materials": "Synthetik"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02203 (1).jpg"
+        },
+        {
+          "filename": "VER02203 (2).jpg"
+        },
+        {
+          "filename": "VER02203 (3).jpg"
+        },
+        {
+          "filename": "VER02203 (4).jpg"
+        },
+        {
+          "filename": "VER02203 (5).jpg"
+        },
+        {
+          "filename": "VER02203 (6).jpg"
+        },
+        {
+          "filename": "VER02203 (7).jpg"
+        },
+        {
+          "filename": "VER02203 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02203 (7).jpg"
+        },
+        {
+          "filename": "VER02203 (3).jpg"
+        },
+        {
+          "filename": "VER02203 (5).jpg"
+        }
+      ]
+    }
+  }
+}

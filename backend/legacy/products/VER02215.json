@@ -1,0 +1,101 @@
+{
+  "VER02215": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601410,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 906567,
+      "ISIN": null,
+      "Supplier Title": "Shock Absorber BH 75E"
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 2.27
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Shock Absorber",
+      "Color": "Schwarz",
+      "Size": "75E"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Sport-BH bietet starken Halt und ist ideal für intensive Aktivitäten. Er hat verstellbare Träger und einen breiten Unterbrustbereich für zusätzlichen Komfort. Das Material ist atmungsaktiv und sorgt für eine gute Feuchtigkeitsregulation.",
+      "Keywords": "Shock Absorber Sport-BH Damen",
+      "Materials": "Polyester, Elasthan"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02215 (1).jpg"
+        },
+        {
+          "filename": "VER02215 (2).jpg"
+        },
+        {
+          "filename": "VER02215 (3).jpg"
+        },
+        {
+          "filename": "VER02215 (4).jpg"
+        },
+        {
+          "filename": "VER02215 (5).jpg"
+        },
+        {
+          "filename": "VER02215 (6).jpg"
+        },
+        {
+          "filename": "VER02215 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02215 (3).jpg"
+        },
+        {
+          "filename": "VER02215 (5).jpg"
+        },
+        {
+          "filename": "VER02215 (7).jpg"
+        },
+        {
+          "filename": "VER02215 (6).jpg"
+        }
+      ]
+    }
+  }
+}

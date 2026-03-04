@@ -1,0 +1,110 @@
+{
+  "VER02208": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601409,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 789402,
+      "ISIN": null,
+      "Supplier Title": "M&S BH Größe 34E"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 5.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "M&S",
+      "Color": "Soft Pink, Black, Navy",
+      "Size": "34E, 75F, 90F"
+    },
+    "Intern Generated Info": {
+      "More details": "Der BH hat gepolsterte Cups und verstellbare Träger. Er ist in verschiedenen Farben erhältlich, darunter Soft Pink, Schwarz und Marineblau. Ideal für den täglichen Gebrauch und bietet guten Halt.",
+      "Keywords": "BH 3 Teil Set Damen",
+      "Materials": "Polyester, Elasthan"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02208 (1).jpg"
+        },
+        {
+          "filename": "VER02208 (10).jpg"
+        },
+        {
+          "filename": "VER02208 (2).jpg"
+        },
+        {
+          "filename": "VER02208 (3).jpg"
+        },
+        {
+          "filename": "VER02208 (4).jpg"
+        },
+        {
+          "filename": "VER02208 (5).jpg"
+        },
+        {
+          "filename": "VER02208 (6).jpg"
+        },
+        {
+          "filename": "VER02208 (7).jpg"
+        },
+        {
+          "filename": "VER02208 (8).jpg"
+        },
+        {
+          "filename": "VER02208 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02208 (8).jpg"
+        },
+        {
+          "filename": "VER02208 (4).jpg"
+        },
+        {
+          "filename": "VER02208 (5).jpg"
+        },
+        {
+          "filename": "VER02208 (6).jpg"
+        }
+      ]
+    }
+  }
+}

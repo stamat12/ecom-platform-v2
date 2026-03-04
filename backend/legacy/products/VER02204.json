@@ -1,0 +1,107 @@
+{
+  "VER02204": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25122574,
+      "Invoice Date": "2025-12-29T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913194,
+      "ISIN": null,
+      "Supplier Title": "Bershka Sneaker Gr 42, grau"
+    },
+    "Price Data": {
+      "Price Net": 5.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 5.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Bershka",
+      "Color": "Grau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe haben eine hohe Sohle und sind aus einem grauen Material gefertigt. Sie verfügen über eine Schnürung mit weißen Schnürsenkeln. Die Oberseite ist eine Kombination aus Textil und Kunstleder.",
+      "Keywords": "Sneakers Unisex",
+      "Materials": "Textil Kunstleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02204 (1).jpg"
+        },
+        {
+          "filename": "VER02204 (10).jpg"
+        },
+        {
+          "filename": "VER02204 (2).jpg"
+        },
+        {
+          "filename": "VER02204 (3).jpg"
+        },
+        {
+          "filename": "VER02204 (4).jpg"
+        },
+        {
+          "filename": "VER02204 (5).jpg"
+        },
+        {
+          "filename": "VER02204 (6).jpg"
+        },
+        {
+          "filename": "VER02204 (7).jpg"
+        },
+        {
+          "filename": "VER02204 (8).jpg"
+        },
+        {
+          "filename": "VER02204 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02204 (7).jpg"
+        },
+        {
+          "filename": "VER02204 (5).jpg"
+        },
+        {
+          "filename": "VER02204 (9).jpg"
+        }
+      ]
+    }
+  }
+}

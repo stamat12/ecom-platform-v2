@@ -1,0 +1,92 @@
+{
+  "VER02225": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2602108,
+      "Invoice Date": "2026-02-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 864485,
+      "ISIN": null,
+      "Supplier Title": "GSG Radjacke Größe M"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 6.43
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Pinarello",
+      "Color": "Blau Rot",
+      "Size": "S"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Trikot hat kurze Ärmel und einen Reißverschluss. Es ist in Blau mit roten Akzenten gestaltet. Auf der Vorderseite sind Logos und Schriftzüge sichtbar.",
+      "Keywords": "Grassinger Trikot Radtrikot Herren",
+      "Materials": "Polyester"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02225 (1).jpg"
+        },
+        {
+          "filename": "VER02225 (2).jpg"
+        },
+        {
+          "filename": "VER02225 (3).jpg"
+        },
+        {
+          "filename": "VER02225 (4).jpg"
+        },
+        {
+          "filename": "VER02225 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02225 (3).jpg"
+        },
+        {
+          "filename": "VER02225 (5).jpg"
+        },
+        {
+          "filename": "VER02225 (1).jpg"
+        }
+      ]
+    }
+  }
+}

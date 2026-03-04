@@ -1,0 +1,101 @@
+{
+  "VER02224": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 26011458,
+      "Invoice Date": "2026-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 878068,
+      "ISIN": null,
+      "Supplier Title": "Nike G.t hustle academy Größe 47"
+    },
+    "Price Data": {
+      "Price Net": 15.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 15.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Nike",
+      "Color": "Rot",
+      "Size": "47"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe haben ein auffälliges rotes Obermaterial mit schwarzen Akzenten. Sie sind für sportliche Aktivitäten konzipiert und bieten guten Halt. Die Sohle ist weiß und sorgt für eine gute Dämpfung.",
+      "Keywords": "G.T. HUSTLE ACADEMY Sneakers Herren",
+      "Materials": "Textil, Gummi"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02224 (1).jpg"
+        },
+        {
+          "filename": "VER02224 (2).jpg"
+        },
+        {
+          "filename": "VER02224 (3).jpg"
+        },
+        {
+          "filename": "VER02224 (4).jpg"
+        },
+        {
+          "filename": "VER02224 (5).jpg"
+        },
+        {
+          "filename": "VER02224 (6).jpg"
+        },
+        {
+          "filename": "VER02224 (7).jpg"
+        },
+        {
+          "filename": "VER02224 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02224 (7).jpg"
+        },
+        {
+          "filename": "VER02224 (5).jpg"
+        },
+        {
+          "filename": "VER02224 (3).jpg"
+        }
+      ]
+    }
+  }
+}

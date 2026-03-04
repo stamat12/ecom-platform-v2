@@ -37,7 +37,7 @@ from app.services.ebay_category_search import search_ebay_categories
 from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
-from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db
+from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db, add_missing_sku_rows_from_excel
 from app.services.db_to_excel_sync import sync_db_to_excel
 from app.services.inventory_cleanup import cleanup_duplicate_skus
 
@@ -2023,6 +2023,15 @@ def sync_excel_to_db_endpoint(request: ExcelToDbSyncRequest):
         message="Sync completed" if all_success else "Sync completed with errors",
         results=results
     )
+
+
+@app.post("/api/excel/add-missing-skus")
+def add_missing_skus_from_excel_endpoint():
+    """Insert missing SKU rows from Excel Inventory sheet into DB inventory table."""
+    result = add_missing_sku_rows_from_excel()
+    if result.get("success"):
+        return result
+    raise HTTPException(status_code=400, detail=result.get("message", "Failed to add missing SKU rows"))
 
 
 @app.post("/api/excel/sync-from-db")

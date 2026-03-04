@@ -1,0 +1,101 @@
+{
+  "VER02205": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601409,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913206,
+      "ISIN": null,
+      "Supplier Title": "Anna Field Damenschuhe Gr 37"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 8.93
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "ANNA FIELD",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese eleganten Schuhe sind aus schwarzem Kunstleder gefertigt. Sie haben eine klassische Form mit einem kleinen Absatz. Die Schuhe sind ideal für formelle Anlässe oder das Büro.",
+      "Keywords": "ANNA FIELD Loafers Damen",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02205 (1).jpg"
+        },
+        {
+          "filename": "VER02205 (2).jpg"
+        },
+        {
+          "filename": "VER02205 (3).jpg"
+        },
+        {
+          "filename": "VER02205 (4).jpg"
+        },
+        {
+          "filename": "VER02205 (5).jpg"
+        },
+        {
+          "filename": "VER02205 (6).jpg"
+        },
+        {
+          "filename": "VER02205 (7).jpg"
+        },
+        {
+          "filename": "VER02205 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02205 (3).jpg"
+        },
+        {
+          "filename": "VER02205 (7).jpg"
+        },
+        {
+          "filename": "VER02205 (1).jpg"
+        }
+      ]
+    }
+  }
+}

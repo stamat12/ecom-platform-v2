@@ -1,0 +1,92 @@
+{
+  "VER02226": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2602108,
+      "Invoice Date": "2026-02-02T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913943,
+      "ISIN": null,
+      "Supplier Title": "Biotherm Homme Day Control"
+    },
+    "Price Data": {
+      "Price Net": 6.67,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 7.27
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Biotherm",
+      "Color": "Blau",
+      "Size": "75 ml"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Set enthält zwei Antitranspirant-Deodorants mit 48 Stunden Schutz. Die Produkte sind in einer umweltfreundlichen Verpackung aus recyceltem Papier. Ideal für den täglichen Gebrauch und für Männer geeignet.",
+      "Keywords": "Biotherm Homme Antitranspirant Herren",
+      "Materials": "Recyceltes Papier, Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02226 (1).jpg"
+        },
+        {
+          "filename": "VER02226 (2).jpg"
+        },
+        {
+          "filename": "VER02226 (3).jpg"
+        },
+        {
+          "filename": "VER02226 (4).jpg"
+        },
+        {
+          "filename": "VER02226 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02226 (3).jpg"
+        },
+        {
+          "filename": "VER02226 (1).jpg"
+        },
+        {
+          "filename": "VER02226 (4).jpg"
+        }
+      ]
+    }
+  }
+}

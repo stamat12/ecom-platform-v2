@@ -274,3 +274,110 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
         import traceback
         traceback.print_exc()
         return {"success": False, "message": f"Error: {str(e)}"}
+
+
+def add_missing_sku_rows_from_excel() -> Dict[str, Any]:
+    """Insert only missing SKU rows from Excel Inventory sheet into DB inventory table.
+
+    Matching key: "SKU (Old)"
+    - Existing SKUs in DB are not modified.
+    - Missing SKUs are inserted with all available Excel columns mapped to DB columns.
+    """
+    sheet_name = "Inventory"
+    table_name = "inventory"
+    sku_col = "SKU (Old)"
+
+    try:
+        df = pd.read_excel(config.INVENTORY_FILE_PATH, sheet_name=sheet_name)
+        if df.empty:
+            return {"success": False, "message": f"Sheet '{sheet_name}' is empty"}
+        if sku_col not in df.columns:
+            return {"success": False, "message": f"Column '{sku_col}' not found in sheet '{sheet_name}'"}
+
+        db_path = _get_db_path()
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+
+        try:
+            table_check = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
+                (table_name,)
+            ).fetchone()
+            if not table_check:
+                return {"success": False, "message": f"Table '{table_name}' not found in database"}
+
+            table_info = conn.execute(f"PRAGMA table_info({table_name})").fetchall()
+            db_columns = [r[1] for r in table_info]
+            db_columns_set = set(db_columns)
+            if sku_col not in db_columns_set:
+                return {"success": False, "message": f"Column '{sku_col}' not found in DB table '{table_name}'"}
+
+            existing_rows = conn.execute(f'SELECT "{sku_col}" FROM "{table_name}"').fetchall()
+            existing_skus = {
+                str(row[sku_col]).strip()
+                for row in existing_rows
+                if row[sku_col] is not None and str(row[sku_col]).strip()
+            }
+
+            rows_inserted = 0
+            rows_failed = 0
+            rows_existing = 0
+            rows_invalid_sku = 0
+
+            for idx, (_, row) in enumerate(df.iterrows()):
+                raw_sku = row.get(sku_col)
+                if pd.isna(raw_sku) or str(raw_sku).strip() == "":
+                    rows_invalid_sku += 1
+                    continue
+
+                sku_value = str(raw_sku).strip()
+                if sku_value in existing_skus:
+                    rows_existing += 1
+                    continue
+
+                try:
+                    insert_values: Dict[str, Any] = {}
+                    for db_col in db_columns:
+                        if db_col in df.columns:
+                            val = row[db_col]
+                            if pd.isna(val):
+                                val = None
+                            elif hasattr(val, "isoformat"):
+                                val = val.isoformat()
+                            insert_values[db_col] = val
+                        else:
+                            insert_values[db_col] = None
+
+                    cols_str = ", ".join([f'"{col}"' for col in insert_values.keys()])
+                    placeholders = ", ".join(["?" for _ in insert_values])
+                    conn.execute(
+                        f'INSERT INTO "{table_name}" ({cols_str}) VALUES ({placeholders})',
+                        list(insert_values.values())
+                    )
+
+                    existing_skus.add(sku_value)
+                    rows_inserted += 1
+                except Exception as e:
+                    print(f"[ADD MISSING SKU] Row {idx} failed: {e}")
+                    rows_failed += 1
+
+            conn.commit()
+            excel_inventory.invalidate()
+
+            return {
+                "success": True,
+                "message": f"Added {rows_inserted} missing SKU row(s) from Excel to DB",
+                "rows_inserted": rows_inserted,
+                "rows_existing": rows_existing,
+                "rows_invalid_sku": rows_invalid_sku,
+                "rows_failed": rows_failed,
+                "sheet": sheet_name,
+                "table": table_name,
+            }
+        finally:
+            conn.close()
+    except Exception as e:
+        print(f"[ADD MISSING SKU] Error: {e}")
+        import traceback
+        traceback.print_exc()
+        return {"success": False, "message": f"Error: {str(e)}"}

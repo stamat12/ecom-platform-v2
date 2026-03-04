@@ -1,0 +1,95 @@
+{
+  "VER02201": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25121637,
+      "Invoice Date": "2025-12-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913019,
+      "ISIN": null,
+      "Supplier Title": "Veggie Slicer 16in1 Set"
+    },
+    "Price Data": {
+      "Price Net": 5.83,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 6.43
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Kitchen Ideas",
+      "Color": "Grün",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Gemüseschneider-Set mit 16 Teilen. Es enthält verschiedene Klingen und Zubehörteile für das Schneiden und Reiben von Gemüse. Die Klingen sind scharf und sollten von kleinen Kindern ferngehalten werden.",
+      "Keywords": "Gemüseschneider Set Küchenutensilien",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02201 (1).JPG"
+        },
+        {
+          "filename": "VER02201 (2).jpg"
+        },
+        {
+          "filename": "VER02201 (3).jpg"
+        },
+        {
+          "filename": "VER02201 (4).jpg"
+        },
+        {
+          "filename": "VER02201 (5).JPG"
+        },
+        {
+          "filename": "VER02201 (6).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02201 (2).jpg"
+        },
+        {
+          "filename": "VER02201 (3).jpg"
+        },
+        {
+          "filename": "VER02201 (6).JPG"
+        }
+      ]
+    }
+  }
+}

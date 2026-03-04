@@ -1,0 +1,107 @@
+{
+  "VER02206": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601409,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913226,
+      "ISIN": null,
+      "Supplier Title": "Zara Männerschuhe Gr 45, braun"
+    },
+    "Price Data": {
+      "Price Net": 8.33,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 8.93
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Zara",
+      "Color": "Beige",
+      "Size": "45"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Schuhe sind aus weichem Wildleder gefertigt und haben eine bequeme Slip-On-Form. Sie verfügen über eine weiße Gummisohle, die für guten Halt sorgt. Ideal für lässige Anlässe und den Alltag.",
+      "Keywords": "Moccasins Herren",
+      "Materials": "Wildleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02206 (1).jpg"
+        },
+        {
+          "filename": "VER02206 (2).jpg"
+        },
+        {
+          "filename": "VER02206 (3).jpg"
+        },
+        {
+          "filename": "VER02206 (4).jpg"
+        },
+        {
+          "filename": "VER02206 (5).jpg"
+        },
+        {
+          "filename": "VER02206 (6).jpg"
+        },
+        {
+          "filename": "VER02206 (7).jpg"
+        },
+        {
+          "filename": "VER02206 (8).jpg"
+        },
+        {
+          "filename": "VER02206 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02206 (7).jpg"
+        },
+        {
+          "filename": "VER02206 (4).jpg"
+        },
+        {
+          "filename": "VER02206 (8).jpg"
+        },
+        {
+          "filename": "VER02206 (9).jpg"
+        }
+      ]
+    }
+  }
+}

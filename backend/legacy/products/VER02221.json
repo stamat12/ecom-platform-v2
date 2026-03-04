@@ -1,0 +1,104 @@
+{
+  "VER02221": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601670,
+      "Invoice Date": "2026-01-13T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 877983,
+      "ISIN": null,
+      "Supplier Title": "Asics gel NYC Sneaker Größe 40"
+    },
+    "Price Data": {
+      "Price Net": 25.0,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 25.6
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "asics",
+      "Color": "Weiß/Blau",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Sneakers haben ein modernes Design mit einer Kombination aus Mesh- und Wildledermaterialien. Die Sohle bietet eine gute Dämpfung und Unterstützung. Ideal für den Alltag oder sportliche Aktivitäten.",
+      "Keywords": "GEL-NYC Sneakers Damen",
+      "Materials": "Mesh, Wildleder"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02221 (1).jpg"
+        },
+        {
+          "filename": "VER02221 (2).jpg"
+        },
+        {
+          "filename": "VER02221 (3).jpg"
+        },
+        {
+          "filename": "VER02221 (4).jpg"
+        },
+        {
+          "filename": "VER02221 (5).jpg"
+        },
+        {
+          "filename": "VER02221 (6).jpg"
+        },
+        {
+          "filename": "VER02221 (7).jpg"
+        },
+        {
+          "filename": "VER02221 (8).jpg"
+        },
+        {
+          "filename": "VER02221 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02221 (7).jpg"
+        },
+        {
+          "filename": "VER02221 (5).jpg"
+        },
+        {
+          "filename": "VER02221 (3).jpg"
+        }
+      ]
+    }
+  }
+}

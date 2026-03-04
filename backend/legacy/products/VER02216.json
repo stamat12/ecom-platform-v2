@@ -1,0 +1,86 @@
+{
+  "VER02216": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601410,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 873412,
+      "ISIN": null,
+      "Supplier Title": "DUAIU Make-Up Pinsel Set 16 Stk."
+    },
+    "Price Data": {
+      "Price Net": 1.67,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 2.27
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "DUAIU",
+      "Color": "Weiß mit Marmorierung",
+      "Size": "None"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Set besteht aus mehreren Make-up-Pinseln mit einem eleganten Design. Die Griffe sind in einem marmorierten Weiß mit roségoldenen Akzenten gehalten. Die Pinsel sind für verschiedene Anwendungen geeignet, darunter Foundation, Lidschatten und Augenbrauen.",
+      "Keywords": "Make-up Pinsel Set",
+      "Materials": "Kunststoff, synthetische Borsten"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02216 (1).jpg"
+        },
+        {
+          "filename": "VER02216 (2).jpg"
+        },
+        {
+          "filename": "VER02216 (3).jpg"
+        },
+        {
+          "filename": "VER02216 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02216 (3).jpg"
+        },
+        {
+          "filename": "VER02216 (1).jpg"
+        }
+      ]
+    }
+  }
+}
