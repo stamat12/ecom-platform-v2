@@ -44,7 +44,7 @@
       "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": ""
     },
     "Images": {
       "schema_version": "1.0",
@@ -170,6 +170,13 @@
         "Net Profit": "9.223109243697483",
         "Net Profit Margin": "101.24159433257391"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Verlängerungskabelbox",
+      "Product Model": "",
+      "Keyword 1": "Wasserdichte Kabelbox",
+      "Keyword 2": "Schutzbox für Kabel",
+      "Keyword 3": "Kabelschutzbox"
     }
   }
 }

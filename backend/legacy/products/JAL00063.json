@@ -1,0 +1,95 @@
+{
+  "JAL00063": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNRP026972192",
+      "ISIN": "b07c3xpp6d",
+      "Supplier Title": "Traditional men's leather trousers short with suspenders size 46-60 traditional leather trousers - traditional leather trousers for men - Oktoberfest leather trousers - leather trousers - traditional men (50, black)"
+    },
+    "Price Data": {
+      "Price Net": 4.36,
+      "Shipping Net": 0.97,
+      "Total Cost Net": 5.33
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Gloria Wears",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "55.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 020"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 2,
+        "count_phone": 8,
+        "count_enhanced": 0
+      },
+      "stock": [
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "1.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00063 (1).jpg"
+        },
+        {
+          "filename": "JAL00063 (2).jpg"
+        },
+        {
+          "filename": "JAL00063 (3).jpg"
+        },
+        {
+          "filename": "JAL00063 (4).jpg"
+        },
+        {
+          "filename": "JAL00063 (5).jpg"
+        },
+        {
+          "filename": "JAL00063 (6).jpg"
+        },
+        {
+          "filename": "JAL00063 (7).jpg"
+        },
+        {
+          "filename": "JAL00063 (8).jpg"
+        }
+      ],
+      "enhanced": []
+    }
+  }
+}

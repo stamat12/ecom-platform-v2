@@ -115,18 +115,35 @@
       ]
     },
     "eBay Fields": {
-      "required": {},
+      "required": {
+        "Modell": "Veggie Slicer"
+      },
       "optional": {
         "Marke": "Kitchen Ideas",
-        "Produktart": "Gemüseschneider Set",
-        "Farbe": "Grün",
-        "Anzahl der Scheiben": "1",
         "Stromquelle": "Manuell",
         "Material": "Kunststoff, Metall",
+        "Produktart": "Gemüseschneider Set",
+        "Farbe": "Grün",
         "Bestandteile inbegriffen": "Klingen, Handprotektor, Reibe, Schaber, Aufbewahrungsbehälter",
+        "Leistung": "",
+        "Herstellergarantie": "",
+        "Herstellernummer": "",
         "Geeignete Lebensmittel": "Gemüse",
         "Besonderheiten": "Multifunktional",
-        "Set enthält": "16 Teile"
+        "Anzahl der Scheiben": "1",
+        "Breite": "",
+        "Ursprungsland": "",
+        "Set enthält": "16 Teile",
+        "Anzahl der Bleche": "",
+        "Gedeck für": "",
+        "Tiefe": "",
+        "Höhe": "",
+        "Gewicht": "",
+        "Klingenlänge": "",
+        "Spannung": "",
+        "Kabellänge": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": ""
       }
     },
     "eBay SEO": {

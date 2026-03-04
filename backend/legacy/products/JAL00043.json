@@ -1,0 +1,144 @@
+{
+  "JAL00043": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc57Om6JL",
+      "ISIN": "b0d6vrv6rp",
+      "Supplier Title": "Sosenfer Slip-on Men's Shoes Sports Shoes Running Shoes Outdoor Casual Shoes Mesh Sneakers Lightweight Breathable Non-Slip Gym Jogging Shoes-HEISE-SHENHUIDI-43"
+    },
+    "Price Data": {
+      "Price Net": 2.48,
+      "Shipping Net": 0.72,
+      "Total Cost Net": 3.19
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Sosenfer",
+      "Color": "Schwarz",
+      "Size": "43"
+    },
+    "Intern Generated Info": {
+      "More details": "Slip-on Herrenschuhe mit atmungsaktivem Mesh-Obermaterial und rutschfester Sohle.",
+      "Keywords": "Sportschuhe Leicht Atmungsaktiv",
+      "Materials": "Obermaterial: Mesh, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": "41.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 20,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "JAL00043 (10).jpg"
+        },
+        {
+          "filename": "JAL00043 (11).jpg"
+        },
+        {
+          "filename": "JAL00043 (12).jpg"
+        },
+        {
+          "filename": "JAL00043 (13).jpg"
+        },
+        {
+          "filename": "JAL00043 (14).jpg"
+        },
+        {
+          "filename": "JAL00043 (15).jpg"
+        },
+        {
+          "filename": "JAL00043 (16).jpg"
+        },
+        {
+          "filename": "JAL00043 (17).jpg"
+        },
+        {
+          "filename": "JAL00043 (18).jpg"
+        },
+        {
+          "filename": "JAL00043 (19).jpg"
+        },
+        {
+          "filename": "JAL00043 (2).jpg"
+        },
+        {
+          "filename": "JAL00043 (20).jpg"
+        },
+        {
+          "filename": "JAL00043 (3).jpg"
+        },
+        {
+          "filename": "JAL00043 (4).jpg"
+        },
+        {
+          "filename": "JAL00043 (5).jpg"
+        },
+        {
+          "filename": "JAL00043 (6).jpg"
+        },
+        {
+          "filename": "JAL00043 (7).jpg"
+        },
+        {
+          "filename": "JAL00043 (8).jpg"
+        },
+        {
+          "filename": "JAL00043 (9).jpg"
+        },
+        {
+          "filename": "JAL00043 (1).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

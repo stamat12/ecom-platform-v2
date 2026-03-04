@@ -7,6 +7,7 @@ import json
 import logging
 import os
 import re
+import time
 import requests
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -56,7 +57,21 @@ def _safe_prompt_replace(template: str, replacements: Dict[str, Any]) -> str:
     for key, value in (replacements or {}).items():
         text = text.replace(f"{{{key}}}", "" if value is None else str(value))
     return text
-logger = logging.getLogger(__name__)
+
+
+def _is_transient_upload_error(error: Exception) -> bool:
+    if isinstance(error, (requests.exceptions.SSLError, requests.exceptions.ConnectionError, requests.exceptions.Timeout)):
+        return True
+    message = str(error).lower()
+    transient_markers = (
+        "eof occurred in violation of protocol",
+        "max retries exceeded",
+        "connection reset",
+        "connection aborted",
+        "timed out",
+        "temporarily unavailable",
+    )
+    return any(marker in message for marker in transient_markers)
 
 def _setup_file_logging() -> None:
     """Configure file logging for eBay listing flow."""
@@ -151,31 +166,54 @@ def upload_picture_to_ebay(image_path: Path) -> str:
     # Build headers without Content-Type (let requests set multipart)
     headers = _build_headers("UploadSiteHostedPictures")
     headers.pop("Content-Type", None)
-    
-    # Send multipart/form-data
-    with image_path.open("rb") as f:
-        files = {
-            "XML Payload": (None, xml_body, "text/xml; charset=utf-8"),
-            "file": (image_path.name, f, "application/octet-stream"),
-        }
-        response = requests.post(
-            endpoint,
-            headers=headers,
-            files=files,
-            timeout=60,
-        )
-    
-    response.raise_for_status()
-    text = response.text
-    
-    # Parse FullURL from response
-    m = re.search(r"<FullURL>(.*?)</FullURL>", text)
-    if not m:
-        raise RuntimeError(f"Could not find FullURL in eBay response: {text[:500]}")
-    
-    full_url = m.group(1).strip()
-    logger.info(f"Uploaded image {image_path.name} to EPS: {full_url[:50]}...")
-    return full_url
+    headers["Connection"] = "close"
+
+    max_attempts = max(1, int(os.getenv("EBAY_UPLOAD_RETRIES", "3")))
+    last_error: Optional[Exception] = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            # Send multipart/form-data
+            with image_path.open("rb") as f:
+                files = {
+                    "XML Payload": (None, xml_body, "text/xml; charset=utf-8"),
+                    "file": (image_path.name, f, "application/octet-stream"),
+                }
+                response = requests.post(
+                    endpoint,
+                    headers=headers,
+                    files=files,
+                    timeout=(20, 90),
+                )
+
+            response.raise_for_status()
+            text = response.text
+
+            # Parse FullURL from response
+            m = re.search(r"<FullURL>(.*?)</FullURL>", text)
+            if not m:
+                raise RuntimeError(f"Could not find FullURL in eBay response: {text[:500]}")
+
+            full_url = m.group(1).strip()
+            logger.info(f"Uploaded image {image_path.name} to EPS: {full_url[:50]}...")
+            return full_url
+        except Exception as error:
+            last_error = error
+            if attempt < max_attempts and _is_transient_upload_error(error):
+                wait_seconds = min(8.0, 1.5 * (2 ** (attempt - 1)))
+                logger.warning(
+                    "Transient EPS upload error for %s (attempt %s/%s): %s. Retrying in %.1fs",
+                    image_path.name,
+                    attempt,
+                    max_attempts,
+                    error,
+                    wait_seconds,
+                )
+                time.sleep(wait_seconds)
+                continue
+            raise
+
+    raise RuntimeError(f"Failed to upload image {image_path.name}: {last_error}")
 
 
 def upload_images_for_sku(
@@ -1098,32 +1136,66 @@ def create_listing(
     picture_lines.append("</PictureDetails>")
     picture_details_xml = "\n    ".join(picture_lines)
     
+    # Resolve EAN from request first, then JSON fallbacks
+    ean_section = product_json.get("EAN", {}) if isinstance(product_json.get("EAN", {}), dict) else {}
+    request_ean_clean = "" if ean is None else str(ean).strip()
+    json_ean_clean = "" if ean_section.get("EAN") is None else str(ean_section.get("EAN")).strip()
+
+    resolved_ean = request_ean_clean or json_ean_clean
+
     # Build item specifics XML
-    item_specifics_lines = ["<ItemSpecifics>"]
-    required_fields = ebay_fields.get("required", {})
-    optional_fields = ebay_fields.get("optional", {})
-    
-    # Add EAN if provided (important for many eBay categories)
-    if ean:
-        required_fields = dict(required_fields)  # Make a copy
-        required_fields["EAN"] = ean
-    
-    for name, value in required_fields.items():
-        if value:
-            item_specifics_lines.append("  <NameValueList>")
-            item_specifics_lines.append(f"    <Name>{html.escape(str(name))}</Name>")
-            item_specifics_lines.append(f"    <Value>{html.escape(str(value))}</Value>")
-            item_specifics_lines.append("  </NameValueList>")
-    
-    for name, value in optional_fields.items():
-        if value:
-            item_specifics_lines.append("  <NameValueList>")
-            item_specifics_lines.append(f"    <Name>{html.escape(str(name))}</Name>")
-            item_specifics_lines.append(f"    <Value>{html.escape(str(value))}</Value>")
-            item_specifics_lines.append("  </NameValueList>")
-    
-    item_specifics_lines.append("</ItemSpecifics>")
-    item_specifics_xml = "\n    ".join(item_specifics_lines)
+    required_fields = dict(ebay_fields.get("required", {}) or {})
+    optional_fields = dict(ebay_fields.get("optional", {}) or {})
+
+    # EAN must be sent only in ProductListingDetails, not in ItemSpecifics
+    required_fields.pop("EAN", None)
+    optional_fields.pop("EAN", None)
+
+    def _build_item_specifics_xml(
+        required_values: Dict[str, Any],
+        optional_values: Dict[str, Any],
+    ) -> str:
+        lines = ["<ItemSpecifics>"]
+
+        for name, value in (required_values or {}).items():
+            value_text = "" if value is None else str(value).strip()
+            if value_text:
+                lines.append("  <NameValueList>")
+                lines.append(f"    <Name>{html.escape(str(name))}</Name>")
+                lines.append(f"    <Value>{html.escape(value_text)}</Value>")
+                lines.append("  </NameValueList>")
+
+        for name, value in (optional_values or {}).items():
+            value_text = "" if value is None else str(value).strip()
+            if value_text:
+                lines.append("  <NameValueList>")
+                lines.append(f"    <Name>{html.escape(str(name))}</Name>")
+                lines.append(f"    <Value>{html.escape(value_text)}</Value>")
+                lines.append("  </NameValueList>")
+
+        lines.append("</ItemSpecifics>")
+        return "\n    ".join(lines)
+
+    item_specifics_xml = _build_item_specifics_xml(required_fields, optional_fields)
+
+    def _normalize_identifier_value(raw: Any) -> str:
+        if raw is None:
+            return ""
+        value = str(raw).strip()
+        return value
+
+    def _build_product_listing_details_xml(ean_value: Any) -> str:
+        clean = _normalize_identifier_value(ean_value)
+        if not clean:
+            return ""
+        return (
+            "<ProductListingDetails>"
+            f"<EAN>{html.escape(clean)}</EAN>"
+            "</ProductListingDetails>"
+        )
+
+    listing_details_ean = resolved_ean if resolved_ean else "Does not apply"
+    product_listing_details_xml = _build_product_listing_details_xml(listing_details_ean)
     
     # Get manufacturer info
     brand = product_info.get("Brand", "").strip()
@@ -1156,11 +1228,12 @@ def create_listing(
         <BestOfferEnabled>true</BestOfferEnabled>
     </BestOfferDetails>"""
     
-        condition_desc_xml = ""
-        if condition_desc_clean:
-                condition_desc_xml = f"<ConditionDescription>{html.escape(condition_desc_clean)}</ConditionDescription>"
+    condition_desc_xml = ""
+    if condition_desc_clean:
+        condition_desc_xml = f"<ConditionDescription>{html.escape(condition_desc_clean)}</ConditionDescription>"
 
-        xml_body = f"""<?xml version="1.0" encoding="utf-8"?>
+    def _build_add_fixed_price_item_xml(item_specifics_value: str, product_listing_details_value: str = "") -> str:
+        return f"""<?xml version="1.0" encoding="utf-8"?>
 <AddFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
   <RequesterCredentials>
     <eBayAuthToken>{token}</eBayAuthToken>
@@ -1179,6 +1252,7 @@ def create_listing(
     <CategoryMappingAllowed>true</CategoryMappingAllowed>
     <ConditionID>{condition_id}</ConditionID>
         {condition_desc_xml}
+    {product_listing_details_value}
 
     <Country>{LOCATION_COUNTRY}</Country>
     <Location>{LOCATION_CITY}</Location>
@@ -1205,44 +1279,66 @@ def create_listing(
     <Quantity>{quantity}</Quantity>
     {manufacturer_xml}
     {picture_details_xml}
-    {item_specifics_xml}
+    {item_specifics_value}
   </Item>
 </AddFixedPriceItemRequest>"""
-    
-    # Send request
-    headers = _build_headers("AddFixedPriceItem")
-    response = requests.post(endpoint, headers=headers, data=xml_body.encode("utf-8"), timeout=60)
-    response.raise_for_status()
-    text = response.text
-    
-    # Parse response
-    ack_m = re.search(r"<Ack>(.*?)</Ack>", text)
-    ack = ack_m.group(1).strip() if ack_m else "Failure"
-    item_m = re.search(r"<ItemID>(.*?)</ItemID>", text)
-    item_id = item_m.group(1).strip() if item_m else None
-    
-    success = ack in ("Success", "Warning")
-    
-    warnings = []
-    errors = []
-    
-    # Parse errors/warnings
-    if not success or ack == "Warning":
-        error_blocks = re.findall(r"<Errors>(.*?)</Errors>", text, flags=re.DOTALL)
-        for block in error_blocks:
-            severity_m = re.search(r"<SeverityCode>(.*?)</SeverityCode>", block)
-            severity = severity_m.group(1).strip() if severity_m else "Error"
-            
-            sm = re.search(r"<ShortMessage>(.*?)</ShortMessage>", block)
-            lm = re.search(r"<LongMessage>(.*?)</LongMessage>", block)
-            code_m = re.search(r"<ErrorCode>(.*?)</ErrorCode>", block)
-            
-            error_msg = f"Code {code_m.group(1) if code_m else '?'}: {lm.group(1) if lm else sm.group(1) if sm else 'Unknown error'}"
-            
-            if severity == "Warning":
-                warnings.append(error_msg)
-            else:
-                errors.append(error_msg)
+
+    def _send_add_fixed_price_item(item_specifics_value: str, product_listing_details_value: str = "") -> Dict[str, Any]:
+        xml_body = _build_add_fixed_price_item_xml(item_specifics_value, product_listing_details_value)
+        headers = _build_headers("AddFixedPriceItem")
+        response = requests.post(endpoint, headers=headers, data=xml_body.encode("utf-8"), timeout=60)
+        response.raise_for_status()
+        text = response.text
+
+        ack_m = re.search(r"<Ack>(.*?)</Ack>", text)
+        ack = ack_m.group(1).strip() if ack_m else "Failure"
+        item_m = re.search(r"<ItemID>(.*?)</ItemID>", text)
+        item_id = item_m.group(1).strip() if item_m else None
+        success = ack in ("Success", "Warning")
+
+        warnings: List[str] = []
+        errors: List[str] = []
+
+        if not success or ack == "Warning":
+            error_blocks = re.findall(r"<Errors>(.*?)</Errors>", text, flags=re.DOTALL)
+            for block in error_blocks:
+                severity_m = re.search(r"<SeverityCode>(.*?)</SeverityCode>", block)
+                severity = severity_m.group(1).strip() if severity_m else "Error"
+
+                sm = re.search(r"<ShortMessage>(.*?)</ShortMessage>", block)
+                lm = re.search(r"<LongMessage>(.*?)</LongMessage>", block)
+                code_m = re.search(r"<ErrorCode>(.*?)</ErrorCode>", block)
+
+                error_msg = f"Code {code_m.group(1) if code_m else '?'}: {lm.group(1) if lm else sm.group(1) if sm else 'Unknown error'}"
+
+                if severity == "Warning":
+                    warnings.append(error_msg)
+                else:
+                    errors.append(error_msg)
+
+        return {
+            "success": success,
+            "item_id": item_id,
+            "warnings": warnings,
+            "errors": errors,
+        }
+
+    logger.info(
+        "Identifier payload for SKU %s: request_ean='%s', json_ean='%s', resolved_ean='%s', sent_product_listing_details_ean='%s'",
+        sku,
+        request_ean_clean,
+        json_ean_clean,
+        resolved_ean,
+        listing_details_ean,
+    )
+    call_result = _send_add_fixed_price_item(item_specifics_xml, product_listing_details_xml)
+
+    success = bool(call_result.get("success"))
+    item_id = call_result.get("item_id")
+    warnings = list(call_result.get("warnings", []))
+    errors = list(call_result.get("errors", []))
+
+    # No retry cascade for EAN fallback: payload already includes real EAN or 'Does not apply'
     
     if success:
         logger.info(f"Successfully created listing for SKU {sku}, ItemID: {item_id}")

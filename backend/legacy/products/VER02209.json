@@ -125,16 +125,36 @@
         "Größe": "46",
         "Abteilung": "Damen",
         "Farbe": "Hellblau",
-        "Stil": "Weites Bein"
+        "Stil": "Weites Bein",
+        "Schrittlänge": "80 cm"
       },
       "optional": {
         "Produktart": "Jeans",
+        "Taillenumfang": "",
         "Passform": "Relaxed",
-        "Bundhöhe": "Mittel (21,5-26,5 cm)",
-        "Material": "Denim",
         "Modell": "Barrel",
+        "Besonderheiten": "",
+        "Gewebeart": "",
+        "Produktlinie": "",
+        "Thema": "",
+        "Material": "Denim",
+        "Größenkategorie": "",
         "Verschluss": "Knopf",
-        "Taschenart": "Five-Pocket-Style"
+        "Vintage": "",
+        "Ursprungsland": "",
+        "Jahreszeit": "",
+        "Akzente": "",
+        "Muster": "",
+        "Waschung": "",
+        "Taschenart": "Five-Pocket-Style",
+        "Textilpflege": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Bundhöhe": "Mittel (21,5-26,5 cm)",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
       }
     },
     "eBay SEO": {

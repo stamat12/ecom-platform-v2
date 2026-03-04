@@ -18,7 +18,7 @@
     },
     "Ebay Category": {
       "Category": "/Uhren & Schmuck/Uhren, -teile & -zubehör/Armband- & Taschenuhren/Armbanduhren",
-      "eBay Category ID": 31387
+      "eBay Category ID": "31387"
     },
     "EAN": {
       "EAN": ""
@@ -41,7 +41,7 @@
       "OP": "46.0"
     },
     "Status": {
-      "Status": null
+      "Status": ""
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -267,6 +267,13 @@
         "Net Profit": "15.574117647058822",
         "Net Profit Margin": "381.7185697808535"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Digitaluhr",
+      "Product Model": "",
+      "Keyword 1": "Wasserdichte Uhr",
+      "Keyword 2": "Multifunktionsuhr",
+      "Keyword 3": "Alarmuhr"
     }
   }
 }

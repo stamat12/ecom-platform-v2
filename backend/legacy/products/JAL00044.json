@@ -1,0 +1,50 @@
+{
+  "JAL00044": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU323701-47-53-271025020232",
+      "Invoice Date": "27.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spLc57Om6JL",
+      "ISIN": "b0d6vv4gfy",
+      "Supplier Title": "Sosenfer Slip-on Men's Shoes Sports Shoes Running Shoes Outdoor Casual Shoes Mesh Sneakers Lightweight Breathable Non-Slip Gym Jogging Shoes-SHENHUI-43"
+    },
+    "Price Data": {
+      "Price Net": 2.48,
+      "Shipping Net": 0.72,
+      "Total Cost Net": 3.19
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Sosenfer",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "Sportschuhe Leicht Atmungsaktiv",
+      "Materials": "Obermaterial: Mesh, Laufsohle: Gummi"
+    },
+    "OP": {
+      "OP": "41.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "JAL00070": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "spL1ii194ol",
+      "ISIN": "b0d924jkpv",
+      "Supplier Title": "RUNBO 4-in-1 pH Meter Water – pH/TDS/EC/Temperature Meter for Aquarium, Pool, Drinking Water"
+    },
+    "Price Data": {
+      "Price Net": 0.97,
+      "Shipping Net": 0.21,
+      "Total Cost Net": 1.17
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Runbo",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "25.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00070 (1).jpg"
+        },
+        {
+          "filename": "JAL00070 (2).jpg"
+        },
+        {
+          "filename": "JAL00070 (3).jpg"
+        },
+        {
+          "filename": "JAL00070 (4).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        },
+        {
+          "filename": "JAL00070 (1).jpg"
+        },
+        {
+          "filename": "JAL00070 (2).jpg"
+        },
+        {
+          "filename": "JAL00070 (3).jpg"
+        }
+      ]
+    }
+  }
+}
