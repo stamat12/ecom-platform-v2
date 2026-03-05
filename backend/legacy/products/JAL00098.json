@@ -21,7 +21,7 @@
       "eBay Category ID": "141482"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
@@ -41,7 +41,7 @@
       "OP": "76.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -145,7 +145,103 @@
         {
           "filename": "JAL00098 (7).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pKsAAeSwm1lpqNF1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pt4AAeSwscxpqNF2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~jwAAeSwzNJpqNF4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nkcAAeSwqAhpqNF5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/oIQAAeSwyAtpqNF7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/o50AAeSw59dpqNF-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nmoAAeSwVqdpqNGA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (15).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BAEAAeSwI0FpqNGF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (14).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/veEAAeSwqg1pqNGI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (11).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/u0YAAeSw4JZpqNGK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (12).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xtcAAeSwGvtpqNGN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00098 (1).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7EgAAeSw82FpqNGR/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Produktart": "Digital",
+        "Modell": "IBS-M2",
+        "Marke": "Inkbird",
+        "Material": "Kunststoff",
+        "Farbe": "Weiß",
+        "Ursprungsland": "China",
+        "Anzahl der Einheiten": "2",
+        "Besonderheiten": "App Support, Instant Alarm Notifications",
+        "Angezeigte Messwerte": "Temperatur",
+        "Maßsystem": "Celsius",
+        "Messtechnik": "Elektrisch",
+        "Stromquelle": "Batterie"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Poolthermometer",
+      "Product Model": "IBS-M2",
+      "Keyword 1": "Wassertemperaturmesser",
+      "Keyword 2": "digitales Thermometer",
+      "Keyword 3": "WiFi Thermometer"
     }
   }
 }

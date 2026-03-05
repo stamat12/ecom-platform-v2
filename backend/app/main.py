@@ -1647,11 +1647,32 @@ def create_ebay_listing(request: CreateListingRequest):
 @app.post("/api/ebay/listings/batch", response_model=BatchCreateListingResponse)
 def create_ebay_listings_batch(request: BatchCreateListingRequest):
     """Create multiple eBay listings"""
+    batch_id = uuid4().hex[:10]
+    ebay_listing.logger.info(
+        "[BATCH %s] /api/ebay/listings/batch received: total=%s stop_on_error=%s",
+        batch_id,
+        len(request.listings or []),
+        bool(request.stop_on_error),
+    )
+
     results = []
     successful = 0
     failed = 0
     
-    for listing_req in request.listings:
+    for idx, listing_req in enumerate(request.listings or [], start=1):
+        ebay_listing.logger.info(
+            "[BATCH %s] Processing %s/%s sku=%s price=%s qty=%s condition_id=%s schedule_days=%s has_ean=%s has_modified_sku=%s",
+            batch_id,
+            idx,
+            len(request.listings or []),
+            listing_req.sku,
+            listing_req.price,
+            listing_req.quantity,
+            listing_req.condition_id,
+            listing_req.schedule_days,
+            bool((listing_req.ean or "").strip() if isinstance(listing_req.ean, str) else listing_req.ean),
+            bool((listing_req.ebay_sku or "").strip() if isinstance(listing_req.ebay_sku, str) else listing_req.ebay_sku),
+        )
         try:
             result = ebay_listing.create_listing(
                 sku=listing_req.sku,
@@ -1672,11 +1693,35 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
             
             if result.get("success"):
                 successful += 1
+                ebay_listing.logger.info(
+                    "[BATCH %s] SUCCESS sku=%s item_id=%s",
+                    batch_id,
+                    listing_req.sku,
+                    result.get("item_id"),
+                )
             else:
                 failed += 1
+                ebay_listing.logger.error(
+                    "[BATCH %s] FAILED sku=%s message=%s errors=%s",
+                    batch_id,
+                    listing_req.sku,
+                    result.get("message"),
+                    result.get("errors"),
+                )
                 if request.stop_on_error:
+                    ebay_listing.logger.warning(
+                        "[BATCH %s] stop_on_error triggered after sku=%s",
+                        batch_id,
+                        listing_req.sku,
+                    )
                     break
         except Exception as e:
+            ebay_listing.logger.exception(
+                "[BATCH %s] EXCEPTION sku=%s: %s",
+                batch_id,
+                listing_req.sku,
+                e,
+            )
             results.append(CreateListingResponse(
                 success=False,
                 sku=listing_req.sku,
@@ -1685,9 +1730,14 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
             ))
             failed += 1
             if request.stop_on_error:
+                ebay_listing.logger.warning(
+                    "[BATCH %s] stop_on_error triggered by exception at sku=%s",
+                    batch_id,
+                    listing_req.sku,
+                )
                 break
-    
-    return BatchCreateListingResponse(
+
+    response = BatchCreateListingResponse(
         success=successful > 0,
         total_count=len(request.listings),
         successful_count=successful,
@@ -1695,6 +1745,17 @@ def create_ebay_listings_batch(request: BatchCreateListingRequest):
         results=results,
         message=f"Created {successful} listings, {failed} failed"
     )
+
+    ebay_listing.logger.info(
+        "[BATCH %s] Completed: success=%s total=%s successful=%s failed=%s",
+        batch_id,
+        bool(response.success),
+        response.total_count,
+        response.successful_count,
+        response.failed_count,
+    )
+
+    return response
 
 
 # ============================================================

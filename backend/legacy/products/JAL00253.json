@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -121,6 +121,53 @@
         {
           "filename": "JAL00253 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00253 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CDIAAeSwxO5pqYQG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HAYAAeSw5jFpqYQK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ENYAAeSw2KtpqYQO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/73cAAeSwkshpqYQS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/72wAAeSwdW5pqYQU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LuQAAeSw1adpqYQY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GEAAAeSwtCRpqYQb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/N0QAAeSwFOBpqYQe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00253 (8).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8z0AAeSwK9ZpqYQh/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -138,6 +185,23 @@
         "Produktart": "Sportschuh",
         "Verschluss": "Schnürung"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Laufschuhe",
+      "Keyword 3": "Freizeitschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

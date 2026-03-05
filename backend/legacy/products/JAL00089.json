@@ -21,7 +21,7 @@
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -30,7 +30,7 @@
       "Gender": "U",
       "Brand": "sharllen",
       "Color": "Weiß",
-      "Size": ""
+      "Size": "38"
     },
     "Intern Generated Info": {
       "More details": "Die Schuhe sind aus einem weißen Material gefertigt und haben eine bequeme Passform. Die Sohle ist aus Gummi und bietet guten Halt. Sie sind ideal für den Alltag oder sportliche Aktivitäten.",
@@ -41,10 +41,10 @@
       "OP": "31.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -115,7 +115,76 @@
         {
           "filename": "JAL00089 (5).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00089 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~xoAAeSwkONpqNDq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3QYAAeSwn-FpqNDt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4yUAAeSwc0RpqNDv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/rrcAAeSwFYZpqNDy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lHsAAeSwMQhpqND1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/pVkAAeSwXQJpqND5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00089 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mSIAAeSw~ZZpqND7/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "24",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "sharllen",
+        "EU-Schuhgröße": "38",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Obermaterial": "Kunstleder",
+        "Produktart": "Sportschuh",
+        "Verschluss": "Schnürung"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "253",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe"
     }
   }
 }

@@ -74,8 +74,10 @@ export default function SkuBatchPage() {
   const [editingDetails, setEditingDetails] = useState({}); // { sku: boolean }
   const [editedFieldsState, setEditedFieldsState] = useState({}); // { sku: { category: { field: value } } }
   const [selectedSkusForProductDetailsEdit, setSelectedSkusForProductDetailsEdit] = useState(new Set());
+  const [selectedSkusInBulkProductDetails, setSelectedSkusInBulkProductDetails] = useState(new Set());
   const [bulkProductDetailsOpen, setBulkProductDetailsOpen] = useState(false);
   const [bulkProductDetailsSaving, setBulkProductDetailsSaving] = useState(false);
+  const [bulkProductDetailsEnriching, setBulkProductDetailsEnriching] = useState(false);
   const [bulkProductDetailsEdits, setBulkProductDetailsEdits] = useState({}); // { sku: { fieldName: value } }
   const [categoryDetectingBySku, setCategoryDetectingBySku] = useState({}); // { sku: boolean }
   const [categoryDetectingBatch, setCategoryDetectingBatch] = useState(false);
@@ -1038,8 +1040,8 @@ export default function SkuBatchPage() {
     }
   };
 
-  const handleDetectCategoryForSelectedSkus = async () => {
-    const skus = Array.from(selectedSkusForProductDetailsEdit);
+  const handleDetectCategoryForSelectedSkus = async (targetSkus = null) => {
+    const skus = Array.isArray(targetSkus) ? targetSkus : Array.from(selectedSkusForProductDetailsEdit);
     if (skus.length === 0) {
       alert("No SKUs selected for product details");
       return;
@@ -1071,6 +1073,69 @@ export default function SkuBatchPage() {
       alert(`❌ ${e.message}`);
     } finally {
       setCategoryDetectingBatch(false);
+    }
+  };
+
+  const handleEnrichSelectedProductDetails = async (targetSkus = null) => {
+    const skus = Array.isArray(targetSkus) ? targetSkus : Array.from(selectedSkusForProductDetailsEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for product details enrichment");
+      return;
+    }
+
+    setBulkProductDetailsEnriching(true);
+    try {
+      const res = await fetch("/api/ai/enrich/batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ skus }),
+      });
+
+      const result = await res.json();
+      if (!res.ok) {
+        throw new Error(result.detail || result.message || "Product details enrichment failed");
+      }
+
+      const succeeded = Number(result?.succeeded || 0);
+      const failed = Number(result?.failed || 0);
+
+      await Promise.all(
+        skus.map(async (sku) => {
+          try {
+            await refreshProductDetailsForSku(sku);
+            const detailsRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/details`);
+            if (detailsRes.ok) {
+              const detailsData = await detailsRes.json();
+              setProductDetails((prev) => ({ ...prev, [sku]: detailsData }));
+
+              const fieldMap = {};
+              bulkProductDetailFields.forEach((field) => {
+                const found = findDetailFieldInDetails(detailsData, field.name);
+                fieldMap[field.name] = found?.value ?? "";
+              });
+
+              setBulkProductDetailsEdits((prev) => ({
+                ...prev,
+                [sku]: {
+                  ...(prev[sku] || {}),
+                  ...fieldMap,
+                },
+              }));
+            }
+          } catch (_) {
+          }
+        })
+      );
+
+      if (failed > 0) {
+        alert(`⚠️ Product details enrichment completed: ${succeeded} succeeded, ${failed} failed.`);
+      } else {
+        alert(`✅ Product details enrichment completed for ${succeeded} SKU(s).`);
+      }
+    } catch (e) {
+      alert(`❌ ${e.message}`);
+    } finally {
+      setBulkProductDetailsEnriching(false);
     }
   };
 
@@ -1243,17 +1308,21 @@ export default function SkuBatchPage() {
       if (res.ok) {
         const data = await res.json();
         if (data?.data) {
+          const merged = {
+            ...(ebayListingData[sku] || { price: "", quantity: "1", condition_id: "1000" }),
+            ...data.data,
+          };
           setEbayListingData((prev) => ({
             ...prev,
-            [sku]: {
-              ...(prev[sku] || { price: "", quantity: "1", condition_id: "1000" }),
-              ...data.data,
-            },
+            [sku]: merged,
           }));
+          return merged;
         }
       }
+      return null;
     } catch (e) {
       console.error("Failed to load eBay listing data:", e);
+      return null;
     }
   };
 
@@ -1303,82 +1372,105 @@ export default function SkuBatchPage() {
   };
 
   const handleBulkEbayCreateListings = async () => {
-    const skus = Array.from(selectedSkusForEbayListingEdit);
-    if (skus.length === 0) {
-      alert("No SKUs selected for bulk listing creation");
-      return;
-    }
-
-    const listings = [];
-    const missingPrice = [];
-
-    skus.forEach((sku) => {
-      const listingData = ebayListingData[sku] || {};
-      if (!listingData.price) {
-        missingPrice.push(sku);
+    try {
+      const skus = Array.from(selectedSkusForEbayListingEdit);
+      if (skus.length === 0) {
+        alert("No SKUs selected for bulk listing creation");
         return;
       }
 
-      let conditionId = listingData.condition_id || listingData.condition || "1000";
-      if (typeof conditionId === "string") {
-        conditionId = conditionId.trim();
+      const toTrimmed = (value) => (value === undefined || value === null ? "" : String(value).trim());
+
+      const listings = [];
+      const missingPrice = [];
+
+      for (const sku of skus) {
+        let listingData = ebayListingData[sku] || {};
+
+        if (!listingData.price || String(listingData.price).trim() === "") {
+          const loaded = await loadEbayListingData(sku);
+          if (loaded) {
+            listingData = loaded;
+          }
+        }
+
+        const priceText = toTrimmed(listingData.price);
+        if (!priceText) {
+          missingPrice.push(sku);
+          continue;
+        }
+
+        let conditionId = listingData.condition_id || listingData.condition || "1000";
+        if (typeof conditionId === "string") {
+          conditionId = conditionId.trim();
+        }
+        conditionId = parseInt(conditionId, 10);
+        if (Number.isNaN(conditionId)) {
+          conditionId = 1000;
+        }
+
+        const requestBody = {
+          sku,
+          price: parseFloat(priceText),
+          quantity: parseInt(toTrimmed(listingData.quantity) || "1", 10),
+          condition_id: conditionId,
+          schedule_days: 0,
+        };
+
+        const conditionDescription = toTrimmed(listingData.condition_description);
+        if (conditionDescription) {
+          requestBody.condition_description = conditionDescription;
+        }
+
+        const modifiedSku = toTrimmed(listingData.modified_sku);
+        if (modifiedSku) {
+          requestBody.ebay_sku = modifiedSku;
+        }
+
+        const scheduleDate = toTrimmed(listingData.schedule_date);
+        if (scheduleDate) {
+          const scheduleDays = Math.ceil((new Date(scheduleDate) - new Date()) / (1000 * 60 * 60 * 24));
+          requestBody.schedule_days = Math.max(0, scheduleDays);
+        }
+
+        const ean = toTrimmed(listingData.ean);
+        if (ean) {
+          requestBody.ean = ean;
+        }
+
+        listings.push(requestBody);
       }
-      conditionId = parseInt(conditionId, 10);
-      if (Number.isNaN(conditionId)) {
-        conditionId = 1000;
+
+      if (missingPrice.length > 0) {
+        alert(`Missing price for: ${missingPrice.join(", ")}`);
+        return;
       }
 
-      const requestBody = {
-        sku,
-        price: parseFloat(listingData.price),
-        quantity: parseInt(listingData.quantity || "1"),
-        condition_id: conditionId,
-        schedule_days: 0,
-      };
+      if (!confirm(`Create ${listings.length} eBay listings now?`)) return;
 
-      if (listingData.condition_description && listingData.condition_description.trim()) {
-        requestBody.condition_description = listingData.condition_description.trim();
+      setBulkEbayListingCreating(true);
+      try {
+        const res = await fetch("/api/ebay/listings/batch", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ listings })
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Batch create failed");
+        }
+
+        const data = await res.json();
+        alert(`✅ Created ${data.successful_count} listings, ${data.failed_count} failed`);
+      } catch (e) {
+        alert(`❌ ${e.message}`);
+      } finally {
+        setBulkEbayListingCreating(false);
       }
-      if (listingData.modified_sku && listingData.modified_sku.trim()) {
-        requestBody.ebay_sku = listingData.modified_sku.trim();
-      }
-      if (listingData.schedule_date) {
-        const scheduleDays = Math.ceil((new Date(listingData.schedule_date) - new Date()) / (1000 * 60 * 60 * 24));
-        requestBody.schedule_days = Math.max(0, scheduleDays);
-      }
-      if (listingData.ean && listingData.ean.trim()) {
-        requestBody.ean = listingData.ean.trim();
-      }
-
-      listings.push(requestBody);
-    });
-
-    if (missingPrice.length > 0) {
-      alert(`Missing price for: ${missingPrice.join(", ")}`);
-      return;
-    }
-
-    if (!confirm(`Create ${listings.length} eBay listings now?`)) return;
-
-    setBulkEbayListingCreating(true);
-    try {
-      const res = await fetch("/api/ebay/listings/batch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ listings })
-      });
-
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.detail || "Batch create failed");
-      }
-
-      const data = await res.json();
-      alert(`✅ Created ${data.successful_count} listings, ${data.failed_count} failed`);
     } catch (e) {
-      alert(`❌ ${e.message}`);
-    } finally {
-      setBulkEbayListingCreating(false);
+      console.error("Bulk eBay create preprocessing failed:", e);
+      alert(`❌ Bulk Create failed before request: ${e.message}`);
     }
   };
 
@@ -1508,6 +1600,23 @@ export default function SkuBatchPage() {
       }
     };
     init();
+  }, [bulkProductDetailsOpen, selectedSkusForProductDetailsEdit]);
+
+  useEffect(() => {
+    if (!bulkProductDetailsOpen) {
+      setSelectedSkusInBulkProductDetails(new Set());
+      return;
+    }
+
+    const available = Array.from(selectedSkusForProductDetailsEdit);
+    setSelectedSkusInBulkProductDetails((prev) => {
+      if (prev.size === 0) {
+        return new Set(available);
+      }
+      const availableSet = new Set(available);
+      const next = new Set(Array.from(prev).filter((sku) => availableSet.has(sku)));
+      return next.size > 0 ? next : new Set(available);
+    });
   }, [bulkProductDetailsOpen, selectedSkusForProductDetailsEdit]);
 
   // eBay functions
@@ -2309,10 +2418,14 @@ export default function SkuBatchPage() {
       </Modal>
 
       <Modal open={bulkProductDetailsOpen} onClose={() => setBulkProductDetailsOpen(false)}>
-        <div style={{ width: "95vw", maxWidth: "1600px" }}>
+        <div style={{ width: "98vw", maxWidth: "1900px" }}>
           <div style={{ fontSize: 16, fontWeight: "bold", marginBottom: 8 }}>Bulk Edit Product Details</div>
           <div style={{ fontSize: 12, color: "#666", marginBottom: 12 }}>
             Edit product details for {selectedSkusForProductDetailsEdit.size} selected SKU(s)
+          </div>
+
+          <div style={{ fontSize: 12, color: "#333", marginBottom: 10 }}>
+            Run actions for <strong>{selectedSkusInBulkProductDetails.size}</strong> selected row(s) in this window.
           </div>
 
           <label style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, marginBottom: 8, color: "#333" }}>
@@ -2324,10 +2437,59 @@ export default function SkuBatchPage() {
             Use images for category AI
           </label>
 
-          <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 8 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 8 }}>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              <button
+                onClick={() => setSelectedSkusInBulkProductDetails(new Set(Array.from(selectedSkusForProductDetailsEdit)))}
+                style={{
+                  padding: "4px 8px",
+                  fontSize: 11,
+                  background: "#1976d2",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 3,
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                }}
+              >
+                Select All Rows
+              </button>
+              <button
+                onClick={() => setSelectedSkusInBulkProductDetails(new Set())}
+                style={{
+                  padding: "4px 8px",
+                  fontSize: 11,
+                  background: "#666",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 3,
+                  cursor: "pointer",
+                }}
+              >
+                Deselect Rows
+              </button>
+            </div>
+            <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
             <button
-              onClick={handleDetectCategoryForSelectedSkus}
-              disabled={categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0}
+              onClick={() => handleEnrichSelectedProductDetails(Array.from(selectedSkusInBulkProductDetails))}
+              disabled={bulkProductDetailsEnriching || selectedSkusInBulkProductDetails.size === 0}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: bulkProductDetailsEnriching ? "#ccc" : "#2e7d32",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: bulkProductDetailsEnriching || selectedSkusInBulkProductDetails.size === 0 ? "not-allowed" : "pointer",
+                fontWeight: "bold",
+              }}
+              title="Enrich product details for selected rows"
+            >
+              {bulkProductDetailsEnriching ? "Enriching..." : "✨ Enrich Product Details"}
+            </button>
+            <button
+              onClick={() => handleDetectCategoryForSelectedSkus(Array.from(selectedSkusInBulkProductDetails))}
+              disabled={categoryDetectingBatch || selectedSkusInBulkProductDetails.size === 0}
               style={{
                 padding: "6px 12px",
                 fontSize: 12,
@@ -2335,23 +2497,25 @@ export default function SkuBatchPage() {
                 color: "white",
                 border: "none",
                 borderRadius: 4,
-                cursor: categoryDetectingBatch || selectedSkusForProductDetailsEdit.size === 0 ? "not-allowed" : "pointer",
+                cursor: categoryDetectingBatch || selectedSkusInBulkProductDetails.size === 0 ? "not-allowed" : "pointer",
                 fontWeight: "bold",
               }}
-              title="Detect category for all rows in this bulk window"
+              title="Detect category for selected rows"
             >
-              {categoryDetectingBatch ? "Detecting Categories..." : "🤖 Detect Category for All Rows"}
+              {categoryDetectingBatch ? "Detecting Categories..." : "🤖 Detect Category"}
             </button>
+            </div>
           </div>
 
-          <div style={{ overflowX: "auto", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflow: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
+          <div style={{ overflowX: "hidden", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflowY: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 10, tableLayout: "fixed" }}>
               <thead>
                 <tr style={{ background: "#f5f5f5", borderBottom: "2px solid #e0e0e0", position: "sticky", top: 0 }}>
-                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", minWidth: 80 }}>Image</th>
-                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>SKU</th>
-                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Supplier Title</th>
-                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Category</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", width: 44 }}>Sel</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", width: 72 }}>Image</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", width: 90 }}>SKU</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", width: 180 }}>Supplier Title</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", width: 260 }}>Category</th>
                   <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Condition</th>
                   <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Gender</th>
                   <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Brand</th>
@@ -2387,6 +2551,24 @@ export default function SkuBatchPage() {
                   return (
                     <tr key={sku} style={{ borderBottom: "1px solid #e0e0e0" }}>
                       <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center" }}>
+                        <input
+                          type="checkbox"
+                          checked={selectedSkusInBulkProductDetails.has(sku)}
+                          onChange={(e) => {
+                            setSelectedSkusInBulkProductDetails((prev) => {
+                              const next = new Set(prev);
+                              if (e.target.checked) {
+                                next.add(sku);
+                              } else {
+                                next.delete(sku);
+                              }
+                              return next;
+                            });
+                          }}
+                          title="Include this SKU in enrich/category actions"
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center" }}>
                         {displayImage?.thumb_url ? (
                           <img
                             src={displayImage.thumb_url}
@@ -2402,13 +2584,13 @@ export default function SkuBatchPage() {
                           </div>
                         )}
                       </td>
-                      <td style={{ padding: 6, fontWeight: "bold", borderRight: "1px solid #e0e0e0", fontSize: 10 }}>{sku}</td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 200 }}>
+                      <td style={{ padding: 6, fontWeight: "bold", borderRight: "1px solid #e0e0e0", fontSize: 10, overflow: "hidden", textOverflow: "ellipsis" }}>{sku}</td>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <div style={{ background: "#f9f9f9", border: "1px solid #e0e0e0", borderRadius: 3, padding: "6px 8px", color: "#666" }}>
                           {getValue("Supplier Title") || "(empty)"}
                         </div>
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 160 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <div style={{ position: "relative" }}>
                           <input
                             value={getValue("Category")}
@@ -2459,77 +2641,77 @@ export default function SkuBatchPage() {
                           )}
                         </div>
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Condition")}
                           onChange={(e) => setValue("Condition", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Gender")}
                           onChange={(e) => setValue("Gender", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Brand")}
                           onChange={(e) => setValue("Brand", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Color")}
                           onChange={(e) => setValue("Color", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Size")}
                           onChange={(e) => setValue("Size", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 220 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <textarea
                           value={getValue("More details")}
                           onChange={(e) => setValue("More details", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 180 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <textarea
                           value={getValue("Keywords")}
                           onChange={(e) => setValue("Keywords", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 180 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <textarea
                           value={getValue("Materials")}
                           onChange={(e) => setValue("Materials", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, minHeight: 48, boxSizing: "border-box", resize: "vertical" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 90 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("OP")}
                           onChange={(e) => setValue("OP", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 120 }}>
+                      <td style={{ padding: 6, borderRight: "1px solid #e0e0e0" }}>
                         <input
                           value={getValue("Status")}
                           onChange={(e) => setValue("Status", e.target.value)}
                           style={{ width: "100%", padding: 4, border: "1px solid #2196F3", borderRadius: 2, fontSize: 11, boxSizing: "border-box" }}
                         />
                       </td>
-                      <td style={{ padding: 6, minWidth: 120 }}>
+                      <td style={{ padding: 6 }}>
                         <input
                           value={getValue("Lager")}
                           onChange={(e) => setValue("Lager", e.target.value)}
@@ -2779,12 +2961,15 @@ export default function SkuBatchPage() {
           <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
-                if (selectedSkusForEnrichment.size === items.length) {
-                  setSelectedSkusForEnrichment(new Set());
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForEnrichment.has(sku));
+                const next = new Set(selectedSkusForEnrichment);
+                if (allFilteredSelected) {
+                  filteredSkus.forEach((sku) => next.delete(sku));
                 } else {
-                  const allSkus = new Set(items.map(item => item.sku));
-                  setSelectedSkusForEnrichment(allSkus);
+                  filteredSkus.forEach((sku) => next.add(sku));
                 }
+                setSelectedSkusForEnrichment(next);
               }}
               style={{
                 padding: "4px 8px",
@@ -2797,7 +2982,11 @@ export default function SkuBatchPage() {
                 fontWeight: "bold",
               }}
             >
-              {selectedSkusForEnrichment.size === items.length ? "Deselect All" : "Select All"}
+              {(() => {
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForEnrichment.has(sku));
+                return allFilteredSelected ? "Deselect All" : "Select All";
+              })()}
             </button>
             <button
               onClick={handleEnrichAll}
@@ -2900,12 +3089,15 @@ export default function SkuBatchPage() {
           <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
-                if (selectedSkusForProductDetailsEdit.size === items.length) {
-                  setSelectedSkusForProductDetailsEdit(new Set());
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForProductDetailsEdit.has(sku));
+                const next = new Set(selectedSkusForProductDetailsEdit);
+                if (allFilteredSelected) {
+                  filteredSkus.forEach((sku) => next.delete(sku));
                 } else {
-                  const allSkus = new Set(items.map(item => item.sku));
-                  setSelectedSkusForProductDetailsEdit(allSkus);
+                  filteredSkus.forEach((sku) => next.add(sku));
                 }
+                setSelectedSkusForProductDetailsEdit(next);
               }}
               style={{
                 padding: "4px 8px",
@@ -2918,7 +3110,11 @@ export default function SkuBatchPage() {
                 fontWeight: "bold",
               }}
             >
-              {selectedSkusForProductDetailsEdit.size === items.length ? "Deselect All" : "Select All"}
+              {(() => {
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForProductDetailsEdit.has(sku));
+                return allFilteredSelected ? "Deselect All" : "Select All";
+              })()}
             </button>
             <button
               onClick={() => setBulkProductDetailsOpen(true)}
@@ -2934,6 +3130,23 @@ export default function SkuBatchPage() {
               }}
             >
               ✏️ Bulk Edit
+            </button>
+            <button
+              onClick={handleEnrichSelectedProductDetails}
+              disabled={bulkProductDetailsEnriching || selectedSkusForProductDetailsEdit.size === 0}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: bulkProductDetailsEnriching ? "#ccc" : "#2e7d32",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: bulkProductDetailsEnriching || selectedSkusForProductDetailsEdit.size === 0 ? "not-allowed" : "pointer",
+                fontWeight: "bold",
+              }}
+              title="Enrich product details for selected SKUs"
+            >
+              {bulkProductDetailsEnriching ? "Enriching..." : "✨ Enrich Product Details"}
             </button>
             <button
               onClick={handleDetectCategoryForSelectedSkus}
@@ -2998,12 +3211,15 @@ export default function SkuBatchPage() {
           <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
             <button
               onClick={() => {
-                if (selectedSkusForEbayListingEdit.size === items.length) {
-                  setSelectedSkusForEbayListingEdit(new Set());
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForEbayListingEdit.has(sku));
+                const next = new Set(selectedSkusForEbayListingEdit);
+                if (allFilteredSelected) {
+                  filteredSkus.forEach((sku) => next.delete(sku));
                 } else {
-                  const allSkus = new Set(items.map(item => item.sku));
-                  setSelectedSkusForEbayListingEdit(allSkus);
+                  filteredSkus.forEach((sku) => next.add(sku));
                 }
+                setSelectedSkusForEbayListingEdit(next);
               }}
               style={{
                 padding: "4px 8px",
@@ -3016,7 +3232,11 @@ export default function SkuBatchPage() {
                 fontWeight: "bold",
               }}
             >
-              {selectedSkusForEbayListingEdit.size === items.length ? "Deselect All" : "Select All"}
+              {(() => {
+                const filteredSkus = filteredItems.map((item) => item.sku);
+                const allFilteredSelected = filteredSkus.length > 0 && filteredSkus.every((sku) => selectedSkusForEbayListingEdit.has(sku));
+                return allFilteredSelected ? "Deselect All" : "Select All";
+              })()}
             </button>
             <button
               onClick={() => setBulkEbayListingOpen(true)}

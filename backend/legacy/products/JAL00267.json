@@ -21,7 +21,7 @@
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -127,11 +127,115 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BgkAAeSwULhpqYO-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A5YAAeSwMWJpqYO~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/OVoAAeSwcxBpqYPB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7McAAeSwkshpqYPC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/DjMAAeSwJNBpqYPE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XW4AAeSw6HNpqYPI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FfEAAeSwvZ5pqYPL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MBMAAeSwDAJpqYPO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LQcAAeSwfJZpqYPQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NOAAAeSww8FpqYPU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (3).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FC0AAeSwUoRpqYPX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00267 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BrsAAeSwq1ppqYPa/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
-      "required": {},
-      "optional": {}
+      "required": {
+        "Marke": "Grition",
+        "EU-Schuhgröße": "41",
+        "Abteilung": "Damen",
+        "Farbe": "Grau",
+        "Stil": "Zehentrenner",
+        "Obermaterial": "Kunststoff"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Modell": "YY2212BF",
+        "Innensohlenmaterial": "Synthetik",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Absatzart": "Flach",
+        "AU-Schuhgröße": "10",
+        "UK-Schuhgröße": "7",
+        "US-Schuhgröße": "10,5",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Flach (Kleiner als 2,5 cm)",
+        "Individualisiert": "Nein",
+        "Besonderheiten": "Rutschfest",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Bindeverschluss",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "YY2212BF",
+      "Keyword 1": "Herren Sandalen",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Wasserschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

@@ -21,7 +21,7 @@
       "eBay Category ID": "130115"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (nur 1 Stk. vorhanden)"
@@ -29,19 +29,19 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Chatthen",
-      "Color": "",
+      "Color": "Weiß",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Das Produkt ist ein Temperatur- und Feuchtigkeitssensor mit externem Sensor. Es hat ein digitales Display, das Temperatur und Luftfeuchtigkeit anzeigt. Es wird mit verschiedenen Montagemöglichkeiten geliefert, darunter 3M-Sticker und Gummimagnete.",
+      "Keywords": "Temperatur- und Feuchtigkeitssensor",
+      "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "38.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -112,7 +112,76 @@
         {
           "filename": "JAL00094 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00094 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/69cAAeSw1olpqNEb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00094 (1).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kLgAAeSwUN9pqNEe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00094 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pLAAAeSw6IJpqNEh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6mgAAeSw82FpqNEi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/qRMAAeSwvxZpqNEj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lZgAAeSwKFtpqNEl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~DAAAeSwBhJpqNEn/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Chatthen"
+      },
+      "optional": {
+        "Modell": "AG515",
+        "Material": "Kunststoff",
+        "Farbe": "Weiß",
+        "Ursprungsland": "China",
+        "Produktart": "Einstichthermometer",
+        "Maßsystem": "Celsius/Fahrenheit",
+        "Besonderheiten": "Digitale Anzeige",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Temperaturfühler",
+      "Product Model": "AG515",
+      "Keyword 1": "Temperaturmessgerät",
+      "Keyword 2": "Sensor",
+      "Keyword 3": "Aquarium"
     }
   }
 }

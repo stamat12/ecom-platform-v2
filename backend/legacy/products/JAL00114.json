@@ -21,27 +21,27 @@
       "eBay Category ID": "57989"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": "",
+      "Gender": "M",
       "Brand": "Vanvene",
-      "Color": "",
-      "Size": ""
+      "Color": "Beige",
+      "Size": "M"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Diese Cargo-Hose hat einen elastischen Bund für optimalen Tragekomfort. Sie verfügt über mehrere Taschen, die praktisch für die Aufbewahrung von Kleinigkeiten sind. Der lockere Schnitt sorgt für Bewegungsfreiheit und eignet sich ideal für Freizeitaktivitäten.",
+      "Keywords": "Cargo Hose Herren",
+      "Materials": "Baumwolle"
     },
     "OP": {
       "OP": "34.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 015"
@@ -142,7 +142,113 @@
         {
           "filename": "JAL00114 (9).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjgw/z/vigAAeSwnNBpqNGa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjgw/z/~4YAAeSw0e5pqNGb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjgw/z/3VUAAeSwi~JpqNGd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjgw/z/5uAAAeSwxxJpqNGf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjgw/z/nvAAAeSwJNBpqNGg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yeEAAeSwezhpqNGj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0~kAAeSwlXFpqNGm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (14).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rTkAAeSww8FpqNGq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (15).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mfcAAeSwgR1pqNGt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p6wAAeSw7x1pqNGw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mh8AAeSwnCdpqNGz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00114 (6).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nKsAAeSwZyJpqNG3/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "27.99",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Vanvene",
+        "Größe": "M",
+        "Abteilung": "Herren",
+        "Stil": "Cargo",
+        "Farbe": "Beige",
+        "Schrittlänge": "30 in"
+      },
+      "optional": {
+        "Produktart": "Hosen",
+        "Material": "Baumwolle",
+        "Passform": "Regular",
+        "Größenkategorie": "Normalgröße",
+        "Verschluss": "Zugbandverschluss",
+        "Bundhöhe": "Mittel (25-30 cm)",
+        "Bundfalte": "Ohne Bundfalte",
+        "Beinform": "Gerades Bein",
+        "Taschenart": "Cargo-Tasche",
+        "Taillenumfang": "29.9 in",
+        "Besonderheiten": "Elastischer Bund",
+        "Gewebeart": "Denim",
+        "Jahreszeit": "Sommer",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "",
+      "Keyword 1": "Cargo Hose",
+      "Keyword 2": "Freizeithose",
+      "Keyword 3": "Bequeme Hose"
     }
   }
 }

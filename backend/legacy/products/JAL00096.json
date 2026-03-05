@@ -21,7 +21,7 @@
       "eBay Category ID": "124600"
     },
     "EAN": {
-      "EAN": 888107084051.0
+      "EAN": 888107084051
     },
     "Product Condition": {
       "Condition": "Neu"
@@ -29,19 +29,19 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "U.S. Solid",
-      "Color": "",
+      "Color": "Schwarz, Gold",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Dieses Magnetventil ist aus Messing gefertigt und hat eine schwarze Oberfläche. Es ist für verschiedene Anwendungen wie Wasser, Luft und Gas geeignet. Der Anschluss hat eine Gewindegröße von 1/4 Zoll und ist für einen Druckbereich von 0 bis 5 Bar ausgelegt.",
+      "Keywords": "Magnetventil 1/4 Zoll",
+      "Materials": "Messing, Kunststoff"
     },
     "OP": {
       "OP": "21.0"
     },
     "Status": {
-      "Status": "Done"
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -56,7 +56,7 @@
         "count_phone": 8,
         "count_enhanced": 0,
         "has_main_images": true,
-        "count_main_images": 6
+        "count_main_images": 7
       },
       "stock": [
         {
@@ -120,8 +120,94 @@
         },
         {
           "filename": "JAL00096 (3).jpg"
+        },
+        {
+          "filename": "JAL00096 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/8S4AAeSwUEdpqNFZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/8TgAAeSwUEdpqNFa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/l0kAAeSw2ItpqNFb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/oh8AAeSwVbxpqNFd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~UwAAeSwBhJpqNFf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/nawAAeSwKnlpqNFh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/uscAAeSwjchpqNFj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yOcAAeSwezhpqNFm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~eIAAeSwchFpqNFo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/c1YAAeSwcIZpqNFq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00096 (2).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/308AAeSwn-FpqNFs/$_1.JPG?set_id=8800005007"
         }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": 888107084051,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos"
+      },
+      "optional": {
+        "Herstellernummer": "US52",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Magnetventil",
+      "Product Model": "US52",
+      "Keyword 1": "Wasserventil",
+      "Keyword 2": "Gasventil",
+      "Keyword 3": "elektrisches Ventil"
     }
   }
 }

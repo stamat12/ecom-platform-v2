@@ -29,19 +29,19 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Diivoo",
-      "Color": "Schwarz und Grün",
+      "Color": "Schwarz Grün",
       "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Der Diivoo Bewässerungscomputer hat zwei unabhängige Bewässerungszonen. Er ermöglicht eine programmierbare Bewässerung mit verschiedenen Zeitplänen. Das Gerät ist wasserdicht nach IP54 und bietet eine Regenverzögerungsfunktion.",
-      "Keywords": "Bewässerungscomputer Diivoo",
+      "Keywords": "Bewässerungscomputer",
       "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "40.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -147,7 +147,111 @@
         {
           "filename": "JAL00087 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00087 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~WAAAeSwSltpqNDF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xJIAAeSw0gNpqNDH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (11).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mr0AAeSw20xpqNDK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/l94AAeSwC0JpqNDO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (14).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/pj4AAeSwD7RpqNDR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (15).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l4EAAeSwk1ppqNDT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (16).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/GUgAAeSwnQFpqNDV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (17).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/1qgAAeSw27lpqNDX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l6AAAeSw705pqNDa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-vEAAeSwBhJpqNDd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (7).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uKcAAeSw4JZpqNDf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00087 (13).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/5cUAAeSw779pqNDh/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "30",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Bewässerungscomputer"
+      },
+      "optional": {
+        "Marke": "Diivoo",
+        "Anzahl der Zonen": "2",
+        "Anzahl der Ausgänge": "2",
+        "Bewässerungsdauer": "Bis zu 30 Minuten",
+        "Besonderheiten": "Regenverzögerung",
+        "Modell": "2 Outlet Water Timer",
+        "Material": "Kunststoff",
+        "Farbe": "Schwarz Grün",
+        "Innen-/Außenbereich": "Außenbereich",
+        "Ursprungsland": "China",
+        "Set enthält": "Bewässerungscomputer",
+        "Anzahl der Bewässerungsprogramme": "2",
+        "Gewindeanschluss": "Außengewinde 1 Zoll",
+        "Stromquelle": "Batterie",
+        "Akkuart": "Keine Batterie",
+        "Länge": "10 cm",
+        "Breite": "10 cm",
+        "Gewicht": "250 g"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Bewässerungsuhr",
+      "Product Model": "2 Ausgänge",
+      "Keyword 1": "Gartenbewässerung",
+      "Keyword 2": "Wasserzeitschaltuhr",
+      "Keyword 3": "automatische Bewässerung"
     }
   }
 }

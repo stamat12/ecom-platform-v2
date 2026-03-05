@@ -802,5 +802,19 @@
     "ContactURL": "https://mschcph.com/pages/contact",
     "cached_at": "2026-03-04T15:29:53.135948",
     "original_brand": "MSch Copenhagen"
+  },
+  "inkbird": {
+    "CompanyName": "Inkbird Tech. C.L.",
+    "Street1": "No. 1, Building 9, No. 2, Jinyuan Road",
+    "Street2": "Pingshan District",
+    "CityName": "Shenzhen",
+    "StateOrProvince": "Guangdong",
+    "PostalCode": "518118",
+    "Country": "CN",
+    "Phone": "",
+    "Email": "service@ink-bird.com",
+    "ContactURL": "https://www.ink-bird.com/contact/",
+    "cached_at": "2026-03-05T01:43:00.884607",
+    "original_brand": "Inkbird"
   }
 }

@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 8,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [
         {
@@ -99,7 +101,100 @@
           "filename": "JAL00249 (8).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "JAL00249 (6).jpg"
+        },
+        {
+          "filename": "JAL00249 (5).jpg"
+        },
+        {
+          "filename": "JAL00249 (3).jpg"
+        },
+        {
+          "filename": "JAL00249 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00249 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Hx4AAeSwqihpqYRu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BWYAAeSwmrdpqYRx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CGgAAeSwfbFpqYR2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/D4EAAeSwH8ppqYR5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~gMAAeSwSsJpqYR~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DjYAAeSwYOVpqYSC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00249 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HTQAAeSwDDJpqYSF/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "sharllen",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Farbe": "Braun"
+      },
+      "optional": {
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Innensohlenmaterial": "Textil",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Vintage": "Nein",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Textil",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Frühling",
+        "Verschluss": "Schnürung",
+        "Besonderheiten": "Atmungsaktiv",
+        "Signiert": "Nein",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "272",
+      "Keyword 1": "Sneaker",
+      "Keyword 2": "Freizeitschuh",
+      "Keyword 3": "Sportsschuh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

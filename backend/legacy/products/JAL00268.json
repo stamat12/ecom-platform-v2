@@ -21,7 +21,7 @@
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -181,6 +181,23 @@
         "Verschluss": "Klettverschluss",
         "Ursprungsland": "China"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "32501",
+      "Keyword 1": "Wanderschuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Sommer Schuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
     }
   }
 }

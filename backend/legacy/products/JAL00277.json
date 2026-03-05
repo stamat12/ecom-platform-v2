@@ -21,7 +21,7 @@
       "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -139,6 +139,68 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00277 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DmMAAeSwlNtpqYNv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (10).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BiwAAeSws3xpqYNz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (12).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G~AAAeSw82FpqYN1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ae0AAeSwlYJpqYN5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AjcAAeSwZYppqYN8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HYoAAeSw0x1pqYN-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6vcAAeSwnc1pqYOA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6uMAAeSwnNBpqYOC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~F8AAeSwbQhpqYOE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LqIAAeSwDAJpqYOF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/C94AAeSw5BNpqYOH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00277 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LqoAAeSwfK1pqYOJ/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -147,26 +209,58 @@
         "EU-Schuhgröße": "39",
         "Stil": "Pumps",
         "Farbe": "Marinenblau",
-        "Abteilung": "Damen"
+        "Abteilung": "Damen",
+        "Obermaterial": "Synthetik"
       },
       "optional": {
         "Produktart": "Pumps",
         "Absatzart": "Blockabsatz",
         "AU-Schuhgröße": "8.5",
+        "UK-Schuhgröße": "",
         "US-Schuhgröße": "8.5",
+        "Laufsohlenmaterial": "",
+        "Innensohlenmaterial": "",
+        "Futtermaterial": "",
         "Schuhspitze": "Geschlossen",
+        "Akzente": "",
+        "Modell": "",
         "Vintage": "Nein",
         "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
         "Individualisiert": "Nein",
+        "Charakter": "",
         "Anlass": "Freizeit",
+        "Thema": "",
+        "Schuhweite": "",
         "Besonderheiten": "Anti-Rutsch",
         "Verschluss": "Slip-On",
         "Muster": "Ohne Muster",
+        "Plateauhöhe": "",
         "Ursprungsland": "China",
         "Jahreszeit": "Frühling",
+        "Sprengung": "",
         "Personalisieren": "Nein",
-        "Herstellernummer": "DE7601"
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "DE7601",
+        "Maßeinheit": ""
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Damenpumps",
+      "Product Model": "DE7601",
+      "Keyword 1": "Komfortschuhe",
+      "Keyword 2": "Hallux Valgus Schuhe",
+      "Keyword 3": "bequeme Schuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "55",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

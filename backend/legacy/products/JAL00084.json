@@ -21,7 +21,7 @@
       "eBay Category ID": "75672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
@@ -29,19 +29,19 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "johgee",
-      "Color": "",
+      "Color": "grün",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Dieser Bewässerungscomputer hat zwei unabhängige Ausgänge und ermöglicht eine einfache Programmierung. Er ist wasserdicht (IPX5) und verfügt über ein LCD-Display. Die Bedienung ist benutzerfreundlich und bietet sowohl manuelle als auch automatische Bewässerungsoptionen.",
+      "Keywords": "Bewässerungscomputer",
+      "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "37.0"
     },
     "Status": {
-      "Status": "Done"
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -136,7 +136,110 @@
         {
           "filename": "JAL00084 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/-NcAAeSwVRppqNB2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/~fAAAeSw6YBpqNB4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/5BMAAeSw779pqNB6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxMjAw/z/rRMAAeSwTvhpqNB7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5TkAAeSwprZpqNB-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vlMAAeSw7tJpqNCB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (12).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0k4AAeSwMWJpqNCE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (13).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lTQAAeSwRzRpqNCI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5osAAeSw~eppqNCL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wZ0AAeSwgvFpqNCO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (3).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4ooAAeSwwXdpqNCR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00084 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1RAAAeSwbc9pqNCU/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Bewässerungscomputer"
+      },
+      "optional": {
+        "Marke": "johgee",
+        "Anzahl der Zonen": "2",
+        "Anzahl der Ausgänge": "2",
+        "Bewässerungsdauer": "Bis zu 10 Stunden",
+        "Herstellernummer": "HCT-326",
+        "Besonderheiten": "IPX5 Waterproof",
+        "Farbe": "grün",
+        "Material": "Kunststoff",
+        "Innen-/Außenbereich": "Außenbereich",
+        "Gewicht": "390 g",
+        "Set enthält": "Fittings",
+        "Anzahl der Bewässerungsprogramme": "2",
+        "Bewässerungshäufigkeit": "Alle 30 Stunden",
+        "Stromquelle": "Batterie",
+        "Länge": "12 cm",
+        "Breite": "5.5 cm",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Bewässerungscomputer",
+      "Product Model": "HCT-326",
+      "Keyword 1": "Gartenbewässerung",
+      "Keyword 2": "Wasseruhr",
+      "Keyword 3": "Automatische Bewässerung"
     }
   }
 }

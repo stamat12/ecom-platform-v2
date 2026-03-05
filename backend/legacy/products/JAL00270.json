@@ -21,7 +21,7 @@
       "eBay Category ID": "62107"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -184,6 +184,63 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MxUAAeSww8FpqYOc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EQ8AAeSw7mppqYOe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nQMAAeSwI6lpqYOg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/N3cAAeSwo2xpqYOi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EGUAAeSwi3ppqYOk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (11).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EGsAAeSwOOFpqYOn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (16).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NJIAAeSwFOBpqYOr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (20).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FsEAAeSwnahpqYOu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (22).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~U4AAeSwQ6RpqYOw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (7).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/A2EAAeSwAFRpqYOz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00270 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ANkAAeSwpvJpqYO3/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -208,6 +265,23 @@
         "Jahreszeit": "Sommer",
         "Verschluss": "Klettverschluss"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandale",
+      "Product Model": "Hiking Sandale",
+      "Keyword 1": "Wanderschuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Klettverschluss"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "3",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "JAL00268-JAL00270",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

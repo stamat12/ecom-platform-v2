@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -121,6 +121,53 @@
         {
           "filename": "JAL00250 (8).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00250 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BqwAAeSwJMhpqYRN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-PgAAeSw6~tpqYRQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/D3IAAeSwMzhpqYRU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/B40AAeSw99NpqYRX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IcIAAeSwC0JpqYRa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G8oAAeSwHq9pqYRe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/D~4AAeSwMzhpqYRh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BiIAAeSwKL1pqYRj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00250 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MQkAAeSw1adpqYRm/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -146,6 +193,23 @@
         "Signiert": "Nein",
         "Muster": "Ohne Muster"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "062",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Atmungsaktive Schuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

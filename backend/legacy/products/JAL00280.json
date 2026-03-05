@@ -21,7 +21,7 @@
       "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -142,6 +142,68 @@
         {
           "filename": "JAL00280 (6).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "3.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTA4NFgxNjAw/z/LpIAAeSwsO1pqYMR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I0UAAeSwdRtpqYMS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/CtoAAeSwAHNpqYMU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/ODQ0WDE2MDA=/z/AO0AAeSwLfppqYMV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/OTI3WDE1MzA=/z/E70AAeSwVZdpqYMX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (11).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6xoAAeSwqg1pqYMZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AD8AAeSwxONpqYMc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (2).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~DIAAeSwRr1pqYMf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-rwAAeSwlXFpqYMi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FIkAAeSwSn9pqYMl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (5).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LyIAAeSw2MtpqYMo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00280 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~hsAAeSwfKFpqYMs/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -171,6 +233,23 @@
         "Personalisieren": "Nein",
         "Anzahl der Einheiten": "1"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "HHGR002-SVO-39",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Slingpumps",
+      "Keyword 3": "Absatzschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:18"
     }
   }
 }

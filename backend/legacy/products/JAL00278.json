@@ -21,7 +21,7 @@
       "eBay Category ID": "53557"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -35,7 +35,7 @@
     "Intern Generated Info": {
       "More details": "Diese Gummistiefel sind in einem eleganten Khaki-Ton gehalten. Sie verfügen über eine rutschfeste Sohle und sind ideal für nasses Wetter. Der Innenbereich ist atmungsaktiv und sorgt für hohen Tragekomfort.",
       "Keywords": "Gummistiefel Damen",
-      "Materials": "PVC"
+      "Materials": ""
     },
     "OP": {
       "OP": "35.0"
@@ -121,6 +121,53 @@
         {
           "filename": "4.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxNTAw/z/FWcAAeSwYs9pqYNV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTQwMFgxNjAw/z/FdQAAeSw5GFpqYNW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/EwgAAeSwtCRpqYNY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6aIAAeSwdW5pqYNa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~rcAAeSwTyVpqYNc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AdEAAeSwGBBpqYNf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AOwAAeSwAFRpqYNi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ALgAAeSwPqFpqYNk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00278 (8).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/73IAAeSw7tJpqYNm/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -145,6 +192,23 @@
         "Schuhspitze": "Geschlossen",
         "Anlass": "Freizeit"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Gummistiefel",
+      "Product Model": "",
+      "Keyword 1": "Wasserdichte Stiefel",
+      "Keyword 2": "Gartenstiefel",
+      "Keyword 3": "Regenstiefel"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "32",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:18"
     }
   }
 }

@@ -21,7 +21,7 @@
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -44,7 +44,7 @@
       "Status": "OK"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -118,7 +118,104 @@
         {
           "filename": "IMG_9250.jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "IMG_9256.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZckAAeSwfyppqW-J/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9254.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TeEAAeSwdippqW-M/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/chEAAeSwxONpqW-O/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lLcAAeSwIZNpqW-Q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/aYsAAeSw9KNpqW-R/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/i~0AAeSw8klpqW-T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZvAAAeSw99NpqW-V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9257.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cAYAAeSwTyVpqW-X/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9258.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Y1UAAeSwpZxpqW-b/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9251.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jqIAAeSwomBpqW-f/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9250.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yGwAAeSwwPRpqW-i/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "FitVille",
+        "EU-Schuhgröße": "39.5",
+        "Abteilung": "Damen",
+        "Farbe": "Rot"
+      },
+      "optional": {
+        "Herstellernummer": "LPN HK 42797 8470",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Produktlinie": "Rebound Core",
+        "Modell": "Walking Shoes V10",
+        "UK-Schuhgröße": "6.5",
+        "US-Schuhgröße": "8.5",
+        "Obermaterial": "Wildleder, Mesh",
+        "Innensohlenmaterial": "Memory Foam",
+        "Produktart": "Sportschuh",
+        "Besonderheiten": "Anti-Rutsch, Atmungsaktiv",
+        "Anlass": "Freizeit",
+        "Aktivität": "Fitnessstudio & Training"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Schuh",
+      "Product Model": "Walking Shoes V10",
+      "Keyword 1": "Bequeme Schuhe",
+      "Keyword 2": "Rutschfeste Sneakers",
+      "Keyword 3": "Fußschmerzen Linderung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "44",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T02:06"
     }
   }
 }

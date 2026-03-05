@@ -21,7 +21,7 @@
       "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": 6927990258300.0
+      "EAN": 6927990258300
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (leicht verschmutzt)"
@@ -112,6 +112,58 @@
         {
           "filename": "JAL00279 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTI2M1gxNTAw/z/LFEAAeSwWK1pqYMy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (10).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MXEAAeSwHCNpqYM2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (12).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~eYAAeSw7oJpqYM5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NsUAAeSwvdFpqYM8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AncAAeSwULhpqYM~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BAAAAeSwYOVpqYNF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-R0AAeSw9KNpqYNH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4hIAAeSw-olpqYNK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ls0AAeSwnWRpqYNM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00279 (5).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~O4AAeSwAuFpqYNP/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -144,6 +196,23 @@
         "Anzahl der Einheiten": "1",
         "Maßeinheit": "Einheit"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Elegante Schuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Die Schuhe sind neu und ungetragen. Bitte beachten Sie, dass ein Schuh leichte Verschmutzungen aufweist.  Der genaue Zustand der Schuhe ist auf den Fotos ersichtlich.",
+      "EAN": 6927990258300,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:18"
     }
   }
 }

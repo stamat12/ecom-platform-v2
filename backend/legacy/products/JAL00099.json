@@ -21,7 +21,7 @@
       "eBay Category ID": "75672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Gebraucht"
@@ -29,19 +29,19 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Diivoo",
-      "Color": "",
+      "Color": "Blau",
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Der Diivoo Smart Dual Water Timer ermöglicht eine einfache Steuerung der Bewässerung über eine App. Er verfügt über zwei unabhängige Ausgänge und kann bis zu 20 individuelle Zeitpläne pro Zone speichern. Die Installation ist einfach und er ist wetterfest.",
+      "Keywords": "Smart Dual Water Timer Bewässerung",
+      "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "70.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -136,7 +136,106 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00099 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ji8AAeSwlvBpqW-o/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (9).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-lYAAeSwnQFpqW-r/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l1IAAeSwO6xpqW-u/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/l7oAAeSw83tpqW-x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/URsAAeSwqGNpqW-0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jvMAAeSw8EtpqW-2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WIoAAeSwZAFpqW-5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (13).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/Y-oAAeSwd59pqW-9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00099 (14).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jzgAAeSwlvBpqW-~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZqsAAeSwgnhpqW~C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cUcAAeSwC0JpqW~E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/W98AAeSwnjlpqW~G/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Bewässerungscomputer"
+      },
+      "optional": {
+        "Marke": "Diivoo",
+        "Anzahl der Bewässerungsprogramme": "20",
+        "Anzahl der Zonen": "2",
+        "Anzahl der Ausgänge": "2",
+        "Bewässerungsdauer": "Bis zu 10 Stunden",
+        "Besonderheiten": "Ein/Aus-Automatik",
+        "Anzahl der Teile": "1",
+        "Steuerungsart": "App-Steuerung",
+        "Stromquelle": "Batterie",
+        "Farbe": "Blau",
+        "Geeignet für": "Automatische Bewässerung mit individuellen Bewässerungszeiten",
+        "Innen-/Außenbereich": "Außenbereich",
+        "Material": "Kunststoff"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Bewässerungssteuerung",
+      "Product Model": "Smart Dual Water Timer",
+      "Keyword 1": "Wasseruhr",
+      "Keyword 2": "Gartenbewässerung",
+      "Keyword 3": "automatische Bewässerung"
     }
   }
 }

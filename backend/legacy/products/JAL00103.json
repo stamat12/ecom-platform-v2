@@ -21,7 +21,7 @@
       "eBay Category ID": "181379"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -33,7 +33,7 @@
       "Size": "50 L"
     },
     "Intern Generated Info": {
-      "More details": "",
+      "More details": "Der Rucksack bietet viel Stauraum mit einem Volumen von 50 Litern. Er ist aus strapazierfähigem Nylon gefertigt und wasserabweisend. Zusätzliche Fächer ermöglichen eine organisierte Aufbewahrung von Ausrüstung und persönlichen Gegenständen.",
       "Keywords": "Adventure 50L Wanderrucksack",
       "Materials": "Nylon"
     },
@@ -44,7 +44,7 @@
       "Status": "OK"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -109,7 +109,101 @@
         {
           "filename": "IMG_9404.jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/YacAAeSwQmppqW~P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/bcIAAeSwePBpqW~R/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTEyNlgxMDAw/z/X4MAAeSwiCBpqW~S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTEyNlgxMDAw/z/U1sAAeSwkshpqW~U/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/gFYAAeSwnahpqW~W/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9404.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Zh0AAeSwv5NpqW~b/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9405.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/imUAAeSwFAlpqW~e/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9406.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZWgAAeSw5BNpqW~j/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9407.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cYQAAeSwZ35pqW~n/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_9408.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/h5MAAeSw3RlpqW~q/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Free Knight"
+      },
+      "optional": {
+        "Kapazität": "50 L",
+        "Material": "Nylon",
+        "Farbe": "Armeegrün",
+        "Abteilung": "Unisex Erwachsene",
+        "Sportart/Aktivität": "Wandern",
+        "Anzahl der Taschen": "Mehr als 8",
+        "Größe": "Einheitsgröße",
+        "Verschluss": "Schnalle",
+        "Modell": "Adventure 50L",
+        "Besonderheiten": "Wasserabweisend, Gepolsterte Gurte, Laptopfach",
+        "Anzahl der Trennwände": "1",
+        "Breite": "12.6 in",
+        "Höhe": "25.2 in",
+        "Länge": "7.5 in",
+        "Maßeinheit": "in",
+        "Personalisiert": "Nein",
+        "Saison": "Sommer",
+        "Vintage": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Rucksack",
+      "Product Model": "Adventure 50L",
+      "Keyword 1": "Wanderucksack",
+      "Keyword 2": "Trekkingrucksack",
+      "Keyword 3": "Reiserucksack"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "34",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T02:07"
     }
   }
 }

@@ -21,7 +21,7 @@
       "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -124,6 +124,68 @@
         {
           "filename": "JAL00251 (9).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GlwAAeSwFJtpqYQo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/99YAAeSw6~tpqYQp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-V0AAeSwJPJpqYQr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/M-YAAeSwvxZpqYQt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/A1AAAeSwmrdpqYQu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PLsAAeSwVbxpqYQz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/F7wAAeSwprxpqYQ3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OBoAAeSwI0FpqYQ6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MTUAAeSwojBpqYQ9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (7).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IPYAAeSwJe1pqYQ~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PWAAAeSwMD1pqYRC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00251 (9).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NYUAAeSwEG1pqYRF/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -150,6 +212,23 @@
         "Signiert": "Nein",
         "Muster": "Ohne Muster"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Schnürschuh",
+      "Product Model": "",
+      "Keyword 1": "Atmungsaktiv",
+      "Keyword 2": "Rutschfest",
+      "Keyword 3": "Bequem"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

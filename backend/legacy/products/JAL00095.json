@@ -21,7 +21,7 @@
       "eBay Category ID": "181358"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -30,18 +30,18 @@
       "Gender": "U",
       "Brand": "MoFiz",
       "Color": "Schwarz",
-      "Size": "L"
+      "Size": "XL"
     },
     "Intern Generated Info": {
       "More details": "Die Jacke hat eine Kapuze und ist aus leichtem, wasserabweisendem Material gefertigt. Sie verfügt über zwei seitliche Reißverschlusstaschen und einen durchgehenden Reißverschluss. Die Ärmel sind elastisch und bieten einen bequemen Sitz.",
-      "Keywords": "MoFiz Jacke Unisex",
+      "Keywords": "Jacke Unisex",
       "Materials": "100% Polyester"
     },
     "OP": {
       "OP": "50.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 015"
@@ -139,7 +139,91 @@
         {
           "filename": "JAL00095 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00095 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qUcAAeSwvxZpqNEv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4qsAAeSwAYxpqNEy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (14).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lqcAAeSw2KtpqNE0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8K4AAeSwUEdpqNE4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/644AAeSwcQFpqNE7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/k5YAAeSwURJpqNE-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1x0AAeSwAFRpqNFB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (10).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/09UAAeSwkt9pqNFF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qzoAAeSww8FpqNFK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (12).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vgUAAeSwnc1pqNFO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00095 (13).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6-wAAeSwcQFpqNFS/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "42",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "MoFiz"
+      },
+      "optional": {
+        "Größe": "XL",
+        "Material": "100% Polyester",
+        "Farbe": "Schwarz"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "MF2961",
+      "Keyword 1": "Windjacke",
+      "Keyword 2": "Regenjacke",
+      "Keyword 3": "Outdoorjacke"
     }
   }
 }

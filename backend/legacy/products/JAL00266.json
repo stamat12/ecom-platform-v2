@@ -21,7 +21,7 @@
       "eBay Category ID": "55793"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -127,6 +127,68 @@
         {
           "filename": "3.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "4.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/GyIAAeSw-LlpqYPi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AcIAAeSwGvtpqYPk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~WgAAeSwCxZpqYPl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/B9UAAeSwDfVpqYPn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Av4AAeSwv5NpqYPp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NdYAAeSwFOBpqYPs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DvUAAeSwZqVpqYPv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NugAAeSwCTFpqYPy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GdsAAeSwMotpqYP1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/93EAAeSwJPJpqYP4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BOwAAeSwUztpqYP7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00266 (3).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/O60AAeSw3ylpqYP-/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
@@ -151,6 +213,23 @@
         "Verschluss": "Schnalle",
         "Vintage": "Nein"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "HHGR405-SPK-39",
+      "Keyword 1": "Damen Schuhe",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Schuhe mit Riemen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
     }
   }
 }

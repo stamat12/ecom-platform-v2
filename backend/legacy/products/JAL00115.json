@@ -21,7 +21,7 @@
       "eBay Category ID": "179010"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Etiketten"
@@ -29,22 +29,22 @@
     "Intern Product Info": {
       "Gender": "",
       "Brand": "Jaicom",
-      "Color": "",
-      "Size": ""
+      "Color": "Blau",
+      "Size": "Für 2-3 Personen"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
-      "Materials": ""
+      "More details": "Das Zelt bietet UV-Schutz mit UPF 50+ und ist aus atmungsaktivem Polyester gefertigt. Es hat eine großzügige Innenfläche mit Platz für zwei bis drei Personen. Ideal für den Einsatz am Strand oder im Freien.",
+      "Keywords": "Zelt Strandzelt",
+      "Materials": "Polyester, Fiberglas"
     },
     "OP": {
       "OP": "40.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "MENZELSTRAßE 10/2/4"
     },
     "Images": {
       "schema_version": "1.0",
@@ -93,7 +93,74 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kDgAAeSw8klpqW~x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/atsAAeSwWhdpqW~z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/k88AAeSw7x1pqW~1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VBIAAeSwqGNpqW~3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/a84AAeSwGR9pqW~5/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "34",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Jaicom",
+        "Produktart": "Strand Zelt"
+      },
+      "optional": {
+        "Kapazität": "2 Personen",
+        "Farbe": "Blau",
+        "Material": "Polyester",
+        "Größe": "M",
+        "Anzahl der Fenster": "2",
+        "Anzahl der Türen": "1",
+        "Besonderheiten": "UV-Beständig, Tragbar, Wasserdicht",
+        "Form": "Kuppel",
+        "Anzahl der Jahreszeiten": "1-Jahreszeit",
+        "Ursprungsland": "China",
+        "Gewicht": "3.9 lb (1,8 kg)",
+        "Höhe": "47,2 Zoll (120 cm)",
+        "Länge": "82,6 Zoll (210 cm)",
+        "Breite": "59 Zoll (150 cm)",
+        "Wassersäule": "1000-1500 mm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Strandzelt",
+      "Product Model": "",
+      "Keyword 1": "Sonnenschutz",
+      "Keyword 2": "Campingzelt",
+      "Keyword 3": "Familienzelt"
     }
   }
 }

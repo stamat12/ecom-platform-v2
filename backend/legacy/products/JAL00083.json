@@ -21,7 +21,7 @@
       "eBay Category ID": "182096"
     },
     "EAN": {
-      "EAN": 679070076132.0
+      "EAN": 679070076132
     },
     "Product Condition": {
       "Condition": "Gebraucht"
@@ -41,7 +41,7 @@
       "OP": "60.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -118,7 +118,96 @@
         {
           "filename": "JAL00083 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "JAL00083 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mD8AAeSw20xpqNBS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/opQAAeSwBf9pqNBW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lF8AAeSw5BNpqNBY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-f8AAeSwwNlpqNBb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9IMAAeSw8klpqNBe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~UEAAeSwpZhpqNBi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00083 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/pzYAAeSwdWNpqNBn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/w5UAAeSwEVVpqNBp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jSMAAeSwUN9pqNBq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/59oAAeSwcQFpqNBs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vCQAAeSw6~tpqNBu/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "",
+      "EAN": 679070076132,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Aoocoo",
+        "Produktart": "KVM-Switch"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Anschluss A": "USB3.0",
+        "Anschluss B": "USB3.0",
+        "Besonderheiten": "Wired Remote",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Ursprungsland": "Nicht spezifiziert"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "KVM Switch",
+      "Product Model": "2x1",
+      "Keyword 1": "DP Switch",
+      "Keyword 2": "USB Switch",
+      "Keyword 3": "KVM Umschalter"
     }
   }
 }

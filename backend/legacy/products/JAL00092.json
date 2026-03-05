@@ -41,7 +41,7 @@
       "OP": "77.0"
     },
     "Status": {
-      "Status": "Done"
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"
@@ -103,7 +103,85 @@
         {
           "filename": "JAL00092 (3).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "4.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mAMAAeSwZ35pqNED/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "1.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0zEAAeSwxbxpqNEE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~DMAAeSwzNJpqNEG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mKgAAeSw705pqNEH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/1ZgAAeSwlYJpqNEJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00092 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5YQAAeSwSn9pqNEM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00092 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/08EAAeSw5nxpqNEO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00092 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q0kAAeSwytJpqNER/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00092 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2ksAAeSwi~JpqNET/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "55",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "888107106906",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-15T00:51"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "U.S. Solid"
+      },
+      "optional": {
+        "Anschlussdesign": "3/4 Zoll",
+        "Produktart": "Klemme",
+        "Herstellernummer": "USS-YSV00022",
+        "Farbe": "Gold",
+        "Anzahl der Einheiten": "1",
+        "Kontaktmaterial": "Messing",
+        "Material": "Messing, VITON"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Magnetventil",
+      "Product Model": "YSV00022",
+      "Keyword 1": "elektrisches Ventil",
+      "Keyword 2": "Wassersteuerung",
+      "Keyword 3": "Druckventil"
     }
   }
 }

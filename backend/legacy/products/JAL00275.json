@@ -1,0 +1,158 @@
+{
+  "JAL00275": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU399420-47-53-040126020020",
+      "Invoice Date": "04.01.2026"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Men's 1/4 Zip Knit Sweater Collared Pullover – Khaki M"
+    },
+    "Price Data": {
+      "Price Net": 1.76,
+      "Shipping Net": 0.77,
+      "Total Cost Net": 2.53
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Pullover & Strick",
+      "eBay Category ID": "11484"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Coofandy",
+      "Color": "Beige",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Pullover hat einen modernen Schnitt mit einem 1/4-Reißverschluss. Die Struktur des Materials ist gerippt und bietet eine angenehme Passform. Ideal für lässige Anlässe oder als Teil eines smart-casual Outfits.",
+      "Keywords": "Pullover Herren 1/4 Reißverschluss",
+      "Materials": "Strickstoff"
+    },
+    "OP": {
+      "OP": "27.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/DuoAAeSwFXppqYOP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/Ll8AAeSwWK1pqYOR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/NtoAAeSwOyppqYOT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMDY3/z/JbYAAeSwlvBpqYOU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM0/z/-6wAAeSw9KNpqYOW/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Coofandy",
+        "Größe": "M",
+        "Stil": "Pullover",
+        "Abteilung": "Herren",
+        "Farbe": "Beige"
+      },
+      "optional": {
+        "Produktart": "Pullover",
+        "Material": "Strickstoff",
+        "Ausschnitt": "Mock-Kragen",
+        "Jahreszeit": "Herbst",
+        "Ärmellänge": "Langarm",
+        "Gewebeart": "Strick",
+        "Passform": "Regular",
+        "Besonderheiten": "Alle Jahreszeiten",
+        "Anlass": "Freizeit",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pullover",
+      "Product Model": "1/4 Zip Up",
+      "Keyword 1": "Langarmpullover",
+      "Keyword 2": "Strickpullover",
+      "Keyword 3": "Mock Neck"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "24",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-16T14:19"
+    }
+  }
+}
