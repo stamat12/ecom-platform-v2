@@ -1,0 +1,71 @@
+{
+  "P0020011": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Amazon Basics",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Gerät eignet sich ideal zum Laminieren von Dokumenten, Fotos oder Karten bis zum Format A4. Der Laminator verfügt über eine integrierte Schneidefunktion sowie eine Eckenabrundung und ist damit eine praktische Lösung für Büro, Schule oder Zuhause.\n\nIm Lieferumfang enthalten sind der Amazon Basics 3-in-1 A4 Thermal Laminator, das Stromkabel, Zubehör wie auf den Bildern zu sehen sowie die Originalverpackung.\n\nWichtiger Hinweis: Das Gerät wird mit einem UK-Stromkabel bzw. UK-Stecker geliefert. Für die Nutzung in Deutschland oder Österreich wird gegebenenfalls ein Steckdosenadapter benötigt.",
+      "Keywords": "3in1 A4 Thermal Laminator",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "25"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020011 (2).jpg"
+        },
+        {
+          "filename": "P0020011 (5).jpg"
+        },
+        {
+          "filename": "P0020011 (6).jpg"
+        },
+        {
+          "filename": "P0020011 (10).jpg"
+        },
+        {
+          "filename": "P0020011 (1).jpg"
+        },
+        {
+          "filename": "P0020011 (7).jpg"
+        }
+      ]
+    }
+  }
+}

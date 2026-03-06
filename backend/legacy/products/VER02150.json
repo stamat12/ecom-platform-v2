@@ -17,7 +17,7 @@
       "Total Cost Net": 28.72
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "Category": null,
       "eBay Category ID": "15709"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "130"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

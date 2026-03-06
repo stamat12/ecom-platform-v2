@@ -1,0 +1,68 @@
+{
+  "P0020013": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "KU",
+      "Brand": "vtech",
+      "Color": "Rosa",
+      "Size": "None"
+    },
+    "Intern Generated Info": {
+      "More details": "Das MagiBook ist ein interaktives Lernspielzeug für Kinder im Alter von 2 bis 8 Jahren. Es enthält verschiedene Lerninhalte wie Buchstaben, Zahlen und Musik. Das Gerät hat eine pinke Farbe und ist mit einem Stylus ausgestattet, der für die Interaktion verwendet wird.",
+      "Keywords": "MagiBook Lernspielzeug Kids Unisex",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020013 (7).jpg"
+        },
+        {
+          "filename": "P0020013 (4).jpg"
+        },
+        {
+          "filename": "P0020013 (5).jpg"
+        },
+        {
+          "filename": "P0020013 (2).jpg"
+        },
+        {
+          "filename": "P0020013 (3).jpg"
+        }
+      ]
+    }
+  }
+}

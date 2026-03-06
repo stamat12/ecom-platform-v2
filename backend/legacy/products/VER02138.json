@@ -17,7 +17,7 @@
       "Total Cost Net": 14.56
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "Category": null,
       "eBay Category ID": "185101"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "120"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

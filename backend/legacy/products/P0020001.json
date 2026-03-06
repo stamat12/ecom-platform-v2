@@ -1,0 +1,119 @@
+{
+  "P0020001": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "None",
+      "Color": "Blau Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die elektrische Gartenschere hat einen ergonomischen Griff für eine bequeme Handhabung. Sie wird mit zwei Akkus geliefert und ist ideal zum Schneiden von Ästen und Zweigen. Die Schere ist kompakt und leicht, was die Nutzung erleichtert.",
+      "Keywords": "elektrische Gartenschere",
+      "Materials": "Kunststoff Metall"
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020001 (1).jpg"
+        },
+        {
+          "filename": "P0020001 (10).jpg"
+        },
+        {
+          "filename": "P0020001 (11).jpg"
+        },
+        {
+          "filename": "P0020001 (12).jpg"
+        },
+        {
+          "filename": "P0020001 (13).jpg"
+        },
+        {
+          "filename": "P0020001 (2).jpg"
+        },
+        {
+          "filename": "P0020001 (3).jpg"
+        },
+        {
+          "filename": "P0020001 (4).jpg"
+        },
+        {
+          "filename": "P0020001 (5).jpg"
+        },
+        {
+          "filename": "P0020001 (6).jpg"
+        },
+        {
+          "filename": "P0020001 (7).jpg"
+        },
+        {
+          "filename": "P0020001 (8).jpg"
+        },
+        {
+          "filename": "P0020001 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020001 (1).jpg"
+        },
+        {
+          "filename": "P0020001 (6).jpg"
+        },
+        {
+          "filename": "P0020001 (11).jpg"
+        },
+        {
+          "filename": "P0020001 (13).jpg"
+        }
+      ]
+    }
+  }
+}

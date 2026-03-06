@@ -1,0 +1,62 @@
+{
+  "P0020005": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "SUN",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die SUN X11 MAX ist eine UV-Lampe für die Nagelpflege. Sie verfügt über 45/66 LEDs und bietet eine doppelte Lichtquelle für eine effektive Aushärtung. Das Gerät hat ein digitales Display zur Anzeige der Zeit und ist für verschiedene Nagellacke geeignet.",
+      "Keywords": "X11 MAX UV Lampe Nagelpflege",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "20"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020005 (1).jpg"
+        },
+        {
+          "filename": "P0020005 (2).jpg"
+        },
+        {
+          "filename": "P0020005 (4).jpg"
+        }
+      ]
+    }
+  }
+}

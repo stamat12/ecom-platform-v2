@@ -1,0 +1,62 @@
+{
+  "P0020022": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "RETOO",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Wi-Fi Modul zur Steuerung von Vorhängen. Es hat eine maximale Last von 3A und ist für Spannungen von 100 bis 240V geeignet. Die Anschlüsse sind klar gekennzeichnet und ermöglichen eine einfache Installation.",
+      "Keywords": "GMC-01WB Wi-Fi Modul Vorhang",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020022 (6).jpg"
+        },
+        {
+          "filename": "P0020022 (1).jpg"
+        },
+        {
+          "filename": "P0020022 (3).jpg"
+        }
+      ]
+    }
+  }
+}

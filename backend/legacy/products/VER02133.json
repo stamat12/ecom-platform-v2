@@ -17,7 +17,7 @@
       "Total Cost Net": 1.22
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Damen/Damen-Accessoires/Schals & Tücher",
+      "Category": null,
       "eBay Category ID": "45238"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "10"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

@@ -1,0 +1,65 @@
+{
+  "P0020014": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Omron",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein automatisches Blutdruckmessgerät für den Oberarm. Es verfügt über ein digitales Display zur Anzeige von systolischen und diastolischen Werten sowie der Pulsfrequenz. Das Gerät ist klinisch validiert und bietet eine 5-jährige Garantie.",
+      "Keywords": "X2 Essential Blutdruckmessgerät",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020014 (2).jpg"
+        },
+        {
+          "filename": "P0020014 (1).jpg"
+        },
+        {
+          "filename": "P0020014 (4).jpg"
+        },
+        {
+          "filename": "P0020014 (6).jpg"
+        }
+      ]
+    }
+  }
+}

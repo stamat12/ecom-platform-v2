@@ -162,6 +162,39 @@ def _merge_fill_only(existing: Dict[str, str], proposed: Dict[str, str]) -> Dict
     return out
 
 
+def _is_weak_more_details(text: str) -> bool:
+    t = (text or "").strip()
+    if not t:
+        return True
+    if len(t) < 90:
+        return True
+    sentences = [s for s in re.split(r"[.!?]+", t) if s.strip()]
+    if len(sentences) < 2:
+        return True
+
+    # Encourage practical buyer-relevant information
+    quality_tokens = [
+        "zustand", "gebrauch", "getragen", "spuren", "kratzer", "fleck", "material",
+        "farbe", "größe", "passform", "details", "verschluss", "sohle", "ärmel", "bund"
+    ]
+    t_low = t.lower()
+    matched = sum(1 for token in quality_tokens if token in t_low)
+    return matched < 2
+
+
+def _merge_with_quality_rules(existing: Dict[str, str], proposed: Dict[str, str]) -> Dict[str, str]:
+    """Fill empty fields and upgrade low-quality More Details when AI produced better content."""
+    out = _merge_fill_only(existing, proposed)
+
+    existing_details = (existing.get("More Details") or "").strip()
+    proposed_details = (proposed.get("More Details") or "").strip()
+
+    if proposed_details and _is_weak_more_details(existing_details) and len(proposed_details) > max(len(existing_details), 90):
+        out["More Details"] = proposed_details
+
+    return out
+
+
 def extract_fields_from_images(image_paths: List[Path], current_fields: Dict[str, str]) -> Dict[str, str]:
     """
     Call OpenAI vision to extract product fields from images.
@@ -246,7 +279,10 @@ def enrich_sku_fields(sku: str) -> Dict[str, any]:
 
         # Check if there are empty fields to fill
         empty_fields = {k: v for k, v in current_fields.items() if not (v or "").strip()}
-        if not empty_fields:
+
+        weak_description = _is_weak_more_details(current_fields.get("More Details", ""))
+
+        if not empty_fields and not weak_description:
             return {
                 "success": True,
                 "sku": sku,
@@ -258,8 +294,8 @@ def enrich_sku_fields(sku: str) -> Dict[str, any]:
         # Extract fields from images using OpenAI
         proposed_fields = extract_fields_from_images(image_paths, current_fields)
 
-        # Merge: only fill empty fields
-        merged = _merge_fill_only(current_fields, proposed_fields)
+        # Merge: fill empty fields and optionally improve weak descriptions
+        merged = _merge_with_quality_rules(current_fields, proposed_fields)
 
         # Normalize gender code
         if merged.get("Gender"):
@@ -282,7 +318,10 @@ def enrich_sku_fields(sku: str) -> Dict[str, any]:
             "success": True,
             "sku": sku,
             "updated_fields": updated_count,
-            "message": f"Successfully enriched {updated_count} field(s) for SKU: {sku}",
+            "message": (
+                f"Successfully enriched {updated_count} field(s) for SKU: {sku}"
+                + (" (More Details upgraded)" if merged.get("More Details", "") != current_fields.get("More Details", "") else "")
+            ),
             "data": merged,
         }
 

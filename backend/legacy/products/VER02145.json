@@ -17,7 +17,7 @@
       "Total Cost Net": 22.89
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Stiefel",
+      "Category": null,
       "eBay Category ID": "11498"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "180"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

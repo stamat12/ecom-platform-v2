@@ -1,0 +1,62 @@
+{
+  "P0020009": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Einhell",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Starterkit mit einem 4.0 Ah Akku und einem Ladegerät. Es ist für die Verwendung mit dem Power X-Change System von Einhell konzipiert. Der Akku hat eine Spannung von 18 V und eine maximale Leistung von 900 W. Die Ladezeit beträgt etwa 75 Minuten.",
+      "Keywords": "Power X-Change Starterkit Akku Ladegerät",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "28"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020009 (2).jpg"
+        },
+        {
+          "filename": "P0020009 (4).jpg"
+        },
+        {
+          "filename": "P0020009 (6).jpg"
+        }
+      ]
+    }
+  }
+}

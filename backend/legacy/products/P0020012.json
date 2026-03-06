@@ -1,0 +1,62 @@
+{
+  "P0020012": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "eono",
+      "Color": "weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Verpackung enthält eine Lichttherapie-Gesichtsmaske. Sie ist für die Anwendung im Gesicht konzipiert und bietet eine innovative Behandlungsmethode. Die Maske ist leicht und einfach zu handhaben.",
+      "Keywords": "Lichttherapie Gesichtsmaske",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020012 (2).jpg"
+        },
+        {
+          "filename": "P0020012 (3).jpg"
+        },
+        {
+          "filename": "P0020012 (1).jpg"
+        }
+      ]
+    }
+  }
+}

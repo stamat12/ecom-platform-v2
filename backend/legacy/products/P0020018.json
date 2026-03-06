@@ -1,0 +1,59 @@
+{
+  "P0020018": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Abbildung zeigt zwei weiße Steckdosenleisten, die in einer Kartonverpackung liegen. Sie sind in Folie verpackt und haben mehrere Steckdosen. Die Leisten sind für den Einsatz in Haushalten oder Büros geeignet.",
+      "Keywords": "Steckdosenleiste",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020018 (3).jpg"
+        },
+        {
+          "filename": "P0020018 (4).jpg"
+        }
+      ]
+    }
+  }
+}

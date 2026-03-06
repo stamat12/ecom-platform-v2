@@ -1,0 +1,59 @@
+{
+  "P0020020": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Cable Matters",
+      "Color": "Schwarz",
+      "Size": "1.8m"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein DisplayPort 1.4 Verlängerungskabel. Es hat eine Länge von 1,8 Metern. Ideal für die Verbindung von Monitoren oder anderen Geräten mit DisplayPort-Anschlüssen.",
+      "Keywords": "DisplayPort Verlängerungskabel",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020020 (2).jpg"
+        },
+        {
+          "filename": "P0020020 (1).jpg"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "P0020003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "meross",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der meross Smart Wi-Fi Thermostat hat ein elegantes Glasdesign. Er ist für Heizsysteme geeignet und ermöglicht eine einfache Installation. Der Thermostat unterstützt Sprachsteuerung und Fernzugriff.",
+      "Keywords": "Smart Wi-Fi Thermostat",
+      "Materials": "Glas, Kunststoff"
+    },
+    "OP": {
+      "OP": "60"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020003 (3).jpg"
+        },
+        {
+          "filename": "P0020003 (1).jpg"
+        },
+        {
+          "filename": "P0020003 (6).jpg"
+        },
+        {
+          "filename": "P0020003 (7).jpg"
+        }
+      ]
+    }
+  }
+}

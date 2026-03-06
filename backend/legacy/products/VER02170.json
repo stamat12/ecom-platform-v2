@@ -17,7 +17,7 @@
       "Total Cost Net": 4.56
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Damen/Damenmode/Röcke",
+      "Category": null,
       "eBay Category ID": "63864"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "30"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

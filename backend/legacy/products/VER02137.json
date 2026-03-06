@@ -17,7 +17,7 @@
       "Total Cost Net": 12.89
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/T-Shirts",
+      "Category": null,
       "eBay Category ID": "15687"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "75"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

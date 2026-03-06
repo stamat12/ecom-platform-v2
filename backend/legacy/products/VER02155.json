@@ -17,7 +17,7 @@
       "Total Cost Net": 4.56
     },
     "Ebay Category": {
-      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "Category": null,
       "eBay Category ID": "57988"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "60"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

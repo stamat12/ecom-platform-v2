@@ -27,12 +27,17 @@ _DEFAULT_OPENAI_PROMPT = (
     "Regeln:\n"
     "1) Gender: Nutze Codes M (Herren), F (Damen), U (Unisex), KB (Boys), KG (Girls), KU (Kids Unisex). "
     "Wenn das Produkt nicht geschlechtsspezifisch ist, lasse Gender leer.\n"
-    "2) More Details: Muss 2–5 Sätze auf Deutsch enthalten (kurze, präzise, sichtbare Merkmale).\n"
+    "2) More Details: Muss eine vollständige, kundenorientierte Beschreibung in 4–8 Sätzen auf Deutsch sein. "
+    "Beschreibe klar: Produktart, sichtbare Merkmale/Design, Materialhinweise, Farbe, relevante Passform-/Größenhinweise, "
+    "sichtbarer Zustand inkl. Gebrauchsspuren/Mängel (falls erkennbar), sowie was der Käufer konkret erhält. "
+    "Die Beschreibung soll dem Kunden helfen, Kauf und Zustand sicher zu verstehen – keine 2-3-Wort-Texte.\n"
     "3) Keywords (Deutsch): Beginne mit dem Modell (falls erkennbar), dann die Produktart "
     "(z. B. Sneakers, Fahrradhandschuhe), und optional Damen/Herren/Unisex. "
     "Verwende KEINE Kommata – nur Leerzeichen zwischen Begriffen.\n"
     "Weitere Hinweise:\n"
     "- Lege nur Werte fest, die visuell erkennbar und plausibel sind. Wenn unsicher: leerer String.\n"
+    "- Erfinde keine nicht sichtbaren technischen Daten.\n"
+    "- Nutze alle gegebenen Hauptbilder zusammen, nicht nur ein einzelnes Bild.\n"
     "- Keine zusätzlichen Schlüssel oder Kommentare – nur das JSON.\n"
 )
 

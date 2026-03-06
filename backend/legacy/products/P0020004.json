@@ -1,0 +1,83 @@
+{
+  "P0020004": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "STIGMA",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein schwarzer Koffer mit dem Logo 'STIGMA'. Im Inneren befinden sich verschiedene Zubehörteile für Tätowierer, darunter Nadeln und Tinte. Der Koffer ist robust und eignet sich zur Aufbewahrung von Tätowierbedarf.",
+      "Keywords": "Tattoo Koffer Zubehör",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020004 (2).jpg"
+        },
+        {
+          "filename": "P0020004 (4).jpg"
+        },
+        {
+          "filename": "P0020004 (6).jpg"
+        },
+        {
+          "filename": "P0020004 (5).jpg"
+        },
+        {
+          "filename": "P0020004 (7).jpg"
+        },
+        {
+          "filename": "P0020004 (8).jpg"
+        },
+        {
+          "filename": "P0020004 (9).jpg"
+        },
+        {
+          "filename": "P0020004 (1).jpg"
+        },
+        {
+          "filename": "P0020004 (10).jpg"
+        },
+        {
+          "filename": "P0020004 (3).jpg"
+        }
+      ]
+    }
+  }
+}

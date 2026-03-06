@@ -1,0 +1,65 @@
+{
+  "P0020023": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "ROG",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der RAM-Riegel hat eine schwarze Oberfläche mit einem markanten Design. Auf der Oberseite sind verschiedene technische Informationen und ein Barcode zu sehen. Die Unterseite hat goldene Kontakte für die Verbindung mit dem Motherboard.",
+      "Keywords": "DIMM Riegel RAM",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020023 (5).jpg"
+        },
+        {
+          "filename": "P0020023 (6).jpg"
+        },
+        {
+          "filename": "P0020023 (1).jpg"
+        },
+        {
+          "filename": "P0020023 (3).jpg"
+        }
+      ]
+    }
+  }
+}

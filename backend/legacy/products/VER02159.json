@@ -17,7 +17,7 @@
       "Total Cost Net": 33.72
     },
     "Ebay Category": {
-      "Category": "/Sport/Wintersport/Bekleidung/Hosen",
+      "Category": null,
       "eBay Category ID": "36261"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "200"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"

@@ -1,0 +1,68 @@
+{
+  "P0020017": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "V-TAC",
+      "Color": "Warm White",
+      "Size": "45x80mm"
+    },
+    "Intern Generated Info": {
+      "More details": "Die LED-Lampe hat eine Leistung von 3,7 Watt und erzeugt 320 Lumen. Sie hat einen E14-Sockel und eine Lebensdauer von bis zu 20.000 Stunden. Der Abstrahlwinkel beträgt 180 Grad und die Farbtemperatur liegt bei 3000K.",
+      "Keywords": "LED P45 BULB Lampe",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020017 (2).jpg"
+        },
+        {
+          "filename": "P0020017 (4).jpg"
+        },
+        {
+          "filename": "P0020017 (6).jpg"
+        },
+        {
+          "filename": "P0020017 (7).jpg"
+        },
+        {
+          "filename": "P0020017 (1).jpg"
+        }
+      ]
+    }
+  }
+}

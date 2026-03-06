@@ -1,0 +1,68 @@
+{
+  "P0020010": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Chemin'arte",
+      "Color": "Schwarz, Rot",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Dies ist eine elektrische Kaminheizung mit einem modernen Design. Die Oberfläche zeigt eine Holzoptik in Rot und Schwarz. Sie verfügt über Bedienelemente zur Steuerung der Leistung.",
+      "Keywords": "elektrischer Kamin Chemin'arte",
+      "Materials": "Metall, Kunststoff"
+    },
+    "OP": {
+      "OP": "230"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020010 (6).jpg"
+        },
+        {
+          "filename": "P0020010 (7).jpg"
+        },
+        {
+          "filename": "P0020010 (9).jpg"
+        },
+        {
+          "filename": "P0020010 (1).jpg"
+        },
+        {
+          "filename": "P0020010 (2).jpg"
+        }
+      ]
+    }
+  }
+}

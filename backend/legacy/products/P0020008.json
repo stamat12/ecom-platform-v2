@@ -1,0 +1,71 @@
+{
+  "P0020008": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "None",
+      "Color": "Schwarz",
+      "Size": "Ø34*378mm"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Arbeitsleuchte hat eine hohe Effizienz mit COB-LED-Technologie. Sie bietet eine Helligkeit von 450 Lumen und hat eine Betriebsdauer von 3 bis 8 Stunden. Die Lampe ist wiederaufladbar über USB und wiegt 180g.",
+      "Keywords": "S580 Arbeitsleuchte",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "30"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020008 (11).jpg"
+        },
+        {
+          "filename": "P0020008 (12).jpg"
+        },
+        {
+          "filename": "P0020008 (14).jpg"
+        },
+        {
+          "filename": "P0020008 (3).jpg"
+        },
+        {
+          "filename": "P0020008 (7).jpg"
+        },
+        {
+          "filename": "P0020008 (9).jpg"
+        }
+      ]
+    }
+  }
+}

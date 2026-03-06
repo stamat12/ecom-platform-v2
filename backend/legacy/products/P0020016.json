@@ -1,0 +1,65 @@
+{
+  "P0020016": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Philips",
+      "Color": "Braun",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Verpackung enthält Informationen über das Produkt OneBlade. Es handelt sich um ein elektrisches Rasiergerät, das für eine präzise Rasur entwickelt wurde. Die Verpackung ist aus Karton und enthält Hinweise zur Entsorgung.",
+      "Keywords": "OneBlade Rasierer",
+      "Materials": "Papier"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020016 (1).jpg"
+        },
+        {
+          "filename": "P0020016 (2).jpg"
+        },
+        {
+          "filename": "P0020016 (3).jpg"
+        },
+        {
+          "filename": "P0020016 (4).jpg"
+        }
+      ]
+    }
+  }
+}

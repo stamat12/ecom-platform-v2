@@ -1,0 +1,65 @@
+{
+  "P0020015": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "UGREEN",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Powerbank hat eine Kapazität von 25000mAh und unterstützt schnelles Laden mit bis zu 145W. Sie ist für iOS und Android geeignet und hat mehrere Ausgänge, darunter USB-C und USB-A. Das Gerät ist flugzeugtauglich und bietet mehrere Schutzmechanismen.",
+      "Keywords": "Powerbank 25000mAh Fast Charging",
+      "Materials": "Lithium-Ionen-Batterie"
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "main_images": [
+        {
+          "filename": "P0020015 (3).jpg"
+        },
+        {
+          "filename": "P0020015 (4).jpg"
+        },
+        {
+          "filename": "P0020015 (5).jpg"
+        },
+        {
+          "filename": "P0020015 (6).jpg"
+        }
+      ]
+    }
+  }
+}
