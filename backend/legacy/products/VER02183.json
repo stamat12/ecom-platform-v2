@@ -21,27 +21,27 @@
       "eBay Category ID": "95672"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Lacoste",
+      "Color": "Schwarz",
+      "Size": "42"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind aus schwarzem Leder und haben eine sportliche Silhouette. Sie verfügen über eine gepolsterte Zunge und einen stabilen Schuhkragen. Die Sohle ist rutschfest und bietet guten Halt.",
+      "Keywords": "Lacoste Sneakers Herren",
+      "Materials": "Leder"
     },
     "OP": {
-      "OP": null
+      "OP": "150"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
@@ -105,7 +105,84 @@
         {
           "filename": "VER02183 (1).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02183 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2t4AAeSw0y9pqhO4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lhYAAeSwX1ZpqhO7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8soAAeSwPsRpqhO-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9gYAAeSwultpqhPC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VtAAAeSwGvtpqhPF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4zwAAeSwmeNpqhPJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YgMAAeSws3xpqhPM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02183 (3).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6zcAAeSwYs9pqhPO/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Lacoste",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Herstellernummer": "746SMA005502H",
+        "Individualisiert": "Nein",
+        "Stil": "Sneaker",
+        "Obermaterial": "Leder",
+        "Produktart": "Sportschuh",
+        "Verschluss": "Schnürung",
+        "Jahreszeit": "Ganzjährig",
+        "Anlass": "Freizeit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "746SMA005502H",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "125",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
     }
   }
 }

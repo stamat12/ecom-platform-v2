@@ -1,0 +1,241 @@
+{
+  "VER00683": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": "2310749",
+      "Invoice Date": "2023-10-10T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "419125",
+      "ISIN": "",
+      "Supplier Title": "1 Stk. Hyperx Kabellos Tastatur *"
+    },
+    "Price Data": {
+      "Price Net": "23.0",
+      "Shipping Net": "0.97",
+      "Total Cost Net": "23.97"
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Tastaturen, Mäuse & Pointing/Tastaturen & Keypads",
+      "eBay Category ID": "33963"
+    },
+    "EAN": {
+      "EAN": "196188522257.0"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "HyperX",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Kompakte, robuste Tastatur mit speziellen mechanischen HyperX Switches und einem Gehäuse aus Flugzeugaluminium.",
+      "Keywords": "Alloy Origins Tastatur",
+      "Materials": "Gehäuse aus Flugzeugaluminium"
+    },
+    "OP": {
+      "OP": "110.0"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 15,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER00683 (1).jpg"
+        },
+        {
+          "filename": "VER00683 (10).jpg"
+        },
+        {
+          "filename": "VER00683 (11).jpg"
+        },
+        {
+          "filename": "VER00683 (12).jpg"
+        },
+        {
+          "filename": "VER00683 (13).jpg"
+        },
+        {
+          "filename": "VER00683 (14).jpg"
+        },
+        {
+          "filename": "VER00683 (15).jpg"
+        },
+        {
+          "filename": "VER00683 (2).jpg"
+        },
+        {
+          "filename": "VER00683 (3).jpg"
+        },
+        {
+          "filename": "VER00683 (4).jpg"
+        },
+        {
+          "filename": "VER00683 (5).jpg"
+        },
+        {
+          "filename": "VER00683 (6).jpg"
+        },
+        {
+          "filename": "VER00683 (7).jpg"
+        },
+        {
+          "filename": "VER00683 (8).jpg"
+        },
+        {
+          "filename": "VER00683 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER00683 (10).jpg"
+        },
+        {
+          "filename": "VER00683 (11).jpg"
+        },
+        {
+          "filename": "VER00683 (2).jpg"
+        },
+        {
+          "filename": "VER00683 (4).jpg"
+        },
+        {
+          "filename": "VER00683 (13).jpg"
+        },
+        {
+          "filename": "VER00683 (15).jpg"
+        },
+        {
+          "filename": "VER00683 (6).jpg"
+        },
+        {
+          "filename": "VER00683 (5).jpg"
+        },
+        {
+          "filename": "VER00683 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER00683 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ehcAAeSwW5RpqhXN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hCQAAeSw-LlpqhXQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (10).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/f~wAAeSwSMppqhXT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (11).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dnQAAeSw5nxpqhXW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (12).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Z98AAeSw0gNpqhXZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (13).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hH4AAeSw-LlpqhXc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (14).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AZ0AAeSwDq5pqhXg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AxIAAeSwM7JpqhXj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mg4AAeSwlvBpqhXn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6lQAAeSwcKNpqhXp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/A-kAAeSwdWNpqhXt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER00683 (9).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FjcAAeSwAANpqhXx/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "HyperX",
+        "Produktart": "Mechanisch"
+      },
+      "optional": {
+        "Modell": "HyperX Alloy Origins",
+        "Farbe": "Schwarz",
+        "Material": "Gehäuse aus Flugzeugaluminium",
+        "Herstellernummer": "AG002",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Ursprungsland": "China",
+        "Herstellergarantie": "2 Jahre",
+        "Konnektivität": "USB",
+        "Tastatursprache": "Deutsch",
+        "Tastaturlayout": "QWERTZ",
+        "Besonderheiten": "Beleuchtet",
+        "Inklusive Ladegerät": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tastatur",
+      "Product Model": "Alloy Origins",
+      "Keyword 1": "Gaming Tastatur",
+      "Keyword 2": "mechanische Tastatur",
+      "Keyword 3": "RGB Tastatur"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "75",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": 196188522257,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:32"
+    }
+  }
+}

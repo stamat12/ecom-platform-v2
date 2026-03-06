@@ -17,33 +17,141 @@
       "Total Cost Net": 14.56
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Shirts & Hemden/Poloshirts",
+      "eBay Category ID": "185101"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "Polo Ralph Lauren",
+      "Color": "Dunkelblau",
+      "Size": "XS"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Das Poloshirt hat einen klassischen Kragen und kurze Ärmel. Es ist aus einem weichen, atmungsaktiven Material gefertigt. Auf der linken Brust befindet sich das ikonische Polo-Logo in Gelb.",
+      "Keywords": "Polo Ralph Lauren Poloshirt Herren",
+      "Materials": "Baumwolle"
     },
     "OP": {
-      "OP": null
+      "OP": "120"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02138 (1).jpg"
+        },
+        {
+          "filename": "VER02138 (2).jpg"
+        },
+        {
+          "filename": "VER02138 (3).jpg"
+        },
+        {
+          "filename": "VER02138 (4).jpg"
+        },
+        {
+          "filename": "VER02138 (5).jpg"
+        },
+        {
+          "filename": "VER02138 (6).jpg"
+        },
+        {
+          "filename": "VER02138 (7).JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02138 (5).jpg"
+        },
+        {
+          "filename": "VER02138 (6).jpg"
+        },
+        {
+          "filename": "VER02138 (7).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02138 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4GMAAeSwDDJpqhLh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02138 (1).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BEUAAeSwyG9pqhLl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02138 (7).JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/QCwAAeSw4JZpqhLp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02138 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/UE8AAeSwGvtpqhLu/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Abteilung": "Herren",
+        "Farbe": "Blau",
+        "Größe": "XS",
+        "Marke": "Polo Ralph Lauren"
+      },
+      "optional": {
+        "Produktart": "Polo",
+        "Ärmellänge": "Kurzarm",
+        "Material": "100% Baumwolle",
+        "Passform": "Slim",
+        "Ausschnitt": "Kragen",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Knopf",
+        "Kragenart": "Button-Down Kragen",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Poloshirt",
+      "Product Model": "Slim Fit",
+      "Keyword 1": "Herren Poloshirt",
+      "Keyword 2": "kurzärmliges Shirt",
+      "Keyword 3": "Polohemd"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "85",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
     }
   }
 }

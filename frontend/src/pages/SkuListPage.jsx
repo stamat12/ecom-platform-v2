@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function SkuListPage() {
   const [rows, setRows] = useState([]);
   const [err, setErr] = useState("");
+  const [tableLoading, setTableLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(50);
   const [total, setTotal] = useState(0);
@@ -22,6 +23,7 @@ export default function SkuListPage() {
   const [excelSyncLoading, setExcelSyncLoading] = useState(false);
   const navigate = useNavigate();
   const hasRestoredState = useRef(false);
+  const latestRequestIdRef = useRef(0);
 
   // Column and filter state
   const [allColumns, setAllColumns] = useState([]);
@@ -41,6 +43,7 @@ export default function SkuListPage() {
   const [columnWidths, setColumnWidths] = useState({}); // { columnName: px }
   const [resizing, setResizing] = useState(null); // { col, startX, startWidth }
   const profileId = "default"; // could be derived from user context later
+  const lagerColumns = ["Lager", "Lage"];
 
   // Load available columns, column meta, and persisted filters on mount
   useEffect(() => {
@@ -151,7 +154,8 @@ export default function SkuListPage() {
         const toLoad = multiSelectStringCols.filter((c) => (colData.columns || []).includes(c));
         await Promise.all(toLoad.map(async (c) => {
           try {
-            const r = await fetch(`/api/skus/columns/distinct?column=${encodeURIComponent(c)}&limit=200`);
+            const limit = lagerColumns.includes(c) ? 1000 : 200;
+            const r = await fetch(`/api/skus/columns/distinct?column=${encodeURIComponent(c)}&limit=${limit}`);
             if (r.ok) {
               const d = await r.json();
               setDistinctValues((prev) => ({ ...prev, [c]: d.values || [] }));
@@ -258,20 +262,41 @@ export default function SkuListPage() {
       params.append("filters", JSON.stringify(filters));
     }
 
-    fetch(`/api/skus?${params}`)
-      .then((r) => {
-        if (!r.ok) throw new Error("Failed to load SKUs");
-        return r.json();
-      })
-      .then((data) => {
-        if (Array.isArray(data.items)) {
-          setRows(data.items);
-          setTotal(data.total);
-        } else {
-          setRows([]);
-        }
-      })
-      .catch((e) => setErr(String(e)));
+    const requestId = ++latestRequestIdRef.current;
+    setTableLoading(true);
+    setErr("");
+    const controller = new AbortController();
+    const debounceTimer = setTimeout(() => {
+      fetch(`/api/skus?${params}`, { signal: controller.signal })
+        .then((r) => {
+          if (!r.ok) throw new Error("Failed to load SKUs");
+          return r.json();
+        })
+        .then((data) => {
+          if (requestId !== latestRequestIdRef.current) return;
+          if (Array.isArray(data.items)) {
+            setRows(data.items);
+            setTotal(data.total);
+          } else {
+            setRows([]);
+          }
+        })
+        .catch((e) => {
+          if (e?.name === "AbortError") return;
+          if (requestId !== latestRequestIdRef.current) return;
+          setErr(String(e));
+        })
+        .finally(() => {
+          if (requestId === latestRequestIdRef.current) {
+            setTableLoading(false);
+          }
+        });
+    }, 250);
+
+    return () => {
+      clearTimeout(debounceTimer);
+      controller.abort();
+    };
   }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading, emptyFilters]);
 
   const totalPages = Math.ceil(total / pageSize);
@@ -1376,6 +1401,113 @@ export default function SkuListPage() {
                       </th>
                     );
                   }
+                  if (lagerColumns.includes(col)) {
+                    const selectedValues = Array.isArray(val) ? val : [];
+                    const options = (distinctValues[col] || []).filter((v) => String(v || "").trim() !== "");
+                    return (
+                      <th key={`filter-${col}`} style={{ padding: 4, minWidth: 180 }}>
+                        <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
+                          <div style={{ flex: 1 }}>
+                            <div
+                              style={{
+                                maxHeight: 110,
+                                overflowY: "auto",
+                                border: "1px solid #d0d0d0",
+                                borderRadius: 4,
+                                padding: "4px 6px",
+                                background: "#fff",
+                              }}
+                            >
+                              {options.length === 0 ? (
+                                <div style={{ fontSize: "0.8em", color: "#777" }}>No values</div>
+                              ) : (
+                                options.map((option) => {
+                                  const isChecked = selectedValues.includes(option);
+                                  return (
+                                    <label
+                                      key={option}
+                                      style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: 6,
+                                        fontSize: "0.82em",
+                                        whiteSpace: "nowrap",
+                                        marginBottom: 2,
+                                        cursor: "pointer",
+                                      }}
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        checked={isChecked}
+                                        onChange={(e) => {
+                                          const next = e.target.checked
+                                            ? [...selectedValues, option]
+                                            : selectedValues.filter((v) => v !== option);
+                                          handleFilterChange(col, next);
+                                        }}
+                                      />
+                                      <span>{option}</span>
+                                    </label>
+                                  );
+                                })
+                              )}
+                            </div>
+                            <div style={{ display: "flex", gap: 6, marginTop: 6, alignItems: "center", flexWrap: "wrap" }}>
+                              <button onClick={() => handleFilterChange(col, [])} disabled={selectedValues.length === 0} style={{ fontSize: "0.8em" }}>Clear</button>
+                              <label style={{ display: "flex", alignItems: "center", gap: 4, whiteSpace: "nowrap", fontSize: "0.82em" }}>
+                                <input
+                                  type="checkbox"
+                                  checked={emptyFilters[col] || false}
+                                  onChange={(e) => setEmptyFilters((prev) => ({ ...prev, [col]: e.target.checked }))}
+                                />
+                                Empty
+                              </label>
+                              <span style={{ fontSize: "0.75em", color: "#666" }}>
+                                {selectedValues.length > 0 ? `${selectedValues.length} selected` : ""}
+                              </span>
+                            </div>
+                          </div>
+                          {selectedValues.length > 0 && (
+                            <div style={{ display: "flex", gap: 2 }}>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "include" ? "#4CAF50" : "#ddd",
+                                  color: filterMode[col] === "include" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Include mode"
+                              >
+                                ✓
+                              </button>
+                              <button
+                                onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                                style={{
+                                  padding: "4px 8px",
+                                  background: filterMode[col] === "exclude" ? "#f44336" : "#ddd",
+                                  color: filterMode[col] === "exclude" ? "white" : "black",
+                                  border: "none",
+                                  borderRadius: 3,
+                                  cursor: "pointer",
+                                  fontSize: "0.8em",
+                                  fontWeight: "bold"
+                                }}
+                                title="Exclude mode"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      </th>
+                    );
+                  }
+
                   // Typeahead chips for Brand/Color (force even if inferred enum)
                   if (multiSelectStringCols.includes(col)) {
                     const tokens = Array.isArray(val) ? val : [];
@@ -1606,6 +1738,12 @@ export default function SkuListPage() {
               <tr>
                 <td style={{ padding: 20, textAlign: "center", color: "#999" }}>
                   Please select at least one column to display
+                </td>
+              </tr>
+            ) : tableLoading ? (
+              <tr>
+                <td colSpan={Math.max(1, selectedColumns.length + 1)} style={{ padding: 20, textAlign: "center", color: "#666" }}>
+                  Loading...
                 </td>
               </tr>
             ) : rows.length === 0 ? (

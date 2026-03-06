@@ -17,33 +17,108 @@
       "Total Cost Net": 1.22
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Damen/Damen-Accessoires/Schals & Tücher",
+      "eBay Category ID": "45238"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "U",
+      "Brand": "AOMIG",
+      "Color": "Weiß",
+      "Size": ""
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Das Tuch hat ein klassisches Paisley-Muster in Schwarz auf weißem Hintergrund. Es ist quadratisch und eignet sich ideal als modisches Accessoire oder Kopfbedeckung. Die Kanten sind sauber genäht und das Material wirkt hochwertig.",
+      "Keywords": "Bandana Tuch Unisex",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "10"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02133 (1).jpg"
+        },
+        {
+          "filename": "VER02133 (2).jpg"
+        },
+        {
+          "filename": "VER02133 (3).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02133 (3).jpg"
+        },
+        {
+          "filename": "VER02133 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02133 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zWAAAeSwPa9pqhLU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02133 (1).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YToAAeSw9KNpqhLY/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "AOMIG",
+        "Produktart": "Schal",
+        "Abteilung": "Unisex",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Muster": "Paisley"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Bandana",
+      "Product Model": "",
+      "Keyword 1": "Halsbandana",
+      "Keyword 2": "Schal",
+      "Keyword 3": "Tuch"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:32"
     }
   }
 }

@@ -21,13 +21,13 @@
       "eBay Category ID": "33963"
     },
     "EAN": {
-      "EAN": 3760162064865.0
+      "EAN": 3760162064865
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (Verpackung beschädigt)"
     },
     "Intern Product Info": {
-      "Gender": "U",
+      "Gender": "",
       "Brand": "The G-Lab",
       "Color": "Schwarz",
       "Size": ""
@@ -38,7 +38,7 @@
       "Materials": "Metall"
     },
     "OP": {
-      "OP": 45.0
+      "OP": "45.0"
     },
     "Status": {
       "Status": "OK"
@@ -188,6 +188,23 @@
         "Net Profit": "8.73142857142857",
         "Net Profit Margin": "110.94572517698309"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Tastatur",
+      "Product Model": "Carbon",
+      "Keyword 1": "mechanische Tastatur",
+      "Keyword 2": "beleuchtete Tastatur",
+      "Keyword 3": "Gaming Tastatur"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": 3760162064865,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:32"
     }
   }
 }

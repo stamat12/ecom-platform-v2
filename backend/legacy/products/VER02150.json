@@ -17,33 +17,152 @@
       "Total Cost Net": 28.72
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Sneaker",
+      "eBay Category ID": "15709"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "Nike",
+      "Color": "Rosa",
+      "Size": "38.5"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Schuhe sind in einem sanften Rosaton gehalten und haben eine glatte Oberfläche. Sie verfügen über eine gepolsterte Zunge und einen hohen Tragekomfort. Die Schnürsenkel sind farblich abgestimmt und sorgen für einen sicheren Halt.",
+      "Keywords": "Air Jordan Sneakers Damen",
+      "Materials": "Textil"
     },
     "OP": {
-      "OP": null
+      "OP": "130"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02150 (1).jpg"
+        },
+        {
+          "filename": "VER02150 (2).jpg"
+        },
+        {
+          "filename": "VER02150 (3).jpg"
+        },
+        {
+          "filename": "VER02150 (4).jpg"
+        },
+        {
+          "filename": "VER02150 (5).jpg"
+        },
+        {
+          "filename": "VER02150 (6).jpg"
+        },
+        {
+          "filename": "VER02150 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02150 (1).jpg"
+        },
+        {
+          "filename": "VER02150 (4).jpg"
+        },
+        {
+          "filename": "VER02150 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02150 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jNwAAeSwCoZpqhM8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02150 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/d28AAeSw4h1pqhNC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02150 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/zPIAAeSwPgVpqhNH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02150 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cHYAAeSwAYxpqhNM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02150 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/5mwAAeSwykppqhNP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02150 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/TMoAAeSwJPJpqhNS/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nike",
+        "EU-Schuhgröße": "38,5",
+        "Abteilung": "Herren",
+        "Farbe": "Rosa"
+      },
+      "optional": {
+        "Herstellernummer": "HF3969600",
+        "UK-Schuhgröße": "5",
+        "US-Schuhgröße": "7,5",
+        "Stil": "Sneaker",
+        "Schuhschaft-Typ": "Low Top",
+        "Obermaterial": "Textil",
+        "Produktart": "Sportschuh",
+        "Individualisiert": "Nein",
+        "Modell": "Air Jordan",
+        "Verschluss": "Schnürung"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sneaker",
+      "Product Model": "HF3969600",
+      "Keyword 1": "Sport Schuhe",
+      "Keyword 2": "Freizeitschuhe",
+      "Keyword 3": "Laufschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "110",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
     }
   }
 }

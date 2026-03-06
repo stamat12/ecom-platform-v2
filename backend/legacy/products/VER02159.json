@@ -17,33 +17,188 @@
       "Total Cost Net": 33.72
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Sport/Wintersport/Bekleidung/Hosen",
+      "eBay Category ID": "36261"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "F",
+      "Brand": "PeakPerformance",
+      "Color": "Grau-Schwarz",
+      "Size": "L"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Hose hat einen elastischen Bund für optimalen Tragekomfort. Sie ist aus einem leichten, atmungsaktiven Material gefertigt. Die Kombination aus Grau und Schwarz sorgt für einen modernen Look. Sie verfügt über mehrere Taschen mit Reißverschluss.",
+      "Keywords": "W Stretch TrekPants Damen",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "200"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02159 (1).jpg"
+        },
+        {
+          "filename": "VER02159 (10).jpg"
+        },
+        {
+          "filename": "VER02159 (2).jpg"
+        },
+        {
+          "filename": "VER02159 (3).jpg"
+        },
+        {
+          "filename": "VER02159 (4).jpg"
+        },
+        {
+          "filename": "VER02159 (5).jpg"
+        },
+        {
+          "filename": "VER02159 (6).jpg"
+        },
+        {
+          "filename": "VER02159 (7).jpg"
+        },
+        {
+          "filename": "VER02159 (8).jpg"
+        },
+        {
+          "filename": "VER02159 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02159 (2).jpg"
+        },
+        {
+          "filename": "VER02159 (6).jpg"
+        },
+        {
+          "filename": "VER02159 (7).jpg"
+        },
+        {
+          "filename": "VER02159 (10).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02159 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0zwAAeSwiCBpqhN1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kyYAAeSw2MtpqhN4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/X9UAAeSws3xpqhN8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9tsAAeSwEGZpqhN~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/7O0AAeSwkixpqhOC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (10).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Rq0AAeSwKFhpqhOF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cIIAAeSwH1RpqhOJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jrMAAeSwBhJpqhOM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/17oAAeSwlNtpqhOP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02159 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2RQAAeSwJe1pqhOU/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "PeakPerformance",
+        "Größe": "L",
+        "Farbe": "Grau-Schwarz",
+        "Stil": "Schneehose",
+        "Abteilung": "Damen",
+        "Produktart": "Hosen"
+      },
+      "optional": {
+        "Gewebeart": "Nylon",
+        "Aktivität": "Skifahren",
+        "Material": "100% Nylon",
+        "Anlass": "Sport",
+        "Verschluss": "Reißverschluss",
+        "Besonderheiten": "Atmungsaktiv",
+        "Jahreszeit": "Winter",
+        "Passform": "Regular",
+        "Ursprungsland": "Schweden",
+        "Beinform": "Gerades Bein",
+        "Handgefertigt": "Nein",
+        "Textilpflege": "Maschinenwäsche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "W Stretch TrekPants",
+      "Keyword 1": "Trekkinghose",
+      "Keyword 2": "Outdoorhose",
+      "Keyword 3": "Funktionshose"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "155",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
     }
   }
 }

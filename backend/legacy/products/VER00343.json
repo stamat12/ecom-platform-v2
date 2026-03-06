@@ -1,0 +1,114 @@
+{
+  "VER00343": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 23061681,
+      "Invoice Date": "2023-06-28T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 640267,
+      "ISIN": null,
+      "Supplier Title": "1 Stk. Indicode Sommerhose Größe M"
+    },
+    "Price Data": {
+      "Price Net": 10.0,
+      "Shipping Net": 0.8,
+      "Total Cost Net": 10.8
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Hosen",
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": "5713927891327"
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "INDICODE",
+      "Color": "Beige",
+      "Size": "M"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Hose hat eine bequeme Passform und ist aus leichtem Material gefertigt. Sie verfügt über mehrere Taschen, darunter seitliche Cargo-Taschen. Ideal für lässige Outfits und den Alltag.",
+      "Keywords": "INDICODE Hose Herren Cargo",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "20230707_143649486_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143656011_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143724064_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143730079_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143750036_iOS.jpeg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "20230707_143656011_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143730079_iOS.jpeg"
+        },
+        {
+          "filename": "20230707_143724064_iOS.jpeg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "INDICODE",
+        "Größe": "M",
+        "Abteilung": "Herren",
+        "Stil": "Cargo",
+        "Farbe": "Beige"
+      },
+      "optional": {
+        "Produktart": "Hosen",
+        "Taschenart": "Cargo-Tasche",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Hose",
+      "Product Model": "Nineteen Ninety Three",
+      "Keyword 1": "Cargo Hose",
+      "Keyword 2": "Freizeithose",
+      "Keyword 3": "Chino Hose"
+    }
+  }
+}

@@ -17,33 +17,165 @@
       "Total Cost Net": 4.56
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Etiketten"
     },
     "Intern Product Info": {
-      "Gender": null,
-      "Brand": null,
-      "Color": null,
-      "Size": null
+      "Gender": "M",
+      "Brand": "felix bühler",
+      "Color": "Grau",
+      "Size": "M"
     },
     "Intern Generated Info": {
-      "More details": null,
-      "Keywords": null,
-      "Materials": null
+      "More details": "Die Jacke hat eine Kapuze und einen durchgehenden Reißverschluss. Sie ist innen mit einem weichen, flauschigen Material gefüttert. Die Ärmel haben schwarze Bündchen mit weißen Streifen.",
+      "Keywords": "Jacke Herren grau",
+      "Materials": "Polyester"
     },
     "OP": {
-      "OP": null
+      "OP": "60"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02155 (1).jpg"
+        },
+        {
+          "filename": "VER02155 (12).jpg"
+        },
+        {
+          "filename": "VER02155 (2).jpg"
+        },
+        {
+          "filename": "VER02155 (3).jpg"
+        },
+        {
+          "filename": "VER02155 (4).jpg"
+        },
+        {
+          "filename": "VER02155 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02155 (3).jpg"
+        },
+        {
+          "filename": "VER02155 (1).jpg"
+        },
+        {
+          "filename": "VER02155 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02155 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/UAcAAeSwCxZpqhNa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02155 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/-j0AAeSwyIRpqhNf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02155 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0WkAAeSwtCRpqhNk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02155 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ZS0AAeSw5nxpqhNo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02155 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/bakAAeSwx0VpqhNr/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "felix bühler",
+        "Größe": "M",
+        "Abteilung": "Herren",
+        "Produktart": "Jacke",
+        "Stil": "Anorak",
+        "Farbe": "Grau",
+        "Außenmaterial": "Polyester"
+      },
+      "optional": {
+        "Jahreszeit": "",
+        "Futtermaterial": "Baumwolle",
+        "Besonderheiten": "Abnehmbare Kapuze",
+        "Gewebeart": "",
+        "Thema": "",
+        "Ursprungsland": "",
+        "Modell": "",
+        "Isoliermaterial": "",
+        "Jacken-/Mantellänge": "Lang",
+        "Verschluss": "Reißverschluss",
+        "Anlass": "Freizeit",
+        "Aktivität": "",
+        "Vintage": "Nein",
+        "Größenkategorie": "",
+        "Produktlinie": "",
+        "Muster": "",
+        "Akzente": "",
+        "Passform": "Regular",
+        "Wärmegrad": "",
+        "Kragenart": "",
+        "Handgefertigt": "",
+        "Personalisieren": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Brustumfang": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "653277",
+      "Keyword 1": "Fleecejacke",
+      "Keyword 2": "Kapuze",
+      "Keyword 3": "Wärme"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
     }
   }
 }

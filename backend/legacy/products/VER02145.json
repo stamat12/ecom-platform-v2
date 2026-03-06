@@ -1,0 +1,185 @@
+{
+  "VER02145": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102751,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 868883,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein Eva mid Boots Größe 42"
+    },
+    "Price Data": {
+      "Price Net": 22.5,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 22.89
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Stiefel",
+      "eBay Category ID": "11498"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "Calvin Klein Jeans",
+      "Color": "Schwarz",
+      "Size": "42"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Stiefel haben eine robuste Gummisohle mit Profil. Sie sind aus schwarzem Kunstleder gefertigt und verfügen über eine Schnürung. Der obere Rand ist weich gefüttert, was zusätzlichen Komfort bietet.",
+      "Keywords": "EVA MID LACEUP BOOT Stiefel Unisex",
+      "Materials": "Kunstleder"
+    },
+    "OP": {
+      "OP": "180"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02145 (1).jpg"
+        },
+        {
+          "filename": "VER02145 (2).jpg"
+        },
+        {
+          "filename": "VER02145 (3).jpg"
+        },
+        {
+          "filename": "VER02145 (4).jpg"
+        },
+        {
+          "filename": "VER02145 (5).jpg"
+        },
+        {
+          "filename": "VER02145 (6).jpg"
+        },
+        {
+          "filename": "VER02145 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02145 (5).jpg"
+        },
+        {
+          "filename": "VER02145 (2).jpg"
+        },
+        {
+          "filename": "VER02145 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02145 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Y-8AAeSwq1ppqhL3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yFAAAeSwnjlpqhL6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/za0AAeSwFxxpqhL9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Se0AAeSwYXxpqhMB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0~oAAeSwSEFpqhMD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/SDYAAeSwW3RpqhMG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02145 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jEsAAeSwZQRpqhMI/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Calvin Klein Jeans",
+        "EU-Schuhgröße": "42",
+        "Abteilung": "Unisex Erwachsene",
+        "Stil": "Stiefelette",
+        "Obermaterial": "Kunstleder",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Produktart": "Stiefel",
+        "UK-Schuhgröße": "8",
+        "AU-Schuhgröße": "8",
+        "US-Schuhgröße": "9",
+        "Futtermaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Gummi",
+        "Innensohlenmaterial": "Synthetik",
+        "Jahreszeit": "Herbst",
+        "Verschluss": "Schnürung",
+        "Ursprungsland": "China",
+        "Schuhschaft-Typ": "Knöchel",
+        "Schuhspitze": "Geschlossen",
+        "Modell": "EVA MID LACEUP BOOT WL LTH",
+        "Besonderheiten": "Gefüttert",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Akzente": "Logo",
+        "Anlass": "Freizeit",
+        "Herstellungsjahr": "2023",
+        "Muster": "Ohne Muster"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Stiefel",
+      "Product Model": "YMOYM00752",
+      "Keyword 1": "Lace-Up Stiefel",
+      "Keyword 2": "EVA Stiefel",
+      "Keyword 3": "Wasserdichte Stiefel"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "145",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
+    }
+  }
+}

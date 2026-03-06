@@ -1,0 +1,209 @@
+{
+  "VER02147": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25102751,
+      "Invoice Date": "2025-10-30T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 868933,
+      "ISIN": null,
+      "Supplier Title": "Calvin Klein combat mid lace up boot w zip Größe 44"
+    },
+    "Price Data": {
+      "Price Net": 29.17,
+      "Shipping Net": 0.39,
+      "Total Cost Net": 29.56
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenschuhe/Stiefel",
+      "eBay Category ID": "11498"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Calvin Klein",
+      "Color": "schwarz",
+      "Size": "44"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Stiefel sind aus schwarzem Leder gefertigt und haben eine robuste Sohle. Sie verfügen über eine Schnürung und einen seitlichen Reißverschluss für einfaches An- und Ausziehen. Die Stiefel sind ideal für den Alltag und bieten sowohl Stil als auch Komfort.",
+      "Keywords": "Combat Mid Laceup Boot Schnürboots Herren",
+      "Materials": "Leder"
+    },
+    "OP": {
+      "OP": "155"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MENZELSTRAßE 10/2/4"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "VER02147 (1).jpg"
+        },
+        {
+          "filename": "VER02147 (10).jpg"
+        },
+        {
+          "filename": "VER02147 (11).jpg"
+        },
+        {
+          "filename": "VER02147 (2).jpg"
+        },
+        {
+          "filename": "VER02147 (3).jpg"
+        },
+        {
+          "filename": "VER02147 (4).jpg"
+        },
+        {
+          "filename": "VER02147 (5).jpg"
+        },
+        {
+          "filename": "VER02147 (6).jpg"
+        },
+        {
+          "filename": "VER02147 (7).jpg"
+        },
+        {
+          "filename": "VER02147 (8).jpg"
+        },
+        {
+          "filename": "VER02147 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02147 (7).jpg"
+        },
+        {
+          "filename": "VER02147 (8).jpg"
+        },
+        {
+          "filename": "VER02147 (3).jpg"
+        },
+        {
+          "filename": "VER02147 (11).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "VER02147 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Wc8AAeSwd0BpqhMR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VysAAeSwSFlpqhMW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/X-wAAeSwbQhpqhMa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jBEAAeSwCoZpqhMe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/bgkAAeSwH8ppqhMh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (11).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hd8AAeSw6MhpqhMl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (10).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BGUAAeSwXQJpqhMo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jIkAAeSwchFpqhMr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/P38AAeSwqGNpqhMv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02147 (3).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xLEAAeSwQmppqhMz/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Calvin Klein",
+        "EU-Schuhgröße": "44",
+        "Abteilung": "Herren",
+        "Stil": "Kampf",
+        "Obermaterial": "Leder",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Produktart": "Stiefel",
+        "UK-Schuhgröße": "10",
+        "AU-Schuhgröße": "10",
+        "US-Schuhgröße": "10",
+        "Modell": "Combat Mid Laceup Boot",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Verschluss": "Schnürung",
+        "Schuhschaft-Typ": "Knöchel",
+        "Schuhspitze": "Runde Form",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein",
+        "Handgefertigt": "Nein",
+        "Herstellernummer": "87119856505394"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Schnürboot",
+      "Product Model": "VM0Y/00162",
+      "Keyword 1": "Stiefel",
+      "Keyword 2": "Kampfstiefel",
+      "Keyword 3": "Hochschaftstiefel"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "135",
+      "Shipping Costs Net": "9.25",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-17T00:33"
+    }
+  }
+}
