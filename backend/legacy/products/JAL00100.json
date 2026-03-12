@@ -1,0 +1,127 @@
+{
+  "JAL00100": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU325856-47-53-291025020205",
+      "Invoice Date": "29.10.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": "LPNHK422662973",
+      "ISIN": "b0b4d1ygps",
+      "Supplier Title": "Cuteefun Digital PH Meter, 5-in-1 Water Tester with Backlight, PH/TDS/EC/Salinity/Temp Meter with ATC, 0.01 Resolution, High-Precision Pen-Type Tester, for Drinking Water, Aquarium, Spas"
+    },
+    "Price Data": {
+      "Price Net": 2.87,
+      "Shipping Net": 0.17,
+      "Total Cost Net": 3.04
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Schwimmbecken, Saunen & Außenwhirlpools/Wasserpflegeprodukte & -tester/Wassertester",
+      "eBay Category ID": "181059"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Cuteefun",
+      "Color": "Blau Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses digitale Wasserqualitätsmessgerät misst pH, TDS, EC und Salinität. Es hat ein gut lesbares Display mit verschiedenen Messwerten. Ideal für den Einsatz in Aquarien, Pools oder zur Überprüfung von Trinkwasser. Sichtbare Angaben: Farbe: Blau Weiß.",
+      "Keywords": "Wasserqualitätsmessgerät 5 in 1",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "28.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 002"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "JAL00100 (1).jpg"
+        },
+        {
+          "filename": "JAL00100 (2).jpg"
+        },
+        {
+          "filename": "JAL00100 (3).jpg"
+        },
+        {
+          "filename": "JAL00100 (4).jpg"
+        },
+        {
+          "filename": "JAL00100 (5).jpg"
+        },
+        {
+          "filename": "JAL00100 (6).jpg"
+        },
+        {
+          "filename": "JAL00100 (7).jpg"
+        },
+        {
+          "filename": "JAL00100 (8).jpg"
+        },
+        {
+          "filename": "JAL00100 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

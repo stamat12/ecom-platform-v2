@@ -1,0 +1,176 @@
+{
+  "P0020034": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/Tragbare Geräte & Kopfhörer/Kopfhörer",
+      "eBay Category ID": "112529"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Nothing",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Kopfhörer sind kabellos und bieten eine hohe Klangqualität. Sie verfügen über eine lange Akkulaufzeit von bis zu 100 Stunden. Das Design ist modern und minimalistisch, ideal für den täglichen Gebrauch. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Headphone Pro Kopfhörer",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "75"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020034 (1).jpg"
+        },
+        {
+          "filename": "P0020034 (2).jpg"
+        },
+        {
+          "filename": "P0020034 (3).jpg"
+        },
+        {
+          "filename": "P0020034 (4).jpg"
+        },
+        {
+          "filename": "P0020034 (5).jpg"
+        },
+        {
+          "filename": "P0020034 (6).jpg"
+        },
+        {
+          "filename": "P0020034 (7).jpg"
+        },
+        {
+          "filename": "P0020034 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020034 (5).jpg"
+        },
+        {
+          "filename": "P0020034 (2).jpg"
+        },
+        {
+          "filename": "P0020034 (1).jpg"
+        },
+        {
+          "filename": "P0020034 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020034 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/f-4AAeSwZcFpspmu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020034 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mZEAAeSw7cFpspmx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020034 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cokAAeSwf6xpspm0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020034 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rDMAAeSwMD1pspm2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020034 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/piAAAeSwTB9pspm4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020034 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YHMAAeSwpZxpspm9/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Nothing",
+        "Modell": "Headphone Pro",
+        "Produktart": "Ohrumschließende Kopfhörer",
+        "Konnektivität": "Bluetooth",
+        "Farbe": "Weiß"
+      },
+      "optional": {
+        "Kabellose Technologie": "Bluetooth",
+        "Besonderheiten": "Aktive Geräuschunterdrückung",
+        "Anzahl der Ohrhörer": "Doppelt",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Inklusive Ladegerät": "Ja",
+        "Ursprungsland": "China",
+        "Treibergröße": "4,5 cm",
+        "Herstellergarantie": "2 Jahre",
+        "Herstellungsjahr": "2020er"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Kopfhörer",
+      "Product Model": "Headphone Pro",
+      "Keyword 1": "Bluetooth Kopfhörer",
+      "Keyword 2": "Over-Ear Kopfhörer",
+      "Keyword 3": "Kabellose Kopfhörer"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

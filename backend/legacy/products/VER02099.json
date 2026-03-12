@@ -53,7 +53,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 9,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
       },
       "stock": [],
       "phone": [
@@ -85,7 +87,8 @@
           "filename": "VER02099 (1).jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": []
     }
   }
 }

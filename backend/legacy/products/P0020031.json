@@ -1,0 +1,162 @@
+{
+  "P0020031": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Mund- & Zahnpflege/Elektrische Mund- & Zahnpflege/Elektrische Zahnbürsten",
+      "eBay Category ID": "31770"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "oclean",
+      "Color": "schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Oclean X Pro Elite ist eine schallbetriebene elektrische Zahnbürste mit einem modernen Design. Sie verfügt über einen Smart-Touchscreen, der das Putzen erleichtert. Das Set enthält sieben Bürstenköpfe und bietet eine ultra-leise Putz-Erfahrung. Sichtbare Angaben: Farbe: schwarz.",
+      "Keywords": "X Pro Elite Zahnbürste",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "85"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020031 (1).jpg"
+        },
+        {
+          "filename": "P0020031 (2).jpg"
+        },
+        {
+          "filename": "P0020031 (3).jpg"
+        },
+        {
+          "filename": "P0020031 (4).jpg"
+        },
+        {
+          "filename": "P0020031 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020031 (2).jpg"
+        },
+        {
+          "filename": "P0020031 (1).jpg"
+        },
+        {
+          "filename": "P0020031 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020031 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OFwAAeSwH1RpsplX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020031 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/x7AAAeSwbQhpspla/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020031 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q-0AAeSwk6Bpspld/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020031 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lsIAAeSwOn9psplg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020031 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M9gAAeSwAZNpspli/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Zahnbürste mit integrierter Munddusche",
+        "Marke": "oclean"
+      },
+      "optional": {
+        "Produktlinie": "X Pro Elite",
+        "Modell": "Y208B",
+        "Bewegungsart": "Schall",
+        "Stromquelle": "Batterie",
+        "Abteilung": "Unisex Erwachsene",
+        "Herstellernummer": "Y208B",
+        "Leistung": "3 W",
+        "Geschwindigkeitsstufen": "4",
+        "Farbe": "schwarz",
+        "Besonderheiten": "Wireless Charging, Inklusive Ersatzköpfe",
+        "Ursprungsland": "China",
+        "Herstellergarantie": "2 Jahre",
+        "Griffmaterial": "ABS-Kunststoff",
+        "Anzahl der Einheiten": "7",
+        "Bürstenkopfmaterial": "Nylon",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Elektrische Zahnbürste",
+      "Product Model": "X Pro Elite",
+      "Keyword 1": "Sonic Zahnbürste",
+      "Keyword 2": "Schallzahnbürste",
+      "Keyword 3": "Zahnpflege"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "67",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

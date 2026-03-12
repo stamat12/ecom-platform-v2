@@ -7,23 +7,24 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Enthaarung & Rasur/Rasierer & Rasierklingen/Herrenrasierer",
+      "eBay Category ID": "47921"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -32,20 +33,47 @@
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Die Verpackung enthält Informationen über das Produkt OneBlade. Es handelt sich um ein elektrisches Rasiergerät, das für eine präzise Rasur entwickelt wurde. Die Verpackung ist aus Karton und enthält Hinweise zur Entsorgung.",
+      "More details": "Der OneBlade 360 trimmt, rasiert und stylt mühelos Haare jeder Länge. Rasieren und trimmen Sie selbst schwer erreichbare Stellen in weniger* Zügen. Nie wieder mehrere Arbeitsschritte und Geräte – OneBlade macht alles allein",
       "Keywords": "OneBlade Rasierer",
-      "Materials": "Papier"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "55"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020016 (1).jpg"
+        },
+        {
+          "filename": "P0020016 (2).jpg"
+        },
+        {
+          "filename": "P0020016 (3).jpg"
+        },
+        {
+          "filename": "P0020016 (4).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020016 (1).jpg"
@@ -60,6 +88,39 @@
           "filename": "P0020016 (4).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Rasierer Set",
+        "Marke": "Philips"
+      },
+      "optional": {
+        "Anzahl der Klingen": "1",
+        "Abteilung": "Herren",
+        "Farbe": "Braun",
+        "Modell": "QP2724",
+        "Besonderheiten": "Für empfindliche Haut",
+        "Ursprungsland": "Indonesien",
+        "Herstellernummer": "3000 135 9834.2"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Rasierer",
+      "Product Model": "QP2724",
+      "Keyword 1": "OneBlade",
+      "Keyword 2": "Rasiergerät",
+      "Keyword 3": "Rasiermesser"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

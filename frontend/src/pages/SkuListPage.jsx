@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function SkuListPage() {
   const [rows, setRows] = useState([]);
@@ -21,9 +21,12 @@ export default function SkuListPage() {
   const [excelSheets, setExcelSheets] = useState({});
   const [selectedSheets, setSelectedSheets] = useState({});
   const [excelSyncLoading, setExcelSyncLoading] = useState(false);
+  const [updateCategoryMapping, setUpdateCategoryMapping] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const hasRestoredState = useRef(false);
   const latestRequestIdRef = useRef(0);
+  const syncModalAutoOpenedRef = useRef(false);
 
   // Column and filter state
   const [allColumns, setAllColumns] = useState([]);
@@ -684,6 +687,7 @@ export default function SkuListPage() {
           };
         });
         setSelectedSheets(initial);
+        setUpdateCategoryMapping(false);
         setExcelSyncModalOpen(true);
       } else {
         alert("Failed to load Excel sheets");
@@ -695,6 +699,16 @@ export default function SkuListPage() {
       setExcelSyncLoading(false);
     }
   };
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search || "");
+    const shouldOpenSync = params.get("openSync") === "1";
+    if (!shouldOpenSync || syncModalAutoOpenedRef.current) return;
+
+    syncModalAutoOpenedRef.current = true;
+    openExcelSyncModal();
+    navigate("/skus", { replace: true });
+  }, [location.search, navigate]);
 
   const syncExcelToDb = async () => {
     setExcelSyncLoading(true);
@@ -711,8 +725,8 @@ export default function SkuListPage() {
         }
       });
 
-      if (sheetsToSync.length === 0) {
-        alert("Please select at least one sheet and columns");
+      if (sheetsToSync.length === 0 && !updateCategoryMapping) {
+        alert("Please select at least one sheet/columns or enable category mapping update");
         setExcelSyncLoading(false);
         return;
       }
@@ -720,14 +734,22 @@ export default function SkuListPage() {
       const res = await fetch("/api/excel/sync-to-db", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sheets: sheetsToSync })
+        body: JSON.stringify({
+          sheets: sheetsToSync,
+          update_category_mapping: updateCategoryMapping,
+        })
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        alert("✅ " + data.message);
+        const mappingResult = (data.results || []).find((r) => r.operation === "update_category_mapping");
+        const mappingLine = mappingResult
+          ? `\nCategory mapping: updated ${mappingResult.rows_updated || 0}, added ${mappingResult.rows_added || 0}`
+          : "";
+        alert("✅ " + data.message + mappingLine);
         setExcelSyncModalOpen(false);
       } else {
-        alert(data.message || "Sync failed");
+        const detail = data?.detail || data?.message || "Sync failed";
+        alert(detail);
       }
     } catch (error) {
       console.error("Error syncing Excel to DB:", error);
@@ -847,13 +869,6 @@ export default function SkuListPage() {
           {inventoryDbUpdating ? "Updating DB..." : "🗄️ Update DB from JSON (New only)"}
         </button>
         <button
-          onClick={openExcelSyncModal}
-          disabled={excelSyncLoading}
-          style={{ padding: "6px 10px", cursor: excelSyncLoading ? "not-allowed" : "pointer", background: "#1565c0", color: "white", border: "none", borderRadius: 4 }}
-        >
-          {excelSyncLoading ? "Loading..." : "📊 Sync Excel to DB (Selective)"}
-        </button>
-        <button
           onClick={exportInventoryToJsons}
           disabled={inventoryExporting}
           style={{ padding: "6px 10px", cursor: inventoryExporting ? "not-allowed" : "pointer", background: "#ff9800", color: "white", border: "none", borderRadius: 4 }}
@@ -885,6 +900,19 @@ export default function SkuListPage() {
           }}>
             <h3 style={{ marginTop: 0, marginBottom: 16 }}>Sync Excel to Database</h3>
             <p style={{ color: "#666", marginBottom: 16, fontSize: 13 }}>Select sheets and columns to sync from Excel to the database</p>
+
+            <label style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 14, cursor: "pointer" }}>
+              <input
+                type="checkbox"
+                checked={updateCategoryMapping}
+                onChange={(e) => setUpdateCategoryMapping(e.target.checked)}
+                disabled={excelSyncLoading}
+                style={{ width: 16, height: 16, cursor: excelSyncLoading ? "not-allowed" : "pointer" }}
+              />
+              <span style={{ fontSize: 13, color: "#333", fontWeight: 600 }}>
+                Also update category_mapping.json from "Ebay Categories"
+              </span>
+            </label>
 
             <div style={{ marginBottom: 12, display: "flex", gap: 8 }}>
               <button

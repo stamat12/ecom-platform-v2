@@ -84,28 +84,6 @@
         {
           "filename": "1.png"
         }
-      ],
-      "eBay Images": [
-        {
-          "filename": "3.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/d48AAeSwuN9pa4A-/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "4.png",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/AvUAAeSw-E9pa4BA/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "5.png",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/qqQAAeSwmTBpa4BC/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "1.png",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM5/z/ryIAAeSwWP1pa4A8/$_1.JPG?set_id=8800005007"
-        }
       ]
     },
     "eBay Fields": {

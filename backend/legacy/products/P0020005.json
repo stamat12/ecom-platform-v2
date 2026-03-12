@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Maniküre & Pediküre/Nagelpflegeinstrumente/Lichthärtungsgeräte",
+      "eBay Category ID": "67653"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu (Verpackung beschädigt oder fehlt)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -40,12 +41,39 @@
       "OP": "20"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020005 (1).jpg"
+        },
+        {
+          "filename": "P0020005 (2).jpg"
+        },
+        {
+          "filename": "P0020005 (3).jpg"
+        },
+        {
+          "filename": "P0020005 (4).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020005 (1).jpg"
@@ -57,6 +85,36 @@
           "filename": "P0020005 (4).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "UV-Lampe",
+        "Marke": "SUN"
+      },
+      "optional": {
+        "Modell": "X11 MAX",
+        "Stromquelle": "Netzstrom",
+        "Besonderheiten": "LCD Bildschirm, Timer-Modus",
+        "Farbe": "Weiß"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "UV-Lampe",
+      "Product Model": "X11 MAX",
+      "Keyword 1": "Nageltrockner",
+      "Keyword 2": "LED-Lampe",
+      "Keyword 3": "Maniküre"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und wurde lediglich ein- bis zweimal kurz getestet. Es handelt sich nicht um einen regulär gebrauchten Artikel, sondern nur um eine kurze Funktionsprüfung.  Der genaue Zustand sowie die Vollständigkeit sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

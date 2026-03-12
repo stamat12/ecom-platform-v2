@@ -134,6 +134,7 @@ def _update_images_summary(images_section: Dict[str, Any]) -> None:
     stock = list(images_section.get("stock", []) or [])
     phone = list(images_section.get("phone", []) or [])
     enhanced = list(images_section.get("enhanced", []) or [])
+    main_images = list(images_section.get("main_images", []) or [])
 
     images_section["summary"] = {
         "has_stock": bool(stock),
@@ -142,6 +143,8 @@ def _update_images_summary(images_section: Dict[str, Any]) -> None:
         "count_stock": len(stock),
         "count_phone": len(phone),
         "count_enhanced": len(enhanced),
+        "has_main_images": bool(main_images),
+        "count_main_images": len(main_images),
     }
 
 

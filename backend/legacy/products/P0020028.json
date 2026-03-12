@@ -1,0 +1,152 @@
+{
+  "P0020028": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Autoelektronik, GPS & Sicherheitstechnik/Autoentertainment/Subwoofer",
+      "eBay Category ID": "38771"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "KUERL",
+      "Color": "",
+      "Size": "10 Zoll"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieser Subwoofer ist für den Einsatz im Auto konzipiert. Er bietet eine maximale Leistung von 800W und eine RMS-Leistung von 200W. Die Abmessungen betragen 351x260x80 mm. Der Subwoofer hat eine hohe Empfindlichkeit und einen Bass Boost. Sichtbare Angaben: Modell/Nummern: K-P10APR; Größe: 10 Zoll.",
+      "Keywords": "K-P10APR Subwoofer Auto",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "100"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020028 (1).jpg"
+        },
+        {
+          "filename": "P0020028 (10).jpg"
+        },
+        {
+          "filename": "P0020028 (11).jpg"
+        },
+        {
+          "filename": "P0020028 (2).jpg"
+        },
+        {
+          "filename": "P0020028 (3).jpg"
+        },
+        {
+          "filename": "P0020028 (4).jpg"
+        },
+        {
+          "filename": "P0020028 (5).jpg"
+        },
+        {
+          "filename": "P0020028 (6).jpg"
+        },
+        {
+          "filename": "P0020028 (7).jpg"
+        },
+        {
+          "filename": "P0020028 (8).jpg"
+        },
+        {
+          "filename": "P0020028 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020028 (9).jpg"
+        },
+        {
+          "filename": "P0020028 (11).jpg"
+        },
+        {
+          "filename": "P0020028 (10).jpg"
+        },
+        {
+          "filename": "P0020028 (1).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Hersteller": "KUERL",
+        "Herstellernummer": "K-P10APR"
+      },
+      "optional": {
+        "Besonderheiten": "Bassbox",
+        "Impedanz": "4 Ω",
+        "Einbauposition": "Kofferraum",
+        "Form": "Rechteckig",
+        "Produktart": "Aktiv mit Gehäuse",
+        "Sinus Leistung": "200 W",
+        "Größe": "10 in",
+        "Farbe": "Schwarz",
+        "Anzahl der Kanäle": "1 Kanal",
+        "Ursprungsland": "China",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Subwoofer",
+      "Product Model": "K-P10APR",
+      "Keyword 1": "Auto Subwoofer",
+      "Keyword 2": "10 Zoll Subwoofer",
+      "Keyword 3": "Bass Lautsprecher"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "75",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T19:16"
+    }
+  }
+}

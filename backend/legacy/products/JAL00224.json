@@ -1,0 +1,160 @@
+{
+  "JAL00224": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU348695-47-53-171125020055",
+      "Invoice Date": "17.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Google Pixel 10/10 Pro Case Magnetic Thin Military Protection – Transparent"
+    },
+    "Price Data": {
+      "Price Net": 0.66,
+      "Shipping Net": 0.14,
+      "Total Cost Net": 0.8
+    },
+    "Ebay Category": {
+      "Category": null,
+      "eBay Category ID": "20349"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Owkey",
+      "Color": "Transparent",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Hülle ist aus transparentem Material gefertigt und bietet einen guten Schutz für das Google Pixel 10/10 Pro. Sie verfügt über einen 1,2 mm hohen Bildschirmrand und einen 1,5 mm Kamerarand, um Kratzer zu vermeiden. Zudem ist sie mit einer Anti-Fingerabdruck-Beschichtung ausgestattet. Sichtbare Angaben: Größe: None.",
+      "Keywords": "Owkey Hülle Google Pixel 10 10 Pro",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "17.0"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jxIAAeSwR51pstP-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/b7UAAeSwfLxpstQA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ghIAAeSwEaNpstQB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9q0AAeSwVRppstQC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gQcAAeSwYFlpstQE/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Owkey",
+        "Produktart": "Aufprallschutzhülle"
+      },
+      "optional": {
+        "Material": "Kunststoff",
+        "Farbe": "Transparent",
+        "Markenkompatibilität": "Für Google",
+        "Modellkompatibilität": "Für Google Pixel 10/10 Pro",
+        "Kabelloser Ladestandard": "Qi",
+        "Besonderheiten": "Anti-Fingerabdruck",
+        "Design/Oberfläche": "Durchsichtig",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Handyhülle",
+      "Product Model": "Google Pixel 10/10 Pro",
+      "Keyword 1": "Schutzhülle",
+      "Keyword 2": "Transparente Hülle",
+      "Keyword 3": "Handy Schutz"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "12",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-20T15:55"
+    }
+  }
+}

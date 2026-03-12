@@ -1,0 +1,99 @@
+{
+  "JAL00197": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU341709-47-53-111125020406",
+      "Invoice Date": "11.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "PATIKIL Magnetic Reed Switch, 10 Pack NO NC Wired Recessed Door Window Sensor Contact Switch for Alarm System, Brown"
+    },
+    "Price Data": {
+      "Price Net": 2.57,
+      "Shipping Net": 0.71,
+      "Total Cost Net": 3.28
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Überwachungstechnik/Überwachungstechnik-Teile & -Zubehör/Sonstige",
+      "eBay Category ID": "175725"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Patikil",
+      "Color": "Schwarz",
+      "Size": "23mm"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses Produkt besteht aus mehreren schwarzen Magneten, die für Tür- und Fensterkontakte verwendet werden können. Sie sind in einem Set von 10 Stück erhältlich. Die Installation ist einfach und die Magneten sind langlebig. Sichtbare Angaben: Größe: 23mm.",
+      "Keywords": "Magnetkontakt Türkontakt Fensterkontakt",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "43.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

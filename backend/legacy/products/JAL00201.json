@@ -1,0 +1,89 @@
+{
+  "JAL00201": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU345256-47-53-141125020223",
+      "Invoice Date": "14.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "2 Packs Automatic Water Level Control Valve Inside Top for Water Tank Pool"
+    },
+    "Price Data": {
+      "Price Net": 0.82,
+      "Shipping Net": 0.2,
+      "Total Cost Net": 1.01
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": 8002126944147.0
+    },
+    "Product Condition": {
+      "Condition": "Brandneu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "MasXirch",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Wasserfilter mit einem kompakten Design. Es verfügt über mehrere Anschlussmöglichkeiten für eine einfache Installation. Die Oberfläche ist glatt und leicht zu reinigen. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Wasserfilter MasXirch",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "21.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 4,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "JAL00182": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Yukirtiq Men's Fishing Vest Sleeveless Leisure Hunting Men's Vests Summer Trekking Hiking Vest Reporter Vests Safari Vest with Many Pockets, Khaki, XL"
+    },
+    "Price Data": {
+      "Price Net": 1.39,
+      "Shipping Net": 0.49,
+      "Total Cost Net": 1.88
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Herren/Herrenmode/Jacken, Mäntel & Westen",
+      "eBay Category ID": "57988"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Yukirtiq",
+      "Color": "Beige",
+      "Size": "XL"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Weste hat mehrere Taschen mit Reißverschlüssen und Klappen. Sie ist ärmellos und hat einen praktischen Reißverschluss. Das Material ist robust und eignet sich gut für Outdoor-Aktivitäten. Sichtbare Angaben: Farbe: Beige.",
+      "Keywords": "Weste Unisex",
+      "Materials": "Baumwolle"
+    },
+    "OP": {
+      "OP": "39.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

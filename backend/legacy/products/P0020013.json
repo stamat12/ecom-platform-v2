@@ -23,29 +23,68 @@
       "EAN": null
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": ""
     },
     "Intern Product Info": {
       "Gender": "KU",
       "Brand": "vtech",
       "Color": "Rosa",
-      "Size": "None"
+      "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Das MagiBook ist ein interaktives Lernspielzeug für Kinder im Alter von 2 bis 8 Jahren. Es enthält verschiedene Lerninhalte wie Buchstaben, Zahlen und Musik. Das Gerät hat eine pinke Farbe und ist mit einem Stylus ausgestattet, der für die Interaktion verwendet wird.",
       "Keywords": "MagiBook Lernspielzeug Kids Unisex",
-      "Materials": "Kunststoff"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": ""
     },
     "Status": {
       "Status": null
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020013 (1).jpg"
+        },
+        {
+          "filename": "P0020013 (2).jpg"
+        },
+        {
+          "filename": "P0020013 (3).jpg"
+        },
+        {
+          "filename": "P0020013 (4).jpg"
+        },
+        {
+          "filename": "P0020013 (5).jpg"
+        },
+        {
+          "filename": "P0020013 (6).jpg"
+        },
+        {
+          "filename": "P0020013 (7).jpg"
+        },
+        {
+          "filename": "P0020013 (8).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020013 (7).jpg"

@@ -1,0 +1,190 @@
+{
+  "P0020033": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Hilfsmittel/Messgeräte & Tests/Blutdruck",
+      "eBay Category ID": "75072"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Contec",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein veterinärer Blutdruckmonitor. Es verfügt über ein digitales Display und mehrere Druckmanschetten in verschiedenen Größen. Das Gerät wird mit einem Netzadapter und Kabeln geliefert. Sichtbare Angaben: Modell/Nummern: CONTEC08A-VET; Farbe: Weiß.",
+      "Keywords": "CONTEC08A-VET Blutdruckmonitor",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "75"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020033 (1).jpg"
+        },
+        {
+          "filename": "P0020033 (10).jpg"
+        },
+        {
+          "filename": "P0020033 (2).jpg"
+        },
+        {
+          "filename": "P0020033 (3).jpg"
+        },
+        {
+          "filename": "P0020033 (4).jpg"
+        },
+        {
+          "filename": "P0020033 (5).jpg"
+        },
+        {
+          "filename": "P0020033 (6).jpg"
+        },
+        {
+          "filename": "P0020033 (7).jpg"
+        },
+        {
+          "filename": "P0020033 (8).jpg"
+        },
+        {
+          "filename": "P0020033 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020033 (4).jpg"
+        },
+        {
+          "filename": "P0020033 (6).jpg"
+        },
+        {
+          "filename": "P0020033 (7).jpg"
+        },
+        {
+          "filename": "P0020033 (8).jpg"
+        },
+        {
+          "filename": "P0020033 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020033 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/quMAAeSwjchpspmL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qkEAAeSwKnlpspmQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5WQAAeSwZQRpspmT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rCYAAeSwyG9pspmW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cXMAAeSwf6xpspma/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oXsAAeSwO1hpspmg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MvIAAeSwn-Fpspmj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020033 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qe0AAeSwYFlpspmm/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Blutdruckmessgeräte",
+        "Marke": "Contec"
+      },
+      "optional": {
+        "Modell": "CONTEC08A-VET",
+        "Farbe": "Weiß",
+        "Set enthält": "Monitor, Benutzerhandbuch",
+        "Anzeigeformat": "Digital",
+        "Stromquelle": "Spannungsadapter",
+        "Ursprungsland": "China",
+        "Gütesiegel & Kennzeichnungen": "CE",
+        "Besonderheiten": "Automatisch"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Blutdruckmessgerät",
+      "Product Model": "CONTEC08A-VET",
+      "Keyword 1": "Veterinär Blutdruckmonitor",
+      "Keyword 2": "Tier Blutdruckmessgerät",
+      "Keyword 3": "Blutdruckmessgerät für Tiere"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

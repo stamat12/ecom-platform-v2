@@ -182,6 +182,114 @@ def _is_weak_more_details(text: str) -> bool:
     return matched < 2
 
 
+def _clean_more_details_text(text: str) -> str:
+    """Convert vision/reporting style wording into customer-facing description text."""
+    t = (text or "").strip()
+    if not t:
+        return ""
+
+    # Normalize whitespace first
+    t = re.sub(r"\s+", " ", t).strip()
+
+    # Split into sentence-like chunks
+    parts = re.split(r"(?<=[.!?])\s+", t)
+    cleaned_parts: List[str] = []
+
+    # Phrases that should never appear in customer-facing product copy
+    lead_patterns = [
+        r"^die abbildung zeigt\s*",
+        r"^das bild zeigt\s*",
+        r"^auf dem bild\s+(ist|sind|sieht man)\s*",
+        r"^man sieht\s*",
+        r"^zu sehen ist\s*",
+        r"^sichtbar ist\s*",
+    ]
+
+    for sentence in parts:
+        s = sentence.strip()
+        if not s:
+            continue
+
+        # Remove repeated lead phrases (sometimes stacked by model)
+        while True:
+            original = s
+            for pattern in lead_patterns:
+                s = re.sub(pattern, "", s, flags=re.IGNORECASE).strip(" ,:-")
+            if s == original:
+                break
+
+        # Re-capitalize sentence start
+        if s:
+            s = s[0].upper() + s[1:]
+            cleaned_parts.append(s)
+
+    cleaned = " ".join(cleaned_parts).strip()
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned
+
+
+def _extract_model_tokens_from_keywords(keywords: str) -> List[str]:
+    """Extract likely model/identifier tokens (often containing numbers) from keywords."""
+    text = (keywords or "").strip()
+    if not text:
+        return []
+
+    raw_tokens = [t.strip(" ,.;:()[]{}") for t in text.split() if t.strip()]
+    tokens: List[str] = []
+    for token in raw_tokens:
+        if len(token) < 3:
+            continue
+        has_digit = any(ch.isdigit() for ch in token)
+        looks_modelish = has_digit or "-" in token or "/" in token
+        if looks_modelish:
+            tokens.append(token)
+
+    # Keep stable order, unique
+    seen = set()
+    out: List[str] = []
+    for token in tokens:
+        key = token.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(token)
+    return out[:5]
+
+
+def _augment_more_details_with_identifiers(fields: Dict[str, str]) -> Dict[str, str]:
+    """Add visible key identifiers (model/number/color/size) into More Details when missing."""
+    out = dict(fields)
+    details = (out.get("More Details") or "").strip()
+    if not details:
+        return out
+
+    details_low = details.lower()
+    model_tokens = _extract_model_tokens_from_keywords(out.get("Keywords", ""))
+    color = (out.get("Color") or "").strip()
+    size = (out.get("Size") or "").strip()
+
+    visible_parts: List[str] = []
+
+    if model_tokens:
+        missing_models = [m for m in model_tokens if m.lower() not in details_low]
+        if missing_models:
+            visible_parts.append("Modell/Nummern: " + ", ".join(missing_models[:3]))
+
+    if color and color.lower() not in details_low:
+        visible_parts.append(f"Farbe: {color}")
+
+    if size and size.lower() not in details_low:
+        visible_parts.append(f"Größe: {size}")
+
+    if visible_parts:
+        suffix = " Sichtbare Angaben: " + "; ".join(visible_parts) + "."
+        if not details.endswith((".", "!", "?")):
+            details += "."
+        details += suffix
+        out["More Details"] = details
+
+    return out
+
+
 def _merge_with_quality_rules(existing: Dict[str, str], proposed: Dict[str, str]) -> Dict[str, str]:
     """Fill empty fields and upgrade low-quality More Details when AI produced better content."""
     out = _merge_fill_only(existing, proposed)
@@ -191,6 +299,9 @@ def _merge_with_quality_rules(existing: Dict[str, str], proposed: Dict[str, str]
 
     if proposed_details and _is_weak_more_details(existing_details) and len(proposed_details) > max(len(existing_details), 90):
         out["More Details"] = proposed_details
+
+    out = _augment_more_details_with_identifiers(out)
+    out["More Details"] = _clean_more_details_text(out.get("More Details", ""))
 
     return out
 
@@ -308,10 +419,10 @@ def enrich_sku_fields(sku: str) -> Dict[str, any]:
         with json_path.open("w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-        # Count updated fields
+        # Count changed fields (including quality/style upgrades)
         updated_count = sum(
-            1 for k in ai_config.ENRICHABLE_FIELDS 
-            if merged.get(k, "").strip() and not (current_fields.get(k, "") or "").strip()
+            1 for k in ai_config.ENRICHABLE_FIELDS
+            if (merged.get(k, "") or "").strip() != (current_fields.get(k, "") or "").strip()
         )
 
         return {

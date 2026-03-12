@@ -9,6 +9,7 @@ class ExcelSheetInfo(BaseModel):
 
 class ExcelToDbSyncRequest(BaseModel):
     sheets: List[ExcelSheetInfo] = Field(description="List of sheets and columns to sync")
+    update_category_mapping: bool = Field(default=False, description="Also refresh category_mapping.json from Excel category sheet")
 
 
 class ExcelToDbSyncResponse(BaseModel):

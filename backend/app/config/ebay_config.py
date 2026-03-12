@@ -47,7 +47,7 @@ LOCATION_POSTALCODE = "1210"
 # Business Policies (from env or defaults)
 PAYMENT_POLICY_NAME = os.getenv("EBAY_PAYMENT_POLICY", "EbayZahlungen")
 RETURN_POLICY_NAME = os.getenv("EBAY_RETURN_POLICY", "14TageRücknahme")
-SHIPPING_POLICY_NAME = os.getenv("EBAY_SHIPPING_POLICY", "Deutschland_bis50cm_KOSTENLOS")
+SHIPPING_POLICY_NAME = os.getenv("EBAY_SHIPPING_POLICY", "VERSAND_EU")
 
 # Listing Settings
 DEFAULT_SCHEDULE_DAYS = 14

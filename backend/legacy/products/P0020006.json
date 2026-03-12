@@ -17,13 +17,14 @@
       "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Auto & Motorrad: Teile/Autoelektronik, GPS & Sicherheitstechnik/Autoentertainment/Autoradios",
+      "eBay Category ID": "174119"
     },
     "EAN": {
       "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -40,12 +41,63 @@
       "OP": "150"
     },
     "Status": {
-      "Status": ""
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020006 (1).jpg"
+        },
+        {
+          "filename": "P0020006 (10).jpg"
+        },
+        {
+          "filename": "P0020006 (11).jpg"
+        },
+        {
+          "filename": "P0020006 (12).jpg"
+        },
+        {
+          "filename": "P0020006 (2).jpg"
+        },
+        {
+          "filename": "P0020006 (3).jpg"
+        },
+        {
+          "filename": "P0020006 (4).jpg"
+        },
+        {
+          "filename": "P0020006 (5).jpg"
+        },
+        {
+          "filename": "P0020006 (6).jpg"
+        },
+        {
+          "filename": "P0020006 (7).jpg"
+        },
+        {
+          "filename": "P0020006 (8).jpg"
+        },
+        {
+          "filename": "P0020006 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020006 (6).jpg"
@@ -69,6 +121,42 @@
           "filename": "P0020006 (12).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Hersteller": "A-SURE",
+        "Herstellernummer": "K44X4_101J"
+      },
+      "optional": {
+        "Besonderheiten": "Bluetooth, Touchscreen",
+        "Einbaugröße": "2 DIN",
+        "Betriebssystem": "Android",
+        "Wiedergabeformate": "MP3, MP4, WAV",
+        "Bildschirmgröße": "10,1 in",
+        "Anschlüsse": "USB, AUX",
+        "Modell": "4-Core Series",
+        "Farbe": "Schwarz",
+        "Anzahl der Kanäle": "4 Kanal",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Autoradio",
+      "Product Model": "K44X4_101J",
+      "Keyword 1": "In-Car Infotainment",
+      "Keyword 2": "Multimedia System",
+      "Keyword 3": "GPS Navigation"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "115",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

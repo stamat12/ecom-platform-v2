@@ -34,8 +34,9 @@ def save_product_json(sku: str, product_data: dict) -> None:
         json.dump({sku: product_data}, f, ensure_ascii=False, indent=2)
 
 
-def build_images_summary(stock: List[dict], phone: List[dict], enhanced: List[dict]) -> dict:
+def build_images_summary(stock: List[dict], phone: List[dict], enhanced: List[dict], main_images: Optional[List[dict]] = None) -> dict:
     """Build the Images section structure with summary metadata."""
+    main_images = list(main_images or [])
     return {
         "schema_version": "1.0",
         "summary": {
@@ -45,10 +46,13 @@ def build_images_summary(stock: List[dict], phone: List[dict], enhanced: List[di
             "count_stock": len(stock),
             "count_phone": len(phone),
             "count_enhanced": len(enhanced),
+            "has_main_images": bool(main_images),
+            "count_main_images": len(main_images),
         },
         "stock": stock,
         "phone": phone,
         "enhanced": enhanced,
+        "main_images": main_images,
     }
 
 
@@ -124,6 +128,7 @@ def classify_images(sku: str, filenames: List[str], classification_type: str) ->
         stock = list(images_section.get("stock", []) or [])
         phone = list(images_section.get("phone", []) or [])
         enhanced = list(images_section.get("enhanced", []) or [])
+        main_images = list(images_section.get("main_images", []) or [])
         
         # Remove these filenames from all categories first (avoid duplicates)
         filenames_set = set(filenames)
@@ -142,7 +147,7 @@ def classify_images(sku: str, filenames: List[str], classification_type: str) ->
                 enhanced.append(record)
         
         # Update Images section with summary
-        product_data["Images"] = build_images_summary(stock, phone, enhanced)
+        product_data["Images"] = build_images_summary(stock, phone, enhanced, main_images)
         
         # Save
         save_product_json(sku, product_data)

@@ -7,23 +7,24 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Computer, Tablets & Netzwerk/Kabel & Steckverbinder/Monitor-/AV-Kabel & -Adapter",
+      "eBay Category ID": "158840"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -32,20 +33,47 @@
       "Size": "1.8m"
     },
     "Intern Generated Info": {
-      "More details": "Das Produkt ist ein DisplayPort 1.4 Verlängerungskabel. Es hat eine Länge von 1,8 Metern. Ideal für die Verbindung von Monitoren oder anderen Geräten mit DisplayPort-Anschlüssen.",
+      "More details": "Das Kabel ist ein DisplayPort Verlängerungskabel mit einer Länge von 1,8 Metern. Es ist ideal für die Verbindung von Monitoren oder anderen Geräten mit DisplayPort-Anschlüssen. Die Verpackung zeigt eine klare Sicht auf das Kabel und die Anschlüsse. Sichtbare Angaben: Farbe: Schwarz; Größe: 1.8m.",
       "Keywords": "DisplayPort Verlängerungskabel",
-      "Materials": "Kunststoff"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "16"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020020 (1).jpg"
+        },
+        {
+          "filename": "P0020020 (2).jpg"
+        },
+        {
+          "filename": "P0020020 (3).jpg"
+        },
+        {
+          "filename": "P0020020 (4).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020020 (2).jpg"

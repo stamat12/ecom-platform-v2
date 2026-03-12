@@ -1,0 +1,183 @@
+{
+  "P0020041": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Garten & Terrasse/Hand-Gartengeräte & Zubehör/Gras- & Heckenscheren",
+      "eBay Category ID": "139872"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Avalanche Tools",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein 2-in-1 Gras- und Strauchschneider. Es wird mit einem 21V Akku betrieben. Die Klingenlänge beträgt 300 mm und die Schnittkapazität ist 8 mm. Es ist wichtig, beim Gebrauch Schutzhandschuhe zu tragen. Sichtbare Angaben: Farbe: Blau.",
+      "Keywords": "2-in-1 Gras- und Strauchschneider",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "50"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020041 (1).jpg"
+        },
+        {
+          "filename": "P0020041 (2).jpg"
+        },
+        {
+          "filename": "P0020041 (3).jpg"
+        },
+        {
+          "filename": "P0020041 (4).jpg"
+        },
+        {
+          "filename": "P0020041 (5).jpg"
+        },
+        {
+          "filename": "P0020041 (6).jpg"
+        },
+        {
+          "filename": "P0020041 (7).jpg"
+        },
+        {
+          "filename": "P0020041 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020041 (8).jpg"
+        },
+        {
+          "filename": "P0020041 (3).jpg"
+        },
+        {
+          "filename": "P0020041 (1).jpg"
+        },
+        {
+          "filename": "P0020041 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020041 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v3UAAeSw-olpspx5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FSYAAeSwO6xpspx7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (2).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v6EAAeSw-olpspx-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tVoAAeSwGmhpspyA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zjIAAeSwR51pspyD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jN4AAeSwXVZpspyH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vLYAAeSwjk9pspyK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020041 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XHwAAeSwM3FpspyN/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Gras- & Heckenscheren"
+      },
+      "optional": {
+        "Klingenlänge": "30 cm",
+        "Klingenmaterial": "Stahl",
+        "Farbe": "Blau",
+        "Länge": "30 cm",
+        "Gewicht": "1 kg",
+        "Höhe": "10 cm",
+        "Marke": "Avalanche Tools",
+        "Besonderheiten": "2-Komponenten-Griff",
+        "Herstellergarantie": "2 Jahre",
+        "Material": "Kunststoff, Metall",
+        "Modell": "2-in-1 Grass and Shrub Shear"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Heckenschneider",
+      "Product Model": "2-in-1",
+      "Keyword 1": "Akku Heckenschneider",
+      "Keyword 2": "Gras- und Strauchschneider",
+      "Keyword 3": "Lithium-Ionen Heckenschneider"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "38",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

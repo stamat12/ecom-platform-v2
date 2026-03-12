@@ -7,23 +7,24 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Handys & Kommunikation/Handy-Zubehör/Ladegeräte & Dockingstationen",
+      "eBay Category ID": "123417"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,15 +38,48 @@
       "Materials": "Lithium-Ionen-Batterie"
     },
     "OP": {
-      "OP": null
+      "OP": "70"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020015 (1).jpg"
+        },
+        {
+          "filename": "P0020015 (2).jpg"
+        },
+        {
+          "filename": "P0020015 (3).jpg"
+        },
+        {
+          "filename": "P0020015 (4).jpg"
+        },
+        {
+          "filename": "P0020015 (5).jpg"
+        },
+        {
+          "filename": "P0020015 (6).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020015 (3).jpg"
@@ -60,6 +94,49 @@
           "filename": "P0020015 (6).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "UGREEN",
+        "Produktart": "Powerbank"
+      },
+      "optional": {
+        "Konnektivität": "USB-C",
+        "Anzahl der Anschlüsse": "3",
+        "Inbegriffene Artikel": "Lade- und Datensynchronisationskabel",
+        "Farbe": "Silber",
+        "Spannung": "5 V",
+        "Modellkompatibilität": "Für iOS und Android",
+        "Befestigungsart": "Klemme",
+        "Material": "Lithium-Ionen-Batterie",
+        "Kabellänge": "1 m",
+        "Herstellernummer": "PB205",
+        "Besonderheiten": "Schnellladung",
+        "Ursprungsland": "China",
+        "Personalisieren": "Nein",
+        "Gewicht": "500 g",
+        "Herstellergarantie": "1 Jahr",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "kg"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Powerbank",
+      "Product Model": "PB205",
+      "Keyword 1": "Schnellladegerät",
+      "Keyword 2": "Externer Akku",
+      "Keyword 3": "25000mAh"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "58",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

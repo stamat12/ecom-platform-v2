@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 0,
         "count_phone": 2,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
       },
       "stock": [],
       "phone": [
@@ -65,7 +67,8 @@
           "filename": "PXL_20250526_182512821.jpg"
         }
       ],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": []
     },
     "eBay SEO": {
       "Product Type": "Mütze",

@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Heimwerker/Heizen, Klima & Sanitär/Kamine, Öfen & Zubehör/Kamine",
+      "eBay Category ID": "175756"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu (Verpackung beschädigt oder fehlt)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -34,18 +35,63 @@
     "Intern Generated Info": {
       "More details": "Dies ist eine elektrische Kaminheizung mit einem modernen Design. Die Oberfläche zeigt eine Holzoptik in Rot und Schwarz. Sie verfügt über Bedienelemente zur Steuerung der Leistung.",
       "Keywords": "elektrischer Kamin Chemin'arte",
-      "Materials": "Metall, Kunststoff"
+      "Materials": ""
     },
     "OP": {
       "OP": "230"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020010 (1).jpg"
+        },
+        {
+          "filename": "P0020010 (10).jpg"
+        },
+        {
+          "filename": "P0020010 (2).jpg"
+        },
+        {
+          "filename": "P0020010 (3).jpg"
+        },
+        {
+          "filename": "P0020010 (4).jpg"
+        },
+        {
+          "filename": "P0020010 (5).jpg"
+        },
+        {
+          "filename": "P0020010 (6).jpg"
+        },
+        {
+          "filename": "P0020010 (7).jpg"
+        },
+        {
+          "filename": "P0020010 (8).jpg"
+        },
+        {
+          "filename": "P0020010 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020010 (6).jpg"
@@ -63,6 +109,43 @@
           "filename": "P0020010 (2).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Kaminofen"
+      },
+      "optional": {
+        "Brennstoffart": "Elektrisch",
+        "Marke": "Chemin'arte",
+        "Farbe": "Schwarz, Rot",
+        "Material": "Metall",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Nennwärmeleistung": "2 kW",
+        "Montage erforderlich": "Nein",
+        "Ursprungsland": "Frankreich",
+        "Modell": "LJIF-2603ME / 201",
+        "Montage": "Freistehend",
+        "Geeignet für": "Innenbereich",
+        "Lüftungssystem": "Keine Entlüftung"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Elektrischer Kamin",
+      "Product Model": "LJIF-2603ME / 201",
+      "Keyword 1": "Kamin",
+      "Keyword 2": "Heizgerät",
+      "Keyword 3": "Wärmestrahler"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "165",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

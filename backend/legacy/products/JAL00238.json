@@ -54,7 +54,9 @@
         "has_enhanced": false,
         "count_stock": 5,
         "count_phone": 0,
-        "count_enhanced": 0
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
       },
       "stock": [
         {
@@ -74,7 +76,8 @@
         }
       ],
       "phone": [],
-      "enhanced": []
+      "enhanced": [],
+      "main_images": []
     }
   }
 }

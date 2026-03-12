@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Auto & Motorrad: Teile/Autoelektronik, GPS & Sicherheitstechnik/Autoentertainment/Autoradios",
+      "eBay Category ID": "174119"
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": ""
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,15 +38,72 @@
       "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": ""
     },
     "Status": {
       "Status": null
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020007 (1).jpg"
+        },
+        {
+          "filename": "P0020007 (10).jpg"
+        },
+        {
+          "filename": "P0020007 (11).jpg"
+        },
+        {
+          "filename": "P0020007 (12).jpg"
+        },
+        {
+          "filename": "P0020007 (13).jpg"
+        },
+        {
+          "filename": "P0020007 (14).jpg"
+        },
+        {
+          "filename": "P0020007 (2).jpg"
+        },
+        {
+          "filename": "P0020007 (3).jpg"
+        },
+        {
+          "filename": "P0020007 (4).jpg"
+        },
+        {
+          "filename": "P0020007 (5).jpg"
+        },
+        {
+          "filename": "P0020007 (6).jpg"
+        },
+        {
+          "filename": "P0020007 (7).jpg"
+        },
+        {
+          "filename": "P0020007 (8).jpg"
+        },
+        {
+          "filename": "P0020007 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020007 (3).jpg"

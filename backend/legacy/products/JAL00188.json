@@ -127,63 +127,6 @@
         {
           "filename": "4.png"
         }
-      ],
-      "eBay Images": [
-        {
-          "filename": "1.png",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YMMAAeSwQ8xpk7hT/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "4.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/epEAAeSwAeBpk7hV/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "3.png",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/f30AAeSwTf1pk7hX/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "5.png",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/OTM3WDkzNw==/z/nC4AAeSw8ptpk7ha/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "2.png",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/fhAAAeSwKqlpk7hc/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (9).jpg",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s0cAAeSwKpxpk7hf/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (8).jpg",
-          "order": 7,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aZcAAeSwwoppk7hj/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (5).jpg",
-          "order": 8,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gfQAAeSwu15pk7hm/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (4).jpg",
-          "order": 9,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fxcAAeSwY~Fpk7hq/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (2).jpg",
-          "order": 10,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gBMAAeSwu-Npk7hs/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00188 (1).jpg",
-          "order": 11,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/bggAAeSwhbRpk7hv/$_1.JPG?set_id=8800005007"
-        }
       ]
     },
     "eBay Fields": {

@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Heimwerker/Heizen, Klima & Sanitär/Raum- & Heizkörperthermostate/Nicht-programmierbare Thermostate",
+      "eBay Category ID": "115948"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -34,18 +35,54 @@
     "Intern Generated Info": {
       "More details": "Der meross Smart Wi-Fi Thermostat hat ein elegantes Glasdesign. Er ist für Heizsysteme geeignet und ermöglicht eine einfache Installation. Der Thermostat unterstützt Sprachsteuerung und Fernzugriff.",
       "Keywords": "Smart Wi-Fi Thermostat",
-      "Materials": "Glas, Kunststoff"
+      "Materials": ""
     },
     "OP": {
       "OP": "60"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020003 (1).jpg"
+        },
+        {
+          "filename": "P0020003 (2).jpg"
+        },
+        {
+          "filename": "P0020003 (3).jpg"
+        },
+        {
+          "filename": "P0020003 (4).jpg"
+        },
+        {
+          "filename": "P0020003 (5).jpg"
+        },
+        {
+          "filename": "P0020003 (6).jpg"
+        },
+        {
+          "filename": "P0020003 (7).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020003 (3).jpg"
@@ -60,6 +97,50 @@
           "filename": "P0020003 (7).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Modell": "MTS215B",
+        "Herstellernummer": "02600000039",
+        "Farbe": "Weiß",
+        "Marke": "meross",
+        "Stromquelle": "Netzbetrieben",
+        "Spannung": "100-240 V",
+        "Herstellungsjahr": "2023",
+        "Produktkompatibilität": "Wasserheizung",
+        "Steuerungsart": "App-gesteuert",
+        "Smart Home Kommunikationsprotokoll": "WLAN",
+        "Sensortechnik": "Temperatur",
+        "Montage": "Wandmontage",
+        "Programmierbarkeit": "Nicht programmierbar",
+        "Smart Home Kompatibilität": "Amazon Alexa",
+        "Besonderheiten": "Energieeinsparung, Sprachsteuerung, Fernbedienung, OTA-Update",
+        "Drahtkonfiguration": "2-Draht",
+        "Anzahl der Einheiten": "1",
+        "Ursprungsland": "China",
+        "Beständigkeitseigenschaft": "Kindersicher",
+        "Herstellergarantie": "2 Jahre",
+        "Im Lieferumfang enthalten": "Keine"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Thermostat",
+      "Product Model": "MTS215B",
+      "Keyword 1": "Smart Thermostat",
+      "Keyword 2": "WLAN Thermostat",
+      "Keyword 3": "Heizungsregler"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

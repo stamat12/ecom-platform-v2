@@ -448,8 +448,9 @@ def calculate_listing_profit(
     
     Formula:
     - Apply €4.99 surcharge if marketplace is not Germany
-    - selling_price_netto = selling_price_brutto / (1 + vat_rate)
-    - sales_commission = selling_price_brutto * commission% (ON BRUTTO!)
+    - customer_payment_brutto = selling_price_brutto + shipping_listing
+    - selling_price_netto = customer_payment_brutto / (1 + vat_rate)
+    - sales_commission = customer_payment_brutto * commission% (ON BRUTTO!)
     - Net Profit = selling_price_netto - sales_commission - payment_fee - shipping_costs_net - total_cost_net
     
     Args:
@@ -463,6 +464,7 @@ def calculate_listing_profit(
         Dict with profit calculation results:
         {
             'selling_price_brutto': float,
+            'shipping_listing': float,
             'selling_price_netto': float,
             'payment_fee': float,
             'sales_commission': float,
@@ -478,6 +480,7 @@ def calculate_listing_profit(
     if selling_price_brutto is None or selling_price_brutto <= 0:
         return {
             'selling_price_brutto': 0.0,
+            'shipping_listing': 0.0,
             'selling_price_netto': 0.0,
             'payment_fee': 0.0,
             'sales_commission': 0.0,
@@ -493,6 +496,12 @@ def calculate_listing_profit(
         selling_price_brutto = float(selling_price_brutto)
     except (TypeError, ValueError):
         selling_price_brutto = 0.0
+
+    # Customer-paid shipping amount added to selling price for VAT/commission/profit math
+    try:
+        shipping_listing = float(listing.get("shipping_listing", 4.99) or 4.99)
+    except (TypeError, ValueError):
+        shipping_listing = 4.99
     
     # Get marketplace information
     marketplace = listing.get("site") or listing.get("marketplace", "")
@@ -501,13 +510,15 @@ def calculate_listing_profit(
     # Add €4.99 surcharge for non-Germany customers
     if not is_germany:
         selling_price_brutto += NON_GERMANY_SURCHARGE
+
+    customer_payment_brutto = selling_price_brutto + shipping_listing
     
     # Get VAT rate for this marketplace
     vat_rate = _get_vat_rate_for_marketplace(marketplace)
     
     # Calculate netto price: brutto / (1 + vat_rate)
     # This removes the VAT to get what we actually receive
-    selling_price_netto = selling_price_brutto / (1 + vat_rate)
+    selling_price_netto = customer_payment_brutto / (1 + vat_rate)
     
     # Get fees
     payment_fee = 0.0
@@ -530,7 +541,7 @@ def calculate_listing_profit(
     
     # IMPORTANT: Commission is on the customer's FULL PAYMENT (brutto), not netto
     # This is how eBay calculates it - on the total amount paid by customer
-    sales_commission = selling_price_brutto * sales_commission_percentage
+    sales_commission = customer_payment_brutto * sales_commission_percentage
     
     # Get shipping cost for marketplace
     shipping_costs_net = _get_marketplace_shipping_cost(marketplace)
@@ -559,6 +570,7 @@ def calculate_listing_profit(
     
     return {
         'selling_price_brutto': round(selling_price_brutto, 2),
+        'shipping_listing': round(shipping_listing, 2),
         'selling_price_netto': round(selling_price_netto, 2),
         'payment_fee': round(payment_fee, 2),
         'sales_commission': round(sales_commission, 2),

@@ -1,0 +1,184 @@
+{
+  "P0020026": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kaffee-, Tee- & Espressomaschinen/Filter-Kaffeemaschinen",
+      "eBay Category ID": "184665"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "KRUPS",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die KRUPS Pro Aroma Kaffeemaschine bietet eine präzise Temperaturkontrolle für eine optimale Kaffeeextraktion. Sie verfügt über einen Thermoskanne, die den Kaffee bis zu 4 Stunden warm hält. Das Gerät hat eine einfache Bedienung mit einem Wasserstandsanzeiger und einem Tropfstopp-System. Sichtbare Angaben: Farbe: Schwarz.",
+      "Keywords": "Pro Aroma Filterkaffeemaschine",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020026 (1).jpg"
+        },
+        {
+          "filename": "P0020026 (10).jpg"
+        },
+        {
+          "filename": "P0020026 (11).jpg"
+        },
+        {
+          "filename": "P0020026 (12).jpg"
+        },
+        {
+          "filename": "P0020026 (13).jpg"
+        },
+        {
+          "filename": "P0020026 (14).jpg"
+        },
+        {
+          "filename": "P0020026 (15).jpg"
+        },
+        {
+          "filename": "P0020026 (16).jpg"
+        },
+        {
+          "filename": "P0020026 (2).jpg"
+        },
+        {
+          "filename": "P0020026 (3).jpg"
+        },
+        {
+          "filename": "P0020026 (4).jpg"
+        },
+        {
+          "filename": "P0020026 (5).jpg"
+        },
+        {
+          "filename": "P0020026 (6).jpg"
+        },
+        {
+          "filename": "P0020026 (7).jpg"
+        },
+        {
+          "filename": "P0020026 (8).jpg"
+        },
+        {
+          "filename": "P0020026 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020026 (2).jpg"
+        },
+        {
+          "filename": "P0020026 (6).jpg"
+        },
+        {
+          "filename": "P0020026 (5).jpg"
+        },
+        {
+          "filename": "P0020026 (11).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "F312"
+      },
+      "optional": {
+        "Produktart": "Filter-Kaffeemaschine",
+        "Marke": "KRUPS",
+        "Besonderheiten": "",
+        "Kaffeeart": "Bohnenkaffee",
+        "Farbe": "Schwarz",
+        "Kaffeevariationen": "",
+        "Bestandteile inbegriffen": "",
+        "Höhe": "",
+        "Breite": "",
+        "Brühzeit": "",
+        "Tiefe": "",
+        "Herstellernummer": "",
+        "Anzahl der Tassen": "10",
+        "Material": "Kunststoff",
+        "Leistung": "",
+        "Wassertank-Fassungsvermögen": "1,2 L",
+        "Kapazität": "1,5 L",
+        "Finish": "",
+        "Stromquelle": "Elektrisch",
+        "Kompatible Wasserfilter": "",
+        "Steuerung": "Analog",
+        "Spannung": "",
+        "Gewicht": "1,5 kg",
+        "Ursprungsland": "",
+        "Kabellänge": "100 cm",
+        "Benötigte Aufheizzeit": "",
+        "Herstellergarantie": "2 Jahre",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Anzahl der Einstellungen/Programme": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Kaffeemaschine",
+      "Product Model": "F312",
+      "Keyword 1": "Filterkaffeemaschine",
+      "Keyword 2": "Kaffeeautomat",
+      "Keyword 3": "Kaffeemaker"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "38",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T19:16"
+    }
+  }
+}

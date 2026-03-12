@@ -12,6 +12,34 @@ sys.path.insert(0, str(LEGACY))
 import config
 
 
+def _ensure_images_section(images_section: Dict[str, Any]) -> Dict[str, Any]:
+    if not isinstance(images_section, dict):
+        images_section = {}
+    images_section.setdefault("schema_version", "1.0")
+    images_section.setdefault("stock", [])
+    images_section.setdefault("phone", [])
+    images_section.setdefault("enhanced", [])
+    images_section.setdefault("main_images", [])
+    return images_section
+
+
+def _update_images_summary(images_section: Dict[str, Any]) -> None:
+    stock = list(images_section.get("stock", []) or [])
+    phone = list(images_section.get("phone", []) or [])
+    enhanced = list(images_section.get("enhanced", []) or [])
+    main_images = list(images_section.get("main_images", []) or [])
+    images_section["summary"] = {
+        "has_stock": bool(stock),
+        "has_phone": bool(phone),
+        "has_enhanced": bool(enhanced),
+        "count_stock": len(stock),
+        "count_phone": len(phone),
+        "count_enhanced": len(enhanced),
+        "has_main_images": bool(main_images),
+        "count_main_images": len(main_images),
+    }
+
+
 def _load_product_json(sku: str) -> Dict[str, Any]:
     """Load product JSON file for a SKU."""
     product_path = Path(config.PRODUCTS_FOLDER_PATH) / f"{sku}.json"
@@ -48,9 +76,7 @@ def mark_main_images(sku: str, filenames: List[str]) -> Dict[str, Any]:
     """
     try:
         product_detail = _load_product_json(sku) or {}
-        images_section = product_detail.get("Images", {})
-        if not isinstance(images_section, dict):
-            images_section = {}
+        images_section = _ensure_images_section(product_detail.get("Images", {}))
         
         # Get existing main_images or initialize
         main_images = list(images_section.get("main_images", []) or [])
@@ -71,11 +97,7 @@ def mark_main_images(sku: str, filenames: List[str]) -> Dict[str, Any]:
         
         # Update Images section
         images_section["main_images"] = main_images
-        
-        # Update summary if exists
-        if "schema_version" in images_section and "summary" in images_section:
-            images_section["summary"]["has_main_images"] = bool(main_images)
-            images_section["summary"]["count_main_images"] = len(main_images)
+        _update_images_summary(images_section)
         
         product_detail["Images"] = images_section
         
@@ -111,9 +133,7 @@ def unmark_main_images(sku: str, filenames: List[str]) -> Dict[str, Any]:
     """
     try:
         product_detail = _load_product_json(sku) or {}
-        images_section = product_detail.get("Images", {})
-        if not isinstance(images_section, dict):
-            images_section = {}
+        images_section = _ensure_images_section(product_detail.get("Images", {}))
         
         # Get existing main_images
         main_images = list(images_section.get("main_images", []) or [])
@@ -129,11 +149,7 @@ def unmark_main_images(sku: str, filenames: List[str]) -> Dict[str, Any]:
         
         # Update Images section
         images_section["main_images"] = main_images
-        
-        # Update summary if exists
-        if "schema_version" in images_section and "summary" in images_section:
-            images_section["summary"]["has_main_images"] = bool(main_images)
-            images_section["summary"]["count_main_images"] = len(main_images)
+        _update_images_summary(images_section)
         
         product_detail["Images"] = images_section
         

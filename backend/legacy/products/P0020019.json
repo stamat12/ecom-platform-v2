@@ -7,45 +7,79 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Computer, Tablets & Netzwerk/Kabel & Steckverbinder/Monitor-/AV-Kabel & -Adapter",
+      "eBay Category ID": "158840"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
-      "Brand": "",
-      "Color": "",
-      "Size": ""
+      "Brand": "Cable Matters",
+      "Color": "Schwarz",
+      "Size": "1.8 m"
     },
     "Intern Generated Info": {
-      "More details": "",
-      "Keywords": "",
+      "More details": "Das Produkt ist ein DisplayPort 1.4 Verlängerungskabel. Es hat eine Länge von 1,8 Metern und ermöglicht die Verbindung von Geräten mit DisplayPort-Anschlüssen. Ideal für die Erweiterung von Monitorverbindungen. Sichtbare Angaben: Farbe: Schwarz; Größe: 1.8 m.",
+      "Keywords": "DisplayPort 1.4 Verlängerungskabel",
       "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "16"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020019 (1).jpg"
+        },
+        {
+          "filename": "P0020019 (2).jpg"
+        },
+        {
+          "filename": "P0020019 (3).jpg"
+        },
+        {
+          "filename": "P0020019 (4).jpg"
+        },
+        {
+          "filename": "P0020019 (5).jpg"
+        },
+        {
+          "filename": "P0020019 (6).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020019 (2).jpg"
@@ -54,6 +88,42 @@
           "filename": "P0020019 (6).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Cable Matters"
+      },
+      "optional": {
+        "Produktart": "Adapterkabel",
+        "Herstellernummer": "102015-6",
+        "Anschluss A": "DisplayPort-Stecker",
+        "Anschluss/Anschlüsse B": "DisplayPort-Buchse",
+        "Kabellänge": "1.8 m",
+        "Modell": "DisplayPort 1.4 Verlängerungskabel",
+        "Funktionen": "Keine",
+        "Herstellergarantie": "1 Jahr",
+        "Ursprungsland": "Keine",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Verlängerungskabel",
+      "Product Model": "DisplayPort 1.4",
+      "Keyword 1": "DisplayPort Kabel",
+      "Keyword 2": "Kabel 1.8m",
+      "Keyword 3": "Kabelverlängerung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "2",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "P0020019, P0020020",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

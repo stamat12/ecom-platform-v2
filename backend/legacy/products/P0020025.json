@@ -1,0 +1,165 @@
+{
+  "P0020025": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Werkzeuge/Sonstige",
+      "eBay Category ID": "11704"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Kawasaki",
+      "Color": "Rot",
+      "Size": "2.7 PS"
+    },
+    "Intern Generated Info": {
+      "More details": "Der angebotene Motor Kawasaki TJ53E ist ein leistungsstarker und zuverlässiger Zweitakt-Benzinmotor, der speziell für den Einsatz in Freischneidern und Motorsensen entwickelt wurde. Das Modell gehört zu den bewährten professionellen Motorserien von Kawasaki und überzeugt durch eine hohe Leistungsfähigkeit, robuste Bauweise und eine lange Lebensdauer auch unter anspruchsvollen Arbeitsbedingungen. Der Motor ist neu und wurde sorgfältig gelagert. Er befindet sich noch in der Schutzverpackung und wurde nicht montiert oder verwendet.\n\nMit einem Hubraum von 53,2 cm³ bietet der Motor eine starke und konstante Leistung, die sich besonders beim Schneiden von dichtem Gras, hohem Bewuchs oder Gestrüpp bemerkbar macht. Die maximale Drehzahl liegt bei etwa 7500 U/min, wodurch eine effiziente Kraftübertragung auf das Schneidwerkzeug ermöglicht wird. Durch das durchdachte Motordesign wird ein gutes Verhältnis zwischen Leistung, Drehmoment und Kraftstoffverbrauch erreicht, was ihn sowohl für professionelle Anwender als auch für anspruchsvolle private Nutzer interessant macht.\n\nDer Kawasaki TJ53E ist ein luftgekühlter Zweitaktmotor, der für eine zuverlässige Funktion auch bei längeren Arbeitseinsätzen konstruiert wurde. Die Kühlung erfolgt über ein effizientes Lüftungssystem, das die Temperatur des Motors stabil hält und eine Überhitzung verhindert. Die robuste Bauweise sowie hochwertige Materialien sorgen für eine hohe mechanische Belastbarkeit und eine lange Lebensdauer der wichtigsten Komponenten.\n\nEin weiterer Vorteil dieses Motors ist sein starkes Drehmoment, das bereits bei mittleren Drehzahlen verfügbar ist. Dadurch arbeitet der Motor auch bei dichter Vegetation konstant und ohne Leistungseinbrüche. Diese Eigenschaft ist besonders wichtig bei Motorsensen und Freischneidern, da sie eine gleichmäßige Schneidleistung ermöglicht und das Arbeiten deutlich erleichtert.\n\nDer Motor ist für einen Schaftdurchmesser von 28 mm vorgesehen und lässt sich daher mit vielen gängigen Freischneider-Systemen kombinieren. Dadurch eignet er sich ideal als Ersatzmotor oder als Grundlage für den Aufbau einer leistungsstarken Motorsense. Die Montage erfolgt über eine robuste Kupplungseinheit, die eine sichere und stabile Verbindung mit der Antriebswelle gewährleistet.\n\nAuch in Bezug auf Sicherheit und Umweltstandards erfüllt der Motor moderne Anforderungen. Das Modell entspricht der Euro-5 Norm, wodurch ein effizienter und vergleichsweise emissionsarmer Betrieb ermöglicht wird. Gleichzeitig sorgt das durchdachte Schalldämpfersystem dafür, dass der Motor trotz seiner Leistung einen kontrollierten Geräuschpegel aufweist.\n\nDas Gewicht und die kompakte Bauform machen den Motor gut ausbalanciert und einfach zu handhaben. Dadurch wird die Arbeit mit dem Gerät weniger ermüdend, selbst bei längeren Einsätzen im Garten, auf landwirtschaftlichen Flächen oder bei der Landschaftspflege.\n\nDer Kawasaki TJ53E steht weltweit für Qualität, Zuverlässigkeit und hohe Leistung im Bereich der Garten- und Landschaftstechnik. Kawasaki ist bekannt für seine langlebigen Motoren, die speziell für intensive Nutzung entwickelt wurden und auch unter schwierigen Bedingungen zuverlässig funktionieren.\n\nInsgesamt handelt es sich um einen kraftvollen, langlebigen und vielseitig einsetzbaren Benzinmotor, der sich ideal für leistungsstarke Freischneider und Motorsensen eignet und sowohl im professionellen Einsatz als auch im privaten Bereich eine hervorragende Wahl darstellt.",
+      "Keywords": "TJ53E Motorsense Motor",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "500"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020025 (1).jpg"
+        },
+        {
+          "filename": "P0020025 (10).jpg"
+        },
+        {
+          "filename": "P0020025 (11).jpg"
+        },
+        {
+          "filename": "P0020025 (12).jpg"
+        },
+        {
+          "filename": "P0020025 (13).jpg"
+        },
+        {
+          "filename": "P0020025 (14).jpg"
+        },
+        {
+          "filename": "P0020025 (2).jpg"
+        },
+        {
+          "filename": "P0020025 (3).jpg"
+        },
+        {
+          "filename": "P0020025 (4).jpg"
+        },
+        {
+          "filename": "P0020025 (5).jpg"
+        },
+        {
+          "filename": "P0020025 (6).jpg"
+        },
+        {
+          "filename": "P0020025 (7).jpg"
+        },
+        {
+          "filename": "P0020025 (8).jpg"
+        },
+        {
+          "filename": "P0020025 (9).jpg"
+        },
+        {
+          "filename": "tj53e_pc.jpg"
+        },
+        {
+          "filename": "tj53e_pc.webp"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020025 (1).jpg"
+        },
+        {
+          "filename": "P0020025 (7).jpg"
+        },
+        {
+          "filename": "P0020025 (13).jpg"
+        },
+        {
+          "filename": "P0020025 (2).jpg"
+        },
+        {
+          "filename": "P0020025 (11).jpg"
+        },
+        {
+          "filename": "P0020025 (10).jpg"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Kawasaki"
+      },
+      "optional": {
+        "Herstellernummer": "B2002",
+        "Produktart": "Zweitakt-Benzinmotor",
+        "Ursprungsland": "P.R.C",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Freischneider",
+      "Product Model": "TJ53E",
+      "Keyword 1": "Rasentrimmer",
+      "Keyword 2": "Motorsense",
+      "Keyword 3": "Grastrimmer"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "345",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T19:16"
+    }
+  }
+}

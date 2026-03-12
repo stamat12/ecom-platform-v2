@@ -52,6 +52,19 @@ def _has_effective_fees(fees: Any) -> bool:
     )
 
 
+def _merge_missing_fee_fields(current_fees: Any, mapping_fees: Dict[str, float]) -> Dict[str, Any]:
+    current = current_fees if isinstance(current_fees, dict) else {}
+    merged = dict(current)
+
+    if _coerce_float(merged.get("payment_fee")) is None and _coerce_float(mapping_fees.get("payment_fee")) is not None:
+        merged["payment_fee"] = float(mapping_fees["payment_fee"])
+
+    if _coerce_float(merged.get("sales_commission_percentage")) is None and _coerce_float(mapping_fees.get("sales_commission_percentage")) is not None:
+        merged["sales_commission_percentage"] = float(mapping_fees["sales_commission_percentage"])
+
+    return merged
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--overwrite", action="store_true", help="Also overwrite non-empty schema fees")
@@ -105,11 +118,14 @@ def main() -> int:
             metadata = schema_data.setdefault("_metadata", {})
             current_fees = metadata.get("fees", {})
 
-            if _has_effective_fees(current_fees) and not args.overwrite:
-                skipped_has_fees += 1
-                continue
-
-            metadata["fees"] = mapping_fees
+            if args.overwrite:
+                metadata["fees"] = mapping_fees
+            else:
+                merged_fees = _merge_missing_fee_fields(current_fees, mapping_fees)
+                if merged_fees == (current_fees if isinstance(current_fees, dict) else {}):
+                    skipped_has_fees += 1
+                    continue
+                metadata["fees"] = merged_fees
 
             tmp_path = schema_file.with_suffix(".tmp.json")
             with tmp_path.open("w", encoding="utf-8") as f:

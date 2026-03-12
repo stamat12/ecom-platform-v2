@@ -17,13 +17,14 @@
       "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Büro & Schreibwaren/Bürotechnik/Laminiergeräte",
+      "eBay Category ID": "25317"
     },
     "EAN": {
       "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -40,12 +41,60 @@
       "OP": "25"
     },
     "Status": {
-      "Status": ""
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020011 (1).jpg"
+        },
+        {
+          "filename": "P0020011 (10).jpg"
+        },
+        {
+          "filename": "P0020011 (11).jpg"
+        },
+        {
+          "filename": "P0020011 (2).jpg"
+        },
+        {
+          "filename": "P0020011 (3).jpg"
+        },
+        {
+          "filename": "P0020011 (4).jpg"
+        },
+        {
+          "filename": "P0020011 (5).jpg"
+        },
+        {
+          "filename": "P0020011 (6).jpg"
+        },
+        {
+          "filename": "P0020011 (7).jpg"
+        },
+        {
+          "filename": "P0020011 (8).jpg"
+        },
+        {
+          "filename": "P0020011 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020011 (2).jpg"
@@ -66,6 +115,26 @@
           "filename": "P0020011 (7).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Amazon Basics"
+      },
+      "optional": {
+        "Herstellernummer": "B09Q3L5VBW",
+        "Format": "DIN A4",
+        "Farbe": "Schwarz",
+        "Gerätetyp": "Taschenlaminator",
+        "Besonderheiten": "Heißlaminieren",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Laminierer",
+      "Product Model": "3in1 A4",
+      "Keyword 1": "Thermischer Laminierer",
+      "Keyword 2": "Laminiergerät",
+      "Keyword 3": "Dokumentenlaminierer"
     }
   }
 }

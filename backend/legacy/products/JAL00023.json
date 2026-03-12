@@ -127,58 +127,6 @@
         {
           "filename": "5.png"
         }
-      ],
-      "eBay Images": [
-        {
-          "filename": "1.png",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/SYEAAeSwn6dpZBzx/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "2.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/RDcAAeSw0UVpZBz1/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "3.png",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9FgAAeSw1q5pZBz3/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "4.png",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0msAAeSwq8NpZBz5/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "5.png",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MH8AAeSwpktpZBz7/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00023 (7).jpg",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BAMAAeSwkthpZBz~/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00023 (8).jpg",
-          "order": 7,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UfsAAeSw8nNpZB0C/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00023 (9).jpg",
-          "order": 8,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sOIAAeSw1~BpZB0G/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00023 (3).jpg",
-          "order": 9,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2A4AAeSwrBhpZB0J/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "JAL00023 (5).jpg",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ADAAAeSwBS5pZBz0/$_1.JPG?set_id=8800005007"
-        }
       ]
     },
     "eBay Fields": {

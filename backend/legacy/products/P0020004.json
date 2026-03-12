@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Beauty & Gesundheit/Tattoos & Körperkunst/Tätowierungsbedarf/Tattoo-Vorlagen & Zubehör",
+      "eBay Category ID": "179277"
     },
     "EAN": {
       "EAN": null
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -34,18 +35,63 @@
     "Intern Generated Info": {
       "More details": "Das Produkt ist ein schwarzer Koffer mit dem Logo 'STIGMA'. Im Inneren befinden sich verschiedene Zubehörteile für Tätowierer, darunter Nadeln und Tinte. Der Koffer ist robust und eignet sich zur Aufbewahrung von Tätowierbedarf.",
       "Keywords": "Tattoo Koffer Zubehör",
-      "Materials": "Kunststoff"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "85"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 10
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020004 (1).jpg"
+        },
+        {
+          "filename": "P0020004 (10).jpg"
+        },
+        {
+          "filename": "P0020004 (2).jpg"
+        },
+        {
+          "filename": "P0020004 (3).jpg"
+        },
+        {
+          "filename": "P0020004 (4).jpg"
+        },
+        {
+          "filename": "P0020004 (5).jpg"
+        },
+        {
+          "filename": "P0020004 (6).jpg"
+        },
+        {
+          "filename": "P0020004 (7).jpg"
+        },
+        {
+          "filename": "P0020004 (8).jpg"
+        },
+        {
+          "filename": "P0020004 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020004 (2).jpg"
@@ -78,6 +124,23 @@
           "filename": "P0020004 (3).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Schablone"
+      },
+      "optional": {
+        "Herstellernummer": "EN02B-20KIT-B",
+        "Marke": "STIGMA",
+        "Ablaufdatum": "07-01-2030"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tattoo Maschine",
+      "Product Model": "P802",
+      "Keyword 1": "Tattoo Zubehör",
+      "Keyword 2": "Tattoo Kit",
+      "Keyword 3": "Tattoo Farben"
     }
   }
 }

@@ -53,6 +53,23 @@
       "Keyword 2": "Winterhose",
       "Keyword 3": "Kälteschutzhose",
       "eBay Title": "Nordblanc NBBMU2250 Thermohose Herren Rot XL Wärmhose Winterhose Kälteschutzhose"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": []
     }
   }
 }

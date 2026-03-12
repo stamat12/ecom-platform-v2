@@ -17,33 +17,34 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Garten & Terrasse/Hand-Gartengeräte & Zubehör/Gartenscheren",
+      "eBay Category ID": "139871"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu (einamal getestet)"
     },
     "Intern Product Info": {
       "Gender": "",
-      "Brand": "None",
+      "Brand": "",
       "Color": "Blau Schwarz",
       "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Die elektrische Gartenschere hat einen ergonomischen Griff für eine bequeme Handhabung. Sie wird mit zwei Akkus geliefert und ist ideal zum Schneiden von Ästen und Zweigen. Die Schere ist kompakt und leicht, was die Nutzung erleichtert.",
       "Keywords": "elektrische Gartenschere",
-      "Materials": "Kunststoff Metall"
+      "Materials": ""
     },
     "OP": {
       "OP": "55"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
       "schema_version": "1.0",
@@ -114,6 +115,35 @@
           "filename": "P0020001 (13).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Baum-/ Strauchschneider"
+      },
+      "optional": {
+        "Marke": "Lithium",
+        "Besonderheiten": "Ergonomischer Griff",
+        "Material": "Kunststoff",
+        "Farbe": "Blau Schwarz"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Elektrische Gartenschneider",
+      "Product Model": "",
+      "Keyword 1": "Akku Gartenschneider",
+      "Keyword 2": "Gartenschneider elektrisch",
+      "Keyword 3": "Gartenschneider mit Akku"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und wurde lediglich ein- bis zweimal kurz getestet. Es handelt sich nicht um einen regulär gebrauchten Artikel, sondern nur um eine kurze Funktionsprüfung.  Der genaue Zustand sowie die Vollständigkeit sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

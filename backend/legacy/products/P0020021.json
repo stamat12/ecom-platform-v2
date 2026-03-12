@@ -7,23 +7,24 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Büro & Schreibwaren/Büromöbel/Leuchten & Leuchtmittel/Deckenleuchten",
+      "eBay Category ID": "127549"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -32,20 +33,56 @@
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Die Lampe hat einen flexiblen Arm und eine runde Lichtquelle. Sie ist kompakt und eignet sich gut für Schreibtische oder Nachttische. Die Basis ist flach und stabil, was eine sichere Aufstellung ermöglicht.",
+      "More details": "Die Lampe hat einen flexiblen Arm und eine runde Lichtquelle. Sie ist kompakt und eignet sich gut für Schreibtische oder Nachttische. Sie ist sehr klein - ca 10 cm. Die Basis ist flach und stabil, was eine sichere Aufstellung ermöglicht.",
       "Keywords": "Schreibtischlampe LED",
-      "Materials": "Kunststoff"
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "7"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020021 (1).jpg"
+        },
+        {
+          "filename": "P0020021 (2).jpg"
+        },
+        {
+          "filename": "P0020021 (3).jpg"
+        },
+        {
+          "filename": "P0020021 (4).jpg"
+        },
+        {
+          "filename": "P0020021 (5).jpg"
+        },
+        {
+          "filename": "P0020021 (6).jpg"
+        },
+        {
+          "filename": "P0020021 (7).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020021 (3).jpg"
@@ -54,6 +91,40 @@
           "filename": "P0020021 (1).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Markenlos"
+      },
+      "optional": {
+        "Farbe": "Weiß",
+        "Anzahl der Lichter": "1",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Ursprungsland": "China",
+        "Farbtemperatur": "Neutral",
+        "Form": "Rund",
+        "Größe": "ca. 10 cm",
+        "Lichtfarbe": "Warmweiß"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tischlampe",
+      "Product Model": "",
+      "Keyword 1": "LED Lampe",
+      "Keyword 2": "USB Licht",
+      "Keyword 3": "Schreibtischlampe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

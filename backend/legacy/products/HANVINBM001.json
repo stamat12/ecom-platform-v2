@@ -48,26 +48,6 @@
     },
     "Images": {
       "schema_version": "1.0",
-      "stock": [],
-      "phone": [],
-      "enhanced": [
-        {
-          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM001 (2).jpg",
-          "prompt": "Used Clothes Invisible Mannequin",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        },
-        {
-          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png",
-          "source": "HANVINBM001 (2).jpg",
-          "prompt": "Used Clothes Same Position",
-          "generated": true,
-          "upscaled": true,
-          "upscale_method": "lanczos-4x"
-        }
-      ],
       "summary": {
         "has_stock": false,
         "has_phone": false,
@@ -78,6 +58,16 @@
         "has_main_images": true,
         "count_main_images": 8
       },
+      "stock": [],
+      "phone": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HANVINBM001 (2)_1_lanczos_4x.png"
+        }
+      ],
       "main_images": [
         {
           "filename": "HANVINBM001 (2).jpg"
@@ -102,53 +92,6 @@
         },
         {
           "filename": "HANVINBM001 (9).jpg"
-        }
-      ],
-      "eBay Images": [
-        {
-          "filename": "HANVINBM001 (2).jpg",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6IsAAeSw8s5pkiKr/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (6).jpg",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-N0AAeSwIh5pkiKw/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (4).jpg",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~WgAAeSwFQxpkiK2/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (3).jpg",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6SsAAeSw8s5pkiK8/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (5).jpg",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OL8AAeSw6bBpkiLC/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (10).jpg",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8JAAAeSwThVpkiLG/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (1).jpg",
-          "order": 7,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9FYAAeSw7ylpkiLL/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (11).jpg",
-          "order": 8,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TFoAAeSwwsBpkiLO/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM001 (9).jpg",
-          "order": 9,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KtIAAeSwv~RpkiLS/$_1.JPG?set_id=8800005007"
         }
       ]
     },

@@ -1,0 +1,219 @@
+{
+  "P0020035": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Severin",
+      "Color": "Schwarz/Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Haartrockner hat einen leistungsstarken BLDC-Motor für professionelle Ergebnisse. Er bietet eine Cool-Shot-Funktion für sanftes Trocknen und voluminöse Locken. Das elegante Design aus hochwertigem Aluminium sorgt für Langlebigkeit. Sichtbare Angaben: Modell/Nummern: S-STYLE; Farbe: Schwarz/Silber.",
+      "Keywords": "S-STYLE SPEED PRO Haartrockner",
+      "Materials": "Aluminium, Kunststoff"
+    },
+    "OP": {
+      "OP": "70"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020035 (1).jpg"
+        },
+        {
+          "filename": "P0020035 (10).jpg"
+        },
+        {
+          "filename": "P0020035 (11).jpg"
+        },
+        {
+          "filename": "P0020035 (2).jpg"
+        },
+        {
+          "filename": "P0020035 (3).jpg"
+        },
+        {
+          "filename": "P0020035 (4).jpg"
+        },
+        {
+          "filename": "P0020035 (5).jpg"
+        },
+        {
+          "filename": "P0020035 (6).jpg"
+        },
+        {
+          "filename": "P0020035 (7).jpg"
+        },
+        {
+          "filename": "P0020035 (8).jpg"
+        },
+        {
+          "filename": "P0020035 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020035 (2).jpg"
+        },
+        {
+          "filename": "P0020035 (10).jpg"
+        },
+        {
+          "filename": "P0020035 (1).jpg"
+        },
+        {
+          "filename": "P0020035 (4).jpg"
+        },
+        {
+          "filename": "P0020035 (5).jpg"
+        },
+        {
+          "filename": "P0020035 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020035 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qbkAAeSw4JZpspnE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hFYAAeSweQppspnH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s38AAeSwPfRpspnK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3aYAAeSwi~JpspnO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2asAAeSwSxxpspnR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bG4AAeSwZzRpspnT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dMEAAeSwZyJpspnW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/g6sAAeSwnWRpspnZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J2IAAeSww-Vpspnb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (2).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/82cAAeSwE51pspne/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020035 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/i0oAAeSwm0Bpspng/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Severin",
+        "Produktart": "Haartrockner"
+      },
+      "optional": {
+        "Leistung": "1650 W",
+        "Modell": "S-STYLE SPEED PRO",
+        "Farbe": "Schwarz/Silber",
+        "Temperaturstufen": "3",
+        "Geschwindigkeitsstufen": "3",
+        "Material": "Aluminium, Kunststoff",
+        "Ursprungsland": "China",
+        "Herstellernummer": "HT 0171",
+        "Besonderheiten": "Cool-Shot-Funktion, Ionen-Technologie",
+        "Stromquelle": "Netzstrom",
+        "Höchsttemperatur": "200 °C",
+        "Größe": "Standard",
+        "Abteilung": "Unisex",
+        "Anzahl der Einheiten": "1",
+        "Herstellergarantie": "2 Jahre",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haartrockner",
+      "Product Model": "HT 0171",
+      "Keyword 1": "Fön",
+      "Keyword 2": "Haarfön",
+      "Keyword 3": "Haarpflegegerät"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "55",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "2",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "P0020035-P0020036",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

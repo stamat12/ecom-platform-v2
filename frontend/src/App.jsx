@@ -148,6 +148,11 @@ export default function App() {
             Prompts
           </span>
         </Link>
+        <Link to="/skus?openSync=1" style={{ textDecoration: "none" }}>
+          <span style={{ padding: "8px 16px", backgroundColor: "#1565c0", color: "white", borderRadius: "4px", fontSize: "14px" }}>
+            📊 Sync Excel to DB
+          </span>
+        </Link>
         <button
           onClick={computeEbayListingsFast}
           disabled={ebayListingsComputing}

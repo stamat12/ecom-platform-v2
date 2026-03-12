@@ -47,6 +47,20 @@
       "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "HANVINBM014 (2).jpg"
@@ -59,33 +73,6 @@
         },
         {
           "filename": "HANVINBM014 (3).jpg"
-        }
-      ],
-      "eBay Images": [
-        {
-          "filename": "HANVINBM014 (2).jpg",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cZwAAeSwTnppkjtJ/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM014 (1).jpg",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dRgAAeSwVQlpkjtN/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM014 (3).jpg",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kTgAAeSwwVtpkjtR/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM014 (4).jpg",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kj4AAeSwLbVpkjtV/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM014 (5).jpg",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vakAAeSwziJpkjtY/$_1.JPG?set_id=8800005007"
         }
       ]
     },

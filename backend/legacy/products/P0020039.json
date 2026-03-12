@@ -1,0 +1,141 @@
+{
+  "P0020039": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/Zubehör/Controller",
+      "eBay Category ID": "117042"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Echtpower",
+      "Color": "Schwarz",
+      "Size": "None"
+    },
+    "Intern Generated Info": {
+      "More details": "Der Controller hat ein auffälliges Design mit blauen Blitzen. Er ist kabellos und bietet eine hervorragende Gaming-Erfahrung. Die Ladezeit beträgt 2-4 Stunden und die Betriebsdauer bis zu 10 Stunden. Sichtbare Angaben: Modell/Nummern: P02; Farbe: Schwarz mit blauen Akzenten; Größe: None.",
+      "Keywords": "P02 Wireless Controller",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 3,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020039 (1).jpg"
+        },
+        {
+          "filename": "P0020039 (2).jpg"
+        },
+        {
+          "filename": "P0020039 (3).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020039 (3).jpg"
+        },
+        {
+          "filename": "P0020039 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020039 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8t4AAeSwx0VpspyX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020039 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fx4AAeSwTkFpspyZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020039 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WJoAAeSwG-xpspyb/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Echtpower",
+        "Produktart": "Controller"
+      },
+      "optional": {
+        "Kompatibles Produkt": "Controller",
+        "Plattform": "PC",
+        "Modell": "P02",
+        "Farbe": "Schwarz mit blauen Akzenten",
+        "Konnektivität": "Kabellos",
+        "Material": "Kunststoff",
+        "Besonderheiten": "Ergonomisch",
+        "Kabellänge": "0,8 m",
+        "Maximale Anzahl von Spielern": "2",
+        "Ursprungsland": "China",
+        "Funkreichweite": "Mehr als 10 m",
+        "Gewicht": "300 g",
+        "Herstellergarantie": "1 Jahr",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Gamecontroller",
+      "Product Model": "P02",
+      "Keyword 1": "Wireless Controller",
+      "Keyword 2": "Gaming Controller",
+      "Keyword 3": "Spielcontroller"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": "4.99",
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
+    }
+  }
+}

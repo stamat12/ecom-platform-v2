@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Heimwerker/Werkzeuge/Elektrowerkzeuge/Akkuschrauber",
+      "eBay Category ID": "184655"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -34,18 +35,69 @@
     "Intern Generated Info": {
       "More details": "Der Akku-Bohrer hat eine blaue und schwarze Farbgebung. Er verfügt über eine 20V Batterie und einen Schnellspannbohrfutter. Die Grifffläche ist ergonomisch gestaltet für besseren Halt.",
       "Keywords": "Akku-Bohrer Werkzeug",
-      "Materials": "Kunststoff Metall"
+      "Materials": ""
     },
     "OP": {
       "OP": "50"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_SEPARAT"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020002 (1).jpg"
+        },
+        {
+          "filename": "P0020002 (10).jpg"
+        },
+        {
+          "filename": "P0020002 (11).jpg"
+        },
+        {
+          "filename": "P0020002 (12).jpg"
+        },
+        {
+          "filename": "P0020002 (2).jpg"
+        },
+        {
+          "filename": "P0020002 (3).jpg"
+        },
+        {
+          "filename": "P0020002 (4).jpg"
+        },
+        {
+          "filename": "P0020002 (5).jpg"
+        },
+        {
+          "filename": "P0020002 (6).jpg"
+        },
+        {
+          "filename": "P0020002 (7).jpg"
+        },
+        {
+          "filename": "P0020002 (8).jpg"
+        },
+        {
+          "filename": "P0020002 (9).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020002 (5).jpg"
@@ -60,6 +112,62 @@
           "filename": "P0020002 (9).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "MArkenlos",
+        "Batterie inklusive": "Ja",
+        "Spannung": "20 V"
+      },
+      "optional": {
+        "Anzahl an Akkus": "1",
+        "Anzahl der Teile": "10",
+        "Produktart": "Bohrmaschine",
+        "Set enthält": "Zubehörteile",
+        "Akkukapazität": "2 Ah",
+        "Betriebsart": "Batterie",
+        "Akkutechnik": "Lithium-Ionen (Li-Ion)",
+        "Maximales Drehmoment": "",
+        "Bohrfutterspannweite": "",
+        "Bohrfuttertyp": "Schnellspannfutter",
+        "Kabellänge": "",
+        "Leistung": "",
+        "Zusatzgriff": "Nein",
+        "Drehzahl": "",
+        "Modell": "",
+        "Herstellernummer": "",
+        "Ladezeit": "",
+        "Farbe": "Blau",
+        "Motorart": "",
+        "Besonderheiten": "Ergonomisch",
+        "Ursprungsland": "",
+        "Herstellergarantie": "",
+        "Breite": "",
+        "Länge": "",
+        "Höhe": "",
+        "Durchmesser": "",
+        "Anzahl der Einheiten": "",
+        "Gewicht": "",
+        "Maßeinheit": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Akku-Bohrschrauber",
+      "Product Model": "",
+      "Keyword 1": "Schrauber",
+      "Keyword 2": "Bohrmaschine",
+      "Keyword 3": "Werkzeugset"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "32",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und wurde lediglich ein- bis zweimal kurz getestet. Es handelt sich nicht um einen regulär gebrauchten Artikel, sondern nur um eine kurze Funktionsprüfung.  Der genaue Zustand sowie die Vollständigkeit sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:02"
     }
   }
 }

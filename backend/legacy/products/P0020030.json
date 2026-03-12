@@ -1,0 +1,248 @@
+{
+  "P0020030": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Foto & Camcorder/Fotostudio-Zubehör/Dauerlicht/Studio-Beleuchtungssets",
+      "eBay Category ID": "19591"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Bluetooth-Fernbedienung fehlt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "MICCYE",
+      "Color": "Schwarz, Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein LED-Ringlicht mit einem Durchmesser von 26 cm. Es wird mit einem Stativ geliefert, das eine Höhe von 45 bis 155 cm hat. Die Lichtfarbe kann zwischen warmem und kaltem Licht sowie RGB-Modi gewechselt werden. Sichtbare Angaben: Farbe: Schwarz, Weiß.",
+      "Keywords": "LED Ringlicht Stativ",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 18,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020030 (1).jpg"
+        },
+        {
+          "filename": "P0020030 (10).jpg"
+        },
+        {
+          "filename": "P0020030 (11).jpg"
+        },
+        {
+          "filename": "P0020030 (12).jpg"
+        },
+        {
+          "filename": "P0020030 (13).jpg"
+        },
+        {
+          "filename": "P0020030 (14).jpg"
+        },
+        {
+          "filename": "P0020030 (15).jpg"
+        },
+        {
+          "filename": "P0020030 (16).jpg"
+        },
+        {
+          "filename": "P0020030 (17).jpg"
+        },
+        {
+          "filename": "P0020030 (18).jpg"
+        },
+        {
+          "filename": "P0020030 (2).jpg"
+        },
+        {
+          "filename": "P0020030 (3).jpg"
+        },
+        {
+          "filename": "P0020030 (4).jpg"
+        },
+        {
+          "filename": "P0020030 (5).jpg"
+        },
+        {
+          "filename": "P0020030 (6).jpg"
+        },
+        {
+          "filename": "P0020030 (7).jpg"
+        },
+        {
+          "filename": "P0020030 (8).jpg"
+        },
+        {
+          "filename": "P0020030 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020030 (18).jpg"
+        },
+        {
+          "filename": "P0020030 (15).jpg"
+        },
+        {
+          "filename": "P0020030 (14).jpg"
+        },
+        {
+          "filename": "P0020030 (1).jpg"
+        },
+        {
+          "filename": "P0020030 (5).jpg"
+        },
+        {
+          "filename": "P0020030 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020030 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0~EAAeSwCONpspkq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~AkAAeSwkXJpspku/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qOQAAeSwdUVpspky/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zukAAeSws3xpspk0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/o2YAAeSwk1ppspk3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/opcAAeSwcrlpspk6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rioAAeSwsGZpspk9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (14).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/spMAAeSw6~tpsplA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (15).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vWsAAeSwxO5psplD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (18).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cwQAAeSwlJNpsplF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nwkAAeSwnc1psplK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020030 (2).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b1UAAeSwrtFpsplN/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "MICCYE",
+        "Produktart": "Dauerlicht"
+      },
+      "optional": {
+        "Lichttyp": "LED",
+        "Farbe": "Schwarz, Weiß",
+        "Modell": "KJX-260-80-01",
+        "Energiequelle": "AC Angetrieben",
+        "Ursprungsland": "China",
+        "Höhe": "155 cm",
+        "Anzahl der Blitz-Einheiten": "1",
+        "Anzahl von LEDs/Lampen": "1",
+        "Besonderheiten": "Bluetooth-Fernbedienung",
+        "Leistung": "5 W",
+        "Lampenfarbe": "Weiß: Klar",
+        "Herstellernummer": "KJX-260-80-01",
+        "Anzahl der Einheiten": "1",
+        "Spannung": "5 V",
+        "Gewicht": "Nicht angegeben",
+        "Herstellergarantie": "1 Jahr",
+        "Breite": "Nicht angegeben",
+        "Länge": "Nicht angegeben",
+        "Montagetyp": "Zubehörschuh"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Ringlicht",
+      "Product Model": "KJX-260-80-01",
+      "Keyword 1": "LED Ringlicht",
+      "Keyword 2": "Stativ",
+      "Keyword 3": "Bluetooth Fernbedienung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "24",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Bitte beachten Sie, dass ein oder mehrere Komponenten fehlen können.  Der genaue Lieferumfang sowie der Zustand des Artikels sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

@@ -75,18 +75,6 @@
         {
           "filename": "5.png"
         }
-      ],
-      "eBay Images": [
-        {
-          "filename": "1.png",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjM5/z/IXcAAeSwHKppar6t/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "5.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjMx/z/hjwAAeSwRadpar6u/$_1.JPG?set_id=8800005007"
-        }
       ]
     },
     "eBay Fields": {

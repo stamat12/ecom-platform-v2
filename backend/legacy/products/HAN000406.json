@@ -81,8 +81,7 @@
       ],
       "enhanced": [
         {
-          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1_upscaled_x4.jpg",
-          "upscaled": true
+          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1_upscaled_x4.jpg"
         },
         {
           "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1.JPG"
@@ -103,37 +102,6 @@
         },
         {
           "filename": "HAN000406 (3).JPG"
-        }
-      ],
-      "eBay Images": [
-        {
-          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1_upscaled_x4.jpg",
-          "order": 1
-        },
-        {
-          "filename": "HAN000406 (2)_wb.jpg",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/dAkAAeSwR2lpYr2y/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (1)_1.JPG",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTAyNFgxMDI0/z/fKEAAeSwZAVpYr20/$_1.PNG?set_id=8800005007"
-        },
-        {
-          "filename": "studio_restoration_ultra_gpt_real_HAN000406 (2)_1.JPG",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTAyNFgxMDI0/z/0OkAAeSw9oJpYr23/$_1.PNG?set_id=8800005007"
-        },
-        {
-          "filename": "HAN000406 (3).JPG",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mPgAAeSwHAxpYr26/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HAN000406 (4).JPG",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yXIAAeSwmZtpYr28/$_1.JPG?set_id=8800005007"
         }
       ]
     },

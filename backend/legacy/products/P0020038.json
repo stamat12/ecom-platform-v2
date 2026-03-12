@@ -1,0 +1,183 @@
+{
+  "P0020038": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Business & Industrie/Elektronik & Messtechnik/Mess- & Prüftechnik/Messgeräte & Detektoren/Sonstige Messgeräte",
+      "eBay Category ID": "4678"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Airthings",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Luftqualitätsmonitor, der die Luftqualität in Innenräumen überwacht. Es misst verschiedene Schadstoffe wie Radon und Feinstaub. Das Gerät hat ein modernes, minimalistisches Design und wird mit einer App zur Analyse der Daten geliefert. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "View Plus Luftqualitätsmonitor",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "280"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020038 (1).jpg"
+        },
+        {
+          "filename": "P0020038 (2).jpg"
+        },
+        {
+          "filename": "P0020038 (3).jpg"
+        },
+        {
+          "filename": "P0020038 (4).jpg"
+        },
+        {
+          "filename": "P0020038 (5).jpg"
+        },
+        {
+          "filename": "P0020038 (6).jpg"
+        },
+        {
+          "filename": "P0020038 (7).jpg"
+        },
+        {
+          "filename": "P0020038 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020038 (6).jpg"
+        },
+        {
+          "filename": "P0020038 (1).jpg"
+        },
+        {
+          "filename": "P0020038 (3).jpg"
+        },
+        {
+          "filename": "P0020038 (4).jpg"
+        },
+        {
+          "filename": "P0020038 (5).jpg"
+        },
+        {
+          "filename": "P0020038 (8).jpg"
+        },
+        {
+          "filename": "P0020038 (7).jpg"
+        },
+        {
+          "filename": "P0020038 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020038 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ge8AAeSwZcFpspno/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gOkAAeSwEG1pspnr/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3B8AAeSwle9pspnw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QfUAAeSwk6Rpspny/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (2).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SXgAAeSw4h1pspn2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hdAAAeSweQppspn5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020038 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hH0AAeSwtiBpspn8/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Airthings"
+      },
+      "optional": {
+        "Produktart": "Luftqualitätsmonitor",
+        "Modell": "View Plus",
+        "Herstellernummer": "HWIC-2960",
+        "Ursprungsland": "Norwegen"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Luftqualitätsmonitor",
+      "Product Model": "View Plus",
+      "Keyword 1": "Raumluftmessgerät",
+      "Keyword 2": "Luftqualitätssensor",
+      "Keyword 3": "Luftqualitätsmessgerät"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "195",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

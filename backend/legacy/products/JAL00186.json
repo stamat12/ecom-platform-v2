@@ -1,0 +1,93 @@
+{
+  "JAL00186": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "NeXtime station clock, negative dial (black), bars instead of numbers (white), silent, silver, aluminum, glass cover, 19 cm x 3.8 cm, 3998STZW"
+    },
+    "Price Data": {
+      "Price Net": 1.44,
+      "Shipping Net": 0.42,
+      "Total Cost Net": 1.86
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Dekoration/Deko-Accessoires/Schilder & Tafeln",
+      "eBay Category ID": "31587"
+    },
+    "EAN": {
+      "EAN": 8717713021995.0
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "NeXtime",
+      "Color": "Schwarz Silber Rot",
+      "Size": "19 cm x 3.8 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Wanduhr hat ein modernes Design mit einem schwarzen Zifferblatt und silbernem Gehäuse. Die Zeiger sind in Weiß und Rot gehalten, was einen schönen Kontrast bietet. Sie eignet sich hervorragend für verschiedene Einrichtungsstile. Sichtbare Angaben: Farbe: Schwarz Silber Rot.",
+      "Keywords": "Wanduhr",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "30.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

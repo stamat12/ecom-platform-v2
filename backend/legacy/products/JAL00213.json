@@ -1,0 +1,165 @@
+{
+  "JAL00213": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU345256-47-53-141125020223",
+      "Invoice Date": "14.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Uvex Echor Men's Premium Work Trousers - reinforced with Cordura - Stretch Waist Trousers - Extra Storage Space - Dark Blue - Size 54"
+    },
+    "Price Data": {
+      "Price Net": 9.59,
+      "Shipping Net": 1.06,
+      "Total Cost Net": 10.65
+    },
+    "Ebay Category": {
+      "Category": null,
+      "eBay Category ID": "57989"
+    },
+    "EAN": {
+      "EAN": 4049358597899
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "M",
+      "Brand": "Uvex",
+      "Color": "Dunkelblau",
+      "Size": "54 (36x33)"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Hose hat mehrere Taschen für Werkzeuge und Zubehör. Sie ist aus robustem Material gefertigt und bietet eine bequeme Passform. Die Kombination aus dunklem Blau und Schwarz sorgt für ein professionelles Aussehen. Sichtbare Angaben: Farbe: Dunkelblau.",
+      "Keywords": "Arbeitskleidung Hose Herren",
+      "Materials": "Polyester, Baumwolle"
+    },
+    "OP": {
+      "OP": "70.0"
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 003"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/f6cAAeSwXQJpstQK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFg2MTQ=/z/8YoAAeSwE51pstQM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTUwMFg5OTg=/z/PpgAAeSw5jFpstQN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/OTk4WDE1MDA=/z/iKMAAeSw6IJpstQO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/ODAwWDE1MDA=/z/~94AAeSwfJZpstQQ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Uvex",
+        "Größe": "54 (36x33)",
+        "Abteilung": "Herren",
+        "Stil": "Cargo",
+        "Farbe": "Dunkelblau",
+        "Schrittlänge": "33 in"
+      },
+      "optional": {
+        "Produktart": "Hosen",
+        "Material": "Polyester, Baumwolle",
+        "Besonderheiten": "Mit mehreren Taschen für Werkzeuge",
+        "Muster": "Ohne Muster",
+        "Anlass": "Berufskleidung",
+        "Größenkategorie": "Normalgröße",
+        "Verschluss": "Knopf",
+        "Vintage": "Nein",
+        "Bundfalte": "Ohne Bundfalte",
+        "Beinform": "Gerades Bein",
+        "Handgefertigt": "Nein",
+        "Taschenart": "Cargo-Tasche",
+        "Personalisieren": "Nein",
+        "Textilpflege": "Maschinenwäsche",
+        "Bundhöhe": "Mittel (25-30 cm)"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Arbeitshose",
+      "Product Model": "",
+      "Keyword 1": "Handwerkerhose",
+      "Keyword 2": "Berufshose",
+      "Keyword 3": "Werkstatthose"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": 4049358597899,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-20T15:55"
+    }
+  }
+}

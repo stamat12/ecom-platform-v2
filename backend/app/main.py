@@ -41,7 +41,7 @@ from app.services.ebay_category_search import search_ebay_categories
 from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
-from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db, add_missing_sku_rows_from_excel
+from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db, add_missing_sku_rows_from_excel, refresh_category_mapping_from_excel
 from app.services.db_to_excel_sync import sync_db_to_excel
 from app.services.inventory_cleanup import cleanup_duplicate_skus
 
@@ -1280,6 +1280,7 @@ def _read_ebay_listing_data(product_json: dict) -> dict:
 
     return {
         "price": section.get("Selling Price Total", ""),
+        "shipping_listing": section.get("Shipping Listing", 4.99),
         "shipping_costs_net": section.get("Shipping Costs Net", ""),
         "quantity": section.get("Quantity", ""),
         "condition_id": section.get("Condition ID", ""),
@@ -1298,6 +1299,7 @@ def _apply_ebay_listing_updates(product_json: dict, updates: dict) -> None:
 
     mapping = {
         "price": "Selling Price Total",
+        "shipping_listing": "Shipping Listing",
         "shipping_costs_net": "Shipping Costs Net",
         "quantity": "Quantity",
         "condition_id": "Condition ID",
@@ -1312,7 +1314,13 @@ def _apply_ebay_listing_updates(product_json: dict, updates: dict) -> None:
             continue
         if value is None:
             continue
+        if key == "shipping_listing":
+            section[mapping[key]] = 4.99
+            continue
         section[mapping[key]] = value
+
+    if "Shipping Listing" not in section or section.get("Shipping Listing") in (None, ""):
+        section["Shipping Listing"] = 4.99
 
     if "ean" in updates and updates.get("ean") is not None:
         if "EAN" not in product_json or not isinstance(product_json.get("EAN"), dict):
@@ -2113,11 +2121,30 @@ def sync_excel_to_db_endpoint(request: ExcelToDbSyncRequest):
         if not result.get("success", False):
             all_success = False
 
+    if request.update_category_mapping:
+        mapping_result = refresh_category_mapping_from_excel()
+        results.append({
+            "sheet": "Ebay Categories",
+            "operation": "update_category_mapping",
+            **mapping_result,
+        })
+        if not mapping_result.get("success", False):
+            all_success = False
+
     return ExcelToDbSyncResponse(
         success=all_success,
         message="Sync completed" if all_success else "Sync completed with errors",
         results=results
     )
+
+
+@app.post("/api/excel/update-category-mapping")
+def update_category_mapping_from_excel_endpoint():
+    """Refresh backend/schemas/category_mapping.json from Excel category sheet."""
+    result = refresh_category_mapping_from_excel()
+    if result.get("success"):
+        return result
+    raise HTTPException(status_code=400, detail=result.get("message", "Failed to update category mapping"))
 
 
 @app.post("/api/excel/add-missing-skus")

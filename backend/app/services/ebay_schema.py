@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 # Cache for eBay API responses
 _ebay_api_cache: Dict[str, Any] = {}
 _category_mapping_by_id_cache: Optional[Dict[str, Dict[str, Any]]] = None
+_category_mapping_mtime_cache: Optional[float] = None
 
 
 def get_ebay_token() -> str:
@@ -30,14 +31,26 @@ def get_ebay_token() -> str:
 
 
 def _load_category_mapping_by_id() -> Dict[str, Dict[str, Any]]:
-    global _category_mapping_by_id_cache
-    if _category_mapping_by_id_cache is not None:
-        return _category_mapping_by_id_cache
+    global _category_mapping_by_id_cache, _category_mapping_mtime_cache
 
     mapping_file = ebay_schema_repo.SCHEMAS_DIR / "category_mapping.json"
     if not mapping_file.exists():
         logger.warning(f"Category mapping file not found: {mapping_file}")
         _category_mapping_by_id_cache = {}
+        _category_mapping_mtime_cache = None
+        return _category_mapping_by_id_cache
+
+    try:
+        current_mtime = mapping_file.stat().st_mtime
+    except Exception:
+        current_mtime = None
+
+    if (
+        _category_mapping_by_id_cache is not None
+        and _category_mapping_mtime_cache is not None
+        and current_mtime is not None
+        and _category_mapping_mtime_cache == current_mtime
+    ):
         return _category_mapping_by_id_cache
 
     try:
@@ -50,11 +63,13 @@ def _load_category_mapping_by_id() -> Dict[str, Dict[str, Any]]:
             if cat_id:
                 lookup[cat_id] = row or {}
         _category_mapping_by_id_cache = lookup
+        _category_mapping_mtime_cache = current_mtime
         logger.info(f"Loaded {len(lookup)} category mappings from category_mapping.json")
         return _category_mapping_by_id_cache
     except Exception as e:
         logger.error(f"Failed to load category mapping: {e}")
         _category_mapping_by_id_cache = {}
+        _category_mapping_mtime_cache = None
         return _category_mapping_by_id_cache
 
 
@@ -557,6 +572,9 @@ async def get_schema_by_category_name(category_name: str) -> dict:
                    schema_cat_name.endswith(simple_category) or \
                    schema_cat_name == simple_category:
                     logger.info(f"Found existing schema file: {schema_file.name}")
+                    cat_id = str(metadata.get("category_id") or schema_data.get("categoryId") or "").strip()
+                    if cat_id:
+                        schema_data = _ensure_cached_schema_fees(cat_id, schema_data)
                     return {
                         "categoryId": metadata.get("category_id") or schema_data.get("categoryId"),
                         "categoryName": simple_category,
@@ -587,6 +605,7 @@ async def get_schema_by_category_name(category_name: str) -> dict:
             with open(existing_schema[0], 'r', encoding='utf-8') as f:
                 import json
                 schema_data = json.load(f)
+                schema_data = _ensure_cached_schema_fees(str(category_id), schema_data)
                 return {
                     "categoryId": category_id,
                     "categoryName": simple_category,

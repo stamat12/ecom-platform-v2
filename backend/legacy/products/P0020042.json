@@ -1,0 +1,189 @@
+{
+  "P0020042": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Leuchtmittel",
+      "eBay Category ID": "20706"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Amazon Basics",
+      "Color": "Gold",
+      "Size": "25W"
+    },
+    "Intern Generated Info": {
+      "More details": "Diese LED-Lampe hat eine E27-Fassung und eine Leistung von 4W, die 25W ersetzt. Sie hat ein vintage Design mit einer warmen Lichtfarbe. Ideal für dekorative Beleuchtung. Sichtbare Angaben: Farbe: Gold.",
+      "Keywords": "LED Lampe E27",
+      "Materials": "Glas, Metall"
+    },
+    "OP": {
+      "OP": "25"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020042 (1).jpg"
+        },
+        {
+          "filename": "P0020042 (2).jpg"
+        },
+        {
+          "filename": "P0020042 (3).jpg"
+        },
+        {
+          "filename": "P0020042 (4).jpg"
+        },
+        {
+          "filename": "P0020042 (5).jpg"
+        },
+        {
+          "filename": "P0020042 (6).jpg"
+        },
+        {
+          "filename": "P0020042 (7).jpg"
+        },
+        {
+          "filename": "P0020042 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020042 (8).jpg"
+        },
+        {
+          "filename": "P0020042 (1).jpg"
+        },
+        {
+          "filename": "P0020042 (6).jpg"
+        },
+        {
+          "filename": "P0020042 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020042 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mlgAAeSwAHNpspo-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uXMAAeSwF~FpsppA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QasAAeSwprxpsppC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1qQAAeSwEVVpsppF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (2).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5T0AAeSwgBlpsppI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0bUAAeSwgvFpsppL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/THoAAeSwk6BpsppO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020042 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AqkAAeSwI0FpsppT/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Beleuchtungstechnik": "LED",
+        "Glühbirnensockel": "E27",
+        "Marke": "Amazon Basics",
+        "Lichtfarbe": "Warmweiß",
+        "Glühbirnenform": "Klassisch",
+        "Leistung der Glühbirne": "4 W",
+        "Energieeffizienzklasse": "A",
+        "Farbtemperatur": "1800 K",
+        "Lichtstrom": "250 lm",
+        "Material": "Glas, Metall",
+        "Produktart": "Edison-Glühbirne",
+        "Anzahl der Glühbirnen": "6",
+        "Ursprungsland": "China",
+        "Innen-/Außenbereich": "Innenbereich",
+        "Gütesiegel & Kennzeichnungen": "CE-Kennzeichnung",
+        "Modell": "Amazon Basics E27 Vintage",
+        "Besonderheiten": "Dimmbar",
+        "Lebensdauer der Glühbirne": "15.000-19.999 h",
+        "Finish": "Transparent"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "LED-Lampe",
+      "Product Model": "E27 ST64",
+      "Keyword 1": "E27 Glühbirne",
+      "Keyword 2": "LED Birne",
+      "Keyword 3": "Energiesparlampe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "JAL00190": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Sup Pump Electric, Electric Air Pump 20PSI High Pressure 12V DC Auto-Off Intelligent Two-Stage Portable Inflator & Deflator with LCD Digital for Stand Up Paddling Board, Inflatable Boat (Blue)"
+    },
+    "Price Data": {
+      "Price Net": 5.99,
+      "Shipping Net": 1.9,
+      "Total Cost Net": 7.89
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Lubaked",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "54.0"
+    },
+    "Status": {
+      "Status": "Images"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

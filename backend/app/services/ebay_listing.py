@@ -548,8 +548,11 @@ def _normalize_country(country: str, default_country: str = "DE") -> str:
         return default_country
 
     upper = raw.upper()
+    two_letter_aliases = {
+        "UK": "GB",
+    }
     if len(upper) == 2 and upper.isalpha():
-        return upper
+        return two_letter_aliases.get(upper, upper)
 
     mapping = {
         "AUSTRIA": "AT",
@@ -561,9 +564,9 @@ def _normalize_country(country: str, default_country: str = "DE") -> str:
         "FRANCE": "FR",
         "SPAIN": "ES",
         "ITALY": "IT",
-        "UNITED KINGDOM": "UK",
-        "GREAT BRITAIN": "UK",
-        "ENGLAND": "UK",
+        "UNITED KINGDOM": "GB",
+        "GREAT BRITAIN": "GB",
+        "ENGLAND": "GB",
         "UNITED STATES": "US",
         "USA": "US",
         "NETHERLANDS": "NL",
@@ -612,7 +615,8 @@ def _normalize_country(country: str, default_country: str = "DE") -> str:
         "PHILIPPINES": "PH",
     }
 
-    return mapping.get(upper, default_country)
+    mapped = mapping.get(upper, default_country)
+    return two_letter_aliases.get(mapped, mapped)
 
 
 def _normalize_manufacturer_info(info: Dict[str, Any]) -> Dict[str, Any]:
@@ -835,7 +839,9 @@ def build_title_from_product(product_json: Dict[str, Any], sku: str) -> str:
     
     # If still too long, raise error
     if len(title) > 80:
-        raise ValueError(f"Title exceeds 80 chars for SKU {sku} even after removing Condition, Keyword 3, and Keyword 2. Current: {title} ({len(title)} chars)")
+        raise ValueError(
+            f"Title exceeds 80 chars for SKU {sku} even after removing Condition, Keyword 3, and Keyword 2. Current: {title} ({len(title)} chars)"
+        )
     
     return title
 
@@ -1243,7 +1249,7 @@ def create_listing(
     # Business policies
     payment_policy = payment_policy or PAYMENT_POLICY_NAME
     return_policy = return_policy or RETURN_POLICY_NAME
-    shipping_policy = shipping_policy or SHIPPING_POLICY_NAME
+    shipping_policy = "VERSAND_EU"
     
     # Schedule time (if schedule_days=0, upload immediately, otherwise schedule in future)
     if schedule_days == 0:

@@ -118,68 +118,6 @@
         {
           "filename": "5.png"
         }
-      ],
-      "eBay Images": [
-        {
-          "filename": "1.png",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VwIAAeSw8EtpqGy7/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "2.png",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MiUAAeSwJHppqGy9/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "3.png",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/F5cAAeSwjLdpqGy~/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "4.png",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s2sAAeSwx0VpqGzB/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "5.png",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MOYAAeSwlCRpqGzD/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9247.jpg",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/mHEAAeSwcrlpqGzI/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9248.jpg",
-          "order": 7,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/s74AAeSwx0VpqGzM/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9249.jpg",
-          "order": 8,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vu0AAeSwnahpqGzQ/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9246.jpg",
-          "order": 9,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Hi0AAeSwbiZpqGzV/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9245.jpg",
-          "order": 10,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/M28AAeSwpZxpqGzY/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9244.jpg",
-          "order": 11,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/2sMAAeSw6YBpqGzd/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "IMG_9243.jpg",
-          "order": 12,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/waAAAeSw779pqGzh/$_1.JPG?set_id=8800005007"
-        }
       ]
     },
     "eBay Fields": {

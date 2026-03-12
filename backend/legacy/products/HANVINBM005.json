@@ -47,6 +47,20 @@
       "Lager": "MyPlace Lager Margareten"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "HANVINBM005 (8).jpg"
@@ -59,48 +73,6 @@
         },
         {
           "filename": "HANVINBM005 (3).jpg"
-        }
-      ],
-      "eBay Images": [
-        {
-          "filename": "HANVINBM005 (3).jpg",
-          "order": 1,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oB4AAeSwAIZpkkhL/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (2).jpg",
-          "order": 2,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ztEAAeSwyBdpkkhO/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (1).jpg",
-          "order": 3,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mh0AAeSwbkBpkkhS/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (5).jpg",
-          "order": 4,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~9oAAeSw-pZpkkhW/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (6).jpg",
-          "order": 5,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4uMAAeSwXLtpkkha/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (7).jpg",
-          "order": 6,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xrsAAeSwi5dpkkhg/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (8).jpg",
-          "order": 7,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mm8AAeSwbkBpkkhl/$_1.JPG?set_id=8800005007"
-        },
-        {
-          "filename": "HANVINBM005 (9).jpg",
-          "order": 8,
-          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/naAAAeSwOe5pkkhr/$_1.JPG?set_id=8800005007"
         }
       ]
     },

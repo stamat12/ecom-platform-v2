@@ -97,6 +97,7 @@ export default function SkuBatchPage() {
   const [bulkEbayListingOpen, setBulkEbayListingOpen] = useState(false);
   const [bulkEbayListingSaving, setBulkEbayListingSaving] = useState(false);
   const [bulkEbayListingCreating, setBulkEbayListingCreating] = useState(false);
+  const [bulkScheduleDate, setBulkScheduleDate] = useState("");
 
   // eBay state
   const [ebayExpanded, setEbayExpanded] = useState({}); // { sku: boolean }
@@ -124,6 +125,7 @@ export default function SkuBatchPage() {
   const [ebaySeoFields, setEbaySeoFields] = useState({}); // { sku: { product_type, product_model, keyword_1, keyword_2, keyword_3 } }
   const [ebayEditingSeo, setEbayEditingSeo] = useState({}); // { sku: boolean }
   const [ebaySavingSeo, setEbaySavingSeo] = useState({}); // { sku: boolean }
+  const SHIPPING_LISTING_FIXED = 4.99;
 
   // Filter state
   const [showFilters, setShowFilters] = useState(false);
@@ -1309,8 +1311,9 @@ export default function SkuBatchPage() {
         const data = await res.json();
         if (data?.data) {
           const merged = {
-            ...(ebayListingData[sku] || { price: "", quantity: "1", condition_id: "1000" }),
+            ...(ebayListingData[sku] || { price: "", shipping_listing: "4.99", quantity: "1", condition_id: "1000" }),
             ...data.data,
+            shipping_listing: data.data?.shipping_listing ?? "4.99",
           };
           setEbayListingData((prev) => ({
             ...prev,
@@ -1338,6 +1341,7 @@ export default function SkuBatchPage() {
       const listingData = ebayListingData[sku] || {};
       listings[sku] = {
         price: listingData.price ?? "",
+        shipping_listing: listingData.shipping_listing ?? "4.99",
         shipping_costs_net: listingData.shipping_costs_net ?? "",
         quantity: listingData.quantity ?? "",
         condition_id: listingData.condition_id ?? "",
@@ -1481,6 +1485,22 @@ export default function SkuBatchPage() {
     setTimeout(() => handleBulkEbayCreateListings(), 500);
   };
 
+  const applyBulkScheduleDate = (scheduleDate) => {
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    if (skus.length === 0) return;
+
+    setEbayListingData((prev) => {
+      const next = { ...prev };
+      skus.forEach((sku) => {
+        next[sku] = {
+          ...(next[sku] || {}),
+          schedule_date: scheduleDate,
+        };
+      });
+      return next;
+    });
+  };
+
   const handleBulkProductDetailsSave = async () => {
     const skus = Array.from(selectedSkusForProductDetailsEdit);
     if (skus.length === 0) {
@@ -1558,6 +1578,7 @@ export default function SkuBatchPage() {
 
   useEffect(() => {
     if (!bulkEbayListingOpen) return;
+    setBulkScheduleDate("");
     const skus = Array.from(selectedSkusForEbayListingEdit);
     skus.forEach((sku) => {
       // Load listing data
@@ -2178,6 +2199,32 @@ export default function SkuBatchPage() {
             Edit prices, shipping, quantities, conditions, and other fields for {selectedSkusForEbayListingEdit.size} selected SKU(s)
           </div>
 
+          <div style={{ marginBottom: 12, display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", padding: 8, background: "#f8fbff", border: "1px solid #dbe7ff", borderRadius: 6 }}>
+            <span style={{ fontSize: 12, fontWeight: "bold", color: "#1565c0" }}>Schedule for all selected:</span>
+            <input
+              type="datetime-local"
+              value={bulkScheduleDate}
+              onChange={(e) => setBulkScheduleDate(e.target.value)}
+              style={{ padding: "6px 8px", border: "1px solid #90caf9", borderRadius: 4, fontSize: 12 }}
+            />
+            <button
+              onClick={() => applyBulkScheduleDate(bulkScheduleDate)}
+              disabled={!bulkScheduleDate}
+              style={{ padding: "6px 10px", background: !bulkScheduleDate ? "#ccc" : "#1565c0", color: "white", border: "none", borderRadius: 4, cursor: !bulkScheduleDate ? "not-allowed" : "pointer", fontSize: 12, fontWeight: "bold" }}
+            >
+              Apply To All
+            </button>
+            <button
+              onClick={() => {
+                setBulkScheduleDate("");
+                applyBulkScheduleDate("");
+              }}
+              style={{ padding: "6px 10px", background: "#78909c", color: "white", border: "none", borderRadius: 4, cursor: "pointer", fontSize: 12, fontWeight: "bold" }}
+            >
+              Clear All Schedules
+            </button>
+          </div>
+
           {/* Warning for SKUs without eBay image orders */}
           {(() => {
             const skusWithoutImages = Array.from(selectedSkusForEbayListingEdit).filter(sku => {
@@ -2202,6 +2249,7 @@ export default function SkuBatchPage() {
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>Fee</th>
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", background: "#f0f8ff" }}>Comm%</th>
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#1976d2" }}>Price</th>
+                  <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#1976d2" }}>Shipping Listing</th>
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#1976d2" }}>Shipping</th>
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#2e7d32" }}>Net Profit</th>
                   <th style={{ padding: 6, textAlign: "center", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", color: "#2e7d32" }}>Margin%</th>
@@ -2222,8 +2270,10 @@ export default function SkuBatchPage() {
                   const paymentFee = toNumber(fees.payment_fee);
                   const salesCommission = toNumber(fees.sales_commission_percentage);
                   const sellingPrice = toNumber(listingData.price || 0);
+                  const shippingListing = toNumber(listingData.shipping_listing || SHIPPING_LISTING_FIXED);
+                  const customerPayment = sellingPrice + shippingListing;
                   const shippingCosts = toNumber(listingData.shipping_costs_net || 0);
-                  const netProfit = (sellingPrice / 1.19) - (sellingPrice * salesCommission) - paymentFee - shippingCosts - totalCostNet;
+                  const netProfit = (customerPayment / 1.19) - (customerPayment * salesCommission) - paymentFee - shippingCosts - totalCostNet;
                   const netProfitMargin = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : 0;
                   
                   // Check if SKU has images with eBay order numbers
@@ -2285,6 +2335,15 @@ export default function SkuBatchPage() {
                             [sku]: { ...(prev[sku] || {}), price: e.target.value }
                           }))}
                           style={{ width: "100%", padding: 3, border: "1px solid #1976d2", borderRadius: 2, boxSizing: "border-box", fontSize: 10 }}
+                        />
+                      </td>
+                      <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 70 }}>
+                        <input
+                          type="number"
+                          step="0.01"
+                          readOnly
+                          value={listingData.shipping_listing ?? SHIPPING_LISTING_FIXED}
+                          style={{ width: "100%", padding: 3, border: "1px solid #1976d2", borderRadius: 2, boxSizing: "border-box", fontSize: 10, background: "#f5f5f5" }}
                         />
                       </td>
                       <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", minWidth: 70 }}>
@@ -3687,8 +3746,10 @@ export default function SkuBatchPage() {
         const paymentFee = toNumber(fees.payment_fee);
         const salesCommission = toNumber(fees.sales_commission_percentage);
         const sellingPriceTotal = toNumber(ebayListingData[sku]?.price || 0);
+        const shippingListing = toNumber(ebayListingData[sku]?.shipping_listing || SHIPPING_LISTING_FIXED);
+        const customerPaymentTotal = sellingPriceTotal + shippingListing;
         const shippingCostsNet = toNumber(ebayListingData[sku]?.shipping_costs_net || 0);
-        const netProfit = (sellingPriceTotal / 1.19) - (sellingPriceTotal * salesCommission) - paymentFee - shippingCostsNet - totalCostNet;
+        const netProfit = (customerPaymentTotal / 1.19) - (customerPaymentTotal * salesCommission) - paymentFee - shippingCostsNet - totalCostNet;
         const netProfitMargin = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : 0;
         return (
           <div key={sku} style={{ marginBottom: 24, border: "1px solid #e0e0e0", borderRadius: 10, padding: 16 }}>
@@ -4858,7 +4919,14 @@ export default function SkuBatchPage() {
                               placeholder="29.99"
                             />
                           </div>
-                          <div />
+                          <div>
+                            <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#1976d2" }}>Shipping Listing</label>
+                            <input
+                              readOnly
+                              value={(ebayListingData[sku]?.shipping_listing ?? SHIPPING_LISTING_FIXED)}
+                              style={{ width: "100%", padding: "6px", fontSize: 10, border: "1px solid #1976d2", borderRadius: 3, background: "#f5f5f5" }}
+                            />
+                          </div>
 
                           <div>
                             <label style={{ fontSize: 9, fontWeight: "600", display: "block", marginBottom: 4, color: "#2e7d32" }}>Net Profit</label>

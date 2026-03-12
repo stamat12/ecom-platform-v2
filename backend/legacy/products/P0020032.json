@@ -1,0 +1,188 @@
+{
+  "P0020032": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/Zubehör/Controller",
+      "eBay Category ID": "117042"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "STARTRC",
+      "Color": "Weiß",
+      "Size": "162*120*66mm"
+    },
+    "Intern Generated Info": {
+      "More details": "Der STARTRC S8 FPV Remote Controller ist für Flug-Simulatoren konzipiert. Er bietet eine benutzerfreundliche Steuerung mit 8 Kanälen. Das Gerät ist leicht und kompakt, ideal für den Einsatz bei verschiedenen RC-Flugspielen. Sichtbare Angaben: Farbe: Weiß; Größe: 162*120*66mm.",
+      "Keywords": "S8 FPV Remote Controller Flug-Simulator",
+      "Materials": "PC ABS"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020032 (1).jpg"
+        },
+        {
+          "filename": "P0020032 (2).jpg"
+        },
+        {
+          "filename": "P0020032 (3).jpg"
+        },
+        {
+          "filename": "P0020032 (4).jpg"
+        },
+        {
+          "filename": "P0020032 (5).jpg"
+        },
+        {
+          "filename": "P0020032 (6).jpg"
+        },
+        {
+          "filename": "P0020032 (7).jpg"
+        },
+        {
+          "filename": "P0020032 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020032 (2).jpg"
+        },
+        {
+          "filename": "P0020032 (8).jpg"
+        },
+        {
+          "filename": "P0020032 (7).jpg"
+        },
+        {
+          "filename": "P0020032 (4).jpg"
+        },
+        {
+          "filename": "P0020032 (3).jpg"
+        },
+        {
+          "filename": "P0020032 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020032 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2zAAAeSwxbxpsplu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-jwAAeSwzORpsplx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/n0wAAeSwNctpspl0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cZEAAeSwZyJpspl3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8o0AAeSwWK1pspl6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9qUAAeSwMHlpspl9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dNIAAeSwlJNpspmA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020032 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PpsAAeSwwXdpspmD/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "STARTRC",
+        "Produktart": "Controller"
+      },
+      "optional": {
+        "Kompatibles Produkt": "Controller",
+        "Plattform": "PC",
+        "Modell": "S8",
+        "Farbe": "Weiß",
+        "Material": "PC ABS",
+        "Maximale Anzahl von Spielern": "1",
+        "Ursprungsland": "China",
+        "Gewicht": "140g",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Fernsteuerung",
+      "Product Model": "S8",
+      "Keyword 1": "FPV Controller",
+      "Keyword 2": "RC Flug Simulator",
+      "Keyword 3": "8 Kanäle"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

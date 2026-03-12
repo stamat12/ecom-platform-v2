@@ -1,0 +1,198 @@
+{
+  "P0020040": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Autoteile & Zubehör/Fahrerassistenzsysteme/Einparkhilfen/Parksensoren",
+      "eBay Category ID": "61523"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Beeper",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Parkassistenzsystem, das sowohl für die Vorder- als auch für die Rückseite eines Fahrzeugs verwendet werden kann. Es enthält Sensoren, die beim Einparken helfen. Die Verpackung zeigt ein Bild eines Autos, das mit dem System ausgestattet ist.",
+      "Keywords": "Parkassistenzsystem",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "75"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020040 (1).jpg"
+        },
+        {
+          "filename": "P0020040 (10).jpg"
+        },
+        {
+          "filename": "P0020040 (11).jpg"
+        },
+        {
+          "filename": "P0020040 (2).jpg"
+        },
+        {
+          "filename": "P0020040 (3).jpg"
+        },
+        {
+          "filename": "P0020040 (4).jpg"
+        },
+        {
+          "filename": "P0020040 (5).jpg"
+        },
+        {
+          "filename": "P0020040 (6).jpg"
+        },
+        {
+          "filename": "P0020040 (7).jpg"
+        },
+        {
+          "filename": "P0020040 (8).jpg"
+        },
+        {
+          "filename": "P0020040 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020040 (7).jpg"
+        },
+        {
+          "filename": "P0020040 (2).jpg"
+        },
+        {
+          "filename": "P0020040 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020040 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CZ0AAeSwkONpspog/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0rkAAeSwlYJpspok/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tWUAAeSwr-tpspon/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (2).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zN8AAeSw~Wxpspoq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~cQAAeSwMHlpspos/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/lhgAAeSw3RNpspov/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ik8AAeSwJllpspox/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~ggAAeSwVRppspo0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020040 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iRIAAeSwWhdpspo2/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Hersteller": "Beeper"
+      },
+      "optional": {
+        "Einbauposition": "Vorne",
+        "Produktart": "Sensor",
+        "Anzahl der Sensoren": "4",
+        "Besonderheiten": "Einfache Installation",
+        "Steckerfarbe": "Schwarz",
+        "Material": "Kunststoff",
+        "Ursprungsland": "Belgien",
+        "Anzahl der Kabel": "5",
+        "Im Lieferumfang enthalten": "Montagezubehör",
+        "Steckertyp": "Stecker",
+        "Oberflächenbeschaffenheit": "Glanz",
+        "Oldtimer-Teil": "Nein",
+        "Tuning- & Styling-Teil": "Nein",
+        "Universelle Kompatibilität": "Ja",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Parkassistent",
+      "Product Model": "Radar System",
+      "Keyword 1": "Einparkhilfe",
+      "Keyword 2": "Rückfahrwarner",
+      "Keyword 3": "Parksensoren"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "58",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

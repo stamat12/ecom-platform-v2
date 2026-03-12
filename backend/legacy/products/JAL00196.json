@@ -1,0 +1,99 @@
+{
+  "JAL00196": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU341709-47-53-111125020406",
+      "Invoice Date": "11.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Excel Mouse Pad German, Mouse Pad Large 80x30cm Gaming Mouse Pad XL Desk Pad Large Mouse Pad Office Accessories Desk Pad (German)"
+    },
+    "Price Data": {
+      "Price Net": 1.0,
+      "Shipping Net": 1.76,
+      "Total Cost Net": 2.76
+    },
+    "Ebay Category": {
+      "Category": "/Büro & Schreibwaren/Büromöbel/Kleinmöbel & Accessoires/Bodenschutzmatten",
+      "eBay Category ID": "62466"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Ridilozey",
+      "Color": "Schwarz",
+      "Size": "80x30x0.3 cm"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Gaming-Mauspad bietet eine super glatte Oberfläche, die für schnelle Bewegungen optimiert ist. Es ist fleckenbeständig und waschbar, was eine einfache Reinigung ermöglicht. Die rutschfeste Gummibasis sorgt für Stabilität während des Gebrauchs. Sichtbare Angaben: Farbe: Schwarz; Größe: 80x30x0.3 cm.",
+      "Keywords": "Gaming Mauspad",
+      "Materials": "Gummi, Stoff"
+    },
+    "OP": {
+      "OP": "26.0"
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 004"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ]
+    }
+  }
+}

@@ -4,7 +4,8 @@
     "category_id": "259301",
     "marketplace": "EBAY_DE",
     "fees": {
-      "payment_fee": 0.35
+      "payment_fee": 0.35,
+      "sales_commission_percentage": 0.12
     }
   },
   "schema": {

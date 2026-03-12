@@ -1,0 +1,181 @@
+{
+  "P0020037": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Notebook- & Desktop-Zubehör/Notebook-Dockingstationen",
+      "eBay Category ID": "3709"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Dell",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Dies ist eine Dockingstation von Dell, Modell WD19S. Sie ist schwarz und enthält verschiedene Anschlüsse für Peripheriegeräte. Die Dockingstation wird mit einem Netzteil geliefert und ist für Laptops geeignet.",
+      "Keywords": "Dell WD19S Dockingstation",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "275"
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020037 (1).jpg"
+        },
+        {
+          "filename": "P0020037 (2).jpg"
+        },
+        {
+          "filename": "P0020037 (3).jpg"
+        },
+        {
+          "filename": "P0020037 (4).jpg"
+        },
+        {
+          "filename": "P0020037 (5).jpg"
+        },
+        {
+          "filename": "P0020037 (6).jpg"
+        },
+        {
+          "filename": "P0020037 (7).jpg"
+        },
+        {
+          "filename": "P0020037 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020037 (1).jpg"
+        },
+        {
+          "filename": "P0020037 (2).jpg"
+        },
+        {
+          "filename": "P0020037 (3).jpg"
+        },
+        {
+          "filename": "P0020037 (6).jpg"
+        },
+        {
+          "filename": "P0020037 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020037 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6-sAAeSwO61pspoF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tRcAAeSwtj1pspoI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2LUAAeSw9KNpspoL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/c7MAAeSwnCdpspoO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (2).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7FAAAeSwO61pspoR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3PYAAeSwwYxpspoU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jRsAAeSwcKNpspoW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020037 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ucwAAeSw59dpspoZ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Dell",
+        "Produktart": "Dockingstation"
+      },
+      "optional": {
+        "Modell": "WD19S",
+        "Farbe": "Schwarz",
+        "Material": "Kunststoff",
+        "Herstellernummer": "1SXZR64",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Dockingstation",
+      "Product Model": "WD19S",
+      "Keyword 1": "Laptop Dock",
+      "Keyword 2": "USB-C Dock",
+      "Keyword 3": "Erweiterungsdock"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "195",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-19T11:44"
+    }
+  }
+}

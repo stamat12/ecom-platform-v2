@@ -54,7 +54,9 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 78,
-        "count_enhanced": 1
+        "count_enhanced": 1,
+        "has_main_images": true,
+        "count_main_images": 4
       },
       "stock": [],
       "phone": [
@@ -295,11 +297,7 @@
       ],
       "enhanced": [
         {
-          "filename": "prompt 1_real_HAN000354 (2)_wb_1_upscaled_4x.jpg",
-          "source": "HAN000354 (2)_wb.jpg",
-          "prompt": "prompt 1",
-          "generated": true,
-          "upscaled": true
+          "filename": "prompt 1_real_HAN000354 (2)_wb_1_upscaled_4x.jpg"
         }
       ],
       "main_images": [

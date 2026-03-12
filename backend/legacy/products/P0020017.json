@@ -7,45 +7,85 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Möbel & Wohnen/Beleuchtung/Lampen",
+      "eBay Category ID": "112581"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
       "Brand": "V-TAC",
       "Color": "Warm White",
-      "Size": "45x80mm"
+      "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Die LED-Lampe hat eine Leistung von 3,7 Watt und erzeugt 320 Lumen. Sie hat einen E14-Sockel und eine Lebensdauer von bis zu 20.000 Stunden. Der Abstrahlwinkel beträgt 180 Grad und die Farbtemperatur liegt bei 3000K.",
-      "Keywords": "LED P45 BULB Lampe",
-      "Materials": "Kunststoff, Metall"
+      "Keywords": "LED P45 BULB Lampe 10 Stk.",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "35"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020017 (1).jpg"
+        },
+        {
+          "filename": "P0020017 (2).jpg"
+        },
+        {
+          "filename": "P0020017 (3).jpg"
+        },
+        {
+          "filename": "P0020017 (4).jpg"
+        },
+        {
+          "filename": "P0020017 (5).jpg"
+        },
+        {
+          "filename": "P0020017 (6).jpg"
+        },
+        {
+          "filename": "P0020017 (7).jpg"
+        },
+        {
+          "filename": "P0020017 (8).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020017 (2).jpg"
@@ -63,6 +103,53 @@
           "filename": "P0020017 (1).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Akzentlampe"
+      },
+      "optional": {
+        "Marke": "V-TAC",
+        "Beleuchtungstechnik": "LED",
+        "Farbe": "Weiß",
+        "Lichtfarbe": "Warmweiß",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Glühbirnensockel": "E14",
+        "Energieeffizienzklasse": "F",
+        "Spannung": "220 V",
+        "Lebensdauer der Glühbirne": "20.000-24.999 Stunden",
+        "Farbtemperatur": "3000 K",
+        "Lichtstrom": "320 lm",
+        "Durchmesser": "4,5 cm",
+        "Höhe": "8 cm",
+        "Anzahl der Einheiten": "10",
+        "Material": "Kunststoff",
+        "Stromquelle": "Netzstrom",
+        "Besonderheiten": "Energieeffizient",
+        "Hersteller": "V-TAC EUROPE LTD",
+        "Muster": "Einfarbig",
+        "Ursprungsland": "Bulgarien",
+        "Produktlinie": "LED P45 BULB",
+        "Gütesiegel & Kennzeichnungen": "Energieeffizient"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "LED-Lampe",
+      "Product Model": "P45",
+      "Keyword 1": "E14",
+      "Keyword 2": "Energiesparlampe",
+      "Keyword 3": "Lampen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

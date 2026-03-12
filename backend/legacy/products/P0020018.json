@@ -7,23 +7,24 @@
       "Invoice Date": "2026-02-19T00:00:00"
     },
     "Supplier Data": {
-      "Supplier Number": null,
-      "ISIN": null,
-      "Supplier Title": null
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
     },
     "Price Data": {
-      "Price Net": 8.0,
-      "Shipping Net": 0.0,
-      "Total Cost Net": 8.0
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Heimwerker/Elektromaterial/Steckdosen, Schalter & Zubehör/Steckdosen & Buchsen",
+      "eBay Category ID": "259280"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": null
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -32,20 +33,47 @@
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Die Abbildung zeigt zwei weiße Steckdosenleisten, die in einer Kartonverpackung liegen. Sie sind in Folie verpackt und haben mehrere Steckdosen. Die Leisten sind für den Einsatz in Haushalten oder Büros geeignet.",
-      "Keywords": "Steckdosenleiste",
-      "Materials": "Kunststoff"
+      "More details": "Die Steckdosenadapter sind in einem Karton verpackt und bestehen aus Kunststoff. Jeder Adapter hat drei Steckdosen und ist für den Innenbereich geeignet. Sie sind neu und unbenutzt, in Folie verpackt. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "2 Stk. 3 Fach Steckdosenadapter",
+      "Materials": ""
     },
     "OP": {
-      "OP": null
+      "OP": "27"
     },
     "Status": {
-      "Status": null
+      "Status": "OK"
     },
     "Warehouse": {
-      "Lager": null
+      "Lager": "LAGER2_NEW BOX 21"
     },
     "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 4,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020018 (1).jpg"
+        },
+        {
+          "filename": "P0020018 (2).jpg"
+        },
+        {
+          "filename": "P0020018 (3).jpg"
+        },
+        {
+          "filename": "P0020018 (4).jpg"
+        }
+      ],
+      "enhanced": [],
       "main_images": [
         {
           "filename": "P0020018 (3).jpg"
@@ -54,6 +82,40 @@
           "filename": "P0020018 (4).jpg"
         }
       ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Unbekannt"
+      },
+      "optional": {
+        "Farbe": "Weiß",
+        "Steckdosen-Typ": "3-fach",
+        "Anzahl der Steckdosen": "2",
+        "Anwendung": "Haus/Garten",
+        "Material": "Kunststoff",
+        "Geeignet für": "Innenraum",
+        "Produktart": "Steckdosenadapter",
+        "Anzahl der Anschlüsse": "6",
+        "Montageart": "Arbeitsfläche"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Steckdose",
+      "Product Model": "",
+      "Keyword 1": "Mehrfachsteckdose",
+      "Keyword 2": "Steckdosenleiste",
+      "Keyword 3": "Verteilersteckdose"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.20",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-18T02:03"
     }
   }
 }

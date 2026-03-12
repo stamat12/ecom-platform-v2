@@ -1,0 +1,82 @@
+{
+  "JAL00192": {
+    "Invoice Data": {
+      "Buying Entity": null,
+      "Supplier": "JLI Trading Limited",
+      "Invoice": "JEU338379-47-53-081125020412",
+      "Invoice Date": "08.11.2025"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": "Hobrounn Maternity One Piece Swimsuit U Neck, Bathing Suit Maternity Swimsuit Maternity Swimwear Bikini"
+    },
+    "Price Data": {
+      "Price Net": 0.4,
+      "Shipping Net": 0.26,
+      "Total Cost Net": 0.66
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Kundenretour"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Hobrounn",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "",
+      "Keywords": "",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "36.0"
+    },
+    "Status": {
+      "Status": "Images"
+    },
+    "Warehouse": {
+      "Lager": "NEW BOX 015"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 5,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [
+        {
+          "filename": "1.png"
+        },
+        {
+          "filename": "2.png"
+        },
+        {
+          "filename": "3.png"
+        },
+        {
+          "filename": "4.png"
+        },
+        {
+          "filename": "5.png"
+        }
+      ],
+      "phone": [],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

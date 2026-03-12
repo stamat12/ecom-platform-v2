@@ -1,6 +1,7 @@
 """Service to selectively sync columns from Excel to SQLite database."""
 from __future__ import annotations
 
+import json
 import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -34,6 +35,144 @@ def get_excel_columns(sheet_name: str) -> List[str]:
     except Exception as e:
         print(f"Error reading columns from sheet {sheet_name}: {e}")
         return []
+
+
+def _find_column(columns: List[str], aliases: List[str]) -> Optional[str]:
+    alias_set = {a.strip().lower() for a in aliases}
+    for col in columns:
+        if str(col).strip().lower() in alias_set:
+            return col
+    return None
+
+
+def _to_text_id(value: Any) -> str:
+    if value is None or pd.isna(value):
+        return ""
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value).strip()
+
+
+def _to_optional_float(value: Any) -> Optional[float]:
+    if value is None or pd.isna(value):
+        return None
+    try:
+        return float(value)
+    except Exception:
+        return None
+
+
+def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> Dict[str, Any]:
+    """Update backend/schemas/category_mapping.json from Excel category sheet.
+
+    Existing entries are updated by categoryId (preferred) or fullPath, and missing
+    entries are appended. This keeps existing mappings while refreshing fee data.
+    """
+    try:
+        df = pd.read_excel(config.INVENTORY_FILE_PATH, sheet_name=sheet_name)
+        if df.empty:
+            return {"success": False, "message": f"Sheet '{sheet_name}' is empty"}
+
+        columns = list(df.columns)
+        category_col = _find_column(columns, ["Category", "Category Path", "fullPath"])
+        id_col = _find_column(columns, ["ID", "Category ID", "CategoryId"])
+        payment_fee_col = _find_column(columns, ["Payment Fee", "Payment Fee EUR", "Payment Fee €", "payment_fee"])
+        up_to_amount_col = _find_column(columns, ["Up To", "Final Amount Up To", "final_amount_up_to"])
+        commission_up_to_col = _find_column(columns, ["Sales commission per item Up To", "Sales Commission Up To", "sales_commission_up_to"])
+        from_amount_col = _find_column(columns, ["From", "Final Amount From", "final_amount_from"])
+        commission_from_col = _find_column(columns, ["Sales commission per item From", "Sales Commission From", "sales_commission_from"])
+
+        if not category_col or not id_col:
+            return {
+                "success": False,
+                "message": "Required columns not found in Excel sheet. Need at least 'Category' and 'ID'.",
+            }
+
+        mapping_path = Path(__file__).resolve().parents[2] / "schemas" / "category_mapping.json"
+        existing_payload: Dict[str, Any] = {"categoryMappings": []}
+        if mapping_path.exists():
+            with open(mapping_path, "r", encoding="utf-8") as f:
+                existing_payload = json.load(f) or {"categoryMappings": []}
+
+        existing_mappings = existing_payload.get("categoryMappings") or []
+        if not isinstance(existing_mappings, list):
+            existing_mappings = []
+
+        by_id: Dict[str, Dict[str, Any]] = {}
+        by_path: Dict[str, Dict[str, Any]] = {}
+        for entry in existing_mappings:
+            if not isinstance(entry, dict):
+                continue
+            entry_id = _to_text_id(entry.get("categoryId"))
+            entry_path = str(entry.get("fullPath") or "").strip().lower()
+            if entry_id:
+                by_id[entry_id] = entry
+            if entry_path:
+                by_path[entry_path] = entry
+
+        rows_processed = 0
+        rows_skipped = 0
+        rows_updated = 0
+        rows_added = 0
+
+        for _, row in df.iterrows():
+            category_path = str(row.get(category_col) or "").strip()
+            category_id = _to_text_id(row.get(id_col))
+            if not category_path or not category_id:
+                rows_skipped += 1
+                continue
+
+            rows_processed += 1
+            category_name = category_path.split("/")[-1].strip() if "/" in category_path else category_path
+            fees = {
+                "payment_fee": _to_optional_float(row.get(payment_fee_col)) if payment_fee_col else None,
+                "final_amount_up_to": _to_optional_float(row.get(up_to_amount_col)) if up_to_amount_col else None,
+                "sales_commission_up_to": _to_optional_float(row.get(commission_up_to_col)) if commission_up_to_col else None,
+                "final_amount_from": _to_optional_float(row.get(from_amount_col)) if from_amount_col else None,
+                "sales_commission_from": _to_optional_float(row.get(commission_from_col)) if commission_from_col else None,
+            }
+
+            target = by_id.get(category_id) or by_path.get(category_path.lower())
+            if target is not None:
+                target["categoryId"] = category_id
+                target["fullPath"] = category_path
+                target["categoryName"] = category_name
+                target["market"] = target.get("market") or "EBAY_DE"
+                target["fees"] = fees
+                rows_updated += 1
+            else:
+                new_entry = {
+                    "categoryName": category_name,
+                    "categoryId": category_id,
+                    "fullPath": category_path,
+                    "market": "EBAY_DE",
+                    "fees": fees,
+                }
+                existing_mappings.append(new_entry)
+                by_id[category_id] = new_entry
+                by_path[category_path.lower()] = new_entry
+                rows_added += 1
+
+        mapping_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(mapping_path, "w", encoding="utf-8") as f:
+            json.dump({"categoryMappings": existing_mappings}, f, ensure_ascii=False, indent=2)
+
+        return {
+            "success": True,
+            "message": "category_mapping.json refreshed from Excel",
+            "sheet": sheet_name,
+            "rows_processed": rows_processed,
+            "rows_skipped": rows_skipped,
+            "rows_updated": rows_updated,
+            "rows_added": rows_added,
+            "total_mappings": len(existing_mappings),
+            "file": str(mapping_path),
+        }
+    except Exception as e:
+        print(f"[CATEGORY MAPPING] Failed to refresh from Excel: {e}")
+        import traceback
+        traceback.print_exc()
+        return {"success": False, "message": f"Error: {str(e)}"}
 
 
 def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
