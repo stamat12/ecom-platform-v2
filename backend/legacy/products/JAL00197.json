@@ -21,7 +21,7 @@
       "eBay Category ID": "175725"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu"
@@ -93,7 +93,68 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NmAAAeSwDAJpsxpv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cCIAAeSw0fFpsxpw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9IAAAeSwJ21psxpy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kUYAAeSwcQFpsxp0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VwAAAeSw4c1psxp1/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T20:54"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Patikil",
+        "Produktart": "Fenstersensor"
+      },
+      "optional": {
+        "Anzahl der Einheiten": "10",
+        "Einsatzbereich": "Nur für Innenräume",
+        "Farbe": "Schwarz",
+        "Stromquelle": "Verdrahtet",
+        "Maßeinheit": "Einheit",
+        "Besonderheiten": "Bewegung/PIR aktiviert",
+        "Überwachungstechnologie": "Analog",
+        "Im Lieferumfang enthalten": "Fenstersensor"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Türkontakt",
+      "Product Model": "",
+      "Keyword 1": "Magnetkontakt",
+      "Keyword 2": "Türsensor",
+      "Keyword 3": "Fenstersensor"
     }
   }
 }

@@ -12,6 +12,8 @@ export default function SkuListPage() {
   const [folderImagesComputing, setFolderImagesComputing] = useState(false);
   const [folderImagesStatus, setFolderImagesStatus] = useState({});
   const [folderImagesProgress, setFolderImagesProgress] = useState({ current: 0, total: 0 });
+  const [jsonColumnComputing, setJsonColumnComputing] = useState(false);
+  const [jsonColumnStatus, setJsonColumnStatus] = useState({});
   const [ebayListingsComputing, setEbayListingsComputing] = useState(false);
   const [ebayListingsStatus, setEbayListingsStatus] = useState({});
   const [ebayListingsProgress, setEbayListingsProgress] = useState({ current: 0, total: 0 });
@@ -27,18 +29,22 @@ export default function SkuListPage() {
   const hasRestoredState = useRef(false);
   const latestRequestIdRef = useRef(0);
   const syncModalAutoOpenedRef = useRef(false);
+  const [reloadTick, setReloadTick] = useState(0);
 
   // Column and filter state
   const [allColumns, setAllColumns] = useState([]);
   const [defaultColumns, setDefaultColumns] = useState([]);
   const [selectedColumns, setSelectedColumns] = useState([]);
+  const [filterOnlyColumns, setFilterOnlyColumns] = useState([]);
+  const [sortBy, setSortBy] = useState("SKU (Old)");
+  const [sortDir, setSortDir] = useState("asc");
   const [columnFilters, setColumnFilters] = useState({}); // { columnName: filterValue or typed object }
   const [filterMode, setFilterMode] = useState({}); // { columnName: 'include' | 'exclude' }
   const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
   const [filterLoading, setFilterLoading] = useState(true);
   const [columnMeta, setColumnMeta] = useState({}); // { columnName: { type, operators, enum_values } }
   const [distinctValues, setDistinctValues] = useState({}); // { columnName: [values] }
-  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size", "Lager", "Vinted", "Willhaben", "Status"]; // multi-select typeahead
+  const multiSelectStringCols = ["Brand", "Color", "Category", "Condition", "Size", "Lager", "Sold", "Vinted", "Willhaben", "Status"]; // multi-select typeahead
   const [chipInputs, setChipInputs] = useState({}); // temp text inputs per column
   const [suggestions, setSuggestions] = useState({}); // { columnName: [values] }
   const [openSuggest, setOpenSuggest] = useState({}); // { columnName: boolean }
@@ -46,7 +52,7 @@ export default function SkuListPage() {
   const [columnWidths, setColumnWidths] = useState({}); // { columnName: px }
   const [resizing, setResizing] = useState(null); // { col, startX, startWidth }
   const profileId = "default"; // could be derived from user context later
-  const lagerColumns = ["Lager", "Lage"];
+  const checkboxFilterColumns = ["Lager", "Lage", "Sold"];
 
   // Load available columns, column meta, and persisted filters on mount
   useEffect(() => {
@@ -105,6 +111,9 @@ export default function SkuListPage() {
           const localPageSize = localState?.pageSize || null;
           const localColumnWidths = localState?.columnWidths || null;
           const localEmptyFilters = localState?.emptyFilters || null;
+          const localFilterOnlyColumns = (localState?.filterOnlyColumns || []).filter((c) => (colData.columns || []).includes(c));
+          const localSortBy = localState?.sortBy || null;
+          const localSortDir = localState?.sortDir || null;
           
           // Use restored state if available, otherwise use persisted filters or server filters
           if (restoredState) {
@@ -121,6 +130,9 @@ export default function SkuListPage() {
             setColumnWidths(restoredState.columnWidths || filtData.column_widths || {});
             setEmptyFilters(restoredState.emptyFilters || localEmptyFilters || {});
             setSelectedSkus(restoredState.selectedSkus || []);
+            setFilterOnlyColumns((restoredState.filterOnlyColumns || localFilterOnlyColumns || []).filter((c) => (colData.columns || []).includes(c)));
+            setSortBy(restoredState.sortBy || localSortBy || "SKU (Old)");
+            setSortDir(restoredState.sortDir || localSortDir || "asc");
             setPage(restoredState.page || 1);
           } else {
             const cols = localSelected.length ? localSelected : (validSelected.length ? validSelected : (colData.default_columns || []));
@@ -130,6 +142,9 @@ export default function SkuListPage() {
             setPageSize(localPageSize || Number(filtData.page_size || 50));
             setColumnWidths(localColumnWidths || filtData.column_widths || {});
             setEmptyFilters(localEmptyFilters || {});
+            setFilterOnlyColumns(localFilterOnlyColumns || []);
+            setSortBy(localSortBy || "SKU (Old)");
+            setSortDir(localSortDir || "asc");
           }
         } else {
           // Fallback to defaults or restored state
@@ -141,6 +156,9 @@ export default function SkuListPage() {
             setColumnWidths(restoredState.columnWidths || {});
             setEmptyFilters(restoredState.emptyFilters || {});
             setSelectedSkus(restoredState.selectedSkus || []);
+            setFilterOnlyColumns((restoredState.filterOnlyColumns || []).filter((c) => (colData.columns || []).includes(c)));
+            setSortBy(restoredState.sortBy || "SKU (Old)");
+            setSortDir(restoredState.sortDir || "asc");
             setPage(restoredState.page || 1);
           } else {
             const localSelected = (localState?.selectedColumns || []).filter((c) => (colData.columns || []).includes(c));
@@ -148,16 +166,20 @@ export default function SkuListPage() {
             setColumnFilters(localState?.columnFilters || {});
             setFilterMode(localState?.filterMode || {});
             setEmptyFilters(localState?.emptyFilters || {});
+            setFilterOnlyColumns((localState?.filterOnlyColumns || []).filter((c) => (colData.columns || []).includes(c)));
+            setSortBy(localState?.sortBy || "SKU (Old)");
+            setSortDir(localState?.sortDir || "asc");
             if (localState?.pageSize) setPageSize(localState.pageSize);
             if (localState?.columnWidths) setColumnWidths(localState.columnWidths);
           }
         }
 
         // Preload distinct values for multi-select string columns that are present
-        const toLoad = multiSelectStringCols.filter((c) => (colData.columns || []).includes(c));
+        const toLoad = Array.from(new Set([...multiSelectStringCols, ...checkboxFilterColumns]))
+          .filter((c) => (colData.columns || []).includes(c));
         await Promise.all(toLoad.map(async (c) => {
           try {
-            const limit = lagerColumns.includes(c) ? 1000 : 200;
+            const limit = checkboxFilterColumns.includes(c) ? 1000 : 200;
             const r = await fetch(`/api/skus/columns/distinct?column=${encodeURIComponent(c)}&limit=${limit}`);
             if (r.ok) {
               const d = await r.json();
@@ -183,12 +205,15 @@ export default function SkuListPage() {
         selectedColumns,
         pageSize,
         columnWidths,
-        emptyFilters
+        emptyFilters,
+        filterOnlyColumns,
+        sortBy,
+        sortDir,
       }));
     } catch (e) {
       console.error('Failed to save filters to localStorage:', e);
     }
-  }, [columnFilters, filterMode, selectedColumns, pageSize, columnWidths, emptyFilters]);
+  }, [columnFilters, filterMode, selectedColumns, pageSize, columnWidths, emptyFilters, filterOnlyColumns, sortBy, sortDir]);
 
   // Load SKUs when filters or pagination change
   useEffect(() => {
@@ -209,6 +234,11 @@ export default function SkuListPage() {
     if (selectedColumns.length > 0) {
       params.append("columns", selectedColumns.join(","));
     }
+
+    if (sortBy && String(sortBy).trim()) {
+      params.append("sort_by", sortBy);
+    }
+    params.append("sort_dir", sortDir === "desc" ? "desc" : "asc");
 
     // Build typed filters from columnFilters state
     const filters = [];
@@ -300,7 +330,7 @@ export default function SkuListPage() {
       clearTimeout(debounceTimer);
       controller.abort();
     };
-  }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading, emptyFilters]);
+  }, [page, pageSize, selectedColumns, columnFilters, filterMode, filterLoading, emptyFilters, sortBy, sortDir, reloadTick]);
 
   const totalPages = Math.ceil(total / pageSize);
 
@@ -353,6 +383,50 @@ export default function SkuListPage() {
   const handleResetColumns = () => {
     setSelectedColumns([...defaultColumns]);
     setPage(1);
+  };
+
+  useEffect(() => {
+    if (!selectedColumns.length || !filterOnlyColumns.length) return;
+    const filtered = filterOnlyColumns.filter((c) => !selectedColumns.includes(c));
+    if (filtered.length !== filterOnlyColumns.length) {
+      setFilterOnlyColumns(filtered);
+    }
+  }, [selectedColumns, filterOnlyColumns]);
+
+  const handleClearAllFiltersAndResetView = () => {
+    setColumnFilters({});
+    setFilterMode({});
+    setEmptyFilters({});
+    setChipInputs({});
+    setSuggestions({});
+    setOpenSuggest({});
+    setFilterOnlyColumns([]);
+    setSelectedColumns(defaultColumns.length ? [...defaultColumns] : [...selectedColumns]);
+    setPage(1);
+  };
+
+  const handleAddFilterOnlyColumn = (col) => {
+    if (!col || selectedColumns.includes(col) || filterOnlyColumns.includes(col)) return;
+    setFilterOnlyColumns((prev) => [...prev, col]);
+  };
+
+  const handleRemoveFilterOnlyColumn = (col) => {
+    setFilterOnlyColumns((prev) => prev.filter((c) => c !== col));
+    setColumnFilters((prev) => {
+      const next = { ...prev };
+      delete next[col];
+      return next;
+    });
+    setFilterMode((prev) => {
+      const next = { ...prev };
+      delete next[col];
+      return next;
+    });
+    setEmptyFilters((prev) => {
+      const next = { ...prev };
+      delete next[col];
+      return next;
+    });
   };
 
   const handleMoveColumnLeft = (col) => {
@@ -439,6 +513,7 @@ export default function SkuListPage() {
       page_size: pageSize,
       column_widths: columnWidths,
       emptyFilters: emptyFilters,
+      filterOnlyColumns,
     };
     fetch("/api/skus/filters", {
       method: "PUT",
@@ -465,7 +540,7 @@ export default function SkuListPage() {
       controller.abort();
       clearTimeout(id);
     };
-  }, [selectedColumns, columnFilters, filterMode, pageSize, columnWidths, emptyFilters, filterLoading]);
+  }, [selectedColumns, columnFilters, filterMode, pageSize, columnWidths, emptyFilters, filterOnlyColumns, filterLoading]);
 
   // Flush state on unmount to avoid losing recent changes when navigating away quickly
   useEffect(() => {
@@ -483,6 +558,14 @@ export default function SkuListPage() {
         setFolderImagesStatus(folderData);
       } catch (e) {
         console.error("Error loading folder images status:", e);
+      }
+
+      try {
+        const jsonRes = await fetch("/api/skus/json/status");
+        const jsonData = await jsonRes.json();
+        setJsonColumnStatus(jsonData);
+      } catch (e) {
+        console.error("Error loading Json column status:", e);
       }
 
       try {
@@ -625,6 +708,43 @@ export default function SkuListPage() {
       alert(`Error: ${error.message}`);
       setEbayListingsComputing(false);
     }
+  };
+
+  const computeJsonColumn = async () => {
+    setJsonColumnComputing(true);
+    try {
+      const res = await fetch("/api/skus/json/compute");
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data?.detail || data?.message || "Failed to compute Json column");
+      }
+
+      setJsonColumnStatus(data || {});
+      setReloadTick((v) => v + 1);
+      alert(`✅ Json column recomputed. TRUE: ${data?.json_true || 0}, FALSE: ${data?.json_false || 0}, Empty: ${data?.json_empty || 0}`);
+    } catch (error) {
+      console.error("Error computing Json column:", error);
+      alert(`Error: ${error.message}`);
+    } finally {
+      setJsonColumnComputing(false);
+    }
+  };
+
+  const handleSortFromHeader = (columnName) => {
+    if (!columnName) return;
+    if (sortBy === columnName) {
+      setSortDir((prev) => (prev === "asc" ? "desc" : "asc"));
+    } else {
+      setSortBy(columnName);
+      setSortDir("asc");
+    }
+    setPage(1);
+  };
+
+  const getSortedDistinctOptions = (col) => {
+    return (distinctValues[col] || [])
+      .filter((v) => String(v || "").trim() !== "")
+      .sort((a, b) => String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" }));
   };
 
   const exportInventoryToJsons = async () => {
@@ -860,6 +980,18 @@ export default function SkuListPage() {
               />
             </div>
           </div>
+        )}
+        <button
+          onClick={computeJsonColumn}
+          disabled={jsonColumnComputing}
+          style={{ padding: "6px 10px", background: "#1565c0", color: "white", border: "none", borderRadius: 4, cursor: jsonColumnComputing ? "not-allowed" : "pointer" }}
+        >
+          {jsonColumnComputing ? "Computing JSON..." : "Compute Json Column"}
+        </button>
+        {jsonColumnStatus.last_update && (
+          <span style={{ fontSize: "0.9em", color: "#666" }}>
+            Json updated: {new Date(jsonColumnStatus.last_update).toLocaleString()} | TRUE: {jsonColumnStatus.json_true ?? 0} | FALSE: {jsonColumnStatus.json_false ?? 0}
+          </span>
         )}
         <button
           onClick={updateDbFromJsons}
@@ -1116,8 +1248,11 @@ export default function SkuListPage() {
               page,
               columnFilters,
               selectedColumns,
+              filterOnlyColumns,
               columnWidths,
-              pageSize
+              pageSize,
+              sortBy,
+              sortDir,
             };
             console.log('Saving state:', stateToSave);
             sessionStorage.setItem('skuListPageState', JSON.stringify(stateToSave));
@@ -1163,6 +1298,21 @@ export default function SkuListPage() {
             }}
           >
             Reset to Default
+          </button>
+          <button
+            onClick={handleClearAllFiltersAndResetView}
+            style={{
+              marginLeft: 8,
+              padding: "4px 8px",
+              fontSize: "0.85em",
+              cursor: "pointer",
+              background: "#2e7d32",
+              color: "white",
+              border: "none",
+              borderRadius: 4,
+            }}
+          >
+            Clear All Filters
           </button>
         </h4>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
@@ -1240,6 +1390,241 @@ export default function SkuListPage() {
         </div>
       </div>
 
+      {/* Filter-Only Columns Section */}
+      <div style={{ background: "#f5f8ff", padding: 12, borderRadius: 8, marginBottom: 16, border: "1px solid #d6e4ff" }}>
+        <h4 style={{ margin: "0 0 10px 0" }}>Filter-Only Columns (Hidden in Table)</h4>
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginBottom: 10 }}>
+          <select
+            id="filter-only-column-picker"
+            defaultValue=""
+            style={{ minWidth: 220 }}
+            onChange={(e) => {
+              if (e.target.value) {
+                handleAddFilterOnlyColumn(e.target.value);
+                e.target.value = "";
+              }
+            }}
+          >
+            <option value="">Add hidden filter column...</option>
+            {allColumns
+              .filter((c) => !selectedColumns.includes(c) && !filterOnlyColumns.includes(c))
+              .map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+          </select>
+          <span style={{ color: "#555", fontSize: "0.9em" }}>
+            These columns are used for filtering but are not shown in table columns.
+          </span>
+        </div>
+
+        {filterOnlyColumns.length === 0 ? (
+          <div style={{ color: "#777", fontSize: "0.9em" }}>No hidden filter columns selected.</div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 10 }}>
+            {filterOnlyColumns.map((col) => {
+              const meta = columnMeta[col] || { type: "string" };
+              const val = columnFilters[col] ?? (multiSelectStringCols.includes(col) ? [] : "");
+              const mode = filterMode[col] || "include";
+              const hasFilter = (Array.isArray(val) && val.length > 0)
+                || (typeof val === "string" && val.trim())
+                || (typeof val === "object" && val && (val.min || val.max || val.start || val.end))
+                || !!emptyFilters[col];
+
+              return (
+                <div key={`hidden-filter-${col}`} style={{ background: "white", border: "1px solid #d9e3f0", borderRadius: 6, padding: 8 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+                    <strong style={{ fontSize: "0.9em" }}>{col}</strong>
+                    <button
+                      onClick={() => handleRemoveFilterOnlyColumn(col)}
+                      style={{ fontSize: "0.8em", border: "none", background: "#eee", borderRadius: 4, cursor: "pointer" }}
+                    >
+                      Remove
+                    </button>
+                  </div>
+
+                  {checkboxFilterColumns.includes(col) ? (
+                    <div>
+                      {(() => {
+                        const options = getSortedDistinctOptions(col);
+                        const selectedValues = Array.isArray(val) ? val : [];
+                        return (
+                          <>
+                            <div style={{ display: "flex", gap: 6, marginBottom: 6, flexWrap: "wrap" }}>
+                              <button
+                                onClick={() => handleFilterChange(col, options)}
+                                disabled={options.length === 0 || selectedValues.length === options.length}
+                                style={{ fontSize: "0.8em" }}
+                              >
+                                Select All
+                              </button>
+                              <button
+                                onClick={() => handleFilterChange(col, [])}
+                                disabled={selectedValues.length === 0}
+                                style={{ fontSize: "0.8em" }}
+                              >
+                                Deselect All
+                              </button>
+                            </div>
+                            <div
+                              style={{
+                                maxHeight: 140,
+                                overflowY: "auto",
+                                border: "1px solid #d0d0d0",
+                                borderRadius: 4,
+                                padding: "4px 6px",
+                                background: "#fff",
+                              }}
+                            >
+                              {options.length === 0 ? (
+                                <div style={{ fontSize: "0.8em", color: "#777" }}>No values</div>
+                              ) : (
+                                options.map((option) => {
+                                  const isChecked = selectedValues.includes(option);
+                                  return (
+                                    <label
+                                      key={`${col}-${option}`}
+                                      style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: 6,
+                                        fontSize: "0.82em",
+                                        whiteSpace: "nowrap",
+                                        marginBottom: 2,
+                                        cursor: "pointer",
+                                      }}
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        checked={isChecked}
+                                        onChange={(e) => {
+                                          const next = e.target.checked
+                                            ? [...selectedValues, option]
+                                            : selectedValues.filter((v) => v !== option);
+                                          handleFilterChange(col, next);
+                                        }}
+                                      />
+                                      <span>{option}</span>
+                                    </label>
+                                  );
+                                })
+                              )}
+                            </div>
+                          </>
+                        );
+                      })()}
+                    </div>
+                  ) : meta.type === "number" ? (
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <input
+                        type="number"
+                        placeholder="Min"
+                        value={typeof val === "object" ? (val.min || "") : ""}
+                        onChange={(e) => handleFilterChange(col, { ...(typeof val === "object" ? val : {}), min: e.target.value })}
+                        style={{ width: "100%" }}
+                      />
+                      <input
+                        type="number"
+                        placeholder="Max"
+                        value={typeof val === "object" ? (val.max || "") : ""}
+                        onChange={(e) => handleFilterChange(col, { ...(typeof val === "object" ? val : {}), max: e.target.value })}
+                        style={{ width: "100%" }}
+                      />
+                    </div>
+                  ) : meta.type === "date" ? (
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <input
+                        type="date"
+                        value={typeof val === "object" ? (val.start || "") : ""}
+                        onChange={(e) => handleFilterChange(col, { ...(typeof val === "object" ? val : {}), start: e.target.value })}
+                        style={{ width: "100%" }}
+                      />
+                      <input
+                        type="date"
+                        value={typeof val === "object" ? (val.end || "") : ""}
+                        onChange={(e) => handleFilterChange(col, { ...(typeof val === "object" ? val : {}), end: e.target.value })}
+                        style={{ width: "100%" }}
+                      />
+                    </div>
+                  ) : meta.type === "boolean" ? (
+                    <select
+                      value={typeof val === "string" ? val : ""}
+                      onChange={(e) => handleFilterChange(col, e.target.value)}
+                      style={{ width: "100%" }}
+                    >
+                      <option value="">Any</option>
+                      <option value="true">True</option>
+                      <option value="false">False</option>
+                    </select>
+                  ) : (
+                    <input
+                      type="text"
+                      placeholder={`Filter ${col}...`}
+                      value={typeof val === "string" ? val : ""}
+                      onChange={(e) => handleFilterChange(col, e.target.value)}
+                      style={{ width: "100%" }}
+                    />
+                  )}
+
+                  <div style={{ display: "flex", gap: 6, alignItems: "center", marginTop: 6 }}>
+                    <button
+                      onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "include" }))}
+                      style={{
+                        fontSize: "0.8em",
+                        padding: "2px 6px",
+                        background: mode === "include" ? "#4CAF50" : "#ddd",
+                        color: mode === "include" ? "white" : "black",
+                        border: "none",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                    >
+                      Include
+                    </button>
+                    <button
+                      onClick={() => setFilterMode((prev) => ({ ...prev, [col]: "exclude" }))}
+                      style={{
+                        fontSize: "0.8em",
+                        padding: "2px 6px",
+                        background: mode === "exclude" ? "#f44336" : "#ddd",
+                        color: mode === "exclude" ? "white" : "black",
+                        border: "none",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                    >
+                      Exclude
+                    </button>
+                    <label style={{ fontSize: "0.8em", display: "flex", alignItems: "center", gap: 4 }}>
+                      <input
+                        type="checkbox"
+                        checked={emptyFilters[col] || false}
+                        onChange={(e) => setEmptyFilters((prev) => ({ ...prev, [col]: e.target.checked }))}
+                      />
+                      Empty only
+                    </label>
+                    {hasFilter && (
+                      <button
+                        onClick={() => {
+                          setColumnFilters((prev) => {
+                            const next = { ...prev };
+                            delete next[col];
+                            return next;
+                          });
+                          setEmptyFilters((prev) => ({ ...prev, [col]: false }));
+                        }}
+                        style={{ marginLeft: "auto", fontSize: "0.8em" }}
+                      >
+                        Clear
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
       {/* Pagination Controls */}
       <div style={{ marginBottom: 12, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <label>
@@ -1256,6 +1641,35 @@ export default function SkuListPage() {
             <option value={20}>20</option>
             <option value={50}>50</option>
             <option value={100}>100</option>
+          </select>
+        </label>
+        <label>
+          Order by:
+          <select
+            value={sortBy}
+            onChange={(e) => {
+              setSortBy(e.target.value);
+              setPage(1);
+            }}
+            style={{ marginLeft: 6, minWidth: 180 }}
+          >
+            {allColumns.map((col) => (
+              <option key={col} value={col}>{col}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Direction:
+          <select
+            value={sortDir}
+            onChange={(e) => {
+              setSortDir(e.target.value === "desc" ? "desc" : "asc");
+              setPage(1);
+            }}
+            style={{ marginLeft: 6 }}
+          >
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
           </select>
         </label>
       </div>
@@ -1283,7 +1697,13 @@ export default function SkuListPage() {
                       style={{ textAlign: "left", minWidth: 120, width: widthPx ? `${widthPx}px` : undefined, position: "relative" }}
                     >
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                        <span>{col}</span>
+                        <span
+                          onClick={() => handleSortFromHeader(col)}
+                          style={{ cursor: "pointer", userSelect: "none" }}
+                          title="Click to sort"
+                        >
+                          {col}{sortBy === col ? (sortDir === "asc" ? " ▲" : " ▼") : ""}
+                        </span>
                         <span
                           onMouseDown={(e) => handleResizeStart(col, e)}
                           style={{ cursor: "col-resize", padding: "0 4px", userSelect: "none" }}
@@ -1429,9 +1849,9 @@ export default function SkuListPage() {
                       </th>
                     );
                   }
-                  if (lagerColumns.includes(col)) {
+                  if (checkboxFilterColumns.includes(col)) {
                     const selectedValues = Array.isArray(val) ? val : [];
-                    const options = (distinctValues[col] || []).filter((v) => String(v || "").trim() !== "");
+                    const options = getSortedDistinctOptions(col);
                     return (
                       <th key={`filter-${col}`} style={{ padding: 4, minWidth: 180 }}>
                         <div style={{ display: "flex", gap: 6, alignItems: "flex-start" }}>
@@ -1481,6 +1901,14 @@ export default function SkuListPage() {
                               )}
                             </div>
                             <div style={{ display: "flex", gap: 6, marginTop: 6, alignItems: "center", flexWrap: "wrap" }}>
+                              <button
+                                onClick={() => handleFilterChange(col, options)}
+                                disabled={options.length === 0 || selectedValues.length === options.length}
+                                style={{ fontSize: "0.8em" }}
+                              >
+                                Select All
+                              </button>
+                              <button onClick={() => handleFilterChange(col, [])} disabled={selectedValues.length === 0} style={{ fontSize: "0.8em" }}>Deselect All</button>
                               <button onClick={() => handleFilterChange(col, [])} disabled={selectedValues.length === 0} style={{ fontSize: "0.8em" }}>Clear</button>
                               <label style={{ display: "flex", alignItems: "center", gap: 4, whiteSpace: "nowrap", fontSize: "0.82em" }}>
                                 <input

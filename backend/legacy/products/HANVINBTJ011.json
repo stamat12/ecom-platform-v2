@@ -21,7 +21,7 @@
       "eBay Category ID": "57988"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Sehr Gut"
@@ -50,17 +50,51 @@
       "schema_version": "1.0",
       "summary": {
         "has_stock": false,
-        "has_phone": false,
-        "has_enhanced": false,
+        "has_phone": true,
+        "has_enhanced": true,
         "count_stock": 0,
-        "count_phone": 0,
-        "count_enhanced": 0,
+        "count_phone": 8,
+        "count_enhanced": 1,
         "has_main_images": true,
         "count_main_images": 4
       },
       "stock": [],
-      "phone": [],
-      "enhanced": [],
+      "phone": [
+        {
+          "filename": "HANVINBTJ011 (1).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (5).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (6).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ011 (8).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (3)_1_lanczos_4x.png",
+          "source": "HANVINBTJ011 (3).jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
       "main_images": [
         {
           "filename": "HANVINBTJ011 (3).jpg"
@@ -73,6 +107,53 @@
         },
         {
           "filename": "HANVINBTJ011 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (3)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/fYMAAeSwRr1ptBra/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7f8AAeSww-VptBre/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lUwAAeSwy8FptBri/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mZ4AAeSwv6JptBrl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6KsAAeSwKFtptBrp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BysAAeSwM3FptBru/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wMkAAeSww5NptBrx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (7).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WbEAAeSwLkJptBr0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ011 (8).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HnEAAeSwAANptBr4/$_1.JPG?set_id=8800005007"
         }
       ]
     },
@@ -100,6 +181,24 @@
         "Passform": "Regular",
         "Textilpflege": "Maschinenwäsche"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Jacke",
+      "Product Model": "ClimaProof",
+      "Keyword 1": "Windjacke",
+      "Keyword 2": "Sportjacke",
+      "Keyword 3": "Funktionsjacke"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Der Artikel wurde getragen und befindet sich in einem guten bis sehr guten Zustand. Es können leichte, normale Gebrauchsspuren vorhanden sein, die bei getragener Kleidung üblich sind.  Der Artikel wurde sorgfältig geprüft. Der genaue Zustand, mögliche Details sowie eventuelle Gebrauchsspuren sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-25T15:06"
     }
   }
 }

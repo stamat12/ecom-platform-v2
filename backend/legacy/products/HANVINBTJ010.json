@@ -21,7 +21,7 @@
       "eBay Category ID": "57988"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Sehr Gut"
@@ -50,17 +50,57 @@
       "schema_version": "1.0",
       "summary": {
         "has_stock": false,
-        "has_phone": false,
-        "has_enhanced": false,
+        "has_phone": true,
+        "has_enhanced": true,
         "count_stock": 0,
-        "count_phone": 0,
-        "count_enhanced": 0,
+        "count_phone": 10,
+        "count_enhanced": 1,
         "has_main_images": true,
         "count_main_images": 4
       },
       "stock": [],
-      "phone": [],
-      "enhanced": [],
+      "phone": [
+        {
+          "filename": "HANVINBTJ010 (1).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (10).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (2).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (3).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (4).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (5).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (6).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (7).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (8).jpg"
+        },
+        {
+          "filename": "HANVINBTJ010 (9).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ010 (2)_1_lanczos_4x.png",
+          "source": "HANVINBTJ010 (2).jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
       "main_images": [
         {
           "filename": "HANVINBTJ010 (2).jpg"
@@ -73,6 +113,63 @@
         },
         {
           "filename": "HANVINBTJ010 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ010 (2)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/BgUAAeSwFXpptBsC/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LskAAeSwtZdptBsF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pOUAAeSwkONptBsI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/odYAAeSwAvJptBsL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HmYAAeSwjLdptBsQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HTQAAeSwGmhptBsU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/BSQAAeSwk6RptBsY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT0AAeSwF~FptBsd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bfcAAeSwd0BptBsi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (8).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AAcAAeSwMQhptBsm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBTJ010 (9).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/e-oAAeSwMWJptBsp/$_1.JPG?set_id=8800005007"
         }
       ]
     },
@@ -98,6 +195,24 @@
         "Personalisieren": "Nein",
         "Textilpflege": "Maschinenwäsche"
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Pullover",
+      "Product Model": "",
+      "Keyword 1": "Langarmshirt",
+      "Keyword 2": "Sportpullover",
+      "Keyword 3": "Funktionsshirt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Der Artikel wurde getragen und befindet sich in einem guten bis sehr guten Zustand. Es können leichte, normale Gebrauchsspuren vorhanden sein, die bei getragener Kleidung üblich sind.  Der Artikel wurde sorgfältig geprüft. Der genaue Zustand, mögliche Details sowie eventuelle Gebrauchsspuren sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-25T15:06"
     }
   }
 }

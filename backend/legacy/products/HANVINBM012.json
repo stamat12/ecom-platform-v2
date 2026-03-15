@@ -21,7 +21,7 @@
       "eBay Category ID": "57990"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Gut"
@@ -50,17 +50,59 @@
       "schema_version": "1.0",
       "summary": {
         "has_stock": false,
-        "has_phone": false,
-        "has_enhanced": false,
+        "has_phone": true,
+        "has_enhanced": true,
         "count_stock": 0,
-        "count_phone": 0,
-        "count_enhanced": 0,
+        "count_phone": 8,
+        "count_enhanced": 2,
         "has_main_images": true,
         "count_main_images": 3
       },
       "stock": [],
-      "phone": [],
-      "enhanced": [],
+      "phone": [
+        {
+          "filename": "HANVINBM012 (1).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (7).jpg"
+        },
+        {
+          "filename": "HANVINBM012 (8).jpg"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM012 (3)_1_lanczos_4x.png",
+          "source": "HANVINBM012 (3).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM012 (3)_1_lanczos_4x.png",
+          "source": "HANVINBM012 (3).jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
       "main_images": [
         {
           "filename": "HANVINBM012 (2).jpg"
@@ -70,6 +112,53 @@
         },
         {
           "filename": "HANVINBM012 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM012 (3)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/kCUAAeSw8TRptB2W/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pcAAeSwI6dptB2a/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (2).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p5wAAeSwdRtptB2f/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mYMAAeSwGBBptB2k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DE4AAeSwXVxptB2s/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PxwAAeSwR51ptB2x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d2MAAeSwK9ZptB22/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q60AAeSw0fxptB25/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM012 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cuIAAeSwgH9ptB29/$_1.JPG?set_id=8800005007"
         }
       ]
     },
@@ -87,6 +176,24 @@
         "Textilpflege": "Maschinenwäsche",
         "Ursprungsland": "Malaysia"
       }
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Der Artikel wurde getragen und befindet sich in einem guten bis sehr guten Zustand. Es können leichte, normale Gebrauchsspuren vorhanden sein, die bei getragener Kleidung üblich sind.  Der Artikel wurde sorgfältig geprüft. Der genaue Zustand, mögliche Details sowie eventuelle Gebrauchsspuren sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-25T15:06"
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "Wrinkle Resistant",
+      "Keyword 1": "Langarmhemd",
+      "Keyword 2": "Kariertes Hemd",
+      "Keyword 3": "Baumwollhemd"
     }
   }
 }

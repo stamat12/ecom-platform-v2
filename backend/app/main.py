@@ -11,7 +11,15 @@ from uuid import uuid4
 add_legacy_to_syspath()
 
 # Import services
-from app.services.sku_list import list_skus, get_available_columns, get_default_columns, get_columns_meta, get_distinct_values
+from app.services.sku_list import (
+    list_skus,
+    get_available_columns,
+    get_default_columns,
+    get_columns_meta,
+    get_distinct_values,
+    get_json_column_status,
+    compute_json_column_for_all_skus,
+)
 from app.services.image_listing import list_images_for_sku
 from app.services.image_serving import resolve_image_path
 from app.services.image_rotation import rotate_image, clear_image_cache
@@ -250,6 +258,8 @@ def get_skus(
     page_size: int = Query(50, ge=1, le=200),
     columns: str | None = Query(None, description="Comma-separated column names to include"),
     filters: str | None = Query(None, description="JSON string of column filters"),
+    sort_by: str | None = Query(None, description="Column name to sort by"),
+    sort_dir: str = Query("asc", description="Sort direction: asc or desc"),
 ):
     """
     List SKUs with per-column filtering support.
@@ -270,7 +280,14 @@ def get_skus(
         except json.JSONDecodeError:
             filters_list = None
     
-    data = list_skus(page=page, page_size=page_size, filters=filters_list, columns=columns_list)
+    data = list_skus(
+        page=page,
+        page_size=page_size,
+        filters=filters_list,
+        columns=columns_list,
+        sort_by=sort_by,
+        sort_dir=sort_dir,
+    )
     return SkuListResponse(
         page=data["page"],
         page_size=data["page_size"],
@@ -1778,6 +1795,18 @@ def get_folder_images_status():
         "last_update": last_update,
         "has_cache": last_update is not None
     }
+
+
+@app.get("/api/skus/json/status")
+def get_json_column_compute_status():
+    """Get Json column compute status from inventory_fast cache."""
+    return get_json_column_status()
+
+
+@app.get("/api/skus/json/compute")
+def compute_json_column():
+    """Recompute Json column values for all SKUs in inventory_fast cache."""
+    return compute_json_column_for_all_skus()
 
 
 @app.get("/api/skus/folder-images/compute")

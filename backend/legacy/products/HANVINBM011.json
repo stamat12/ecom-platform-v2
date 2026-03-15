@@ -21,7 +21,7 @@
       "eBay Category ID": "57990"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Sehr Gut"
@@ -50,19 +50,61 @@
       "schema_version": "1.0",
       "summary": {
         "has_stock": false,
-        "has_phone": false,
+        "has_phone": true,
         "has_enhanced": true,
         "count_stock": 0,
-        "count_phone": 0,
-        "count_enhanced": 1,
+        "count_phone": 11,
+        "count_enhanced": 2,
         "has_main_images": true,
         "count_main_images": 4
       },
       "stock": [],
-      "phone": [],
+      "phone": [
+        {
+          "filename": "HANVINBM011 (1).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (10).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (11).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (2).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (3).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (4).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (5).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (6).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (7).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (8).jpg"
+        },
+        {
+          "filename": "HANVINBM011 (9).jpg"
+        }
+      ],
       "enhanced": [
         {
           "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1_lanczos_4x.png"
+        },
+        {
+          "filename": "Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM011 (3)_1_lanczos_4x.png",
+          "source": "HANVINBM011 (3).jpg",
+          "prompt": "Used Clothes Invisible Mannequin",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
         }
       ],
       "main_images": [
@@ -78,26 +120,125 @@
         {
           "filename": "HANVINBM011 (4).jpg"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/pxAAAeSw6YBptBvt/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aqEAAeSwdipptBvz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FssAAeSwSARptBv3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Cu8AAeSwTvhptBv7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~DsAAeSwiCBptBv~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (10).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JIoAAeSwOOFptBwE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-KYAAeSwfK1ptBwI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT8AAeSwYXxptBwM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DsIAAeSwFXpptBwR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (5).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oBcAAeSw0fxptBwY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (6).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dIAAAeSwQ6RptBwc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANVINBM011 (7).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CwIAAeSwvxZptBwg/$_1.JPG?set_id=8800005007"
+        }
       ]
     },
     "eBay Fields": {
       "required": {
         "Marke": "Tommy Hilfiger",
         "Abteilung": "Herren",
+        "Größe": "XL",
         "Farbe": "Blau"
       },
       "optional": {
-        "Produktart": "Geknöpftes Hemd",
         "Ärmellänge": "Langarm",
+        "Charakter": "",
         "Material": "Baumwolle",
         "Muster": "Kariert",
         "Gewebeart": "Flanell",
+        "Thema": "",
         "Passform": "Regular",
+        "Besonderheiten": "",
+        "Produktart": "Geknöpftes Hemd",
+        "Ausschnitt": "",
+        "Größenkategorie": "",
+        "Vintage": "",
+        "Jahreszeit": "",
         "Kragenart": "Button-Down Kragen",
         "Anlass": "Freizeit",
         "Ursprungsland": "Singapur",
-        "Textilpflege": "Maschinenwäsche"
+        "Akzente": "",
+        "Produktlinie": "",
+        "Verschluss": "",
+        "Brustumfang": "",
+        "Modell": "",
+        "Textilpflege": "Maschinenwäsche",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Anzahl der Einheiten": "",
+        "Handgefertigt": "",
+        "Herstellernummer": "",
+        "Maßeinheit": ""
       }
+    },
+    "eBay SEO": {
+      "Product Type": "Hemd",
+      "Product Model": "",
+      "Keyword 1": "Karomuster",
+      "Keyword 2": "Langarmhemd",
+      "Keyword 3": "Button-Down"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "3000",
+      "Condition Note": "Der Artikel wurde getragen und befindet sich in einem guten bis sehr guten Zustand. Es können leichte, normale Gebrauchsspuren vorhanden sein, die bei getragener Kleidung üblich sind.  Der Artikel wurde sorgfältig geprüft. Der genaue Zustand, mögliche Details sowie eventuelle Gebrauchsspuren sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-25T15:06"
     }
   }
 }

@@ -17,11 +17,11 @@
       "Total Cost Net": 2.76
     },
     "Ebay Category": {
-      "Category": "/Büro & Schreibwaren/Büromöbel/Kleinmöbel & Accessoires/Bodenschutzmatten",
-      "eBay Category ID": "62466"
+      "Category": "/Computer, Tablets & Netzwerk/Notebook- & Desktop-Zubehör/Mauspads & Handgelenkauflagen",
+      "eBay Category ID": "23895"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu"
@@ -41,7 +41,7 @@
       "OP": "26.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"
@@ -93,7 +93,69 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/L-oAAeSw6YBpsxo7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FpIAAeSwt4xpsxo8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Yp4AAeSwO5Zpsxo-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YBMAAeSwtCRpsxo~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6c8AAeSwdUVpsxpB/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T20:54"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Ridilozey",
+        "Produktart": "Mouse Mat"
+      },
+      "optional": {
+        "Breite": "80",
+        "Höhe": "30",
+        "Länge": "0.3",
+        "Besonderheiten": "Schmutzabweisend",
+        "Farbe": "Schwarz",
+        "Material": "Gummi, Stoff",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "m",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Mauspad",
+      "Product Model": "Gaming Mouspad",
+      "Keyword 1": "Schreibtischunterlage",
+      "Keyword 2": "Gaming Zubehör",
+      "Keyword 3": "Mausunterlage"
     }
   }
 }

@@ -111,3 +111,99 @@
 2026-02-15 23:22:13,655 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
 2026-02-15 23:22:13,659 - INFO - ✅ Found inline image data in response
 2026-02-15 23:22:13,662 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1.jpg
+2026-03-13 14:29:56,074 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:29:56,093 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:30:09,946 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:30:09,946 - INFO - 🔢 Gemini usage - prompt: 1077, candidates: 1290, total: 2367
+2026-03-13 14:30:09,947 - INFO - ✅ Found inline image data in response
+2026-03-13 14:30:09,950 - INFO - 💾 Saved image to Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM012 (3)_1.jpg
+2026-03-13 14:30:47,857 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:30:47,872 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:31:01,710 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:31:01,711 - INFO - 🔢 Gemini usage - prompt: 1077, candidates: 1290, total: 2367
+2026-03-13 14:31:01,714 - INFO - ✅ Found inline image data in response
+2026-03-13 14:31:01,717 - INFO - 💾 Saved image to Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBM011 (3)_1.jpg
+2026-03-13 14:31:22,806 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:31:22,824 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:31:36,038 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:31:36,039 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:31:36,044 - INFO - ✅ Found inline image data in response
+2026-03-13 14:31:36,052 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM012 (3)_1.jpg
+2026-03-13 14:32:30,783 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:32:30,798 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:32:43,063 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:32:43,063 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:32:43,064 - INFO - ✅ Found inline image data in response
+2026-03-13 14:32:43,066 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM016 (3)_1.jpg
+2026-03-13 14:33:26,456 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:33:26,490 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:33:42,909 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:33:42,910 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:33:42,912 - INFO - ✅ Found inline image data in response
+2026-03-13 14:33:42,914 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ008 (2)_1.jpg
+2026-03-13 14:34:05,593 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:34:05,627 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:34:26,138 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:34:26,139 - INFO - 🔢 Gemini usage - prompt: 1077, candidates: 1290, total: 2367
+2026-03-13 14:34:26,142 - INFO - ✅ Found inline image data in response
+2026-03-13 14:34:26,145 - INFO - 💾 Saved image to Used Clothes Invisible Mannequin_gemini-2-5-flash-image_real_HANVINBTJ008 (2)_1.jpg
+2026-03-13 14:34:38,124 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:34:38,149 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:34:51,791 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:34:51,792 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:34:51,794 - INFO - ✅ Found inline image data in response
+2026-03-13 14:34:51,796 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM015 (2)_1.jpg
+2026-03-13 14:35:16,709 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:35:16,736 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:35:33,100 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:35:33,101 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:35:33,105 - INFO - ✅ Found inline image data in response
+2026-03-13 14:35:33,108 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM013 (2)_1.jpg
+2026-03-13 14:36:16,222 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:16,244 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:23,335 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:23,351 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:27,827 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:36:27,828 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:36:27,830 - INFO - ✅ Found inline image data in response
+2026-03-13 14:36:27,833 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ009 (2)_1.jpg
+2026-03-13 14:36:30,435 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:30,456 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:37,279 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:37,297 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:38,313 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:36:38,314 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:36:38,315 - INFO - ✅ Found inline image data in response
+2026-03-13 14:36:38,317 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ010 (2)_1.jpg
+2026-03-13 14:36:43,790 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:36:43,791 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:36:43,794 - INFO - ✅ Found inline image data in response
+2026-03-13 14:36:43,796 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (2)_1.jpg
+2026-03-13 14:36:44,653 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:44,674 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:51,568 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:36:51,569 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:36:51,570 - INFO - ✅ Found inline image data in response
+2026-03-13 14:36:51,572 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ012 (2)_1.jpg
+2026-03-13 14:36:52,958 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:36:52,978 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:36:58,719 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:36:58,719 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:36:58,722 - INFO - ✅ Found inline image data in response
+2026-03-13 14:36:58,726 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ013 (2)_1.jpg
+2026-03-13 14:37:00,753 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:37:00,782 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:37:08,063 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:37:08,063 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:37:08,064 - INFO - ✅ Found inline image data in response
+2026-03-13 14:37:08,066 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ014 (2)_1.jpg
+2026-03-13 14:37:14,959 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:37:14,959 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:37:14,961 - INFO - ✅ Found inline image data in response
+2026-03-13 14:37:14,964 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ015 (4)_1.jpg
+2026-03-13 14:41:51,737 - INFO - 📸 Using Gemini model: gemini-2.5-flash-image
+2026-03-13 14:41:51,750 - INFO - 🚀 Sending request to gemini-2.5-flash-image...
+2026-03-13 14:42:04,349 - INFO - ✅ Response received from gemini-2.5-flash-image
+2026-03-13 14:42:04,350 - INFO - 🔢 Gemini usage - prompt: 1163, candidates: 1290, total: 2453
+2026-03-13 14:42:04,353 - INFO - ✅ Found inline image data in response
+2026-03-13 14:42:04,355 - INFO - 💾 Saved image to Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (3)_1.jpg

@@ -4819,3 +4819,575 @@ ValueError: Title exceeds 80 chars for SKU P0020039 even after removing Conditio
 2026-03-12 15:58:09,906 - INFO - Successfully created listing for SKU JAL00213, ItemID: 137122634572
 2026-03-12 15:58:09,959 - INFO - [BATCH e4a555fb90] SUCCESS sku=JAL00213 item_id=137122634572
 2026-03-12 15:58:09,960 - INFO - [BATCH e4a555fb90] Completed: success=True total=1 successful=1 failed=0
+2026-03-12 20:55:05,427 - INFO - [BATCH 0be004c0fc] /api/ebay/listings/batch received: total=6 stop_on_error=False
+2026-03-12 20:55:05,429 - INFO - [BATCH 0be004c0fc] Processing 1/6 sku=JAL00100 price=17.0 qty=1 condition_id=1000 schedule_days=9 has_ean=False has_modified_sku=False
+2026-03-12 20:55:05,429 - INFO - Creating eBay listing for SKU JAL00100 at price 17.0€
+2026-03-12 20:55:05,486 - INFO - Listing condition for SKU JAL00100: text='', id=1000, category_id=181059
+2026-03-12 20:55:05,487 - INFO - Uploading images for SKU JAL00100 (max: 12)
+2026-03-12 20:55:05,506 - INFO - Image files found on disk for SKU JAL00100: 14
+2026-03-12 20:55:05,506 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:55:07,181 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~lUAAeSw...
+2026-03-12 20:55:07,183 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:55:08,732 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/83MAAeSw...
+2026-03-12 20:55:08,734 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:55:10,179 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BWIAAeSw...
+2026-03-12 20:55:10,181 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:55:11,639 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~CgAAeSw...
+2026-03-12 20:55:11,641 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:55:13,025 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Zi4AAeSw...
+2026-03-12 20:55:13,026 - INFO - Uploading to eBay: JAL00100 (1).jpg
+2026-03-12 20:55:15,475 - INFO - Uploaded image JAL00100 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YHIAAeSw...
+2026-03-12 20:55:15,477 - INFO - Uploading to eBay: JAL00100 (7).jpg
+2026-03-12 20:55:19,342 - INFO - Uploaded image JAL00100 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NQoAAeSw...
+2026-03-12 20:55:19,345 - INFO - Uploading to eBay: JAL00100 (8).jpg
+2026-03-12 20:55:21,540 - INFO - Uploaded image JAL00100 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hv0AAeSw...
+2026-03-12 20:55:21,542 - INFO - Uploading to eBay: JAL00100 (9).jpg
+2026-03-12 20:55:24,226 - INFO - Uploaded image JAL00100 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LHUAAeSw...
+2026-03-12 20:55:24,228 - INFO - Uploading to eBay: JAL00100 (6).jpg
+2026-03-12 20:55:26,662 - INFO - Uploaded image JAL00100 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VOMAAeSw...
+2026-03-12 20:55:26,665 - INFO - Uploading to eBay: JAL00100 (5).jpg
+2026-03-12 20:55:29,428 - INFO - Uploaded image JAL00100 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/niEAAeSw...
+2026-03-12 20:55:29,430 - INFO - Uploading to eBay: JAL00100 (4).jpg
+2026-03-12 20:55:32,278 - INFO - Uploaded image JAL00100 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V70AAeSw...
+2026-03-12 20:55:32,280 - INFO - Upload summary for SKU JAL00100 -> uploaded: 12, cached: 0, urls: 12
+2026-03-12 20:55:32,289 - INFO - Saved 12 new eBay URLs to JSON
+2026-03-12 20:55:32,289 - INFO - Upload result for JAL00100: {'success': True, 'sku': 'JAL00100', 'uploaded_count': 12, 'cached_count': 0, 'total_count': 12, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~lUAAeSwqd9psxoa/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/83MAAeSwQ6Rpsxob/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BWIAAeSw52Vpsxod/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~CgAAeSwDzZpsxoe/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Zi4AAeSw-RRpsxog/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YHIAAeSwy85psxoi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NQoAAeSwkXJpsxom/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hv0AAeSw~eppsxoo/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LHUAAeSwzNppsxor/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VOMAAeSw4c1psxot/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/niEAAeSwFENpsxow/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V70AAeSwZYppsxoz/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 12 new images, used 0 cached URLs'}
+2026-03-12 20:55:32,291 - INFO - Looking up manufacturer info for 'Cuteefun' using AI...
+2026-03-12 20:55:34,044 - WARNING - AI returned error for 'Cuteefun': No verified manufacturer data found
+2026-03-12 20:55:34,045 - INFO - Identifier payload for SKU JAL00100: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-12 20:55:38,490 - INFO - Successfully created listing for SKU JAL00100, ItemID: 137123624386
+2026-03-12 20:55:38,535 - INFO - [BATCH 0be004c0fc] SUCCESS sku=JAL00100 item_id=137123624386
+2026-03-12 20:55:38,537 - INFO - [BATCH 0be004c0fc] Processing 2/6 sku=JAL00196 price=18.0 qty=1 condition_id=1000 schedule_days=9 has_ean=False has_modified_sku=False
+2026-03-12 20:55:38,537 - INFO - Creating eBay listing for SKU JAL00196 at price 18.0€
+2026-03-12 20:55:38,586 - INFO - Listing condition for SKU JAL00196: text='', id=1000, category_id=23895
+2026-03-12 20:55:38,586 - INFO - Uploading images for SKU JAL00196 (max: 12)
+2026-03-12 20:55:38,595 - INFO - Image files found on disk for SKU JAL00196: 5
+2026-03-12 20:55:38,595 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:55:40,207 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/L-oAAeSw...
+2026-03-12 20:55:40,209 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:55:41,633 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FpIAAeSw...
+2026-03-12 20:55:41,634 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:55:43,017 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Yp4AAeSw...
+2026-03-12 20:55:43,018 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:55:44,674 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YBMAAeSw...
+2026-03-12 20:55:44,675 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:55:46,432 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6c8AAeSw...
+2026-03-12 20:55:46,433 - INFO - Upload summary for SKU JAL00196 -> uploaded: 5, cached: 0, urls: 5
+2026-03-12 20:55:46,440 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-12 20:55:46,440 - INFO - Upload result for JAL00196: {'success': True, 'sku': 'JAL00196', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/L-oAAeSw6YBpsxo7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/FpIAAeSwt4xpsxo8/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Yp4AAeSwO5Zpsxo-/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YBMAAeSwtCRpsxo~/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/6c8AAeSwdUVpsxpB/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-12 20:55:46,440 - INFO - Looking up manufacturer info for 'Ridilozey' using AI...
+2026-03-12 20:55:47,308 - WARNING - AI returned error for 'Ridilozey': No verified manufacturer data found
+2026-03-12 20:55:47,308 - INFO - Identifier payload for SKU JAL00196: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-12 20:55:51,460 - INFO - Successfully created listing for SKU JAL00196, ItemID: 137123625072
+2026-03-12 20:55:51,517 - INFO - [BATCH 0be004c0fc] SUCCESS sku=JAL00196 item_id=137123625072
+2026-03-12 20:55:51,517 - INFO - [BATCH 0be004c0fc] Processing 3/6 sku=JAL00189 price=25.0 qty=1 condition_id=1000 schedule_days=9 has_ean=False has_modified_sku=False
+2026-03-12 20:55:51,517 - INFO - Creating eBay listing for SKU JAL00189 at price 25.0€
+2026-03-12 20:55:51,558 - INFO - Listing condition for SKU JAL00189: text='', id=1000, category_id=57988
+2026-03-12 20:55:51,558 - INFO - Uploading images for SKU JAL00189 (max: 12)
+2026-03-12 20:55:51,565 - INFO - Image files found on disk for SKU JAL00189: 5
+2026-03-12 20:55:51,565 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:55:52,917 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/6BgAAeSw...
+2026-03-12 20:55:52,919 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:55:54,481 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/hiAAAeSw...
+2026-03-12 20:55:54,482 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:55:55,731 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/rUEAAeSw...
+2026-03-12 20:55:55,732 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:55:57,252 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/WgsAAeSw...
+2026-03-12 20:55:57,254 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:55:58,534 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMzMz/z/Xu0AAeSw...
+2026-03-12 20:55:58,535 - INFO - Upload summary for SKU JAL00189 -> uploaded: 5, cached: 0, urls: 5
+2026-03-12 20:55:58,541 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-12 20:55:58,541 - INFO - Upload result for JAL00189: {'success': True, 'sku': 'JAL00189', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/6BgAAeSwnQFpsxpI/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/hiAAAeSwwXdpsxpJ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/rUEAAeSwBf9psxpK/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/WgsAAeSwf6xpsxpM/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMzMz/z/Xu0AAeSwPU9psxpN/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-12 20:55:58,541 - INFO - Looking up manufacturer info for 'Ktwolen' using AI...
+2026-03-12 20:55:59,237 - WARNING - AI returned error for 'Ktwolen': No verified manufacturer data found
+2026-03-12 20:55:59,237 - INFO - Identifier payload for SKU JAL00189: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-12 20:56:02,773 - INFO - Successfully created listing for SKU JAL00189, ItemID: 137123625576
+2026-03-12 20:56:02,826 - INFO - [BATCH 0be004c0fc] SUCCESS sku=JAL00189 item_id=137123625576
+2026-03-12 20:56:02,827 - INFO - [BATCH 0be004c0fc] Processing 4/6 sku=JAL00186 price=18.0 qty=1 condition_id=1000 schedule_days=9 has_ean=True has_modified_sku=False
+2026-03-12 20:56:02,827 - INFO - Creating eBay listing for SKU JAL00186 at price 18.0€
+2026-03-12 20:56:02,881 - INFO - Listing condition for SKU JAL00186: text='', id=1000, category_id=20561
+2026-03-12 20:56:02,881 - INFO - Uploading images for SKU JAL00186 (max: 12)
+2026-03-12 20:56:02,887 - INFO - Image files found on disk for SKU JAL00186: 5
+2026-03-12 20:56:02,887 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:56:04,246 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/N58AAeSw...
+2026-03-12 20:56:04,248 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:56:06,380 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/b1IAAeSw...
+2026-03-12 20:56:06,382 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:56:08,083 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTcx/z/BiYAAeSw...
+2026-03-12 20:56:08,085 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:56:10,215 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTk0/z/YSIAAeSw...
+2026-03-12 20:56:10,216 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:56:11,786 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTMwNFgxMzA0/z/bwQAAeSw...
+2026-03-12 20:56:11,787 - INFO - Upload summary for SKU JAL00186 -> uploaded: 5, cached: 0, urls: 5
+2026-03-12 20:56:11,793 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-12 20:56:11,793 - INFO - Upload result for JAL00186: {'success': True, 'sku': 'JAL00186', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/N58AAeSwfJZpsxpT/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/b1IAAeSw0fFpsxpV/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTcx/z/BiYAAeSw6lxpsxpX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTk0/z/YSIAAeSwZ35psxpZ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTMwNFgxMzA0/z/bwQAAeSwlD9psxpb/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-12 20:56:11,795 - INFO - Looking up manufacturer info for 'NeXtime' using AI...
+2026-03-12 20:56:14,566 - INFO - Manufacturer info extracted and cached for 'NeXtime'
+2026-03-12 20:56:14,566 - INFO - Identifier payload for SKU JAL00186: request_ean='8717713021995', json_ean='8717713021995', resolved_ean='8717713021995', sent_product_listing_details_ean='8717713021995'
+2026-03-12 20:56:17,658 - INFO - Successfully created listing for SKU JAL00186, ItemID: 137123625976
+2026-03-12 20:56:17,714 - INFO - [BATCH 0be004c0fc] SUCCESS sku=JAL00186 item_id=137123625976
+2026-03-12 20:56:17,714 - INFO - [BATCH 0be004c0fc] Processing 5/6 sku=JAL00182 price=25.0 qty=1 condition_id=1000 schedule_days=9 has_ean=False has_modified_sku=False
+2026-03-12 20:56:17,714 - INFO - Creating eBay listing for SKU JAL00182 at price 25.0€
+2026-03-12 20:56:17,761 - INFO - Listing condition for SKU JAL00182: text='', id=1000, category_id=57988
+2026-03-12 20:56:17,761 - INFO - Uploading images for SKU JAL00182 (max: 12)
+2026-03-12 20:56:17,768 - INFO - Image files found on disk for SKU JAL00182: 5
+2026-03-12 20:56:17,768 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:56:19,185 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/aMsAAeSw...
+2026-03-12 20:56:19,186 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:56:20,583 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/K5QAAeSw...
+2026-03-12 20:56:20,584 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:56:22,002 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTYz/z/B~cAAeSw...
+2026-03-12 20:56:22,004 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:56:23,712 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjQ1/z/8vYAAeSw...
+2026-03-12 20:56:23,714 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:56:25,525 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTIxM1gxNTAw/z/FrUAAeSw...
+2026-03-12 20:56:25,526 - INFO - Upload summary for SKU JAL00182 -> uploaded: 5, cached: 0, urls: 5
+2026-03-12 20:56:25,531 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-12 20:56:25,531 - INFO - Upload result for JAL00182: {'success': True, 'sku': 'JAL00182', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/aMsAAeSwDq5psxpi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjQ0/z/K5QAAeSwWK1psxpj/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMTYz/z/B~cAAeSwEVVpsxpl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjQ1/z/8vYAAeSwW3Rpsxpm/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIxM1gxNTAw/z/FrUAAeSw27lpsxpo/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-12 20:56:25,533 - INFO - Looking up manufacturer info for 'Yukirtiq' using AI...
+2026-03-12 20:56:26,656 - WARNING - AI returned error for 'Yukirtiq': No verified manufacturer data found
+2026-03-12 20:56:26,656 - INFO - Identifier payload for SKU JAL00182: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-12 20:56:30,824 - INFO - Successfully created listing for SKU JAL00182, ItemID: 137123626290
+2026-03-12 20:56:30,868 - INFO - [BATCH 0be004c0fc] SUCCESS sku=JAL00182 item_id=137123626290
+2026-03-12 20:56:30,868 - INFO - [BATCH 0be004c0fc] Processing 6/6 sku=JAL00197 price=28.0 qty=1 condition_id=1000 schedule_days=9 has_ean=False has_modified_sku=False
+2026-03-12 20:56:30,868 - INFO - Creating eBay listing for SKU JAL00197 at price 28.0€
+2026-03-12 20:56:30,930 - INFO - Listing condition for SKU JAL00197: text='', id=1000, category_id=175725
+2026-03-12 20:56:30,930 - INFO - Uploading images for SKU JAL00197 (max: 12)
+2026-03-12 20:56:30,937 - INFO - Image files found on disk for SKU JAL00197: 5
+2026-03-12 20:56:30,937 - INFO - Uploading to eBay: 1.png
+2026-03-12 20:56:32,311 - INFO - Uploaded image 1.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NmAAAeSw...
+2026-03-12 20:56:32,311 - INFO - Uploading to eBay: 2.png
+2026-03-12 20:56:33,539 - INFO - Uploaded image 2.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cCIAAeSw...
+2026-03-12 20:56:33,541 - INFO - Uploading to eBay: 3.png
+2026-03-12 20:56:35,016 - INFO - Uploaded image 3.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9IAAAeSw...
+2026-03-12 20:56:35,018 - INFO - Uploading to eBay: 4.png
+2026-03-12 20:56:36,948 - INFO - Uploaded image 4.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kUYAAeSw...
+2026-03-12 20:56:36,951 - INFO - Uploading to eBay: 5.png
+2026-03-12 20:56:38,755 - INFO - Uploaded image 5.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VwAAAeSw...
+2026-03-12 20:56:38,756 - INFO - Upload summary for SKU JAL00197 -> uploaded: 5, cached: 0, urls: 5
+2026-03-12 20:56:38,763 - INFO - Saved 5 new eBay URLs to JSON
+2026-03-12 20:56:38,763 - INFO - Upload result for JAL00197: {'success': True, 'sku': 'JAL00197', 'uploaded_count': 5, 'cached_count': 0, 'total_count': 5, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NmAAAeSwDAJpsxpv/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/cCIAAeSw0fFpsxpw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/9IAAAeSwJ21psxpy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/kUYAAeSwcQFpsxp0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VwAAAeSw4c1psxp1/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 5 new images, used 0 cached URLs'}
+2026-03-12 20:56:38,764 - INFO - Looking up manufacturer info for 'Patikil' using AI...
+2026-03-12 20:56:39,501 - WARNING - AI returned error for 'Patikil': No verified manufacturer data found
+2026-03-12 20:56:39,501 - INFO - Identifier payload for SKU JAL00197: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-12 20:56:41,578 - ERROR - Failed to create listing for SKU JAL00197: ['Code 21919303: Das Artikelmerkmal ModellÂ\xa0fehlt.Â\xa0FÃ¼gen Sie Modell zu diesem Angebot hinzu, geben Sie einen gÃ¼ltigen Wert ein und versuchen Sie es dann noch einmal.']
+2026-03-12 20:56:41,578 - ERROR - [BATCH 0be004c0fc] FAILED sku=JAL00197 message=Listing creation failed: Code 21919303: Das Artikelmerkmal ModellÂ fehlt.Â FÃ¼gen Sie Modell zu diesem Angebot hinzu, geben Sie einen gÃ¼ltigen Wert ein und versuchen Sie es dann noch einmal. errors=['Code 21919303: Das Artikelmerkmal ModellÂ\xa0fehlt.Â\xa0FÃ¼gen Sie Modell zu diesem Angebot hinzu, geben Sie einen gÃ¼ltigen Wert ein und versuchen Sie es dann noch einmal.']
+2026-03-12 20:56:41,578 - INFO - [BATCH 0be004c0fc] Completed: success=True total=6 successful=5 failed=1
+2026-03-13 15:07:09,876 - INFO - [BATCH aefe1de5c3] /api/ebay/listings/batch received: total=13 stop_on_error=False
+2026-03-13 15:07:09,877 - INFO - [BATCH aefe1de5c3] Processing 1/13 sku=HANVINBTJ015 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:07:09,877 - INFO - Creating eBay listing for SKU HANVINBTJ015 at price 25.0€
+2026-03-13 15:07:11,311 - INFO - Listing condition for SKU HANVINBTJ015: text='', id=3000, category_id=57988
+2026-03-13 15:07:11,312 - INFO - Uploading images for SKU HANVINBTJ015 (max: 12)
+2026-03-13 15:07:11,325 - INFO - Image files found on disk for SKU HANVINBTJ015: 11
+2026-03-13 15:07:11,325 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ015 (4)_1_lanczos_4x.png
+2026-03-13 15:07:18,610 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ015 (4)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/m6sAAeSw...
+2026-03-13 15:07:18,613 - INFO - Uploading to eBay: HANVINBTJ015 (3).jpg
+2026-03-13 15:07:25,613 - INFO - Uploaded image HANVINBTJ015 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/emwAAeSw...
+2026-03-13 15:07:25,617 - INFO - Uploading to eBay: HANVINBTJ015 (4).jpg
+2026-03-13 15:07:31,422 - INFO - Uploaded image HANVINBTJ015 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cTMAAeSw...
+2026-03-13 15:07:31,424 - INFO - Uploading to eBay: HANVINBTJ015 (9).jpg
+2026-03-13 15:07:35,149 - INFO - Uploaded image HANVINBTJ015 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lMkAAeSw...
+2026-03-13 15:07:35,151 - INFO - Uploading to eBay: HANVINBTJ015 (5).jpg
+2026-03-13 15:07:38,344 - INFO - Uploaded image HANVINBTJ015 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U-UAAeSw...
+2026-03-13 15:07:38,346 - INFO - Uploading to eBay: HANVINBTJ015 (6).jpg
+2026-03-13 15:07:41,024 - INFO - Uploaded image HANVINBTJ015 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/MRwAAeSw...
+2026-03-13 15:07:41,027 - INFO - Uploading to eBay: HANVINBTJ015 (7).jpg
+2026-03-13 15:07:45,503 - INFO - Uploaded image HANVINBTJ015 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/9t4AAeSw...
+2026-03-13 15:07:45,506 - INFO - Uploading to eBay: HANVINBTJ015 (8).jpg
+2026-03-13 15:07:48,781 - INFO - Uploaded image HANVINBTJ015 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dGMAAeSw...
+2026-03-13 15:07:48,783 - INFO - Uploading to eBay: HANVINBTJ015 (10).jpg
+2026-03-13 15:07:51,453 - INFO - Uploaded image HANVINBTJ015 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7t4AAeSw...
+2026-03-13 15:07:51,454 - INFO - Uploading to eBay: HANVINBTJ015 (1).jpg
+2026-03-13 15:08:01,505 - INFO - Uploaded image HANVINBTJ015 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XkYAAeSw...
+2026-03-13 15:08:01,506 - INFO - Upload summary for SKU HANVINBTJ015 -> uploaded: 10, cached: 0, urls: 10
+2026-03-13 15:08:01,512 - INFO - Saved 10 new eBay URLs to JSON
+2026-03-13 15:08:01,513 - INFO - Upload result for HANVINBTJ015: {'success': True, 'sku': 'HANVINBTJ015', 'uploaded_count': 10, 'cached_count': 0, 'total_count': 10, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/m6sAAeSwpZhptBoV/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/emwAAeSwZQRptBoc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cTMAAeSw0gNptBoi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lMkAAeSwzNpptBom/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U-UAAeSwG55ptBop/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/MRwAAeSwBf9ptBor/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/9t4AAeSwM7JptBow/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dGMAAeSwt4xptBoz/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7t4AAeSwn-FptBo2/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XkYAAeSwSsJptBpA/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 10 new images, used 0 cached URLs'}
+2026-03-13 15:08:01,514 - INFO - Using cached manufacturer info for 'Nike'
+2026-03-13 15:08:01,514 - INFO - Identifier payload for SKU HANVINBTJ015: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:08:05,781 - INFO - Successfully created listing for SKU HANVINBTJ015, ItemID: 137127590978
+2026-03-13 15:08:05,829 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ015 item_id=137127590978
+2026-03-13 15:08:05,830 - INFO - [BATCH aefe1de5c3] Processing 2/13 sku=HANVINBTJ014 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:08:05,830 - INFO - Creating eBay listing for SKU HANVINBTJ014 at price 25.0€
+2026-03-13 15:08:05,879 - INFO - Listing condition for SKU HANVINBTJ014: text='', id=3000, category_id=57988
+2026-03-13 15:08:05,879 - INFO - Uploading images for SKU HANVINBTJ014 (max: 12)
+2026-03-13 15:08:05,891 - INFO - Image files found on disk for SKU HANVINBTJ014: 10
+2026-03-13 15:08:05,891 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ014 (2)_1_lanczos_4x.png
+2026-03-13 15:08:11,588 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ014 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/A7gAAeSw...
+2026-03-13 15:08:11,590 - INFO - Uploading to eBay: HANVINBTJ014 (2).jpg
+2026-03-13 15:08:15,019 - INFO - Uploaded image HANVINBTJ014 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FNcAAeSw...
+2026-03-13 15:08:15,020 - INFO - Uploading to eBay: HANVINBTJ014 (8).jpg
+2026-03-13 15:08:17,771 - INFO - Uploaded image HANVINBTJ014 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WuYAAeSw...
+2026-03-13 15:08:17,773 - INFO - Uploading to eBay: HANVINBTJ014 (3).jpg
+2026-03-13 15:08:20,402 - INFO - Uploaded image HANVINBTJ014 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9XMAAeSw...
+2026-03-13 15:08:20,403 - INFO - Uploading to eBay: HANVINBTJ014 (4).jpg
+2026-03-13 15:08:26,772 - INFO - Uploaded image HANVINBTJ014 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BTwAAeSw...
+2026-03-13 15:08:26,774 - INFO - Uploading to eBay: HANVINBTJ014 (5).jpg
+2026-03-13 15:08:30,372 - INFO - Uploaded image HANVINBTJ014 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VYcAAeSw...
+2026-03-13 15:08:30,374 - INFO - Uploading to eBay: HANVINBTJ014 (6).jpg
+2026-03-13 15:08:35,902 - INFO - Uploaded image HANVINBTJ014 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Dr8AAeSw...
+2026-03-13 15:08:35,904 - INFO - Uploading to eBay: HANVINBTJ014 (7).jpg
+2026-03-13 15:08:38,568 - INFO - Uploaded image HANVINBTJ014 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/amkAAeSw...
+2026-03-13 15:08:38,570 - INFO - Uploading to eBay: HANVINBTJ014 (9).jpg
+2026-03-13 15:08:42,061 - INFO - Uploaded image HANVINBTJ014 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dKEAAeSw...
+2026-03-13 15:08:42,063 - INFO - Uploading to eBay: HANVINBTJ014 (1).jpg
+2026-03-13 15:08:44,920 - INFO - Uploaded image HANVINBTJ014 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-80AAeSw...
+2026-03-13 15:08:44,921 - INFO - Upload summary for SKU HANVINBTJ014 -> uploaded: 10, cached: 0, urls: 10
+2026-03-13 15:08:44,927 - INFO - Saved 10 new eBay URLs to JSON
+2026-03-13 15:08:44,928 - INFO - Upload result for HANVINBTJ014: {'success': True, 'sku': 'HANVINBTJ014', 'uploaded_count': 10, 'cached_count': 0, 'total_count': 10, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/A7gAAeSw1-NptBpK/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FNcAAeSwUoRptBpO/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WuYAAeSwdipptBpQ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9XMAAeSwfypptBpT/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BTwAAeSwG-xptBpZ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VYcAAeSwjchptBpd/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Dr8AAeSwyndptBpi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/amkAAeSwGvtptBpl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dKEAAeSw0gNptBpp/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-80AAeSwO5ZptBps/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 10 new images, used 0 cached URLs'}
+2026-03-13 15:08:44,929 - INFO - Looking up manufacturer info for 'Under Armour' using AI...
+2026-03-13 15:08:48,426 - INFO - Manufacturer info extracted and cached for 'Under Armour'
+2026-03-13 15:08:48,426 - INFO - Identifier payload for SKU HANVINBTJ014: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:08:52,244 - INFO - Successfully created listing for SKU HANVINBTJ014, ItemID: 137127594751
+2026-03-13 15:08:52,281 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ014 item_id=137127594751
+2026-03-13 15:08:52,281 - INFO - [BATCH aefe1de5c3] Processing 3/13 sku=HANVINBTJ013 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:08:52,281 - INFO - Creating eBay listing for SKU HANVINBTJ013 at price 25.0€
+2026-03-13 15:08:52,330 - INFO - Listing condition for SKU HANVINBTJ013: text='', id=3000, category_id=57988
+2026-03-13 15:08:52,330 - INFO - Uploading images for SKU HANVINBTJ013 (max: 12)
+2026-03-13 15:08:52,344 - INFO - Image files found on disk for SKU HANVINBTJ013: 12
+2026-03-13 15:08:52,344 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ013 (2)_1_lanczos_4x.png
+2026-03-13 15:08:58,143 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ013 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/F40AAeSw...
+2026-03-13 15:08:58,146 - INFO - Uploading to eBay: HANVINBTJ013 (3).jpg
+2026-03-13 15:09:02,215 - INFO - Uploaded image HANVINBTJ013 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XG8AAeSw...
+2026-03-13 15:09:02,218 - INFO - Uploading to eBay: HANVINBTJ013 (2).jpg
+2026-03-13 15:09:05,856 - INFO - Uploaded image HANVINBTJ013 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KJIAAeSw...
+2026-03-13 15:09:05,858 - INFO - Uploading to eBay: HANVINBTJ013 (11).jpg
+2026-03-13 15:09:08,812 - INFO - Uploaded image HANVINBTJ013 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GO0AAeSw...
+2026-03-13 15:09:08,813 - INFO - Uploading to eBay: HANVINBTJ013 (1).jpg
+2026-03-13 15:09:12,191 - INFO - Uploaded image HANVINBTJ013 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d9AAAeSw...
+2026-03-13 15:09:12,192 - INFO - Uploading to eBay: HANVINBTJ013 (4).jpg
+2026-03-13 15:09:15,777 - INFO - Uploaded image HANVINBTJ013 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Z6oAAeSw...
+2026-03-13 15:09:15,779 - INFO - Uploading to eBay: HANVINBTJ013 (5).jpg
+2026-03-13 15:09:22,965 - INFO - Uploaded image HANVINBTJ013 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G5EAAeSw...
+2026-03-13 15:09:22,966 - INFO - Uploading to eBay: HANVINBTJ013 (6).jpg
+2026-03-13 15:09:26,555 - INFO - Uploaded image HANVINBTJ013 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6-gAAeSw...
+2026-03-13 15:09:26,557 - INFO - Uploading to eBay: HANVINBTJ013 (7).jpg
+2026-03-13 15:09:29,440 - INFO - Uploaded image HANVINBTJ013 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AsgAAeSw...
+2026-03-13 15:09:29,442 - INFO - Uploading to eBay: HANVINBTJ013 (8).jpg
+2026-03-13 15:09:32,059 - INFO - Uploaded image HANVINBTJ013 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FUYAAeSw...
+2026-03-13 15:09:32,060 - INFO - Uploading to eBay: HANVINBTJ013 (9).jpg
+2026-03-13 15:09:35,579 - INFO - Uploaded image HANVINBTJ013 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ak0AAeSw...
+2026-03-13 15:09:35,581 - INFO - Uploading to eBay: HANVINBTJ013 (10).jpg
+2026-03-13 15:09:39,354 - INFO - Uploaded image HANVINBTJ013 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bYEAAeSw...
+2026-03-13 15:09:39,355 - INFO - Upload summary for SKU HANVINBTJ013 -> uploaded: 12, cached: 0, urls: 12
+2026-03-13 15:09:39,360 - INFO - Saved 12 new eBay URLs to JSON
+2026-03-13 15:09:39,362 - INFO - Upload result for HANVINBTJ013: {'success': True, 'sku': 'HANVINBTJ013', 'uploaded_count': 12, 'cached_count': 0, 'total_count': 12, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/F40AAeSwGmhptBp5/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XG8AAeSw7tJptBp9/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KJIAAeSwsGZptBqA/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GO0AAeSwXdhptBqD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d9AAAeSwgBlptBqH/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Z6oAAeSw9KNptBqK/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G5EAAeSwd6FptBqS/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6-gAAeSwfK1ptBqV/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AsgAAeSwpO5ptBqY/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FUYAAeSwZqVptBqb/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ak0AAeSwlYJptBqe/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bYEAAeSwGjxptBqi/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 12 new images, used 0 cached URLs'}
+2026-03-13 15:09:39,363 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:09:39,363 - INFO - Identifier payload for SKU HANVINBTJ013: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:09:42,885 - INFO - Successfully created listing for SKU HANVINBTJ013, ItemID: 137127596501
+2026-03-13 15:09:42,936 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ013 item_id=137127596501
+2026-03-13 15:09:42,936 - INFO - [BATCH aefe1de5c3] Processing 4/13 sku=HANVINBTJ012 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:09:42,937 - INFO - Creating eBay listing for SKU HANVINBTJ012 at price 25.0€
+2026-03-13 15:09:42,990 - INFO - Listing condition for SKU HANVINBTJ012: text='', id=3000, category_id=57988
+2026-03-13 15:09:42,990 - INFO - Uploading images for SKU HANVINBTJ012 (max: 12)
+2026-03-13 15:09:43,002 - INFO - Image files found on disk for SKU HANVINBTJ012: 10
+2026-03-13 15:09:43,003 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ012 (2)_1_lanczos_4x.png
+2026-03-13 15:09:48,402 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ012 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/bdcAAeSw...
+2026-03-13 15:09:48,404 - INFO - Uploading to eBay: HANVINBTJ012 (2).jpg
+2026-03-13 15:09:51,925 - INFO - Uploaded image HANVINBTJ012 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9T4AAeSw...
+2026-03-13 15:09:51,928 - INFO - Uploading to eBay: HANVINBTJ012 (8).jpg
+2026-03-13 15:09:55,765 - INFO - Uploaded image HANVINBTJ012 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b5EAAeSw...
+2026-03-13 15:09:55,767 - INFO - Uploading to eBay: HANVINBTJ012 (1).jpg
+2026-03-13 15:09:59,606 - INFO - Uploaded image HANVINBTJ012 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~YIAAeSw...
+2026-03-13 15:09:59,608 - INFO - Uploading to eBay: HANVINBTJ012 (3).jpg
+2026-03-13 15:10:04,109 - INFO - Uploaded image HANVINBTJ012 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aiUAAeSw...
+2026-03-13 15:10:04,112 - INFO - Uploading to eBay: HANVINBTJ012 (4).jpg
+2026-03-13 15:10:08,096 - INFO - Uploaded image HANVINBTJ012 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/Tw4AAeSw...
+2026-03-13 15:10:08,098 - INFO - Uploading to eBay: HANVINBTJ012 (5).jpg
+2026-03-13 15:10:13,098 - INFO - Uploaded image HANVINBTJ012 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EsgAAeSw...
+2026-03-13 15:10:13,100 - INFO - Uploading to eBay: HANVINBTJ012 (6).jpg
+2026-03-13 15:10:16,906 - INFO - Uploaded image HANVINBTJ012 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KecAAeSw...
+2026-03-13 15:10:16,907 - INFO - Uploading to eBay: HANVINBTJ012 (7).jpg
+2026-03-13 15:10:21,070 - INFO - Uploaded image HANVINBTJ012 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aQgAAeSw...
+2026-03-13 15:10:21,072 - INFO - Uploading to eBay: HANVINBTJ012 (9).jpg
+2026-03-13 15:10:25,695 - INFO - Uploaded image HANVINBTJ012 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UOEAAeSw...
+2026-03-13 15:10:25,697 - INFO - Upload summary for SKU HANVINBTJ012 -> uploaded: 10, cached: 0, urls: 10
+2026-03-13 15:10:25,703 - INFO - Saved 10 new eBay URLs to JSON
+2026-03-13 15:10:25,704 - INFO - Upload result for HANVINBTJ012: {'success': True, 'sku': 'HANVINBTJ012', 'uploaded_count': 10, 'cached_count': 0, 'total_count': 10, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/bdcAAeSwhHdptBqr/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9T4AAeSwdWNptBqu/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b5EAAeSwi~JptBqy/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~YIAAeSw7mpptBq2/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aiUAAeSwd0BptBq7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/Tw4AAeSw-olptBq~/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EsgAAeSwyndptBrE/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KecAAeSw6IJptBrI/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aQgAAeSwqd9ptBrM/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UOEAAeSw635ptBrQ/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 10 new images, used 0 cached URLs'}
+2026-03-13 15:10:25,705 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:10:25,705 - INFO - Identifier payload for SKU HANVINBTJ012: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:10:29,048 - INFO - Successfully created listing for SKU HANVINBTJ012, ItemID: 137127597315
+2026-03-13 15:10:29,102 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ012 item_id=137127597315
+2026-03-13 15:10:29,102 - INFO - [BATCH aefe1de5c3] Processing 5/13 sku=HANVINBTJ011 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:10:29,102 - INFO - Creating eBay listing for SKU HANVINBTJ011 at price 25.0€
+2026-03-13 15:10:29,168 - INFO - Listing condition for SKU HANVINBTJ011: text='', id=3000, category_id=57988
+2026-03-13 15:10:29,168 - INFO - Uploading images for SKU HANVINBTJ011 (max: 12)
+2026-03-13 15:10:29,183 - INFO - Image files found on disk for SKU HANVINBTJ011: 9
+2026-03-13 15:10:29,183 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (3)_1_lanczos_4x.png
+2026-03-13 15:10:36,085 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ011 (3)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/fYMAAeSw...
+2026-03-13 15:10:36,088 - INFO - Uploading to eBay: HANVINBTJ011 (2).jpg
+2026-03-13 15:10:39,643 - INFO - Uploaded image HANVINBTJ011 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7f8AAeSw...
+2026-03-13 15:10:39,645 - INFO - Uploading to eBay: HANVINBTJ011 (3).jpg
+2026-03-13 15:10:42,966 - INFO - Uploaded image HANVINBTJ011 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lUwAAeSw...
+2026-03-13 15:10:42,968 - INFO - Uploading to eBay: HANVINBTJ011 (1).jpg
+2026-03-13 15:10:46,149 - INFO - Uploaded image HANVINBTJ011 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mZ4AAeSw...
+2026-03-13 15:10:46,151 - INFO - Uploading to eBay: HANVINBTJ011 (4).jpg
+2026-03-13 15:10:50,411 - INFO - Uploaded image HANVINBTJ011 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6KsAAeSw...
+2026-03-13 15:10:50,413 - INFO - Uploading to eBay: HANVINBTJ011 (5).jpg
+2026-03-13 15:10:55,210 - INFO - Uploaded image HANVINBTJ011 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BysAAeSw...
+2026-03-13 15:10:55,212 - INFO - Uploading to eBay: HANVINBTJ011 (6).jpg
+2026-03-13 15:10:58,369 - INFO - Uploaded image HANVINBTJ011 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wMkAAeSw...
+2026-03-13 15:10:58,382 - INFO - Uploading to eBay: HANVINBTJ011 (7).jpg
+2026-03-13 15:11:01,450 - INFO - Uploaded image HANVINBTJ011 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WbEAAeSw...
+2026-03-13 15:11:01,451 - INFO - Uploading to eBay: HANVINBTJ011 (8).jpg
+2026-03-13 15:11:05,707 - INFO - Uploaded image HANVINBTJ011 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HnEAAeSw...
+2026-03-13 15:11:05,709 - INFO - Upload summary for SKU HANVINBTJ011 -> uploaded: 9, cached: 0, urls: 9
+2026-03-13 15:11:05,715 - INFO - Saved 9 new eBay URLs to JSON
+2026-03-13 15:11:05,715 - INFO - Upload result for HANVINBTJ011: {'success': True, 'sku': 'HANVINBTJ011', 'uploaded_count': 9, 'cached_count': 0, 'total_count': 9, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/fYMAAeSwRr1ptBra/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7f8AAeSww-VptBre/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lUwAAeSwy8FptBri/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mZ4AAeSwv6JptBrl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6KsAAeSwKFtptBrp/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BysAAeSwM3FptBru/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wMkAAeSww5NptBrx/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WbEAAeSwLkJptBr0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HnEAAeSwAANptBr4/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 9 new images, used 0 cached URLs'}
+2026-03-13 15:11:05,716 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:11:05,717 - INFO - Identifier payload for SKU HANVINBTJ011: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:11:10,007 - INFO - Successfully created listing for SKU HANVINBTJ011, ItemID: 137127598580
+2026-03-13 15:11:10,045 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ011 item_id=137127598580
+2026-03-13 15:11:10,045 - INFO - [BATCH aefe1de5c3] Processing 6/13 sku=HANVINBTJ010 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:11:10,045 - INFO - Creating eBay listing for SKU HANVINBTJ010 at price 25.0€
+2026-03-13 15:11:10,096 - INFO - Listing condition for SKU HANVINBTJ010: text='', id=3000, category_id=57988
+2026-03-13 15:11:10,097 - INFO - Uploading images for SKU HANVINBTJ010 (max: 12)
+2026-03-13 15:11:10,115 - INFO - Image files found on disk for SKU HANVINBTJ010: 11
+2026-03-13 15:11:10,116 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ010 (2)_1_lanczos_4x.png
+2026-03-13 15:11:15,380 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ010 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/BgUAAeSw...
+2026-03-13 15:11:15,381 - INFO - Uploading to eBay: HANVINBTJ010 (2).jpg
+2026-03-13 15:11:18,444 - INFO - Uploaded image HANVINBTJ010 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LskAAeSw...
+2026-03-13 15:11:18,446 - INFO - Uploading to eBay: HANVINBTJ010 (3).jpg
+2026-03-13 15:11:21,779 - INFO - Uploaded image HANVINBTJ010 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pOUAAeSw...
+2026-03-13 15:11:21,781 - INFO - Uploading to eBay: HANVINBTJ010 (10).jpg
+2026-03-13 15:11:25,051 - INFO - Uploaded image HANVINBTJ010 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/odYAAeSw...
+2026-03-13 15:11:25,053 - INFO - Uploading to eBay: HANVINBTJ010 (1).jpg
+2026-03-13 15:11:29,356 - INFO - Uploaded image HANVINBTJ010 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HmYAAeSw...
+2026-03-13 15:11:29,357 - INFO - Uploading to eBay: HANVINBTJ010 (4).jpg
+2026-03-13 15:11:33,371 - INFO - Uploaded image HANVINBTJ010 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HTQAAeSw...
+2026-03-13 15:11:33,373 - INFO - Uploading to eBay: HANVINBTJ010 (5).jpg
+2026-03-13 15:11:37,208 - INFO - Uploaded image HANVINBTJ010 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/BSQAAeSw...
+2026-03-13 15:11:37,210 - INFO - Uploading to eBay: HANVINBTJ010 (6).jpg
+2026-03-13 15:11:42,797 - INFO - Uploaded image HANVINBTJ010 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT0AAeSw...
+2026-03-13 15:11:42,798 - INFO - Uploading to eBay: HANVINBTJ010 (7).jpg
+2026-03-13 15:11:47,693 - INFO - Uploaded image HANVINBTJ010 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bfcAAeSw...
+2026-03-13 15:11:47,695 - INFO - Uploading to eBay: HANVINBTJ010 (8).jpg
+2026-03-13 15:11:51,138 - INFO - Uploaded image HANVINBTJ010 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AAcAAeSw...
+2026-03-13 15:11:51,140 - INFO - Uploading to eBay: HANVINBTJ010 (9).jpg
+2026-03-13 15:11:54,373 - INFO - Uploaded image HANVINBTJ010 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/e-oAAeSw...
+2026-03-13 15:11:54,375 - INFO - Upload summary for SKU HANVINBTJ010 -> uploaded: 11, cached: 0, urls: 11
+2026-03-13 15:11:54,382 - INFO - Saved 11 new eBay URLs to JSON
+2026-03-13 15:11:54,382 - INFO - Upload result for HANVINBTJ010: {'success': True, 'sku': 'HANVINBTJ010', 'uploaded_count': 11, 'cached_count': 0, 'total_count': 11, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/BgUAAeSwFXpptBsC/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LskAAeSwtZdptBsF/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pOUAAeSwkONptBsI/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/odYAAeSwAvJptBsL/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HmYAAeSwjLdptBsQ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HTQAAeSwGmhptBsU/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/BSQAAeSwk6RptBsY/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT0AAeSwF~FptBsd/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bfcAAeSwd0BptBsi/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AAcAAeSwMQhptBsm/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/e-oAAeSwMWJptBsp/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 11 new images, used 0 cached URLs'}
+2026-03-13 15:11:54,384 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:11:54,384 - INFO - Identifier payload for SKU HANVINBTJ010: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:11:58,737 - INFO - Successfully created listing for SKU HANVINBTJ010, ItemID: 137127601005
+2026-03-13 15:11:58,791 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ010 item_id=137127601005
+2026-03-13 15:11:58,791 - INFO - [BATCH aefe1de5c3] Processing 7/13 sku=HANVINBTJ009 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:11:58,791 - INFO - Creating eBay listing for SKU HANVINBTJ009 at price 25.0€
+2026-03-13 15:11:58,845 - INFO - Listing condition for SKU HANVINBTJ009: text='', id=3000, category_id=57988
+2026-03-13 15:11:58,845 - INFO - Uploading images for SKU HANVINBTJ009 (max: 12)
+2026-03-13 15:11:58,853 - INFO - Image files found on disk for SKU HANVINBTJ009: 6
+2026-03-13 15:11:58,853 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ009 (2)_1_lanczos_4x.png
+2026-03-13 15:12:05,566 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ009 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/jHQAAeSw...
+2026-03-13 15:12:05,567 - INFO - Uploading to eBay: HANVINBTJ009 (2).jpg
+2026-03-13 15:12:08,641 - INFO - Uploaded image HANVINBTJ009 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cg4AAeSw...
+2026-03-13 15:12:08,643 - INFO - Uploading to eBay: HANVINBTJ009 (1).jpg
+2026-03-13 15:12:12,392 - INFO - Uploaded image HANVINBTJ009 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DJQAAeSw...
+2026-03-13 15:12:12,394 - INFO - Uploading to eBay: HANVINBTJ009 (4).jpg
+2026-03-13 15:12:16,175 - INFO - Uploaded image HANVINBTJ009 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LzYAAeSw...
+2026-03-13 15:12:16,177 - INFO - Uploading to eBay: HANVINBTJ009 (3).jpg
+2026-03-13 15:12:20,606 - INFO - Uploaded image HANVINBTJ009 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JBoAAeSw...
+2026-03-13 15:12:20,608 - INFO - Uploading to eBay: HANVINBTJ009 (5).jpg
+2026-03-13 15:12:24,236 - INFO - Uploaded image HANVINBTJ009 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UV0AAeSw...
+2026-03-13 15:12:24,238 - INFO - Upload summary for SKU HANVINBTJ009 -> uploaded: 6, cached: 0, urls: 6
+2026-03-13 15:12:24,244 - INFO - Saved 6 new eBay URLs to JSON
+2026-03-13 15:12:24,245 - INFO - Upload result for HANVINBTJ009: {'success': True, 'sku': 'HANVINBTJ009', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/jHQAAeSwBhJptBs0/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cg4AAeSwUztptBs3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DJQAAeSwSn9ptBs7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LzYAAeSwsGZptBs~/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JBoAAeSwUotptBtD/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UV0AAeSw-6ZptBtH/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-03-13 15:12:24,246 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:12:24,246 - INFO - Identifier payload for SKU HANVINBTJ009: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:12:27,854 - INFO - Successfully created listing for SKU HANVINBTJ009, ItemID: 137127602838
+2026-03-13 15:12:27,907 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ009 item_id=137127602838
+2026-03-13 15:12:27,907 - INFO - [BATCH aefe1de5c3] Processing 8/13 sku=HANVINBTJ008 price=25.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:12:27,907 - INFO - Creating eBay listing for SKU HANVINBTJ008 at price 25.0€
+2026-03-13 15:12:27,962 - INFO - Listing condition for SKU HANVINBTJ008: text='', id=3000, category_id=57988
+2026-03-13 15:12:27,962 - INFO - Uploading images for SKU HANVINBTJ008 (max: 12)
+2026-03-13 15:12:27,978 - INFO - Image files found on disk for SKU HANVINBTJ008: 13
+2026-03-13 15:12:27,978 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ008 (2)_1_lanczos_4x.png
+2026-03-13 15:12:35,981 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBTJ008 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/~MgAAeSw...
+2026-03-13 15:12:35,983 - INFO - Uploading to eBay: HANVINBTJ008 (2).jpg
+2026-03-13 15:12:42,778 - INFO - Uploaded image HANVINBTJ008 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p0gAAeSw...
+2026-03-13 15:12:42,780 - INFO - Uploading to eBay: HANVINBTJ008 (3).jpg
+2026-03-13 15:12:46,980 - INFO - Uploaded image HANVINBTJ008 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qIEAAeSw...
+2026-03-13 15:12:46,982 - INFO - Uploading to eBay: HANVINBTJ008 (4).jpg
+2026-03-13 15:12:51,145 - INFO - Uploaded image HANVINBTJ008 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~VUAAeSw...
+2026-03-13 15:12:51,148 - INFO - Uploading to eBay: HANVINBTJ008 (5).jpg
+2026-03-13 15:12:54,609 - INFO - Uploaded image HANVINBTJ008 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/gSsAAeSw...
+2026-03-13 15:12:54,610 - INFO - Uploading to eBay: HANVINBTJ008 (7).jpg
+2026-03-13 15:12:58,507 - INFO - Uploaded image HANVINBTJ008 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pecAAeSw...
+2026-03-13 15:12:58,510 - INFO - Uploading to eBay: HANVINBTJ008 (8).jpg
+2026-03-13 15:13:01,523 - INFO - Uploaded image HANVINBTJ008 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8qkAAeSw...
+2026-03-13 15:13:01,525 - INFO - Uploading to eBay: HANVINBTJ008 (9).jpg
+2026-03-13 15:13:05,299 - INFO - Uploaded image HANVINBTJ008 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/C5gAAeSw...
+2026-03-13 15:13:05,301 - INFO - Uploading to eBay: HANVINBTJ008 (1).jpg
+2026-03-13 15:13:09,255 - INFO - Uploaded image HANVINBTJ008 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XIMAAeSw...
+2026-03-13 15:13:09,259 - INFO - Uploading to eBay: HANVINBTJ008 (10).jpg
+2026-03-13 15:13:12,499 - INFO - Uploaded image HANVINBTJ008 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~tUAAeSw...
+2026-03-13 15:13:12,501 - INFO - Uploading to eBay: HANVINBTJ008 (11).jpg
+2026-03-13 15:13:15,714 - INFO - Uploaded image HANVINBTJ008 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-kkAAeSw...
+2026-03-13 15:13:15,715 - INFO - Upload summary for SKU HANVINBTJ008 -> uploaded: 11, cached: 0, urls: 11
+2026-03-13 15:13:15,722 - INFO - Saved 11 new eBay URLs to JSON
+2026-03-13 15:13:15,722 - INFO - Upload result for HANVINBTJ008: {'success': True, 'sku': 'HANVINBTJ008', 'uploaded_count': 11, 'cached_count': 0, 'total_count': 11, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/~MgAAeSwPa9ptBtT/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p0gAAeSwkONptBtZ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qIEAAeSwfJZptBte/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~VUAAeSw551ptBth/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/gSsAAeSwykpptBtl/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pecAAeSwkXJptBtp/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8qkAAeSwz6BptBts/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/C5gAAeSwFJtptBtw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XIMAAeSwqkdptBt0/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~tUAAeSwrA1ptBt3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-kkAAeSwj4FptBt6/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 11 new images, used 0 cached URLs'}
+2026-03-13 15:13:15,724 - INFO - Using cached manufacturer info for 'Adidas'
+2026-03-13 15:13:15,724 - INFO - Identifier payload for SKU HANVINBTJ008: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:13:18,932 - INFO - Successfully created listing for SKU HANVINBTJ008, ItemID: 137127607783
+2026-03-13 15:13:18,972 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBTJ008 item_id=137127607783
+2026-03-13 15:13:18,972 - INFO - [BATCH aefe1de5c3] Processing 9/13 sku=HANVINBM016 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:13:18,972 - INFO - Creating eBay listing for SKU HANVINBM016 at price 20.0€
+2026-03-13 15:13:19,017 - INFO - Listing condition for SKU HANVINBM016: text='', id=3000, category_id=185101
+2026-03-13 15:13:19,017 - INFO - Uploading images for SKU HANVINBM016 (max: 12)
+2026-03-13 15:13:19,036 - INFO - Image files found on disk for SKU HANVINBM016: 9
+2026-03-13 15:13:19,036 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM016 (3)_1_lanczos_4x.png
+2026-03-13 15:13:23,461 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM016 (3)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/nrQAAeSw...
+2026-03-13 15:13:23,463 - INFO - Uploading to eBay: HANVINBM016 (3).jpg
+2026-03-13 15:13:26,201 - INFO - Uploaded image HANVINBM016 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U5YAAeSw...
+2026-03-13 15:13:26,201 - INFO - Uploading to eBay: HANVINBM016 (4).jpg
+2026-03-13 15:13:29,340 - INFO - Uploaded image HANVINBM016 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/h3oAAeSw...
+2026-03-13 15:13:29,342 - INFO - Uploading to eBay: HANVINBM016 (1).jpg
+2026-03-13 15:13:32,601 - INFO - Uploaded image HANVINBM016 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aLUAAeSw...
+2026-03-13 15:13:32,604 - INFO - Uploading to eBay: HANVINBM016 (5).jpg
+2026-03-13 15:13:36,348 - INFO - Uploaded image HANVINBM016 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~R4AAeSw...
+2026-03-13 15:13:36,350 - INFO - Uploading to eBay: HANVINBM016 (6).jpg
+2026-03-13 15:13:40,095 - INFO - Uploaded image HANVINBM016 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~asAAeSw...
+2026-03-13 15:13:40,097 - INFO - Upload summary for SKU HANVINBM016 -> uploaded: 6, cached: 0, urls: 6
+2026-03-13 15:13:40,105 - INFO - Saved 6 new eBay URLs to JSON
+2026-03-13 15:13:40,105 - INFO - Upload result for HANVINBM016: {'success': True, 'sku': 'HANVINBM016', 'uploaded_count': 6, 'cached_count': 0, 'total_count': 6, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/nrQAAeSwchFptBuC/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U5YAAeSw-6ZptBuF/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/h3oAAeSwEVVptBuI/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aLUAAeSwqg1ptBuL/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~R4AAeSw-RRptBuP/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~asAAeSwdWNptBuT/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 6 new images, used 0 cached URLs'}
+2026-03-13 15:13:40,106 - INFO - Looking up manufacturer info for 'Tommy Hilfiger Golf' using AI...
+2026-03-13 15:13:41,720 - INFO - Manufacturer info extracted and cached for 'Tommy Hilfiger Golf'
+2026-03-13 15:13:41,720 - INFO - Identifier payload for SKU HANVINBM016: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:13:46,250 - INFO - Successfully created listing for SKU HANVINBM016, ItemID: 137127611013
+2026-03-13 15:13:46,300 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBM016 item_id=137127611013
+2026-03-13 15:13:46,301 - INFO - [BATCH aefe1de5c3] Processing 10/13 sku=HANVINBM015 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:13:46,301 - INFO - Creating eBay listing for SKU HANVINBM015 at price 20.0€
+2026-03-13 15:13:46,354 - INFO - Listing condition for SKU HANVINBM015: text='', id=3000, category_id=185101
+2026-03-13 15:13:46,354 - INFO - Uploading images for SKU HANVINBM015 (max: 12)
+2026-03-13 15:13:46,371 - INFO - Image files found on disk for SKU HANVINBM015: 9
+2026-03-13 15:13:46,372 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM015 (2)_1_lanczos_4x.png
+2026-03-13 15:13:52,897 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM015 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/C3cAAeSw...
+2026-03-13 15:13:52,899 - INFO - Uploading to eBay: HANVINBM015 (2).jpg
+2026-03-13 15:13:57,378 - INFO - Uploaded image HANVINBM015 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ErgAAeSw...
+2026-03-13 15:13:57,380 - INFO - Uploading to eBay: HANVINBM015 (1).jpg
+2026-03-13 15:14:01,380 - INFO - Uploaded image HANVINBM015 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/C0sAAeSw...
+2026-03-13 15:14:01,382 - INFO - Uploading to eBay: HANVINBM015 (6).jpg
+2026-03-13 15:14:05,704 - INFO - Uploaded image HANVINBM015 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-7kAAeSw...
+2026-03-13 15:14:05,706 - INFO - Uploading to eBay: HANVINBM015 (3).jpg
+2026-03-13 15:14:09,519 - INFO - Uploaded image HANVINBM015 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~XcAAeSw...
+2026-03-13 15:14:09,520 - INFO - Uploading to eBay: HANVINBM015 (4).jpg
+2026-03-13 15:14:14,259 - INFO - Uploaded image HANVINBM015 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9XMAAeSw...
+2026-03-13 15:14:14,261 - INFO - Uploading to eBay: HANVINBM015 (5).jpg
+2026-03-13 15:14:18,500 - INFO - Uploaded image HANVINBM015 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eEoAAeSw...
+2026-03-13 15:14:18,502 - INFO - Upload summary for SKU HANVINBM015 -> uploaded: 7, cached: 0, urls: 7
+2026-03-13 15:14:18,508 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-13 15:14:18,509 - INFO - Upload result for HANVINBM015: {'success': True, 'sku': 'HANVINBM015', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/C3cAAeSwOypptBug/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ErgAAeSwfUJptBuk/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/C0sAAeSwFXpptBuo/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-7kAAeSwnCdptBus/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~XcAAeSww8FptBuw/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9XMAAeSwKhJptBu1/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eEoAAeSwmrdptBu5/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-13 15:14:18,511 - INFO - Looking up manufacturer info for 'Lee' using AI...
+2026-03-13 15:14:20,352 - INFO - Manufacturer info extracted and cached for 'Lee'
+2026-03-13 15:14:20,353 - INFO - Identifier payload for SKU HANVINBM015: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:14:23,608 - INFO - Successfully created listing for SKU HANVINBM015, ItemID: 137127616375
+2026-03-13 15:14:23,672 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBM015 item_id=137127616375
+2026-03-13 15:14:23,672 - INFO - [BATCH aefe1de5c3] Processing 11/13 sku=HANVINBM013 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:14:23,672 - INFO - Creating eBay listing for SKU HANVINBM013 at price 20.0€
+2026-03-13 15:14:23,715 - INFO - Listing condition for SKU HANVINBM013: text='', id=3000, category_id=185101
+2026-03-13 15:14:23,715 - INFO - Uploading images for SKU HANVINBM013 (max: 12)
+2026-03-13 15:14:23,734 - INFO - Image files found on disk for SKU HANVINBM013: 9
+2026-03-13 15:14:23,734 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM013 (2)_1_lanczos_4x.png
+2026-03-13 15:14:32,274 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM013 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/8mwAAeSw...
+2026-03-13 15:14:32,277 - INFO - Uploading to eBay: HANVINBM013 (2).jpg
+2026-03-13 15:14:36,512 - INFO - Uploaded image HANVINBM013 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LVMAAeSw...
+2026-03-13 15:14:36,514 - INFO - Uploading to eBay: HANVINBM013 (1).jpg
+2026-03-13 15:14:41,221 - INFO - Uploaded image HANVINBM013 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/itAAAeSw...
+2026-03-13 15:14:41,223 - INFO - Uploading to eBay: HANVINBM013 (3).jpg
+2026-03-13 15:14:45,461 - INFO - Uploaded image HANVINBM013 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZCwAAeSw...
+2026-03-13 15:14:45,463 - INFO - Uploading to eBay: HANVINBM013 (4).jpg
+2026-03-13 15:14:48,608 - INFO - Uploaded image HANVINBM013 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VjcAAeSw...
+2026-03-13 15:14:48,610 - INFO - Uploading to eBay: HANVINBM013 (5).jpg
+2026-03-13 15:14:51,469 - INFO - Uploaded image HANVINBM013 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Jn0AAeSw...
+2026-03-13 15:14:51,470 - INFO - Uploading to eBay: HANVINBM013 (6).jpg
+2026-03-13 15:14:54,895 - INFO - Uploaded image HANVINBM013 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/K5AAAeSw...
+2026-03-13 15:14:54,896 - INFO - Upload summary for SKU HANVINBM013 -> uploaded: 7, cached: 0, urls: 7
+2026-03-13 15:14:54,903 - INFO - Saved 7 new eBay URLs to JSON
+2026-03-13 15:14:54,903 - INFO - Upload result for HANVINBM013: {'success': True, 'sku': 'HANVINBM013', 'uploaded_count': 7, 'cached_count': 0, 'total_count': 7, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/8mwAAeSwMotptBvH/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LVMAAeSwR09ptBvL/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/itAAAeSwSFlptBvQ/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZCwAAeSwCGpptBvU/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VjcAAeSw-6ZptBvX/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Jn0AAeSwd6FptBva/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/K5AAAeSw9fpptBvd/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 7 new images, used 0 cached URLs'}
+2026-03-13 15:14:54,904 - INFO - Looking up manufacturer info for 'Chaps' using AI...
+2026-03-13 15:14:56,935 - INFO - Manufacturer info extracted and cached for 'Chaps'
+2026-03-13 15:14:56,936 - INFO - Identifier payload for SKU HANVINBM013: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:15:00,332 - INFO - Successfully created listing for SKU HANVINBM013, ItemID: 137127619762
+2026-03-13 15:15:00,382 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBM013 item_id=137127619762
+2026-03-13 15:15:00,382 - INFO - [BATCH aefe1de5c3] Processing 12/13 sku=HANVINBM012 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:15:00,382 - INFO - Creating eBay listing for SKU HANVINBM012 at price 20.0€
+2026-03-13 15:15:00,383 - ERROR - [BATCH aefe1de5c3] EXCEPTION sku=HANVINBM012: Product Type missing in eBay SEO for SKU HANVINBM012
+Traceback (most recent call last):
+  File "C:\Users\stame\OneDrive\TRADING_SEGMENT\ecom-platform-v2\backend\app\main.py", line 1702, in create_ebay_listings_batch
+    result = ebay_listing.create_listing(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stame\OneDrive\TRADING_SEGMENT\ecom-platform-v2\backend\app\services\ebay_listing.py", line 1129, in create_listing
+    title = build_title_from_product(product_json, sku)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stame\OneDrive\TRADING_SEGMENT\ecom-platform-v2\backend\app\services\ebay_listing.py", line 800, in build_title_from_product
+    raise ValueError(f"Product Type missing in eBay SEO for SKU {sku}")
+ValueError: Product Type missing in eBay SEO for SKU HANVINBM012
+2026-03-13 15:15:00,388 - INFO - [BATCH aefe1de5c3] Processing 13/13 sku=HANVINBM011 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:15:00,388 - INFO - Creating eBay listing for SKU HANVINBM011 at price 20.0€
+2026-03-13 15:15:00,427 - INFO - Listing condition for SKU HANVINBM011: text='', id=3000, category_id=57990
+2026-03-13 15:15:00,427 - INFO - Uploading images for SKU HANVINBM011 (max: 12)
+2026-03-13 15:15:00,451 - INFO - Image files found on disk for SKU HANVINBM011: 13
+2026-03-13 15:15:00,451 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1_lanczos_4x.png
+2026-03-13 15:15:10,884 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM011 (2)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/pxAAAeSw...
+2026-03-13 15:15:10,886 - INFO - Uploading to eBay: HANVINBM011 (2).jpg
+2026-03-13 15:15:15,870 - INFO - Uploaded image HANVINBM011 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aqEAAeSw...
+2026-03-13 15:15:15,873 - INFO - Uploading to eBay: HANVINBM011 (3).jpg
+2026-03-13 15:15:20,019 - INFO - Uploaded image HANVINBM011 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FssAAeSw...
+2026-03-13 15:15:20,020 - INFO - Uploading to eBay: HANVINBM011 (1).jpg
+2026-03-13 15:15:24,250 - INFO - Uploaded image HANVINBM011 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Cu8AAeSw...
+2026-03-13 15:15:24,252 - INFO - Uploading to eBay: HANVINBM011 (11).jpg
+2026-03-13 15:15:28,678 - INFO - Uploaded image HANVINBM011 (11).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~DsAAeSw...
+2026-03-13 15:15:28,681 - INFO - Uploading to eBay: HANVINBM011 (10).jpg
+2026-03-13 15:15:32,971 - INFO - Uploaded image HANVINBM011 (10).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JIoAAeSw...
+2026-03-13 15:15:32,973 - INFO - Uploading to eBay: HANVINBM011 (8).jpg
+2026-03-13 15:15:37,025 - INFO - Uploaded image HANVINBM011 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-KYAAeSw...
+2026-03-13 15:15:37,027 - INFO - Uploading to eBay: HANVINBM011 (9).jpg
+2026-03-13 15:15:40,885 - INFO - Uploaded image HANVINBM011 (9).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT8AAeSw...
+2026-03-13 15:15:40,887 - INFO - Uploading to eBay: HANVINBM011 (4).jpg
+2026-03-13 15:15:47,044 - INFO - Uploaded image HANVINBM011 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DsIAAeSw...
+2026-03-13 15:15:47,048 - INFO - Uploading to eBay: HANVINBM011 (5).jpg
+2026-03-13 15:15:53,861 - INFO - Uploaded image HANVINBM011 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oBcAAeSw...
+2026-03-13 15:15:53,863 - INFO - Uploading to eBay: HANVINBM011 (6).jpg
+2026-03-13 15:15:57,824 - INFO - Uploaded image HANVINBM011 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dIAAAeSw...
+2026-03-13 15:15:57,826 - INFO - Uploading to eBay: HANVINBM011 (7).jpg
+2026-03-13 15:16:01,274 - INFO - Uploaded image HANVINBM011 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CwIAAeSw...
+2026-03-13 15:16:01,275 - INFO - Upload summary for SKU HANVINBM011 -> uploaded: 12, cached: 0, urls: 12
+2026-03-13 15:16:01,281 - INFO - Saved 12 new eBay URLs to JSON
+2026-03-13 15:16:01,282 - INFO - Upload result for HANVINBM011: {'success': True, 'sku': 'HANVINBM011', 'uploaded_count': 12, 'cached_count': 0, 'total_count': 12, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/pxAAAeSw6YBptBvt/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aqEAAeSwdipptBvz/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FssAAeSwSARptBv3/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Cu8AAeSwTvhptBv7/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~DsAAeSwiCBptBv~/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JIoAAeSwOOFptBwE/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-KYAAeSwfK1ptBwI/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aT8AAeSwYXxptBwM/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DsIAAeSwFXpptBwR/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oBcAAeSw0fxptBwY/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dIAAAeSwQ6RptBwc/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CwIAAeSwvxZptBwg/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 12 new images, used 0 cached URLs'}
+2026-03-13 15:16:01,283 - INFO - Using cached manufacturer info for 'Tommy Hilfiger'
+2026-03-13 15:16:01,285 - INFO - Identifier payload for SKU HANVINBM011: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:16:04,744 - INFO - Successfully created listing for SKU HANVINBM011, ItemID: 137127623795
+2026-03-13 15:16:04,799 - INFO - [BATCH aefe1de5c3] SUCCESS sku=HANVINBM011 item_id=137127623795
+2026-03-13 15:16:04,800 - INFO - [BATCH aefe1de5c3] Completed: success=True total=13 successful=12 failed=1
+2026-03-13 15:22:08,391 - INFO - [BATCH 733895ac32] /api/ebay/listings/batch received: total=1 stop_on_error=False
+2026-03-13 15:22:08,392 - INFO - [BATCH 733895ac32] Processing 1/1 sku=HANVINBM012 price=20.0 qty=1 condition_id=3000 schedule_days=12 has_ean=False has_modified_sku=False
+2026-03-13 15:22:08,392 - INFO - Creating eBay listing for SKU HANVINBM012 at price 20.0€
+2026-03-13 15:22:08,441 - INFO - Listing condition for SKU HANVINBM012: text='', id=3000, category_id=57990
+2026-03-13 15:22:08,441 - INFO - Uploading images for SKU HANVINBM012 (max: 12)
+2026-03-13 15:22:08,457 - INFO - Image files found on disk for SKU HANVINBM012: 10
+2026-03-13 15:22:08,457 - INFO - Uploading to eBay: Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM012 (3)_1_lanczos_4x.png
+2026-03-13 15:22:15,323 - INFO - Uploaded image Used Clothes Hanger_gemini-2-5-flash-image_real_HANVINBM012 (3)_1_lanczos_4x.png to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/kCUAAeSw...
+2026-03-13 15:22:15,325 - INFO - Uploading to eBay: HANVINBM012 (3).jpg
+2026-03-13 15:22:19,686 - INFO - Uploaded image HANVINBM012 (3).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pcAAeSw...
+2026-03-13 15:22:19,687 - INFO - Uploading to eBay: HANVINBM012 (2).jpg
+2026-03-13 15:22:24,720 - INFO - Uploaded image HANVINBM012 (2).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p5wAAeSw...
+2026-03-13 15:22:24,722 - INFO - Uploading to eBay: HANVINBM012 (6).jpg
+2026-03-13 15:22:29,795 - INFO - Uploaded image HANVINBM012 (6).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mYMAAeSw...
+2026-03-13 15:22:29,796 - INFO - Uploading to eBay: HANVINBM012 (7).jpg
+2026-03-13 15:22:37,405 - INFO - Uploaded image HANVINBM012 (7).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DE4AAeSw...
+2026-03-13 15:22:37,408 - INFO - Uploading to eBay: HANVINBM012 (8).jpg
+2026-03-13 15:22:42,089 - INFO - Uploaded image HANVINBM012 (8).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PxwAAeSw...
+2026-03-13 15:22:42,091 - INFO - Uploading to eBay: HANVINBM012 (1).jpg
+2026-03-13 15:22:47,351 - INFO - Uploaded image HANVINBM012 (1).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d2MAAeSw...
+2026-03-13 15:22:47,353 - INFO - Uploading to eBay: HANVINBM012 (4).jpg
+2026-03-13 15:22:50,748 - INFO - Uploaded image HANVINBM012 (4).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q60AAeSw...
+2026-03-13 15:22:50,750 - INFO - Uploading to eBay: HANVINBM012 (5).jpg
+2026-03-13 15:22:54,224 - INFO - Uploaded image HANVINBM012 (5).jpg to EPS: https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cuIAAeSw...
+2026-03-13 15:22:54,226 - INFO - Upload summary for SKU HANVINBM012 -> uploaded: 9, cached: 0, urls: 9
+2026-03-13 15:22:54,233 - INFO - Saved 9 new eBay URLs to JSON
+2026-03-13 15:22:54,234 - INFO - Upload result for HANVINBM012: {'success': True, 'sku': 'HANVINBM012', 'uploaded_count': 9, 'cached_count': 0, 'total_count': 9, 'urls': ['https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/kCUAAeSw8TRptB2W/$_1.PNG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~pcAAeSwI6dptB2a/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p5wAAeSwdRtptB2f/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mYMAAeSwGBBptB2k/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DE4AAeSwXVxptB2s/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PxwAAeSwR51ptB2x/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d2MAAeSwK9ZptB22/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q60AAeSw0fxptB25/$_1.JPG?set_id=8800005007', 'https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cuIAAeSwgH9ptB29/$_1.JPG?set_id=8800005007'], 'message': 'Uploaded 9 new images, used 0 cached URLs'}
+2026-03-13 15:22:54,235 - INFO - Looking up manufacturer info for 'L.L.Bean' using AI...
+2026-03-13 15:22:56,196 - INFO - Manufacturer info extracted and cached for 'L.L.Bean'
+2026-03-13 15:22:56,196 - INFO - Identifier payload for SKU HANVINBM012: request_ean='', json_ean='', resolved_ean='', sent_product_listing_details_ean='Does not apply'
+2026-03-13 15:22:59,721 - INFO - Successfully created listing for SKU HANVINBM012, ItemID: 137127642527
+2026-03-13 15:22:59,769 - INFO - [BATCH 733895ac32] SUCCESS sku=HANVINBM012 item_id=137127642527
+2026-03-13 15:22:59,770 - INFO - [BATCH 733895ac32] Completed: success=True total=1 successful=1 failed=0

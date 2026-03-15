@@ -36,6 +36,13 @@ _JSON_FILE_SET_LOADED_AT = 0.0
 _JSON_FILE_SET_TTL_SECONDS = 120.0
 
 
+def _find_json_like_column(columns: tuple[str, ...] | list[str] | set[str]) -> str | None:
+    for col in columns:
+        if str(col).strip().lower() == "json":
+            return str(col)
+    return None
+
+
 def _quote_ident(name: str) -> str:
     return '"' + str(name).replace('"', '""') + '"'
 
@@ -181,19 +188,52 @@ def _ensure_fast_table(refreshed_recently_ok: bool = True) -> None:
 
             existing_cols = set(db_columns_tuple)
             existing_cols_lower = {c.lower() for c in existing_cols}
-            create_cols = [f"{_quote_ident(c)} TEXT" for c in db_columns_tuple]
-            if "json" not in existing_cols_lower:
-                create_cols.append(f"{_quote_ident('Json')} TEXT")
-            if "folder images" not in existing_cols_lower:
-                create_cols.append(f"{_quote_ident('Folder Images')} INTEGER")
-            if "ebay listing" not in existing_cols_lower:
-                create_cols.append(f"{_quote_ident('Ebay Listing')} TEXT")
+            json_source_col = _find_json_like_column(db_columns_tuple)
+
+            # Build create columns with case-insensitive de-duplication.
+            create_col_names: list[str] = []
+            seen_lower: set[str] = set()
+            for col in db_columns_tuple:
+                col_name = str(col)
+                lower = col_name.lower()
+                if lower in seen_lower:
+                    continue
+                create_col_names.append(col_name)
+                seen_lower.add(lower)
+
+            # Always expose canonical "Json" for frontend consistency.
+            if "json" not in seen_lower:
+                create_col_names.append("Json")
+                seen_lower.add("json")
+
+            if "folder images" not in seen_lower:
+                create_col_names.append("Folder Images")
+                seen_lower.add("folder images")
+
+            if "ebay listing" not in seen_lower:
+                create_col_names.append("Ebay Listing")
+                seen_lower.add("ebay listing")
+
+            create_cols = []
+            for c in create_col_names:
+                c_lower = c.lower()
+                if c_lower == "folder images":
+                    create_cols.append(f"{_quote_ident(c)} INTEGER")
+                else:
+                    create_cols.append(f"{_quote_ident(c)} TEXT")
             conn.execute(f"CREATE TABLE {_quote_ident(FAST_TABLE_NAME)} ({', '.join(create_cols)})")
 
             conn.execute(
                 f"INSERT INTO {_quote_ident(FAST_TABLE_NAME)} ({quoted_inv_cols}) "
                 f"SELECT {quoted_inv_cols} FROM inventory"
             )
+
+            # If source JSON column exists but canonical Json differs by casing/name, copy it.
+            if json_source_col and json_source_col != "Json":
+                conn.execute(
+                    f"UPDATE {_quote_ident(FAST_TABLE_NAME)} "
+                    f"SET {_quote_ident('Json')} = {_quote_ident(json_source_col)}"
+                )
 
             folder_cache = read_folder_images_cache() or {}
             folder_counts = folder_cache.get("counts", {}) or {}
@@ -231,6 +271,67 @@ def _ensure_fast_table(refreshed_recently_ok: bool = True) -> None:
 
         _get_fast_table_columns_cached.cache_clear()
         _FAST_TABLE_LAST_REFRESH = now
+
+
+def _json_column_counts_from_fast_table() -> Dict[str, int]:
+    if not DB_PATH.exists():
+        return {"json_true": 0, "json_false": 0, "json_empty": 0, "total": 0}
+
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        cols = [str(r[1]) for r in conn.execute(f"PRAGMA table_info({_quote_ident(FAST_TABLE_NAME)})").fetchall()]
+        json_col = _find_json_like_column(cols)
+        if not json_col:
+            return {"json_true": 0, "json_false": 0, "json_empty": 0, "total": 0}
+
+        row = conn.execute(
+            f"""
+            SELECT
+                SUM(CASE WHEN LOWER(TRIM(COALESCE(CAST({_quote_ident(json_col)} AS TEXT), ''))) IN ('true','1','yes') THEN 1 ELSE 0 END) AS json_true,
+                SUM(CASE WHEN LOWER(TRIM(COALESCE(CAST({_quote_ident(json_col)} AS TEXT), ''))) IN ('false','0','no') THEN 1 ELSE 0 END) AS json_false,
+                SUM(CASE WHEN TRIM(COALESCE(CAST({_quote_ident(json_col)} AS TEXT), '')) = '' THEN 1 ELSE 0 END) AS json_empty,
+                COUNT(*) AS total
+            FROM {_quote_ident(FAST_TABLE_NAME)}
+            """
+        ).fetchone()
+        if not row:
+            return {"json_true": 0, "json_false": 0, "json_empty": 0, "total": 0}
+        return {
+            "json_true": int(row[0] or 0),
+            "json_false": int(row[1] or 0),
+            "json_empty": int(row[2] or 0),
+            "total": int(row[3] or 0),
+        }
+    except Exception:
+        return {"json_true": 0, "json_false": 0, "json_empty": 0, "total": 0}
+    finally:
+        conn.close()
+
+
+def get_json_column_status() -> Dict[str, Any]:
+    _ensure_fast_table(refreshed_recently_ok=True)
+    counts = _json_column_counts_from_fast_table()
+    last_update = None
+    if _FAST_TABLE_LAST_REFRESH > 0:
+        last_update = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(_FAST_TABLE_LAST_REFRESH))
+    return {
+        "last_update": last_update,
+        "has_cache": bool(last_update),
+        **counts,
+    }
+
+
+def compute_json_column_for_all_skus() -> Dict[str, Any]:
+    _ensure_fast_table(refreshed_recently_ok=False)
+    counts = _json_column_counts_from_fast_table()
+    last_update = None
+    if _FAST_TABLE_LAST_REFRESH > 0:
+        last_update = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(_FAST_TABLE_LAST_REFRESH))
+    return {
+        "status": "completed",
+        "last_update": last_update,
+        **counts,
+    }
 
 
 @lru_cache(maxsize=1)
@@ -349,6 +450,8 @@ def _list_skus_sql_fast(
     page_size: int,
     filters: List[Dict[str, Any]] | None,
     columns: List[str] | None,
+    sort_by: str | None,
+    sort_dir: str,
 ) -> Dict[str, Any] | None:
     if not DB_PATH.exists():
         return None
@@ -360,6 +463,7 @@ def _list_skus_sql_fast(
         return None
 
     fast_columns = set(fast_columns_tuple)
+    json_like_fast_col = _find_json_like_column(fast_columns_tuple)
 
     # Keep JSON image count columns in fallback (they require per-file JSON parsing)
     json_count_cols = {"Json Stock Images", "Json Phone Images", "Json Enhanced Images"}
@@ -374,7 +478,17 @@ def _list_skus_sql_fast(
     where_sql, params = sql_filter
 
     requested_columns = columns if (columns and isinstance(columns, list) and len(columns) > 0) else None
-    requested_fast_columns = [c for c in (requested_columns or []) if c in fast_columns]
+    requested_fast_columns: list[str] = []
+    alias_to_requested: Dict[str, str] = {}
+    for c in (requested_columns or []):
+        if c in fast_columns:
+            requested_fast_columns.append(c)
+            continue
+        if c == "Json" and json_like_fast_col:
+            if json_like_fast_col not in requested_fast_columns:
+                requested_fast_columns.append(json_like_fast_col)
+            if json_like_fast_col != "Json":
+                alias_to_requested[json_like_fast_col] = "Json"
 
     # Ensure SKU column is present for virtual per-row enrichments
     sku_key = "SKU (Old)" if "SKU (Old)" in fast_columns else ("SKU" if "SKU" in fast_columns else None)
@@ -386,7 +500,13 @@ def _list_skus_sql_fast(
         return None
 
     select_sql = ", ".join(_quote_ident(c) for c in selected_cols_for_query)
-    order_sql = _quote_ident(sku_key) if sku_key else _quote_ident(selected_cols_for_query[0])
+    sort_desc = str(sort_dir or "asc").strip().lower() == "desc"
+    default_sort_col = sku_key if sku_key else selected_cols_for_query[0]
+    requested_sort_col = str(sort_by).strip() if sort_by else ""
+    if requested_sort_col == "Json" and requested_sort_col not in fast_columns and json_like_fast_col:
+        requested_sort_col = json_like_fast_col
+    sort_col = requested_sort_col if requested_sort_col in fast_columns else default_sort_col
+    order_sql = f"{_quote_ident(sort_col)} {'DESC' if sort_desc else 'ASC'}"
     offset = max(0, (page - 1) * page_size)
 
     conn = sqlite3.connect(DB_PATH)
@@ -403,6 +523,9 @@ def _list_skus_sql_fast(
     page_df = pd.DataFrame([dict(r) for r in rows])
     if page_df.empty:
         page_df = pd.DataFrame(columns=selected_cols_for_query)
+
+    if alias_to_requested:
+        page_df = page_df.rename(columns=alias_to_requested)
 
     # Keep only requested real columns if explicitly set (SKU helper might have been injected)
     if requested_columns:
@@ -779,6 +902,8 @@ def list_skus(
     page_size: int,
     filters: List[Dict[str, Any]] | None = None,
     columns: List[str] | None = None,
+    sort_by: str | None = None,
+    sort_dir: str = "asc",
 ) -> Dict[str, Any]:
     """
     List SKUs with column-level filtering support.
@@ -790,7 +915,14 @@ def list_skus(
                  operator can be: contains, equals, starts_with, ends_with
         columns: List of columns to return (if None, returns all columns)
     """
-    sql_fast = _list_skus_sql_fast(page=page, page_size=page_size, filters=filters, columns=columns)
+    sql_fast = _list_skus_sql_fast(
+        page=page,
+        page_size=page_size,
+        filters=filters,
+        columns=columns,
+        sort_by=sort_by,
+        sort_dir=sort_dir,
+    )
     if sql_fast is not None:
         return sql_fast
 
@@ -995,6 +1127,43 @@ def list_skus(
                 df = df[ebay_listing_values != True]
 
         sku_series = _get_sku_series(df)
+
+    # Apply sorting before pagination.
+    sort_desc = str(sort_dir or "asc").strip().lower() == "desc"
+    effective_sort_by = str(sort_by).strip() if sort_by else ""
+    if not effective_sort_by:
+        effective_sort_by = "SKU (Old)" if "SKU (Old)" in df.columns else ("SKU" if "SKU" in df.columns else "")
+
+    if effective_sort_by:
+        if effective_sort_by in VIRTUAL_JSON_COLUMNS and effective_sort_by not in df.columns:
+            needed = [effective_sort_by]
+            if sku_series is not None:
+                df = _add_json_virtual_columns(df, sku_series, needed)
+
+        if effective_sort_by == "Folder Images" and effective_sort_by not in df.columns and sku_series is not None:
+            df["Folder Images"] = sku_series.apply(
+                lambda sku: get_folder_image_count(str(sku)) if sku and str(sku).strip() else None
+            )
+
+        if effective_sort_by == "Ebay Listing" and effective_sort_by not in df.columns and sku_series is not None:
+            df["Ebay Listing"] = sku_series.apply(
+                lambda sku: get_sku_has_listing(str(sku)) if sku and str(sku).strip() else None
+            )
+
+        if effective_sort_by in df.columns:
+            s = df[effective_sort_by]
+            try:
+                if pd.api.types.is_numeric_dtype(s) or pd.api.types.is_bool_dtype(s):
+                    df = df.sort_values(by=effective_sort_by, ascending=not sort_desc, na_position="last", kind="mergesort")
+                elif pd.api.types.is_datetime64_any_dtype(s):
+                    df = df.sort_values(by=effective_sort_by, ascending=not sort_desc, na_position="last", kind="mergesort")
+                else:
+                    tmp_col = "__sort_tmp_text__"
+                    df[tmp_col] = s.fillna("").astype(str).str.lower()
+                    df = df.sort_values(by=tmp_col, ascending=not sort_desc, na_position="last", kind="mergesort")
+                    df = df.drop(columns=[tmp_col])
+            except Exception:
+                pass
 
     # Filter by selected columns if provided
     requested_columns = columns if (columns and isinstance(columns, list) and len(columns) > 0) else None

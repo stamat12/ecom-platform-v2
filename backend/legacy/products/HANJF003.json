@@ -1,0 +1,150 @@
+{
+  "HANJF003": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 1.87,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 1.87
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten (leicht verschmutzt)"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Boohoo",
+      "Color": "Weiß",
+      "Size": "36"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Damen Sneakers",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 25.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 24,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HANJF003 (1).jpg"
+        },
+        {
+          "filename": "HANJF003 (10).jpg"
+        },
+        {
+          "filename": "HANJF003 (11).jpg"
+        },
+        {
+          "filename": "HANJF003 (11)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (11)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (12).jpg"
+        },
+        {
+          "filename": "HANJF003 (2).jpg"
+        },
+        {
+          "filename": "HANJF003 (2)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (2)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (3).jpg"
+        },
+        {
+          "filename": "HANJF003 (4).jpg"
+        },
+        {
+          "filename": "HANJF003 (5).jpg"
+        },
+        {
+          "filename": "HANJF003 (5)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (5)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (6).jpg"
+        },
+        {
+          "filename": "HANJF003 (6)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (6)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (7).jpg"
+        },
+        {
+          "filename": "HANJF003 (7)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (7)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (8).jpg"
+        },
+        {
+          "filename": "HANJF003 (8)_fb.jpg"
+        },
+        {
+          "filename": "HANJF003 (8)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "HANJF003 (11)_wb.jpg"
+        },
+        {
+          "filename": "HANJF003 (10).jpg"
+        },
+        {
+          "filename": "HANJF003 (3).jpg"
+        }
+      ]
+    }
+  }
+}

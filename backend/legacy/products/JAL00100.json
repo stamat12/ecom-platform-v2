@@ -21,7 +21,7 @@
       "eBay Category ID": "181059"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
@@ -121,7 +121,104 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~lUAAeSwqd9psxoa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/83MAAeSwQ6Rpsxob/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/BWIAAeSw52Vpsxod/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/~CgAAeSwDzZpsxoe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/Zi4AAeSw-RRpsxog/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YHIAAeSwy85psxoi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NQoAAeSwkXJpsxom/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hv0AAeSw~eppsxoo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LHUAAeSwzNppsxor/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (6).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VOMAAeSw4c1psxot/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (5).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/niEAAeSwFENpsxow/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "JAL00100 (4).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V70AAeSwZYppsxoz/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "17",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T20:54"
+    },
+    "eBay Fields": {
+      "required": {
+        "Produkt": "Test-Kit"
+      },
+      "optional": {
+        "Marke": "Cuteefun",
+        "Modell": "TDS/EC/pH/Salinity Tester",
+        "Produktart": "Sauerstoff-Messgerät",
+        "Test-/Behandlungsparameter": "pH-Wert, TDS, EC, Salinität",
+        "Geeignet für": "Aquarium, Schwimmbäder, Trinkwasser",
+        "Wasserart": "Alle Wasserarten",
+        "Empfohlenes Wasservolumen": "1000 L",
+        "Materialform": "Lösung/Flüssigkeit",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wassertester",
+      "Product Model": "TDS/EC/pH/Salinität",
+      "Keyword 1": "pH Meter",
+      "Keyword 2": "TDS Tester",
+      "Keyword 3": "Wasserqualitätsprüfer"
     }
   }
 }

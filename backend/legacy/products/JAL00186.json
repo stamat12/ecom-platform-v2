@@ -17,11 +17,11 @@
       "Total Cost Net": 1.86
     },
     "Ebay Category": {
-      "Category": "/Möbel & Wohnen/Dekoration/Deko-Accessoires/Schilder & Tafeln",
-      "eBay Category ID": "31587"
+      "Category": "/Uhren & Schmuck/Uhren, -teile & -zubehör/Weitere Uhren/Wanduhren",
+      "eBay Category ID": "20561"
     },
     "EAN": {
-      "EAN": 8717713021995.0
+      "EAN": 8717713021995
     },
     "Product Condition": {
       "Condition": "Neu"
@@ -41,7 +41,7 @@
       "OP": "30.0"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"
@@ -87,7 +87,73 @@
         {
           "filename": "5.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/N58AAeSwfJZpsxpT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTU5NFgxNjAw/z/b1IAAeSw0fFpsxpV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTcx/z/BiYAAeSw6lxpsxpX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTk0/z/YSIAAeSwZ35psxpZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "5.png",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTMwNFgxMzA0/z/bwQAAeSwlD9psxpb/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": 8717713021995,
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T20:54"
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "NeXtime"
+      },
+      "optional": {
+        "Zimmer": "Wohnzimmer",
+        "Farbe": "Schwarz",
+        "Material": "Metall",
+        "Anzeige": "Analog",
+        "Form": "Rund",
+        "Uhrwerk": "Quarz (Batteriebetrieben)",
+        "Produktart": "Standard Wanduhr",
+        "Stil": "Modern",
+        "Besonderheiten": "Geräuschlos/Ohne Ticken",
+        "Personalisieren": "Nein",
+        "Alter": "2000 bis jetzt",
+        "Ursprungsland": "Unbekannt",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wanduhr",
+      "Product Model": "",
+      "Keyword 1": "Uhr",
+      "Keyword 2": "Wanduhr modern",
+      "Keyword 3": "Wanduhr schwarz"
     }
   }
 }
