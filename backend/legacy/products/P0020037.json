@@ -164,7 +164,8 @@
       "Product Model": "WD19S",
       "Keyword 1": "Laptop Dock",
       "Keyword 2": "USB-C Dock",
-      "Keyword 3": "Erweiterungsdock"
+      "Keyword 3": "Erweiterungsdock",
+      "eBay Title": "Dell WD19S Dockingstation Schwarz Laptop Dock USB-C Dock Erweiterungsdock"
     },
     "Ebay Listing": {
       "Selling Price Total": "195",
@@ -176,6 +177,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

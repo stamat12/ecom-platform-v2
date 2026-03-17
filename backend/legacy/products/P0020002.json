@@ -156,7 +156,8 @@
       "Product Model": "",
       "Keyword 1": "Schrauber",
       "Keyword 2": "Bohrmaschine",
-      "Keyword 3": "Werkzeugset"
+      "Keyword 3": "Werkzeugset",
+      "eBay Title": "Akku-Bohrschrauber Blau Schrauber Bohrmaschine Werkzeugset Neu"
     },
     "Ebay Listing": {
       "Selling Price Total": "32",
@@ -168,6 +169,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

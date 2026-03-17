@@ -17,7 +17,7 @@
       "Total Cost Net": 2.76
     },
     "Ebay Category": {
-      "Category": "/Computer, Tablets & Netzwerk/Notebook- & Desktop-Zubehör/Mauspads & Handgelenkauflagen",
+      "Category": null,
       "eBay Category ID": "23895"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "26.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"

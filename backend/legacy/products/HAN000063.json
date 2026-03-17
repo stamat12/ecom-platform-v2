@@ -77,6 +77,23 @@
       "Keyword 2": "Trainingsshorts",
       "Keyword 3": "Freizeithosen",
       "eBay Title": "adidas GT1186 Shorts Damen Schwarz L Sportshorts Trainingsshorts Freizeithosen"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-15T12:53:49.766272Z",
+          "sku": "HAN000063",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000063",
+            "item_id": "136048762812",
+            "old_price": 16.0,
+            "new_price": 14.0
+          }
+        }
+      ]
     }
   }
 }

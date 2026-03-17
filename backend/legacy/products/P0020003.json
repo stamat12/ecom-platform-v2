@@ -129,7 +129,8 @@
       "Product Model": "MTS215B",
       "Keyword 1": "Smart Thermostat",
       "Keyword 2": "WLAN Thermostat",
-      "Keyword 3": "Heizungsregler"
+      "Keyword 3": "Heizungsregler",
+      "eBay Title": "meross MTS215B Thermostat Weiß Smart Thermostat WLAN Thermostat Heizungsregler"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -141,6 +142,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

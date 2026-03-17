@@ -113,7 +113,8 @@
       "Product Model": "",
       "Keyword 1": "LED Lampe",
       "Keyword 2": "USB Licht",
-      "Keyword 3": "Schreibtischlampe"
+      "Keyword 3": "Schreibtischlampe",
+      "eBay Title": "Tischlampe Weiß LED Lampe USB Licht Schreibtischlampe Neu mit Karton"
     },
     "Ebay Listing": {
       "Selling Price Total": "10",
@@ -125,6 +126,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -63,30 +63,42 @@ def _to_optional_float(value: Any) -> Optional[float]:
 
 
 def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> Dict[str, Any]:
-    """Update backend/schemas/category_mapping.json from Excel category sheet.
+    """Update backend/schemas/category_mapping.json from inventory.db ebay_categories table.
 
     Existing entries are updated by categoryId (preferred) or fullPath, and missing
     entries are appended. This keeps existing mappings while refreshing fee data.
+
+    Note: kept function name for backward compatibility with existing endpoints/UI.
     """
     try:
-        df = pd.read_excel(config.INVENTORY_FILE_PATH, sheet_name=sheet_name)
-        if df.empty:
-            return {"success": False, "message": f"Sheet '{sheet_name}' is empty"}
+        db_path = _get_db_path()
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+        try:
+            table_exists = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='ebay_categories'"
+            ).fetchone()
+            if not table_exists:
+                return {"success": False, "message": "Table 'ebay_categories' not found in inventory.db"}
 
-        columns = list(df.columns)
-        category_col = _find_column(columns, ["Category", "Category Path", "fullPath"])
-        id_col = _find_column(columns, ["ID", "Category ID", "CategoryId"])
-        payment_fee_col = _find_column(columns, ["Payment Fee", "Payment Fee EUR", "Payment Fee €", "payment_fee"])
-        up_to_amount_col = _find_column(columns, ["Up To", "Final Amount Up To", "final_amount_up_to"])
-        commission_up_to_col = _find_column(columns, ["Sales commission per item Up To", "Sales Commission Up To", "sales_commission_up_to"])
-        from_amount_col = _find_column(columns, ["From", "Final Amount From", "final_amount_from"])
-        commission_from_col = _find_column(columns, ["Sales commission per item From", "Sales Commission From", "sales_commission_from"])
+            columns = [r[1] for r in conn.execute("PRAGMA table_info(ebay_categories)").fetchall()]
+            category_col = _find_column(columns, ["Category", "Category Path", "fullPath"])
+            id_col = _find_column(columns, ["ID", "Category ID", "CategoryId"])
+            payment_fee_col = _find_column(columns, ["Payment Fee", "Payment Fee EUR", "Payment Fee €", "payment_fee"])
+            up_to_amount_col = _find_column(columns, ["Up To", "Final Amount Up To", "final_amount_up_to"])
+            commission_up_to_col = _find_column(columns, ["Sales commission per item Up To", "Sales Commission Up To", "sales_commission_up_to"])
+            from_amount_col = _find_column(columns, ["From", "Final Amount From", "final_amount_from"])
+            commission_from_col = _find_column(columns, ["Sales commission per item From", "Sales Commission From", "sales_commission_from"])
 
-        if not category_col or not id_col:
-            return {
-                "success": False,
-                "message": "Required columns not found in Excel sheet. Need at least 'Category' and 'ID'.",
-            }
+            if not category_col or not id_col:
+                return {
+                    "success": False,
+                    "message": "Required columns not found in table 'ebay_categories'. Need at least 'Category' and 'ID'.",
+                }
+
+            rows = conn.execute('SELECT * FROM "ebay_categories"').fetchall()
+        finally:
+            conn.close()
 
         mapping_path = Path(__file__).resolve().parents[2] / "schemas" / "category_mapping.json"
         existing_payload: Dict[str, Any] = {"categoryMappings": []}
@@ -115,9 +127,10 @@ def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> 
         rows_updated = 0
         rows_added = 0
 
-        for _, row in df.iterrows():
-            category_path = str(row.get(category_col) or "").strip()
-            category_id = _to_text_id(row.get(id_col))
+        for row in rows:
+            row_dict = dict(row)
+            category_path = str(row_dict.get(category_col) or "").strip()
+            category_id = _to_text_id(row_dict.get(id_col))
             if not category_path or not category_id:
                 rows_skipped += 1
                 continue
@@ -125,11 +138,11 @@ def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> 
             rows_processed += 1
             category_name = category_path.split("/")[-1].strip() if "/" in category_path else category_path
             fees = {
-                "payment_fee": _to_optional_float(row.get(payment_fee_col)) if payment_fee_col else None,
-                "final_amount_up_to": _to_optional_float(row.get(up_to_amount_col)) if up_to_amount_col else None,
-                "sales_commission_up_to": _to_optional_float(row.get(commission_up_to_col)) if commission_up_to_col else None,
-                "final_amount_from": _to_optional_float(row.get(from_amount_col)) if from_amount_col else None,
-                "sales_commission_from": _to_optional_float(row.get(commission_from_col)) if commission_from_col else None,
+                "payment_fee": _to_optional_float(row_dict.get(payment_fee_col)) if payment_fee_col else None,
+                "final_amount_up_to": _to_optional_float(row_dict.get(up_to_amount_col)) if up_to_amount_col else None,
+                "sales_commission_up_to": _to_optional_float(row_dict.get(commission_up_to_col)) if commission_up_to_col else None,
+                "final_amount_from": _to_optional_float(row_dict.get(from_amount_col)) if from_amount_col else None,
+                "sales_commission_from": _to_optional_float(row_dict.get(commission_from_col)) if commission_from_col else None,
             }
 
             target = by_id.get(category_id) or by_path.get(category_path.lower())
@@ -159,8 +172,8 @@ def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> 
 
         return {
             "success": True,
-            "message": "category_mapping.json refreshed from Excel",
-            "sheet": sheet_name,
+            "message": "category_mapping.json refreshed from inventory.db (ebay_categories)",
+            "source_table": "ebay_categories",
             "rows_processed": rows_processed,
             "rows_skipped": rows_skipped,
             "rows_updated": rows_updated,
@@ -169,7 +182,7 @@ def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> 
             "file": str(mapping_path),
         }
     except Exception as e:
-        print(f"[CATEGORY MAPPING] Failed to refresh from Excel: {e}")
+        print(f"[CATEGORY MAPPING] Failed to refresh from inventory.db: {e}")
         import traceback
         traceback.print_exc()
         return {"success": False, "message": f"Error: {str(e)}"}

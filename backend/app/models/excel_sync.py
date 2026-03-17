@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 
 class ExcelSheetInfo(BaseModel):
@@ -16,3 +16,8 @@ class ExcelToDbSyncResponse(BaseModel):
     success: bool
     message: str
     results: List[dict] = Field(default_factory=list)
+
+
+class DbToExcelSyncRequest(BaseModel):
+    sheet_name: str = Field(default="Inventory", description="Excel sheet name to update")
+    columns: Optional[List[str]] = Field(default=None, description="Columns to sync from DB to Excel. If omitted, all supported columns are synced.")

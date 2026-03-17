@@ -161,7 +161,8 @@
       "Product Model": "Portable EV Charger",
       "Keyword 1": "Elektroauto Ladegerät",
       "Keyword 2": "tragbares Ladegerät",
-      "Keyword 3": "Ladegerät für Elektrofahrzeuge"
+      "Keyword 3": "Ladegerät für Elektrofahrzeuge",
+      "eBay Title": "BOKMAN Portable EV Charger Ladegerät Schwarz Elektroauto Ladegerät"
     },
     "Ebay Listing": {
       "Selling Price Total": "95",
@@ -173,6 +174,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

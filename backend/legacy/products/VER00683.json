@@ -163,7 +163,8 @@
       "Product Model": "Alloy Origins",
       "Keyword 1": "Gaming Tastatur",
       "Keyword 2": "mechanische Tastatur",
-      "Keyword 3": "RGB Tastatur"
+      "Keyword 3": "RGB Tastatur",
+      "eBay Title": "HyperX Alloy Origins Tastatur Schwarz Gaming Tastatur mechanische Tastatur"
     },
     "Ebay Listing": {
       "Selling Price Total": "75",
@@ -174,6 +175,9 @@
       "EAN": 196188522257,
       "Modified SKU": "",
       "Schedule Date": "2026-03-17T00:32"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

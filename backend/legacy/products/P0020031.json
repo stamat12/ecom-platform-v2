@@ -145,7 +145,8 @@
       "Product Model": "X Pro Elite",
       "Keyword 1": "Sonic Zahnbürste",
       "Keyword 2": "Schallzahnbürste",
-      "Keyword 3": "Zahnpflege"
+      "Keyword 3": "Zahnpflege",
+      "eBay Title": "oclean X Pro Elite Elektrische Zahnbürste schwarz Sonic Zahnbürste"
     },
     "Ebay Listing": {
       "Selling Price Total": "67",
@@ -157,6 +158,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

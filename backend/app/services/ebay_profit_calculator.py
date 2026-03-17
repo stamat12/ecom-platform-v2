@@ -30,8 +30,19 @@ NON_GERMANY_SURCHARGE = 4.99  # Extra charge for non-Germany customers
 # Cache for schema fees
 _SCHEMA_FEES_CACHE = {}
 
+# Fallback cache for fees from category_mapping.json
+_CATEGORY_MAPPING_FEES_CACHE = {}
+
 # Cache for Total Cost Net by SKU
 _TOTAL_COST_NET_CACHE = None
+
+
+def invalidate_profit_caches() -> None:
+    """Clear in-memory caches so profit calculation reloads latest DB/schema values."""
+    global _SCHEMA_FEES_CACHE, _CATEGORY_MAPPING_FEES_CACHE, _TOTAL_COST_NET_CACHE
+    _SCHEMA_FEES_CACHE = {}
+    _CATEGORY_MAPPING_FEES_CACHE = {}
+    _TOTAL_COST_NET_CACHE = None
 
 
 def _load_schema_fees_cache() -> Dict[str, Dict[str, float]]:
@@ -74,6 +85,59 @@ def _load_schema_fees_cache() -> Dict[str, Dict[str, float]]:
         logger.warning(f"[FEES] Error loading schema fees cache: {e}")
     
     return _SCHEMA_FEES_CACHE
+
+
+def _load_category_mapping_fees_cache() -> Dict[str, Dict[str, float]]:
+    """Load fallback fees from schemas/category_mapping.json."""
+    global _CATEGORY_MAPPING_FEES_CACHE
+
+    if _CATEGORY_MAPPING_FEES_CACHE:
+        return _CATEGORY_MAPPING_FEES_CACHE
+
+    mapping_path = Path(__file__).resolve().parents[2] / "schemas" / "category_mapping.json"
+    if not mapping_path.exists():
+        return _CATEGORY_MAPPING_FEES_CACHE
+
+    try:
+        with open(mapping_path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+
+        for entry in (payload.get("categoryMappings") or []):
+            if not isinstance(entry, dict):
+                continue
+            cat_id = str(entry.get("categoryId") or "").strip()
+            if not cat_id:
+                continue
+
+            fees = entry.get("fees") or {}
+            if not isinstance(fees, dict):
+                continue
+
+            payment_fee_raw = fees.get("payment_fee")
+            commission_raw = fees.get("sales_commission_percentage")
+            if commission_raw is None:
+                commission_raw = fees.get("sales_commission_up_to")
+
+            try:
+                payment_fee = float(payment_fee_raw) if payment_fee_raw is not None else 0.0
+            except (TypeError, ValueError):
+                payment_fee = 0.0
+
+            try:
+                commission = float(commission_raw) if commission_raw is not None else 0.0
+            except (TypeError, ValueError):
+                commission = 0.0
+
+            _CATEGORY_MAPPING_FEES_CACHE[cat_id] = {
+                "payment_fee": payment_fee,
+                "sales_commission_percentage": commission,
+            }
+
+        logger.info("[FEES] Loaded category_mapping fallback fees for %s categories", len(_CATEGORY_MAPPING_FEES_CACHE))
+    except Exception as e:
+        logger.warning("[FEES] Error loading category_mapping fallback fees: %s", e)
+
+    return _CATEGORY_MAPPING_FEES_CACHE
 
 
 def _load_total_cost_net_cache() -> Dict[str, float]:
@@ -419,11 +483,15 @@ def get_category_fees(category_id: Optional[str]) -> Optional[Dict[str, float]]:
     if not category_id:
         return None
     
-    # Load cache if not already loaded
+    cat_id = str(category_id).strip()
+
+    # category_mapping is authoritative (refreshed from inventory.db/ebay_categories)
+    mapping_fees_cache = _load_category_mapping_fees_cache()
+    if cat_id in mapping_fees_cache:
+        return mapping_fees_cache[cat_id]
+
+    # Schema fees are fallback only
     fees_cache = _load_schema_fees_cache()
-    
-    # Look up by category ID
-    cat_id = str(category_id)
     if cat_id in fees_cache:
         return fees_cache[cat_id]
     
@@ -438,115 +506,65 @@ def calculate_listing_profit(
     lookup_by_category_id: bool = True,
     lookup_total_cost_net: bool = True,
 ) -> Dict[str, float]:
-    """
-    Calculate profit metrics for an eBay listing.
-    
-    Includes:
-    - €4.99 surcharge for non-Germany customers
-    - Marketplace-specific VAT rates
-    - Commission calculated on customer's FULL PAYMENT (brutto)
-    
-    Formula:
-    - Apply €4.99 surcharge if marketplace is not Germany
-    - customer_payment_brutto = selling_price_brutto + shipping_listing
-    - selling_price_netto = customer_payment_brutto / (1 + vat_rate)
-    - sales_commission = customer_payment_brutto * commission% (ON BRUTTO!)
-    - Net Profit = selling_price_netto - sales_commission - payment_fee - shipping_costs_net - total_cost_net
-    
-    Args:
-        listing: Listing dict with price, marketplace, category_id, etc.
-        category_fees: Dict with 'payment_fee' and 'sales_commission_percentage' (override)
-        total_cost_net: Net cost of the product from database
-        lookup_by_category_id: Whether to look up fees from schema files by category_id
-        lookup_total_cost_net: Whether to look up Total Cost Net by SKU
-    
-    Returns:
-        Dict with profit calculation results:
-        {
-            'selling_price_brutto': float,
-            'shipping_listing': float,
-            'selling_price_netto': float,
-            'payment_fee': float,
-            'sales_commission': float,
-            'sales_commission_percentage': float,
-            'shipping_costs_net': float,
-            'total_cost_net': float,
-            'net_profit': float,
-            'net_profit_margin_percent': float
-        }
-    """
-    # Extract price (use price field or fallback to None)
+    """Calculate profit metrics for an eBay listing."""
     selling_price_brutto = listing.get("price")
     if selling_price_brutto is None or selling_price_brutto <= 0:
         return {
-            'selling_price_brutto': 0.0,
-            'shipping_listing': 0.0,
-            'selling_price_netto': 0.0,
-            'payment_fee': 0.0,
-            'sales_commission': 0.0,
-            'sales_commission_percentage': 0.0,
-            'shipping_costs_net': 0.0,
-            'total_cost_net': total_cost_net,
-            'net_profit': 0.0,
-            'net_profit_margin_percent': 0.0
+            "selling_price_brutto": 0.0,
+            "shipping_listing": 0.0,
+            "selling_price_netto": 0.0,
+            "payment_fee": 0.0,
+            "sales_commission": 0.0,
+            "sales_commission_percentage": 0.0,
+            "shipping_costs_net": 0.0,
+            "total_cost_net": total_cost_net,
+            "net_profit": 0.0,
+            "net_profit_margin_percent": 0.0,
         }
-    
-    # Parse as float
+
     try:
         selling_price_brutto = float(selling_price_brutto)
     except (TypeError, ValueError):
         selling_price_brutto = 0.0
 
-    # Customer-paid shipping amount added to selling price for VAT/commission/profit math
     try:
         shipping_listing = float(listing.get("shipping_listing", 4.99) or 4.99)
     except (TypeError, ValueError):
         shipping_listing = 4.99
-    
-    # Get marketplace information
+
     marketplace = listing.get("site") or listing.get("marketplace", "")
     is_germany = _is_germany_marketplace(marketplace)
-    
-    # Add €4.99 surcharge for non-Germany customers
     if not is_germany:
         selling_price_brutto += NON_GERMANY_SURCHARGE
 
     customer_payment_brutto = selling_price_brutto + shipping_listing
-    
-    # Get VAT rate for this marketplace
     vat_rate = _get_vat_rate_for_marketplace(marketplace)
-    
-    # Calculate netto price: brutto / (1 + vat_rate)
-    # This removes the VAT to get what we actually receive
     selling_price_netto = customer_payment_brutto / (1 + vat_rate)
-    
-    # Get fees
+
     payment_fee = 0.0
     sales_commission_percentage = 0.0
-    
-    # Try to look up from schema files first if category_id is available
+
     if lookup_by_category_id:
         category_id = listing.get("category_id")
         if category_id:
-            schema_fees = get_category_fees(category_id)
-            if schema_fees:
-                payment_fee = float(schema_fees.get("payment_fee") or 0.0)
-                sales_commission_percentage = float(schema_fees.get("sales_commission_percentage") or 0.0)
-                logger.debug(f"[PROFIT] Using schema fees for category {category_id}: fee=€{payment_fee}, commission={sales_commission_percentage*100:.2f}%")
-    
-    # Override with explicit category_fees if provided
+            resolved_fees = get_category_fees(category_id)
+            if resolved_fees:
+                payment_fee = float(resolved_fees.get("payment_fee") or 0.0)
+                sales_commission_percentage = float(resolved_fees.get("sales_commission_percentage") or 0.0)
+                logger.debug(
+                    "[PROFIT] Using category fees for category %s: fee=EUR%.2f, commission=%.2f%%",
+                    category_id,
+                    payment_fee,
+                    sales_commission_percentage * 100,
+                )
+
     if category_fees:
         payment_fee = float(category_fees.get("payment_fee") or 0.0)
         sales_commission_percentage = float(category_fees.get("sales_commission_percentage") or 0.0)
-    
-    # IMPORTANT: Commission is on the customer's FULL PAYMENT (brutto), not netto
-    # This is how eBay calculates it - on the total amount paid by customer
+
     sales_commission = customer_payment_brutto * sales_commission_percentage
-    
-    # Get shipping cost for marketplace
     shipping_costs_net = _get_marketplace_shipping_cost(marketplace)
-    
-    # Ensure total_cost_net is valid, optionally load from inventory
+
     if lookup_total_cost_net and (total_cost_net is None or total_cost_net == 0.0):
         total_cost_net = get_total_cost_net_for_sku(listing.get("sku"))
 
@@ -554,31 +572,24 @@ def calculate_listing_profit(
         total_cost_net = float(total_cost_net) if total_cost_net else 0.0
     except (TypeError, ValueError):
         total_cost_net = 0.0
-    
-    # Calculate net profit
-    # Net Profit = selling_price_netto - sales_commission - payment_fee - shipping_net - total_cost_net
-    # Where:
-    # - selling_price_netto = what we receive after VAT (brutto / (1 + vat_rate))
-    # - sales_commission = on customer's full payment (brutto)
-    # - total_cost_net = product cost from database
+
     net_profit = selling_price_netto - sales_commission - payment_fee - shipping_costs_net - total_cost_net
-    
-    # Calculate profit margin (as percentage of total cost)
+
     net_profit_margin_percent = 0.0
     if total_cost_net > 0:
         net_profit_margin_percent = (net_profit / total_cost_net) * 100
-    
+
     return {
-        'selling_price_brutto': round(selling_price_brutto, 2),
-        'shipping_listing': round(shipping_listing, 2),
-        'selling_price_netto': round(selling_price_netto, 2),
-        'payment_fee': round(payment_fee, 2),
-        'sales_commission': round(sales_commission, 2),
-        'sales_commission_percentage': round(sales_commission_percentage, 4),
-        'shipping_costs_net': round(shipping_costs_net, 2),
-        'total_cost_net': round(total_cost_net, 2),
-        'net_profit': round(net_profit, 2),
-        'net_profit_margin_percent': round(net_profit_margin_percent, 2)
+        "selling_price_brutto": round(selling_price_brutto, 2),
+        "shipping_listing": round(shipping_listing, 2),
+        "selling_price_netto": round(selling_price_netto, 2),
+        "payment_fee": round(payment_fee, 2),
+        "sales_commission": round(sales_commission, 2),
+        "sales_commission_percentage": round(sales_commission_percentage, 4),
+        "shipping_costs_net": round(shipping_costs_net, 2),
+        "total_cost_net": round(total_cost_net, 2),
+        "net_profit": round(net_profit, 2),
+        "net_profit_margin_percent": round(net_profit_margin_percent, 2),
     }
 
 

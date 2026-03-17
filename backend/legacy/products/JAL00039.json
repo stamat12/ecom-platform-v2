@@ -148,7 +148,8 @@
       "Product Model": "Walking Shoes V10",
       "Keyword 1": "Bequeme Schuhe",
       "Keyword 2": "Rutschfeste Sneakers",
-      "Keyword 3": "Fußschmerzen Linderung"
+      "Keyword 3": "Fußschmerzen Linderung",
+      "eBay Title": "FitVille Walking Shoes V10 Schuh Damen Rot 39.5 Bequeme Schuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "44",
@@ -159,6 +160,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T02:06"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

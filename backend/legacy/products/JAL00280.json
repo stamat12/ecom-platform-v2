@@ -177,7 +177,8 @@
       "Product Model": "HHGR002-SVO-39",
       "Keyword 1": "Damen Schuhe",
       "Keyword 2": "Slingpumps",
-      "Keyword 3": "Absatzschuhe"
+      "Keyword 3": "Absatzschuhe",
+      "eBay Title": "Greatonu HHGR002-SVO-39 Pumps Damen Silber 39 Damen Schuhe Slingpumps"
     },
     "Ebay Listing": {
       "Selling Price Total": "42",
@@ -188,6 +189,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:18"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

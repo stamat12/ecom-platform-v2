@@ -80,6 +80,23 @@
       "Keyword 2": "Sport-Bustier",
       "Keyword 3": "Fitness-BH",
       "eBay Title": "Fabletics Sport-BH Damen Schwarz XL Sportoberteil Sport-Bustier Fitness-BH"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-15T23:39:12.133159Z",
+          "sku": "VER00640",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "VER00640",
+            "item_id": "136395940411",
+            "old_price": 35.0,
+            "new_price": 25.0
+          }
+        }
+      ]
     }
   }
 }

@@ -151,7 +151,8 @@
       "Product Model": "",
       "Keyword 1": "Wasserdichte Stiefel",
       "Keyword 2": "Gartenstiefel",
-      "Keyword 3": "Regenstiefel"
+      "Keyword 3": "Regenstiefel",
+      "eBay Title": "Meik Mangni Gummistiefel Damen Khaki 37 Wasserdichte Stiefel Gartenstiefel"
     },
     "Ebay Listing": {
       "Selling Price Total": "32",
@@ -162,6 +163,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:18"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -109,7 +109,8 @@
       "Product Model": "QP2724",
       "Keyword 1": "OneBlade",
       "Keyword 2": "Rasiergerät",
-      "Keyword 3": "Rasiermesser"
+      "Keyword 3": "Rasiermesser",
+      "eBay Title": "Philips QP2724 Rasierer Braun OneBlade Rasiergerät Rasiermesser Neu mit Karton"
     },
     "Ebay Listing": {
       "Selling Price Total": "45",
@@ -121,6 +122,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -166,7 +166,8 @@
       "Product Model": "View Plus",
       "Keyword 1": "Raumluftmessgerät",
       "Keyword 2": "Luftqualitätssensor",
-      "Keyword 3": "Luftqualitätsmessgerät"
+      "Keyword 3": "Luftqualitätsmessgerät",
+      "eBay Title": "Airthings View Plus Luftqualitätsmonitor Weiß Raumluftmessgerät"
     },
     "Ebay Listing": {
       "Selling Price Total": "195",
@@ -178,6 +179,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

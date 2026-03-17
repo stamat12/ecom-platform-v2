@@ -146,7 +146,8 @@
       "Product Model": "VPC-B5-11C",
       "Keyword 1": "tragbares Ladegerät",
       "Keyword 2": "Elektrofahrzeug Ladegerät",
-      "Keyword 3": "Typ 2 Ladekabel"
+      "Keyword 3": "Typ 2 Ladekabel",
+      "eBay Title": "VoltBox VPC-B5-11C Ladegerät tragbares Ladegerät Elektrofahrzeug Ladegerät"
     },
     "Ebay Listing": {
       "Selling Price Total": "95",
@@ -158,6 +159,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

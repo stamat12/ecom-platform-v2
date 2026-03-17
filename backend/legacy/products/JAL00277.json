@@ -188,7 +188,8 @@
       "Product Model": "DE7601",
       "Keyword 1": "Komfortschuhe",
       "Keyword 2": "Hallux Valgus Schuhe",
-      "Keyword 3": "bequeme Schuhe"
+      "Keyword 3": "bequeme Schuhe",
+      "eBay Title": "Ortho+rest DE7601 Damenpumps Damen Marinenblau 39 Komfortschuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "55",
@@ -199,6 +200,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

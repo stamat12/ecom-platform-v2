@@ -86,6 +86,23 @@
       "Keyword 2": "Langarmshirt",
       "Keyword 3": "Sportoberteil",
       "eBay Title": "Hugo Boss C_Egarment_RA Sweatshirt Damen Hellbeige L Pullover Langarmshirt"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-15T23:39:04.336589Z",
+          "sku": "VER00359",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "VER00359",
+            "item_id": "136343751042",
+            "old_price": 105.0,
+            "new_price": 85.0
+          }
+        }
+      ]
     }
   }
 }

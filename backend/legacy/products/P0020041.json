@@ -166,7 +166,8 @@
       "Product Model": "2-in-1",
       "Keyword 1": "Akku Heckenschneider",
       "Keyword 2": "Gras- und Strauchschneider",
-      "Keyword 3": "Lithium-Ionen Heckenschneider"
+      "Keyword 3": "Lithium-Ionen Heckenschneider",
+      "eBay Title": "Avalanche Tools 2-in-1 Heckenschneider Blau Akku Heckenschneider"
     },
     "Ebay Listing": {
       "Selling Price Total": "38",
@@ -178,6 +179,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -132,7 +132,8 @@
       "Product Model": "",
       "Keyword 1": "Akku Gartenschneider",
       "Keyword 2": "Gartenschneider elektrisch",
-      "Keyword 3": "Gartenschneider mit Akku"
+      "Keyword 3": "Gartenschneider mit Akku",
+      "eBay Title": "Elektrische Gartenschneider Blau Schwarz Akku Gartenschneider"
     },
     "Ebay Listing": {
       "Selling Price Total": "35",
@@ -144,6 +145,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

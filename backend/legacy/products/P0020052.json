@@ -1,0 +1,120 @@
+{
+  "P0020052": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Pflege- & Medizinischer Bedarf/Kälte- & Wärmetherapie/Infrarot- & Wärmegeräte",
+      "eBay Category ID": "180953"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Grau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Heizkissen mit einer weichen, grauen Oberfläche. Es verfügt über eine Steuerungseinheit zur Temperatureinstellung. Das Heizkissen ist für die Anwendung auf dem Körper gedacht und bietet Wärme zur Entspannung.",
+      "Keywords": "Heizkissen",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "25.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020052 (1).jpg"
+        },
+        {
+          "filename": "P0020052 (10).jpg"
+        },
+        {
+          "filename": "P0020052 (11).jpg"
+        },
+        {
+          "filename": "P0020052 (12).jpg"
+        },
+        {
+          "filename": "P0020052 (13).jpg"
+        },
+        {
+          "filename": "P0020052 (14).jpg"
+        },
+        {
+          "filename": "P0020052 (2).jpg"
+        },
+        {
+          "filename": "P0020052 (3).jpg"
+        },
+        {
+          "filename": "P0020052 (4).jpg"
+        },
+        {
+          "filename": "P0020052 (5).jpg"
+        },
+        {
+          "filename": "P0020052 (6).jpg"
+        },
+        {
+          "filename": "P0020052 (7).jpg"
+        },
+        {
+          "filename": "P0020052 (8).jpg"
+        },
+        {
+          "filename": "P0020052 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020052 (13).jpg"
+        },
+        {
+          "filename": "P0020052 (8).jpg"
+        },
+        {
+          "filename": "P0020052 (9).jpg"
+        }
+      ]
+    }
+  }
+}

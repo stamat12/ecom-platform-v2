@@ -111,7 +111,8 @@
       "Product Model": "",
       "Keyword 1": "Sommerkleid",
       "Keyword 2": "Blumenmuster",
-      "Keyword 3": "Maxikleid"
+      "Keyword 3": "Maxikleid",
+      "eBay Title": "Kojooin Kleid Damen Mehrfarbig M Sommerkleid Blumenmuster Maxikleid"
     },
     "Ebay Listing": {
       "Selling Price Total": "25",
@@ -122,6 +123,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

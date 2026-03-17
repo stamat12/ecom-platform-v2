@@ -125,7 +125,8 @@
       "Product Model": "PB205",
       "Keyword 1": "Schnellladegerät",
       "Keyword 2": "Externer Akku",
-      "Keyword 3": "25000mAh"
+      "Keyword 3": "25000mAh",
+      "eBay Title": "UGREEN PB205 Powerbank Silber Schnellladegerät Externer Akku 25000mAh"
     },
     "Ebay Listing": {
       "Selling Price Total": "58",
@@ -137,6 +138,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

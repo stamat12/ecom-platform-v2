@@ -17,7 +17,7 @@
       "Total Cost Net": 1.86
     },
     "Ebay Category": {
-      "Category": "/Uhren & Schmuck/Uhren, -teile & -zubehör/Weitere Uhren/Wanduhren",
+      "Category": null,
       "eBay Category ID": "20561"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "30.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"

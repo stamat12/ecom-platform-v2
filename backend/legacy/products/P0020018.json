@@ -104,7 +104,8 @@
       "Product Model": "",
       "Keyword 1": "Mehrfachsteckdose",
       "Keyword 2": "Steckdosenleiste",
-      "Keyword 3": "Verteilersteckdose"
+      "Keyword 3": "Verteilersteckdose",
+      "eBay Title": "Steckdose Weiß Mehrfachsteckdose Steckdosenleiste Verteilersteckdose"
     },
     "Ebay Listing": {
       "Selling Price Total": "20",
@@ -116,6 +117,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

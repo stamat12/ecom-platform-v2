@@ -134,7 +134,8 @@
       "Product Model": "LJIF-2603ME / 201",
       "Keyword 1": "Kamin",
       "Keyword 2": "Heizgerät",
-      "Keyword 3": "Wärmestrahler"
+      "Keyword 3": "Wärmestrahler",
+      "eBay Title": "Chemin'arte LJIF-2603ME / 201 Elektrischer Kamin Schwarz, Rot Kamin Heizgerät"
     },
     "Ebay Listing": {
       "Selling Price Total": "165",
@@ -146,6 +147,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

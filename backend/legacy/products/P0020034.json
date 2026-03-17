@@ -159,7 +159,8 @@
       "Product Model": "Headphone Pro",
       "Keyword 1": "Bluetooth Kopfhörer",
       "Keyword 2": "Over-Ear Kopfhörer",
-      "Keyword 3": "Kabellose Kopfhörer"
+      "Keyword 3": "Kabellose Kopfhörer",
+      "eBay Title": "Nothing Headphone Pro Kopfhörer Weiß Bluetooth Kopfhörer Over-Ear Kopfhörer"
     },
     "Ebay Listing": {
       "Selling Price Total": "62",
@@ -171,6 +172,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -1,0 +1,108 @@
+{
+  "P0020050": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Deckenlampen & Kronleuchter",
+      "eBay Category ID": "117503"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Fondiiz",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt enthält 12 Einbauleuchten mit drei Farbtemperaturen: 6000K, 4000K und 2700K. Jede Leuchte hat eine Leistung von 5W und eine Helligkeit von 480 Lumen. Die Leuchten sind wasserdicht (IP44) und flimmerfrei, was sie augenschonend macht. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Einbauleuchte 3 Farben",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "45.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020050 (1).jpg"
+        },
+        {
+          "filename": "P0020050 (2).jpg"
+        },
+        {
+          "filename": "P0020050 (3).jpg"
+        },
+        {
+          "filename": "P0020050 (4).jpg"
+        },
+        {
+          "filename": "P0020050 (5).jpg"
+        },
+        {
+          "filename": "P0020050 (6).jpg"
+        },
+        {
+          "filename": "P0020050 (7).jpg"
+        },
+        {
+          "filename": "P0020050 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020050 (3).jpg"
+        },
+        {
+          "filename": "P0020050 (7).jpg"
+        },
+        {
+          "filename": "P0020050 (5).jpg"
+        },
+        {
+          "filename": "P0020050 (8).jpg"
+        },
+        {
+          "filename": "P0020050 (1).jpg"
+        }
+      ]
+    }
+  }
+}

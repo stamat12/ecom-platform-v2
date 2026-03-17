@@ -135,7 +135,8 @@
       "Product Model": "K-P10APR",
       "Keyword 1": "Auto Subwoofer",
       "Keyword 2": "10 Zoll Subwoofer",
-      "Keyword 3": "Bass Lautsprecher"
+      "Keyword 3": "Bass Lautsprecher",
+      "eBay Title": "KUERL K-P10APR Subwoofer 10 Zoll Auto Subwoofer 10 Zoll Subwoofer"
     },
     "Ebay Listing": {
       "Selling Price Total": "75",
@@ -147,6 +148,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

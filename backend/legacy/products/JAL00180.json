@@ -17,7 +17,7 @@
       "Total Cost Net": 1.9
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": null
     },
     "EAN": {
       "EAN": null
@@ -40,7 +40,7 @@
       "OP": "37.0"
     },
     "Status": {
-      "Status": "Images"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"

@@ -1,0 +1,111 @@
+{
+  "P0020053": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Werkzeuge/Diagnosegeräte/OBD-Scanner",
+      "eBay Category ID": "179476"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Topdon",
+      "Color": "Schwarz Grün",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein kompaktes Diagnosegerät in einem stabilen Gehäuse. Es wird in einer schützenden Tasche geliefert, die für eine einfache Aufbewahrung sorgt. Die Vorderseite des Geräts zeigt eine grüne Oberfläche mit dem Markennamen. Es ist für die Fahrzeugdiagnose konzipiert. Sichtbare Angaben: Modell/Nummern: J2534; Farbe: Schwarz Grün.",
+      "Keywords": "RLink J2534 OBD2 Diagnosegerät",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "52.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020053 (1).jpg"
+        },
+        {
+          "filename": "P0020053 (10).jpg"
+        },
+        {
+          "filename": "P0020053 (2).jpg"
+        },
+        {
+          "filename": "P0020053 (3).jpg"
+        },
+        {
+          "filename": "P0020053 (4).jpg"
+        },
+        {
+          "filename": "P0020053 (5).jpg"
+        },
+        {
+          "filename": "P0020053 (6).jpg"
+        },
+        {
+          "filename": "P0020053 (7).jpg"
+        },
+        {
+          "filename": "P0020053 (8).jpg"
+        },
+        {
+          "filename": "P0020053 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020053 (3).jpg"
+        },
+        {
+          "filename": "P0020053 (9).jpg"
+        },
+        {
+          "filename": "P0020053 (10).jpg"
+        },
+        {
+          "filename": "P0020053 (1).jpg"
+        }
+      ]
+    }
+  }
+}

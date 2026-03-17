@@ -1,0 +1,126 @@
+{
+  "P0020048": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Parlux",
+      "Color": "Lila",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Haartrockner hat eine antibakterielle Technologie. Er ist in einem attraktiven lila Farbton gehalten und verfügt über verschiedene Temperatureinstellungen. Die Handhabung ist ergonomisch gestaltet, was die Nutzung erleichtert.",
+      "Keywords": "Parlux Haartrockner",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "140.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020048 (1).jpg"
+        },
+        {
+          "filename": "P0020048 (10).jpg"
+        },
+        {
+          "filename": "P0020048 (11).jpg"
+        },
+        {
+          "filename": "P0020048 (12).jpg"
+        },
+        {
+          "filename": "P0020048 (13).jpg"
+        },
+        {
+          "filename": "P0020048 (14).jpg"
+        },
+        {
+          "filename": "P0020048 (2).jpg"
+        },
+        {
+          "filename": "P0020048 (3).jpg"
+        },
+        {
+          "filename": "P0020048 (4).jpg"
+        },
+        {
+          "filename": "P0020048 (5).jpg"
+        },
+        {
+          "filename": "P0020048 (6).jpg"
+        },
+        {
+          "filename": "P0020048 (7).jpg"
+        },
+        {
+          "filename": "P0020048 (8).jpg"
+        },
+        {
+          "filename": "P0020048 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020048 (5).jpg"
+        },
+        {
+          "filename": "P0020048 (4).jpg"
+        },
+        {
+          "filename": "P0020048 (9).jpg"
+        },
+        {
+          "filename": "P0020048 (8).jpg"
+        },
+        {
+          "filename": "P0020048 (6).jpg"
+        }
+      ]
+    }
+  }
+}

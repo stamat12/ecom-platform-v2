@@ -138,7 +138,8 @@
       "Product Model": "P45",
       "Keyword 1": "E14",
       "Keyword 2": "Energiesparlampe",
-      "Keyword 3": "Lampen"
+      "Keyword 3": "Lampen",
+      "eBay Title": "V-TAC P45 LED-Lampe Warm White E14 Energiesparlampe Lampen Neu"
     },
     "Ebay Listing": {
       "Selling Price Total": "28",
@@ -150,6 +151,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

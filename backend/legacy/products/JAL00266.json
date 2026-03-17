@@ -157,7 +157,8 @@
       "Product Model": "HHGR405-SPK-39",
       "Keyword 1": "Damen Schuhe",
       "Keyword 2": "Absatzschuhe",
-      "Keyword 3": "Schuhe mit Riemen"
+      "Keyword 3": "Schuhe mit Riemen",
+      "eBay Title": "Greatonu HHGR405-SPK-39 Pumps Damen Rosa 39 Damen Schuhe Absatzschuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -168,6 +169,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

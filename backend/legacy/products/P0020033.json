@@ -173,7 +173,8 @@
       "Product Model": "CONTEC08A-VET",
       "Keyword 1": "Veterinär Blutdruckmonitor",
       "Keyword 2": "Tier Blutdruckmessgerät",
-      "Keyword 3": "Blutdruckmessgerät für Tiere"
+      "Keyword 3": "Blutdruckmessgerät für Tiere",
+      "eBay Title": "Contec CONTEC08A-VET Blutdruckmessgerät Weiß Veterinär Blutdruckmonitor"
     },
     "Ebay Listing": {
       "Selling Price Total": "62",
@@ -185,6 +186,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

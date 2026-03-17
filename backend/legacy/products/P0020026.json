@@ -167,7 +167,8 @@
       "Product Model": "F312",
       "Keyword 1": "Filterkaffeemaschine",
       "Keyword 2": "Kaffeeautomat",
-      "Keyword 3": "Kaffeemaker"
+      "Keyword 3": "Kaffeemaker",
+      "eBay Title": "KRUPS F312 Kaffeemaschine Schwarz Filterkaffeemaschine Kaffeeautomat Kaffeemaker"
     },
     "Ebay Listing": {
       "Selling Price Total": "38",
@@ -179,6 +180,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -171,7 +171,8 @@
       "Product Model": "S8",
       "Keyword 1": "FPV Controller",
       "Keyword 2": "RC Flug Simulator",
-      "Keyword 3": "8 Kanäle"
+      "Keyword 3": "8 Kanäle",
+      "eBay Title": "STARTRC S8 Fernsteuerung Weiß 162*120*66mm FPV Controller RC Flug Simulator"
     },
     "Ebay Listing": {
       "Selling Price Total": "28",
@@ -183,6 +184,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

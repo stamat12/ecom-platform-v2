@@ -181,7 +181,8 @@
       "Product Model": "Radar System",
       "Keyword 1": "Einparkhilfe",
       "Keyword 2": "Rückfahrwarner",
-      "Keyword 3": "Parksensoren"
+      "Keyword 3": "Parksensoren",
+      "eBay Title": "Beeper Radar System Parkassistent Einparkhilfe Rückfahrwarner Parksensoren"
     },
     "Ebay Listing": {
       "Selling Price Total": "58",
@@ -193,6 +194,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

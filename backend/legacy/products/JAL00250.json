@@ -152,7 +152,8 @@
       "Product Model": "062",
       "Keyword 1": "Sport Schuhe",
       "Keyword 2": "Freizeitschuhe",
-      "Keyword 3": "Atmungsaktive Schuhe"
+      "Keyword 3": "Atmungsaktive Schuhe",
+      "eBay Title": "sharllen 062 Sneaker Unisex Grau 44 Sport Schuhe Freizeitschuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -163,6 +164,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

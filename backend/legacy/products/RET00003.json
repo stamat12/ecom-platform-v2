@@ -77,6 +77,23 @@
       "Keyword 2": "Regenjacke",
       "Keyword 3": "Funktionsjacke",
       "eBay Title": "Jack Wolfskin Bergland 3in1 Jkt Jacke Herren Schwarz XL Wanderjacke Regenjacke"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-15T23:39:15.130724Z",
+          "sku": "RET00003",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "RET00003",
+            "item_id": "136624089831",
+            "old_price": 85.0,
+            "new_price": 65.0
+          }
+        }
+      ]
     }
   }
 }

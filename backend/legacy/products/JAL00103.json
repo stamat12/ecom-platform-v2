@@ -141,7 +141,8 @@
       "Product Model": "Adventure 50L",
       "Keyword 1": "Wanderucksack",
       "Keyword 2": "Trekkingrucksack",
-      "Keyword 3": "Reiserucksack"
+      "Keyword 3": "Reiserucksack",
+      "eBay Title": "Bseash Adventure 50L Rucksack Unisex Armeegrün 50 L Wanderucksack"
     },
     "Ebay Listing": {
       "Selling Price Total": "34",
@@ -152,6 +153,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T02:07"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

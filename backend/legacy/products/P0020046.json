@@ -1,0 +1,108 @@
+{
+  "P0020046": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Spielzeug/Kleinkindspielzeug/Sonstige",
+      "eBay Category ID": "374"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "KU",
+      "Brand": "Fisher-Price",
+      "Color": "Beige",
+      "Size": "6-36 Monate"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieses interaktive Plüschtier fördert das Lernen durch Spielen. Es bietet über 100 neue Wörter und mehr als 75 Lieder, Geräusche und Sätze. Ideal für Kleinkinder, um ihre motorischen Fähigkeiten und Sprachentwicklung zu unterstützen. Sichtbare Angaben: Farbe: Beige; Größe: 6-36 Monate.",
+      "Keywords": "Puppy Lernspielzeug",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "75.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020046 (1).jpg"
+        },
+        {
+          "filename": "P0020046 (2).jpg"
+        },
+        {
+          "filename": "P0020046 (3).jpg"
+        },
+        {
+          "filename": "P0020046 (4).jpg"
+        },
+        {
+          "filename": "P0020046 (5).jpg"
+        },
+        {
+          "filename": "P0020046 (6).jpg"
+        },
+        {
+          "filename": "P0020046 (7).jpg"
+        },
+        {
+          "filename": "P0020046 (8).jpg"
+        },
+        {
+          "filename": "P0020046 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020046 (3).jpg"
+        },
+        {
+          "filename": "P0020046 (7).jpg"
+        },
+        {
+          "filename": "P0020046 (9).jpg"
+        },
+        {
+          "filename": "P0020046 (6).jpg"
+        }
+      ]
+    }
+  }
+}

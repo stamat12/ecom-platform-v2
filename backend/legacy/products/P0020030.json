@@ -231,7 +231,8 @@
       "Product Model": "KJX-260-80-01",
       "Keyword 1": "LED Ringlicht",
       "Keyword 2": "Stativ",
-      "Keyword 3": "Bluetooth Fernbedienung"
+      "Keyword 3": "Bluetooth Fernbedienung",
+      "eBay Title": "MICCYE KJX-260-80-01 Ringlicht Schwarz, Weiß LED Ringlicht Stativ"
     },
     "Ebay Listing": {
       "Selling Price Total": "24",
@@ -243,6 +244,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

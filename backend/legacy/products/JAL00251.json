@@ -156,7 +156,8 @@
       "Product Model": "",
       "Keyword 1": "Atmungsaktiv",
       "Keyword 2": "Rutschfest",
-      "Keyword 3": "Bequem"
+      "Keyword 3": "Bequem",
+      "eBay Title": "sharllen Schnürschuh Unisex Braun 45 Atmungsaktiv Rutschfest Bequem"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -167,6 +168,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

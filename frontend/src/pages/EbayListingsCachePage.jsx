@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { AdvancedFilters } from "../components/AdvancedFilters";
 
 const API_BASE = "http://localhost:8000";
 
@@ -16,6 +15,7 @@ const ALL_COLUMNS = [
   { id: "quantity_total", label: "Qty Total", default: false },
   { id: "quantity_available", label: "Qty Available", default: false },
   { id: "quantity_sold", label: "Qty Sold", default: false },
+  { id: "days_listed", label: "Days Listed", default: true },
   { id: "start_time", label: "Start Time", default: false },
   { id: "end_time", label: "End Time", default: false },
   { id: "best_offer_enabled", label: "Best Offer", default: false },
@@ -31,6 +31,13 @@ const ALL_COLUMNS = [
   { id: "count_main_images", label: "Count Main Images", default: false },
   { id: "ebay_seo_title", label: "eBay SEO Title", default: false },
   { id: "title_matches_ebay_seo_title", label: "Title = eBay SEO Title", default: false },
+  { id: "last_title_change_value", label: "Last Live Title", default: true },
+  { id: "last_title_change_days_ago", label: "Title Changed", default: true },
+  { id: "last_title_change_at", label: "Title Changed At", default: false },
+  { id: "last_price_new", label: "Last Live Price €", default: true },
+  { id: "last_price_change_days_ago", label: "Price Changed", default: true },
+  { id: "last_price_change_at", label: "Price Changed At", default: false },
+  { id: "last_price_old", label: "Prev Live Price €", default: false },
   { id: "ebay_seo_product_type", label: "eBay SEO Product Type", default: false },
   { id: "ebay_seo_product_model", label: "eBay SEO Product Model", default: false },
   { id: "ebay_seo_keyword_1", label: "eBay SEO Keyword 1", default: false },
@@ -351,7 +358,7 @@ const ColumnSelector = ({ visibleColumns, onColumnsChange, onClose }) => {
 const formatCellValue = (value, columnId) => {
   if (value === null || value === undefined || value === "") return "—";
   
-  if (columnId.startsWith("profit.") || columnId === "price") {
+  if (columnId.startsWith("profit.") || columnId === "price" || columnId === "last_price_old" || columnId === "last_price_new") {
     const num = parseFloat(value);
     if (!isNaN(num)) return `€${num.toFixed(2)}`;
     return value;
@@ -363,9 +370,23 @@ const formatCellValue = (value, columnId) => {
     return value;
   }
   
-  if (columnId === "start_time" || columnId === "end_time") {
+  if (columnId === "days_listed" || columnId === "last_title_change_days_ago" || columnId === "last_price_change_days_ago") {
+    const n = parseInt(value, 10);
+    if (isNaN(n)) return "—";
+    return `${n}d`;
+  }
+
+  if (columnId === "last_price_change_at") {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "—";
+    const daysAgo = Math.floor((Date.now() - date.getTime()) / 86400000);
+    return `${daysAgo}d`;
+  }
+
+  if (columnId === "start_time" || columnId === "end_time" || columnId === "last_title_change_at") {
     // Format as YYYY-MM-DD for better sorting
     const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "—";
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
@@ -394,6 +415,9 @@ const formatCellValue = (value, columnId) => {
 };
 
 const COMPACT_COLUMNS = new Set([
+  "days_listed",
+  "last_title_change_days_ago",
+  "last_price_change_days_ago",
   "count_main_images",
   "title_matches_ebay_seo_title",
   "ebay_seo_product_type",
@@ -412,16 +436,19 @@ const getHeaderStyle = (columnId) => {
     fontSize: "12px",
     fontWeight: "bold",
     whiteSpace: "nowrap",
+    minWidth: "120px",
+    verticalAlign: "top",
   };
 
   if (COMPACT_COLUMNS.has(columnId)) {
     return {
       ...baseStyle,
-      width: "120px",
-      maxWidth: "120px",
+      minWidth: "90px",
+      width: "90px",
       whiteSpace: "normal",
       lineHeight: "1.25",
-      wordBreak: "break-word",
+      wordBreak: "normal",
+      overflowWrap: "break-word",
     };
   }
 
@@ -475,8 +502,22 @@ const getCellStyle = (columnId, value) => {
     return {
       ...baseStyle,
       whiteSpace: "normal",
-      wordBreak: "break-word",
+      wordBreak: "normal",
+      overflowWrap: "break-word",
+      minWidth: "220px",
       maxWidth: "300px",
+      lineHeight: "1.35",
+    };
+  }
+
+  if (columnId === "last_title_change_value") {
+    return {
+      ...baseStyle,
+      whiteSpace: "normal",
+      wordBreak: "normal",
+      overflowWrap: "break-word",
+      minWidth: "220px",
+      maxWidth: "320px",
       lineHeight: "1.35",
     };
   }
@@ -484,14 +525,292 @@ const getCellStyle = (columnId, value) => {
   if (COMPACT_COLUMNS.has(columnId)) {
     return {
       ...baseStyle,
-      maxWidth: "120px",
+      minWidth: "90px",
+      maxWidth: "90px",
       whiteSpace: "normal",
-      wordBreak: "break-word",
+      wordBreak: "normal",
+      overflowWrap: "break-word",
       lineHeight: "1.25",
     };
   }
   
   return baseStyle;
+};
+
+// ─── Price calculator helpers ──────────────────────────────────────────────────
+
+/**
+ * Given a target profit margin % and a listing's profit_analysis, compute the
+ * required new eBay listing price (brutto, DE marketplace, no surcharge).
+ */
+const computePriceFromMargin = (targetMarginPct, profit) => {
+  if (!profit) return null;
+  const totalCostNet   = profit.total_cost_net        || 0;
+  const commissionPct  = profit.sales_commission_percentage || 0;
+  const paymentFee     = profit.payment_fee            || 0;
+  const shippingNet    = profit.shipping_costs_net     || 0;
+  const shippingList   = profit.shipping_listing       || 4.99;
+  const vatRate        = 0.19;
+
+  const targetNetProfit = (totalCostNet * targetMarginPct) / 100;
+  const numerator = targetNetProfit + paymentFee + shippingNet + totalCostNet;
+  const divisor   = 1 / (1 + vatRate) - commissionPct;
+  if (divisor <= 0) return null;
+  return Math.max((numerator / divisor) - shippingList, 0.99);
+};
+
+/**
+ * Given a new eBay price and a listing's profit_analysis, compute the resulting
+ * profit margin %.
+ */
+const computeMarginFromPrice = (price, profit) => {
+  if (!profit) return null;
+  const totalCostNet   = profit.total_cost_net        || 0;
+  if (totalCostNet <= 0) return null;
+  const commissionPct  = profit.sales_commission_percentage || 0;
+  const paymentFee     = profit.payment_fee            || 0;
+  const shippingNet    = profit.shipping_costs_net     || 0;
+  const shippingList   = profit.shipping_listing       || 4.99;
+  const vatRate        = 0.19;
+
+  const custPayment     = parseFloat(price) + shippingList;
+  const sellingNetto    = custPayment / (1 + vatRate);
+  const commission      = custPayment * commissionPct;
+  const netProfit       = sellingNetto - commission - paymentFee - shippingNet - totalCostNet;
+  return (netProfit / totalCostNet) * 100;
+};
+
+// ─── PriceAdjuster modal ──────────────────────────────────────────────────────
+
+const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
+  // Build initial rows from selected SKUs that appear in the current page
+  const initialRows = React.useMemo(() => {
+    return Array.from(selectedSkus)
+      .map(sku => listings.find(l => l.sku === sku))
+      .filter(Boolean)
+      .map(l => ({
+        sku:        l.sku,
+        op:         l.op,
+        title:      l.title || l.ebay_seo_title || "",
+        imageUrl:   l.primary_image_url || "",
+        currentPrice: parseFloat(l.price) || 0,
+        profit:     l.profit_analysis || null,
+        newPrice:   (parseFloat(l.price) || 0).toFixed(2),
+        newMargin:  l.profit_analysis
+          ? (computeMarginFromPrice(parseFloat(l.price) || 0, l.profit_analysis) || 0).toFixed(1)
+          : "",
+        include: true,
+      }));
+  }, [listings, selectedSkus]);
+
+  const [rows, setRows] = React.useState(initialRows);
+  const [globalMargin, setGlobalMargin] = React.useState("");
+  const [updating, setUpdating] = React.useState(false);
+  const [results, setResults] = React.useState([]);
+
+  const updateRow = (idx, field, rawValue) => {
+    setRows(prev => {
+      const next = [...prev];
+      const row  = { ...next[idx] };
+      if (field === "newPrice") {
+        row.newPrice = rawValue;
+        const n = parseFloat(rawValue);
+        if (!isNaN(n) && n > 0 && row.profit) {
+          const m = computeMarginFromPrice(n, row.profit);
+          row.newMargin = m !== null ? m.toFixed(1) : "";
+        }
+      } else if (field === "newMargin") {
+        row.newMargin = rawValue;
+        const m = parseFloat(rawValue);
+        if (!isNaN(m) && row.profit) {
+          const p = computePriceFromMargin(m, row.profit);
+          row.newPrice = p !== null ? p.toFixed(2) : row.newPrice;
+        }
+      } else if (field === "include") {
+        row.include = rawValue;
+      }
+      next[idx] = row;
+      return next;
+    });
+  };
+
+  const applyGlobalMargin = () => {
+    const m = parseFloat(globalMargin);
+    if (isNaN(m)) return;
+    setRows(prev => prev.map(row => {
+      if (!row.profit) return row;
+      const p = computePriceFromMargin(m, row.profit);
+      return {
+        ...row,
+        newMargin: m.toFixed(1),
+        newPrice:  p !== null ? p.toFixed(2) : row.newPrice,
+      };
+    }));
+  };
+
+  const handleUpdate = async () => {
+    const toUpdate = rows.filter(r => r.include && parseFloat(r.newPrice) !== r.currentPrice && parseFloat(r.newPrice) > 0);
+    if (toUpdate.length === 0) {
+      alert("No price changes to apply (all prices are the same as current, or excluded).");
+      return;
+    }
+    setUpdating(true);
+    setResults([]);
+    const out = [];
+    for (const row of toUpdate) {
+      try {
+        const resp = await fetch(`${API_BASE}/api/ebay/revise-price`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sku: row.sku, new_price: parseFloat(row.newPrice) }),
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (resp.ok && data.success !== false) {
+          out.push({ sku: row.sku, success: true, message: data.message || `€${row.newPrice}` });
+        } else {
+          out.push({ sku: row.sku, success: false, message: data.detail || data.message || `HTTP ${resp.status}` });
+        }
+      } catch (err) {
+        out.push({ sku: row.sku, success: false, message: err.message });
+      }
+    }
+    setUpdating(false);
+    setResults(out);
+    const succeeded = out.filter(r => r.success).length;
+    if (succeeded > 0) onDone();
+  };
+
+  const fmt = v => (v === null || v === undefined || v === "" ? "—" : v);
+  const fmtEur = v => { const n = parseFloat(v); return isNaN(n) ? "—" : `€${n.toFixed(2)}`; };
+  const fmtPct = v => { const n = parseFloat(v); return isNaN(n) ? "—" : `${n.toFixed(1)}%`; };
+
+  const toUpdate = rows.filter(r => r.include && parseFloat(r.newPrice) !== r.currentPrice && parseFloat(r.newPrice) > 0);
+
+  return (
+    <div style={{ position:"fixed", top:0, left:0, right:0, bottom:0, backgroundColor:"rgba(0,0,0,0.55)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999 }}>
+      <div style={{ backgroundColor:"white", borderRadius:"8px", padding:"24px", maxWidth:"1400px", width:"97vw", maxHeight:"90vh", overflowY:"auto", boxShadow:"0 6px 20px rgba(0,0,0,0.3)" }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"16px" }}>
+          <h2 style={{ margin:0, fontSize:"18px" }}>💰 Price Adjuster ({rows.length} listing{rows.length !== 1 ? "s" : ""})</h2>
+          <button onClick={onClose} style={{ padding:"6px 12px", backgroundColor:"#dc3545", color:"white", border:"none", borderRadius:"4px", cursor:"pointer" }}>✕ Close</button>
+        </div>
+
+        {/* Global margin setter */}
+        <div style={{ backgroundColor:"#f0f8ff", padding:"12px 16px", borderRadius:"6px", marginBottom:"16px", display:"flex", alignItems:"center", gap:"12px", flexWrap:"wrap" }}>
+          <span style={{ fontSize:"13px", fontWeight:"bold" }}>Set target margin % for all:</span>
+          <input
+            type="number"
+            step="1"
+            placeholder="e.g. 50"
+            value={globalMargin}
+            onChange={e => setGlobalMargin(e.target.value)}
+            onKeyDown={e => e.key === "Enter" && applyGlobalMargin()}
+            style={{ width:"90px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }}
+          />
+          <button onClick={applyGlobalMargin} style={{ padding:"6px 14px", backgroundColor:"#0066cc", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>
+            Apply to all
+          </button>
+          <span style={{ fontSize:"12px", color:"#666" }}>Computes the price each listing needs to hit that margin.</span>
+        </div>
+
+        {/* Rows table */}
+        <div style={{ overflowX:"auto", marginBottom:"16px" }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"12px" }}>
+            <thead>
+              <tr style={{ backgroundColor:"#f8f9fa", borderBottom:"2px solid #dee2e6" }}>
+                <th style={{ padding:"8px", textAlign:"center" }}>✓</th>
+                <th style={{ padding:"8px", textAlign:"center" }}>Image</th>
+                <th style={{ padding:"8px", textAlign:"left", minWidth:"200px", maxWidth:"300px" }}>Title</th>
+                <th style={{ padding:"8px", textAlign:"left" }}>SKU</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>OP €</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Current Price</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Cost Net</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Commission</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Payment Fee</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Shipping Net</th>
+                <th style={{ padding:"8px", textAlign:"right", color:"#28a745" }}>Net Profit</th>
+                <th style={{ padding:"8px", textAlign:"right", color:"#28a745" }}>Margin %</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>New Price €</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>New Margin %</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, idx) => {
+                const p = row.profit || {};
+                const priceChanged = parseFloat(row.newPrice) !== row.currentPrice;
+                return (
+                  <tr key={row.sku} style={{ borderBottom:"1px solid #eee", backgroundColor: priceChanged ? "#fffde7" : (idx % 2 === 0 ? "#fff" : "#f9f9f9") }}>
+                    <td style={{ padding:"6px", textAlign:"center" }}>
+                      <input type="checkbox" checked={row.include} onChange={e => updateRow(idx, "include", e.target.checked)} />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center" }}>
+                      {row.imageUrl ? (
+                        <img src={row.imageUrl} alt={row.sku} style={{ width:"52px", height:"52px", objectFit:"cover", borderRadius:"4px", border:"1px solid #ddd" }} onError={e => { e.target.style.display="none"; }} />
+                      ) : (
+                        <div style={{ width:"52px", height:"52px", backgroundColor:"#e9ecef", borderRadius:"4px", display:"inline-flex", alignItems:"center", justifyContent:"center", fontSize:"18px" }}>🖼️</div>
+                      )}
+                    </td>
+                    <td style={{ padding:"6px", fontSize:"11px", whiteSpace:"normal", wordBreak:"break-word", maxWidth:"300px", lineHeight:"1.35" }}>{row.title || "—"}</td>
+                    <td style={{ padding:"6px", fontWeight:"bold" }}>{row.sku}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(row.op)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(row.currentPrice)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.total_cost_net)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.sales_commission)} <span style={{ color:"#888", fontSize:"10px" }}>({fmtPct((p.sales_commission_percentage || 0) * 100)})</span></td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.payment_fee)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.shipping_costs_net)}</td>
+                    <td style={{ padding:"6px", textAlign:"right", fontWeight:"bold", color: p.net_profit > 0 ? "#28a745" : "#dc3545" }}>{fmtEur(p.net_profit)}</td>
+                    <td style={{ padding:"6px", textAlign:"right", fontWeight:"bold", color: parseFloat(p.net_profit_margin_percent) > 0 ? "#28a745" : "#dc3545" }}>{fmtPct(p.net_profit_margin_percent)}</td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input
+                        type="number"
+                        step="0.01"
+                        min="0.99"
+                        value={row.newPrice}
+                        onChange={e => updateRow(idx, "newPrice", e.target.value)}
+                        style={{ width:"80px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }}
+                      />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input
+                        type="number"
+                        step="1"
+                        value={row.newMargin}
+                        onChange={e => updateRow(idx, "newMargin", e.target.value)}
+                        style={{ width:"70px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }}
+                      />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Update results */}
+        {results.length > 0 && (
+          <div style={{ marginBottom:"16px", padding:"12px", backgroundColor:"#f8f9fa", borderRadius:"6px", fontSize:"12px" }}>
+            <strong>Results:</strong>
+            {results.map(r => (
+              <div key={r.sku} style={{ color: r.success ? "#28a745" : "#dc3545", marginTop:"4px" }}>
+                {r.success ? "✓" : "✗"} {r.sku}: {r.message}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Footer buttons */}
+        <div style={{ display:"flex", justifyContent:"flex-end", gap:"10px" }}>
+          <button onClick={onClose} style={{ padding:"8px 20px", backgroundColor:"#6c757d", color:"white", border:"none", borderRadius:"4px", cursor:"pointer" }}>Cancel</button>
+          <button
+            onClick={handleUpdate}
+            disabled={updating || toUpdate.length === 0}
+            style={{ padding:"8px 20px", backgroundColor: updating || toUpdate.length === 0 ? "#ccc" : "#d32f2f", color:"white", border:"none", borderRadius:"4px", cursor: updating || toUpdate.length === 0 ? "default" : "pointer", fontWeight:"bold" }}
+          >
+            {updating ? "⏳ Updating..." : `🚀 Update ${toUpdate.length} eBay Price${toUpdate.length !== 1 ? "s" : ""}`}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default function EbayListingsCachePage() {
@@ -502,7 +821,7 @@ export default function EbayListingsCachePage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [error, setError] = useState(null);
   const [showColumnSelector, setShowColumnSelector] = useState(false);
-  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
   const LIMIT = 200;
 
@@ -532,35 +851,54 @@ export default function EbayListingsCachePage() {
     max_price: "",
     min_profit_margin: "",
     max_profit_margin: "",
-    listing_status: "",
-    condition: "",
     sort_by: "sku",
     sort_order: "asc",
   });
 
-  // Per-column filters (stored in localStorage)
-  const [columnFilters, setColumnFilters] = useState(() => {
-    const saved = localStorage.getItem("ebayListingsColumnFilters");
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        return {};
-      }
-    }
-    return {};
-  });
-
-  // Save column filters to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("ebayListingsColumnFilters", JSON.stringify(columnFilters));
-  }, [columnFilters]);
+  // SKU Batch-style checkbox filters (independent from visible columns)
+  const [selectedStatusFilters, setSelectedStatusFilters] = useState(new Set());
+  const [selectedConditionFilters, setSelectedConditionFilters] = useState(new Set());
+  const [selectedCategoryFilters, setSelectedCategoryFilters] = useState(new Set());
+  const [selectedTitleMatchFilters, setSelectedTitleMatchFilters] = useState(new Set());
 
   // Selected SKUs for bulk operations
   const [selectedSkus, setSelectedSkus] = useState(new Set());
   const [seoGenerating, setSeoGenerating] = useState(false);
   const [titleGenerating, setTitleGenerating] = useState(false);
   const [titleUpdatingEbay, setTitleUpdatingEbay] = useState(false);
+  const [profitRecalculating, setProfitRecalculating] = useState(false);
+  const [showPriceAdjuster, setShowPriceAdjuster] = useState(false);
+  const [columnSort, setColumnSort] = useState({ columnId: null, direction: "asc" });
+  const [columnWidths, setColumnWidths] = useState(() => {
+    const saved = localStorage.getItem("ebayListingsColumnWidths");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return parsed && typeof parsed === "object" ? parsed : {};
+      } catch {
+        return {};
+      }
+    }
+    return {};
+  });
+  const resizeStateRef = useRef({
+    active: false,
+    columnId: null,
+    startX: 0,
+    startWidth: 0,
+  });
+
+  useEffect(() => {
+    localStorage.setItem("ebayListingsColumnWidths", JSON.stringify(columnWidths));
+  }, [columnWidths]);
+
+  useEffect(() => {
+    return () => {
+      if (resizeStateRef.current.active) {
+        document.body.style.cursor = "";
+      }
+    };
+  }, []);
 
   // Toggle SKU selection
   const toggleSkuSelection = (sku) => {
@@ -577,7 +915,7 @@ export default function EbayListingsCachePage() {
 
   // Select/deselect all visible SKUs on current page
   const toggleSelectAll = () => {
-    const currentPageSkus = listings.map(l => l.sku);
+    const currentPageSkus = filteredSortedListings.map(l => l.sku);
     const allCurrentPageSelected = currentPageSkus.every(sku => selectedSkus.has(sku));
     
     const newSet = new Set(selectedSkus);
@@ -595,7 +933,7 @@ export default function EbayListingsCachePage() {
 
   // Helper to check if all current page SKUs are selected
   const areAllCurrentPageSelected = () => {
-    return listings.length > 0 && listings.every(l => selectedSkus.has(l.sku));
+    return filteredSortedListings.length > 0 && filteredSortedListings.every(l => selectedSkus.has(l.sku));
   };
 
   const expandSkuRange = (value) => {
@@ -835,6 +1173,26 @@ export default function EbayListingsCachePage() {
     }
   };
 
+  const recalculateProfitOnly = async () => {
+    setProfitRecalculating(true);
+    setError(null);
+    try {
+      const response = await fetch(`${API_BASE}/api/skus/ebay-listings/recompute-profit`, {
+        method: "POST",
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || payload.success === false) {
+        throw new Error(payload.detail || payload.message || `HTTP ${response.status}`);
+      }
+      await fetchListings(page);
+      alert(`Profit recalculated for ${payload.count || 0} listing(s).`);
+    } catch (err) {
+      setError(`Failed to recalculate profit: ${err.message}`);
+    } finally {
+      setProfitRecalculating(false);
+    }
+  };
+
 
   const fetchListings = async (pageNum = 1) => {
     setLoading(true);
@@ -849,11 +1207,8 @@ export default function EbayListingsCachePage() {
         max_price: filters.max_price || "999999",
         min_profit_margin: filters.min_profit_margin || "-999999",
         max_profit_margin: filters.max_profit_margin || "999999",
-        listing_status: filters.listing_status || "",
-        condition: filters.condition || "",
         sort_by: filters.sort_by,
         sort_order: filters.sort_order,
-        column_filters: JSON.stringify(columnFilters),
       });
 
       const url = `${API_BASE}/api/ebay-cache/de-listings?${params}`;
@@ -910,8 +1265,6 @@ export default function EbayListingsCachePage() {
     filters.max_price,
     filters.min_profit_margin,
     filters.max_profit_margin,
-    filters.listing_status,
-    filters.condition,
     filters.sort_by,
     filters.sort_order,
   ]);
@@ -930,11 +1283,13 @@ export default function EbayListingsCachePage() {
       max_price: "",
       min_profit_margin: "",
       max_profit_margin: "",
-      listing_status: "",
-      condition: "",
       sort_by: "sku",
       sort_order: "asc",
     });
+    setSelectedStatusFilters(new Set());
+    setSelectedConditionFilters(new Set());
+    setSelectedCategoryFilters(new Set());
+    setSelectedTitleMatchFilters(new Set());
   };
 
   const getColumnLabel = (colId) => {
@@ -957,6 +1312,151 @@ export default function EbayListingsCachePage() {
       return listing.profit_analysis?.[profitKey];
     }
     return listing[columnId];
+  };
+
+  const handleHeaderSort = (columnId) => {
+    if (columnId === "image") return;
+    setColumnSort((prev) => {
+      if (prev.columnId !== columnId) return { columnId, direction: "asc" };
+      return { columnId, direction: prev.direction === "asc" ? "desc" : "asc" };
+    });
+  };
+
+  const sortedListings = React.useMemo(() => {
+    if (!columnSort.columnId) return listings;
+    const dir = columnSort.direction === "asc" ? 1 : -1;
+    const sorted = [...listings].sort((a, b) => {
+      const av = getCellValue(a, columnSort.columnId);
+      const bv = getCellValue(b, columnSort.columnId);
+
+      if (av === null || av === undefined || av === "") return 1 * dir;
+      if (bv === null || bv === undefined || bv === "") return -1 * dir;
+
+      const aNum = Number(av);
+      const bNum = Number(bv);
+      const bothNumbers = Number.isFinite(aNum) && Number.isFinite(bNum);
+      if (bothNumbers) return (aNum - bNum) * dir;
+
+      const aDate = new Date(av);
+      const bDate = new Date(bv);
+      if (!Number.isNaN(aDate.getTime()) && !Number.isNaN(bDate.getTime())) {
+        return (aDate.getTime() - bDate.getTime()) * dir;
+      }
+
+      return String(av).localeCompare(String(bv), undefined, {
+        numeric: true,
+        sensitivity: "base",
+      }) * dir;
+    });
+    return sorted;
+  }, [listings, columnSort]);
+
+  const getTitleMatchValue = (listing) => {
+    if (listing.ebay_seo_title === null || listing.ebay_seo_title === undefined || String(listing.ebay_seo_title).trim() === "") {
+      return "Not generated";
+    }
+    const normalize = (text) => String(text || "").trim().replace(/\s+/g, " ").toLowerCase();
+    return normalize(listing.title) === normalize(listing.ebay_seo_title) ? "Yes" : "No";
+  };
+
+  const availableStatusValues = React.useMemo(() => {
+    const values = new Set();
+    listings.forEach((listing) => values.add(String(listing.listing_status || "Unknown")));
+    return Array.from(values).sort();
+  }, [listings]);
+
+  const availableConditionValues = React.useMemo(() => {
+    const values = new Set();
+    listings.forEach((listing) => values.add(String(listing.condition_name || "Unknown")));
+    return Array.from(values).sort();
+  }, [listings]);
+
+  const availableCategoryValues = React.useMemo(() => {
+    const values = new Set();
+    listings.forEach((listing) => values.add(String(listing.category_name || "Unknown")));
+    return Array.from(values).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+  }, [listings]);
+
+  const activeFilterCount =
+    selectedStatusFilters.size +
+    selectedConditionFilters.size +
+    selectedCategoryFilters.size +
+    selectedTitleMatchFilters.size +
+    (filters.search_sku ? 1 : 0) +
+    (filters.search_title ? 1 : 0) +
+    (filters.min_price ? 1 : 0) +
+    (filters.max_price ? 1 : 0) +
+    (filters.min_profit_margin ? 1 : 0) +
+    (filters.max_profit_margin ? 1 : 0);
+
+  const filteredSortedListings = React.useMemo(() => {
+    return sortedListings.filter((listing) => {
+      if (selectedStatusFilters.size > 0 && !selectedStatusFilters.has(String(listing.listing_status || "Unknown"))) {
+        return false;
+      }
+      if (selectedConditionFilters.size > 0 && !selectedConditionFilters.has(String(listing.condition_name || "Unknown"))) {
+        return false;
+      }
+      if (selectedCategoryFilters.size > 0 && !selectedCategoryFilters.has(String(listing.category_name || "Unknown"))) {
+        return false;
+      }
+      if (selectedTitleMatchFilters.size > 0 && !selectedTitleMatchFilters.has(getTitleMatchValue(listing))) {
+        return false;
+      }
+      return true;
+    });
+  }, [sortedListings, selectedStatusFilters, selectedConditionFilters, selectedCategoryFilters, selectedTitleMatchFilters]);
+
+  const getAppliedColumnWidthStyle = (columnId) => {
+    const width = Number(columnWidths[columnId]);
+    if (!Number.isFinite(width) || width <= 0) return {};
+    return {
+      width: `${width}px`,
+      minWidth: `${width}px`,
+      maxWidth: `${width}px`,
+    };
+  };
+
+  const onResizeMouseDown = (event, columnId) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const th = event.currentTarget.closest("th");
+    if (!th) return;
+
+    const startWidth = th.getBoundingClientRect().width;
+
+    resizeStateRef.current = {
+      active: true,
+      columnId,
+      startX: event.clientX,
+      startWidth,
+    };
+
+    document.body.style.cursor = "col-resize";
+
+    const onMouseMove = (moveEvent) => {
+      const state = resizeStateRef.current;
+      if (!state.active || !state.columnId) return;
+      const deltaX = moveEvent.clientX - state.startX;
+      const nextWidth = Math.max(70, Math.round(state.startWidth + deltaX));
+      setColumnWidths(prev => ({ ...prev, [state.columnId]: nextWidth }));
+    };
+
+    const onMouseUp = () => {
+      resizeStateRef.current = {
+        active: false,
+        columnId: null,
+        startX: 0,
+        startWidth: 0,
+      };
+      document.body.style.cursor = "";
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
   };
 
   return (
@@ -994,132 +1494,127 @@ export default function EbayListingsCachePage() {
           </div>
         )}
 
-        {/* Filters */}
-        <div style={{
-          backgroundColor: "white",
-          padding: "15px",
-          borderRadius: "4px",
-          marginBottom: "20px",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "12px",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-        }}>
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>SKU</label>
-            <input
-              type="text"
-              placeholder="Search SKU..."
-              value={filters.search_sku}
-              onChange={(e) => handleFilterChange("search_sku", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Title</label>
-            <input
-              type="text"
-              placeholder="Search title..."
-              value={filters.search_title}
-              onChange={(e) => handleFilterChange("search_title", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Min Price €</label>
-            <input
-              type="number"
-              placeholder="0"
-              value={filters.min_price}
-              onChange={(e) => handleFilterChange("min_price", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Max Price €</label>
-            <input
-              type="number"
-              placeholder="999999"
-              value={filters.max_price}
-              onChange={(e) => handleFilterChange("max_price", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Min Profit %</label>
-            <input
-              type="number"
-              placeholder="-999999"
-              value={filters.min_profit_margin}
-              onChange={(e) => handleFilterChange("min_profit_margin", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Max Profit %</label>
-            <input
-              type="number"
-              placeholder="999999"
-              value={filters.max_profit_margin}
-              onChange={(e) => handleFilterChange("max_profit_margin", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
-
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Status</label>
-            <select
-              value={filters.listing_status}
-              onChange={(e) => handleFilterChange("listing_status", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
+        {/* Filter Panel */}
+        <div style={{ background: "#f9f9f9", padding: 12, borderRadius: 8, marginBottom: 16, border: "2px solid #e0e0e0" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontWeight: "bold",
+                color: "#2196F3",
+                fontSize: 14,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                padding: 0,
+              }}
             >
-              <option value="">All</option>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
-            </select>
+              <span style={{ fontSize: 16, transform: showFilters ? "rotate(90deg)" : "rotate(0deg)", display: "inline-block", transition: "transform 0.2s" }}>▶</span>
+              🔍 Filters {activeFilterCount > 0 && `(${activeFilterCount} active)`}
+            </button>
+            <div style={{ fontSize: 12, color: "#666" }}>
+              Showing {filteredSortedListings.length} / {sortedListings.length} listing(s) on this page
+            </div>
           </div>
 
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Condition</label>
-            <input
-              type="text"
-              placeholder="Filter condition..."
-              value={filters.condition}
-              onChange={(e) => handleFilterChange("condition", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            />
-          </div>
+          {showFilters && (
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 16 }}>
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Search & Range</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <input type="text" placeholder="SKU contains..." value={filters.search_sku} onChange={(e) => handleFilterChange("search_sku", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                  <input type="text" placeholder="Title contains..." value={filters.search_title} onChange={(e) => handleFilterChange("search_title", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                  <input type="number" placeholder="Min Price €" value={filters.min_price} onChange={(e) => handleFilterChange("min_price", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                  <input type="number" placeholder="Max Price €" value={filters.max_price} onChange={(e) => handleFilterChange("max_price", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                  <input type="number" placeholder="Min Profit %" value={filters.min_profit_margin} onChange={(e) => handleFilterChange("min_profit_margin", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                  <input type="number" placeholder="Max Profit %" value={filters.max_profit_margin} onChange={(e) => handleFilterChange("max_profit_margin", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }} />
+                </div>
+              </div>
 
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Sort By</label>
-            <select
-              value={filters.sort_by}
-              onChange={(e) => handleFilterChange("sort_by", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            >
-              <option value="sku">SKU</option>
-              <option value="price">Price</option>
-              <option value="profit_margin">Profit %</option>
-              <option value="date">Date</option>
-            </select>
-          </div>
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Status</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, maxHeight: 220, overflowY: "auto" }}>
+                  {availableStatusValues.map((status) => (
+                    <label key={status} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                      <input type="checkbox" checked={selectedStatusFilters.has(status)} onChange={(e) => {
+                        const next = new Set(selectedStatusFilters);
+                        if (e.target.checked) next.add(status); else next.delete(status);
+                        setSelectedStatusFilters(next);
+                      }} />
+                      <span>{status}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
 
-          <div>
-            <label style={{ display: "block", marginBottom: "4px", fontSize: "12px", fontWeight: "bold" }}>Order</label>
-            <select
-              value={filters.sort_order}
-              onChange={(e) => handleFilterChange("sort_order", e.target.value)}
-              style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box" }}
-            >
-              <option value="asc">Ascending</option>
-              <option value="desc">Descending</option>
-            </select>
-          </div>
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Condition</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, maxHeight: 220, overflowY: "auto" }}>
+                  {availableConditionValues.map((condition) => (
+                    <label key={condition} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                      <input type="checkbox" checked={selectedConditionFilters.has(condition)} onChange={(e) => {
+                        const next = new Set(selectedConditionFilters);
+                        if (e.target.checked) next.add(condition); else next.delete(condition);
+                        setSelectedConditionFilters(next);
+                      }} />
+                      <span>{condition}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Category</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, maxHeight: 220, overflowY: "auto" }}>
+                  {availableCategoryValues.map((category) => (
+                    <label key={category} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                      <input type="checkbox" checked={selectedCategoryFilters.has(category)} onChange={(e) => {
+                        const next = new Set(selectedCategoryFilters);
+                        if (e.target.checked) next.add(category); else next.delete(category);
+                        setSelectedCategoryFilters(next);
+                      }} />
+                      <span>{category}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Title Match</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {["Yes", "No", "Not generated"].map((match) => (
+                    <label key={match} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12 }}>
+                      <input type="checkbox" checked={selectedTitleMatchFilters.has(match)} onChange={(e) => {
+                        const next = new Set(selectedTitleMatchFilters);
+                        if (e.target.checked) next.add(match); else next.delete(match);
+                        setSelectedTitleMatchFilters(next);
+                      }} />
+                      <span>{match}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <div style={{ fontWeight: "bold", marginBottom: 8, fontSize: 12, color: "#333" }}>Sorting</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                  <select value={filters.sort_by} onChange={(e) => handleFilterChange("sort_by", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }}>
+                    <option value="sku">SKU</option>
+                    <option value="price">Price</option>
+                    <option value="profit_margin">Profit %</option>
+                    <option value="date">Date</option>
+                  </select>
+                  <select value={filters.sort_order} onChange={(e) => handleFilterChange("sort_order", e.target.value)} style={{ width: "100%", padding: "8px", border: "1px solid #ccc", borderRadius: "4px", boxSizing: "border-box", fontSize: 12 }}>
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Control Buttons */}
@@ -1131,18 +1626,20 @@ export default function EbayListingsCachePage() {
             Reset Filters
           </button>
           <button
-            onClick={() => setShowAdvancedFilters(true)}
-            style={{ 
-              padding: "8px 16px", 
-              backgroundColor: "#ff9800", 
-              color: "white", 
-              border: "none", 
-              borderRadius: "4px", 
-              cursor: "pointer",
+            onClick={recalculateProfitOnly}
+            disabled={profitRecalculating}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: profitRecalculating ? "#ccc" : "#8e24aa",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: profitRecalculating ? "default" : "pointer",
               fontWeight: "bold"
             }}
+            title="Recalculate profit_analysis for current eBay cache without refetching from eBay"
           >
-            🔍 Advanced Filters {Object.keys(columnFilters).length > 0 && `(${Object.keys(columnFilters).length})`}
+            {profitRecalculating ? "⏳ Recalculating Profit..." : "🧮 Recalculate Profit"}
           </button>
           <button
             onClick={bulkGenerateSeo}
@@ -1191,6 +1688,25 @@ export default function EbayListingsCachePage() {
             {titleUpdatingEbay ? "⏳ Updating eBay..." : "🚀 Update eBay Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
           </button>
           <button
+            onClick={() => {
+              if (selectedSkus.size === 0) { alert("Please select at least one SKU"); return; }
+              setShowPriceAdjuster(true);
+            }}
+            disabled={selectedSkus.size === 0}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#e65100",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: selectedSkus.size === 0 ? "default" : "pointer",
+              fontWeight: "bold"
+            }}
+            title="Open Price Adjuster to view margins and update eBay prices"
+          >
+            💰 Price Adjuster {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+          </button>
+          <button
             onClick={sendSelectedToSkuBatch}
             disabled={selectedSkus.size === 0}
             style={{
@@ -1220,7 +1736,7 @@ export default function EbayListingsCachePage() {
         ) : (
           <>
             <div style={{ overflowX: "auto", marginBottom: "20px", backgroundColor: "white", borderRadius: "4px", boxShadow: "0 1px 3px rgba(0,0,0,0.1)" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <table style={{ width: "max-content", minWidth: "100%", tableLayout: "auto", borderCollapse: "collapse" }}>
                 <thead>
                   <tr style={{ backgroundColor: "#f8f9fa", borderBottom: "2px solid #dee2e6" }}>
                     <th
@@ -1244,15 +1760,43 @@ export default function EbayListingsCachePage() {
                     {visibleColumns.map(colId => (
                       <th
                         key={colId}
-                        style={getHeaderStyle(colId)}
+                        onClick={() => handleHeaderSort(colId)}
+                        title={colId === "image" ? "Not sortable" : "Click to sort"}
+                        style={{
+                          ...getHeaderStyle(colId),
+                          ...getAppliedColumnWidthStyle(colId),
+                          cursor: colId === "image" ? "default" : "pointer",
+                          userSelect: "none",
+                          position: "relative",
+                        }}
                       >
                         {getColumnLabel(colId)}
+                        {columnSort.columnId === colId && (
+                          <span style={{ marginLeft: "6px", color: "#0066cc" }}>
+                            {columnSort.direction === "asc" ? "▲" : "▼"}
+                          </span>
+                        )}
+                        <div
+                          onMouseDown={(e) => onResizeMouseDown(e, colId)}
+                          onClick={(e) => e.stopPropagation()}
+                          title="Drag to resize"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            right: 0,
+                            width: "10px",
+                            height: "100%",
+                            cursor: "col-resize",
+                            userSelect: "none",
+                            touchAction: "none",
+                          }}
+                        />
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {listings.map((listing, idx) => (
+                  {filteredSortedListings.map((listing, idx) => (
                     <tr
                       key={idx}
                       style={{
@@ -1279,7 +1823,7 @@ export default function EbayListingsCachePage() {
                         
                         if (colId === "image") {
                           return (
-                            <td key={colId} style={{ padding: "10px", textAlign: "center" }}>
+                            <td key={colId} style={{ padding: "10px", textAlign: "center", ...getAppliedColumnWidthStyle(colId) }}>
                               <ImagePlaceholder
                                 src={value}
                                 alt={listing.title}
@@ -1291,7 +1835,7 @@ export default function EbayListingsCachePage() {
                         
                         if (colId === "title") {
                           return (
-                            <td key={colId} style={{ padding: "10px", fontSize: "12px", maxWidth: "300px" }}>
+                            <td key={colId} style={{ padding: "10px", fontSize: "12px", maxWidth: "300px", ...getAppliedColumnWidthStyle(colId) }}>
                               <a
                                 href={listing.view_url}
                                 target="_blank"
@@ -1305,7 +1849,7 @@ export default function EbayListingsCachePage() {
                         }
                         
                         return (
-                          <td key={colId} style={getCellStyle(colId, value)}>
+                          <td key={colId} style={{ ...getCellStyle(colId, value), ...getAppliedColumnWidthStyle(colId) }}>
                             {formatCellValue(value, colId)}
                           </td>
                         );
@@ -1316,7 +1860,7 @@ export default function EbayListingsCachePage() {
               </table>
             </div>
 
-            {listings.length === 0 && !loading && (
+            {filteredSortedListings.length === 0 && !loading && (
               <div style={{ textAlign: "center", padding: "40px", color: "#999", backgroundColor: "white", borderRadius: "4px" }}>
                 No listings found matching your filters.
               </div>
@@ -1400,18 +1944,17 @@ export default function EbayListingsCachePage() {
           />
         )}
 
-        {/* Advanced Filters Modal */}
-        {showAdvancedFilters && (
-          <AdvancedFilters
-            visibleColumns={visibleColumns}
-            allColumnsConfig={ALL_COLUMNS}
-            columnFilters={columnFilters}
-            onFiltersChange={(newFilters) => {
-              setColumnFilters(newFilters);
-              setPage(1); // Reset to first page when filters change
-              fetchListings(1);
+        {/* Price Adjuster Modal */}
+        {showPriceAdjuster && (
+          <PriceAdjuster
+            listings={listings}
+            selectedSkus={selectedSkus}
+            onClose={() => setShowPriceAdjuster(false)}
+            onDone={() => {
+              setShowPriceAdjuster(false);
+              fetchListings(page);
+              setSelectedSkus(new Set());
             }}
-            onClose={() => setShowAdvancedFilters(false)}
           />
         )}
 

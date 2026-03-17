@@ -17,7 +17,7 @@
       "Total Cost Net": 3.28
     },
     "Ebay Category": {
-      "Category": "/Heimwerker/Überwachungstechnik/Überwachungstechnik-Teile & -Zubehör/Sonstige",
+      "Category": null,
       "eBay Category ID": "175725"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "43.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": null
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"

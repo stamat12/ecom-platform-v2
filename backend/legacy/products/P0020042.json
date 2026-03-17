@@ -172,7 +172,8 @@
       "Product Model": "E27 ST64",
       "Keyword 1": "E27 Glühbirne",
       "Keyword 2": "LED Birne",
-      "Keyword 3": "Energiesparlampe"
+      "Keyword 3": "Energiesparlampe",
+      "eBay Title": "Amazon Basics E27 ST64 LED-Lampe Gold 25W E27 Glühbirne LED Birne"
     },
     "Ebay Listing": {
       "Selling Price Total": "20",
@@ -184,6 +185,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-19T11:44"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

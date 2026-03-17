@@ -144,7 +144,8 @@
       "Product Model": "",
       "Keyword 1": "Sport Schuhe",
       "Keyword 2": "Laufschuhe",
-      "Keyword 3": "Freizeitschuhe"
+      "Keyword 3": "Freizeitschuhe",
+      "eBay Title": "sharllen Sneaker Unisex Schwarz 40 Sport Schuhe Laufschuhe Freizeitschuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -155,6 +156,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

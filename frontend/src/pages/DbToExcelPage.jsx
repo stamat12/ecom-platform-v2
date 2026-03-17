@@ -1,14 +1,54 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+const SYNCABLE_COLUMNS = [
+  "Category",
+  "EAN",
+  "Condition",
+  "Gender",
+  "Brand",
+  "Color",
+  "Size",
+  "More details",
+  "Materials",
+  "Keywords",
+  "OP",
+  "Status",
+  "Lager",
+  "Images JSON Phone",
+  "Images JSON Stock",
+  "Images JSON Enhanced",
+  "JSON",
+  "Images",
+];
+
 export default function DbToExcelPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [syncResult, setSyncResult] = useState(null);
+  const [selectedColumns, setSelectedColumns] = useState(new Set(SYNCABLE_COLUMNS));
+
+  const toggleColumn = (column) => {
+    setSelectedColumns((prev) => {
+      const next = new Set(prev);
+      if (next.has(column)) {
+        next.delete(column);
+      } else {
+        next.add(column);
+      }
+      return next;
+    });
+  };
 
   const handleSyncDbToExcel = async () => {
-    if (!confirm("Sync inventory.db data to Excel? This will update cells where there are changes.\n\nColumns updated (from DB):\n- Category\n- EAN\n- Condition\n- Gender, Brand, Color, Size\n- More details, Materials, Keywords\n- OP\n- Status\n- Lager\n- Images JSON Phone, Stock, Enhanced\n- JSON (Yes/empty)\n- Images (folder count)")) {
+    const chosenColumns = Array.from(selectedColumns);
+    if (chosenColumns.length === 0) {
+      alert("Select at least one column to sync.");
+      return;
+    }
+
+    if (!confirm(`Sync inventory.db data to Excel? This will update cells where there are changes.\n\nSelected columns (${chosenColumns.length}):\n- ${chosenColumns.join("\n- ")}`)) {
       return;
     }
 
@@ -20,7 +60,11 @@ export default function DbToExcelPage() {
 
       const res = await fetch("/api/excel/sync-from-db", {
         method: "POST",
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sheet_name: "Inventory",
+          columns: chosenColumns,
+        }),
       });
 
       if (!res.ok) {
@@ -50,27 +94,44 @@ export default function DbToExcelPage() {
         <h2>Sync inventory.db Data to Excel</h2>
         <p>This will update your Excel file with the latest data from the inventory database.</p>
         
-        <h3>Columns that will be updated:</h3>
-        <ul>
-          <li>✅ <strong>Category</strong> (from inventory.db)</li>
-          <li>✅ <strong>EAN</strong> (from inventory.db)</li>
-          <li>✅ <strong>Condition</strong> (from inventory.db)</li>
-          <li>✅ <strong>Gender</strong> (from inventory.db)</li>
-          <li>✅ <strong>Brand</strong> (from inventory.db)</li>
-          <li>✅ <strong>Color</strong> (from inventory.db)</li>
-          <li>✅ <strong>Size</strong> (from inventory.db)</li>
-          <li>✅ <strong>More details</strong> (from inventory.db)</li>
-          <li>✅ <strong>Materials</strong> (from inventory.db)</li>
-          <li>✅ <strong>Keywords</strong> (from inventory.db)</li>
-          <li>✅ <strong>OP</strong> (from inventory.db)</li>
-          <li>✅ <strong>Status</strong> (from inventory.db)</li>
-          <li>✅ <strong>Lager</strong> (from inventory.db)</li>
-          <li>✅ <strong>Images JSON Phone</strong> (phone image count)</li>
-          <li>✅ <strong>Images JSON Stock</strong> (stock image count)</li>
-          <li>✅ <strong>Images JSON Enhanced</strong> (enhanced image count)</li>
-          <li>✅ <strong>JSON</strong> ("Yes" if JSON file exists, empty otherwise)</li>
-          <li>✅ <strong>Images</strong> (folder images count from cache)</li>
-        </ul>
+        <h3>Choose columns to update:</h3>
+        <div style={{ display: "flex", gap: "8px", marginBottom: "10px", flexWrap: "wrap" }}>
+          <button
+            type="button"
+            onClick={() => setSelectedColumns(new Set(SYNCABLE_COLUMNS))}
+            style={{ padding: "6px 10px", border: "1px solid #bbb", borderRadius: "4px", backgroundColor: "white", cursor: "pointer" }}
+          >
+            Select all
+          </button>
+          <button
+            type="button"
+            onClick={() => setSelectedColumns(new Set())}
+            style={{ padding: "6px 10px", border: "1px solid #bbb", borderRadius: "4px", backgroundColor: "white", cursor: "pointer" }}
+          >
+            Clear all
+          </button>
+          <span style={{ fontSize: "13px", color: "#555", alignSelf: "center" }}>
+            {selectedColumns.size} selected
+          </span>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "8px",
+          marginBottom: "14px",
+        }}>
+          {SYNCABLE_COLUMNS.map((col) => (
+            <label key={col} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", backgroundColor: "#fff", border: "1px solid #ddd", borderRadius: "4px", padding: "8px 10px" }}>
+              <input
+                type="checkbox"
+                checked={selectedColumns.has(col)}
+                onChange={() => toggleColumn(col)}
+              />
+              <span>{col}</span>
+            </label>
+          ))}
+        </div>
 
         <p><strong>Note:</strong> Only cells with changes will be updated. Excel table format is preserved.</p>
 
@@ -126,6 +187,7 @@ export default function DbToExcelPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
             <div>
               <p><strong>Rows Processed:</strong> {syncResult.rows_processed}</p>
+              <p><strong>Rows Changed:</strong> {syncResult.rows_changed ?? syncResult.row_updates_total ?? 0}</p>
               <p><strong>Changes Made:</strong> {syncResult.changes_made}</p>
             </div>
             <div>
@@ -137,6 +199,50 @@ export default function DbToExcelPage() {
               </ul>
             </div>
           </div>
+
+          {syncResult.changes_by_column && Object.keys(syncResult.changes_by_column).length > 0 && (
+            <div style={{ marginTop: "16px" }}>
+              <h4 style={{ margin: "0 0 8px 0" }}>Changes by Column</h4>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "8px" }}>
+                {Object.entries(syncResult.changes_by_column).map(([col, count]) => (
+                  <div key={col} style={{ backgroundColor: "#fff", border: "1px solid #cfe2ff", borderRadius: "6px", padding: "8px 10px", fontSize: "13px" }}>
+                    <strong>{col}:</strong> {count}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {syncResult.row_updates_preview && syncResult.row_updates_preview.length > 0 && (
+            <div style={{ marginTop: "16px" }}>
+              <h4 style={{ margin: "0 0 8px 0" }}>Changed SKUs (Preview)</h4>
+              <div style={{ maxHeight: "260px", overflowY: "auto", backgroundColor: "#fff", border: "1px solid #cfe2ff", borderRadius: "6px" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "12px" }}>
+                  <thead>
+                    <tr style={{ backgroundColor: "#f8fbff" }}>
+                      <th style={{ textAlign: "left", padding: "8px", borderBottom: "1px solid #e3eefc" }}>SKU</th>
+                      <th style={{ textAlign: "left", padding: "8px", borderBottom: "1px solid #e3eefc" }}>Updated Columns</th>
+                      <th style={{ textAlign: "right", padding: "8px", borderBottom: "1px solid #e3eefc" }}>Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {syncResult.row_updates_preview.map((row) => (
+                      <tr key={row.sku}>
+                        <td style={{ padding: "8px", borderBottom: "1px solid #f0f4fa", whiteSpace: "nowrap" }}>{row.sku}</td>
+                        <td style={{ padding: "8px", borderBottom: "1px solid #f0f4fa" }}>{(row.updated_columns || []).join(", ")}</td>
+                        <td style={{ padding: "8px", borderBottom: "1px solid #f0f4fa", textAlign: "right" }}>{row.updated_count || 0}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {typeof syncResult.row_updates_total === "number" && syncResult.row_updates_total > syncResult.row_updates_preview.length && (
+                <p style={{ marginTop: "8px", fontSize: "12px", color: "#555" }}>
+                  Showing first {syncResult.row_updates_preview.length} of {syncResult.row_updates_total} changed SKUs.
+                </p>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>

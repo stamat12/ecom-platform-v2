@@ -1,0 +1,111 @@
+{
+  "P0020045": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Tastaturen, Mäuse & Pointing/Tastaturen & Keypads",
+      "eBay Category ID": "33963"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Logitech",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die G213 ist eine Gaming-Tastatur mit RGB-Beleuchtung und einer Reaktionsgeschwindigkeit, die schneller ist als bei herkömmlichen Tastaturen. Sie bietet eine robuste Bauweise und ist spritzwassergeschützt. Die Tasten sind für ein angenehmes Tippgefühl optimiert und ermöglichen das gleichzeitige Drücken mehrerer Tasten. Sichtbare Angaben: Farbe: Schwarz.",
+      "Keywords": "G213 Gaming Tastatur",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "60.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020045 (1).jpg"
+        },
+        {
+          "filename": "P0020045 (10).jpg"
+        },
+        {
+          "filename": "P0020045 (2).jpg"
+        },
+        {
+          "filename": "P0020045 (3).jpg"
+        },
+        {
+          "filename": "P0020045 (4).jpg"
+        },
+        {
+          "filename": "P0020045 (5).jpg"
+        },
+        {
+          "filename": "P0020045 (6).jpg"
+        },
+        {
+          "filename": "P0020045 (7).jpg"
+        },
+        {
+          "filename": "P0020045 (8).jpg"
+        },
+        {
+          "filename": "P0020045 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020045 (2).jpg"
+        },
+        {
+          "filename": "P0020045 (8).jpg"
+        },
+        {
+          "filename": "P0020045 (1).jpg"
+        },
+        {
+          "filename": "P0020045 (4).jpg"
+        }
+      ]
+    }
+  }
+}

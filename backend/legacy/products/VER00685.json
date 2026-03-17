@@ -152,7 +152,8 @@
       "Product Model": "Carbon",
       "Keyword 1": "mechanische Tastatur",
       "Keyword 2": "beleuchtete Tastatur",
-      "Keyword 3": "Gaming Tastatur"
+      "Keyword 3": "Gaming Tastatur",
+      "eBay Title": "The G-Lab Carbon Tastatur Schwarz mechanische Tastatur beleuchtete Tastatur"
     },
     "Ebay Listing": {
       "Selling Price Total": "35",
@@ -163,6 +164,9 @@
       "EAN": 3760162064865,
       "Modified SKU": "",
       "Schedule Date": "2026-03-17T00:32"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

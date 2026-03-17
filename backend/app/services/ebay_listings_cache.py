@@ -199,3 +199,37 @@ def get_last_update_time() -> Optional[str]:
         return None
     
     return cache.get('timestamp')
+
+
+def update_listing_price_in_cache(sku: str, new_price: float) -> bool:
+    """
+    Update the price field of a listing in the cache file by SKU (DE marketplace).
+
+    Returns True if the listing was found and updated, False otherwise.
+    """
+    cache = read_cache()
+    if not cache:
+        return False
+
+    target = str(sku or "").strip()
+    if not target:
+        return False
+
+    listings = cache.get("listings", [])
+    updated = False
+    for listing in listings:
+        if str(listing.get("sku") or "").strip() != target:
+            continue
+        listing["price"] = round(float(new_price), 2)
+        # Also reset cached profit analysis so it gets recomputed on next fetch
+        listing.pop("profit_analysis", None)
+        updated = True
+        break
+
+    if updated:
+        CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+
+    return updated
+

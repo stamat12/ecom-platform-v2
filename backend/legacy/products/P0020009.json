@@ -116,7 +116,8 @@
       "Product Model": "4.0 Ah",
       "Keyword 1": "Batterie",
       "Keyword 2": "Ladegerät",
-      "Keyword 3": "Power X-Change"
+      "Keyword 3": "Power X-Change",
+      "eBay Title": "Einhell 4.0 Ah Akku Batterie Ladegerät Power X-Change"
     },
     "Ebay Listing": {
       "Selling Price Total": "20",
@@ -128,6 +129,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

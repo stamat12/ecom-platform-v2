@@ -156,7 +156,8 @@
       "Product Model": "S580",
       "Keyword 1": "USB Arbeitslicht",
       "Keyword 2": "LED Taschenlampe",
-      "Keyword 3": "tragbare Lampe"
+      "Keyword 3": "tragbare Lampe",
+      "eBay Title": "S580 Arbeitslampe Schwarz Ø34*378mm USB Arbeitslicht LED Taschenlampe"
     },
     "Ebay Listing": {
       "Selling Price Total": "20",
@@ -168,6 +169,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

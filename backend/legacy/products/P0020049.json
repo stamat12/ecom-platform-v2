@@ -1,0 +1,108 @@
+{
+  "P0020049": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Nachtlichter",
+      "eBay Category ID": "20702"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein dekoratives Licht mit dynamischer Rotation. Es bietet eine Atmosphäre mit sechzehn verschiedenen Farben. Der Lichtwürfel hat ein ansprechendes Design und kann zur Dekoration verwendet werden. Sichtbare Angaben: Farbe: Transparent Gold.",
+      "Keywords": "Lichtwürfel Atmosphärenlicht",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "15.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 23"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020049 (1).jpg"
+        },
+        {
+          "filename": "P0020049 (2).jpg"
+        },
+        {
+          "filename": "P0020049 (3).jpg"
+        },
+        {
+          "filename": "P0020049 (4).jpg"
+        },
+        {
+          "filename": "P0020049 (5).jpg"
+        },
+        {
+          "filename": "P0020049 (6).jpg"
+        },
+        {
+          "filename": "P0020049 (7).jpg"
+        },
+        {
+          "filename": "P0020049 (8).jpg"
+        },
+        {
+          "filename": "P0020049 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020049 (2).jpg"
+        },
+        {
+          "filename": "P0020049 (3).jpg"
+        },
+        {
+          "filename": "P0020049 (6).jpg"
+        },
+        {
+          "filename": "P0020049 (8).jpg"
+        }
+      ]
+    }
+  }
+}

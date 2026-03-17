@@ -17,7 +17,7 @@
       "Total Cost Net": 3.04
     },
     "Ebay Category": {
-      "Category": "/Heimwerker/Schwimmbecken, Saunen & Außenwhirlpools/Wasserpflegeprodukte & -tester/Wassertester",
+      "Category": null,
       "eBay Category ID": "181059"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "28.0"
     },
     "Status": {
-      "Status": "Ready"
+      "Status": "Done"
     },
     "Warehouse": {
       "Lager": "NEW BOX 002"

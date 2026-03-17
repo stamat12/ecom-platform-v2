@@ -140,7 +140,8 @@
       "Product Model": "Softshell",
       "Keyword 1": "Outdoor Schuh",
       "Keyword 2": "Trekking Schuh",
-      "Keyword 3": "Wasserdichter Schuh"
+      "Keyword 3": "Wasserdichter Schuh",
+      "eBay Title": "Nortiv 8 Softshell Wanderschuh Unisex Grün 41 Outdoor Schuh Trekking Schuh"
     },
     "Ebay Listing": {
       "Selling Price Total": "47",
@@ -151,6 +152,9 @@
       "EAN": "196020674281.0",
       "Modified SKU": "",
       "Schedule Date": "2026-03-14T18:29"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

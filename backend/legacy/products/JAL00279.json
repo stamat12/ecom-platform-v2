@@ -150,7 +150,8 @@
       "Product Model": "",
       "Keyword 1": "Damen Schuhe",
       "Keyword 2": "Absatzschuhe",
-      "Keyword 3": "Elegante Schuhe"
+      "Keyword 3": "Elegante Schuhe",
+      "eBay Title": "Elegantpark Pumps Damen Weiß 40 Damen Schuhe Absatzschuhe Elegante Schuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "35",
@@ -161,6 +162,9 @@
       "EAN": 6927990258300,
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:18"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

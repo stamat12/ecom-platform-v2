@@ -136,7 +136,8 @@
       "Product Model": "FW 3803",
       "Keyword 1": "Fleischzerkleinerer",
       "Keyword 2": "Wurstmaschine",
-      "Keyword 3": "Küchengerät"
+      "Keyword 3": "Küchengerät",
+      "eBay Title": "Clatronic FW 3803 Fleischwolf Silber Schwarz Fleischzerkleinerer Wurstmaschine"
     },
     "Ebay Listing": {
       "Selling Price Total": "37",
@@ -148,6 +149,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

@@ -115,7 +115,8 @@
       "Product Model": "1/4 Zip Up",
       "Keyword 1": "Langarmpullover",
       "Keyword 2": "Strickpullover",
-      "Keyword 3": "Mock Neck"
+      "Keyword 3": "Mock Neck",
+      "eBay Title": "Coofandy 1/4 Zip Up Pullover Herren Beige M Langarmpullover Strickpullover"
     },
     "Ebay Listing": {
       "Selling Price Total": "24",
@@ -126,6 +127,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

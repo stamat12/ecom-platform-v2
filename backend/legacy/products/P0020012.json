@@ -105,7 +105,8 @@
       "Product Model": "Light Therapy Face Mask",
       "Keyword 1": "Lichttherapie Maske",
       "Keyword 2": "Gesichtspflege",
-      "Keyword 3": "Hautpflegegerät"
+      "Keyword 3": "Hautpflegegerät",
+      "eBay Title": "eono Light Therapy Face Mask Gesichtsmaske weiß Lichttherapie Maske"
     },
     "Ebay Listing": {
       "Selling Price Total": "65",
@@ -117,6 +118,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

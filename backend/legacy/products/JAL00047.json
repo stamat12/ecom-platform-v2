@@ -155,7 +155,8 @@
       "Product Model": "",
       "Keyword 1": "Sneaker",
       "Keyword 2": "Sport Schuhe",
-      "Keyword 3": "Laufschuhe"
+      "Keyword 3": "Laufschuhe",
+      "eBay Title": "Sosenfer Schuh Unisex Weiß 40 Sneaker Sport Schuhe Laufschuhe Neu ohne Karton"
     },
     "Ebay Listing": {
       "Selling Price Total": "35",
@@ -166,6 +167,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-14T18:29"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

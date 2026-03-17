@@ -83,6 +83,23 @@
       "Keyword 2": "Trainingsschuhe",
       "Keyword 3": "Fitness Schuhe",
       "eBay Title": "Under Armour HOVR Infinite Pro Laufschuh Damen Braun/Weiß 37.5 Sport Schuhe"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-15T12:53:46.718949Z",
+          "sku": "HAN000380",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000380",
+            "item_id": "136048254866",
+            "old_price": 69.76,
+            "new_price": 55.0
+          }
+        }
+      ]
     }
   }
 }

@@ -163,7 +163,8 @@
       "Product Model": "YY2212BF",
       "Keyword 1": "Herren Sandalen",
       "Keyword 2": "Freizeitschuhe",
-      "Keyword 3": "Wasserschuhe"
+      "Keyword 3": "Wasserschuhe",
+      "eBay Title": "Grition YY2212BF Sandale Herren Grau 41 Herren Sandalen Freizeitschuhe"
     },
     "Ebay Listing": {
       "Selling Price Total": "45",
@@ -174,6 +175,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

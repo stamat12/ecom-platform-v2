@@ -77,7 +77,7 @@ def detect_changes(current_values: Dict[str, Any], new_values: Dict[str, Any]) -
     return False
 
 
-def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
+def sync_db_to_excel(sheet_name: str = "Inventory", columns: Optional[List[str]] = None) -> Dict[str, Any]:
     """
     Sync data from JSON files back to Excel.
     Only updates cells where there are changes.
@@ -120,6 +120,8 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
         changes_made = 0
         rows_processed = 0
         columns_updated = set()
+        changes_by_column: Dict[str, int] = {}
+        row_updates: List[Dict[str, Any]] = []
         
         # Load workbook for direct cell editing
         wb = load_workbook(excel_file)
@@ -129,7 +131,11 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
         headers = {cell.value: idx + 1 for idx, cell in enumerate(ws[1])}
         
         # Columns to update
-        columns_to_update = EXCEL_COLUMNS_TO_SYNC
+        if columns is None:
+            columns_to_update = EXCEL_COLUMNS_TO_SYNC
+        else:
+            allowed = set(EXCEL_COLUMNS_TO_SYNC)
+            columns_to_update = [col for col in columns if col in allowed]
         
         # Find rows by SKU and update
         sku_col = None
@@ -156,6 +162,8 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
             db_row = db_lookup.get(sku_key)
             if db_row is None:
                 continue
+
+            updated_columns_for_row: List[str] = []
             
             # Update cells where there are changes
             for col_name in columns_to_update:
@@ -184,17 +192,30 @@ def sync_db_to_excel(sheet_name: str = "Inventory") -> Dict[str, Any]:
                     current_cell.value = new_value
                     changes_made += 1
                     columns_updated.add(col_name)
+                    changes_by_column[col_name] = changes_by_column.get(col_name, 0) + 1
+                    updated_columns_for_row.append(col_name)
+
+            if updated_columns_for_row:
+                row_updates.append({
+                    "sku": sku_key,
+                    "updated_columns": updated_columns_for_row,
+                    "updated_count": len(updated_columns_for_row),
+                })
         
         # Save workbook
         wb.save(excel_file)
         
         return {
             "success": True,
-            "message": f"Successfully synced {rows_processed} rows from JSON to Excel",
+            "message": f"Successfully synced {rows_processed} rows from DB to Excel",
             "stats": {
                 "rows_processed": rows_processed,
+                "rows_changed": len(row_updates),
                 "changes_made": changes_made,
-                "columns_updated": sorted(list(columns_updated))
+                "columns_updated": sorted(list(columns_updated)),
+                "changes_by_column": {k: changes_by_column[k] for k in sorted(changes_by_column.keys())},
+                "row_updates_total": len(row_updates),
+                "row_updates_preview": row_updates[:200],
             }
         }
     

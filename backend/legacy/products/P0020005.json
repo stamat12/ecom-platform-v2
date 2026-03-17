@@ -103,7 +103,8 @@
       "Product Model": "X11 MAX",
       "Keyword 1": "Nageltrockner",
       "Keyword 2": "LED-Lampe",
-      "Keyword 3": "Maniküre"
+      "Keyword 3": "Maniküre",
+      "eBay Title": "SUN X11 MAX UV-Lampe Weiß Nageltrockner LED-Lampe Maniküre"
     },
     "Ebay Listing": {
       "Selling Price Total": "20",
@@ -115,6 +116,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

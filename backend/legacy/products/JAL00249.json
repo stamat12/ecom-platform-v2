@@ -147,7 +147,8 @@
       "Product Model": "272",
       "Keyword 1": "Sneaker",
       "Keyword 2": "Freizeitschuh",
-      "Keyword 3": "Sportsschuh"
+      "Keyword 3": "Sportsschuh",
+      "eBay Title": "sharllen 272 Schuh Unisex Braun 42 Sneaker Freizeitschuh Sportsschuh"
     },
     "Ebay Listing": {
       "Selling Price Total": "40",
@@ -158,6 +159,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-16T14:19"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

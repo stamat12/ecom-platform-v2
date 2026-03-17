@@ -175,3 +175,10 @@ class EbayListingBulkSaveResponse(BaseModel):
     updated: int
     failed: int
     results: Dict[str, str]
+
+
+class EbayRevisePriceRequest(BaseModel):
+    """Request to revise the price of a live eBay listing."""
+    sku: str
+    new_price: float
+

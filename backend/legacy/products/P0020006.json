@@ -145,7 +145,8 @@
       "Product Model": "K44X4_101J",
       "Keyword 1": "In-Car Infotainment",
       "Keyword 2": "Multimedia System",
-      "Keyword 3": "GPS Navigation"
+      "Keyword 3": "GPS Navigation",
+      "eBay Title": "A-SURE K44X4_101J Autoradio Schwarz In-Car Infotainment Multimedia System"
     },
     "Ebay Listing": {
       "Selling Price Total": "115",
@@ -157,6 +158,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:02"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

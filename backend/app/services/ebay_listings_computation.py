@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Dict, Generator, Any, List
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from app.services.ebay_profit_calculator import calculate_listing_profit, _get_marketplace_shipping_cost
+from app.services.ebay_profit_calculator import calculate_listing_profit, _get_marketplace_shipping_cost, invalidate_profit_caches
 
 TRADING_ENDPOINT = "https://api.ebay.com/ws/api.dll"
 NS = {"e": "urn:ebay:apis:eBLBaseComponents"}
@@ -609,6 +609,8 @@ def compute_ebay_listings_fast() -> Generator[Dict, None, None]:
                 existing_cache = ebay_listings_cache.read_cache() or {}
                 existing_listings = existing_cache.get("listings", []) or []
                 listings = _merge_fast_with_existing_cache(listings, existing_listings)
+                # Ensure recalculation uses latest schema fee + inventory cost values
+                invalidate_profit_caches()
                 # Enrich with profit calculations
                 listings = _enrich_listings_with_profit(listings)
                 ebay_listings_cache.write_cache(listings)
@@ -676,6 +678,8 @@ def compute_ebay_listings_detailed() -> Generator[Dict, None, None]:
             elif progress['status'] == 'complete':
                 # Save to cache
                 listings = progress['listings']
+                # Ensure recalculation uses latest schema fee + inventory cost values
+                invalidate_profit_caches()
                 # Enrich with profit calculations
                 listings = _enrich_listings_with_profit(listings)
                 ebay_listings_cache.write_cache(listings)
@@ -700,3 +704,24 @@ def compute_ebay_listings_detailed() -> Generator[Dict, None, None]:
             "message": str(e),
             "timestamp": datetime.now().isoformat()
         }
+
+
+def recompute_cached_profit_analysis() -> Dict[str, Any]:
+    """Recalculate profit_analysis for all listings currently in cache."""
+    from . import ebay_listings_cache
+
+    cache = ebay_listings_cache.read_cache() or {}
+    listings = cache.get("listings", []) or []
+    if not isinstance(listings, list):
+        listings = []
+
+    # Ensure latest schema fee + inventory cost values are used each run
+    invalidate_profit_caches()
+    enriched = _enrich_listings_with_profit(listings)
+    ebay_listings_cache.write_cache(enriched)
+
+    return {
+        "success": True,
+        "message": "Profit analysis recalculated from cache listings",
+        "count": len(enriched),
+    }

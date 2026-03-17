@@ -1,0 +1,148 @@
+{
+  "P0020054": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Reiskocher",
+      "eBay Category ID": "122932"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "joyami",
+      "Color": "Weiß",
+      "Size": "0.8 L"
+    },
+    "Intern Generated Info": {
+      "More details": "Der joyami Smart Rice Cooker S1 hat ein modernes, kompaktes Design. Er bietet eine Vielzahl von Kochfunktionen, darunter die Zubereitung von Reis, Joghurt und Kuchen. Die Steuerung erfolgt bequem über eine App. Der Kochtopf hat eine Antihaftbeschichtung für einfaches Reinigen. Sichtbare Angaben: Farbe: Weiß; Größe: 0.8 L.",
+      "Keywords": "Smart S1 Reiskocher",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "60.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 7,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [
+        {
+          "filename": "B0BPM98X2X-0-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-1-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-2-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-3-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-4-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-5-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-6-1773757902038.jpg"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "P0020054 (1).jpg"
+        },
+        {
+          "filename": "P0020054 (10).jpg"
+        },
+        {
+          "filename": "P0020054 (11).jpg"
+        },
+        {
+          "filename": "P0020054 (2).jpg"
+        },
+        {
+          "filename": "P0020054 (3).jpg"
+        },
+        {
+          "filename": "P0020054 (4).jpg"
+        },
+        {
+          "filename": "P0020054 (5).jpg"
+        },
+        {
+          "filename": "P0020054 (6).jpg"
+        },
+        {
+          "filename": "P0020054 (7).jpg"
+        },
+        {
+          "filename": "P0020054 (8).jpg"
+        },
+        {
+          "filename": "P0020054 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "B0BPM98X2X-0-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-1-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-2-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-3-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-4-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-5-1773757902038.jpg"
+        },
+        {
+          "filename": "B0BPM98X2X-6-1773757902038.jpg"
+        },
+        {
+          "filename": "P0020054 (11).jpg"
+        }
+      ]
+    }
+  }
+}

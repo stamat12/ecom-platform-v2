@@ -119,7 +119,8 @@
       "Product Model": "ER1169",
       "Keyword 1": "Garagentorsteuerung",
       "Keyword 2": "Fernbedienung",
-      "Keyword 3": "Zubehör"
+      "Keyword 3": "Zubehör",
+      "eBay Title": "RETOO ER1169 Steuerung Weiß Garagentorsteuerung Fernbedienung Zubehör"
     },
     "Ebay Listing": {
       "Selling Price Total": "15",
@@ -131,6 +132,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

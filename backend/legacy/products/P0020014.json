@@ -117,7 +117,8 @@
       "Product Model": "HEM-7188-EO",
       "Keyword 1": "automatisches Blutdruckmessgerät",
       "Keyword 2": "Oberarm Blutdruckmonitor",
-      "Keyword 3": "digitales Blutdruckmessgerät"
+      "Keyword 3": "digitales Blutdruckmessgerät",
+      "eBay Title": "Omron HEM-7188-EO Blutdruckmessgerät Weiß automatisches Blutdruckmessgerät"
     },
     "Ebay Listing": {
       "Selling Price Total": "45",
@@ -129,6 +130,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T02:03"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

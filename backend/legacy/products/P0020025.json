@@ -148,7 +148,8 @@
       "Product Model": "TJ53E",
       "Keyword 1": "Rasentrimmer",
       "Keyword 2": "Motorsense",
-      "Keyword 3": "Grastrimmer"
+      "Keyword 3": "Grastrimmer",
+      "eBay Title": "Kawasaki TJ53E Freischneider Rot 2.7 PS Rasentrimmer Motorsense Grastrimmer"
     },
     "Ebay Listing": {
       "Selling Price Total": "345",
@@ -160,6 +161,9 @@
       "EAN": "",
       "Modified SKU": "",
       "Schedule Date": "2026-03-18T19:16"
+    },
+    "System Logs": {
+      "Change Log": []
     }
   }
 }

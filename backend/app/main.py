@@ -4,6 +4,7 @@ from fastapi.responses import FileResponse, StreamingResponse
 from app.services.legacy_imports import add_legacy_to_syspath
 import json
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
@@ -44,14 +45,15 @@ from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
 from app.services.folder_images_cache import get_last_update_time as get_folder_images_last_update
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
-from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing
+from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing, update_listing_price_in_cache
 from app.services.ebay_category_search import search_ebay_categories
-from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed
+from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed, recompute_cached_profit_analysis
 from app.services.inventory_json_db_importer import update_db_from_jsons
 from app.services.excel_to_json_updater import update_jsons_from_excel
 from app.services.excel_to_db_sync import get_excel_sheets, get_excel_columns, sync_excel_to_db, add_missing_sku_rows_from_excel, refresh_category_mapping_from_excel
 from app.services.db_to_excel_sync import sync_db_to_excel
 from app.services.inventory_cleanup import cleanup_duplicate_skus
+from app.services.change_log import append_product_change_log
 
 # Import eBay services
 from app.services import ebay_schema, ebay_enrichment, ebay_listing, ebay_sync
@@ -93,7 +95,8 @@ from app.models.ebay_listing import (
     ConditionNoteRequest, ConditionNoteResponse,
     BatchCreateListingRequest, BatchCreateListingResponse,
     EbayListingBulkUpdateRequest, EbayListingBulkUpdateResponse,
-    EbayListingBulkSaveRequest, EbayListingBulkSaveResponse
+    EbayListingBulkSaveRequest, EbayListingBulkSaveResponse,
+    EbayRevisePriceRequest,
 )
 from app.models.ebay_oauth import EbayOAuthExchangeRequest, EbayOAuthExchangeResponse
 from app.models.ebay_sync import (
@@ -102,7 +105,7 @@ from app.models.ebay_sync import (
     SyncStatusRequest, SyncStatusResponse
 )
 from app.models.inventory_import import InventoryImportRequest, InventoryImportResponse
-from app.models.excel_sync import ExcelToDbSyncRequest, ExcelToDbSyncResponse
+from app.models.excel_sync import ExcelToDbSyncRequest, ExcelToDbSyncResponse, DbToExcelSyncRequest
 from app.services import ebay_oauth
 
 # Create FastAPI app
@@ -949,6 +952,16 @@ def revise_ebay_title_only(request: EbayEnrichRequest):
     """Generate title from SKU JSON and push it to live eBay listing."""
     try:
         result = ebay_listing.revise_ebay_listing_title(request.sku)
+        if result.get("success"):
+            append_product_change_log(
+                str(result.get("lookup_sku") or request.sku),
+                "ebay_revise_title_live",
+                {
+                    "listing_sku": request.sku,
+                    "item_id": result.get("item_id", ""),
+                    "ebay_title": result.get("ebay_title", ""),
+                },
+            )
         return {
             "success": result.get("success", False),
             "sku": result.get("sku", request.sku),
@@ -956,6 +969,40 @@ def revise_ebay_title_only(request: EbayEnrichRequest):
             "ebay_title": result.get("ebay_title", ""),
             "message": result.get("message", "eBay title revised"),
         }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/revise-price")
+def revise_ebay_price(request: EbayRevisePriceRequest):
+    """Update the price on a live DE eBay listing and patch the local cache."""
+    try:
+        old_price = None
+        cache = read_ebay_cache() or {}
+        for listing in cache.get("listings", []) or []:
+            if str(listing.get("sku") or "").strip() == str(request.sku).strip():
+                try:
+                    old_price = float(listing.get("price"))
+                except Exception:
+                    old_price = None
+                break
+
+        result = ebay_listing.revise_ebay_listing_price(request.sku, request.new_price)
+        # Patch the local cache so the table shows the updated price immediately
+        update_listing_price_in_cache(request.sku, request.new_price)
+
+        if result.get("success"):
+            append_product_change_log(
+                str(result.get("lookup_sku") or request.sku),
+                "ebay_revise_price_live",
+                {
+                    "listing_sku": request.sku,
+                    "item_id": result.get("item_id", ""),
+                    "old_price": old_price,
+                    "new_price": result.get("new_price", request.new_price),
+                },
+            )
+        return result
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -1384,6 +1431,14 @@ def save_ebay_listing_data(sku: str, request: dict):
 
         _apply_ebay_listing_updates(product_json, data)
         write_sku_json(sku, product_json)
+        append_product_change_log(
+            sku,
+            "ebay_listing_save",
+            {
+                "fields": sorted(list(data.keys())),
+                "field_count": len(data.keys()),
+            },
+        )
 
         return {
             "success": True,
@@ -1432,6 +1487,14 @@ def bulk_update_ebay_listing_data(request: EbayListingBulkUpdateRequest):
 
             _apply_ebay_listing_updates(product_json, merged)
             write_sku_json(sku, product_json)
+            append_product_change_log(
+                sku,
+                "ebay_listing_bulk_update",
+                {
+                    "set_fields": sorted(list((set_updates or {}).keys())),
+                    "adjust_fields": sorted(list((adjust_updates or {}).keys())),
+                },
+            )
             results[sku] = "updated"
             updated += 1
         except Exception as e:
@@ -1465,6 +1528,14 @@ def bulk_save_ebay_listing_data(request: EbayListingBulkSaveRequest):
 
             _apply_ebay_listing_updates(product_json, updates)
             write_sku_json(sku, product_json)
+            append_product_change_log(
+                sku,
+                "ebay_listing_bulk_save",
+                {
+                    "fields": sorted(list(updates.keys())),
+                    "field_count": len(updates.keys()),
+                },
+            )
             results[sku] = "updated"
             updated += 1
         except Exception as e:
@@ -1865,12 +1936,20 @@ def _get_listing_sku_json_mapping(raw_sku):
     """Map count_main_images and eBay SEO fields from SKU JSON."""
     mapped = {
         "count_main_images": None,
+        "op": None,
         "ebay_seo_title": "",
         "ebay_seo_product_type": "",
         "ebay_seo_keyword_1": "",
         "ebay_seo_keyword_2": "",
         "ebay_seo_keyword_3": "",
         "ebay_seo_product_model": "",
+        "last_title_change_at": "",
+        "last_title_change_days_ago": None,
+        "last_title_change_value": "",
+        "last_price_change_at": "",
+        "last_price_change_days_ago": None,
+        "last_price_old": None,
+        "last_price_new": None,
     }
 
     lookup_sku = _extract_lookup_sku(raw_sku)
@@ -1892,6 +1971,10 @@ def _get_listing_sku_json_mapping(raw_sku):
             if isinstance(main_images, list):
                 mapped["count_main_images"] = len(main_images)
 
+        op_section = product.get("OP", {})
+        if isinstance(op_section, dict):
+            mapped["op"] = op_section.get("OP")
+
         ebay_seo = product.get("eBay SEO", {})
         if isinstance(ebay_seo, dict):
             mapped["ebay_seo_title"] = ebay_seo.get("eBay Title", "")
@@ -1900,6 +1983,48 @@ def _get_listing_sku_json_mapping(raw_sku):
             mapped["ebay_seo_keyword_2"] = ebay_seo.get("Keyword 2", "")
             mapped["ebay_seo_keyword_3"] = ebay_seo.get("Keyword 3", "")
             mapped["ebay_seo_product_model"] = ebay_seo.get("Product Model", "")
+
+        logs_section = product.get("System Logs", {})
+        change_log = logs_section.get("Change Log", []) if isinstance(logs_section, dict) else []
+        if isinstance(change_log, list) and change_log:
+            now_utc = datetime.now(timezone.utc)
+
+            def _parse_iso_ts(value):
+                text = str(value or "").strip()
+                if not text:
+                    return None
+                try:
+                    return datetime.fromisoformat(text.replace("Z", "+00:00"))
+                except Exception:
+                    return None
+
+            def _find_latest(action_name):
+                for entry in change_log:
+                    if not isinstance(entry, dict):
+                        continue
+                    if str(entry.get("action") or "").strip() == action_name:
+                        return entry
+                return None
+
+            title_entry = _find_latest("ebay_revise_title_live")
+            if isinstance(title_entry, dict):
+                ts_raw = title_entry.get("timestamp")
+                ts = _parse_iso_ts(ts_raw)
+                mapped["last_title_change_at"] = str(ts_raw or "")
+                mapped["last_title_change_value"] = str((title_entry.get("details") or {}).get("ebay_title") or "")
+                if ts is not None:
+                    mapped["last_title_change_days_ago"] = max((now_utc - ts).days, 0)
+
+            price_entry = _find_latest("ebay_revise_price_live")
+            if isinstance(price_entry, dict):
+                ts_raw = price_entry.get("timestamp")
+                ts = _parse_iso_ts(ts_raw)
+                details = price_entry.get("details") or {}
+                mapped["last_price_change_at"] = str(ts_raw or "")
+                mapped["last_price_old"] = details.get("old_price")
+                mapped["last_price_new"] = details.get("new_price")
+                if ts is not None:
+                    mapped["last_price_change_days_ago"] = max((now_utc - ts).days, 0)
     except Exception:
         return mapped
 
@@ -1970,6 +2095,8 @@ def get_de_ebay_listings(
     
     # Enrich ALL listings with SKU JSON data BEFORE applying column filters
     # (so column filters can use count_main_images and eBay SEO fields)
+    from datetime import timezone as _tz
+    _now_utc = datetime.now(_tz.utc)
     enriched_listings = []
     for listing in de_listings:
         listing_copy = dict(listing)
@@ -1983,6 +2110,17 @@ def get_de_ebay_listings(
             normalized_title = " ".join(title_value.split()).lower()
             normalized_seo_title = " ".join(seo_title_value.split()).lower()
             listing_copy["title_matches_ebay_seo_title"] = "Yes" if normalized_title == normalized_seo_title else "No"
+
+        # Compute days listed from start_time
+        start_time_raw = listing_copy.get("start_time", "")
+        if start_time_raw:
+            try:
+                dt = datetime.fromisoformat(str(start_time_raw).replace("Z", "+00:00"))
+                listing_copy["days_listed"] = (_now_utc - dt).days
+            except Exception:
+                listing_copy["days_listed"] = None
+        else:
+            listing_copy["days_listed"] = None
 
         enriched_listings.append(listing_copy)
     de_listings = enriched_listings
@@ -2186,9 +2324,9 @@ def add_missing_skus_from_excel_endpoint():
 
 
 @app.post("/api/excel/sync-from-db")
-def sync_db_to_excel_endpoint():
+def sync_db_to_excel_endpoint(request: DbToExcelSyncRequest):
     """Sync JSON data back to Excel file."""
-    result = sync_db_to_excel()
+    result = sync_db_to_excel(sheet_name=request.sheet_name, columns=request.columns)
     
     if result.get("success"):
         return {
@@ -2274,6 +2412,15 @@ def compute_ebay_listings_detailed_endpoint():
             "X-Accel-Buffering": "no"
         }
     )
+
+
+@app.post("/api/skus/ebay-listings/recompute-profit")
+def recompute_ebay_listings_profit_endpoint():
+    """Recalculate profit_analysis for all cached eBay listings (no API fetch)."""
+    try:
+        return recompute_cached_profit_analysis()
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 @app.post("/api/ebay/sync/listings", response_model=SyncListingsResponse)

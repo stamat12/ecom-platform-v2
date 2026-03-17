@@ -1031,6 +1031,60 @@ def revise_ebay_listing_title(sku: str) -> Dict[str, Any]:
     }
 
 
+def revise_ebay_listing_price(sku: str, new_price: float) -> Dict[str, Any]:
+    """Set a new price on a live DE eBay listing via Trading API."""
+    listing_sku = str(sku or "").strip()
+    if not listing_sku:
+        raise ValueError("SKU is required")
+    if new_price <= 0:
+        raise ValueError("Price must be greater than 0")
+
+    lookup_sku = _extract_lookup_sku(listing_sku)
+    if not lookup_sku:
+        raise ValueError(f"Could not extract lookup SKU from '{listing_sku}'")
+
+    item_id = _find_de_item_id_for_listing_sku(listing_sku)
+    if not item_id:
+        raise ValueError(f"No DE listing item_id found in cache for SKU '{listing_sku}'")
+
+    token = get_ebay_token()
+    endpoint = get_api_endpoint()
+
+    xml_body = f"""<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<ReviseFixedPriceItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+  <RequesterCredentials>
+    <eBayAuthToken>{token}</eBayAuthToken>
+  </RequesterCredentials>
+  <Item>
+    <ItemID>{html.escape(item_id)}</ItemID>
+    <StartPrice>{new_price:.2f}</StartPrice>
+  </Item>
+</ReviseFixedPriceItemRequest>"""
+
+    headers = _build_headers("ReviseFixedPriceItem")
+    response = requests.post(endpoint, headers=headers, data=xml_body.encode("utf-8"), timeout=60)
+    response.raise_for_status()
+
+    text = response.text
+    ack_match = re.search(r"<Ack>(.*?)</Ack>", text)
+    ack = (ack_match.group(1).strip() if ack_match else "").lower()
+
+    if ack not in {"success", "warning"}:
+        short = re.search(r"<ShortMessage>(.*?)</ShortMessage>", text)
+        long_msg = re.search(r"<LongMessage>(.*?)</LongMessage>", text)
+        err_msg = long_msg.group(1) if long_msg else (short.group(1) if short else "Unknown eBay API error")
+        raise ValueError(f"eBay ReviseFixedPriceItem failed: {err_msg}")
+
+    return {
+        "success": True,
+        "sku": listing_sku,
+        "lookup_sku": lookup_sku,
+        "item_id": item_id,
+        "new_price": round(new_price, 2),
+        "message": f"eBay price updated to €{new_price:.2f}",
+    }
+
+
 def build_description_html(product_json: Dict[str, Any], title: str) -> str:
     """Build HTML description from product data using exact old project template"""
     product_info = product_json.get("Intern Product Info", {})
