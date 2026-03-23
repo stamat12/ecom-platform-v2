@@ -1,0 +1,250 @@
+{
+  "P0020070": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Kochen & Genießen/Küchenhelfer/Küchenwaagen",
+      "eBay Category ID": "50419"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "KitchenAid",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese digitale Küchenwaage hat eine Glasoberfläche und ein modernes Design. Sie kann sowohl flüssige als auch trockene Zutaten wiegen. Mit der innovativen Drehknopfsteuerung können die Maßeinheiten einfach eingestellt werden. Sichtbare Angaben: Farbe: Schwarz; Größe: 5kg.",
+      "Keywords": "Küchenwaage digital",
+      "Materials": "Glas, Edelstahl"
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020070 (1).jpg"
+        },
+        {
+          "filename": "P0020070 (10).jpg"
+        },
+        {
+          "filename": "P0020070 (11).jpg"
+        },
+        {
+          "filename": "P0020070 (2).jpg"
+        },
+        {
+          "filename": "P0020070 (3).jpg"
+        },
+        {
+          "filename": "P0020070 (4).jpg"
+        },
+        {
+          "filename": "P0020070 (5).jpg"
+        },
+        {
+          "filename": "P0020070 (6).jpg"
+        },
+        {
+          "filename": "P0020070 (7).jpg"
+        },
+        {
+          "filename": "P0020070 (8).jpg"
+        },
+        {
+          "filename": "P0020070 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020070 (2).jpg"
+        },
+        {
+          "filename": "P0020070 (5).jpg"
+        },
+        {
+          "filename": "P0020070 (4).jpg"
+        },
+        {
+          "filename": "P0020070 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020070 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IuQAAeSwgHhpvba3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ULEAAeSwmFBpvba6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (9).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GYwAAeSw8kRpvba9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (11).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vdAAAeSw4Expvba~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aHYAAeSwj0RpvbbC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bEEAAeSw4xBpvbbG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lVQAAeSwM29pvbbI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UFgAAeSweh9pvbbM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (6).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/a8kAAeSwW9tpvbbP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020070 (7).jpg",
+          "order": 10,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020070 (8).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UqMAAeSwa6VpvbbT/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "KitchenAid",
+        "Produktart": "Küchenwaage",
+        "Besonderheiten": "Digital",
+        "Farbe": "Schwarz",
+        "Material": "Glas, Edelstahl",
+        "Durchmesser": "Weniger als 25 cm",
+        "Gewicht": "0,1 kg",
+        "Länge": "Weniger als 25 cm",
+        "Maßeinheit": "kg",
+        "Zubereitungsart": "Kompressor"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Küchenwaage",
+      "Product Model": "digital",
+      "Keyword 1": "Glasoberfläche",
+      "Keyword 2": "Drehknopfsteuerung",
+      "Keyword 3": "5kg Kapazität"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.692213Z",
+          "sku": "P0020070",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.070810Z",
+          "sku": "P0020070",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

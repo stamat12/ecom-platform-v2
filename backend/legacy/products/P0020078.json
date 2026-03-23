@@ -1,0 +1,289 @@
+{
+  "P0020078": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "GRT Pro",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Leistungsstarker Profi-Haartrockner für schnelles und effizientes Styling im Alltag oder im Salon. Mit einer hohen Leistung von 3500 Watt sorgt das Gerät für besonders kurze Trocknungszeiten und ein gleichmäßiges Ergebnis.\n\nDank integrierter Ionen-Technologie wird statische Aufladung reduziert und das Haar wirkt glatter und gepflegter. Der langlebige AC-Motor mit einer Lebensdauer von über 3000 Stunden garantiert eine zuverlässige Nutzung auch bei häufiger Anwendung.\n\nIm Lieferumfang enthalten sind zwei Stylingdüsen für präzises Arbeiten sowie eine Anleitung. Der Haartrockner liegt gut in der Hand und eignet sich sowohl für den privaten Gebrauch als auch für professionelle Anwendungen.\n\nDer Artikel ist neu und unbenutzt. Die Verpackung kann leichte Lager- oder Transportschäden aufweisen.",
+      "Keywords": "8800 Haartrockner 3500 W",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 22,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020078 (1).jpg"
+        },
+        {
+          "filename": "P0020078 (10).jpg"
+        },
+        {
+          "filename": "P0020078 (11).jpg"
+        },
+        {
+          "filename": "P0020078 (12).jpg"
+        },
+        {
+          "filename": "P0020078 (13).jpg"
+        },
+        {
+          "filename": "P0020078 (14).jpg"
+        },
+        {
+          "filename": "P0020078 (15).jpg"
+        },
+        {
+          "filename": "P0020078 (16).jpg"
+        },
+        {
+          "filename": "P0020078 (17).jpg"
+        },
+        {
+          "filename": "P0020078 (18).jpg"
+        },
+        {
+          "filename": "P0020078 (19).jpg"
+        },
+        {
+          "filename": "P0020078 (2).jpg"
+        },
+        {
+          "filename": "P0020078 (20).jpg"
+        },
+        {
+          "filename": "P0020078 (21).jpg"
+        },
+        {
+          "filename": "P0020078 (22).jpg"
+        },
+        {
+          "filename": "P0020078 (3).jpg"
+        },
+        {
+          "filename": "P0020078 (4).jpg"
+        },
+        {
+          "filename": "P0020078 (5).jpg"
+        },
+        {
+          "filename": "P0020078 (6).jpg"
+        },
+        {
+          "filename": "P0020078 (7).jpg"
+        },
+        {
+          "filename": "P0020078 (8).jpg"
+        },
+        {
+          "filename": "P0020078 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020078 (2).jpg"
+        },
+        {
+          "filename": "P0020078 (22).jpg"
+        },
+        {
+          "filename": "P0020078 (6).jpg"
+        },
+        {
+          "filename": "P0020078 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020078 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZgUAAeSwQ6lpvbeJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (9).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J-YAAeSwuMNpvbeN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (22).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eNwAAeSw4XJpvbeP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cLsAAeSwdAJpvbeT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~QYAAeSwMvVpvbeV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/di0AAeSwihRpvbeb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dpUAAeSwdbxpvbed/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (14).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vrQAAeSw~Qxpvbef/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (15).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tKQAAeSw6B5pvbel/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (16).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UBIAAeSwIKBpvben/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (17).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/acwAAeSwWu5pvbes/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020078 (2).jpg",
+          "order": 12,
+          "eBay URL": ""
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "GRT Pro",
+        "Produktart": "Profi-Haartrockner"
+      },
+      "optional": {
+        "Leistung": "3500 W",
+        "Farbe": "Schwarz",
+        "Modell": "8800",
+        "Stromquelle": "Netzstrom",
+        "Besonderheiten": "Ionen-Technologie",
+        "Abteilung": "Unisex",
+        "Material": "Plastik",
+        "Ursprungsland": "P.R.C"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haartrockner",
+      "Product Model": "8800",
+      "Keyword 1": "Ionen-Technologie",
+      "Keyword 2": "AC-Motor",
+      "Keyword 3": "Stylingdüsen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "35",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.835208Z",
+          "sku": "P0020078",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.215023Z",
+          "sku": "P0020078",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

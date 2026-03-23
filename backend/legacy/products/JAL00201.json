@@ -17,13 +17,14 @@
       "Total Cost Net": 1.01
     },
     "Ebay Category": {
-      "Category": null
+      "Category": "/Garten & Terrasse/Bewässern/Schlauchkupplungen, Anschlüsse & Ventile",
+      "eBay Category ID": "181013"
     },
     "EAN": {
-      "EAN": 8002126944147.0
+      "EAN": 8002126944147
     },
     "Product Condition": {
-      "Condition": "Brandneu"
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -32,15 +33,15 @@
       "Size": ""
     },
     "Intern Generated Info": {
-      "More details": "Das Produkt ist ein Wasserfilter mit einem kompakten Design. Es verfügt über mehrere Anschlussmöglichkeiten für eine einfache Installation. Die Oberfläche ist glatt und leicht zu reinigen. Sichtbare Angaben: Farbe: Weiß.",
-      "Keywords": "Wasserfilter MasXirch",
+      "More details": "Automatisches Wasserstandskontrollventil für Tanks, Pools oder Zisternen, das den Wasserstand zuverlässig reguliert. Das Ventil stoppt den Wasserzufluss automatisch, sobald der gewünschte Wasserstand erreicht ist, und öffnet wieder bei sinkendem Niveau. Die kompakte Bauweise ermöglicht eine einfache Installation im oberen Bereich des Tanks ohne elektrische Komponenten. Im Set sind 2 Ventile enthalten, ideal für verschiedene Anwendungen in Garten, Haushalt oder Bewässerungssystemen.",
+      "Keywords": "Automatisches Wasserstandskontrollventil",
       "Materials": "Kunststoff"
     },
     "OP": {
       "OP": "21.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"
@@ -83,7 +84,85 @@
         {
           "filename": "4.png"
         }
+      ],
+      "eBay Images": [
+        {
+          "filename": "1.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMVgxMDAx/z/U28AAeSwnjlpufdD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "2.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMVgxMDAx/z/uMQAAeSwJPJpufdG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "3.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMVgxMDAx/z/MqgAAeSwZcFpufdI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "4.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMVgxMDAx/z/WqsAAeSwo~lpufdJ/$_1.JPG?set_id=8800005007"
+        }
       ]
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "13",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "4",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": 8002126944147,
+      "Modified SKU": "JAL00201-JAL00204",
+      "Schedule Date": "2026-03-30T01:47"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:47:16.654641Z",
+          "sku": "JAL00201",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Absperrventil"
+      },
+      "optional": {
+        "Anzahl der Ausgänge": "2",
+        "Marke": "MasXirch",
+        "Material": "Kunststoff",
+        "Set enthält": "2 Ventile",
+        "Geeignet für": "Wasser-Tank",
+        "Anzahl der Teile": "2-teilig"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wasserstandskontrollventil",
+      "Product Model": "",
+      "Keyword 1": "automatisches Ventil",
+      "Keyword 2": "für Tanks",
+      "Keyword 3": "Zisternen"
     }
   }
 }

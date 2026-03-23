@@ -1,0 +1,273 @@
+{
+  "P0020071": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/Tragbare Geräte & Kopfhörer/Kopfhörer",
+      "eBay Category ID": "112529"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Beats",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Kopfhörer sind kabellos und bieten eine gute Geräuschisolierung. Sie kommen mit einem praktischen Etui zur Aufbewahrung. Die Ohrpolster sind gepolstert und sorgen für hohen Tragekomfort. Sichtbare Angaben: Farbe: Schwarz.",
+      "Keywords": "Studio Pro Kopfhörer",
+      "Materials": "Kunststoff, Metall, Schaumstoff"
+    },
+    "OP": {
+      "OP": "250"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020071 (1).jpg"
+        },
+        {
+          "filename": "P0020071 (10).jpg"
+        },
+        {
+          "filename": "P0020071 (11).jpg"
+        },
+        {
+          "filename": "P0020071 (12).jpg"
+        },
+        {
+          "filename": "P0020071 (13).jpg"
+        },
+        {
+          "filename": "P0020071 (2).jpg"
+        },
+        {
+          "filename": "P0020071 (3).jpg"
+        },
+        {
+          "filename": "P0020071 (4).jpg"
+        },
+        {
+          "filename": "P0020071 (5).jpg"
+        },
+        {
+          "filename": "P0020071 (6).jpg"
+        },
+        {
+          "filename": "P0020071 (7).jpg"
+        },
+        {
+          "filename": "P0020071 (8).jpg"
+        },
+        {
+          "filename": "P0020071 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020071 (1).jpg"
+        },
+        {
+          "filename": "P0020071 (11).jpg"
+        },
+        {
+          "filename": "P0020071 (4).jpg"
+        },
+        {
+          "filename": "P0020071 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020071 (11).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/S7EAAeSwbKlpvbbd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (10).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aTAAAeSwj0Rpvbbg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uHIAAeSw~Qxpvbbk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YwUAAeSwWu5pvbbn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G7UAAeSw4Ghpvbbq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (13).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/U4UAAeSwGBxpvbbt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (12).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HAMAAeSwQbRpvbbw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IOsAAeSwsTFpvbby/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (6).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-igAAeSwiEVpvbb0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/weoAAeSwz5xpvbb3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020071 (2).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b8AAAeSwK9Rpvbb6/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Beats",
+        "Modell": "Studio Pro",
+        "Produktart": "Ohrumschließende Kopfhörer",
+        "Konnektivität": "Bluetooth",
+        "Farbe": "Schwarz"
+      },
+      "optional": {
+        "Kabellose Technologie": "Bluetooth",
+        "Mikrofontyp": "Integriert",
+        "Formfaktor": "Kopfbügel",
+        "Besonderheiten": "Geräuschisolation, Eingebautes Mikrofon, Faltbar",
+        "Geeignet für": "",
+        "Anzahl der Ohrhörer": "Doppelt",
+        "Herstellernummer": "",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Inklusive Ladegerät": "",
+        "Ladebereich des Geräts": "",
+        "Impedanz": "",
+        "Ursprungsland": "",
+        "Kabellänge": "",
+        "Frequenzband": "",
+        "Treibergröße": "",
+        "Herstellergarantie": "",
+        "Herstellungsjahr": "",
+        "Personalisieren": "",
+        "Anleitung für Personalisierung": "",
+        "Frequenzbereich": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Kopfhörer",
+      "Product Model": "Studio Pro",
+      "Keyword 1": "kabellos",
+      "Keyword 2": "Geräuschisolierung",
+      "Keyword 3": "Etui"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "145",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.710938Z",
+          "sku": "P0020071",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.090534Z",
+          "sku": "P0020071",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

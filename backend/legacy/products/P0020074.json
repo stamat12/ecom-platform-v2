@@ -1,0 +1,110 @@
+{
+  "P0020074": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Autoelektronik, GPS & Sicherheitstechnik/GPS & Navigationsgeräte/Einbau-Navigationsgeräte",
+      "eBay Category ID": "38776"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Junsun",
+      "Color": "Schwarz",
+      "Size": "9 zoll"
+    },
+    "Intern Generated Info": {
+      "More details": "Neues Junsun Car Smart Navigation System mit großem 9 Zoll Touchscreen, ideal zur Aufrüstung Ihres Fahrzeugs. Das Android-basierte Autoradio bietet vielseitige Funktionen wie Navigation, Bluetooth-Verbindung sowie Multimedia-Wiedergabe und sorgt für ein modernes Fahrerlebnis.\n\nDas Modell SXT891C EU verfügt über 1GB RAM und 32GB Speicher und eignet sich perfekt für alltägliche Anwendungen wie Musik, Freisprechen und Navigation. Durch die einfache Bedienung und den großen Bildschirm ist eine komfortable Nutzung während der Fahrt gewährleistet.\n\nDer Artikel ist neu und originalverpackt. Die Verpackung weist lediglich leichte Lagerspuren auf, das Gerät selbst ist unbenutzt und in einwandfreiem Zustand.",
+      "Keywords": "Android Autoradio Navi 1GB 32GB Touchscreen Bluetooth GPS",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "70"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 5,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020074 (1).jpg"
+        },
+        {
+          "filename": "P0020074 (2).jpg"
+        },
+        {
+          "filename": "P0020074 (3).jpg"
+        },
+        {
+          "filename": "P0020074 (4).jpg"
+        },
+        {
+          "filename": "P0020074 (5).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [],
+      "eBay Images": [
+        {
+          "filename": "P0020074 (2).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020074 (3).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020074 (4).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020074 (1).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020074 (5).jpg",
+          "order": 5,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

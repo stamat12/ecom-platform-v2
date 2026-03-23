@@ -21,7 +21,7 @@
       "eBay Category ID": "374"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -101,6 +101,126 @@
         },
         {
           "filename": "P0020046 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020046 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XMMAAeSwykppuaP3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LLsAAeSwvwZpuaP7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IwcAAeSw0uxpuaQB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EycAAeSwJHppuaQE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OuEAAeSwqd9puaQK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GGcAAeSwCTFpuaQN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HTkAAeSwLfppuaQR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DTAAAeSwdWNpuaQU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020046 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HiQAAeSwOJBpuaQY/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "Fisher-Price",
+        "Altersempfehlung": "6-36 Monate",
+        "Herstellernummer": "FPM44",
+        "Ursprungsland": "Vietnam"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Lernspielzeug",
+      "Product Model": "Puppy",
+      "Keyword 1": "interaktiv",
+      "Keyword 2": "Plüschtier",
+      "Keyword 3": "motorische Fähigkeiten"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "53",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T18:55:35.805085Z",
+          "sku": "P0020046",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.101099Z",
+          "sku": "P0020046",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

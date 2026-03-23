@@ -1,0 +1,303 @@
+{
+  "P0020081": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Standmixer",
+      "eBay Category ID": "133704"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "WMF",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der WMF KULT X Mixer Mix & Go hat eine Leistung von 300 W und eine Geschwindigkeit von 23.000 U/min. Er ist mit einem BPA-freien Tritan-Mixing-Jug ausgestattet und eignet sich ideal für Smoothies. Das kompakte Design macht ihn perfekt für unterwegs. Sichtbare Angaben: Farbe: Silber.",
+      "Keywords": "KULT X Mixer Mix & Go Smoothie",
+      "Materials": "Edelstahl, Tritan"
+    },
+    "OP": {
+      "OP": "45"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 17,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020081 (1).jpg"
+        },
+        {
+          "filename": "P0020081 (10).jpg"
+        },
+        {
+          "filename": "P0020081 (11).jpg"
+        },
+        {
+          "filename": "P0020081 (12).jpg"
+        },
+        {
+          "filename": "P0020081 (13).jpg"
+        },
+        {
+          "filename": "P0020081 (14).jpg"
+        },
+        {
+          "filename": "P0020081 (15).jpg"
+        },
+        {
+          "filename": "P0020081 (16).jpg"
+        },
+        {
+          "filename": "P0020081 (17).jpg"
+        },
+        {
+          "filename": "P0020081 (2).jpg"
+        },
+        {
+          "filename": "P0020081 (3).jpg"
+        },
+        {
+          "filename": "P0020081 (4).jpg"
+        },
+        {
+          "filename": "P0020081 (5).jpg"
+        },
+        {
+          "filename": "P0020081 (6).jpg"
+        },
+        {
+          "filename": "P0020081 (7).jpg"
+        },
+        {
+          "filename": "P0020081 (8).jpg"
+        },
+        {
+          "filename": "P0020081 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020081 (3).jpg"
+        },
+        {
+          "filename": "P0020081 (11).jpg"
+        },
+        {
+          "filename": "P0020081 (13).jpg"
+        },
+        {
+          "filename": "P0020081 (15).jpg"
+        },
+        {
+          "filename": "P0020081 (16).jpg"
+        },
+        {
+          "filename": "P0020081 (17).jpg"
+        },
+        {
+          "filename": "P0020081 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020081 (11).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WrMAAeSw5tRpvbf2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (12).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oCoAAeSwM29pvbf4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ajYAAeSw6JZpvbf7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/W~oAAeSwpHtpvbf9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V2AAAeSwVhJpvbgC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KRQAAeSwrDZpvbgE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (13).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/m1UAAeSwfBJpvbgH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (14).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yG4AAeSwQBFpvbgK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (15).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/04AAAeSwnVlpvbgN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (16).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fKMAAeSwdr5pvbgP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (17).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JvEAAeSw4GhpvbgT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020081 (5).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bZ0AAeSwNfRpvbgW/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "KULT X Mixer Mix & Go"
+      },
+      "optional": {
+        "Marke": "WMF",
+        "Produktart": "Mixer",
+        "Bestandteile inbegriffen": "",
+        "Anwendungsmöglichkeiten": "",
+        "Anzahl der Geschwindigkeiten": "",
+        "Anzahl der Einstellungen/Programme": "",
+        "Leistung": "",
+        "Farbe": "",
+        "Kapazität": "",
+        "Stromquelle": "",
+        "Herstellergarantie": "",
+        "Herstellernummer": "CMMF 3200000022",
+        "Stückzahl": "",
+        "Material": "",
+        "Anzahl der Klingen": "",
+        "Anzahl der Scheiben": "",
+        "Besonderheiten": "",
+        "Ursprungsland": "China",
+        "Gerätefunktionen": "",
+        "Spannung": "",
+        "Set enthält": "",
+        "Anzahl der Bleche": "",
+        "Gedeck für": "",
+        "Tiefe": "",
+        "Höhe": "",
+        "Gewicht": "",
+        "Breite": "",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Mixer",
+      "Product Model": "KULT X Mixer Mix & Go",
+      "Keyword 1": "Smoothie",
+      "Keyword 2": "Tragbar",
+      "Keyword 3": "Tritan"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.905450Z",
+          "sku": "P0020081",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.277789Z",
+          "sku": "P0020081",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

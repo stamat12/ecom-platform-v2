@@ -21,7 +21,7 @@
       "eBay Category ID": "156856"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
@@ -104,6 +104,148 @@
         },
         {
           "filename": "P0020044 (2).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020044 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MBoAAeSwK9ZpuaOv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DXsAAeSwdDdpuaOy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/URAAAeSwx0VpuaO2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GbkAAeSwPa9puaO4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/N2AAAeSwCGppuaO7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AIMAAeSwq~1puaPA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xoMAAeSww-VpuaPD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020044 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/W2sAAeSwykppuaPG/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Papierstern"
+      },
+      "optional": {
+        "Farbe": "Weiß",
+        "Höhe": "60 cm",
+        "Marke": "Cepewa",
+        "Anlass": "Weihnachten",
+        "Material": "Papier",
+        "Größe": "Medium",
+        "Form": "Stern",
+        "Stückzahl": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Papierstern",
+      "Product Model": "Leuchte",
+      "Keyword 1": "dreidimensional",
+      "Keyword 2": "Weihnachtsdekoration",
+      "Keyword 3": "Neu"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T19:05:40.576966Z",
+          "sku": "P0020044",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:55:35.774787Z",
+          "sku": "P0020044",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.066608Z",
+          "sku": "P0020044",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

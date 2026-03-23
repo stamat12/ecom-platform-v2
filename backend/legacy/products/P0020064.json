@@ -1,0 +1,202 @@
+{
+  "P0020064": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "ghd",
+      "Color": "schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Set enthält einen professionellen Haartrockner mit verschiedenen Aufsätzen, darunter ein Diffusor und eine belüftete Bürste. Der Haartrockner ist für schnelles Trocknen und Styling konzipiert. Er verfügt über eine ergonomische Form und eine benutzerfreundliche Steuerung. Sichtbare Angaben: Farbe: schwarz.",
+      "Keywords": "Haartrockner Set",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "140.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020064 (2).jpg"
+        },
+        {
+          "filename": "P0020064 (15).jpg"
+        },
+        {
+          "filename": "P0020064 (4).jpg"
+        },
+        {
+          "filename": "P0020064 (10).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020064 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8z8AAeSwqjNpue7M/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ePsAAeSwdippue7O/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M0cAAeSwcIZpue7S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (12).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/vEUAAeSwwNlpue7V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H5EAAeSwkixpue7Y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pwQAAeSwH8ppue7b/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/q4wAAeSw8U9pue7j/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/uqUAAeSwCoZpue7l/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (9).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s5sAAeSwGBBpue7o/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (13).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MFoAAeSwM7Jpue7q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (15).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PssAAeSwSEVpue7u/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020064 (1).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NQYAAeSwIY9pue7x/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "ghd",
+        "Produktart": "Profi-Haartrockner"
+      },
+      "optional": {
+        "Farbe": "schwarz",
+        "Material": "Kunststoff, Metall",
+        "Besonderheiten": "Diffusor, Ionen-Technologie",
+        "Stromquelle": "Netzstrom",
+        "Modell": "ghd Air",
+        "Temperaturstufen": "3",
+        "Geschwindigkeitsstufen": "2",
+        "Abteilung": "Unisex",
+        "Ursprungsland": "Vereinigtes Königreich"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haartrockner",
+      "Product Model": "ghd Air",
+      "Keyword 1": "Diffusor",
+      "Keyword 2": "belüftete Bürste",
+      "Keyword 3": "professionell"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "105",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.390518Z",
+          "sku": "P0020064",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

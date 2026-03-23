@@ -1,0 +1,185 @@
+{
+  "P0020057": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Leuchtmittel",
+      "eBay Category ID": "20706"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Es handelt sich um Einbaustrahler, die in einer Verpackung geliefert werden. Die Strahler sind in Folie verpackt und haben orangefarbene Clips. Sie sind nicht dimmbar und haben eine Leistung von 10W. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Einbaustrahler 6er Pack",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "25.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020057 (1).jpg"
+        },
+        {
+          "filename": "P0020057 (10).jpg"
+        },
+        {
+          "filename": "P0020057 (5).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020057 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kuoAAeSw5nxpue-i/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iOoAAeSwnNBpue-l/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/R8MAAeSwtwtpue-o/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3pMAAeSwEVVpue-q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/STwAAeSwMQhpue-t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gI0AAeSwK9Zpue-w/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J6sAAeSwgR1pue-y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dNIAAeSwnc1pue-1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020057 (4).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RJkAAeSw16Npue-4/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Beleuchtungstechnik": "LED",
+        "Lichtfarbe": "Kaltweiß",
+        "Glühbirnenform": "Einbaudownlight",
+        "Leistung der Glühbirne": "10 W",
+        "Besonderheiten": "Nicht dimmbar",
+        "Ausgangsspannung": "185-265 V",
+        "Farbtemperatur": "4000 K",
+        "Material": "Kunststoff, Metall",
+        "Produktart": "Einbaustrahler",
+        "Finish": "Weiß",
+        "Anzahl der Glühbirnen": "6",
+        "Abstrahlwinkel": "120°",
+        "Innen-/Außenbereich": "Innenbereich"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Einbaustrahler",
+      "Product Model": "",
+      "Keyword 1": "10W",
+      "Keyword 2": "nicht dimmbar",
+      "Keyword 3": "6er Pack"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.514186Z",
+          "sku": "P0020057",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

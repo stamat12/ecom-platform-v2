@@ -5,6 +5,7 @@ import base64
 import json
 import logging
 import random
+import re
 import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
@@ -19,6 +20,7 @@ from app.config.ebay_config import (
     EBAY_ENRICHMENT_MAX_TOKENS,
     EBAY_FIELD_ENRICHMENT_PROMPT,
     EBAY_SEO_ENRICHMENT_PROMPT,
+    EBAY_SEO_ENRICHMENT_PROMPT_V2,
 )
 from app.services.ebay_schema import get_schema_for_sku
 from app.repositories.sku_json_repo import read_sku_json, _sku_json_path
@@ -264,7 +266,7 @@ def _compute_retry_delay_seconds(attempt_index: int, retry_after_seconds: Option
 def _chat_completions_with_retry(
     *,
     model: str,
-    response_format: Dict[str, str],
+    response_format: Optional[Dict[str, str]],
     temperature: float,
     max_tokens: int,
     messages: List[Dict[str, Any]],
@@ -276,13 +278,15 @@ def _chat_completions_with_retry(
 
     for attempt in range(_OPENAI_RETRY_ATTEMPTS):
         try:
-            return client.chat.completions.create(
-                model=model,
-                response_format=response_format,
-                temperature=temperature,
-                max_tokens=max_tokens,
-                messages=messages,
-            )
+            kwargs = {
+                "model": model,
+                "temperature": temperature,
+                "max_tokens": max_tokens,
+                "messages": messages,
+            }
+            if response_format is not None:
+                kwargs["response_format"] = response_format
+            return client.chat.completions.create(**kwargs)
         except Exception as error:
             is_transient = _is_transient_openai_error(error)
             is_last_attempt = attempt >= (_OPENAI_RETRY_ATTEMPTS - 1)
@@ -458,6 +462,182 @@ def _write_ebay_seo_fields(product_json: Dict[str, Any], seo_fields: Dict[str, s
     product_json["eBay SEO"]["Keyword 3"] = str(seo_fields.get("keyword_3") or "").strip()
 
 
+def _normalize_seo_payload(payload: Dict[str, Any]) -> Dict[str, str]:
+    alias_map = {
+        "product_type": "product_type",
+        "product type": "product_type",
+        "producttype": "product_type",
+        "product_model": "product_model",
+        "product model": "product_model",
+        "productmodel": "product_model",
+        "keyword_1": "keyword_1",
+        "keyword 1": "keyword_1",
+        "keyword1": "keyword_1",
+        "keyword_2": "keyword_2",
+        "keyword 2": "keyword_2",
+        "keyword2": "keyword_2",
+        "keyword_3": "keyword_3",
+        "keyword 3": "keyword_3",
+        "keyword3": "keyword_3",
+    }
+    cleaned = {key: "" for key in SEO_FIELD_KEYS}
+    for raw_key, raw_value in (payload or {}).items():
+        normalized_key = alias_map.get(str(raw_key).strip().lower())
+        if not normalized_key:
+            continue
+        cleaned[normalized_key] = "" if raw_value is None else str(raw_value).strip()
+    return cleaned
+
+
+def _parse_seo_response(raw: Any) -> Dict[str, str]:
+    text = "" if raw is None else str(raw).strip()
+    if not text:
+        return {}
+
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, dict):
+            cleaned = _normalize_seo_payload(parsed)
+            if any(cleaned.values()):
+                return cleaned
+    except Exception:
+        pass
+
+    extracted: Dict[str, str] = {}
+    for line in text.splitlines():
+        match = re.match(r"^\s*(Product Type|Product Model|Keyword 1|Keyword 2|Keyword 3)\s*:\s*(.*)$", line.strip(), re.IGNORECASE)
+        if not match:
+            continue
+        extracted[match.group(1)] = match.group(2).strip()
+
+    cleaned = _normalize_seo_payload(extracted)
+    if any(cleaned.values()):
+        return cleaned
+    return {}
+
+
+def _dedupe_joined_parts(parts: List[str]) -> str:
+    seen = set()
+    ordered: List[str] = []
+    for part in parts:
+        text = str(part or "").strip()
+        if not text:
+            continue
+        key = text.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        ordered.append(text)
+    return " ".join(ordered).strip()
+
+
+def _build_seo_title_from_product_details(product_json: Dict[str, Any]) -> str:
+    intern_product = product_json.get("Intern Product Info", {})
+    intern_generated = product_json.get("Intern Generated Info", {})
+    if not isinstance(intern_product, dict):
+        intern_product = {}
+    if not isinstance(intern_generated, dict):
+        intern_generated = {}
+
+    return _dedupe_joined_parts([
+        intern_product.get("Brand"),
+        intern_generated.get("Keywords"),
+        intern_product.get("Color"),
+        intern_product.get("Size"),
+    ])
+
+
+def _get_seo_input_snapshot(product_json: Dict[str, Any], sku: str, title: str = "") -> Dict[str, Any]:
+    category_section = product_json.get("Ebay Category", {})
+    if not isinstance(category_section, dict):
+        category_section = {}
+    intern_product = product_json.get("Intern Product Info", {})
+    if not isinstance(intern_product, dict):
+        intern_product = {}
+    intern_generated = product_json.get("Intern Generated Info", {})
+    if not isinstance(intern_generated, dict):
+        intern_generated = {}
+    images_section = product_json.get("Images", {})
+    if not isinstance(images_section, dict):
+        images_section = {}
+    image_summary = images_section.get("summary", {})
+    if not isinstance(image_summary, dict):
+        image_summary = {}
+
+    title_parts = {
+        "brand": str(intern_product.get("Brand") or "").strip(),
+        "keywords": str(intern_generated.get("Keywords") or "").strip(),
+        "color": str(intern_product.get("Color") or "").strip(),
+        "size": str(intern_product.get("Size") or "").strip(),
+    }
+
+    return {
+        "sku": sku,
+        "category": {
+            "name": str(category_section.get("Category") or "").strip(),
+            "id": str(category_section.get("eBay Category ID") or "").strip(),
+        },
+        "title_parts": title_parts,
+        "built_title": title,
+        "more_details": str(intern_generated.get("More details") or "").strip(),
+        "current_seo": _read_ebay_seo_fields(product_json),
+        "image_summary": image_summary,
+        "main_images_defined": len(images_section.get("main_images", []) or []),
+    }
+
+
+def _compute_seo_field_diff(before: Dict[str, str], after: Dict[str, str]) -> Dict[str, Dict[str, str]]:
+    diff: Dict[str, Dict[str, str]] = {}
+    for key in SEO_FIELD_KEYS:
+        old_value = str(before.get(key) or "").strip()
+        new_value = str(after.get(key) or "").strip()
+        if old_value != new_value:
+            diff[key] = {
+                "before": old_value,
+                "after": new_value,
+            }
+    return diff
+
+
+def _build_seo_user_prompt(product_json: Dict[str, Any], sku: str, title: str) -> str:
+    category_section = product_json.get("Ebay Category", {})
+    if not isinstance(category_section, dict):
+        category_section = {}
+    intern_generated = product_json.get("Intern Generated Info", {})
+    if not isinstance(intern_generated, dict):
+        intern_generated = {}
+
+    category_name = str(category_section.get("Category") or "").strip()
+    category_id = str(category_section.get("eBay Category ID") or "").strip()
+    more_details = str(intern_generated.get("More details") or "").strip()
+
+    return "\n".join([
+        f"SKU: {sku}",
+        f"eBay Category: {category_name or 'unknown'}",
+        f"eBay Category ID: {category_id or 'unknown'}",
+        f"Title: {title}",
+        f"More Details: {more_details}",
+        "Images are available when provided in this request.",
+    ]).strip()
+
+
+def _get_seo_prompt_variants() -> List[Dict[str, Any]]:
+    variants: List[Dict[str, Any]] = []
+    if str(EBAY_SEO_ENRICHMENT_PROMPT_V2 or "").strip():
+        variants.append({
+            "name": "v2_text",
+            "prompt": EBAY_SEO_ENRICHMENT_PROMPT_V2,
+            "response_format": None,
+        })
+    if str(EBAY_SEO_ENRICHMENT_PROMPT or "").strip():
+        variants.append({
+            "name": "legacy_json",
+            "prompt": EBAY_SEO_ENRICHMENT_PROMPT,
+            "response_format": {"type": "json_object"},
+        })
+    return variants
+
+
 def _extract_title_for_seo(product_json: Dict[str, Any], sku: str) -> str:
     candidates: List[str] = []
 
@@ -467,6 +647,9 @@ def _extract_title_for_seo(product_json: Dict[str, Any], sku: str) -> str:
         text = str(value).strip()
         if text:
             candidates.append(text)
+
+    preferred_title = _build_seo_title_from_product_details(product_json)
+    _push(preferred_title)
 
     title_keys = [
         "Title",
@@ -503,19 +686,32 @@ def _extract_title_for_seo(product_json: Dict[str, Any], sku: str) -> str:
 
 
 def _call_openai_text_json(system_prompt: str, user_prompt: str, trace_id: Optional[str] = None, sku: str = "") -> Dict[str, str]:
+    return _call_openai_text_seo(system_prompt, user_prompt, response_format={"type": "json_object"}, trace_id=trace_id, sku=sku)
+
+
+def _call_openai_text_seo(
+    system_prompt: str,
+    user_prompt: str,
+    response_format: Optional[Dict[str, str]],
+    trace_id: Optional[str] = None,
+    sku: str = "",
+    prompt_variant: str = "",
+) -> Dict[str, str]:
     try:
         if trace_id:
             _seo_debug(
                 "openai_text_request",
                 trace_id,
                 sku=sku,
+                prompt_variant=prompt_variant,
                 prompt_preview=user_prompt[:400],
                 model=EBAY_ENRICHMENT_MODEL,
                 max_tokens=300,
+                response_format=response_format,
             )
         response = _chat_completions_with_retry(
             model=EBAY_ENRICHMENT_MODEL,
-            response_format={"type": "json_object"},
+            response_format=response_format,
             temperature=0.1,
             max_tokens=300,
             messages=[
@@ -532,29 +728,98 @@ def _call_openai_text_json(system_prompt: str, user_prompt: str, trace_id: Optio
                 _seo_debug("openai_text_empty_response", trace_id, sku=sku)
             return {}
         if trace_id:
-            _seo_debug("openai_text_raw_response", trace_id, sku=sku, raw_preview=str(raw)[:800])
-        parsed = json.loads(raw)
-        if not isinstance(parsed, dict):
+            _seo_debug("openai_text_raw_response", trace_id, sku=sku, prompt_variant=prompt_variant, raw_preview=str(raw)[:800])
+        cleaned = _parse_seo_response(raw)
+        if not any(cleaned.values()):
             if trace_id:
-                _seo_debug("openai_text_non_dict_response", trace_id, sku=sku, parsed_type=type(parsed).__name__)
+                _seo_debug("openai_text_non_dict_response", trace_id, sku=sku, prompt_variant=prompt_variant, parsed_type=type(raw).__name__)
             return {}
-        cleaned: Dict[str, str] = {}
-        for key in SEO_FIELD_KEYS:
-            value = parsed.get(key)
-            cleaned[key] = "" if value is None else str(value).strip()
         if trace_id:
             _seo_debug(
                 "openai_text_parsed",
                 trace_id,
                 sku=sku,
+                prompt_variant=prompt_variant,
                 filled_keys=[k for k, v in cleaned.items() if v],
                 empty_keys=[k for k, v in cleaned.items() if not v],
+                parsed=cleaned,
             )
         return cleaned
     except Exception as e:
         logger.error(f"OpenAI SEO extraction failed: {e}")
         if trace_id:
-            _seo_debug("openai_text_error", trace_id, sku=sku, error=str(e))
+            _seo_debug("openai_text_error", trace_id, sku=sku, prompt_variant=prompt_variant, error=str(e))
+        return {}
+
+
+def _call_openai_vision_seo(
+    image_paths: List[Path],
+    system_prompt: str,
+    user_prompt_text: str,
+    response_format: Optional[Dict[str, str]],
+    trace_id: Optional[str] = None,
+    sku: str = "",
+    prompt_variant: str = "",
+) -> Dict[str, str]:
+    if not image_paths:
+        logger.warning("No images provided for SEO vision extraction")
+        if trace_id:
+            _seo_debug("openai_vision_no_images", trace_id, sku=sku)
+        return {}
+
+    try:
+        content: List[dict] = [{"type": "text", "text": user_prompt_text}]
+        for img_path in image_paths:
+            try:
+                data_uri = _image_to_data_uri(img_path)
+                content.append({
+                    "type": "image_url",
+                    "image_url": {"url": data_uri},
+                })
+            except Exception as e:
+                logger.warning(f"Failed to encode SEO image {img_path}: {e}")
+                if trace_id:
+                    _seo_debug("openai_vision_encode_failed", trace_id, sku=sku, image_path=str(img_path), error=str(e))
+
+        if len(content) <= 1:
+            return {}
+
+        response = _chat_completions_with_retry(
+            model=EBAY_ENRICHMENT_MODEL,
+            response_format=response_format,
+            temperature=0.1,
+            max_tokens=300,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": content},
+            ],
+            trace_id=trace_id,
+            sku=sku,
+            context="seo_vision",
+        )
+
+        raw = response.choices[0].message.content
+        if not raw:
+            return {}
+        if trace_id:
+            _seo_debug("openai_vision_raw_response", trace_id, sku=sku, prompt_variant=prompt_variant, raw_preview=str(raw)[:800], image_count=len(image_paths))
+
+        cleaned = _parse_seo_response(raw)
+        if trace_id:
+            _seo_debug(
+                "openai_vision_parsed",
+                trace_id,
+                sku=sku,
+                prompt_variant=prompt_variant,
+                extracted_fields=cleaned,
+                extracted_count=sum(1 for value in cleaned.values() if value),
+                expected_fields=SEO_FIELD_KEYS,
+            )
+        return cleaned
+    except Exception as e:
+        logger.error(f"OpenAI SEO vision extraction failed: {e}")
+        if trace_id:
+            _seo_debug("openai_vision_error", trace_id, sku=sku, prompt_variant=prompt_variant, error=str(e), image_count=len(image_paths))
         return {}
 
 
@@ -720,6 +985,7 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False, 
     
     # Count updates
     updated_count = sum(1 for key in SEO_FIELD_KEYS if (current.get(key) or "").strip() != (merged.get(key) or "").strip())
+    changed_fields = _compute_seo_field_diff(current, merged)
     if trace_id:
         _seo_debug(
             "seo_copy_pre_save",
@@ -730,6 +996,7 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False, 
             current=current,
             incoming=seo_fields,
             merged=merged,
+            changed_fields=changed_fields,
         )
     
     # Write SEO fields to product JSON
@@ -745,7 +1012,7 @@ def _copy_seo_to_sku(sku: str, seo_fields: Dict[str, str], force: bool = False, 
     
     logger.info(f"[SEO] Copied SEO to {sku} ({updated_count} fields updated)")
     if trace_id:
-        _seo_debug("seo_copy_complete", trace_id, sku=sku, updated_count=updated_count)
+        _seo_debug("seo_copy_complete", trace_id, sku=sku, json_path=str(json_path), updated_count=updated_count, changed_fields=changed_fields, saved_seo=merged)
     
     return {
         "success": True,
@@ -808,47 +1075,104 @@ def _enrich_single_sku_seo(sku: str, force: bool = False, trace_id: Optional[str
             "updated_seo_fields": 0,
         }
     
+    seo_user_prompt = _build_seo_user_prompt(product_json, sku, title)
+    if trace_id:
+        _seo_debug(
+            "seo_single_input_snapshot",
+            trace_id,
+            sku=sku,
+            snapshot=_get_seo_input_snapshot(product_json, sku, title),
+            user_prompt=seo_user_prompt,
+            prompt_variants=[variant.get("name") for variant in _get_seo_prompt_variants()],
+        )
+
     # If we have images, use vision API with images + title
     if image_paths:
         logger.info(f"Using vision API with {len(image_paths)} images for SEO enrichment of {sku}")
         if trace_id:
             _seo_debug("seo_single_using_vision", trace_id, sku=sku, image_count=len(image_paths), title_preview=title[:200])
-        
-        # Build prompt that includes title context for vision analysis
-        user_prompt_vision = (
-            f"Produkt-Titel: {title}\n\n"
-            "Analysiere die Bilder und den Titel um folgende SEO-Felder auszufüllen:\n"
-            "- product_type: Art des Produkts (z.B. 'Short', 'Dress', 'Jacket')\n"
-            "- product_model: Modellnummer oder spezifisches Modell (falls sichtbar)\n"
-            "- keyword_1, keyword_2, keyword_3: Relevante Suchbegriffe für dieses Produkt\n\n"
-            "Liefere ausschließlich JSON mit genau diesen Keys: "
-            "product_type, product_model, keyword_1, keyword_2, keyword_3"
-        )
-        
-        proposed = _call_openai_vision(image_paths, EBAY_SEO_ENRICHMENT_PROMPT, SEO_FIELD_KEYS, trace_id=trace_id, sku=sku)
+
+        proposed = {}
+        for variant in _get_seo_prompt_variants():
+            if trace_id:
+                _seo_debug("seo_prompt_attempt", trace_id, sku=sku, mode="vision", prompt_variant=variant["name"], image_count=len(image_paths))
+            proposed = _call_openai_vision_seo(
+                image_paths,
+                variant["prompt"],
+                seo_user_prompt,
+                response_format=variant["response_format"],
+                trace_id=trace_id,
+                sku=sku,
+                prompt_variant=variant["name"],
+            )
+            if trace_id:
+                _seo_debug(
+                    "seo_prompt_result",
+                    trace_id,
+                    sku=sku,
+                    mode="vision",
+                    prompt_variant=variant["name"],
+                    success=any(proposed.values()),
+                    parsed=proposed,
+                )
+            if any(proposed.values()):
+                break
         
         # If vision returns nothing, fallback to text-based approach
         if not proposed:
             logger.warning(f"Vision API returned no results for {sku}, falling back to text-based SEO")
-            user_prompt_text = (
-                "Produkt-Titel:\n"
-                f"{title}\n\n"
-                "Liefere ausschließlich JSON mit genau diesen Keys: "
-                "product_type, product_model, keyword_1, keyword_2, keyword_3"
-            )
-            proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text, trace_id=trace_id, sku=sku)
+            for variant in _get_seo_prompt_variants():
+                if trace_id:
+                    _seo_debug("seo_prompt_attempt", trace_id, sku=sku, mode="text_fallback", prompt_variant=variant["name"], image_count=len(image_paths))
+                proposed = _call_openai_text_seo(
+                    variant["prompt"],
+                    seo_user_prompt,
+                    response_format=variant["response_format"],
+                    trace_id=trace_id,
+                    sku=sku,
+                    prompt_variant=variant["name"],
+                )
+                if trace_id:
+                    _seo_debug(
+                        "seo_prompt_result",
+                        trace_id,
+                        sku=sku,
+                        mode="text_fallback",
+                        prompt_variant=variant["name"],
+                        success=any(proposed.values()),
+                        parsed=proposed,
+                    )
+                if any(proposed.values()):
+                    break
     else:
         # No images available, use text-based approach
         logger.info(f"No images found for {sku}, using text-based SEO enrichment")
         if trace_id:
             _seo_debug("seo_single_no_images_text_mode", trace_id, sku=sku, title_preview=title[:200])
-        user_prompt_text = (
-            "Produkt-Titel:\n"
-            f"{title}\n\n"
-            "Liefere ausschließlich JSON mit genau diesen Keys: "
-            "product_type, product_model, keyword_1, keyword_2, keyword_3"
-        )
-        proposed = _call_openai_text_json(EBAY_SEO_ENRICHMENT_PROMPT, user_prompt_text, trace_id=trace_id, sku=sku)
+        proposed = {}
+        for variant in _get_seo_prompt_variants():
+            if trace_id:
+                _seo_debug("seo_prompt_attempt", trace_id, sku=sku, mode="text_only", prompt_variant=variant["name"], image_count=0)
+            proposed = _call_openai_text_seo(
+                variant["prompt"],
+                seo_user_prompt,
+                response_format=variant["response_format"],
+                trace_id=trace_id,
+                sku=sku,
+                prompt_variant=variant["name"],
+            )
+            if trace_id:
+                _seo_debug(
+                    "seo_prompt_result",
+                    trace_id,
+                    sku=sku,
+                    mode="text_only",
+                    prompt_variant=variant["name"],
+                    success=any(proposed.values()),
+                    parsed=proposed,
+                )
+            if any(proposed.values()):
+                break
 
     if trace_id:
         _seo_debug(
@@ -890,13 +1214,17 @@ def _enrich_single_sku_seo(sku: str, force: bool = False, trace_id: Optional[str
         merged = _merge_fill_only_seo(current, proposed)
 
     updated_count = sum(1 for key in SEO_FIELD_KEYS if (current.get(key) or "").strip() != (merged.get(key) or "").strip())
+    changed_fields = _compute_seo_field_diff(current, merged)
     if trace_id:
         _seo_debug(
             "seo_single_merged_fields",
             trace_id,
             sku=sku,
+            current=current,
+            proposed=proposed,
             merged=merged,
             updated_count=updated_count,
+            changed_fields=changed_fields,
         )
 
     _write_ebay_seo_fields(product_json, merged)
@@ -908,7 +1236,16 @@ def _enrich_single_sku_seo(sku: str, force: bool = False, trace_id: Optional[str
         json.dump(full_data, f, ensure_ascii=False, indent=2)
     temp_path.replace(json_path)
     if trace_id:
-        _seo_debug("seo_single_saved", trace_id, sku=sku, json_path=str(json_path), updated_count=updated_count)
+        _seo_debug(
+            "seo_single_saved",
+            trace_id,
+            sku=sku,
+            json_path=str(json_path),
+            temp_path=str(temp_path),
+            updated_count=updated_count,
+            changed_fields=changed_fields,
+            saved_seo=merged,
+        )
     
     return {
         "success": True,

@@ -1,0 +1,250 @@
+{
+  "P0020068": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Staubsauger & Zubehör/Staubsauger-Ersatzteile",
+      "eBay Category ID": "42146"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Hoover",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die motorisierte Bodendüse von Hoover ist mit einer rot-schwarzen Bürstenwalze für eine intensive Reinigung ausgestattet. Sie eignet sich ideal für Hartböden und Teppiche und ist ausschließlich für trockene Anwendungen konzipiert.\nDas Modell HF18RXL arbeitet mit einer Spannung von 18,5 V und überzeugt durch zuverlässige Leistung",
+      "Keywords": "Bodendüse HF18RXL",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "60"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020068 (1).jpg"
+        },
+        {
+          "filename": "P0020068 (10).jpg"
+        },
+        {
+          "filename": "P0020068 (2).jpg"
+        },
+        {
+          "filename": "P0020068 (3).jpg"
+        },
+        {
+          "filename": "P0020068 (4).jpg"
+        },
+        {
+          "filename": "P0020068 (5).jpg"
+        },
+        {
+          "filename": "P0020068 (6).jpg"
+        },
+        {
+          "filename": "P0020068 (7).jpg"
+        },
+        {
+          "filename": "P0020068 (8).jpg"
+        },
+        {
+          "filename": "P0020068 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020068 (3).jpg"
+        },
+        {
+          "filename": "P0020068 (7).jpg"
+        },
+        {
+          "filename": "P0020068 (8).jpg"
+        },
+        {
+          "filename": "P0020068 (9).jpg"
+        },
+        {
+          "filename": "P0020068 (10).jpg"
+        },
+        {
+          "filename": "P0020068 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020068 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q38AAeSwLW1pvbZd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U58AAeSwCexpvbZg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/70gAAeSwBblpvbZj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XrUAAeSwNfRpvbZp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H0EAAeSwt0NpvbZs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IMUAAeSw-QxpvbZv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v5EAAeSw0x5pvbZx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (7).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XqwAAeSwOp1pvbZ3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (8).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TnkAAeSweLNpvbZ6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020068 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aU0AAeSwn35pvbZ9/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Hoover",
+        "Markenkompatibilität": "Für Hoover",
+        "Modellkompatibilität": "Für Hoover HF18RXL",
+        "Produktart": "Bodenbürste"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Modell": "HF18RXL",
+        "Stromquelle": "Schnurlos Elektrisch",
+        "Material": "Kunststoff",
+        "Leistung": "40 W",
+        "Set enthält": "Bodenbürste",
+        "Geeignet für": "Standstaubsauger"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Bodendüse",
+      "Product Model": "HF18RXL",
+      "Keyword 1": "motorisiert",
+      "Keyword 2": "Hartböden",
+      "Keyword 3": "Teppiche"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, jedoch ohne Originalverpackung. Es handelt sich um Neuware, die lediglich ohne Karton bzw. Verpackung angeboten wird.  Der genaue Zustand sowie weitere Details sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.652132Z",
+          "sku": "P0020068",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.031356Z",
+          "sku": "P0020068",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

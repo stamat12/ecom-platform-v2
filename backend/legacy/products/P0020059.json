@@ -1,0 +1,204 @@
+{
+  "P0020059": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Lichtschläuche & -ketten",
+      "eBay Category ID": "116022"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "HOVVIDA",
+      "Color": "Mehrfarbig",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die LED-Streifenleuchte bietet 16 Millionen Farben und kann über eine App oder Fernbedienung gesteuert werden. Sie verfügt über einen Musik-Synchronisationsmodus und einen Timer. Ideal zur Dekoration von Wohnräumen oder für Partys. Sichtbare Angaben: Farbe: Mehrfarbig.",
+      "Keywords": "LED Strip Licht",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "15.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020059 (3).jpg"
+        },
+        {
+          "filename": "P0020059 (10).jpg"
+        },
+        {
+          "filename": "P0020059 (11).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020059 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nyIAAeSwVaZpue9L/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/11EAAeSwMcVpue9N/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eY0AAeSwW3Rpue9Q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (10).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/x-QAAeSwezhpue9T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fRgAAeSwJPJpue9V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8n8AAeSwO5Zpue9b/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8M8AAeSw705pue9e/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ae4AAeSwPgVpue9g/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (5).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LGAAAeSwEGZpue9k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (11).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jq4AAeSwu8Rpue9n/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020059 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QTgAAeSw9s1pue9q/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Band/Streifen"
+      },
+      "optional": {
+        "Beleuchtungstechnik": "LED",
+        "Stromquelle": "Netzstrom",
+        "Marke": "HOVVIDA",
+        "Anzahl der Lichter": "1",
+        "Farbe": "Mehrfarbig",
+        "Material": "Kunststoff",
+        "Installationsbereich": "Innen",
+        "Steuerungsart": "App-Steuerung",
+        "Energieeffizienzklasse": "A",
+        "Größe": "5 m",
+        "Ausgangsspannung": "24 V",
+        "Lichtstrom": "1000 lm",
+        "Lebensdauer der Glühbirne": "20.000-24.999 Stunden",
+        "Besonderheiten": "Musik-Synchronisationsmodus, Timer",
+        "Kabelfarbe": "Weiß",
+        "Anzahl der Einstellungen": "6",
+        "EEK Spektrum": "A - G",
+        "Farbtemperatur": "2500 - 3000 K Warm",
+        "Energieverbrauch": "24 W",
+        "Zimmer": "Geeignet für alle Zimmer"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "LED Streifen",
+      "Product Model": "TP01",
+      "Keyword 1": "Musik-Synchronisation",
+      "Keyword 2": "App-Steuerung",
+      "Keyword 3": "Timer"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.471913Z",
+          "sku": "P0020059",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

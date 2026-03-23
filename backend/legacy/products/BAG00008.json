@@ -1,0 +1,168 @@
+{
+  "BAG00008": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "",
+      "Invoice": "",
+      "Invoice Date": ""
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "0.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "0.0"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit ENeu (handgefertigt aus recyceltem Denim)tiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Restyled Store",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat zwei Tragegriffe und ist aus einem gemischten Denim-Stoff gefertigt. Sie ist in zwei Blautönen gehalten und hat eine dekorative Schnur mit Holzperlen. Der Innenraum ist mit einem bunten Stoff gefüttert, der ein verspieltes Muster zeigt.",
+      "Keywords": "Tasche Denim",
+      "Materials": "Denim, Baumwolle"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_8711.JPG"
+        },
+        {
+          "filename": "IMG_8712.JPG"
+        },
+        {
+          "filename": "IMG_8713.JPG"
+        },
+        {
+          "filename": "IMG_8714.JPG"
+        },
+        {
+          "filename": "IMG_8748.JPG"
+        },
+        {
+          "filename": "IMG_8749.JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_8712.JPG"
+        },
+        {
+          "filename": "IMG_8713.JPG"
+        },
+        {
+          "filename": "IMG_8714.JPG"
+        },
+        {
+          "filename": "IMG_8748.JPG"
+        },
+        {
+          "filename": "IMG_8749.JPG"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Restyled Store",
+        "Außenmaterial": "Baumwolle",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Blau"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Baumwolle",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Bunt",
+        "Henkel-/Riemenfarbe": "Blau",
+        "Verschluss": "Bindeverschluss",
+        "Taschenbreite": "30 cm",
+        "Taschenhöhe": "40 cm",
+        "Taschentiefe": "10 cm",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Ja",
+        "Gewebeart": "Denim"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tasche",
+      "Product Model": "Restyled Store",
+      "Keyword 1": "Denim",
+      "Keyword 2": "Unisex",
+      "Keyword 3": "Holzperlen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, wird jedoch als „Neu (Sonstige)“ eingestuft, da er handgefertigt aus recyceltem Denim hergestellt wurde. Aufgrund der Wiederverwendung des Materials können leichte Unterschiede in Farbe, Struktur oder kleine Unregelmäßigkeiten auftreten, die Teil des Designs sind und jedes Stück einzigartig machen",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-01T23:26"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-19T22:27:05.157094Z",
+          "sku": "BAG00008",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

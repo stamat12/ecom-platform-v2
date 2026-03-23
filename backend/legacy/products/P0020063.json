@@ -1,0 +1,254 @@
+{
+  "P0020063": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Spielzeug/Stofftiere/Film & Fernsehen",
+      "eBay Category ID": "20006"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "U",
+      "Brand": "",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein weiches Plüschtier in blauer Farbe mit rosa Ohren. Es hat einen freundlichen Gesichtsausdruck und ist aus Polyester gefertigt. Die Rückseite zeigt eine Öffnung, die möglicherweise für eine Funktion oder einen Mechanismus gedacht ist.",
+      "Keywords": "Plüschtier Stitch leuchtender Bauch",
+      "Materials": "100% Polyester"
+    },
+    "OP": {
+      "OP": "15.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020063 (1).jpg"
+        },
+        {
+          "filename": "P0020063 (10).jpg"
+        },
+        {
+          "filename": "P0020063 (11).jpg"
+        },
+        {
+          "filename": "P0020063 (12).jpg"
+        },
+        {
+          "filename": "P0020063 (2).jpg"
+        },
+        {
+          "filename": "P0020063 (3).jpg"
+        },
+        {
+          "filename": "P0020063 (4).jpg"
+        },
+        {
+          "filename": "P0020063 (5).jpg"
+        },
+        {
+          "filename": "P0020063 (6).jpg"
+        },
+        {
+          "filename": "P0020063 (7).jpg"
+        },
+        {
+          "filename": "P0020063 (8).jpg"
+        },
+        {
+          "filename": "P0020063 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020063 (2).jpg"
+        },
+        {
+          "filename": "P0020063 (10).jpg"
+        },
+        {
+          "filename": "P0020063 (9).jpg"
+        },
+        {
+          "filename": "P0020063 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020063 (7).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/c4kAAeSwkshpue6x/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BEkAAeSwFxxpue60/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/b2sAAeSwdW5pue62/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M8wAAeSwdDdpue66/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RbUAAeSwO1hpue69/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PqoAAeSw20xpue7A/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/w6kAAeSw2jNpue7E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020063 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BrgAAeSwSEFpue7G/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Produktart": "Stoff- & Plüschtier",
+        "Farbe": "Blau",
+        "Ursprungsland": "China",
+        "Tierart": "Hund",
+        "Größe": "Klein (15-35 cm)"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Plüschtier",
+      "Product Model": "Stitch",
+      "Keyword 1": "Kuscheltier",
+      "Keyword 2": "Leuchtender Bauch",
+      "Keyword 3": "Geschenkidee"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, jedoch ohne Originalverpackung. Es handelt sich um Neuware, die lediglich ohne Karton bzw. Verpackung angeboten wird.  Der genaue Zustand sowie weitere Details sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:29:00.287357Z",
+          "sku": "P0020063",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-18T00:28:33.216854Z",
+          "sku": "P0020063",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-18T00:15:40.371460Z",
+          "sku": "P0020063",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

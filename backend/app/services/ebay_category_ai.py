@@ -12,7 +12,12 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from uuid import uuid4
 
-from app.config.ebay_config import EBAY_ENRICHMENT_MODEL
+from app.config.ebay_config import (
+	EBAY_CATEGORY_LEVEL_MAX_TOKENS,
+	EBAY_CATEGORY_MODEL,
+	EBAY_CATEGORY_RERANK_MAX_TOKENS,
+	EBAY_CATEGORY_TEMP,
+)
 from app.repositories.sku_json_repo import read_sku_json, write_sku_json
 from app.services.ebay_enrichment import get_openai_client
 from app.services.excel_inventory import _get_db_path
@@ -30,6 +35,12 @@ _GENERIC_TOKENS = {
 	"weitere",
 	"artikel",
 	"sets",
+}
+_EXCLUDED_ROOT_CATEGORIES = {
+	"business & industrie",
+	"business and industrie",
+	"business und industrie",
+	"business industrie",
 }
 _STOPWORDS = {
 	"fur",
@@ -152,6 +163,13 @@ def _normalize_text(value: Any) -> str:
 	return text
 
 
+def _is_excluded_root_category(parts: List[str]) -> bool:
+	if not parts:
+		return False
+	root_normalized = _normalize_text(parts[0])
+	return root_normalized in _EXCLUDED_ROOT_CATEGORIES
+
+
 def _tokenize(value: Any) -> List[str]:
 	text = _normalize_text(value)
 	if not text:
@@ -224,6 +242,8 @@ def _load_category_entries() -> List[Dict[str, Any]]:
 			parts = _path_parts(category_path)
 			if not parts:
 				continue
+			if _is_excluded_root_category(parts):
+				continue
 
 			dedupe_key = (category_path.lower(), category_id)
 			if dedupe_key in seen:
@@ -244,18 +264,34 @@ def _load_category_entries() -> List[Dict[str, Any]]:
 		conn.close()
 
 
-def _collect_main_image_paths(sku: str, product_json: Dict[str, Any], max_images: int = 2) -> List[Path]:
+def _collect_main_image_paths(sku: str, product_json: Dict[str, Any], max_images: int = 12) -> List[Path]:
 	images_section = product_json.get("Images", {}) or {}
 	main_images = images_section.get("main_images", []) or []
-	main_filenames: List[str] = []
-	for item in main_images:
-		if isinstance(item, dict) and item.get("filename"):
-			main_filenames.append(str(item["filename"]))
-		elif isinstance(item, str):
-			main_filenames.append(item)
 
-	if not main_filenames:
+	def _extract_filenames(items: List[Any]) -> List[str]:
+		out: List[str] = []
+		for item in items:
+			if isinstance(item, dict) and item.get("filename"):
+				out.append(str(item["filename"]))
+			elif isinstance(item, str):
+				out.append(item)
+		return out
+
+	# Use ONLY main images for category detection.
+	ordered_filenames = _extract_filenames(main_images)
+
+	if not ordered_filenames:
 		return []
+
+	# Dedupe while preserving order.
+	seen_names = set()
+	selected_filenames: List[str] = []
+	for fn in ordered_filenames:
+		norm = Path(str(fn)).name.lower()
+		if not norm or norm in seen_names:
+			continue
+		seen_names.add(norm)
+		selected_filenames.append(fn)
 
 	all_images_info = list_images_for_sku(sku)
 	by_name = {
@@ -265,7 +301,7 @@ def _collect_main_image_paths(sku: str, product_json: Dict[str, Any], max_images
 	}
 
 	paths: List[Path] = []
-	for fn in main_filenames:
+	for fn in selected_filenames:
 		info = by_name.get(Path(fn).name.lower())
 		if not info:
 			continue
@@ -281,6 +317,16 @@ def _collect_main_image_paths(sku: str, product_json: Dict[str, Any], max_images
 	return paths
 
 
+def _clean_context_value(value: Any) -> str:
+	text = str(value or "").strip()
+	if not text:
+		return ""
+	lowered = text.lower()
+	if lowered in {"none", "null", "n/a", "na", "-"}:
+		return ""
+	return text
+
+
 def _image_to_data_uri(image_path: Path) -> str:
 	b64 = base64.b64encode(image_path.read_bytes()).decode("utf-8")
 	return f"data:image/*;base64,{b64}"
@@ -293,42 +339,63 @@ def _build_product_context(sku: str, product_json: Dict[str, Any]) -> Dict[str, 
 	condition_data = product_json.get("Product Condition", {}) if isinstance(product_json.get("Product Condition"), dict) else {}
 	ebay_seo = product_json.get("eBay SEO", {}) if isinstance(product_json.get("eBay SEO"), dict) else {}
 
-	return {
+	context = {
 		"sku": sku,
-		"supplier_title": supplier_data.get("Supplier Title", ""),
-		"brand": intern_info.get("Brand", ""),
-		"gender": intern_info.get("Gender", ""),
-		"color": intern_info.get("Color", ""),
-		"size": intern_info.get("Size", ""),
-		"keywords": intern_generated.get("Keywords", ""),
-		"more_details": intern_generated.get("More details", ""),
-		"materials": intern_generated.get("Materials", ""),
-		"condition": condition_data.get("Condition", ""),
-		"seo_product_type": ebay_seo.get("Product Type", ""),
-		"seo_model": ebay_seo.get("Product Model", ""),
-		"seo_keyword_1": ebay_seo.get("Keyword 1", ""),
-		"seo_keyword_2": ebay_seo.get("Keyword 2", ""),
-		"seo_keyword_3": ebay_seo.get("Keyword 3", ""),
+		# Use supplier title only when it really has content.
+		"supplier_title": _clean_context_value(supplier_data.get("Supplier Title", "")),
+		"brand": _clean_context_value(intern_info.get("Brand", "")),
+		"gender": _clean_context_value(intern_info.get("Gender", "")),
+		"color": _clean_context_value(intern_info.get("Color", "")),
+		"size": _clean_context_value(intern_info.get("Size", "")),
+		"keywords": _clean_context_value(intern_generated.get("Keywords", "")),
+		"more_details": _clean_context_value(intern_generated.get("More details", "")),
+		"materials": _clean_context_value(intern_generated.get("Materials", "")),
+		"condition": _clean_context_value(condition_data.get("Condition", "")),
+		"seo_product_type": _clean_context_value(ebay_seo.get("Product Type", "")),
+		"seo_model": _clean_context_value(ebay_seo.get("Product Model", "")),
+		"seo_keyword_1": _clean_context_value(ebay_seo.get("Keyword 1", "")),
+		"seo_keyword_2": _clean_context_value(ebay_seo.get("Keyword 2", "")),
+		"seo_keyword_3": _clean_context_value(ebay_seo.get("Keyword 3", "")),
 	}
+	return context
 
 
-def _build_weighted_context_tokens(context: Dict[str, Any]) -> Dict[str, float]:
-	field_weights = {
-		"supplier_title": 3.0,
-		"seo_product_type": 3.0,
-		"keywords": 2.5,
-		"seo_keyword_1": 2.2,
-		"seo_keyword_2": 2.0,
-		"seo_keyword_3": 1.8,
-		"more_details": 1.3,
-		"brand": 1.5,
-		"seo_model": 1.5,
-		"materials": 1.0,
-		"color": 0.8,
-		"size": 0.6,
-		"gender": 0.6,
-		"condition": 0.4,
-	}
+def _build_weighted_context_tokens(context: Dict[str, Any], prioritize_keywords_details: bool = False) -> Dict[str, float]:
+	# When image input is disabled, rely more on semantic text fields and less on sparse metadata.
+	if prioritize_keywords_details:
+		field_weights = {
+			"keywords": 4.2,
+			"more_details": 3.2,
+			"seo_product_type": 2.5,
+			"seo_keyword_1": 2.4,
+			"seo_keyword_2": 2.2,
+			"seo_keyword_3": 2.0,
+			"supplier_title": 1.2,
+			"brand": 0.8,
+			"seo_model": 0.8,
+			"materials": 0.6,
+			"color": 0.3,
+			"size": 0.2,
+			"gender": 0.2,
+			"condition": 0.2,
+		}
+	else:
+		field_weights = {
+			"supplier_title": 3.0,
+			"seo_product_type": 3.0,
+			"keywords": 2.5,
+			"seo_keyword_1": 2.2,
+			"seo_keyword_2": 2.0,
+			"seo_keyword_3": 1.8,
+			"more_details": 1.3,
+			"brand": 1.5,
+			"seo_model": 1.5,
+			"materials": 1.0,
+			"color": 0.8,
+			"size": 0.6,
+			"gender": 0.6,
+			"condition": 0.4,
+		}
 	token_scores: Dict[str, float] = {}
 
 	for field, weight in field_weights.items():
@@ -345,14 +412,42 @@ def _root_domain_adjustment(parts: List[str], context_text: str) -> float:
 
 	industrial_signals = ["industrie", "gewerbe", "gastro", "werkstatt", "ersatzteil", "maschinen"]
 	collectible_signals = ["sammler", "collectible", "vintage", "antik", "memorabilia", "raritat"]
+	household_signals = [
+		"kuche",
+		"kuchen",
+		"kuchenwaage",
+		"waage",
+		"haushalt",
+		"wohn",
+		"reinigen",
+		"reinigung",
+		"staubsauger",
+		"duse",
+		"duese",
+		"zutat",
+	]
 
 	has_industrial_signal = any(token in context_text for token in industrial_signals)
 	has_collectible_signal = any(token in context_text for token in collectible_signals)
+	has_household_signal = any(token in context_text for token in household_signals)
 
 	if "business" in root or "industrie" in root:
 		return 0.0 if has_industrial_signal else -2.2
 	if "sammeln" in root or "selten" in root:
 		return 0.0 if has_collectible_signal else -2.4
+
+	# Avoid absurd office/computer branches for clearly household/kitchen products.
+	if has_household_signal:
+		if "buro" in root or "schreibwaren" in root:
+			return -3.0
+		if "computer" in root or "netzwerk" in root:
+			return -2.4
+		if "mobel" in root or "wohnen" in root:
+			return 2.2
+		if "heimwerker" in root:
+			return 1.4
+		if "haushalt" in root or "kuche" in root:
+			return 2.4
 	return 0.0
 
 
@@ -448,10 +543,10 @@ def _ai_rerank_category_paths(
 				logger.warning(f"Failed to attach image for category AI rerank ({img_path}): {e}")
 
 		response = client.chat.completions.create(
-			model=EBAY_ENRICHMENT_MODEL,
+			model=EBAY_CATEGORY_MODEL,
 			response_format={"type": "json_object"},
-			temperature=0,
-			max_tokens=220,
+			temperature=EBAY_CATEGORY_TEMP,
+			max_tokens=EBAY_CATEGORY_RERANK_MAX_TOKENS,
 			messages=[
 				{"role": "system", "content": "Du bist ein präziser eBay-Kategorisierer."},
 				{"role": "user", "content": content},
@@ -481,7 +576,10 @@ def _ai_rerank_category_paths(
 
 
 def _rank_category_candidates(entries: List[Dict[str, Any]], context: Dict[str, Any]) -> List[Tuple[float, Dict[str, Any]]]:
-	token_scores = _build_weighted_context_tokens(context)
+	token_scores = _build_weighted_context_tokens(
+		context,
+		prioritize_keywords_details=not bool(image_paths),
+	)
 	idf_map = _build_category_token_idf(entries)
 	context_text = _normalize_text(" ".join(str(v or "") for v in context.values()))
 	ranked: List[Tuple[float, Dict[str, Any]]] = []
@@ -489,6 +587,140 @@ def _rank_category_candidates(entries: List[Dict[str, Any]], context: Dict[str, 
 		ranked.append((_score_category_entry(entry, token_scores, idf_map, context_text), entry))
 	ranked.sort(key=lambda x: (-x[0], x[1]["category_path"]))
 	return ranked
+
+
+def _score_entries(
+	entries: List[Dict[str, Any]],
+	token_scores: Dict[str, float],
+	idf_map: Dict[str, float],
+	context_text: str,
+) -> List[Tuple[float, Dict[str, Any]]]:
+	ranked: List[Tuple[float, Dict[str, Any]]] = []
+	for entry in entries:
+		ranked.append((_score_category_entry(entry, token_scores, idf_map, context_text), entry))
+	ranked.sort(key=lambda x: (-x[0], x[1]["category_path"]))
+	return ranked
+
+
+def _next_level_option_map(
+	entries: List[Dict[str, Any]],
+	prefix_parts: List[str],
+) -> Dict[str, List[Dict[str, Any]]]:
+	depth = len(prefix_parts)
+	option_map: Dict[str, List[Dict[str, Any]]] = {}
+	for entry in entries:
+		parts = entry.get("parts") or []
+		if len(parts) <= depth:
+			continue
+		if parts[:depth] != prefix_parts:
+			continue
+		option = parts[depth]
+		option_map.setdefault(option, []).append(entry)
+	return option_map
+
+
+def _score_level_options(
+	option_map: Dict[str, List[Dict[str, Any]]],
+	token_scores: Dict[str, float],
+	idf_map: Dict[str, float],
+	context_text: str,
+) -> List[Tuple[float, str]]:
+	ranked: List[Tuple[float, str]] = []
+	for option, option_entries in option_map.items():
+		# Use the best matching descendant under this option.
+		best_score = 0.0
+		for entry in option_entries:
+			score = _score_category_entry(entry, token_scores, idf_map, context_text)
+			if score > best_score:
+				best_score = score
+		ranked.append((best_score, option))
+	ranked.sort(key=lambda x: (-x[0], x[1]))
+	return ranked
+
+
+def _ai_choose_category_level(
+	options: List[str],
+	path_so_far: List[str],
+	context: Dict[str, Any],
+	image_paths: List[Path],
+	trace_id: str,
+	sku: str,
+	level_index: int,
+) -> Optional[str]:
+	if not options:
+		return None
+	if len(options) == 1:
+		return options[0]
+
+	try:
+		_category_log(
+			"category_ai_level_request",
+			trace_id,
+			sku=sku,
+			level=level_index,
+			path_so_far=path_so_far,
+			options_count=len(options),
+			options_preview=options[:20],
+			use_images=bool(image_paths),
+			image_count=len(image_paths),
+		)
+
+		client = get_openai_client()
+		content: List[Dict[str, Any]] = [
+			{
+				"type": "text",
+				"text": (
+					"Du wählst GENAU EINE passende eBay-Unterkategorie auf der aktuellen Ebene. "
+					"Regel: bewerte primär die PRODUKTART/FUNKTION (was ist das Produkt), nicht den Nutzungsort. "
+					"Beispiel: Küchen-/Haushaltsartikel nicht in Büro/Schreibwaren einordnen. "
+					"Wähle nur aus den gegebenen Optionen. "
+					"Antworte NUR als JSON: "
+					'{"choice":"<exakter Optionsname>","reason":"kurz"}.\n\n'
+					f"Aktueller Pfad: /{'/'.join(path_so_far) if path_so_far else ''}\n"
+					f"Optionen auf dieser Ebene: {json.dumps(options, ensure_ascii=False)}\n"
+					f"Produktkontext: {json.dumps(context, ensure_ascii=False)}"
+				),
+			}
+		]
+
+		for img_path in image_paths:
+			try:
+				content.append({"type": "image_url", "image_url": {"url": _image_to_data_uri(img_path)}})
+			except Exception as e:
+				logger.warning(f"Failed to attach image for category level choice ({img_path}): {e}")
+
+		response = client.chat.completions.create(
+			model=EBAY_CATEGORY_MODEL,
+			response_format={"type": "json_object"},
+			temperature=EBAY_CATEGORY_TEMP,
+			max_tokens=EBAY_CATEGORY_LEVEL_MAX_TOKENS,
+			messages=[
+				{"role": "system", "content": "Du bist ein präziser eBay-Kategorisierer."},
+				{"role": "user", "content": content},
+			],
+		)
+
+		raw = response.choices[0].message.content
+		if not raw:
+			_category_log("category_ai_level_empty_response", trace_id, sku=sku, level=level_index)
+			return None
+
+		parsed = json.loads(raw)
+		choice = _normalize_ai_choice(str(parsed.get("choice") or ""), options)
+		_category_log(
+			"category_ai_level_response",
+			trace_id,
+			sku=sku,
+			level=level_index,
+			raw_choice=str(parsed.get("choice") or ""),
+			normalized_choice=choice or "",
+			reason=str(parsed.get("reason") or ""),
+		)
+		return choice
+	except Exception as e:
+		logger.warning(f"Category AI level choice failed: {e}")
+		_category_log("category_ai_level_error", trace_id, sku=sku, level=level_index, error=str(e))
+		return None
 
 
 def _save_selected_category(sku: str, product_json: Dict[str, Any], chosen: Dict[str, Any]) -> None:
@@ -517,7 +749,7 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 		return {"success": False, "sku": sku, "message": "No eBay categories found in database"}
 
 	context = _build_product_context(sku, product_json)
-	image_paths = _collect_main_image_paths(sku, product_json, max_images=2) if use_images else []
+	image_paths = _collect_main_image_paths(sku, product_json, max_images=12) if use_images else []
 	_category_log(
 		"category_detect_context_loaded",
 		trace_id,
@@ -532,7 +764,75 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 		},
 	)
 
-	ranked = _rank_category_candidates(entries, context)
+	token_scores = _build_weighted_context_tokens(context)
+	idf_map = _build_category_token_idf(entries)
+	context_text = _normalize_text(" ".join(str(v or "") for v in context.values()))
+
+	prefix_parts: List[str] = []
+	active_entries = entries
+	level_decisions: List[Dict[str, Any]] = []
+
+	for level_index in range(10):
+		option_map = _next_level_option_map(active_entries, prefix_parts)
+		if not option_map:
+			break
+
+		if len(option_map) == 1:
+			chosen_level = next(iter(option_map.keys()))
+			decision_source = "single_option"
+			ranked_options = [(0.0, chosen_level)]
+		else:
+			ranked_options = _score_level_options(option_map, token_scores, idf_map, context_text)
+			top_option_score = ranked_options[0][0]
+			second_option_score = ranked_options[1][0] if len(ranked_options) > 1 else 0.0
+			option_margin = top_option_score - second_option_score
+
+			# Prefer AI-guided branching early to avoid hard-locking into a wrong tree.
+			# When images are disabled, this is especially important because only text semantics
+			# (keywords/details) should drive the high-level branch.
+			prefer_ai_level = level_index < (3 if image_paths else 2)
+
+			if (not prefer_ai_level) and top_option_score >= 2.8 and option_margin >= 0.9:
+				chosen_level = ranked_options[0][1]
+				decision_source = "deterministic"
+			else:
+				option_limit = 12 if image_paths else 24
+				level_options = [opt for _, opt in ranked_options[:option_limit]]
+				ai_choice = _ai_choose_category_level(
+					level_options,
+					prefix_parts,
+					context,
+					image_paths,
+					trace_id,
+					sku,
+					level_index,
+				)
+				if ai_choice and ai_choice in option_map:
+					chosen_level = ai_choice
+					decision_source = "ai_level"
+				else:
+					chosen_level = ranked_options[0][1]
+					decision_source = "fallback_top_option"
+
+		prefix_parts.append(chosen_level)
+		active_entries = option_map.get(chosen_level, active_entries)
+
+		level_decisions.append(
+			{
+				"level": level_index + 1,
+				"chosen": chosen_level,
+				"source": decision_source,
+				"options_count": len(option_map),
+				"options_preview": [opt for _, opt in ranked_options[:8]],
+			}
+		)
+
+		# Stop if we hit a unique exact leaf.
+		if len(active_entries) == 1 and len(active_entries[0].get("parts") or []) == len(prefix_parts):
+			break
+
+	final_entries = active_entries if active_entries else entries
+	ranked = _score_entries(final_entries, token_scores, idf_map, context_text)
 	if not ranked:
 		_category_log("category_detect_no_ranked_candidates", trace_id, sku=sku)
 		return {"success": False, "sku": sku, "message": "Could not rank categories"}
@@ -553,6 +853,8 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 		confidence_margin=round(confidence_margin, 4),
 		shortlist_count=len(shortlist),
 		top_paths=[s[1]["category_path"] for s in shortlist[:8]],
+		prefix_path="/" + "/".join(prefix_parts) if prefix_parts else "",
+		level_decisions=level_decisions,
 	)
 
 	chosen_entry: Optional[Dict[str, Any]] = None

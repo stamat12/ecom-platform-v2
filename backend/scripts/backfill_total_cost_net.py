@@ -39,6 +39,14 @@ def _iter_product_entries(payload: Any):
             yield sku, product_data
 
 
+def _is_missing_total_cost(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str) and not value.strip():
+        return True
+    return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="Report changes without writing files")
@@ -70,7 +78,7 @@ def main() -> int:
             if not isinstance(price_data, dict):
                 continue
 
-            if price_data.get("Total Cost Net") is not None:
+            if not _is_missing_total_cost(price_data.get("Total Cost Net")):
                 continue
 
             price_net = _coerce_float(price_data.get("Price Net"))

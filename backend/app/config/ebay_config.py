@@ -91,6 +91,13 @@ EBAY_ENRICHMENT_MODEL = "gpt-4o-mini"
 EBAY_ENRICHMENT_TEMP = 0.1
 EBAY_ENRICHMENT_MAX_TOKENS = 800
 
+# Category Detection AI Settings
+# Dedicated settings for hierarchical category selection/reranking.
+EBAY_CATEGORY_MODEL = os.getenv("EBAY_CATEGORY_MODEL", "gpt-4o-mini")
+EBAY_CATEGORY_TEMP = float(os.getenv("EBAY_CATEGORY_TEMP", "0"))
+EBAY_CATEGORY_LEVEL_MAX_TOKENS = int(os.getenv("EBAY_CATEGORY_LEVEL_MAX_TOKENS", "180"))
+EBAY_CATEGORY_RERANK_MAX_TOKENS = int(os.getenv("EBAY_CATEGORY_RERANK_MAX_TOKENS", "220"))
+
 # Manufacturer Lookup Settings
 MANUFACTURER_CACHE_DURATION_DAYS = 90
 MANUFACTURER_LOOKUP_MODEL = "gpt-4o"
@@ -198,6 +205,7 @@ def _prompt_value(key: str, default: str) -> str:
 
 EBAY_FIELD_ENRICHMENT_PROMPT = _prompt_value("ebay_field_enrichment_prompt", _DEFAULT_EBAY_FIELD_ENRICHMENT_PROMPT)
 EBAY_SEO_ENRICHMENT_PROMPT = _prompt_value("ebay_seo_enrichment_prompt", _DEFAULT_EBAY_SEO_ENRICHMENT_PROMPT)
+EBAY_SEO_ENRICHMENT_PROMPT_V2 = _prompt_value("ebay_seo_enrichment_prompt_v2", "")
 MANUFACTURER_LOOKUP_PROMPT = _prompt_value("manufacturer_lookup_prompt", _DEFAULT_MANUFACTURER_LOOKUP_PROMPT)
 CONDITION_NOTE_PROMPT = _prompt_value("condition_note_prompt", _DEFAULT_CONDITION_NOTE_PROMPT)
 

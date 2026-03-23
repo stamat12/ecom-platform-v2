@@ -52,7 +52,7 @@
         "has_stock": true,
         "has_phone": true,
         "has_enhanced": false,
-        "count_stock": 7,
+        "count_stock": 12,
         "count_phone": 11,
         "count_enhanced": 0,
         "has_main_images": true,
@@ -79,6 +79,21 @@
         },
         {
           "filename": "B0BPM98X2X-6-1773757902038.jpg"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l (1).jpg"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l (2).jpg"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l (3).jpg"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l (4).jpg"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l.jpg"
         }
       ],
       "phone": [
@@ -141,6 +156,176 @@
         },
         {
           "filename": "P0020054 (11).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/v30AAeSwgBlpudQy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "xiaomi-joyami-xiaomi-joyami-rice-cooker-s1-08l (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/eJYAAeSw0uxpudQ0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7xcAAeSw8TRpudQ3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1HwAAeSwykppudQ5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0cwAAeSw6MhpudQ8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kIQAAeSwtZdpudQ~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XRcAAeSwz6BpudRB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (10).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2YMAAeSwLkJpudRD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8NYAAeSwCxZpudRF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (2).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XysAAeSwpO5pudRI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (7).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6xUAAeSwtqRpudRK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020054 (3).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8YIAAeSw0gNpudRM/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "joyami S1"
+      },
+      "optional": {
+        "Kapazität": "0,8 L",
+        "Farbe": "Weiß",
+        "Material": "Kunststoff",
+        "Spannung": "220 V",
+        "Gewicht": "1.9 kg",
+        "Marke": "joyami",
+        "Anzahl der Einstellungen/Programme": "10",
+        "Bestandteile inbegriffen": "Innentopf, Löffel, Messbecher",
+        "Kochmethode": "Dünsten",
+        "Leistung": "400 W",
+        "Herstellergarantie": "2 Jahre",
+        "Herstellernummer": "JFB01M",
+        "Ursprungsland": "China",
+        "Maximale Timerzeit": "60 Min",
+        "Kabellänge": "160 cm",
+        "Maßeinheit": "L"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Reiskocher",
+      "Product Model": "Smart S1",
+      "Keyword 1": "Multi-Kochfunktion",
+      "Keyword 2": "App-Steuerung",
+      "Keyword 3": "Antihaftbeschichtung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "43",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T22:22:37.801717Z",
+          "sku": "P0020054",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:55:35.952013Z",
+          "sku": "P0020054",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.248225Z",
+          "sku": "P0020054",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

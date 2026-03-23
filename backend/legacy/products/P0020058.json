@@ -1,0 +1,202 @@
+{
+  "P0020058": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Modellbau/RC-Modellbau/RC Modelle & Bausätze/Autos & Motorräder",
+      "eBay Category ID": "182183"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Jiabaili",
+      "Color": "Mehrfarbig",
+      "Size": "1:43"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein ferngesteuertes Drift-Auto im Maßstab 1:43. Es verfügt über einen 4WD-Antrieb und kann Geschwindigkeiten von über 15 km/h erreichen. Das Auto ist für Kinder ab 14 Jahren geeignet und bietet ein aufregendes Fahrerlebnis. Sichtbare Angaben: Farbe: Mehrfarbig.",
+      "Keywords": "RC Drift Car",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "40.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020058 (3).jpg"
+        },
+        {
+          "filename": "P0020058 (7).jpg"
+        },
+        {
+          "filename": "P0020058 (8).jpg"
+        },
+        {
+          "filename": "P0020058 (4).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020058 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ziwAAeSwojBpue9y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VWgAAeSwDBBpue90/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~LYAAeSwUappue93/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OdkAAeSwIQ9pue99/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LjAAAeSwprxpue-B/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (16).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uIsAAeSw6YBpue-F/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yDsAAeSwkONpue-J/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (12).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VQEAAeSwBDppue-M/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (14).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kOoAAeSwW15pue-P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (15).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ehIAAeSwjchpue-S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yVAAAeSwciBpue-V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020058 (17).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PoIAAeSwNctpue-X/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Jiabaili"
+      },
+      "optional": {
+        "Produktart": "Drift Car",
+        "Maßstab": "1:43",
+        "Kraftstoff": "Elektro",
+        "Farbe": "Mehrfarbig",
+        "Antrieb": "Allradantrieb",
+        "Material": "Plastik",
+        "Modell": "4306",
+        "Montagezustand": "Ready to Go/RTR/RTF (Alles enthalten)",
+        "Vintage": "Nein",
+        "Modellbauklasse": "Hobby-Level"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "RC Drift Auto",
+      "Product Model": "1:43",
+      "Keyword 1": "4WD",
+      "Keyword 2": "Geschwindigkeitsüber 15 km/h",
+      "Keyword 3": "Kinder ab 14 Jahren"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.491955Z",
+          "sku": "P0020058",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

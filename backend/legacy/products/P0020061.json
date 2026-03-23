@@ -1,0 +1,50 @@
+{
+  "P0020061": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/Haushaltsbatterien & Strom/Einweg-Batterien",
+      "eBay Category ID": "50602"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Amazon Basics",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Verpackung enthält 40 AA-Batterien. Diese Batterien sind alkalisch und für industrielle Anwendungen geeignet. Sie sind langlebig und bieten eine zuverlässige Energiequelle für verschiedene Geräte.",
+      "Keywords": "AA Batterien 40 Pack",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "10.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    }
+  }
+}

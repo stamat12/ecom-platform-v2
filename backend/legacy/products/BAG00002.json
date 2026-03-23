@@ -1,0 +1,220 @@
+{
+  "BAG00002": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "",
+      "Invoice": "",
+      "Invoice Date": ""
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "0.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "0.0"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (handgefertigt aus recyceltem Denim)"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Restyled Store",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat ein einzigartiges Design mit einer Kombination aus Jeansstoff und buntem Stickmuster. Sie verfügt über zwei stabile Henkel und eine praktische Außentasche. Die Innenseite ist mit einem blauen Stoff gefüttert. Sichtbare Angaben: Größe: None.",
+      "Keywords": "Jeanstasche Damen",
+      "Materials": "Jeansstoff, Baumwolle"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": true,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_8684.JPG"
+        },
+        {
+          "filename": "IMG_8685.JPG"
+        },
+        {
+          "filename": "IMG_8686.JPG"
+        },
+        {
+          "filename": "IMG_8687.JPG"
+        },
+        {
+          "filename": "IMG_8741.JPG"
+        },
+        {
+          "filename": "IMG_8742 1.JPG"
+        }
+      ],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_IMG_8684_1_lanczos_4x.png",
+          "source": "IMG_8684.JPG",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_IMG_8685_1_lanczos_4x.png",
+          "source": "IMG_8685.JPG",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
+      "main_images": [
+        {
+          "filename": "IMG_8684.JPG"
+        },
+        {
+          "filename": "IMG_8685.JPG"
+        },
+        {
+          "filename": "IMG_8686.JPG"
+        },
+        {
+          "filename": "IMG_8741.JPG"
+        },
+        {
+          "filename": "IMG_8742 1.JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_IMG_8684_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/CyYAAeSwbL1pvHhF/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_IMG_8685_1_lanczos_4x.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMTY4/z/HqAAAeSwE51pvHhM/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8684.JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/GU8AAeSwRr1pvHhR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8685.JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/GvsAAeSwt4xpvHhW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8686.JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/3UoAAeSw3RlpvHhZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8741.JPG",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/zjgAAeSwdippvHhb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8742 1.JPG",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/K7wAAeSwrPJpvHhd/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Restyled Store",
+        "Außenmaterial": "Baumwolle",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Blau"
+      },
+      "optional": {
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Blau",
+        "Griff-/Gurtmaterial": "Baumwolle",
+        "Henkel-/Riemenfarbe": "Blau",
+        "Verschluss": "Druckknopf",
+        "Taschenbreite": "30 cm",
+        "Taschenhöhe": "25 cm",
+        "Taschentiefe": "10 cm",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Ja",
+        "Gewebeart": "Denim"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Damentasche",
+      "Product Model": "Jeanstasche",
+      "Keyword 1": "Jeansstoff",
+      "Keyword 2": "Stickmuster",
+      "Keyword 3": "Außentasche"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, wird jedoch als „Neu (Sonstige)“ eingestuft, da er handgefertigt aus recyceltem Denim hergestellt wurde. Aufgrund der Wiederverwendung des Materials können leichte Unterschiede in Farbe, Struktur oder kleine Unregelmäßigkeiten auftreten, die Teil des Designs sind und jedes Stück einzigartig machen",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-01T23:26"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-19T22:27:05.093372Z",
+          "sku": "BAG00002",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

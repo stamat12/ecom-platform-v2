@@ -1,0 +1,204 @@
+{
+  "P0020082": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Tablets & eBook-Reader",
+      "eBay Category ID": "171485"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Blackview",
+      "Color": "None",
+      "Size": "8.6 Zoll"
+    },
+    "Intern Generated Info": {
+      "More details": "Das Blackview LINK 2 ist ein Tablet mit einem 8,6 Zoll großen Display. Es verfügt über 4 GB RAM und 128 GB internen Speicher. Die Abmessungen betragen 125,5 x 212,9 x 8,5 mm. Es hat eine 5000 mAh Batterie und läuft mit Android. Sichtbare Angaben: Farbe: None; Größe: 8.6 Zoll.",
+      "Keywords": "LINK 2 Tablet",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "120"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020082 (2).jpg"
+        },
+        {
+          "filename": "P0020082 (1).jpg"
+        },
+        {
+          "filename": "P0020082 (6).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020082 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Kj4AAeSw1sBpvbgc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020082 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/obQAAeSwLqFpvbgf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020082 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nxQAAeSw6Ytpvbgi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020082 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~CUAAeSwEvxpvbgk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020082 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1VAAAeSwjaZpvbgm/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Blackview",
+        "Speicherkapazität": "128 GB",
+        "Bildschirmgröße": "8,6 Zoll",
+        "Produktart": "Tablet",
+        "Internetanschluss": "Nicht zutreffend"
+      },
+      "optional": {
+        "Serie": "LINK 2",
+        "Modell": "LINK 2",
+        "Betriebssystem": "Android",
+        "Energieeffizienzklasse": "E",
+        "Arbeitsspeichergröße": "4 GB",
+        "Farbe": "None",
+        "Besonderheiten": "Eingebaute Frontkamera, Eingebaute Rückkamera",
+        "Konnektivität": "USB",
+        "Maximale Auflösung": "800 x 1340",
+        "Herstellernummer": "LINK2",
+        "Anzahl der Einheiten": "1",
+        "EEK Spektrum": "E",
+        "Maßeinheit": "Einheit",
+        "Inklusive Ladegerät": "Ja",
+        "Prozessormodell": "UMS312",
+        "Anzeigetyp": "LCD",
+        "Prozessorgeschwindigkeit": "2,00 GHz",
+        "Prozessor": "Quad Core",
+        "Akkulaufzeit": "10 Std",
+        "Herstellergarantie": "2 Jahre",
+        "Ursprungsland": "China",
+        "Akkukapazität": "5000-7999 mAh",
+        "Breite": "125,5 mm",
+        "Höhe": "8,5 mm",
+        "Länge": "212,9 mm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tablet",
+      "Product Model": "LINK 2",
+      "Keyword 1": "8,6 Zoll",
+      "Keyword 2": "4 GB RAM",
+      "Keyword 3": "128 GB Speicher"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "90",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.927227Z",
+          "sku": "P0020082",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.297101Z",
+          "sku": "P0020082",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

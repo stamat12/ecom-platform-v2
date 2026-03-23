@@ -387,7 +387,24 @@ export default function SkuDetailPage() {
         const refreshRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/images`);
         if (refreshRes.ok) {
           const refreshData = await refreshRes.json();
-          setData(refreshData);
+          
+          // Add cache-busting timestamp to image URLs to force browser reload (same as handleRotate)
+          const timestamp = Date.now();
+          const updatedImages = refreshData.images.map((img) => ({
+            ...img,
+            thumb_url: img.thumb_url ? `${img.thumb_url}&t=${timestamp}` : img.thumb_url,
+            preview_url: img.preview_url ? `${img.preview_url}&t=${timestamp}` : img.preview_url,
+            original_url: img.original_url ? `${img.original_url}&t=${timestamp}` : img.original_url,
+            display_url: img.display_url ? `${img.display_url}&t=${timestamp}` : img.display_url,
+            url: img.url ? `${img.url}&t=${timestamp}` : img.url,
+          }));
+
+          const updatedData = {
+            ...refreshData,
+            images: updatedImages
+          };
+
+          setData(updatedData);
         }
       } else {
         alert(result.message || "Failed to update main image");

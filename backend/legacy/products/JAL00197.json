@@ -17,7 +17,7 @@
       "Total Cost Net": 3.28
     },
     "Ebay Category": {
-      "Category": null,
+      "Category": "/Heimwerker/Überwachungstechnik/Überwachungstechnik-Teile & -Zubehör/Sonstige",
       "eBay Category ID": "175725"
     },
     "EAN": {
@@ -41,7 +41,7 @@
       "OP": "43.0"
     },
     "Status": {
-      "Status": null
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": "NEW BOX 004"
@@ -125,18 +125,19 @@
     "Ebay Listing": {
       "Selling Price Total": "28",
       "Shipping Listing": 4.99,
-      "Shipping Costs Net": "9.2",
+      "Shipping Costs Net": "9.21",
       "Quantity": "1",
       "Condition ID": "1000",
       "Condition Note": "",
       "EAN": "",
       "Modified SKU": "",
-      "Schedule Date": "2026-03-21T20:54"
+      "Schedule Date": "2026-03-30T01:47"
     },
     "eBay Fields": {
       "required": {
         "Marke": "Patikil",
-        "Produktart": "Fenstersensor"
+        "Produktart": "Fenstersensor",
+        "Modell": "Unbekannt"
       },
       "optional": {
         "Anzahl der Einheiten": "10",
@@ -155,6 +156,31 @@
       "Keyword 1": "Magnetkontakt",
       "Keyword 2": "Türsensor",
       "Keyword 3": "Fenstersensor"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:47:16.677457Z",
+          "sku": "JAL00197",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
     }
   }
 }

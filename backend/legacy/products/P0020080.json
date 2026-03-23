@@ -1,0 +1,272 @@
+{
+  "P0020080": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Nachtlichter",
+      "eBay Category ID": "20702"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Aurora",
+      "Color": "Transparent",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Lampe hat ein modernes Design mit einer wellenförmigen Oberfläche. Sie ist ideal als Nachtlicht und kann mit einer Fernbedienung gesteuert werden. Die Lampe erzeugt eine stimmungsvolle Atmosphäre und eignet sich gut als Geschenk. Sichtbare Angaben: Farbe: Transparent.",
+      "Keywords": "Nachtlicht Aurora",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020080 (1).jpg"
+        },
+        {
+          "filename": "P0020080 (10).jpg"
+        },
+        {
+          "filename": "P0020080 (11).jpg"
+        },
+        {
+          "filename": "P0020080 (12).jpg"
+        },
+        {
+          "filename": "P0020080 (2).jpg"
+        },
+        {
+          "filename": "P0020080 (3).jpg"
+        },
+        {
+          "filename": "P0020080 (4).jpg"
+        },
+        {
+          "filename": "P0020080 (5).jpg"
+        },
+        {
+          "filename": "P0020080 (6).jpg"
+        },
+        {
+          "filename": "P0020080 (7).jpg"
+        },
+        {
+          "filename": "P0020080 (8).jpg"
+        },
+        {
+          "filename": "P0020080 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020080 (3).jpg"
+        },
+        {
+          "filename": "P0020080 (6).jpg"
+        },
+        {
+          "filename": "P0020080 (7).jpg"
+        },
+        {
+          "filename": "P0020080 (8).jpg"
+        },
+        {
+          "filename": "P0020080 (9).jpg"
+        },
+        {
+          "filename": "P0020080 (12).jpg"
+        },
+        {
+          "filename": "P0020080 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020080 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KDMAAeSwmsVpvbfX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xX4AAeSw5RBpvbfa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (10).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MVkAAeSwBf9pvbfd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xekAAeSwvddpvbff/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/t5kAAeSw3nppvbfi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (12).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bFYAAeSwiihpvbfk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dvgAAeSwJ~dpvbfn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (8).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WxEAAeSwyXJpvbfp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (6).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yv8AAeSwKONpvbfs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020080 (7).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/aiMAAeSwQ6lpvbfv/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Nachtlicht"
+      },
+      "optional": {
+        "Marke": "Aurora",
+        "Abteilung": "Unisex Baby & Kleinkind",
+        "Farbe": "Transparent",
+        "Material": "Kunststoff",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Hersteller": "TK Co., Ltd.",
+        "Spannung": "5 V",
+        "Anzahl der Lichter": "1",
+        "Modell": "WH-E22",
+        "Beleuchtungstechnik": "LED",
+        "Stromquelle": "USB",
+        "Besonderheiten": "Fernbedienung",
+        "Lichtfarbe": "Warmweiß",
+        "Stil": "Modern",
+        "Ursprungsland": "China",
+        "Lebensdauer der Glühbirne": "20.000-24.999 Stunden",
+        "Lichtrichtung": "Indirekt",
+        "Länge": "10 cm",
+        "Höhe": "10 cm",
+        "Breite": "10 cm",
+        "Gewicht": "1 kg",
+        "Gütesiegel & Kennzeichnungen": "CE-Kennzeichnung",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Nachtlicht",
+      "Product Model": "WH-E22",
+      "Keyword 1": "Fernbedienung",
+      "Keyword 2": "LED",
+      "Keyword 3": "Geschenk"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.885350Z",
+          "sku": "P0020080",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.258134Z",
+          "sku": "P0020080",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

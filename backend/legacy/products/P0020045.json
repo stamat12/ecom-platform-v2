@@ -21,7 +21,7 @@
       "eBay Category ID": "33963"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -104,6 +104,161 @@
         },
         {
           "filename": "P0020045 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020045 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/C-kAAeSwTvhpuaPP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L9sAAeSw6~tpuaPT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CKQAAeSwmeNpuaPW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cZgAAeSwhHdpuaPZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EhcAAeSwH4JpuaPc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SMsAAeSwTyVpuaPg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zwAAAeSwO5ZpuaPk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/d9oAAeSwO6xpuaPm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/I1YAAeSwR51puaPq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020045 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DQcAAeSwM7JpuaPt/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Logitech",
+        "Produktart": "Gaming"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Konnektivität": "Kabellos & Kabelgebunden",
+        "Modell": "G213",
+        "Tastatursprache": "Französisch",
+        "Tastaturlayout": "QWERTY (Standard)",
+        "Besonderheiten": "Beleuchtet",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Inklusive Ladegerät": "Nein",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Gaming Tastatur",
+      "Product Model": "G213",
+      "Keyword 1": "RGB-Beleuchtung",
+      "Keyword 2": "französisches Layout AZERTY",
+      "Keyword 3": "Anti-Ghosting"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T19:05:40.597660Z",
+          "sku": "P0020045",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:55:35.790742Z",
+          "sku": "P0020045",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.085614Z",
+          "sku": "P0020045",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

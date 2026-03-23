@@ -62,6 +62,68 @@ def _to_optional_float(value: Any) -> Optional[float]:
         return None
 
 
+def _coerce_to_float_2digits(value: Any) -> Optional[float]:
+    """Convert any value to float with 2 decimal places.
+    
+    Handles:
+    - None / NaN -> None
+    - Strings with comma decimal separator (e.g., "12,34" -> 12.34)
+    - Strings with dot decimal separator (e.g., "12.34" -> 12.34)
+    - floats and ints
+    
+    Returns rounded to 2 decimal places or None if conversion fails.
+    """
+    if value is None or pd.isna(value):
+        return None
+    
+    if isinstance(value, str):
+        stripped = value.strip()
+        if not stripped:
+            return None
+        # Replace comma with dot for parsing (handle European format)
+        normalized = stripped.replace(",", ".")
+        try:
+            result = float(normalized)
+            return round(result, 2)
+        except (ValueError, TypeError):
+            return None
+    
+    try:
+        result = float(value)
+        return round(result, 2)
+    except (ValueError, TypeError):
+        return None
+
+
+def _calculate_total_cost_net(price_net: Any, shipping_net: Any, row_idx: int = None) -> Optional[float]:
+    """Calculate Total Cost Net = Price Net + Shipping Net.
+    
+    Both values are coerced to float with 2 decimal places.
+    If either is None, returns None and logs a warning.
+    
+    Args:
+        price_net: Value from Price Net column
+        shipping_net: Value from Shipping Net column
+        row_idx: Optional row index for logging
+    
+    Returns:
+        Rounded to 2 decimal places or None if either input is None
+    """
+    price_net_float = _coerce_to_float_2digits(price_net)
+    shipping_net_float = _coerce_to_float_2digits(shipping_net)
+    
+    if price_net_float is None or shipping_net_float is None:
+        idx_str = f" (Row {row_idx})" if row_idx is not None else ""
+        print(
+            f"[WARNING] Cannot calculate Total Cost Net{idx_str}: "
+            f"Price Net={price_net!r}, Shipping Net={shipping_net!r}"
+        )
+        return None
+    
+    total = price_net_float + shipping_net_float
+    return round(total, 2)
+
+
 def refresh_category_mapping_from_excel(sheet_name: str = "Ebay Categories") -> Dict[str, Any]:
     """Update backend/schemas/category_mapping.json from inventory.db ebay_categories table.
 
@@ -287,9 +349,34 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                                     val = None
                                 elif hasattr(val, 'isoformat'):
                                     val = val.isoformat()
+                                else:
+                                    # Coerce financial columns to float with 2 decimal places
+                                    if db_col in (
+                                        getattr(config, "PRICE_NET_COLUMN", "Price Net"),
+                                        getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net"),
+                                        getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net"),
+                                        getattr(config, "OP_COLUMN", "OP"),
+                                    ):
+                                        val = _coerce_to_float_2digits(val)
                                 all_values[db_col] = val
                             else:
                                 all_values[db_col] = None
+                        
+                        # Calculate Total Cost Net if Price Net & Shipping Net are available
+                        price_net_col = getattr(config, "PRICE_NET_COLUMN", "Price Net")
+                        shipping_net_col = getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net")
+                        total_cost_net_col = getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net")
+                        
+                        if total_cost_net_col in db_columns:
+                            price_net_val = all_values.get(price_net_col)
+                            shipping_net_val = all_values.get(shipping_net_col)
+                            
+                            if price_net_val is not None and shipping_net_val is not None:
+                                calculated_total = _calculate_total_cost_net(
+                                    price_net_val, shipping_net_val, row_idx=idx
+                                )
+                                if calculated_total is not None:
+                                    all_values[total_cost_net_col] = calculated_total
                         
                         cols_str = ", ".join([f'"{col}"' for col in all_values.keys()])
                         placeholders = ", ".join(['?' for _ in all_values])
@@ -361,7 +448,47 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                                     val = None
                                 elif hasattr(val, 'isoformat'):
                                     val = val.isoformat()
+                                else:
+                                    # Coerce financial columns to float with 2 decimal places
+                                    if col in (
+                                        getattr(config, "PRICE_NET_COLUMN", "Price Net"),
+                                        getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net"),
+                                        getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net"),
+                                        getattr(config, "OP_COLUMN", "OP"),
+                                    ):
+                                        val = _coerce_to_float_2digits(val)
                                 updates[col] = val
+                            
+                            # Calculate Total Cost Net if Price Net & Shipping Net are being updated
+                            price_net_col = getattr(config, "PRICE_NET_COLUMN", "Price Net")
+                            shipping_net_col = getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net")
+                            total_cost_net_col = getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net")
+                            
+                            if total_cost_net_col in db_columns and (
+                                price_net_col in updates or shipping_net_col in updates
+                            ):
+                                # Get current values from row or existing DB
+                                price_net_val = updates.get(price_net_col)
+                                shipping_net_val = updates.get(shipping_net_col)
+                                
+                                # If one is missing from updates, try to get from existing row
+                                existing_row = conn.execute(
+                                    f'SELECT "{price_net_col}", "{shipping_net_col}" FROM "{table_name}" WHERE rowid = ?',
+                                    (existing_row_ids[0],)
+                                ).fetchone()
+                                
+                                if existing_row:
+                                    if price_net_val is None:
+                                        price_net_val = existing_row[price_net_col]
+                                    if shipping_net_val is None:
+                                        shipping_net_val = existing_row[shipping_net_col]
+                                
+                                if price_net_val is not None and shipping_net_val is not None:
+                                    calculated_total = _calculate_total_cost_net(
+                                        price_net_val, shipping_net_val, row_idx=idx
+                                    )
+                                    if calculated_total is not None:
+                                        updates[total_cost_net_col] = calculated_total
 
                             if updates:
                                 set_clause = ", ".join([f'"{col}" = ?' for col in updates.keys()])
@@ -384,9 +511,34 @@ def sync_excel_to_db(sheet_name: str, columns: List[str]) -> Dict[str, Any]:
                                         val = None
                                     elif hasattr(val, 'isoformat'):
                                         val = val.isoformat()
+                                    else:
+                                        # Coerce financial columns to float with 2 decimal places
+                                        if db_col in (
+                                            getattr(config, "PRICE_NET_COLUMN", "Price Net"),
+                                            getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net"),
+                                            getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net"),
+                                            getattr(config, "OP_COLUMN", "OP"),
+                                        ):
+                                            val = _coerce_to_float_2digits(val)
                                     all_values[db_col] = val
                                 else:
                                     all_values[db_col] = None
+                            
+                            # Calculate Total Cost Net if Price Net & Shipping Net are available
+                            price_net_col = getattr(config, "PRICE_NET_COLUMN", "Price Net")
+                            shipping_net_col = getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net")
+                            total_cost_net_col = getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net")
+                            
+                            if total_cost_net_col in db_columns:
+                                price_net_val = all_values.get(price_net_col)
+                                shipping_net_val = all_values.get(shipping_net_col)
+                                
+                                if price_net_val is not None and shipping_net_val is not None:
+                                    calculated_total = _calculate_total_cost_net(
+                                        price_net_val, shipping_net_val, row_idx=idx
+                                    )
+                                    if calculated_total is not None:
+                                        all_values[total_cost_net_col] = calculated_total
                             
                             cols_str = ", ".join([f'"{col}"' for col in all_values.keys()])
                             placeholders = ", ".join(['?' for _ in all_values])
@@ -496,9 +648,34 @@ def add_missing_sku_rows_from_excel() -> Dict[str, Any]:
                                 val = None
                             elif hasattr(val, "isoformat"):
                                 val = val.isoformat()
+                            else:
+                                # Coerce financial columns to float with 2 decimal places
+                                if db_col in (
+                                    getattr(config, "PRICE_NET_COLUMN", "Price Net"),
+                                    getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net"),
+                                    getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net"),
+                                    getattr(config, "OP_COLUMN", "OP"),
+                                ):
+                                    val = _coerce_to_float_2digits(val)
                             insert_values[db_col] = val
                         else:
                             insert_values[db_col] = None
+                    
+                    # Calculate Total Cost Net if Price Net & Shipping Net are available
+                    price_net_col = getattr(config, "PRICE_NET_COLUMN", "Price Net")
+                    shipping_net_col = getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net")
+                    total_cost_net_col = getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net")
+                    
+                    if total_cost_net_col in db_columns_set:
+                        price_net_val = insert_values.get(price_net_col)
+                        shipping_net_val = insert_values.get(shipping_net_col)
+                        
+                        if price_net_val is not None and shipping_net_val is not None:
+                            calculated_total = _calculate_total_cost_net(
+                                price_net_val, shipping_net_val, row_idx=idx
+                            )
+                            if calculated_total is not None:
+                                insert_values[total_cost_net_col] = calculated_total
 
                     cols_str = ", ".join([f'"{col}"' for col in insert_values.keys()])
                     placeholders = ", ".join(["?" for _ in insert_values])

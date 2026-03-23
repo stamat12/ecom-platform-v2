@@ -1,0 +1,191 @@
+{
+  "P0020065": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/DVD, Blu-ray & Heimkino/Heimkino-Beamer",
+      "eBay Category ID": "22610"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "XGIMI",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der XGIMI Elfin Flip ist ein kompakter Projektor mit 400 ISO-Lumen. Er bietet Dolby Audio und einen integrierten Stand, der eine 150°-Verstellung ermöglicht. Mit einer FHD-Auflösung von 1080P ist er ideal für Heimkino-Erlebnisse.",
+      "Keywords": "Elfin Flip Projektor",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "350.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020065 (4).jpg"
+        },
+        {
+          "filename": "P0020065 (5).jpg"
+        },
+        {
+          "filename": "P0020065 (7).jpg"
+        },
+        {
+          "filename": "P0020065 (1).jpg"
+        },
+        {
+          "filename": "P0020065 (2).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020065 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q1QAAeSwUEdpue76/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IWsAAeSwj4Fpue79/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Pp0AAeSwV8lpue7~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MhAAAeSw5GFpue8C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (2).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q9IAAeSwXQJpue8E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eKoAAeSwutNpue8J/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020065 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JmoAAeSwz6Bpue8M/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "XGIMI",
+        "Modell": "Elfin Flip",
+        "Produktart": "Desktop"
+      },
+      "optional": {
+        "Anzeigetechnologie": "DLP",
+        "Besonderheiten": "Eingebaute Lautsprecher, Autofokus, HD Ready",
+        "Konnektivität": "HDMI-Standard",
+        "Bildhelligkeit": "400 ANSI Lumens",
+        "Maximale Auflösung": "1080p (FHD)",
+        "Bildseitenverhältnis": "16:9",
+        "Native Auflösung": "1920 x 1080",
+        "Kontrastverhältnis": "1000:1",
+        "Herstellernummer": "11-000066-018",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Kompatibles Betriebssystem": "Android",
+        "Farbe": "Weiß",
+        "Ursprungsland": "China",
+        "Linsenvergrößerung": "Weniger als 3x",
+        "Herstellergarantie": "2 Jahre",
+        "Gewicht": "1.5 kg",
+        "Herstellungsjahr": "2024",
+        "Projektionsverhältnis": "Mittlerer / Standardwurf"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Projektor",
+      "Product Model": "Elfin Flip",
+      "Keyword 1": "FHD",
+      "Keyword 2": "Dolby Audio",
+      "Keyword 3": "kompakt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "290",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.411066Z",
+          "sku": "P0020065",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

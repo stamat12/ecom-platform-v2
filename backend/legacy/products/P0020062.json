@@ -1,0 +1,148 @@
+{
+  "P0020062": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/TV, Video & Audio/Haushaltsbatterien & Strom/Einweg-Batterien",
+      "eBay Category ID": "50602"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Amazon Basics",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Verpackung enthält 40 AA-Batterien. Diese Batterien sind alkalisch und für industrielle Anwendungen geeignet. Sie sind langlebig und bieten eine zuverlässige Energiequelle für verschiedene Geräte.",
+      "Keywords": "AA Batterien 40 Pack",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "10.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020062 (2).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 1
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020062 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QXIAAeSw82Fpue85/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020062 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0XsAAeSwxO5pue89/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020062 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MjkAAeSwXVxpue8~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020062 (2).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RqwAAeSwMQhpue9C/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Amazon Basics",
+        "Produktart": "AA"
+      },
+      "optional": {
+        "Anzahl der Einheiten": "40",
+        "Maßeinheit": "Einheit",
+        "Chemische Zusammensetzung": "Alkaline",
+        "Spannung": "1,5 V"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Einweg-Batterien",
+      "Product Model": "AA",
+      "Keyword 1": "alkalisch",
+      "Keyword 2": "industriell",
+      "Keyword 3": "40er-Pack"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "8",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "2",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "P0020061, P0020062",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.451234Z",
+          "sku": "P0020062",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

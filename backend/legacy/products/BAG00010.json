@@ -1,0 +1,194 @@
+{
+  "BAG00010": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": null,
+      "Invoice": null,
+      "Invoice Date": null
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 0.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 0.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Restyled Store",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat einen lässigen Denim-Look und ist mit einem bunten, floral gemusterten Tuch verziert. Sie hat zwei Tragegriffe und eine weiche, flexible Form. Innen ist die Tasche mit einem karierten Stoff gefüttert. Sichtbare Angaben: Farbe: Blau.",
+      "Keywords": "Tasche Denim Damen ",
+      "Materials": "Denim, Stoff"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_8719.JPG"
+        },
+        {
+          "filename": "IMG_8720.JPG"
+        },
+        {
+          "filename": "IMG_8721.JPG"
+        },
+        {
+          "filename": "IMG_8722.JPG"
+        },
+        {
+          "filename": "IMG_8744.JPG"
+        },
+        {
+          "filename": "IMG_8745.JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_8720.JPG"
+        },
+        {
+          "filename": "IMG_8721.JPG"
+        },
+        {
+          "filename": "IMG_8722.JPG"
+        },
+        {
+          "filename": "IMG_8744.JPG"
+        },
+        {
+          "filename": "IMG_8745.JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "IMG_8720.JPG",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/HLwAAeSw3x1pvIuJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8721.JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/MWgAAeSwBfhpvIuN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8722.JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/~RkAAeSwl2hpvIuP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8744.JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/~SwAAeSwl2hpvIuR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8745.JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/QKQAAeSwkBlpvIuT/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Restyled Store",
+        "Außenmaterial": "Denim",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Blau"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Denim",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Blau",
+        "Henkel-/Riemenfarbe": "Blau",
+        "Vintage": "Nein",
+        "Taschenbreite": "30 cm",
+        "Taschenhöhe": "35 cm",
+        "Taschentiefe": "10 cm",
+        "Griffstil": "Doppelgriff",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tasche",
+      "Product Model": "Denim",
+      "Keyword 1": "Floral",
+      "Keyword 2": "Tragetasche",
+      "Keyword 3": "Weich"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, wird jedoch als „Neu (Sonstige)“ eingestuft, da er handgefertigt aus recyceltem Denim hergestellt wurde. Aufgrund der Wiederverwendung des Materials können leichte Unterschiede in Farbe, Struktur oder kleine Unregelmäßigkeiten auftreten, die Teil des Designs sind und jedes Stück einzigartig machen",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T00:49"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-19T23:49:08.425187Z",
+          "sku": "BAG00010",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "P0020066": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "8.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "8.0"
+    },
+    "Ebay Category": {
+      "Category": "/Computer, Tablets & Netzwerk/Stromschutz & Stromverteilung/Überspannschutz & Mehrfachstecker",
+      "eBay Category ID": "96907"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Eaton",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Eaton 3S, ein unterbrechungsfreies Stromversorgungssystem (UPS). Es bietet 700VA und 420W Leistung. Es verfügt über mehrere Steckdosen mit Überspannungsschutz und USB-Anschlüsse. Das Gerät hat eine Laufzeit von 20 Minuten und ist für leisen Betrieb ausgelegt.",
+      "Keywords": "3S UPS",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "100.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020066 (8).jpg"
+        },
+        {
+          "filename": "P0020066 (6).jpg"
+        },
+        {
+          "filename": "P0020066 (4).jpg"
+        },
+        {
+          "filename": "P0020066 (3).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020066 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rf4AAeSwBhJpue8U/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V9AAAeSwbodpue8W/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uVMAAeSw2Mtpue8Z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/plMAAeSwlXFpue8c/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9GEAAeSwm0Bpue8f/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RjgAAeSwcQFpue8h/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MV4AAeSw9uxpue8k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AFUAAeSwcKNpue8n/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/T~QAAeSwMA9pue8q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (11).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8eoAAeSw1JFpue8s/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020066 (12).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1iYAAeSwMcVpue8v/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Eaton"
+      },
+      "optional": {
+        "Produktart": "Überspannungsschutz",
+        "Modell": "EATON 3S",
+        "Max. Eingangsstrom": "10 A",
+        "Herstellergarantie": "Auf Lebenszeit",
+        "Anzahl der Ausgänge": "4",
+        "Stoßenergie-Kapazität": "1280 J",
+        "Spannungskompatibilität": "230 V"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "USV",
+      "Product Model": "Eaton 3S",
+      "Keyword 1": "700VA",
+      "Keyword 2": "Überspannungsschutz",
+      "Keyword 3": "USB-Anschlüsse"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "70",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.432419Z",
+          "sku": "P0020066",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

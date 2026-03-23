@@ -21,7 +21,7 @@
       "eBay Category ID": "20702"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -101,6 +101,136 @@
         },
         {
           "filename": "P0020049 (8).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020049 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FGgAAeSwd6FpuaRY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iJgAAeSwkQVpuaRb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Xp8AAeSwy5lpuaRe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (1).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nUYAAeSwSMppuaRh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RrQAAeSwH4RpuaRl/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FzIAAeSwPU9puaRn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fS0AAeSw8TRpuaRq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KCEAAeSwEaNpuaRt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020049 (7).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GEcAAeSw0y9puaRw/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Akzentbeleuchtung"
+      },
+      "optional": {
+        "Farbe": "Transparent",
+        "Material": "ABS",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Anzahl der Lichter": "1",
+        "Beleuchtungstechnik": "LED",
+        "Stromquelle": "USB",
+        "Besonderheiten": "Dynamische Rotation",
+        "Thema": "Animation",
+        "Höhe": "10 cm",
+        "Lichtfarbe": "Mehrfarbig",
+        "Stil": "Funky",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Nachtlicht",
+      "Product Model": "Lichtwürfel",
+      "Keyword 1": "Atmosphärenlicht",
+      "Keyword 2": "dynamische Rotation",
+      "Keyword 3": "16 Farben"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "12",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T18:55:35.858177Z",
+          "sku": "P0020049",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.157487Z",
+          "sku": "P0020049",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

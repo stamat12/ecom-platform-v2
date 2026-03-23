@@ -1,0 +1,225 @@
+{
+  "P0020077": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Überwachungstechnik/Überwachungskameras",
+      "eBay Category ID": "48638"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Reolink",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Moderne Überwachungskamera mit kabelloser Installation und leistungsstarkem Akku für flexible Einsatzmöglichkeiten im Innen- und Außenbereich. Durch die Kombination aus Kamera und Solarpanel ist ein nahezu wartungsfreier Betrieb möglich, ohne regelmäßiges Aufladen.\n\nDie Kamera liefert gestochen scharfe 2K Bildqualität und verfügt über eine PT-Funktion, wodurch sich der Blickwinkel bequem per App steuern lässt. Dank WLAN-Anbindung können Sie jederzeit und von überall auf die Live-Ansicht zugreifen und bleiben stets informiert.\n\nIdeal zur Überwachung von Haus, Garten, Garage oder Grundstück. Die einfache Installation sowie die zuverlässige Verbindung machen das System besonders benutzerfreundlich.\n\nDer Artikel ist neu und originalverpackt. Die Verpackung kann leichte Lagerspuren aufweisen, der Inhalt ist unbenutzt und vollständig.",
+      "Keywords": "2K WLAN Überwachungskamera Set PT Akku Kamera Solar Panel Outdoor",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "140"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020077 (1).jpg"
+        },
+        {
+          "filename": "P0020077 (2).jpg"
+        },
+        {
+          "filename": "P0020077 (3).jpg"
+        },
+        {
+          "filename": "P0020077 (4).jpg"
+        },
+        {
+          "filename": "P0020077 (5).jpg"
+        },
+        {
+          "filename": "P0020077 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020077 (2).jpg"
+        },
+        {
+          "filename": "P0020077 (1).jpg"
+        },
+        {
+          "filename": "P0020077 (5).jpg"
+        },
+        {
+          "filename": "P0020077 (6).jpg"
+        },
+        {
+          "filename": "P0020077 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020077 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tJ0AAeSwoSJpvbdy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020077 (1).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020077 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wSkAAeSwH~dpvbd4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020077 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lCsAAeSwV8xpvbd7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020077 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wvYAAeSwm2ppvbd9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020077 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JC8AAeSw8fdpvbeA/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Reolink",
+        "Produktart": "Einschusskamera",
+        "Modell": "Reolink Argus PT"
+      },
+      "optional": {
+        "Einsatzbereich": "Nur im Freien",
+        "Maximale Auflösung": "1080p (FHD)",
+        "Stromquelle": "Batterie",
+        "Anzahl der inbegriffenen Kameras": "1",
+        "Farbe": "Weiß",
+        "Herstellungsjahr": "2023",
+        "Herstellergarantie": "2 Jahre",
+        "Ursprungsland": "China",
+        "Besonderheiten": "Akku, Bewegung/PIR aktiviert, Freiluft/Wetterfest",
+        "Verbindung": "Kabellos",
+        "Überwachungstechnologie": "IP/Netzwerk",
+        "Smart Home Kommunikationsprotokoll": "Wi-Fi",
+        "Smart Home Kompatibilität": "Amazon Alexa, Google Assistant",
+        "Speicherkapazität": "Nicht angegeben",
+        "Leistung": "Nicht angegeben",
+        "Maßeinheit": "Einheit",
+        "Gewicht": "Nicht angegeben",
+        "Reichweite": "Nicht angegeben"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Überwachungskamera",
+      "Product Model": "Argus PT",
+      "Keyword 1": "Akku Kamera",
+      "Keyword 2": "WLAN",
+      "Keyword 3": "Solar Panel"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "100",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.814579Z",
+          "sku": "P0020077",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.192706Z",
+          "sku": "P0020077",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

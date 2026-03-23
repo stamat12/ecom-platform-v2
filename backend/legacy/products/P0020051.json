@@ -21,7 +21,7 @@
       "eBay Category ID": "131487"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
@@ -101,6 +101,137 @@
         },
         {
           "filename": "P0020051 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020051 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VY0AAeSwd0BpuaSX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cFIAAeSw2MtpuaSa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ftUAAeSw8TRpuaSe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WP8AAeSwPqFpuaSh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7RMAAeSwAYxpuaSk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6HoAAeSwwXdpuaSn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (4).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fTwAAeSwKDdpuaSq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (5).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fkcAAeSwO6xpuaSt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020051 (6).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IgMAAeSwlJNpuaSv/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Corsair",
+        "Produktart": "Gehäuselüfter"
+      },
+      "optional": {
+        "Farbe": "Mehrfarbig",
+        "Lüfterdurchmesser": "120,0 mm",
+        "Maximale Lüftergeschwindigkeit": "1500 RPM",
+        "Anzahl der Einheiten": "3",
+        "Netzanschluss": "4-Pin",
+        "Lüfter-Lichtfarbe": "Mehrfarbig",
+        "Spannung": "12 V",
+        "Lagertyp": "Hydraulisch",
+        "Maximales Luftzirkulationsvolumen": "47.73 CFM",
+        "Herstellernummer": "SP120",
+        "Maßeinheit": "Einheit",
+        "Verpackung": "Blisterpackung"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Gehäuselüfter",
+      "Product Model": "SP120 RGB ELITE",
+      "Keyword 1": "RGB",
+      "Keyword 2": "120mm 2 Stk.",
+      "Keyword 3": "AirGuide-Technologie"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Bitte beachten Sie, dass ein oder mehrere Komponenten fehlen können.  Der genaue Lieferumfang sowie der Zustand des Artikels sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T18:55:35.896764Z",
+          "sku": "P0020051",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.193326Z",
+          "sku": "P0020051",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

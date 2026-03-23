@@ -5,6 +5,7 @@ import json
 import logging
 from typing import Dict, Any, List, Optional
 import requests
+import pandas as pd
 from pathlib import Path
 
 from app.config.ebay_config import (
@@ -149,6 +150,25 @@ def _ensure_cached_schema_fees(category_id: str, cached: Dict[str, Any]) -> Dict
     return cached
 
 
+def _cached_schema_needs_refresh(cached: Dict[str, Any]) -> tuple[bool, str]:
+    if not isinstance(cached, dict):
+        return True, "cached schema is not a dict"
+
+    schema = cached.get("schema")
+    if not isinstance(schema, dict):
+        return True, "missing schema section"
+
+    required = schema.get("required")
+    optional = schema.get("optional")
+    if not isinstance(required, list) or not isinstance(optional, list):
+        return True, "schema required/optional sections are missing"
+
+    if not required and not optional:
+        return True, "schema has no required or optional aspects"
+
+    return False, ""
+
+
 def fetch_category_tree_id() -> str:
     """
     Fetch the category tree ID for the marketplace
@@ -277,6 +297,10 @@ def get_category_fees(category_id: str) -> Dict[str, float]:
 
     try:
         df = load_inventory_dataframe()
+
+        if "eBay Category ID" not in df.columns:
+            logger.warning("Inventory dataframe is missing 'eBay Category ID'; skipping inventory fee lookup")
+            return {}
         
         # Look for category in eBay Category ID column
         category_row = df[df["eBay Category ID"] == int(category_id)]
@@ -363,8 +387,18 @@ def get_schema(category_id: str, use_cache: bool = True, category_name: str = ""
         cached = ebay_schema_repo.get_schema(category_id)
         if cached:
             cached = _ensure_cached_schema_fees(category_id, cached)
-            logger.debug(f"Using cached schema for category {category_id}")
-            return cached
+            needs_refresh, reason = _cached_schema_needs_refresh(cached)
+            if not needs_refresh:
+                logger.debug(f"Using cached schema for category {category_id}")
+                return cached
+
+            logger.warning(f"Cached schema for category {category_id} is incomplete ({reason}); fetching fresh schema from API")
+            try:
+                return fetch_and_cache_schema(category_id, category_name)
+            except Exception as e:
+                logger.error(f"Failed to refresh incomplete schema for category {category_id}: {e}")
+                logger.warning(f"Falling back to existing cached schema for category {category_id}")
+                return cached
     
     # Fetch from API
     logger.info(f"Fetching fresh schema for category {category_id}")

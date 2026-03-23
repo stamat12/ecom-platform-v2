@@ -1,0 +1,182 @@
+{
+  "BAG00007": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "",
+      "Invoice": "",
+      "Invoice Date": ""
+    },
+    "Supplier Data": {
+      "Supplier Number": "",
+      "ISIN": "",
+      "Supplier Title": ""
+    },
+    "Price Data": {
+      "Price Net": "0.0",
+      "Shipping Net": "0.0",
+      "Total Cost Net": "0.0"
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (handgefertigt aus recyceltem Denim)"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Restyled Store",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat einen lässigen Denim-Look und ist mit einem geflochtenen Band verziert. Sie verfügt über zwei Tragegriffe und einen Druckknopfverschluss. Das Innenfutter ist bunt gemustert und sorgt für einen fröhlichen Akzent. Sichtbare Angaben: Farbe: Blau.",
+      "Keywords": "Denim Tasche",
+      "Materials": "Denim, Baumwolle"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_8705.JPG"
+        },
+        {
+          "filename": "IMG_8707.JPG"
+        },
+        {
+          "filename": "IMG_8708.JPG"
+        },
+        {
+          "filename": "IMG_8709.JPG"
+        },
+        {
+          "filename": "IMG_8729 1.JPG"
+        },
+        {
+          "filename": "IMG_8730.JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_8707.JPG"
+        },
+        {
+          "filename": "IMG_8708.JPG"
+        },
+        {
+          "filename": "IMG_8709.JPG"
+        },
+        {
+          "filename": "IMG_8729 1.JPG"
+        },
+        {
+          "filename": "IMG_8730.JPG"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Restyled Store",
+        "Außenmaterial": "Baumwolle",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Blau"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Baumwolle",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Bunt",
+        "Henkel-/Riemenfarbe": "Blau",
+        "Farbe des Verschlusses": "Braun",
+        "Größe": "Mittel",
+        "Verschluss": "Druckknopf",
+        "Zubehör": "Keine",
+        "Taschenbreite": "30 cm",
+        "Taschenhöhe": "40 cm",
+        "Taschentiefe": "10 cm",
+        "Vintage": "Nein",
+        "Thema": "Bohemian",
+        "Griffstil": "Doppelgriff",
+        "Akzente": "Geflochten",
+        "Verarbeitung": "Gekrispelt",
+        "Ursprungsland": "Nicht angegeben",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Nein",
+        "Gewebeart": "Denim",
+        "Personalisieren": "Nein",
+        "Anzahl der Einheiten": "1",
+        "Henkellänge": "30 cm",
+        "Maßeinheit": "cm",
+        "Trägerlänge": "60 cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tasche",
+      "Product Model": "Denim Tasche",
+      "Keyword 1": "Unisex",
+      "Keyword 2": "geflochtenes Band",
+      "Keyword 3": "Druckknopfverschluss"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, wird jedoch als „Neu (Sonstige)“ eingestuft, da er handgefertigt aus recyceltem Denim hergestellt wurde. Aufgrund der Wiederverwendung des Materials können leichte Unterschiede in Farbe, Struktur oder kleine Unregelmäßigkeiten auftreten, die Teil des Designs sind und jedes Stück einzigartig machen",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-01T23:26"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-19T22:27:05.140490Z",
+          "sku": "BAG00007",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

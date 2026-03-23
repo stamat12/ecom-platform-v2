@@ -1,0 +1,213 @@
+{
+  "BAG00011": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": null,
+      "Invoice": null,
+      "Invoice Date": null
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 0.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 0.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damentaschen",
+      "eBay Category ID": "169291"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Etiketten"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Restyled Store",
+      "Color": "Beige Braun",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Tasche hat ein kariertes Obermaterial mit braunen Akzenten. Sie ist mit Knöpfen und einer dekorativen Blume verziert. Der untere Teil besteht aus einem weichen, braunen Kunstfell. Sichtbare Angaben: Farbe: Beige Braun; Größe: None.",
+      "Keywords": "Handtasche",
+      "Materials": "Textil Kunstfell"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 12,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "IMG_8723 1.JPG"
+        },
+        {
+          "filename": "IMG_8723.JPG"
+        },
+        {
+          "filename": "IMG_8724 1.JPG"
+        },
+        {
+          "filename": "IMG_8724.JPG"
+        },
+        {
+          "filename": "IMG_8725 1.JPG"
+        },
+        {
+          "filename": "IMG_8725.JPG"
+        },
+        {
+          "filename": "IMG_8726 1.JPG"
+        },
+        {
+          "filename": "IMG_8726.JPG"
+        },
+        {
+          "filename": "IMG_8727 1.JPG"
+        },
+        {
+          "filename": "IMG_8727.JPG"
+        },
+        {
+          "filename": "IMG_8728 1.JPG"
+        },
+        {
+          "filename": "IMG_8728.JPG"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "IMG_8726 1.JPG"
+        },
+        {
+          "filename": "IMG_8728 1.JPG"
+        },
+        {
+          "filename": "IMG_8723 1.JPG"
+        },
+        {
+          "filename": "IMG_8724 1.JPG"
+        },
+        {
+          "filename": "IMG_8727 1.JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "IMG_8726 1.JPG",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/5-MAAeSw0fVpvIub/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8727 1.JPG",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/PfYAAeSwF8RpvIud/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8728 1.JPG",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/IrQAAeSwCc1pvIuf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8723 1.JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/AVMAAeSwD1JpvIuh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "IMG_8724 1.JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/DMsAAeSwR0tpvIuj/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Restyled Store",
+        "Außenmaterial": "Textil",
+        "Abteilung": "Damen",
+        "Stil": "Umhängetasche",
+        "Außenfarbe": "Beige Braun"
+      },
+      "optional": {
+        "Griff-/Gurtmaterial": "Baumwolle",
+        "Futtermaterial": "Baumwolle",
+        "Innenfutter-Farbe": "Beige",
+        "Henkel-/Riemenfarbe": "Beige",
+        "Vintage": "Ja",
+        "Taschenbreite": "30 cm",
+        "Taschenhöhe": "40 cm",
+        "Taschentiefe": "10 cm",
+        "Anlass": "Freizeit",
+        "Form": "Rechteck",
+        "Handgefertigt": "Ja",
+        "Gewebeart": "Strick"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Handtasche",
+      "Product Model": "",
+      "Keyword 1": "kariert",
+      "Keyword 2": "Kunstfell",
+      "Keyword 3": "Dekoration"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "20",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, wird jedoch als „Neu (Sonstige)“ eingestuft, da er handgefertigt aus recyceltem Denim hergestellt wurde. Aufgrund der Wiederverwendung des Materials können leichte Unterschiede in Farbe, Struktur oder kleine Unregelmäßigkeiten auftreten, die Teil des Designs sind und jedes Stück einzigartig machen",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T00:49"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-19T23:49:08.443613Z",
+          "sku": "BAG00011",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

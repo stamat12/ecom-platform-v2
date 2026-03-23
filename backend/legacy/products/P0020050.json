@@ -21,7 +21,7 @@
       "eBay Category ID": "117503"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -101,6 +101,142 @@
         },
         {
           "filename": "P0020050 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020050 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6~sAAeSwhgxpuaR3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/05UAAeSwn-FpuaR6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FfQAAeSwyIRpuaR~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/50cAAeSwwXdpuaSD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/auoAAeSw6YBpuaSG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Fg0AAeSwIY9puaSL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020050 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DiAAAeSwmeNpuaSP/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Einbauleuchte"
+      },
+      "optional": {
+        "Beleuchtungstechnik": "LED",
+        "Material": "ABS",
+        "Lichtfarbe": "Warmweiß",
+        "Farbe": "Weiß",
+        "Marke": "Fondiiz",
+        "Besonderheiten": "Dimmbar",
+        "Anzahl der Lichter": "12",
+        "Steuerungsart": "Mechanische Steuerung",
+        "Energieeffizienzklasse": "A",
+        "Installationsbereich": "Innen",
+        "Stromquelle": "Netzstrom",
+        "Schutzart": "IP44",
+        "Energieverbrauch": "5 W",
+        "Spannung": "220 V",
+        "Lichtrichtung": "Abwärts",
+        "Ursprungsland": "China",
+        "Lichtstrom": "480 lm",
+        "Farbtemperatur": "2700 - 3000 K Warm",
+        "Anzahl der Einheiten": "12",
+        "Modell": "FL0203321",
+        "Montage erforderlich": "Ja",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Stil": "Modern",
+        "Finish": "Bemalt",
+        "Durchmesser": "10 cm",
+        "Gewicht": "0,5 kg",
+        "Höhe": "10 cm",
+        "Länge": "10 cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Einbauleuchte",
+      "Product Model": "Fondiiz FL0203321",
+      "Keyword 1": "wasserdicht",
+      "Keyword 2": "dimmbar",
+      "Keyword 3": "12er Pack"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "32",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T18:55:35.877178Z",
+          "sku": "P0020050",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.174856Z",
+          "sku": "P0020050",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

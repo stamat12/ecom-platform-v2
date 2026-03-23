@@ -2,8 +2,25 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [],
-      "column_filters": {},
+      "selected_columns": [
+        "SKU (Old)",
+        "Json",
+        "Brand",
+        "Category",
+        "Color",
+        "Size",
+        "Condition",
+        "Price Net",
+        "Folder Images",
+        "Supplier Title",
+        "Total Cost Net"
+      ],
+      "column_filters": {
+        "SKU (Old)": "",
+        "Sold": [
+          "Yes"
+        ]
+      },
       "filter_mode": {},
       "page_size": 50,
       "column_widths": {},

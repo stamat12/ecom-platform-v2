@@ -29,6 +29,9 @@ EXCEL_COLUMNS_TO_SYNC = [
     "Materials",          # from Intern Generated Info section
     "Keywords",           # from Intern Generated Info section
     "OP",                 # from OP section
+    "Price Net",          # financial column (coerced to float)
+    "Shipping Net",       # financial column (coerced to float)
+    "Total Cost Net",     # calculated and coerced to float
     "Status",             # from Status section
     "Lager",              # from Warehouse section
     "Images JSON Phone",  # from Images section (count)
@@ -39,6 +42,40 @@ EXCEL_COLUMNS_TO_SYNC = [
 ]
 
 PRODUCTS_DIR = LEGACY / "products"
+
+
+def _coerce_excel_value(col_name: str, value: Any) -> Any:
+    """Convert DB values to Excel-friendly types for specific columns.
+    
+    Ensures numeric columns are written as floats with 2 decimal places.
+    """
+    if value is None:
+        return None
+
+    # Financial columns: coerce to float with 2 decimal places
+    financial_cols = (
+        "OP",
+        getattr(config, "PRICE_NET_COLUMN", "Price Net"),
+        getattr(config, "SHIPPING_NET_COLUMN", "Shipping Net"),
+        getattr(config, "TOTAL_COST_NET_COLUMN", "Total Cost Net"),
+    )
+    
+    if col_name in financial_cols:
+        if isinstance(value, str):
+            cleaned = value.strip().replace(" ", "")
+            if not cleaned:
+                return None
+            # Replace comma with dot (handle European format)
+            cleaned = cleaned.replace(",", ".")
+            try:
+                result = float(cleaned)
+                return round(result, 2)
+            except ValueError:
+                return value
+        if isinstance(value, (int, float)):
+            return round(float(value), 2)
+
+    return value
 
 
 def load_db_inventory() -> pd.DataFrame:
@@ -186,6 +223,8 @@ def sync_db_to_excel(sheet_name: str = "Inventory", columns: Optional[List[str]]
                     new_value = json.dumps(new_value, ensure_ascii=False)
                 elif isinstance(new_value, (list, tuple)):
                     new_value = json.dumps(new_value, ensure_ascii=False)
+
+                new_value = _coerce_excel_value(col_name, new_value)
                 
                 # Detect changes
                 if detect_changes({col_name: current_value}, {col_name: new_value}):

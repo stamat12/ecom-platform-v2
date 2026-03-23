@@ -1,0 +1,215 @@
+{
+  "P0020075": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Elektromaterial/Steckdosen, Schalter & Zubehör/Steckdosen & Buchsen",
+      "eBay Category ID": "259280"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese Steckdosenleiste verfügt über vier Steckdosen und einen USB-Anschluss. Sie ist ideal für den Einsatz zu Hause oder im Büro. Die Leiste hat einen Schalter zur einfachen Bedienung und ist aus robustem Material gefertigt. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Steckdosenleiste mit USB",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "20"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020075 (1).jpg"
+        },
+        {
+          "filename": "P0020075 (2).jpg"
+        },
+        {
+          "filename": "P0020075 (3).jpg"
+        },
+        {
+          "filename": "P0020075 (4).jpg"
+        },
+        {
+          "filename": "P0020075 (5).jpg"
+        },
+        {
+          "filename": "P0020075 (6).jpg"
+        },
+        {
+          "filename": "P0020075 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020075 (1).jpg"
+        },
+        {
+          "filename": "P0020075 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020075 (4).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UlMAAeSwGkFpvbc5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020075 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-ckAAeSwMvVpvbc8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020075 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cocAAeSwihRpvbc~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020075 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9-kAAeSwXERpvbdB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020075 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bHgAAeSwRqppvbdE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020075 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UgAAAeSwb9RpvbdJ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "BEIZKNA"
+      },
+      "optional": {
+        "Material": "Kunststoff",
+        "Farbe": "Weiß",
+        "Anzahl der Steckdosen": "4",
+        "Steckdosen-Typ": "4-fach",
+        "Anwendung": "Haus/Garten",
+        "Bedienungsart": "An/Aus",
+        "Stecker-Typ": "C",
+        "Besonderheiten": "USB-Anschluss",
+        "Produktart": "Steckdosenleiste",
+        "Stromart": "AC",
+        "Maximale Stromstärke": "16 A",
+        "Spannung": "221-240 V",
+        "Nennstrom": "16 A",
+        "Montageart": "Arbeitsfläche",
+        "Zimmer": "Jeder Raum",
+        "Beständigkeitseigenschaften": "Kindersicher"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Steckdosenleiste",
+      "Product Model": "4 Fach",
+      "Keyword 1": "Schalter",
+      "Keyword 2": "Büro ",
+      "Keyword 3": "robust"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "13",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.772497Z",
+          "sku": "P0020075",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.152167Z",
+          "sku": "P0020075",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

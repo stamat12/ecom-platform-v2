@@ -1,0 +1,258 @@
+{
+  "P0020076": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Sicherheitstechnik/Rauch- & Gasmelder",
+      "eBay Category ID": "41970"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "X-Sense",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Modernes Funk-Rauchmelder Set mit Basisstation für zuverlässigen Schutz in Ihrem Zuhause. Das System ermöglicht eine intelligente Vernetzung mehrerer Melder und sorgt so für eine schnelle und flächendeckende Alarmierung im Brandfall.\n\nDank WLAN-Anbindung und App-Unterstützung erhalten Sie sofortige Benachrichtigungen auf Ihr Smartphone, auch wenn Sie nicht zu Hause sind. Die einfache Installation sowie die stabile Verbindung über 2,4 GHz WiFi machen das System besonders benutzerfreundlich und zuverlässig.\n\nIm Set enthalten sind eine Basisstation sowie sechs Rauchmelder, wodurch sich das System ideal für größere Wohnungen oder Häuser eignet. Die Geräte überzeugen durch präzise Raucherkennung und moderne Technik für maximale Sicherheit.\n\nDer Artikel ist neu und wird in Originalverpackung geliefert. Die Verpackung kann leichte Lagerspuren aufweisen, der Inhalt ist unbenutzt und vollständig.",
+      "Keywords": "Funk Rauchmelder Set WLAN App Steuerung mit Basisstation 6er Set",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "110"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020076 (1).jpg"
+        },
+        {
+          "filename": "P0020076 (10).jpg"
+        },
+        {
+          "filename": "P0020076 (11).jpg"
+        },
+        {
+          "filename": "P0020076 (2).jpg"
+        },
+        {
+          "filename": "P0020076 (3).jpg"
+        },
+        {
+          "filename": "P0020076 (4).jpg"
+        },
+        {
+          "filename": "P0020076 (5).jpg"
+        },
+        {
+          "filename": "P0020076 (6).jpg"
+        },
+        {
+          "filename": "P0020076 (7).jpg"
+        },
+        {
+          "filename": "P0020076 (8).jpg"
+        },
+        {
+          "filename": "P0020076 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020076 (2).jpg"
+        },
+        {
+          "filename": "P0020076 (5).jpg"
+        },
+        {
+          "filename": "P0020076 (4).jpg"
+        },
+        {
+          "filename": "P0020076 (6).jpg"
+        },
+        {
+          "filename": "P0020076 (7).jpg"
+        },
+        {
+          "filename": "P0020076 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020076 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ts4AAeSwkoppvbdR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zBUAAeSwE2BpvbdT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/V0EAAeSwOFhpvbdV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sg8AAeSwyw5pvbdX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s8oAAeSwSeZpvbdZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Zs8AAeSwWu5pvbdd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VbAAAeSwmFBpvbdf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/T28AAeSwkoppvbdi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (10).jpg",
+          "order": 9,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020076 (11).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ws4AAeSwUCVpvbdo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020076 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VKYAAeSw5tRpvbdq/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "X-Sense",
+        "Produktart": "Rauchmelder-Set"
+      },
+      "optional": {
+        "Modell": "XS01-M",
+        "Farbe": "Weiß",
+        "Anzahl der Einheiten": "6",
+        "Herstellergarantie": "2 Jahre",
+        "Stromquelle": "Batterie",
+        "Batterie inklusive": "Ja",
+        "Smart Home Kommunikationsprotokoll": "WLAN",
+        "Besonderheiten": "Fernüberwachung, Internet der Dinge kompatibel",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Rauchmelder Set",
+      "Product Model": "XS01-M",
+      "Keyword 1": "WLAN",
+      "Keyword 2": "App Steuerung",
+      "Keyword 3": "Basisstation"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "80",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.790780Z",
+          "sku": "P0020076",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.169514Z",
+          "sku": "P0020076",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

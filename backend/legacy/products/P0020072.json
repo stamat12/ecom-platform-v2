@@ -1,0 +1,227 @@
+{
+  "P0020072": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Enthaarung & Rasur/Rasierer & Rasierklingen/Herren Rasierklingen",
+      "eBay Category ID": "47931"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (Vollständigkeit wie auf den Fotos)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Philips",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Haarschneider, der in einem schwarzen Etui geliefert wird. Es enthält verschiedene Zubehörteile wie Kamm und Ladegerät. Die Oberfläche des Haarschneiders hat eine strukturierte Grifffläche für besseren Halt.",
+      "Keywords": "series 7000 Abwaschbarer Haarschneider",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020072 (1).jpg"
+        },
+        {
+          "filename": "P0020072 (10).jpg"
+        },
+        {
+          "filename": "P0020072 (2).jpg"
+        },
+        {
+          "filename": "P0020072 (3).jpg"
+        },
+        {
+          "filename": "P0020072 (4).jpg"
+        },
+        {
+          "filename": "P0020072 (5).jpg"
+        },
+        {
+          "filename": "P0020072 (6).jpg"
+        },
+        {
+          "filename": "P0020072 (7).jpg"
+        },
+        {
+          "filename": "P0020072 (8).jpg"
+        },
+        {
+          "filename": "P0020072 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020072 (2).jpg"
+        },
+        {
+          "filename": "P0020072 (5).jpg"
+        },
+        {
+          "filename": "P0020072 (10).jpg"
+        },
+        {
+          "filename": "P0020072 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020072 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GFcAAeSwsdppvbcF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mz0AAeSwAJlpvbcJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IbYAAeSwsTFpvbcO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xZgAAeSwyc1pvbcR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (10).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020072 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H-EAAeSwrDZpvbcW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TZAAAeSwPKtpvbcZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020072 (4).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KekAAeSwBf9pvbcc/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Rasierer Patronen",
+        "Marke": "Philips"
+      },
+      "optional": {
+        "Abteilung": "Herren",
+        "Farbe": "Schwarz"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haarschneider",
+      "Product Model": "series 7000",
+      "Keyword 1": "abwaschbar",
+      "Keyword 2": "Zubehör",
+      "Keyword 3": "Ladegerät"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.732539Z",
+          "sku": "P0020072",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.109412Z",
+          "sku": "P0020072",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

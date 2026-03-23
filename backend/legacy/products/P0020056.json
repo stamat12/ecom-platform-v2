@@ -1,0 +1,211 @@
+{
+  "P0020056": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Deckenlampen & Kronleuchter",
+      "eBay Category ID": "117503"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "JOYINLED",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die LED Einbauleuchten haben eine Leistung von 3W und sind mit High Power LEDs ausgestattet. Sie sind dimmbar und bieten eine lange Lebensdauer. Die Aluminiumgehäuse sorgen für eine gute Kühlung und einfache Montage. Sichtbare Angaben: Farbe: Silber.",
+      "Keywords": "LED Einbauleuchten 3W 10 Stk",
+      "Materials": "Aluminium"
+    },
+    "OP": {
+      "OP": "60.0"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 24"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020056 (7).jpg"
+        },
+        {
+          "filename": "P0020056 (11).jpg"
+        },
+        {
+          "filename": "P0020056 (2).jpg"
+        },
+        {
+          "filename": "P0020056 (4).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "eBay Images": [
+        {
+          "filename": "P0020056 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CVYAAeSw1-Npue-~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rAsAAeSwW5Rpue~E/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uuAAAeSwchFpue~H/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (2).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VWAAAeSwMD1pue~K/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OzsAAeSwGmhpue~N/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fe4AAeSwW3Rpue~P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CecAAeSw1-Npue~T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (12).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8fMAAeSwtiBpue~W/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uykAAeSwzNppue~Z/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XxQAAeSwsGZpue~d/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020056 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/N~EAAeSw~dxpue~g/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Akzentbeleuchtung"
+      },
+      "optional": {
+        "Beleuchtungstechnik": "LED",
+        "Material": "Aluminium",
+        "Lichtfarbe": "Warmweiß",
+        "Farbe": "Silber",
+        "Marke": "JOYINLED",
+        "Anzahl der Lichter": "10",
+        "Steuerungsart": "Drehknopf",
+        "Installationsbereich": "Innen",
+        "Stromquelle": "Netzstrom",
+        "Hersteller": "JOYINLED",
+        "Energieverbrauch": "3 W",
+        "Spannung": "230 V",
+        "Lichtrichtung": "Abwärts",
+        "Ursprungsland": "China",
+        "Farbtemperatur": "3000 K",
+        "Anzahl der Einheiten": "10",
+        "Modell": "YDG-20001027L",
+        "Montage erforderlich": "Ja",
+        "Besonderheiten": "Dimmbar",
+        "Energieeffizienzklasse": "A",
+        "Durchmesser": "10 cm",
+        "Gewicht": "1 kg",
+        "Höhe": "10 cm",
+        "Länge": "10 cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Einbauleuchten",
+      "Product Model": "3W",
+      "Keyword 1": "dimmbar",
+      "Keyword 2": "Aluminiumgehäuse",
+      "Keyword 3": "10 Stk"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-30T01:15"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-18T00:15:40.534300Z",
+          "sku": "P0020056",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

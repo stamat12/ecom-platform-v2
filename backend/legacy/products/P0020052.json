@@ -21,7 +21,7 @@
       "eBay Category ID": "180953"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
       "Condition": "Neu mit Karton"
@@ -113,6 +113,173 @@
         },
         {
           "filename": "P0020052 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020052 (9).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/N8QAAeSw3ylpuaS6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (8).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RuEAAeSwlYJpuaTB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (11).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HqMAAeSwq0tpuaTE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (12).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BCoAAeSwo~lpuaTI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (10).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H90AAeSw20xpuaTN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PWUAAeSwSsJpuaTQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (14).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DnkAAeSwFWNpuaTV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (13).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OS0AAeSw3ylpuaTc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (2).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dSMAAeSwezhpuaTf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (3).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QdgAAeSwqd9puaTh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M2IAAeSw7x1puaTk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020052 (5).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7-AAAeSw5A9puaTn/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Amazon Basics",
+        "Produktart": "Heizkissen"
+      },
+      "optional": {
+        "Stromquelle": "Netzstecker",
+        "Farbe": "Grau",
+        "Besonderheiten": "Mit Temperatureinstellungen",
+        "Herstellernummer": "",
+        "Material": "Stoff/Gewebe",
+        "Ursprungsland": "",
+        "Abteilung": "Erwachsene",
+        "Anzahl der Einheiten": "",
+        "Maßeinheit": "",
+        "Ablaufdatum": "",
+        "Herstellergarantie": "",
+        "Modell": ""
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Heizkissen",
+      "Product Model": "",
+      "Keyword 1": "Wärmegerät",
+      "Keyword 2": "Temperaturregelung",
+      "Keyword 3": "Körperanwendung"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-03-21T19:55"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-17T19:05:40.619927Z",
+          "sku": "P0020052",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:55:35.913299Z",
+          "sku": "P0020052",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-17T18:45:15.210748Z",
+          "sku": "P0020052",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

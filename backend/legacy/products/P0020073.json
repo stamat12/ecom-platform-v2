@@ -1,0 +1,228 @@
+{
+  "P0020073": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Autoelektronik, GPS & Sicherheitstechnik/GPS & Navigationsgeräte/Einbau-Navigationsgeräte",
+      "eBay Category ID": "38776"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Junsun",
+      "Color": "Schwarz",
+      "Size": "9 zoll"
+    },
+    "Intern Generated Info": {
+      "More details": "Neues Junsun Car Smart Navigation System mit großem 9 Zoll Touchscreen, ideal zur Aufrüstung Ihres Fahrzeugs. Das Android-basierte Autoradio bietet vielseitige Funktionen wie Navigation, Bluetooth-Verbindung sowie Multimedia-Wiedergabe und sorgt für ein modernes Fahrerlebnis.\n\nDas Modell SXT891C EU verfügt über 1GB RAM und 32GB Speicher und eignet sich perfekt für alltägliche Anwendungen wie Musik, Freisprechen und Navigation. Durch die einfache Bedienung und den großen Bildschirm ist eine komfortable Nutzung während der Fahrt gewährleistet.\n\nDer Artikel ist neu und originalverpackt. Die Verpackung weist lediglich leichte Lagerspuren auf, das Gerät selbst ist unbenutzt und in einwandfreiem Zustand.",
+      "Keywords": "Android Autoradio Navi 1GB 32GB Touchscreen Bluetooth GPS",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "70"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 25"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020073 (1).jpg"
+        },
+        {
+          "filename": "P0020073 (2).jpg"
+        },
+        {
+          "filename": "P0020073 (3).jpg"
+        },
+        {
+          "filename": "P0020073 (4).jpg"
+        },
+        {
+          "filename": "P0020073 (5).jpg"
+        },
+        {
+          "filename": "P0020073 (6).jpg"
+        },
+        {
+          "filename": "P0020073 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020073 (2).jpg"
+        },
+        {
+          "filename": "P0020073 (1).jpg"
+        },
+        {
+          "filename": "P0020073 (4).jpg"
+        },
+        {
+          "filename": "P0020073 (6).jpg"
+        },
+        {
+          "filename": "P0020073 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020073 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Uv4AAeSwpHtpvbci/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JDAAAeSw64xpvbcm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Uz0AAeSweLNpvbco/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/S3gAAeSwFKhpvbcq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U-QAAeSwmFBpvbct/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ch0AAeSwR0tpvbcv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020073 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9lUAAeSw3mtpvbcx/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Hersteller": "Junsun",
+        "Herstellernummer": "SXT891C EU"
+      },
+      "optional": {
+        "Betriebssystem": "Android",
+        "Besonderheiten": "Bluetooth",
+        "Fahrzeugmarke": "Fiat",
+        "Wiedergabeformate": "MP3",
+        "Modell": "SXT891C EU",
+        "Einbaugröße": "2 DIN",
+        "Anschlüsse": "USB",
+        "Farbe": "Schwarz",
+        "Bildschirmgröße": "9 in",
+        "Monitorart": "Ausfahrbar",
+        "Art der Anzeige": "Mehrfarbig",
+        "Ursprungsland": "China",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Einbau-Navigationsgerät",
+      "Product Model": "SXT891C EU",
+      "Keyword 1": "Android",
+      "Keyword 2": "Bluetooth",
+      "Keyword 3": "Touchscreen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "48",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "2",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "P0020073, P0020074",
+      "Schedule Date": "2026-04-07T22:03"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-20T21:03:49.752859Z",
+          "sku": "P0020073",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-20T20:24:35.131499Z",
+          "sku": "P0020073",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}
