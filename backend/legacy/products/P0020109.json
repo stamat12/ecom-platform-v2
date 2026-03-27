@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Wasserkocher",
+      "eBay Category ID": "133705"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton (Verpackung beschädigt)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,10 +38,10 @@
       "Materials": "Edelstahl, Kunststoff"
     },
     "OP": {
-      "OP": ""
+      "OP": "35"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
       "Lager": ""
@@ -112,52 +113,106 @@
         {
           "filename": "P0020109 (3).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/h40AAeSwvqRpxn7R/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (2).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/e3kAAeSwYZ9pxn7T/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (8).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/h6kAAeSwvqRpxn7V/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (1).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SzoAAeSwh-Bpxn7X/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (10).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HFEAAeSwxNtpxn7Y/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (11).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5hoAAeSw5yJpxn7a/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (4).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Vq0AAeSwEhNpxn7c/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (5).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/O7oAAeSw-g1pxn7e/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (7).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cEMAAeSwbCppxn7g/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020109 (9).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q3gAAeSwRXppxn7h/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "Philips 3000 Series"
+      },
+      "optional": {
+        "Produktart": "Wasserkocher",
+        "Marke": "Philips",
+        "Farbe": "Silber",
+        "Material": "Edelstahl, Kunststoff"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wasserkocher",
+      "Product Model": "3000 Series",
+      "Keyword 1": "Edelstahl",
+      "Keyword 2": "kabellos",
+      "Keyword 3": "1,5 Liter"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.786063Z",
+          "sku": "P0020109",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

@@ -1684,5 +1684,47 @@
     "ContactURL": "https://www.wentronic.com/en/contact",
     "cached_at": "2026-03-26T16:46:49.260100",
     "original_brand": "goobay"
+  },
+  "sony": {
+    "CompanyName": "Sony Europe B.V.",
+    "Street1": "The Heights, Brooklands",
+    "Street2": "",
+    "CityName": "Weybridge",
+    "StateOrProvince": "Surrey",
+    "PostalCode": "KT13 0XW",
+    "Country": "GB",
+    "Phone": "00441932716000",
+    "Email": "",
+    "ContactURL": "https://www.sony.co.uk/eu/pages/contact",
+    "cached_at": "2026-03-27T13:57:48.572498",
+    "original_brand": "Sony"
+  },
+  "pyle": {
+    "CompanyName": "Pyle Audio Inc.",
+    "Street1": "1600 63rd Street",
+    "Street2": "",
+    "CityName": "Brooklyn",
+    "StateOrProvince": "NY",
+    "PostalCode": "11204",
+    "Country": "US",
+    "Phone": "0017185351800",
+    "Email": "support@pyleusa.com",
+    "ContactURL": "https://www.pyleaudio.com/ContactUs",
+    "cached_at": "2026-03-27T13:58:40.408932",
+    "original_brand": "PYLE"
+  },
+  "lexibook": {
+    "CompanyName": "Lexibook S.A.",
+    "Street1": "6 avenue des Andes",
+    "Street2": "",
+    "CityName": "Courtaboeuf Cedex",
+    "StateOrProvince": "",
+    "PostalCode": "91952",
+    "Country": "FR",
+    "Phone": "0033169960100",
+    "Email": "contact@lexibook.com",
+    "ContactURL": "https://www.lexibook.com/en/contact",
+    "cached_at": "2026-03-27T13:59:55.125920",
+    "original_brand": "Lexibook"
   }
 }

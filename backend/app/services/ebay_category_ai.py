@@ -578,7 +578,7 @@ def _ai_rerank_category_paths(
 def _rank_category_candidates(entries: List[Dict[str, Any]], context: Dict[str, Any]) -> List[Tuple[float, Dict[str, Any]]]:
 	token_scores = _build_weighted_context_tokens(
 		context,
-		prioritize_keywords_details=not bool(image_paths),
+		prioritize_keywords_details=False,
 	)
 	idf_map = _build_category_token_idf(entries)
 	context_text = _normalize_text(" ".join(str(v or "") for v in context.values()))
@@ -646,11 +646,16 @@ def _ai_choose_category_level(
 	trace_id: str,
 	sku: str,
 	level_index: int,
+	allow_stop_parent: bool = False,
 ) -> Optional[str]:
 	if not options:
 		return None
 	if len(options) == 1:
 		return options[0]
+
+	ai_options = list(options)
+	if allow_stop_parent:
+		ai_options.append("__STOP_AT_PARENT__")
 
 	try:
 		_category_log(
@@ -659,8 +664,8 @@ def _ai_choose_category_level(
 			sku=sku,
 			level=level_index,
 			path_so_far=path_so_far,
-			options_count=len(options),
-			options_preview=options[:20],
+			options_count=len(ai_options),
+			options_preview=ai_options[:20],
 			use_images=bool(image_paths),
 			image_count=len(image_paths),
 		)
@@ -673,11 +678,13 @@ def _ai_choose_category_level(
 					"Du wählst GENAU EINE passende eBay-Unterkategorie auf der aktuellen Ebene. "
 					"Regel: bewerte primär die PRODUKTART/FUNKTION (was ist das Produkt), nicht den Nutzungsort. "
 					"Beispiel: Küchen-/Haushaltsartikel nicht in Büro/Schreibwaren einordnen. "
+					"Priorität: 1) Hauptbilder (main_images), 2) Keywords/More details als Zusatzkontext. "
+					"Wenn keine Option verlässlich passt und ein Elternpfad bereits gewählt wurde, wähle __STOP_AT_PARENT__. "
 					"Wähle nur aus den gegebenen Optionen. "
 					"Antworte NUR als JSON: "
 					'{"choice":"<exakter Optionsname>","reason":"kurz"}.\n\n'
 					f"Aktueller Pfad: /{'/'.join(path_so_far) if path_so_far else ''}\n"
-					f"Optionen auf dieser Ebene: {json.dumps(options, ensure_ascii=False)}\n"
+					f"Optionen auf dieser Ebene: {json.dumps(ai_options, ensure_ascii=False)}\n"
 					f"Produktkontext: {json.dumps(context, ensure_ascii=False)}"
 				),
 			}
@@ -706,7 +713,7 @@ def _ai_choose_category_level(
 			return None
 
 		parsed = json.loads(raw)
-		choice = _normalize_ai_choice(str(parsed.get("choice") or ""), options)
+		choice = _normalize_ai_choice(str(parsed.get("choice") or ""), ai_options)
 		_category_log(
 			"category_ai_level_response",
 			trace_id,
@@ -764,13 +771,17 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 		},
 	)
 
-	token_scores = _build_weighted_context_tokens(context)
+	token_scores = _build_weighted_context_tokens(
+		context,
+		prioritize_keywords_details=not bool(image_paths),
+	)
 	idf_map = _build_category_token_idf(entries)
 	context_text = _normalize_text(" ".join(str(v or "") for v in context.values()))
 
 	prefix_parts: List[str] = []
 	active_entries = entries
 	level_decisions: List[Dict[str, Any]] = []
+	stop_at_parent = False
 
 	for level_index in range(10):
 		option_map = _next_level_option_map(active_entries, prefix_parts)
@@ -783,36 +794,40 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 			ranked_options = [(0.0, chosen_level)]
 		else:
 			ranked_options = _score_level_options(option_map, token_scores, idf_map, context_text)
-			top_option_score = ranked_options[0][0]
-			second_option_score = ranked_options[1][0] if len(ranked_options) > 1 else 0.0
-			option_margin = top_option_score - second_option_score
 
-			# Prefer AI-guided branching early to avoid hard-locking into a wrong tree.
-			# When images are disabled, this is especially important because only text semantics
-			# (keywords/details) should drive the high-level branch.
-			prefer_ai_level = level_index < (3 if image_paths else 2)
+			# PowerShell-style hierarchy: AI always chooses among ALL sibling options.
+			level_options = [opt for _, opt in ranked_options]
+			ai_choice = _ai_choose_category_level(
+				level_options,
+				prefix_parts,
+				context,
+				image_paths,
+				trace_id,
+				sku,
+				level_index,
+				allow_stop_parent=len(prefix_parts) > 0,
+			)
 
-			if (not prefer_ai_level) and top_option_score >= 2.8 and option_margin >= 0.9:
-				chosen_level = ranked_options[0][1]
-				decision_source = "deterministic"
-			else:
-				option_limit = 12 if image_paths else 24
-				level_options = [opt for _, opt in ranked_options[:option_limit]]
-				ai_choice = _ai_choose_category_level(
-					level_options,
-					prefix_parts,
-					context,
-					image_paths,
-					trace_id,
-					sku,
-					level_index,
+			if ai_choice == "__STOP_AT_PARENT__":
+				decision_source = "ai_stop_parent"
+				level_decisions.append(
+					{
+						"level": level_index + 1,
+						"chosen": "__STOP_AT_PARENT__",
+						"source": decision_source,
+						"options_count": len(option_map),
+						"options_preview": [opt for _, opt in ranked_options[:12]],
+					}
 				)
-				if ai_choice and ai_choice in option_map:
-					chosen_level = ai_choice
-					decision_source = "ai_level"
-				else:
-					chosen_level = ranked_options[0][1]
-					decision_source = "fallback_top_option"
+				stop_at_parent = True
+				break
+
+			if ai_choice and ai_choice in option_map:
+				chosen_level = ai_choice
+				decision_source = "ai_level"
+			else:
+				chosen_level = ranked_options[0][1]
+				decision_source = "fallback_top_option"
 
 		prefix_parts.append(chosen_level)
 		active_entries = option_map.get(chosen_level, active_entries)
@@ -823,7 +838,7 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 				"chosen": chosen_level,
 				"source": decision_source,
 				"options_count": len(option_map),
-				"options_preview": [opt for _, opt in ranked_options[:8]],
+				"options_preview": [opt for _, opt in ranked_options[:12]],
 			}
 		)
 
@@ -832,6 +847,33 @@ def detect_and_save_ebay_category_for_sku(sku: str, use_images: bool = True) -> 
 			break
 
 	final_entries = active_entries if active_entries else entries
+	if stop_at_parent and prefix_parts:
+		exact_parent_entries = [e for e in entries if (e.get("parts") or []) == prefix_parts]
+		if exact_parent_entries:
+			chosen_entry = exact_parent_entries[0]
+			_save_selected_category(sku, product_json, chosen_entry)
+			selected_levels = chosen_entry.get("parts") or _path_parts(chosen_entry.get("category_path", ""))
+
+			_category_log(
+				"category_detect_saved",
+				trace_id,
+				sku=sku,
+				category_path=chosen_entry["category_path"],
+				category_id=str(chosen_entry.get("category_id") or ""),
+				selected_levels=selected_levels,
+				source="ai_stop_parent_exact",
+				used_images=len(image_paths),
+			)
+
+			return {
+				"success": True,
+				"sku": sku,
+				"category_path": chosen_entry["category_path"],
+				"category_id": str(chosen_entry.get("category_id") or ""),
+				"selected_levels": selected_levels,
+				"source": "ai_stop_parent_exact",
+				"used_images": len(image_paths),
+			}
 	ranked = _score_entries(final_entries, token_scores, idf_map, context_text)
 	if not ranked:
 		_category_log("category_detect_no_ranked_candidates", trace_id, sku=sku)

@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/TV, Video & Audio/Heim-Audio & HiFi/Plattenspieler/Turntables",
+      "eBay Category ID": "48647"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,7 +38,7 @@
       "Materials": "Kunststoff, Metall"
     },
     "OP": {
-      "OP": ""
+      "OP": "70"
     },
     "Status": {
       "Status": ""
@@ -121,52 +122,109 @@
         {
           "filename": "P0020106 (5).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vYoAAeSw33ZpxnHE/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (4).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-9MAAeSw3-dpxnHH/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (6).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3N4AAeSw3DRpxnHK/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (7).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-sgAAeSwLTxpxnHM/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (8).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ku4AAeSwpFBpxnHP/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (9).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bFoAAeSwXZ5pxnHS/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (2).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BbAAAeSwajlpxnHV/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (3).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-RsAAeSwlONpxnHY/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (10).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~EUAAeSwWENpxnHa/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020106 (1).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/x5UAAeSwi5hpxnHc/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "CYBERLUX",
+        "Modell": "CL-3030"
+      },
+      "optional": {
+        "Besonderheiten": "USB, SD-Kartenfunktion",
+        "Farbe": "Braun",
+        "Konnektivität": "USB 2.0",
+        "Abspielgeschwindigkeit": "33,3 RPM",
+        "Audioausgänge": "Stereo L/R RCA",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Plattenspieler",
+      "Product Model": "CL-3030",
+      "Keyword 1": "tragbar",
+      "Keyword 2": "USB",
+      "Keyword 3": "SD-Kartenfunktion"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "30",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass der Artikel leichte Mängel oder defekte Teile aufweisen kann. Die Funktionalität ist jedoch weiterhin gegeben und der Artikel ist verwendbar.  Die Originalverpackung kann zudem leichte Lager- oder Transportspuren aufweisen (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, mögliche Mängel sowie die Vollständigkeit sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T13:01"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:01:24.919843Z",
+          "sku": "P0020106",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

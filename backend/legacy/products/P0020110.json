@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/TV, Video & Audio/DJ-Equipment/Lautsprecher & Monitore",
+      "eBay Category ID": "69967"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton (Verpackung beschädigt)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff"
     },
     "OP": {
-      "OP": ""
+      "OP": "70"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "box25"
     },
     "Images": {
       "schema_version": "1.0",
@@ -142,62 +143,119 @@
         {
           "filename": "P0020110 (2).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/CSgAAeSw2mBpxn7m/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (3).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/W6sAAeSwfc9pxn7o/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (6).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QuMAAeSwPsppxn7q/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (8).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Vx4AAeSwEhNpxn7t/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (9).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/U7gAAeSw0Wxpxn7u/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (16).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GV8AAeSwEZ1pxn7w/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (17).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LwUAAeSwc3Fpxn7y/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (15).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/O9cAAeSwpLhpxn70/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (14).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PNMAAeSwOKhpxn72/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (12).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VQ8AAeSwIAhpxn74/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (11).jpg",
           "order": 11,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QSUAAeSwxSVpxn76/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020110 (10).jpg",
           "order": 12,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/f1IAAeSwPHhpxn78/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Megafon",
+        "Marke": "PYLE",
+        "Konnektivität": "Kabellos",
+        "Modell": "PMP50"
+      },
+      "optional": {
+        "Farbe": "Blau Weiß",
+        "RMS-Leistung": "50 W",
+        "Material": "Kunststoff",
+        "Herstellergarantie": "1 Jahr"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Megafon",
+      "Product Model": "PMP50",
+      "Keyword 1": "50 Watt",
+      "Keyword 2": "Sirenenfunktion",
+      "Keyword 3": "Tragegurt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "53",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.811816Z",
+          "sku": "P0020110",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

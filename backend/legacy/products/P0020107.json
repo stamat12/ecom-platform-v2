@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Toaster",
+      "eBay Category ID": "77285"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton (Die Verpackung weist leichte Beschädigungen auf. Ein Teil/Element ist beschädigt, siehe Fotos.)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -33,11 +34,11 @@
     },
     "Intern Generated Info": {
       "More details": "Der Langschlitztoaster hat variable Breite für unterschiedliche Brotsorten. Er verfügt über eine integrierte Brötchenröstfunktion und eine Auftaufunktion. Die Steuerung erfolgt über einen Drehregler mit Kontrollleuchte. Das Gehäuse ist aus Edelstahl und hat eine moderne Optik. Sichtbare Angaben: Farbe: Silber.",
-      "Keywords": "Langschlitztoaster Toaster",
+      "Keywords": "Toaster",
       "Materials": "Edelstahl, Kunststoff"
     },
     "OP": {
-      "OP": ""
+      "OP": "45"
     },
     "Status": {
       "Status": ""
@@ -139,62 +140,124 @@
         {
           "filename": "P0020107 (10).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wfwAAeSwtRBpxnHj/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (2).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~P0AAeSwk2dpxnHl/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (3).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vwMAAeSwCEdpxnHn/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (4).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qtcAAeSwsl9pxnHp/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (5).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kDsAAeSwSqppxnHr/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (6).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4PcAAeSwWIVpxnHt/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (7).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6AkAAeSwdIJpxnHv/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (8).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bdkAAeSwXZ5pxnHw/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (9).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mN4AAeSwnQ5pxnHz/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (14).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~~kAAeSwASBpxnH1/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (11).jpg",
           "order": 11,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-zkAAeSwWtdpxnH4/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020107 (12).jpg",
           "order": 12,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sacAAeSwnhhpxnH6/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "Severin AT 2509"
+      },
+      "optional": {
+        "Anzahl der Scheiben": "2",
+        "Anzahl der Einstellungen/Programme": "4",
+        "Leistung": "1400 W",
+        "Set enthält": "Toaster",
+        "Marke": "Severin",
+        "Farbe": "Silber",
+        "Produktart": "2-Scheiben-Toaster-Set",
+        "Besonderheiten": "Auftaufunktion, Brötchenaufsatz",
+        "Material": "Edelstahl, Kunststoff",
+        "Stromquelle": "Netzstrom",
+        "Herstellergarantie": "2 Jahre",
+        "Herstellernummer": "AT 2509"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Toaster",
+      "Product Model": "AT 2509",
+      "Keyword 1": "Langschlitztoaster",
+      "Keyword 2": "Brötchenröstfunktion",
+      "Keyword 3": "Auftaufunktion"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T13:01"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:01:24.942105Z",
+          "sku": "P0020107",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

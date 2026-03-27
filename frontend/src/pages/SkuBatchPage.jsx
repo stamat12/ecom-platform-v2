@@ -82,6 +82,7 @@ export default function SkuBatchPage() {
   const [categoryDetectingBySku, setCategoryDetectingBySku] = useState({}); // { sku: boolean }
   const [categoryDetectingBatch, setCategoryDetectingBatch] = useState(false);
   const [categoryDetectUseImages, setCategoryDetectUseImages] = useState(true);
+  const [categoryDetectProgress, setCategoryDetectProgress] = useState({ current: 0, total: 0, sku: "" });
 
   // AI Enrichment state
   const [selectedSkusForEnrichment, setSelectedSkusForEnrichment] = useState(new Set()); // Set of SKUs to enrich
@@ -97,6 +98,9 @@ export default function SkuBatchPage() {
   const [bulkEbayListingOpen, setBulkEbayListingOpen] = useState(false);
   const [bulkEbayListingSaving, setBulkEbayListingSaving] = useState(false);
   const [bulkEbayListingCreating, setBulkEbayListingCreating] = useState(false);
+  const [bulkEbaySeoOpen, setBulkEbaySeoOpen] = useState(false);
+  const [bulkEbaySeoSaving, setBulkEbaySeoSaving] = useState(false);
+  const [bulkEbaySeoEdits, setBulkEbaySeoEdits] = useState({}); // { sku: { product_type, product_model, keyword_1, keyword_2, keyword_3 } }
   const [bulkScheduleDate, setBulkScheduleDate] = useState("");
 
   // eBay state
@@ -125,6 +129,7 @@ export default function SkuBatchPage() {
   const [ebaySeoFields, setEbaySeoFields] = useState({}); // { sku: { product_type, product_model, keyword_1, keyword_2, keyword_3 } }
   const [ebayEditingSeo, setEbayEditingSeo] = useState({}); // { sku: boolean }
   const [ebaySavingSeo, setEbaySavingSeo] = useState({}); // { sku: boolean }
+  const ebaySeoKeys = ["product_type", "product_model", "keyword_1", "keyword_2", "keyword_3"];
   const SHIPPING_LISTING_FIXED = 4.99;
 
   // Filter state
@@ -1067,31 +1072,106 @@ export default function SkuBatchPage() {
     }
 
     setCategoryDetectingBatch(true);
+    setCategoryDetectProgress({ current: 0, total: skus.length, sku: "" });
     try {
-      const res = await fetch("/api/ai/ebay-category/batch", {
+      const streamRes = await fetch("/api/ai/ebay-category/batch/stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ skus, use_images: categoryDetectUseImages }),
       });
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.detail || data.message || "Batch category detection failed");
+
+      if (!streamRes.ok) {
+        let message = "Category detection failed";
+        try {
+          const err = await streamRes.json();
+          message = err?.detail || err?.message || message;
+        } catch {
+          // Keep generic message if response body isn't JSON.
+        }
+        throw new Error(message);
       }
 
-      const results = Array.isArray(data.results) ? data.results : [];
-      const successful = results.filter((r) => r.success);
-      const failed = results.filter((r) => !r.success);
+      if (!streamRes.body) {
+        throw new Error("Streaming is not available in this browser");
+      }
 
-      successful.forEach((r) => {
-        applyDetectedCategoryToLocalState(r.sku, r.category_path, r.category_id);
-      });
-      await Promise.all(successful.map((r) => refreshProductDetailsForSku(r.sku)));
+      const reader = streamRes.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let completedSummary = null;
 
-      alert(`✅ Category AI completed: ${successful.length} succeeded, ${failed.length} failed`);
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) {
+          break;
+        }
+
+        buffer += decoder.decode(value, { stream: true });
+        const chunks = buffer.split("\n\n");
+        buffer = chunks.pop() || "";
+
+        for (const chunk of chunks) {
+          const dataLines = chunk
+            .split("\n")
+            .filter((line) => line.startsWith("data:"))
+            .map((line) => line.slice(5).trim());
+
+          if (dataLines.length === 0) {
+            continue;
+          }
+
+          let payload;
+          try {
+            payload = JSON.parse(dataLines.join("\n"));
+          } catch {
+            continue;
+          }
+
+          if (payload.type === "start") {
+            const total = Number(payload.total || skus.length || 0);
+            setCategoryDetectProgress({ current: 0, total, sku: "" });
+            continue;
+          }
+
+          if (payload.type === "progress") {
+            const result = payload.result || {};
+            const sku = payload.sku || result.sku || "";
+            const current = Number(payload.current || 0);
+            const total = Number(payload.total || skus.length || 0);
+
+            if (payload.success && sku) {
+              applyDetectedCategoryToLocalState(sku, result.category_path, result.category_id);
+              refreshProductDetailsForSku(sku);
+            } else if (!payload.success && sku) {
+              console.error(`Category detection failed for ${sku}:`, result.message || "Unknown error");
+            }
+
+            setCategoryDetectProgress({ current, total, sku });
+            continue;
+          }
+
+          if (payload.type === "complete") {
+            completedSummary = payload;
+            continue;
+          }
+
+          if (payload.type === "error") {
+            throw new Error(payload.message || "Category detection stream failed");
+          }
+        }
+      }
+
+      const succeeded = Number(completedSummary?.succeeded || 0);
+      const failed = Number(completedSummary?.failed || 0);
+      const total = Number(completedSummary?.total || skus.length || 0);
+      setCategoryDetectProgress({ current: total, total, sku: "" });
+
+      alert(`✅ Category AI completed: ${succeeded} succeeded, ${failed} failed`);
     } catch (e) {
       alert(`❌ ${e.message}`);
     } finally {
       setCategoryDetectingBatch(false);
+      setCategoryDetectProgress((prev) => ({ ...prev, sku: "" }));
     }
   };
 
@@ -1618,6 +1698,37 @@ export default function SkuBatchPage() {
   }, [bulkEbayListingOpen, selectedSkusForEbayListingEdit]);
 
   useEffect(() => {
+    if (!bulkEbaySeoOpen) return;
+
+    let cancelled = false;
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+
+    const init = async () => {
+      const next = {};
+      for (const sku of skus) {
+        await loadProductDetails(sku);
+        loadEbayImageOrders(sku);
+        const loaded = ebaySeoFields[sku] || await loadEbaySeoFields(sku);
+        next[sku] = {
+          product_type: loaded?.product_type || "",
+          product_model: loaded?.product_model || "",
+          keyword_1: loaded?.keyword_1 || "",
+          keyword_2: loaded?.keyword_2 || "",
+          keyword_3: loaded?.keyword_3 || "",
+        };
+      }
+      if (!cancelled) {
+        setBulkEbaySeoEdits(next);
+      }
+    };
+
+    init();
+    return () => {
+      cancelled = true;
+    };
+  }, [bulkEbaySeoOpen, selectedSkusForEbayListingEdit]);
+
+  useEffect(() => {
     if (!bulkProductDetailsOpen) return;
     const skus = Array.from(selectedSkusForProductDetailsEdit);
     const init = async () => {
@@ -2081,12 +2192,16 @@ export default function SkuBatchPage() {
       if (res.ok) {
         const data = await res.json();
         setEbaySeoFields(prev => ({ ...prev, [sku]: data }));
+        return data;
       } else {
         // Initialize with empty fields if not found
-        setEbaySeoFields(prev => ({ ...prev, [sku]: { product_type: "", product_model: "", keyword_1: "", keyword_2: "", keyword_3: "" } }));
+        const emptyData = { product_type: "", product_model: "", keyword_1: "", keyword_2: "", keyword_3: "" };
+        setEbaySeoFields(prev => ({ ...prev, [sku]: emptyData }));
+        return emptyData;
       }
     } catch (e) {
       console.error("Failed to load eBay SEO fields:", e);
+      return { product_type: "", product_model: "", keyword_1: "", keyword_2: "", keyword_3: "" };
     }
   };
 
@@ -2118,6 +2233,52 @@ export default function SkuBatchPage() {
       alert(`Error: ${e.message}`);
     } finally {
       setEbaySavingSeo(prev => ({ ...prev, [sku]: false }));
+    }
+  };
+
+  const handleBulkEbaySeoSave = async () => {
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for eBay SEO bulk edit");
+      return;
+    }
+
+    setBulkEbaySeoSaving(true);
+    let succeeded = 0;
+    let failed = 0;
+
+    for (const sku of skus) {
+      const currentData = bulkEbaySeoEdits[sku] || ebaySeoFields[sku] || {};
+      try {
+        const payload = {
+          product_type: (currentData.product_type || "").trim(),
+          product_model: (currentData.product_model || "").trim(),
+          keyword_1: (currentData.keyword_1 || "").trim(),
+          keyword_2: (currentData.keyword_2 || "").trim(),
+          keyword_3: (currentData.keyword_3 || "").trim(),
+        };
+
+        const res = await fetch(`/api/skus/${encodeURIComponent(sku)}/ebay-seo`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.ok) {
+          succeeded += 1;
+          setEbaySeoFields(prev => ({ ...prev, [sku]: payload }));
+        } else {
+          failed += 1;
+        }
+      } catch (e) {
+        failed += 1;
+      }
+    }
+
+    setBulkEbaySeoSaving(false);
+    alert(`✅ eBay SEO bulk save completed: ${succeeded} succeeded, ${failed} failed`);
+    if (succeeded > 0) {
+      setBulkEbaySeoOpen(false);
     }
   };
 
@@ -2493,6 +2654,109 @@ export default function SkuBatchPage() {
         </div>
       </Modal>
 
+      <Modal open={bulkEbaySeoOpen} onClose={() => setBulkEbaySeoOpen(false)}>
+        <div style={{ width: "95vw", maxWidth: "1500px" }}>
+          <div style={{ fontSize: 16, fontWeight: "bold", marginBottom: 8 }}>Bulk Edit eBay SEO Fields</div>
+          <div style={{ fontSize: 12, color: "#666", marginBottom: 12 }}>
+            Edit Product Type, Product Model, and Keywords for {selectedSkusForEbayListingEdit.size} selected SKU(s)
+          </div>
+
+          <div style={{ overflowX: "auto", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflowY: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
+              <thead>
+                <tr style={{ background: "#f5f5f5", borderBottom: "2px solid #e0e0e0", position: "sticky", top: 0 }}>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap", minWidth: 80 }}>Image</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>SKU</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Brand</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Color</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Size</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Product Type</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Product Model</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Keyword 1</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", borderRight: "1px solid #e0e0e0", whiteSpace: "nowrap" }}>Keyword 2</th>
+                  <th style={{ padding: 6, textAlign: "left", fontWeight: "bold", whiteSpace: "nowrap" }}>Keyword 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.from(selectedSkusForEbayListingEdit).map((sku) => {
+                  const allImages = items.find(item => item.sku === sku)?.data?.images || [];
+                  const ebayOrders = ebayImageOrders[sku] || {};
+                  const imageWithOrder1 = allImages.find(img => ebayOrders[img.filename] === 1);
+                  const displayImage = imageWithOrder1 || allImages[0];
+                  const brand = getDetailValueByName(sku, "Brand") || "";
+                  const color = getDetailValueByName(sku, "Color") || "";
+                  const size = getDetailValueByName(sku, "Size") || "";
+
+                  return (
+                  <tr key={sku} style={{ borderBottom: "1px solid #e0e0e0" }}>
+                    <td style={{ padding: 4, borderRight: "1px solid #e0e0e0", textAlign: "center" }}>
+                      {displayImage?.thumb_url ? (
+                        <img
+                          src={displayImage.thumb_url}
+                          alt={displayImage.filename}
+                          style={{ width: 52, height: 52, objectFit: "cover", borderRadius: 3, border: "1px solid #ddd", cursor: "pointer" }}
+                          onClick={() => openImagePreview(sku, displayImage, "bulk")}
+                          title={`${displayImage.filename} (Order: ${ebayOrders[displayImage.filename] || "N/A"})`}
+                        />
+                      ) : (
+                        <div style={{ width: 52, height: 52, background: "#f0f0f0", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", color: "#999", fontSize: 10 }}>
+                          No img
+                        </div>
+                      )}
+                    </td>
+                    <td style={{ padding: 6, fontWeight: "bold", borderRight: "1px solid #e0e0e0", minWidth: 90 }}>{sku}</td>
+                    <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 110, fontSize: 10 }}>{brand || <em style={{ color: "#999" }}>empty</em>}</td>
+                    <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 110, fontSize: 10 }}>{color || <em style={{ color: "#999" }}>empty</em>}</td>
+                    <td style={{ padding: 6, borderRight: "1px solid #e0e0e0", minWidth: 90, fontSize: 10 }}>{size || <em style={{ color: "#999" }}>empty</em>}</td>
+                    {ebaySeoKeys.map((key, idx) => (
+                      <td
+                        key={`${sku}-${key}`}
+                        style={{
+                          padding: 4,
+                          borderRight: idx < ebaySeoKeys.length - 1 ? "1px solid #e0e0e0" : "none",
+                          minWidth: 180,
+                        }}
+                      >
+                        <input
+                          type="text"
+                          value={bulkEbaySeoEdits[sku]?.[key] || ""}
+                          onChange={(e) => setBulkEbaySeoEdits((prev) => ({
+                            ...prev,
+                            [sku]: {
+                              ...(prev[sku] || {}),
+                              [key]: e.target.value,
+                            }
+                          }))}
+                          style={{ width: "100%", padding: 5, border: "1px solid #ce93d8", borderRadius: 3, boxSizing: "border-box", fontSize: 10 }}
+                        />
+                      </td>
+                    ))}
+                  </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
+            <button
+              onClick={() => setBulkEbaySeoOpen(false)}
+              disabled={bulkEbaySeoSaving}
+              style={{ padding: "8px 12px", opacity: bulkEbaySeoSaving ? 0.6 : 1 }}
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleBulkEbaySeoSave}
+              disabled={bulkEbaySeoSaving}
+              style={{ padding: "8px 12px", background: "#7b1fa2", color: "white", border: "none", borderRadius: 4, cursor: bulkEbaySeoSaving ? "not-allowed" : "pointer" }}
+            >
+              {bulkEbaySeoSaving ? "Saving..." : "Save SEO For All"}
+            </button>
+          </div>
+        </div>
+      </Modal>
+
       <Modal open={bulkProductDetailsOpen} onClose={() => setBulkProductDetailsOpen(false)}>
         <div style={{ width: "98vw", maxWidth: "1900px" }}>
           <div style={{ fontSize: 16, fontWeight: "bold", marginBottom: 8 }}>Bulk Edit Product Details</div>
@@ -2582,6 +2846,25 @@ export default function SkuBatchPage() {
             </button>
             </div>
           </div>
+
+          {categoryDetectingBatch && categoryDetectProgress.total > 0 && (
+            <div style={{ marginBottom: 8, padding: "8px 10px", background: "#f3e5f5", border: "1px solid #ce93d8", borderRadius: 6 }}>
+              <div style={{ fontSize: 12, color: "#4a148c", marginBottom: 6 }}>
+                Detecting categories: {categoryDetectProgress.current} / {categoryDetectProgress.total}
+                {categoryDetectProgress.sku ? ` • ${categoryDetectProgress.sku}` : ""}
+              </div>
+              <div style={{ width: "100%", height: 6, background: "#e1bee7", borderRadius: 999, overflow: "hidden" }}>
+                <div
+                  style={{
+                    width: `${Math.min(100, (categoryDetectProgress.current / Math.max(1, categoryDetectProgress.total)) * 100)}%`,
+                    height: "100%",
+                    background: "#7b1fa2",
+                    transition: "width 0.25s ease",
+                  }}
+                />
+              </div>
+            </div>
+          )}
 
           <div style={{ overflowX: "hidden", marginBottom: 12, border: "1px solid #e0e0e0", borderRadius: 6, maxHeight: "65vh", overflowY: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 10, tableLayout: "fixed" }}>
@@ -3012,6 +3295,25 @@ export default function SkuBatchPage() {
               Clear All
             </button>
           </div>
+
+          {categoryDetectingBatch && categoryDetectProgress.total > 0 && (
+            <div style={{ marginTop: 6, marginBottom: 2, padding: "6px 8px", background: "#f3e5f5", border: "1px solid #ce93d8", borderRadius: 4, minWidth: 320 }}>
+              <div style={{ fontSize: 11, color: "#4a148c", marginBottom: 4 }}>
+                Detecting categories: {categoryDetectProgress.current} / {categoryDetectProgress.total}
+                {categoryDetectProgress.sku ? ` • ${categoryDetectProgress.sku}` : ""}
+              </div>
+              <div style={{ width: "100%", height: 5, background: "#e1bee7", borderRadius: 999, overflow: "hidden" }}>
+                <div
+                  style={{
+                    width: `${Math.min(100, (categoryDetectProgress.current / Math.max(1, categoryDetectProgress.total)) * 100)}%`,
+                    height: "100%",
+                    background: "#7b1fa2",
+                    transition: "width 0.25s ease",
+                  }}
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -3328,6 +3630,21 @@ export default function SkuBatchPage() {
               }}
             >
               ✏️ Bulk Edit
+            </button>
+            <button
+              onClick={() => setBulkEbaySeoOpen(true)}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: "#7b1fa2",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              🔎 SEO Bulk Edit
             </button>
             <button
               onClick={handleBulkEbayCreateListings}

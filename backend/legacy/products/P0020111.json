@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Sonstige",
+      "eBay Category ID": "20685"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +38,13 @@
       "Materials": "Edelstahl"
     },
     "OP": {
-      "OP": ""
+      "OP": "30"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "box 30"
     },
     "Images": {
       "schema_version": "1.0",
@@ -109,47 +110,105 @@
         {
           "filename": "P0020111 (3).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cf8AAeSwJE9pxn8E/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (4).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/dxQAAeSwh91pxn8J/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (1).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/R3AAAeSw~Zdpxn8M/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (10).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PJgAAeSwNiRpxn8O/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (8).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M0cAAeSwrzppxn8R/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (9).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PPEAAeSw-g1pxn8T/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (5).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GlwAAeSwEZ1pxn8V/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (6).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iDAAAeSwQHtpxn8X/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020111 (7).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-QcAAeSw16Zpxn8Z/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "Bosch TCZ6003"
+      },
+      "optional": {
+        "Marke": "Bosch",
+        "Material": "Edelstahl",
+        "Anzahl der Bleche": "3",
+        "Set enthält": "Mikrowelle",
+        "Produktart": "Automatische Pastamaschine/-presse",
+        "Farbe": "Silber",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Passiergerät",
+      "Product Model": "Rotary Food Mill",
+      "Keyword 1": "Edelstahl",
+      "Keyword 2": "Püriergerät",
+      "Keyword 3": "Siebe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "18",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.835296Z",
+          "sku": "P0020111",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

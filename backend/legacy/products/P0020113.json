@@ -17,19 +17,20 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Spielzeug/Lernspielzeug/Kindercomputer/Sonstige",
+      "eBay Category ID": "125338"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "KU",
       "Brand": "Lexibook",
       "Color": "Lila",
-      "Size": "None"
+      "Size": ""
     },
     "Intern Generated Info": {
       "More details": "Dieser bilinguale Lernlaptop bietet 170 Aktivitäten in Englisch und Französisch. Er hat ein großes LCD-Display mit Animationen und wird mit einer Maus geliefert. Ideal für Kinder ab 4 Jahren, um spielerisch zu lernen. Sichtbare Angaben: Farbe: Lila; Größe: None.",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff"
     },
     "OP": {
-      "OP": ""
+      "OP": "50"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "box24"
     },
     "Images": {
       "schema_version": "1.0",
@@ -115,42 +116,93 @@
         {
           "filename": "P0020113 (2).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gMcAAeSwPHhpxn86/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (3).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ie8AAeSw3ulpxn88/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (4).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PTwAAeSw33Zpxn89/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (5).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SRgAAeSwdU1pxn8~/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (6).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/P~sAAeSw0SNpxn9A/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (7).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cRsAAeSw5o1pxn9C/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (8).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NP0AAeSwoB1pxn9E/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020113 (1).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VAMAAeSwU4Jpxn9G/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Lerninhalt": "Sprachen, Rechnen, Musik, Logik",
+        "Marke": "Lexibook",
+        "Altersempfehlung": "3-4 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Lernlaptop",
+      "Product Model": "",
+      "Keyword 1": "bilingual",
+      "Keyword 2": "LCD-Display",
+      "Keyword 3": "Aktivitäten"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "34",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.884409Z",
+          "sku": "P0020113",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

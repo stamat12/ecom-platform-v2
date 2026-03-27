@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/PC- & Videospiele/Zubehör/Sonstige",
+      "eBay Category ID": "49230"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +38,13 @@
       "Materials": "Kunststoff, Metall"
     },
     "OP": {
-      "OP": ""
+      "OP": "80"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "box24"
     },
     "Images": {
       "schema_version": "1.0",
@@ -124,57 +125,116 @@
         {
           "filename": "P0020108 (2).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EEAAAeSwZbVpxn60/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (3).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gFEAAeSwvpRpxn62/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (4).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PksAAeSwUxBpxn63/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (5).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OdkAAeSwNiRpxn65/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (7).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eFsAAeSwb5xpxn68/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (8).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RlkAAeSwu-Zpxn6-/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (9).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/FtoAAeSwtLtpxn7B/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (11).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PpcAAeSwUxBpxn7D/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (10).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XEAAAeSwyL1pxn7F/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (1).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NNQAAeSwY8Fpxn7H/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020108 (6).jpg",
           "order": 11,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/F5sAAeSwSVZpxn7I/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Sony"
+      },
+      "optional": {
+        "Plattform": "PlayStation 5",
+        "Produktart": "Disc Laufwerk",
+        "Modell": "CFI-ZDD1",
+        "Herstellernummer": "E15500PNE113S0690",
+        "Land": "China",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Herstellergarantie": "1 Jahr",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Disc-Laufwerk",
+      "Product Model": "CFI-ZDD1",
+      "Keyword 1": "Blu-ray",
+      "Keyword 2": "PS5 Digital Edition",
+      "Keyword 3": "Zubehör"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.763056Z",
+          "sku": "P0020108",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

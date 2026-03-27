@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Wasserkocher",
+      "eBay Category ID": "133705"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton (Verpackung beschädigt)"
     },
     "Intern Product Info": {
       "Gender": "",
@@ -37,13 +38,13 @@
       "Materials": "Edelstahl, Kunststoff"
     },
     "OP": {
-      "OP": ""
+      "OP": "85"
     },
     "Status": {
-      "Status": ""
+      "Status": "Ready"
     },
     "Warehouse": {
-      "Lager": ""
+      "Lager": "box 30"
     },
     "Images": {
       "schema_version": "1.0",
@@ -121,57 +122,120 @@
         {
           "filename": "P0020112 (4).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OLwAAeSwgXdpxn8g/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (7).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PNkAAeSw7rhpxn8i/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (8).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OqEAAeSw63Bpxn8k/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (9).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/aGAAAeSwPO5pxn8m/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (11).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OgoAAeSwzkppxn8o/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (10).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TMwAAeSwaeRpxn8q/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (2).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gB0AAeSwAUppxn8s/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (3).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iK4AAeSwQHtpxn8u/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (1).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TIYAAeSwXXlpxn8w/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (5).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/azEAAeSw-cBpxn8z/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020112 (6).jpg",
           "order": 11,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QuAAAeSwtDdpxn80/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "HD9359"
+      },
+      "optional": {
+        "Marke": "Philips",
+        "Kapazität": "1,7 L",
+        "Leistung": "2200 W",
+        "Stromquelle": "Netzstrom",
+        "Material": "Edelstahl, Kunststoff",
+        "Produktart": "Wasserkocher",
+        "Farbe": "Silber",
+        "Besonderheiten": "4 voreingestellte Temperaturstufen, Automatisch",
+        "Ursprungsland": "China",
+        "Spannung": "220 V",
+        "Tiefe": "20,0 cm",
+        "Höhe": "25,4 cm",
+        "Kabellänge": "155 cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wasserkocher",
+      "Product Model": "HD9359",
+      "Keyword 1": "Edelstahl",
+      "Keyword 2": "2200W",
+      "Keyword 3": "Temperaturstufen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "65",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren. Der Artikel befindet sich im Originalzustand und ist vollständig mit vorhandenem Zubehör, Etiketten oder Aufklebern, sofern vom Hersteller vorgesehen.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand des Artikels und der Verpackung ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T13:57"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:57:19.859406Z",
+          "sku": "P0020112",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

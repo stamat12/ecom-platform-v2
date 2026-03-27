@@ -17,13 +17,14 @@
       "Total Cost Net": 8.0
     },
     "Ebay Category": {
-      "Category": ""
+      "Category": "/Spielzeug/Lernspielzeug/Kindercomputer/Sonstige",
+      "eBay Category ID": "125338"
     },
     "EAN": {
-      "EAN": null
+      "EAN": ""
     },
     "Product Condition": {
-      "Condition": ""
+      "Condition": "Neu mit Karton"
     },
     "Intern Product Info": {
       "Gender": "KU",
@@ -33,11 +34,11 @@
     },
     "Intern Generated Info": {
       "More details": "Der TOBI 2 ist ein interaktiver Roboter-Smartwatch, der mit einem Touchscreen ausgestattet ist. Er bietet Funktionen wie Spiele, Fitness-Tracking und die Möglichkeit, Fotos und Videos aufzunehmen. Das Gerät ist spritzwassergeschützt und hat eine Akkulaufzeit von bis zu 5 Tagen. Sichtbare Angaben: Farbe: Schwarz.",
-      "Keywords": "TOBI 2 Roboter Smartwatch",
+      "Keywords": "2 Roboter Smartwatch",
       "Materials": ""
     },
     "OP": {
-      "OP": ""
+      "OP": "45"
     },
     "Status": {
       "Status": ""
@@ -142,62 +143,114 @@
         {
           "filename": "P0020105 (11).jpg",
           "order": 1,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9uIAAeSwjStpxnGZ/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (12).jpg",
           "order": 2,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/--wAAeSwVpNpxnGc/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (13).jpg",
           "order": 3,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mAoAAeSwlcZpxnGf/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (14).jpg",
           "order": 4,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vpUAAeSwOKhpxnGj/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (15).jpg",
           "order": 5,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jmcAAeSw4itpxnGm/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (2).jpg",
           "order": 6,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/joYAAeSw4itpxnGp/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (4).jpg",
           "order": 7,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/38AAAeSwf7JpxnGr/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (5).jpg",
           "order": 8,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6JUAAeSwarppxnGu/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (6).jpg",
           "order": 9,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9u8AAeSwcalpxnGw/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (7).jpg",
           "order": 10,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xzgAAeSwsaxpxnGy/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (1).jpg",
           "order": 11,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ZvsAAeSw5yJpxnG1/$_1.JPG?set_id=8800005007"
         },
         {
           "filename": "P0020105 (10).jpg",
           "order": 12,
-          "eBay URL": ""
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8ZwAAeSwh91pxnG4/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Lerninhalt": "Spiele, Fotos, Videos, Fitness",
+        "Marke": "TOBI",
+        "Altersempfehlung": "Ab 6 Jahre",
+        "Herstellernummer": "M511091-H"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Roboter-Smartwatch",
+      "Product Model": "2",
+      "Keyword 1": "interaktiv",
+      "Keyword 2": "Fitness-Tracking",
+      "Keyword 3": "spritzwassergeschützt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "32",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T13:01"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-27T12:01:24.895442Z",
+          "sku": "P0020105",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
         }
       ]
     }

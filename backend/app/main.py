@@ -680,6 +680,75 @@ def detect_ebay_category_batch(request: dict):
     return result
 
 
+@app.post("/api/ai/ebay-category/batch/stream")
+def detect_ebay_category_batch_stream(request: dict):
+    """Detect and save eBay category for multiple SKUs with streaming progress updates."""
+    skus = request.get("skus") if isinstance(request, dict) else None
+    use_images = bool(request.get("use_images", True)) if isinstance(request, dict) else True
+
+    if not isinstance(skus, list) or len(skus) == 0:
+        raise HTTPException(status_code=400, detail="At least one SKU required")
+
+    normalized_skus = [str(s).strip() for s in skus if str(s).strip()]
+    if not normalized_skus:
+        raise HTTPException(status_code=400, detail="At least one valid SKU required")
+
+    def event_stream():
+        total = len(normalized_skus)
+        succeeded = 0
+        failed = 0
+
+        yield f"data: {json.dumps({'type': 'start', 'total': total}, ensure_ascii=False)}\n\n"
+
+        try:
+            for idx, sku in enumerate(normalized_skus, start=1):
+                result = detect_and_save_ebay_category_for_sku(sku, use_images=use_images)
+                ok = bool(result.get("success"))
+                if ok:
+                    succeeded += 1
+                else:
+                    failed += 1
+
+                progress = {
+                    "type": "progress",
+                    "current": idx,
+                    "total": total,
+                    "sku": sku,
+                    "success": ok,
+                    "result": result,
+                    "succeeded": succeeded,
+                    "failed": failed,
+                }
+                yield f"data: {json.dumps(progress, ensure_ascii=False)}\n\n"
+
+            summary = {
+                "type": "complete",
+                "success": failed == 0,
+                "total": total,
+                "succeeded": succeeded,
+                "failed": failed,
+            }
+            yield f"data: {json.dumps(summary, ensure_ascii=False)}\n\n"
+        except Exception as e:
+            error_payload = {
+                "type": "error",
+                "message": str(e),
+                "total": total,
+                "succeeded": succeeded,
+                "failed": failed,
+            }
+            yield f"data: {json.dumps(error_payload, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
+
 @app.post("/api/ai/ebay-category/{sku}")
 def detect_ebay_category_single(sku: str, request: dict | None = None):
     """Detect and save eBay category (path + ID) for one SKU using AI and category DB."""
