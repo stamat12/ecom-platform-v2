@@ -1,0 +1,216 @@
+{
+  "VER02211": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 2601409,
+      "Invoice Date": "2026-01-08T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 897050,
+      "ISIN": null,
+      "Supplier Title": "Genius Chef Kontaktgrill Cerafit Edition"
+    },
+    "Price Data": {
+      "Price Net": 56.67,
+      "Shipping Net": 5.5,
+      "Total Cost Net": 62.17
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Kontaktgrills & Sandwichmaker",
+      "eBay Category ID": "20675"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Genius",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Genius Chef Kontaktgrill hat eine moderne, elegante Bauweise mit einem digitalen Display. Er verfügt über eine Temperaturregelung bis zu 230°C und eine Zeiteinstellung. Die Grillplatten sind geriffelt und ermöglichen eine gleichmäßige Hitzeverteilung. Sichtbare Angaben: Farbe: Schwarz, Silber.",
+      "Keywords": "Chef Kontaktgrill Grill Unisex",
+      "Materials": "Metall, Kunststoff"
+    },
+    "OP": {
+      "OP": "190"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": true,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 1,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [
+        {
+          "filename": "c268fcf5076153a1fbdba28d0bcdf34c.jpg"
+        }
+      ],
+      "phone": [
+        {
+          "filename": "VER02211 (1).jpg"
+        },
+        {
+          "filename": "VER02211 (2).jpg"
+        },
+        {
+          "filename": "VER02211 (3).jpg"
+        },
+        {
+          "filename": "VER02211 (4).jpg"
+        },
+        {
+          "filename": "VER02211 (5).jpg"
+        },
+        {
+          "filename": "VER02211 (6).jpg"
+        },
+        {
+          "filename": "VER02211 (7).jpg"
+        },
+        {
+          "filename": "VER02211 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "c268fcf5076153a1fbdba28d0bcdf34c.jpg"
+        },
+        {
+          "filename": "VER02211 (8).jpg"
+        },
+        {
+          "filename": "VER02211 (5).jpg"
+        },
+        {
+          "filename": "VER02211 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "c268fcf5076153a1fbdba28d0bcdf34c.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTM0N1gxNjAw/z/zl0AAeSwHnppwSQB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/WEoAAeSw8NdpwSQG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/AT0AAeSw8M1pwSQJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jggAAeSwvddpwSQN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (3).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/96cAAeSwTGBpwSQR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (2).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/YjoAAeSw65VpwSQU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/JkgAAeSwQ6lpwSQX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (7).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/XjgAAeSwXslpwSQc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02211 (8).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/hDQAAeSwm2ppwSQg/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "Genius Chef Kontaktgrill"
+      },
+      "optional": {
+        "Marke": "Genius",
+        "Produktart": "Kontaktgrill",
+        "Farbe": "Silber",
+        "Set enthält": "Set 6-tlg.",
+        "Anzahl der Scheiben": "2",
+        "Material": "Metall, Kunststoff",
+        "Stromquelle": "Netzstrom",
+        "Herstellernummer": "07464",
+        "Besonderheiten": "Temperaturregelung bis zu 230°C, digitales Display",
+        "Anzahl der Bleche": "2"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Kontaktgrill",
+      "Product Model": "Chef",
+      "Keyword 1": "digital",
+      "Keyword 2": "Temperaturregelung",
+      "Keyword 3": "Grillplatten"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "145",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T12:28"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-23T11:29:00.886548Z",
+          "sku": "VER02211",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

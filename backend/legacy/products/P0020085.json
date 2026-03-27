@@ -1,0 +1,263 @@
+{
+  "P0020085": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kleingeräte Küche/Standmixer",
+      "eBay Category ID": "133704"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Russell Hobbs",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Mix & Go Blender ist ein persönlicher Mixer mit einem Trinkdeckel, ideal für unterwegs. Er enthält eine 600 ml Flasche, die spülmaschinenfest und BPA-frei ist. Der Mixer hat eine Edelstahlbasis und eine Leistung von 300 Watt. Die rutschfesten Füße sorgen für Stabilität während des Mixens.",
+      "Keywords": "Mix & Go Blender",
+      "Materials": "Edelstahl, Kunststoff"
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_SEPARAT"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020085 (1).jpg"
+        },
+        {
+          "filename": "P0020085 (10).jpg"
+        },
+        {
+          "filename": "P0020085 (11).jpg"
+        },
+        {
+          "filename": "P0020085 (12).jpg"
+        },
+        {
+          "filename": "P0020085 (13).jpg"
+        },
+        {
+          "filename": "P0020085 (14).jpg"
+        },
+        {
+          "filename": "P0020085 (2).jpg"
+        },
+        {
+          "filename": "P0020085 (3).jpg"
+        },
+        {
+          "filename": "P0020085 (4).jpg"
+        },
+        {
+          "filename": "P0020085 (5).jpg"
+        },
+        {
+          "filename": "P0020085 (6).jpg"
+        },
+        {
+          "filename": "P0020085 (7).jpg"
+        },
+        {
+          "filename": "P0020085 (8).jpg"
+        },
+        {
+          "filename": "P0020085 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020085 (3).jpg"
+        },
+        {
+          "filename": "P0020085 (4).jpg"
+        },
+        {
+          "filename": "P0020085 (5).jpg"
+        },
+        {
+          "filename": "P0020085 (1).jpg"
+        },
+        {
+          "filename": "P0020085 (7).jpg"
+        },
+        {
+          "filename": "P0020085 (12).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020085 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/K8cAAeSw0WxpwrU5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/InIAAeSwXBNpwrU8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L94AAeSwAlppwrU-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (8).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7g0AAeSwGTppwrVA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (9).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GzYAAeSwQONpwrVD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (4).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Mh4AAeSwLeFpwrVF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KDUAAeSw8JdpwrVH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H70AAeSwXBJpwrVL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (13).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H78AAeSwBGxpwrVO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (14).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9WsAAeSwqj5pwrVS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (10).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/AjEAAeSwENFpwrVV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020085 (11).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JC8AAeSwarppwrVY/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "Russell Hobbs 23472-56"
+      },
+      "optional": {
+        "Leistung": "300 W",
+        "Stromquelle": "Netzstrom",
+        "Material": "Edelstahl, Kunststoff",
+        "Anzahl der Klingen": "4",
+        "Anzahl der Geschwindigkeiten": "1",
+        "Kapazität": "0,6 L",
+        "Herstellernummer": "23472-56",
+        "Stückzahl": "1",
+        "Marke": "Russell Hobbs",
+        "Produktart": "Bullet-Mixer",
+        "Bestandteile inbegriffen": "Becher, Deckel",
+        "Anwendungsmöglichkeiten": "Smoothie",
+        "Farbe": "Silber",
+        "Herstellergarantie": "2 Jahre",
+        "Besonderheiten": "Rutschfeste Füße, Automatisch",
+        "Ursprungsland": "China",
+        "Gerätefunktionen": "Mischen, Pürieren",
+        "Set enthält": "Mikrowelle",
+        "Tiefe": "20,0 cm",
+        "Höhe": "30,0 cm",
+        "Gewicht": "1,8 kg",
+        "Breite": "15,0 cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Standmixer",
+      "Product Model": "23472-56",
+      "Keyword 1": "persönlicher Mixer",
+      "Keyword 2": "BPA-frei",
+      "Keyword 3": "Edelstahlbasis"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-08T17:00"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-24T16:00:10.716274Z",
+          "sku": "P0020085",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

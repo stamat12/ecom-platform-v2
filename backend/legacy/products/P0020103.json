@@ -1,0 +1,211 @@
+{
+  "P0020103": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Handys & Kommunikation/Handy-Zubehör/Ladegeräte & Dockingstationen",
+      "eBay Category ID": "123417"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "E-CrossStu",
+      "Color": "Schwarz",
+      "Size": "26800 mAh"
+    },
+    "Intern Generated Info": {
+      "More details": "Leistungsstarke Powerbank mit 26800 mAh Kapazität und integrierten Kabeln (Lightning, Micro-USB, USB sowie USB-C). Ideal zum gleichzeitigen Laden mehrerer Geräte wie Smartphones, Tablets oder Zubehör. Kompaktes Design mit digitaler LED-Anzeige für den Akkustand (25/50/75/100%). Perfekt für Reisen, Alltag oder unterwegs. Inklusive Ladekabel und Anleitung, neu in Verpackung",
+      "Keywords": "Powerbank",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "35"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020103 (1).jpg"
+        },
+        {
+          "filename": "P0020103 (2).jpg"
+        },
+        {
+          "filename": "P0020103 (3).jpg"
+        },
+        {
+          "filename": "P0020103 (4).jpg"
+        },
+        {
+          "filename": "P0020103 (5).jpg"
+        },
+        {
+          "filename": "P0020103 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020103 (3).jpg"
+        },
+        {
+          "filename": "P0020103 (1).jpg"
+        },
+        {
+          "filename": "P0020103 (2).jpg"
+        },
+        {
+          "filename": "P0020103 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020103 (5).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zSgAAeSwridpxVUt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020103 (6).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1woAAeSwYFxpxVUy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020103 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5dsAAeSwRmRpxVU1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020103 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9zsAAeSwRL1pxVU4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020103 (2).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yywAAeSw61dpxVU7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020103 (3).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4CgAAeSwVpNpxVU~/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "E-CrossStu",
+        "Produktart": "Powerbank"
+      },
+      "optional": {
+        "Konnektivität": "Doppel-USB",
+        "Farbe": "Schwarz",
+        "Material": "Kunststoff",
+        "Kabellänge": "1 m",
+        "Besonderheiten": "Digitale LED-Anzeige",
+        "Ursprungsland": "Deutschland",
+        "Gewicht": "300 g",
+        "Herstellergarantie": "1 Jahr"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Powerbank",
+      "Product Model": "26800 mAh",
+      "Keyword 1": "integrierte Kabel",
+      "Keyword 2": "LED-Anzeige",
+      "Keyword 3": "kompakt"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "25",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.199872Z",
+          "sku": "P0020103",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.719007Z",
+          "sku": "P0020103",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

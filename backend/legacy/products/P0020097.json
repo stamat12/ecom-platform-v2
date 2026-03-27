@@ -1,0 +1,235 @@
+{
+  "P0020097": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Massage/Elektrische Massagesessel",
+      "eBay Category ID": "36448"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Beige",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Elektrisches Nacken- und Schulter-Massagegerät mit ergonomischem Design für gezielte Entspannung im Nackenbereich. Das Gerät verfügt über mehrere Massageköpfe sowie integrierte Funktionen wie verschiedene Intensitätsstufen und vermutlich Wärmefunktion (erkennbar an Bedienelementen). Verstellbare Gurte ermöglichen eine flexible Nutzung am Körper oder zur Fixierung. Ideal für Zuhause, Büro oder unterwegs zur Linderung von Verspannungen. Gebrauchter Zustand, optisch gut erhalten",
+      "Keywords": "Nackenmassagegerät elektrisch Schulter",
+      "Materials": "Kunstleder / Kunststoff / Textil"
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 29"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020097 (1).jpg"
+        },
+        {
+          "filename": "P0020097 (10).jpg"
+        },
+        {
+          "filename": "P0020097 (2).jpg"
+        },
+        {
+          "filename": "P0020097 (3).jpg"
+        },
+        {
+          "filename": "P0020097 (4).jpg"
+        },
+        {
+          "filename": "P0020097 (5).jpg"
+        },
+        {
+          "filename": "P0020097 (6).jpg"
+        },
+        {
+          "filename": "P0020097 (7).jpg"
+        },
+        {
+          "filename": "P0020097 (8).jpg"
+        },
+        {
+          "filename": "P0020097 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020097 (6).jpg"
+        },
+        {
+          "filename": "P0020097 (7).jpg"
+        },
+        {
+          "filename": "P0020097 (9).jpg"
+        },
+        {
+          "filename": "P0020097 (10).jpg"
+        },
+        {
+          "filename": "P0020097 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020097 (6).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-LYAAeSw0GlpxVSB/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (5).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7sUAAeSwuC9pxVSF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mrEAAeSwQ15pxVSH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/scgAAeSwpLhpxVSK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pfAAAeSwEKZpxVSM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oeEAAeSwd6NpxVSP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (1).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tyoAAeSw5DhpxVSR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (10).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0tMAAeSwdQBpxVSU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020097 (2).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uDsAAeSwCEdpxVSW/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Farbe": "Beige",
+        "Produktart": "Massage Sitzkissen"
+      },
+      "optional": {
+        "Massagefunktionen": "Shiatsu",
+        "Material": "Kunstleder / Kunststoff / Textil"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Nackenmassagegerät",
+      "Product Model": "",
+      "Keyword 1": "elektrisch",
+      "Keyword 2": "ergonomisch",
+      "Keyword 3": "Wärmefunktion"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "45",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, jedoch ohne Originalverpackung. Es handelt sich um Neuware, die lediglich ohne Karton bzw. Verpackung angeboten wird.  Der genaue Zustand sowie weitere Details sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.078552Z",
+          "sku": "P0020097",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.613373Z",
+          "sku": "P0020097",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

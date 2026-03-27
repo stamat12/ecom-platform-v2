@@ -1,0 +1,106 @@
+{
+  "P0020087": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": null
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": null
+    },
+    "Intern Product Info": {
+      "Gender": null,
+      "Brand": null,
+      "Color": null,
+      "Size": null
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": null,
+      "Materials": null
+    },
+    "OP": {
+      "OP": null
+    },
+    "Status": {
+      "Status": null
+    },
+    "Warehouse": {
+      "Lager": null
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020087 (1).jpg"
+        },
+        {
+          "filename": "P0020087 (10).jpg"
+        },
+        {
+          "filename": "P0020087 (11).jpg"
+        },
+        {
+          "filename": "P0020087 (12).jpg"
+        },
+        {
+          "filename": "P0020087 (13).jpg"
+        },
+        {
+          "filename": "P0020087 (2).jpg"
+        },
+        {
+          "filename": "P0020087 (3).jpg"
+        },
+        {
+          "filename": "P0020087 (4).jpg"
+        },
+        {
+          "filename": "P0020087 (5).jpg"
+        },
+        {
+          "filename": "P0020087 (6).jpg"
+        },
+        {
+          "filename": "P0020087 (7).jpg"
+        },
+        {
+          "filename": "P0020087 (8).jpg"
+        },
+        {
+          "filename": "P0020087 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

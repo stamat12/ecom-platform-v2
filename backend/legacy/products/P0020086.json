@@ -1,0 +1,248 @@
+{
+  "P0020086": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kaffee-, Tee- & Espressomaschinen/Milchaufschäumer",
+      "eBay Category ID": "171754"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Severin",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Milchaufschäumer hat eine Schokoladenfunktion und ist spülmaschinenfest. Er kann sowohl kalte als auch heiße Getränke zubereiten. Das Gerät hat einen modernen Look mit einem Edelstahlbehälter und einem schwarzen Gehäuse. Sichtbare Angaben: Farbe: Silber Schwarz.",
+      "Keywords": "Milchaufschäumer",
+      "Materials": "Edelstahl Kunststoff"
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 27"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020086 (1).jpg"
+        },
+        {
+          "filename": "P0020086 (10).jpg"
+        },
+        {
+          "filename": "P0020086 (11).jpg"
+        },
+        {
+          "filename": "P0020086 (12).jpg"
+        },
+        {
+          "filename": "P0020086 (13).jpg"
+        },
+        {
+          "filename": "P0020086 (14).jpg"
+        },
+        {
+          "filename": "P0020086 (2).jpg"
+        },
+        {
+          "filename": "P0020086 (3).jpg"
+        },
+        {
+          "filename": "P0020086 (4).jpg"
+        },
+        {
+          "filename": "P0020086 (5).jpg"
+        },
+        {
+          "filename": "P0020086 (6).jpg"
+        },
+        {
+          "filename": "P0020086 (7).jpg"
+        },
+        {
+          "filename": "P0020086 (8).jpg"
+        },
+        {
+          "filename": "P0020086 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020086 (11).jpg"
+        },
+        {
+          "filename": "P0020086 (12).jpg"
+        },
+        {
+          "filename": "P0020086 (1).jpg"
+        },
+        {
+          "filename": "P0020086 (10).jpg"
+        },
+        {
+          "filename": "P0020086 (3).jpg"
+        },
+        {
+          "filename": "P0020086 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020086 (11).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GXIAAeSwin9pwrUR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (12).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/~I4AAeSwLydpwrUV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (2).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6ewAAeSw-2ppwrUX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/E18AAeSwTP1pwrUZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5NAAAeSwSqlpwrUd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JkwAAeSwgERpwrUf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (7).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IHcAAeSwPJppwrUi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (6).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/IUgAAeSw-cBpwrUm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (8).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/MJAAAeSwkhFpwrUp/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTIwNVgxNjAw/z/IjgAAeSwM9xpwrUs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JxkAAeSwgERpwrUu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020086 (10).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JIIAAeSwTR5pwrUy/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "SM 3588"
+      },
+      "optional": {
+        "Herstellernummer": "SM 3588",
+        "Leistung": "550 W",
+        "Marke": "Severin",
+        "Farbe": "Schwarz",
+        "Material": "Edelstahl Kunststoff",
+        "Set enthält": "Milchaufschäumer",
+        "Spannung": "220 V"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Milchaufschäumer",
+      "Product Model": "SM 3588",
+      "Keyword 1": "Edelstahlbehälter",
+      "Keyword 2": "Schokoladenfunktion",
+      "Keyword 3": "spülmaschinenfest"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "2",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "P0020086, P0020087",
+      "Schedule Date": "2026-04-08T17:00"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-24T16:00:10.698864Z",
+          "sku": "P0020086",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

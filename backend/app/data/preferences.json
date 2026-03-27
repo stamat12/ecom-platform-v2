@@ -16,10 +16,7 @@
         "Total Cost Net"
       ],
       "column_filters": {
-        "SKU (Old)": "",
-        "Sold": [
-          "Yes"
-        ]
+        "SKU (Old)": "ver02"
       },
       "filter_mode": {},
       "page_size": 50,

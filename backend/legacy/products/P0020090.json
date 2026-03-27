@@ -1,0 +1,181 @@
+{
+  "P0020090": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Klimaanlagen & Heizgeräte/Klimageräte & Heizgeräte/Heizgeräte",
+      "eBay Category ID": "20613"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "emerio",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Heizlüfter hat eine Leistung von 2000W. Er verfügt über zwei Drehregler zur Einstellung der Temperatur. Das Gerät hat ein kompaktes Design und ist einfach zu bedienen. Sichtbare Angaben: Farbe: schwarz.",
+      "Keywords": "Heizlüfter",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "20"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 27"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 1
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020090 (1).jpg"
+        },
+        {
+          "filename": "P0020090 (2).jpg"
+        },
+        {
+          "filename": "P0020090 (3).jpg"
+        },
+        {
+          "filename": "P0020090 (4).jpg"
+        },
+        {
+          "filename": "P0020090 (5).jpg"
+        },
+        {
+          "filename": "P0020090 (6).jpg"
+        },
+        {
+          "filename": "P0020090 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020090 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020090 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MDgAAeSwIXFpxAAt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020090 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HXgAAeSw6whpxAAx/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020090 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ULEAAeSwLM5pxAA0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020090 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IhUAAeSwlBhpxAA3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020090 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Hg0AAeSwz5hpxAA6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020090 (1).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/VFcAAeSw2QVpxAA9/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "emerio",
+        "Heizsystem": "Konvektion",
+        "Produktart": "Heizgerät",
+        "Material": "Kunststoff",
+        "Leistung": "2001-2500 W",
+        "Farbe": "Schwarz",
+        "Steuerungsart": "Drehknopf",
+        "Heizleistung": "2000-2999 BTU"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Heizlüfter",
+      "Product Model": "",
+      "Keyword 1": "2000W",
+      "Keyword 2": "kompakt",
+      "Keyword 3": "Temperaturregler"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "3000",
+      "Condition Note": "Der Artikel ist gebraucht und befindet sich in einem guten bis sehr guten Zustand. Normale Gebrauchsspuren können vorhanden sein.   Der genaue Zustand des Artikels ist auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.264794Z",
+          "sku": "P0020090",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

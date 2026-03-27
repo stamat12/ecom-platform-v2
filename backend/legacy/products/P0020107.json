@@ -1,0 +1,202 @@
+{
+  "P0020107": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Severin",
+      "Color": "Silber",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Langschlitztoaster hat variable Breite für unterschiedliche Brotsorten. Er verfügt über eine integrierte Brötchenröstfunktion und eine Auftaufunktion. Die Steuerung erfolgt über einen Drehregler mit Kontrollleuchte. Das Gehäuse ist aus Edelstahl und hat eine moderne Optik. Sichtbare Angaben: Farbe: Silber.",
+      "Keywords": "Langschlitztoaster Toaster",
+      "Materials": "Edelstahl, Kunststoff"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020107 (1).jpg"
+        },
+        {
+          "filename": "P0020107 (10).jpg"
+        },
+        {
+          "filename": "P0020107 (11).jpg"
+        },
+        {
+          "filename": "P0020107 (12).jpg"
+        },
+        {
+          "filename": "P0020107 (13).jpg"
+        },
+        {
+          "filename": "P0020107 (14).jpg"
+        },
+        {
+          "filename": "P0020107 (15).jpg"
+        },
+        {
+          "filename": "P0020107 (16).jpg"
+        },
+        {
+          "filename": "P0020107 (2).jpg"
+        },
+        {
+          "filename": "P0020107 (3).jpg"
+        },
+        {
+          "filename": "P0020107 (4).jpg"
+        },
+        {
+          "filename": "P0020107 (5).jpg"
+        },
+        {
+          "filename": "P0020107 (6).jpg"
+        },
+        {
+          "filename": "P0020107 (7).jpg"
+        },
+        {
+          "filename": "P0020107 (8).jpg"
+        },
+        {
+          "filename": "P0020107 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020107 (10).jpg"
+        },
+        {
+          "filename": "P0020107 (14).jpg"
+        },
+        {
+          "filename": "P0020107 (4).jpg"
+        },
+        {
+          "filename": "P0020107 (6).jpg"
+        },
+        {
+          "filename": "P0020107 (7).jpg"
+        },
+        {
+          "filename": "P0020107 (8).jpg"
+        },
+        {
+          "filename": "P0020107 (15).jpg"
+        },
+        {
+          "filename": "P0020107 (16).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020107 (10).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (2).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (3).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (4).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (5).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (6).jpg",
+          "order": 6,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (7).jpg",
+          "order": 7,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (8).jpg",
+          "order": 8,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (9).jpg",
+          "order": 9,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (14).jpg",
+          "order": 10,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (11).jpg",
+          "order": 11,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020107 (12).jpg",
+          "order": 12,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

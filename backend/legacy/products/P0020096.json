@@ -1,0 +1,272 @@
+{
+  "P0020096": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Parlux",
+      "Color": "Blau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Föhn hat ein ergonomisches Design und ist leicht. Er verfügt über einen leistungsstarken K-ADVANCE Motor mit 2500 Watt. Die keramische Technologie sorgt für eine gleichmäßige Wärmeverteilung. Ideal für den professionellen Einsatz im Friseursalon. Sichtbare Angaben: Farbe: Blau.",
+      "Keywords": "ADVANCE LIGHT Haartrockner",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "130"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 28"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 17,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020096 (1).jpg"
+        },
+        {
+          "filename": "P0020096 (10).jpg"
+        },
+        {
+          "filename": "P0020096 (11).jpg"
+        },
+        {
+          "filename": "P0020096 (12).jpg"
+        },
+        {
+          "filename": "P0020096 (13).jpg"
+        },
+        {
+          "filename": "P0020096 (14).jpg"
+        },
+        {
+          "filename": "P0020096 (16).jpg"
+        },
+        {
+          "filename": "P0020096 (17).jpg"
+        },
+        {
+          "filename": "P0020096 (18).jpg"
+        },
+        {
+          "filename": "P0020096 (2).jpg"
+        },
+        {
+          "filename": "P0020096 (3).jpg"
+        },
+        {
+          "filename": "P0020096 (4).jpg"
+        },
+        {
+          "filename": "P0020096 (5).jpg"
+        },
+        {
+          "filename": "P0020096 (6).jpg"
+        },
+        {
+          "filename": "P0020096 (7).jpg"
+        },
+        {
+          "filename": "P0020096 (8).jpg"
+        },
+        {
+          "filename": "P0020096 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020096 (2).jpg"
+        },
+        {
+          "filename": "P0020096 (4).jpg"
+        },
+        {
+          "filename": "P0020096 (5).jpg"
+        },
+        {
+          "filename": "P0020096 (6).jpg"
+        },
+        {
+          "filename": "P0020096 (7).jpg"
+        },
+        {
+          "filename": "P0020096 (9).jpg"
+        },
+        {
+          "filename": "P0020096 (11).jpg"
+        },
+        {
+          "filename": "P0020096 (10).jpg"
+        },
+        {
+          "filename": "P0020096 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020096 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XloAAeSwnBhpxAE-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HHwAAeSwYXZpxAFA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wC8AAeSwlK5pxAFD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (7).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KncAAeSwLrlpxAFH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KE8AAeSwJWtpxAFL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (9).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/XCQAAeSwX0FpxAFP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (10).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/G-8AAeSwqP5pxAFR/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EGkAAeSwUh1pxAFU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (13).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UdkAAeSw~ZdpxAFY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (12).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JkgAAeSw59BpxAFb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (14).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L74AAeSw8tFpxAFg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020096 (16).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LmwAAeSwGwtpxAFi/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Parlux",
+        "Produktart": "Profi-Haartrockner"
+      },
+      "optional": {
+        "Leistung": "2500 W",
+        "Modell": "ADVANCE LIGHT",
+        "Farbe": "Blau",
+        "Abteilung": "Unisex Erwachsene",
+        "Ursprungsland": "Italien",
+        "Besonderheiten": "Ionen-Technologie",
+        "Stromquelle": "Netzstrom",
+        "Höchsttemperatur": "190 °C",
+        "Temperaturstufen": "3",
+        "Geschwindigkeitsstufen": "2",
+        "Material": "Plastik",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haartrockner",
+      "Product Model": "ADVANCE LIGHT",
+      "Keyword 1": "K-ADVANCE Motor",
+      "Keyword 2": "keramische Technologie",
+      "Keyword 3": "professionell"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "92",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.380805Z",
+          "sku": "P0020096",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

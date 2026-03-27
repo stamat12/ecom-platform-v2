@@ -1,0 +1,271 @@
+{
+  "P0020095": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Lockenstäbe & Glätteisen",
+      "eBay Category ID": "177659"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "BaByliss",
+      "Color": "Schwarz Rosa",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist eine Warmluftbürste mit Styling-Funktion. Es hat eine Leistung von 1000W und bietet verschiedene Aufsätze für unterschiedliche Styling-Optionen. Die Bürste hat weiche Borsten und ist für das Volumen und das Glätten der Haare geeignet. Sichtbare Angaben: Farbe: Schwarz, Rosa.",
+      "Keywords": "Perfect Finish Warmluftbürste",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "35"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 26"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 20,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020095 (1).jpg"
+        },
+        {
+          "filename": "P0020095 (10).jpg"
+        },
+        {
+          "filename": "P0020095 (11).jpg"
+        },
+        {
+          "filename": "P0020095 (12).jpg"
+        },
+        {
+          "filename": "P0020095 (13).jpg"
+        },
+        {
+          "filename": "P0020095 (14).jpg"
+        },
+        {
+          "filename": "P0020095 (15).jpg"
+        },
+        {
+          "filename": "P0020095 (16).jpg"
+        },
+        {
+          "filename": "P0020095 (17).jpg"
+        },
+        {
+          "filename": "P0020095 (18).jpg"
+        },
+        {
+          "filename": "P0020095 (19).jpg"
+        },
+        {
+          "filename": "P0020095 (2).jpg"
+        },
+        {
+          "filename": "P0020095 (20).jpg"
+        },
+        {
+          "filename": "P0020095 (3).jpg"
+        },
+        {
+          "filename": "P0020095 (4).jpg"
+        },
+        {
+          "filename": "P0020095 (5).jpg"
+        },
+        {
+          "filename": "P0020095 (6).jpg"
+        },
+        {
+          "filename": "P0020095 (7).jpg"
+        },
+        {
+          "filename": "P0020095 (8).jpg"
+        },
+        {
+          "filename": "P0020095 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020095 (2).jpg"
+        },
+        {
+          "filename": "P0020095 (3).jpg"
+        },
+        {
+          "filename": "P0020095 (6).jpg"
+        },
+        {
+          "filename": "P0020095 (7).jpg"
+        },
+        {
+          "filename": "P0020095 (8).jpg"
+        },
+        {
+          "filename": "P0020095 (5).jpg"
+        },
+        {
+          "filename": "P0020095 (11).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020095 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Va0AAeSwM9xpxAEH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/T4EAAeSw-2BpxAEK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DmEAAeSwN~9pxAEN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J5wAAeSwDh5pxAEP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LEUAAeSw0SNpxAES/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (10).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PJMAAeSw~rFpxAEa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (11).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/K1MAAeSwnQ5pxAEd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (12).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OkcAAeSwoNZpxAEh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (13).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GhwAAeSwqP5pxAEk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (19).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GOoAAeSw9i1pxAEv/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (1).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/J2IAAeSwqj5pxAEy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020095 (8).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MhIAAeSwt~9pxAE1/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Warmluftbürste",
+        "Marke": "BaByliss"
+      },
+      "optional": {
+        "Leistung": "1000W",
+        "Farbe": "Schwarz Rosa",
+        "Abteilung": "Damen",
+        "Ursprungsland": "Frankreich",
+        "Herstellergarantie": "3 Jahre",
+        "Besonderheiten": "Mit Aufsätzen",
+        "Temperaturstufen": "2",
+        "Material": "Plastik"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Warmluftbürste",
+      "Product Model": "Perfect Finish",
+      "Keyword 1": "1000W",
+      "Keyword 2": "Styling-Aufsätze",
+      "Keyword 3": "Volumen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.362004Z",
+          "sku": "P0020095",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

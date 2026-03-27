@@ -1,0 +1,158 @@
+{
+  "P0020113": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "KU",
+      "Brand": "Lexibook",
+      "Color": "Lila",
+      "Size": "None"
+    },
+    "Intern Generated Info": {
+      "More details": "Dieser bilinguale Lernlaptop bietet 170 Aktivitäten in Englisch und Französisch. Er hat ein großes LCD-Display mit Animationen und wird mit einer Maus geliefert. Ideal für Kinder ab 4 Jahren, um spielerisch zu lernen. Sichtbare Angaben: Farbe: Lila; Größe: None.",
+      "Keywords": "Lernlaptop Bilingual Kinder",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 8,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020113 (1).jpg"
+        },
+        {
+          "filename": "P0020113 (2).jpg"
+        },
+        {
+          "filename": "P0020113 (3).jpg"
+        },
+        {
+          "filename": "P0020113 (4).jpg"
+        },
+        {
+          "filename": "P0020113 (5).jpg"
+        },
+        {
+          "filename": "P0020113 (6).jpg"
+        },
+        {
+          "filename": "P0020113 (7).jpg"
+        },
+        {
+          "filename": "P0020113 (8).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020113 (2).jpg"
+        },
+        {
+          "filename": "P0020113 (1).jpg"
+        },
+        {
+          "filename": "P0020113 (6).jpg"
+        },
+        {
+          "filename": "P0020113 (7).jpg"
+        },
+        {
+          "filename": "P0020113 (8).jpg"
+        },
+        {
+          "filename": "P0020113 (3).jpg"
+        },
+        {
+          "filename": "P0020113 (4).jpg"
+        },
+        {
+          "filename": "P0020113 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020113 (2).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (3).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (4).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (6).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (7).jpg",
+          "order": 6,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (8).jpg",
+          "order": 7,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020113 (1).jpg",
+          "order": 8,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "VER02200": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "Goldgrube GmbH",
+      "Invoice": 25121636,
+      "Invoice Date": "2025-12-17T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": 913011,
+      "ISIN": null,
+      "Supplier Title": "Colorful Night Light Touch Lamp F1"
+    },
+    "Price Data": {
+      "Price Net": 3.33,
+      "Shipping Net": 0.6,
+      "Total Cost Net": 3.93
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Nachtlichter",
+      "eBay Category ID": "20702"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Bunt",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Die Lampe hat eine Touch-Steuerung und kann als Nachtlicht oder Schlaflampe verwendet werden. Sie bietet verschiedene Lichtmodi, darunter warmes Licht und mehrfarbige Optionen. Ideal für Schlafzimmer oder als dekoratives Element. Sichtbare Angaben: Farbe: Bunt.",
+      "Keywords": "Touch Lampe Nachtlicht",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "20"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "VER02200 (1).jpg"
+        },
+        {
+          "filename": "VER02200 (7).jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "eBay Images": [
+        {
+          "filename": "VER02200 (1).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8MEAAeSwq95pwSQq/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (7).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8owAAeSwhORpwSQt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4pIAAeSwsdppwSQw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ie4AAeSwBztpwSQz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (5).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LXIAAeSw5JppwSQ1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/McsAAeSwoA1pwSQ4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "VER02200 (2).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/vuwAAeSw3mtpwSQ7/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Produktart": "Touch Lampe"
+      },
+      "optional": {
+        "Farbe": "Bunt",
+        "Abteilung": "Unisex Baby & Kleinkind",
+        "Installationsbereich": "Innen",
+        "Besonderheiten": "Touch Steuerung",
+        "Zimmer": "Geeignet für alle Zimmer",
+        "Anzahl der Lichter": "1",
+        "Hersteller": "Unbekannt",
+        "Beleuchtungstechnik": "LED",
+        "Stromquelle": "USB",
+        "Sensorart": "Touch",
+        "Energieeffizienzklasse": "A",
+        "Material": "Kunststoff",
+        "Lichtfarbe": "Warmweiß",
+        "Thema": "Animation",
+        "Höhe": "10 cm",
+        "Gewicht": "0,5 kg",
+        "Gütesiegel & Kennzeichnungen": "CE-Kennzeichnung",
+        "Herstellergarantie": "2 Jahre"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Nachtlicht",
+      "Product Model": "Touch Lampe F1",
+      "Keyword 1": "Touch-Steuerung",
+      "Keyword 2": "LED",
+      "Keyword 3": "mehrfarbig"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-02T12:28"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-23T11:29:00.911559Z",
+          "sku": "VER02200",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

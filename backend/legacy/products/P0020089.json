@@ -1,0 +1,184 @@
+{
+  "P0020089": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kaffee-, Tee- & Espressomaschinen/Milchaufschäumer",
+      "eBay Category ID": "171754"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu ohne Verpackung"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "SIMPLETaste",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Milchaufschäumer hat ein elegantes Design mit einer strukturierten Oberfläche. Er verfügt über eine Edelstahlkante und eine einfache Bedienoberfläche mit Tasten für verschiedene Funktionen. Das Gerät wird mit einem Stromkabel geliefert und hat eine kompakte Bauweise. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "Milchaufschäumer",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "35"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 27"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020089 (1).jpg"
+        },
+        {
+          "filename": "P0020089 (2).jpg"
+        },
+        {
+          "filename": "P0020089 (3).jpg"
+        },
+        {
+          "filename": "P0020089 (4).jpg"
+        },
+        {
+          "filename": "P0020089 (5).jpg"
+        },
+        {
+          "filename": "P0020089 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020089 (2).jpg"
+        },
+        {
+          "filename": "P0020089 (1).jpg"
+        },
+        {
+          "filename": "P0020089 (4).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020089 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TO4AAeSwPJppxAAU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020089 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SsIAAeSwkhFpxAAX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020089 (1).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MtYAAeSwVpNpxAAc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020089 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MbkAAeSw9lFpxAAe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020089 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HyMAAeSw7PFpxAAh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020089 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/UGoAAeSwnXZpxAAk/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Modell": "N21-C"
+      },
+      "optional": {
+        "Marke": "SIMPLETaste",
+        "Leistung": "500 W",
+        "Material": "Kunststoff",
+        "Herstellernummer": "7606E-0031",
+        "Farbe": "Weiß",
+        "Stromquelle": "Netzstrom"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Milchaufschäumer",
+      "Product Model": "7606E-0031",
+      "Keyword 1": "Edelstahlkante",
+      "Keyword 2": "kompakt",
+      "Keyword 3": "strukturiert"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt, jedoch ohne Originalverpackung. Es handelt sich um Neuware, die lediglich ohne Karton bzw. Verpackung angeboten wird.  Der genaue Zustand sowie weitere Details sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.247944Z",
+          "sku": "P0020089",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

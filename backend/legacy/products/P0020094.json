@@ -1,0 +1,272 @@
+{
+  "P0020094": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Beauty & Gesundheit/Haarpflege & Haarstyling/Elektrische Haarstyling Geräte/Haartrockner",
+      "eBay Category ID": "11858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Bellissima",
+      "Color": "Grau",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Diffusor ist für lockiges Haar konzipiert und nutzt Keramik- und Arganöl-Technologie. Er sorgt für definierte und glänzende Locken. Ideal für die Anwendung zu Hause oder auf Reisen. Sichtbare Angaben: Farbe: Grau; Größe: None.",
+      "Keywords": "Diffon Diffusor Haarstyling",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "65"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 22"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 10
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020094 (1).jpg"
+        },
+        {
+          "filename": "P0020094 (10).jpg"
+        },
+        {
+          "filename": "P0020094 (11).jpg"
+        },
+        {
+          "filename": "P0020094 (12).jpg"
+        },
+        {
+          "filename": "P0020094 (13).jpg"
+        },
+        {
+          "filename": "P0020094 (14).jpg"
+        },
+        {
+          "filename": "P0020094 (15).jpg"
+        },
+        {
+          "filename": "P0020094 (16).jpg"
+        },
+        {
+          "filename": "P0020094 (2).jpg"
+        },
+        {
+          "filename": "P0020094 (3).jpg"
+        },
+        {
+          "filename": "P0020094 (4).jpg"
+        },
+        {
+          "filename": "P0020094 (5).jpg"
+        },
+        {
+          "filename": "P0020094 (6).jpg"
+        },
+        {
+          "filename": "P0020094 (7).jpg"
+        },
+        {
+          "filename": "P0020094 (8).jpg"
+        },
+        {
+          "filename": "P0020094 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020094 (2).jpg"
+        },
+        {
+          "filename": "P0020094 (3).jpg"
+        },
+        {
+          "filename": "P0020094 (4).jpg"
+        },
+        {
+          "filename": "P0020094 (5).jpg"
+        },
+        {
+          "filename": "P0020094 (6).jpg"
+        },
+        {
+          "filename": "P0020094 (7).jpg"
+        },
+        {
+          "filename": "P0020094 (8).jpg"
+        },
+        {
+          "filename": "P0020094 (9).jpg"
+        },
+        {
+          "filename": "P0020094 (1).jpg"
+        },
+        {
+          "filename": "P0020094 (10).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020094 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GGYAAeSwYXZpxADY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/P1kAAeSw61dpxADb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (3).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NxoAAeSwsl9pxADe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JA8AAeSwSoZpxADi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (11).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PIcAAeSwYFppxADk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (10).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WDIAAeSwgV5pxADo/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (12).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KQIAAeSwnQ5pxADu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (13).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/T~wAAeSwdIJpxADw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (14).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jZMAAeSwjC9pxAD1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (15).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MLgAAeSwJdRpxAD5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (16).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JfAAAeSwZbVpxAD7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020094 (6).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LWIAAeSwzP9pxAD-/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Bellissima",
+        "Produktart": "Diffusor"
+      },
+      "optional": {
+        "Farbe": "Grau",
+        "Modell": "DIFFON",
+        "Stromquelle": "Netzstrom",
+        "Besonderheiten": "Ionen-Technologie",
+        "Leistung": "2000 W",
+        "Höchsttemperatur": "180 °C",
+        "Temperaturstufen": "3",
+        "Geschwindigkeitsstufen": "2",
+        "Abteilung": "Damen",
+        "Material": "Plastik",
+        "Ursprungsland": "Italien",
+        "Herstellernummer": "S6601"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Haartrockner",
+      "Product Model": "Diffon",
+      "Keyword 1": "Diffusor",
+      "Keyword 2": "Keramik",
+      "Keyword 3": "Arganöl"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "48",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1000",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.341200Z",
+          "sku": "P0020094",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

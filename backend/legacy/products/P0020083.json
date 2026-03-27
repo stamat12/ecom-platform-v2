@@ -1,0 +1,224 @@
+{
+  "P0020083": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Kleingeräte Haushalt/Sonstige",
+      "eBay Category ID": "45734"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Gebraucht (ohne Standfuß)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Orbegozo",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Ventilator ist ein 2-in-1-Modell, das sowohl als Tischventilator als auch als Klemmbereich verwendet werden kann. Er hat zwei Geschwindigkeitsstufen und einen Durchmesser der Blätter von 15 cm. Das Gerät ist kompakt und ideal für kleine Räume. Sichtbare Angaben: Modell/Nummern: 0219; Farbe: Weiß Blau.",
+      "Keywords": "TF 0219 Ventilator Tischventilator",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "17"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 27"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020083 (1).jpg"
+        },
+        {
+          "filename": "P0020083 (10).jpg"
+        },
+        {
+          "filename": "P0020083 (2).jpg"
+        },
+        {
+          "filename": "P0020083 (3).jpg"
+        },
+        {
+          "filename": "P0020083 (4).jpg"
+        },
+        {
+          "filename": "P0020083 (5).jpg"
+        },
+        {
+          "filename": "P0020083 (6).jpg"
+        },
+        {
+          "filename": "P0020083 (7).jpg"
+        },
+        {
+          "filename": "P0020083 (8).jpg"
+        },
+        {
+          "filename": "P0020083 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020083 (2).jpg"
+        },
+        {
+          "filename": "P0020083 (10).jpg"
+        },
+        {
+          "filename": "P0020083 (1).jpg"
+        },
+        {
+          "filename": "P0020083 (3).jpg"
+        },
+        {
+          "filename": "P0020083 (8).jpg"
+        },
+        {
+          "filename": "P0020083 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020083 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9OUAAeSwbSBpwrWA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HFsAAeSwSVZpwrWD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NpoAAeSwV5dpwrWG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ODEAAeSwEhNpwrWI/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IGQAAeSwGB9pwrWL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IRcAAeSwiSJpwrWN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/BbcAAeSwxfNpwrWU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NXgAAeSwLeFpwrWX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IX0AAeSwiSJpwrWZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020083 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L70AAeSwq4FpwrWc/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Produktart": "Tischventilator",
+        "Herstellernummer": "TF 0219",
+        "Marke": "Orbegozo",
+        "Modell": "TF 0219",
+        "Ursprungsland": "PRC",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Tischventilator",
+      "Product Model": "TF 0219",
+      "Keyword 1": "2-in-1",
+      "Keyword 2": "Klemmbereich",
+      "Keyword 3": "15 cm"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "1",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-08T17:00"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-24T16:00:10.754339Z",
+          "sku": "P0020083",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

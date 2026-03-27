@@ -1,0 +1,239 @@
+{
+  "P0020100": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Haushaltsgeräte/Sonstige/Zeitschaltuhren",
+      "eBay Category ID": "14826"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "goobay",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Diese analoge Zeitschaltuhr ermöglicht eine einfache Steuerung von elektrischen Geräten. Sie hat eine maximale Schaltleistung von 3500 W und ist für den Innenbereich geeignet. Die Zeitschaltuhr hat einen Temperaturbereich von 0 bis +55 °C und ist mit einem IP20-Schutz ausgestattet. Sichtbare Angaben: Farbe: Weiß.",
+      "Keywords": "analoge Zeitschaltuhr",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "15"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020100 (1).jpg"
+        },
+        {
+          "filename": "P0020100 (10).jpg"
+        },
+        {
+          "filename": "P0020100 (11).jpg"
+        },
+        {
+          "filename": "P0020100 (2).jpg"
+        },
+        {
+          "filename": "P0020100 (3).jpg"
+        },
+        {
+          "filename": "P0020100 (4).jpg"
+        },
+        {
+          "filename": "P0020100 (5).jpg"
+        },
+        {
+          "filename": "P0020100 (6).jpg"
+        },
+        {
+          "filename": "P0020100 (7).jpg"
+        },
+        {
+          "filename": "P0020100 (8).jpg"
+        },
+        {
+          "filename": "P0020100 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020100 (1).jpg"
+        },
+        {
+          "filename": "P0020100 (8).jpg"
+        },
+        {
+          "filename": "P0020100 (6).jpg"
+        },
+        {
+          "filename": "P0020100 (5).jpg"
+        },
+        {
+          "filename": "P0020100 (3).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020100 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/r-0AAeSwOgBpxVTM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SXsAAeSwXZ5pxVTP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7soAAeSwaWlpxVTS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sC0AAeSwin9pxVTU/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0pIAAeSwbzppxVTX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7Q8AAeSwzMVpxVTa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qWEAAeSwzP9pxVTd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (10).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1rsAAeSwWtdpxVTh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020100 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/w4QAAeSwM~tpxVTm/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "goobay",
+        "Herstellernummer": "51276",
+        "Farbe": "Weiß",
+        "Modell": "NK ZSU 1",
+        "Produktart": "Zeitschaltuhr",
+        "Ursprungsland": "China"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Zeitschaltuhr",
+      "Product Model": "51276",
+      "Keyword 1": "mechanisch",
+      "Keyword 2": "Innenbereich",
+      "Keyword 3": "IP20"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "10",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.139083Z",
+          "sku": "P0020100",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.663932Z",
+          "sku": "P0020100",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

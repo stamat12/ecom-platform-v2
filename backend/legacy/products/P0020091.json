@@ -1,0 +1,300 @@
+{
+  "P0020091": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Bad & Küche/Bad/Waschbecken & Waschtische/Waschbecken-Armaturen",
+      "eBay Category ID": "260557"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Acheloous",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der Artikel ist ein Sensor-Wasserhahn. Er ist für die automatische Wassersteuerung konzipiert. Das Modell ist EU030539BB und wurde in China hergestellt.",
+      "Keywords": "Infrarot Wasserhahn Bad für Waschbecken",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "150"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 31,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 2
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020091 (1).jpg"
+        },
+        {
+          "filename": "P0020091 (10).jpg"
+        },
+        {
+          "filename": "P0020091 (11).jpg"
+        },
+        {
+          "filename": "P0020091 (12).jpg"
+        },
+        {
+          "filename": "P0020091 (13).jpg"
+        },
+        {
+          "filename": "P0020091 (14).jpg"
+        },
+        {
+          "filename": "P0020091 (15).jpg"
+        },
+        {
+          "filename": "P0020091 (16).jpg"
+        },
+        {
+          "filename": "P0020091 (17).jpg"
+        },
+        {
+          "filename": "P0020091 (18).jpg"
+        },
+        {
+          "filename": "P0020091 (19).jpg"
+        },
+        {
+          "filename": "P0020091 (2).jpg"
+        },
+        {
+          "filename": "P0020091 (20).jpg"
+        },
+        {
+          "filename": "P0020091 (21).jpg"
+        },
+        {
+          "filename": "P0020091 (22).jpg"
+        },
+        {
+          "filename": "P0020091 (23).jpg"
+        },
+        {
+          "filename": "P0020091 (24).jpg"
+        },
+        {
+          "filename": "P0020091 (25).jpg"
+        },
+        {
+          "filename": "P0020091 (26).jpg"
+        },
+        {
+          "filename": "P0020091 (27).jpg"
+        },
+        {
+          "filename": "P0020091 (28).jpg"
+        },
+        {
+          "filename": "P0020091 (29).jpg"
+        },
+        {
+          "filename": "P0020091 (3).jpg"
+        },
+        {
+          "filename": "P0020091 (30).jpg"
+        },
+        {
+          "filename": "P0020091 (31).jpg"
+        },
+        {
+          "filename": "P0020091 (4).jpg"
+        },
+        {
+          "filename": "P0020091 (5).jpg"
+        },
+        {
+          "filename": "P0020091 (6).jpg"
+        },
+        {
+          "filename": "P0020091 (7).jpg"
+        },
+        {
+          "filename": "P0020091 (8).jpg"
+        },
+        {
+          "filename": "P0020091 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020091 (13).jpg"
+        },
+        {
+          "filename": "P0020091 (14).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020091 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/N04AAeSwJQ1pxABH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (9).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TwYAAeSwPxVpxABK/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (8).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MysAAeSwnLRpxABN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (3).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MGoAAeSwYnNpxABQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (4).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/DuMAAeSwgetpxABT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (5).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HyEAAeSwDh5pxABX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (6).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JEIAAeSwlBhpxABa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (7).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Bh0AAeSwNEdpxABc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (11).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HR8AAeSwSVZpxABf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IwsAAeSwtDdpxABi/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (13).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IvwAAeSw-g1pxABn/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020091 (14).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JBkAAeSw7AxpxABq/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Acheloous"
+      },
+      "optional": {
+        "Modell": "EU030539BB",
+        "Hersteller": "Xiduoli Sanitary Ware Co., Ltd",
+        "Geeignet für": "Badezimmer Waschbecken",
+        "Installationsart": "Wandmontiert",
+        "Farbe": "Schwarz",
+        "Produktart": "Waschbecken Armatur",
+        "Besonderheiten": "Herausziehbar",
+        "Höhe": "150 mm",
+        "Breite": "160 mm",
+        "Länge": "110 mm",
+        "Auslaufhöhe": "6-7 Zoll",
+        "Anzahl der Armaturgriffe": "0 (Berührungslos)",
+        "Anzahl der Armaturlöcher": "1",
+        "Griffart": "Berührungslos",
+        "Finish": "Matt",
+        "Gütesiegel & Kennzeichnungen": "NSF-zugelassen",
+        "Ursprungsland": "China",
+        "Anzahl pro Packung": "1",
+        "Zimmer": "Badezimmer",
+        "Montage erforderlich": "Ja"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Wasserhahn",
+      "Product Model": "EU030539BB",
+      "Keyword 1": "Sensor",
+      "Keyword 2": "Infrarot",
+      "Keyword 3": "Schwarz"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "115",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und unbenutzt. Die Verpackung wurde möglicherweise geöffnet, um den Inhalt zu überprüfen oder zu fotografieren.  Bitte beachten Sie, dass die Originalverpackung leichte Lager- oder Transportspuren aufweisen kann (z. B. kleine Druckstellen, Kratzer oder fehlende Schutzfolie). Der genaue Zustand, die Vollständigkeit des Artikels sowie der Zustand der Verpackung sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.283818Z",
+          "sku": "P0020091",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

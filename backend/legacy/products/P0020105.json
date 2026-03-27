@@ -1,0 +1,205 @@
+{
+  "P0020105": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "KU",
+      "Brand": "TOBI",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Der TOBI 2 ist ein interaktiver Roboter-Smartwatch, der mit einem Touchscreen ausgestattet ist. Er bietet Funktionen wie Spiele, Fitness-Tracking und die Möglichkeit, Fotos und Videos aufzunehmen. Das Gerät ist spritzwassergeschützt und hat eine Akkulaufzeit von bis zu 5 Tagen. Sichtbare Angaben: Farbe: Schwarz.",
+      "Keywords": "TOBI 2 Roboter Smartwatch",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 16,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020105 (1).jpg"
+        },
+        {
+          "filename": "P0020105 (10).jpg"
+        },
+        {
+          "filename": "P0020105 (11).jpg"
+        },
+        {
+          "filename": "P0020105 (12).jpg"
+        },
+        {
+          "filename": "P0020105 (13).jpg"
+        },
+        {
+          "filename": "P0020105 (14).jpg"
+        },
+        {
+          "filename": "P0020105 (15).jpg"
+        },
+        {
+          "filename": "P0020105 (16).jpg"
+        },
+        {
+          "filename": "P0020105 (2).jpg"
+        },
+        {
+          "filename": "P0020105 (3).jpg"
+        },
+        {
+          "filename": "P0020105 (4).jpg"
+        },
+        {
+          "filename": "P0020105 (5).jpg"
+        },
+        {
+          "filename": "P0020105 (6).jpg"
+        },
+        {
+          "filename": "P0020105 (7).jpg"
+        },
+        {
+          "filename": "P0020105 (8).jpg"
+        },
+        {
+          "filename": "P0020105 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020105 (12).jpg"
+        },
+        {
+          "filename": "P0020105 (10).jpg"
+        },
+        {
+          "filename": "P0020105 (1).jpg"
+        },
+        {
+          "filename": "P0020105 (16).jpg"
+        },
+        {
+          "filename": "P0020105 (6).jpg"
+        },
+        {
+          "filename": "P0020105 (7).jpg"
+        },
+        {
+          "filename": "P0020105 (5).jpg"
+        },
+        {
+          "filename": "P0020105 (9).jpg"
+        },
+        {
+          "filename": "P0020105 (14).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020105 (11).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (12).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (13).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (14).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (15).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (2).jpg",
+          "order": 6,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (4).jpg",
+          "order": 7,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (5).jpg",
+          "order": 8,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (6).jpg",
+          "order": 9,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (7).jpg",
+          "order": 10,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (1).jpg",
+          "order": 11,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020105 (10).jpg",
+          "order": 12,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

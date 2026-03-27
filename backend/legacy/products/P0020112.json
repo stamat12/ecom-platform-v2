@@ -1,0 +1,179 @@
+{
+  "P0020112": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Philips",
+      "Color": "Silber",
+      "Size": "1.7L"
+    },
+    "Intern Generated Info": {
+      "More details": "Die Philips Wasserkocher der 7000er Serie bieten eine elegante Edelstahl-Oberfläche. Sie verfügen über vier voreingestellte Temperaturstufen für verschiedene Getränke. Der Wasserkocher hat eine Leistung von 2200W und eine automatische Abschaltfunktion. Sichtbare Angaben: Farbe: Silber; Größe: 1.7L.",
+      "Keywords": "Philips Wasserkocher 7000 Serie",
+      "Materials": "Edelstahl, Kunststoff"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020112 (1).jpg"
+        },
+        {
+          "filename": "P0020112 (10).jpg"
+        },
+        {
+          "filename": "P0020112 (11).jpg"
+        },
+        {
+          "filename": "P0020112 (2).jpg"
+        },
+        {
+          "filename": "P0020112 (3).jpg"
+        },
+        {
+          "filename": "P0020112 (4).jpg"
+        },
+        {
+          "filename": "P0020112 (5).jpg"
+        },
+        {
+          "filename": "P0020112 (6).jpg"
+        },
+        {
+          "filename": "P0020112 (7).jpg"
+        },
+        {
+          "filename": "P0020112 (8).jpg"
+        },
+        {
+          "filename": "P0020112 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020112 (3).jpg"
+        },
+        {
+          "filename": "P0020112 (4).jpg"
+        },
+        {
+          "filename": "P0020112 (5).jpg"
+        },
+        {
+          "filename": "P0020112 (7).jpg"
+        },
+        {
+          "filename": "P0020112 (11).jpg"
+        },
+        {
+          "filename": "P0020112 (10).jpg"
+        },
+        {
+          "filename": "P0020112 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020112 (4).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (7).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (8).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (9).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (11).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (10).jpg",
+          "order": 6,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (2).jpg",
+          "order": 7,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (3).jpg",
+          "order": 8,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (1).jpg",
+          "order": 9,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (5).jpg",
+          "order": 10,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020112 (6).jpg",
+          "order": 11,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

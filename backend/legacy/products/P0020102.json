@@ -1,0 +1,224 @@
+{
+  "P0020102": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Auto & Motorrad: Teile/Autoteile & Zubehör/Beleuchtung/Lampen & LED-Leuchten",
+      "eBay Category ID": "172517"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Philips",
+      "Color": "",
+      "Size": "H7 / H18"
+    },
+    "Intern Generated Info": {
+      "More details": "Philips Ultinon Access LED Scheinwerferlampen (2er Set) für Fahrzeuge mit H7/H18 Sockel. Modernes Upgrade von Halogen auf LED mit 6000K kaltweißem Licht für bessere Sicht und moderner Optik. Plug-and-Play Installation ohne aufwendige Umbauten, kompatibel mit Reflektor- und Projektor-Scheinwerfern. Energieeffizient (ca. 16W statt 55W Halogen) und langlebig (bis zu 1500 Stunden). Ideal für bessere Ausleuchtung und erhöhte Sicherheit im Straßenverkehr",
+      "Keywords": "LED Scheinwerfer H7 H18 Auto",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "50"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020102 (1).jpg"
+        },
+        {
+          "filename": "P0020102 (2).jpg"
+        },
+        {
+          "filename": "P0020102 (3).jpg"
+        },
+        {
+          "filename": "P0020102 (4).jpg"
+        },
+        {
+          "filename": "P0020102 (5).jpg"
+        },
+        {
+          "filename": "P0020102 (6).jpg"
+        },
+        {
+          "filename": "P0020102 (7).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020102 (3).jpg"
+        },
+        {
+          "filename": "P0020102 (7).jpg"
+        },
+        {
+          "filename": "P0020102 (4).jpg"
+        },
+        {
+          "filename": "P0020102 (6).jpg"
+        },
+        {
+          "filename": "P0020102 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020102 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6wMAAeSwsaxpxVUW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020102 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-WUAAeSw1XtpxVUb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020102 (6).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/6~AAAeSw-cBpxVUe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020102 (4).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xEwAAeSwY8FpxVUh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020102 (1).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xEsAAeSwPCVpxVUj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020102 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/81UAAeSwaWlpxVUm/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Hersteller": "Philips"
+      },
+      "optional": {
+        "Glühlampensockel": "H7",
+        "Anzahl der Glühlampen": "2",
+        "Geeignet für": "Frontscheinwerfer",
+        "Produktart": "Glühlampe",
+        "Leistung": "16 W",
+        "Spannung": "12 V",
+        "Lichtfarbe": "Kaltweiß",
+        "Farbtemperatur": "6000K",
+        "Lebensdauer der Glühlampe": "Bis zu 1 500 Stunden",
+        "Modell": "LED-HL [H7/H18]",
+        "Beleuchtungstechnik": "LED",
+        "Besonderheiten": "Plug-and-play Installation",
+        "Ursprungsland": "Deutschland",
+        "Tuning- & Styling-Teil": "Nein",
+        "Herstellergarantie": "2 Jahre",
+        "Universelle Kompatibilität": "Ja"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Scheinwerferlampe",
+      "Product Model": "Ultinon Access",
+      "Keyword 1": "H7",
+      "Keyword 2": "H18",
+      "Keyword 3": "LED"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "38",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.178898Z",
+          "sku": "P0020102",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.698974Z",
+          "sku": "P0020102",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

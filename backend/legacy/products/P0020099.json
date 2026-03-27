@@ -1,0 +1,242 @@
+{
+  "P0020099": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/Zubehör/Ladegeräte & Dockingstationen",
+      "eBay Category ID": "171858"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "S3 Max",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Kompakte Dockingstation für Nintendo Switch (Switch 1/2 kompatibel laut Verpackung) im portablen Design. Unterstützt HDMI-Ausgang bis zu 4K sowie USB-C und USB-A Anschlüsse für vielseitige Nutzung. Leichtes und platzsparendes Design – ideal als Ersatz-Dock oder für unterwegs. Standard Model (ohne LAN-Port ausgewählt). Neu und originalverpackt.",
+      "Keywords": "Switch 2 Dock S3 Max",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "25"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 4
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020099 (1).jpg"
+        },
+        {
+          "filename": "P0020099 (10).jpg"
+        },
+        {
+          "filename": "P0020099 (2).jpg"
+        },
+        {
+          "filename": "P0020099 (3).jpg"
+        },
+        {
+          "filename": "P0020099 (4).jpg"
+        },
+        {
+          "filename": "P0020099 (5).jpg"
+        },
+        {
+          "filename": "P0020099 (6).jpg"
+        },
+        {
+          "filename": "P0020099 (7).jpg"
+        },
+        {
+          "filename": "P0020099 (8).jpg"
+        },
+        {
+          "filename": "P0020099 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020099 (2).jpg"
+        },
+        {
+          "filename": "P0020099 (8).jpg"
+        },
+        {
+          "filename": "P0020099 (1).jpg"
+        },
+        {
+          "filename": "P0020099 (6).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020099 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ud4AAeSwiPdpxVSy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vUAAAeSwwetpxVS1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v94AAeSw6HJpxVS3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/yEkAAeSwridpxVS6/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/p5wAAeSwBZRpxVS8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/tJkAAeSw5rNpxVS~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9k0AAeSwnBhpxVTC/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020099 (1).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1XYAAeSw40ZpxVTF/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "S3 Max",
+        "Produktart": "Dockingstation"
+      },
+      "optional": {
+        "Plattform": "Nintendo Switch",
+        "Kompatibles Produkt": "Konsole",
+        "Farbe": "Schwarz",
+        "Modellkompatibilität": "Für Nintendo Switch",
+        "Konnektivität": "HDMI",
+        "Modell": "S3 Max",
+        "Kabellänge": "Nicht zutreffend",
+        "Herstellernummer": "X002CDKP77",
+        "Besonderheiten": "Kompakt, Unterstützt 4K",
+        "Format": "Konsolenspezifisch",
+        "Material": "Kunststoff",
+        "Ursprungsland": "China",
+        "Gewicht": "108.9 g",
+        "Herstellergarantie": "1 Jahr",
+        "Anzahl der Einheiten": "1",
+        "Herstellungsjahr": "2020er",
+        "Maßeinheit": "g"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Dockingstation",
+      "Product Model": "Switch 2 Dock",
+      "Keyword 1": "HDMI 4K",
+      "Keyword 2": "USB-C",
+      "Keyword 3": "tragbar"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "15",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.120145Z",
+          "sku": "P0020099",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.647908Z",
+          "sku": "P0020099",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

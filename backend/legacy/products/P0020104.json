@@ -1,0 +1,271 @@
+{
+  "P0020104": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Handys & Kommunikation/Handy-Zubehör/Ladegeräte & Dockingstationen",
+      "eBay Category ID": "123417"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "",
+      "Color": "Schwarz",
+      "Size": "10000 mAh"
+    },
+    "Intern Generated Info": {
+      "More details": "Kompakte Powerbank mit 10000 mAh Kapazität und moderner LED-Anzeige für den Akkustand. Unterstützt Schnellladen über USB-A und USB-C (bis zu 12V/1.5A) und ist kompatibel mit iOS- und Android-Geräten. Schlankes, handliches Design – ideal für unterwegs, Reisen oder den täglichen Gebrauch. Inklusive Ladekabel und Anleitung. Mehrfachschutz gegen Überladung, Kurzschluss und Überhitzung sorgt für sichere Nutzung.",
+      "Keywords": "Powerbank",
+      "Materials": "Kunststoff"
+    },
+    "OP": {
+      "OP": "18"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 14,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020104 (1).jpg"
+        },
+        {
+          "filename": "P0020104 (10).jpg"
+        },
+        {
+          "filename": "P0020104 (11).jpg"
+        },
+        {
+          "filename": "P0020104 (12).jpg"
+        },
+        {
+          "filename": "P0020104 (13).jpg"
+        },
+        {
+          "filename": "P0020104 (14).jpg"
+        },
+        {
+          "filename": "P0020104 (2).jpg"
+        },
+        {
+          "filename": "P0020104 (3).jpg"
+        },
+        {
+          "filename": "P0020104 (4).jpg"
+        },
+        {
+          "filename": "P0020104 (5).jpg"
+        },
+        {
+          "filename": "P0020104 (6).jpg"
+        },
+        {
+          "filename": "P0020104 (7).jpg"
+        },
+        {
+          "filename": "P0020104 (8).jpg"
+        },
+        {
+          "filename": "P0020104 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020104 (3).jpg"
+        },
+        {
+          "filename": "P0020104 (9).jpg"
+        },
+        {
+          "filename": "P0020104 (7).jpg"
+        },
+        {
+          "filename": "P0020104 (10).jpg"
+        },
+        {
+          "filename": "P0020104 (1).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020104 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1~gAAeSwYFxpxVVH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/s9EAAeSwx~hpxVVL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qEwAAeSwhhhpxVVO/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3-EAAeSw3-dpxVVQ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q9QAAeSwAi5pxVVT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/vTkAAeSwOKhpxVVW/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (10).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9VAAAeSwh3tpxVVZ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9eYAAeSwM9xpxVVc/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zL8AAeSwgZNpxVVg/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (9).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xicAAeSw9ChpxVVj/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020104 (14).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/3uIAAeSwbzRpxVVn/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "eVatmaster",
+        "Produktart": "Powerbank"
+      },
+      "optional": {
+        "Farbe": "Schwarz",
+        "Spannung": "5 V",
+        "Kabellänge": "1 m",
+        "Material": "Kunststoff",
+        "Ursprungsland": "China",
+        "Konnektivität": "USB-C",
+        "Anzahl der Anschlüsse": "2",
+        "Inbegriffene Artikel": "Ladekabel, Anleitung",
+        "Besonderheiten": "Überladungsschutz, Kurzschlussschutz, Überhitzungsschutz",
+        "Gewicht": "200 g",
+        "Herstellergarantie": "1 Jahr",
+        "Anzahl der Einheiten": "1",
+        "Breite": "7 cm",
+        "Höhe": "14 cm",
+        "Länge": "1.5 cm",
+        "Maßeinheit": "cm"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Powerbank",
+      "Product Model": "H132",
+      "Keyword 1": "10000 mAh",
+      "Keyword 2": "Schnellladen",
+      "Keyword 3": "USB-C"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "12",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.218007Z",
+          "sku": "P0020104",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.737688Z",
+          "sku": "P0020104",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

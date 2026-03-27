@@ -1,0 +1,182 @@
+{
+  "P0020108": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": ""
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": ""
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Sony",
+      "Color": "Weiß",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Disc-Laufwerk für die PS5 Digital Edition. Es hat eine weiße Abdeckung und eine schwarze Rückseite. Das Laufwerk ermöglicht das Abspielen von Blu-ray-Discs und ist speziell für die PS5 konzipiert.",
+      "Keywords": "Disc Laufwerk PS5",
+      "Materials": "Kunststoff, Metall"
+    },
+    "OP": {
+      "OP": ""
+    },
+    "Status": {
+      "Status": ""
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020108 (1).jpg"
+        },
+        {
+          "filename": "P0020108 (10).jpg"
+        },
+        {
+          "filename": "P0020108 (11).jpg"
+        },
+        {
+          "filename": "P0020108 (2).jpg"
+        },
+        {
+          "filename": "P0020108 (3).jpg"
+        },
+        {
+          "filename": "P0020108 (4).jpg"
+        },
+        {
+          "filename": "P0020108 (5).jpg"
+        },
+        {
+          "filename": "P0020108 (6).jpg"
+        },
+        {
+          "filename": "P0020108 (7).jpg"
+        },
+        {
+          "filename": "P0020108 (8).jpg"
+        },
+        {
+          "filename": "P0020108 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020108 (2).jpg"
+        },
+        {
+          "filename": "P0020108 (5).jpg"
+        },
+        {
+          "filename": "P0020108 (7).jpg"
+        },
+        {
+          "filename": "P0020108 (8).jpg"
+        },
+        {
+          "filename": "P0020108 (9).jpg"
+        },
+        {
+          "filename": "P0020108 (1).jpg"
+        },
+        {
+          "filename": "P0020108 (10).jpg"
+        },
+        {
+          "filename": "P0020108 (11).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020108 (2).jpg",
+          "order": 1,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (3).jpg",
+          "order": 2,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (4).jpg",
+          "order": 3,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (5).jpg",
+          "order": 4,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (7).jpg",
+          "order": 5,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (8).jpg",
+          "order": 6,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (9).jpg",
+          "order": 7,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (11).jpg",
+          "order": 8,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (10).jpg",
+          "order": 9,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (1).jpg",
+          "order": 10,
+          "eBay URL": ""
+        },
+        {
+          "filename": "P0020108 (6).jpg",
+          "order": 11,
+          "eBay URL": ""
+        }
+      ]
+    }
+  }
+}

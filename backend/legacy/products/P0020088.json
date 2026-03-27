@@ -1,0 +1,244 @@
+{
+  "P0020088": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Heimwerker/Werkzeuge/Elektrowerkzeug- & Druckluftgerät-Zubehör/Elektrowerkzeug-Akkus",
+      "eBay Category ID": "260204"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu (einmal getestet)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Bosch",
+      "Color": "Schwarz",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Produkt ist ein Starter Set mit einem 18V Lithium-Ionen-Akku und einem Ladegerät. Der Akku hat eine Kapazität von 4.0 Ah. Es ist Teil der Power for All Alliance, die mit verschiedenen Marken kompatibel ist. Sichtbare Angaben: Farbe: Schwarz.",
+      "Keywords": "Starter Set 18V Akku Ladegerät",
+      "Materials": "Lithium-Ionen"
+    },
+    "OP": {
+      "OP": "55"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 27"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020088 (1).jpg"
+        },
+        {
+          "filename": "P0020088 (10).jpg"
+        },
+        {
+          "filename": "P0020088 (11).jpg"
+        },
+        {
+          "filename": "P0020088 (12).jpg"
+        },
+        {
+          "filename": "P0020088 (13).jpg"
+        },
+        {
+          "filename": "P0020088 (2).jpg"
+        },
+        {
+          "filename": "P0020088 (3).jpg"
+        },
+        {
+          "filename": "P0020088 (4).jpg"
+        },
+        {
+          "filename": "P0020088 (5).jpg"
+        },
+        {
+          "filename": "P0020088 (6).jpg"
+        },
+        {
+          "filename": "P0020088 (7).jpg"
+        },
+        {
+          "filename": "P0020088 (8).jpg"
+        },
+        {
+          "filename": "P0020088 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020088 (2).jpg"
+        },
+        {
+          "filename": "P0020088 (3).jpg"
+        },
+        {
+          "filename": "P0020088 (4).jpg"
+        },
+        {
+          "filename": "P0020088 (5).jpg"
+        },
+        {
+          "filename": "P0020088 (8).jpg"
+        },
+        {
+          "filename": "P0020088 (7).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020088 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LjEAAeSwnLRpw~~g/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H2gAAeSwxNtpw~~k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/H7oAAeSwSlNpw~~n/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/KhYAAeSwsr5pw~~q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (7).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MQwAAeSw0ZJpw~~t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (8).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LosAAeSwLTxpw~~w/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (9).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L-wAAeSwGnFpw~~0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/APQAAeSwc3Fpw~~2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TB0AAeSwYghpw~~8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SyoAAeSwT1BpxAAA/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (12).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/IH4AAeSw5DhpxAAF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020088 (13).jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Cn0AAeSwjbFpxAAI/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Bosch",
+        "Spannung": "18 V",
+        "Akkutechnik": "Lithium-Ionen (Li-Ion)"
+      },
+      "optional": {
+        "Akkukapazität": "4 Ah",
+        "Farbe": "Schwarz",
+        "Modell": "PBA 18V 4.0Ah W-C + AL 18V-44",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Akku Ladegerät Set",
+      "Product Model": "Starter Set 18V",
+      "Keyword 1": "Lithium-Ionen-Akku",
+      "Keyword 2": "4.0 Ah",
+      "Keyword 3": "Power for All Alliance"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "40",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1500",
+      "Condition Note": "Der Artikel ist neu und wurde lediglich ein- bis zweimal kurz getestet. Es handelt sich nicht um einen regulär gebrauchten Artikel, sondern nur um eine kurze Funktionsprüfung.  Der genaue Zustand sowie die Vollständigkeit sind auf den Fotos ersichtlich.",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:31:39.229922Z",
+          "sku": "P0020088",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

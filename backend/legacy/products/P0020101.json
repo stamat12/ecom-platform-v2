@@ -1,0 +1,279 @@
+{
+  "P0020101": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Möbel & Wohnen/Beleuchtung/Smart Home-Beleuchtungen/Smart-Leuchtmittel",
+      "eBay Category ID": "185045"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Philips",
+      "Color": "Weiß",
+      "Size": "E27"
+    },
+    "Intern Generated Info": {
+      "More details": "Smarte LED-Lampe Philips Hue White & Color Ambiance mit bis zu 16 Millionen Farben und einstellbarem Weißlicht (warm bis kalt). 806 Lumen Helligkeit (entspricht ca. 60W), steuerbar per App, Bluetooth oder über Smart-Home-Systeme wie Alexa, Apple Home und Google Home. Zigbee- und Matter-kompatibel. Ideal für individuelles Lichtambiente, Automationen und Sprachsteuerung. Lieferung inkl. Originalverpackung und Anleitung",
+      "Keywords": "Hue Lampe E27 Smart Home",
+      "Materials": "Kunststoff / Metall"
+    },
+    "OP": {
+      "OP": "80"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 8
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020101 (1).jpg"
+        },
+        {
+          "filename": "P0020101 (10).jpg"
+        },
+        {
+          "filename": "P0020101 (11).jpg"
+        },
+        {
+          "filename": "P0020101 (2).jpg"
+        },
+        {
+          "filename": "P0020101 (3).jpg"
+        },
+        {
+          "filename": "P0020101 (4).jpg"
+        },
+        {
+          "filename": "P0020101 (5).jpg"
+        },
+        {
+          "filename": "P0020101 (6).jpg"
+        },
+        {
+          "filename": "P0020101 (7).jpg"
+        },
+        {
+          "filename": "P0020101 (8).jpg"
+        },
+        {
+          "filename": "P0020101 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020101 (2).jpg"
+        },
+        {
+          "filename": "P0020101 (1).jpg"
+        },
+        {
+          "filename": "P0020101 (11).jpg"
+        },
+        {
+          "filename": "P0020101 (5).jpg"
+        },
+        {
+          "filename": "P0020101 (6).jpg"
+        },
+        {
+          "filename": "P0020101 (7).jpg"
+        },
+        {
+          "filename": "P0020101 (8).jpg"
+        },
+        {
+          "filename": "P0020101 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020101 (2).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QdEAAeSwjC9pxVTt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (3).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wSEAAeSw~rFpxVTw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (4).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4qkAAeSw~ZdpxVT1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (5).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7OEAAeSwdIJpxVT4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (6).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1-4AAeSwPO5pxVT8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (7).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/wj8AAeSw39BpxVT~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (8).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zaoAAeSwfc9pxVUD/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (9).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/8ckAAeSwX0FpxVUG/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (10).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1HIAAeSw0vBpxVUJ/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (1).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ungAAeSwlBhpxVUM/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020101 (11).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1xUAAeSwASBpxVUQ/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Glühbirnensockel": "E27",
+        "Marke": "Philips",
+        "Beleuchtungstechnik": "LED",
+        "Glühbirnenform": "Standard",
+        "Energieeffizienzklasse": "D",
+        "Leistung der Glühbirne": "9.5 W",
+        "Lichtfarbe": "Mehrfarbig",
+        "Lichtstrom": "800-999 lm",
+        "EEK Spektrum": "D",
+        "Energieverbrauch": "10-24 W",
+        "Farbtemperatur": "2000-6500 K",
+        "Herstellernummer": "9290012573A",
+        "Lebensdauer der Glühbirne": "25.000-29.999 h",
+        "Smart Home Kompatibilität": "Amazon Alexa, Apple HomeKit, Google Assistant",
+        "Smart Home Kommunikationsprotokoll": "Bluetooth, ZigBee",
+        "Besonderheiten": "Dimmbar, Farbwechsel",
+        "Modell": "Hue white and color",
+        "Anzahl der Glühbirnen": "1",
+        "Ausgangsspannung": "220-240 V",
+        "Finish": "Weiß",
+        "Material": "Kunststoff / Metall",
+        "Spannung": "220 V",
+        "Gütesiegel & Kennzeichnungen": "CE-Kennzeichnung",
+        "Ursprungsland": "China",
+        "Innen-/Außenbereich": "Innenbereich",
+        "Produktart": "Smart LED-Lampe",
+        "Produktlinie": "Hue"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Smart-Leuchtmittel",
+      "Product Model": "Hue White & Color Ambiance",
+      "Keyword 1": "E27",
+      "Keyword 2": "Zigbee",
+      "Keyword 3": "Bluetooth"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "58",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.160775Z",
+          "sku": "P0020101",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.679948Z",
+          "sku": "P0020101",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

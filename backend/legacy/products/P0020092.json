@@ -1,0 +1,258 @@
+{
+  "P0020092": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8
+    },
+    "Ebay Category": {
+      "Category": "/Spielzeug/Puzzles & Geduldspiele/Puzzles",
+      "eBay Category ID": "19183"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton (Verpackung leicht beschädigt)"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "Clementoni",
+      "Color": "Bunt",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Das Puzzle gehört zur 'Metamorphic Art Collection' von Stranger Things. Es enthält 520 Teile und hat eine LED-Beleuchtung. Die Verpackung zeigt eine farbenfrohe Darstellung von Charakteren aus der Serie. Sichtbare Angaben: Farbe: Bunt.",
+      "Keywords": "Stranger Things Puzzle Metamorphic Art Collection",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "40"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": "LAGER2_NEW BOX 28"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 11,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020092 (1).jpg"
+        },
+        {
+          "filename": "P0020092 (10).jpg"
+        },
+        {
+          "filename": "P0020092 (11).jpg"
+        },
+        {
+          "filename": "P0020092 (2).jpg"
+        },
+        {
+          "filename": "P0020092 (3).jpg"
+        },
+        {
+          "filename": "P0020092 (4).jpg"
+        },
+        {
+          "filename": "P0020092 (5).jpg"
+        },
+        {
+          "filename": "P0020092 (6).jpg"
+        },
+        {
+          "filename": "P0020092 (7).jpg"
+        },
+        {
+          "filename": "P0020092 (8).jpg"
+        },
+        {
+          "filename": "P0020092 (9).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020092 (3).jpg"
+        },
+        {
+          "filename": "P0020092 (4).jpg"
+        },
+        {
+          "filename": "P0020092 (5).jpg"
+        },
+        {
+          "filename": "P0020092 (7).jpg"
+        },
+        {
+          "filename": "P0020092 (10).jpg"
+        },
+        {
+          "filename": "P0020092 (9).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020092 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/JZIAAeSwSlNpxAB1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (2).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/GusAAeSwV3RpxAB4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (7).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/HmMAAeSwyBZpxAB9/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (9).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MwUAAeSwFqRpxACE/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (8).jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MscAAeSwOzRpxACH/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (6).jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OtcAAeSwmFBpxACL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (5).jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SWsAAeSwi5hpxACP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (11).jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/MrgAAeSwz6ppxACS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (1).jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OUoAAeSwhFFpxACY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (10).jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OQEAAeSw4DRpxACd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020092 (4).jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/L4kAAeSwOgBpxACh/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {},
+      "optional": {
+        "Marke": "Clementoni",
+        "Anzahl der Teile": "501-1000 Teile",
+        "Charakter Familie": "Stranger Things",
+        "Thema": "Film- & Fernsehen",
+        "Besonderheiten": "Leuchtet im Dunkeln",
+        "Material": "Pappe",
+        "Produktart": "Rahmenpuzzle",
+        "Farbe": "Bunt",
+        "Altersempfehlung": "8-11 Jahre",
+        "Personalisieren": "Nein",
+        "Herstellernummer": "35155",
+        "Ursprungsland": "Italien"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Puzzle",
+      "Product Model": "Metamorphic Art Collection",
+      "Keyword 1": "LED-Beleuchtung",
+      "Keyword 2": "520 Teile",
+      "Keyword 3": "Stranger Things"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "28",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.21",
+      "Quantity": "",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-10T16:31"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-25T15:44:22.907585Z",
+          "sku": "P0020092",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-25T15:31:39.301860Z",
+          "sku": "P0020092",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

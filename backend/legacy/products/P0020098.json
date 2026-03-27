@@ -1,0 +1,195 @@
+{
+  "P0020098": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SUPPORT GROUP s.r.o.",
+      "Invoice": "V260100036",
+      "Invoice Date": "2026-02-19T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/PC- & Videospiele/PC- & Videospiele",
+      "eBay Category ID": "139973"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu"
+    },
+    "Intern Product Info": {
+      "Gender": "",
+      "Brand": "EA Sports",
+      "Color": "",
+      "Size": ""
+    },
+    "Intern Generated Info": {
+      "More details": "Originales Fußballspiel FC 26 für PlayStation 4 in der Standard Edition. Spiel ist neu und noch originalverschweißt. Bietet realistische Fußballsimulation mit aktuellen Teams, Ligen und Spielmodi.",
+      "Keywords": "FC 26 Spiel PS4",
+      "Materials": ""
+    },
+    "OP": {
+      "OP": "30"
+    },
+    "Status": {
+      "Status": "Ready"
+    },
+    "Warehouse": {
+      "Lager": ""
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 6,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 3
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "P0020098 (1).jpg"
+        },
+        {
+          "filename": "P0020098 (2).jpg"
+        },
+        {
+          "filename": "P0020098 (3).jpg"
+        },
+        {
+          "filename": "P0020098 (4).jpg"
+        },
+        {
+          "filename": "P0020098 (5).jpg"
+        },
+        {
+          "filename": "P0020098 (6).jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "P0020098 (3).jpg"
+        },
+        {
+          "filename": "P0020098 (1).jpg"
+        },
+        {
+          "filename": "P0020098 (5).jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "P0020098 (3).jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/q2sAAeSwLDppxVSe/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020098 (4).jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/pisAAeSw7AxpxVSk/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020098 (5).jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uScAAeSwz6ppxVSm/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "P0020098 (6).jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/I8oAAeSwucRpxVSp/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Plattform": "PlayStation 4",
+        "Spielname": "FC 26"
+      },
+      "optional": {
+        "USK-Einstufung": "USK ab 12 Jahren",
+        "Herstellernummer": "1901301691",
+        "Anzahl der Einheiten": "1",
+        "Maßeinheit": "Einheit",
+        "Herausgeber": "EA Sports"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Fußballspiel",
+      "Product Model": "FC 26",
+      "Keyword 1": "PlayStation 4",
+      "Keyword 2": "Standard Edition",
+      "Keyword 3": "Fußballsimulation"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "22",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "9.2",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T16:43"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-26T15:44:56.099338Z",
+          "sku": "P0020098",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-26T15:43:40.634399Z",
+          "sku": "P0020098",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}
