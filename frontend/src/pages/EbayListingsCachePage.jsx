@@ -38,6 +38,8 @@ const ALL_COLUMNS = [
   { id: "last_price_change_days_ago", label: "Price Changed", default: true },
   { id: "last_price_change_at", label: "Price Changed At", default: false },
   { id: "last_price_old", label: "Prev Live Price €", default: false },
+  { id: "last_auction_convert_days_ago", label: "Auction Age", default: true },
+  { id: "last_auction_convert_at", label: "Auction Since", default: false },
   { id: "ebay_seo_product_type", label: "eBay SEO Product Type", default: false },
   { id: "ebay_seo_product_model", label: "eBay SEO Product Model", default: false },
   { id: "ebay_seo_keyword_1", label: "eBay SEO Keyword 1", default: false },
@@ -370,7 +372,7 @@ const formatCellValue = (value, columnId) => {
     return value;
   }
   
-  if (columnId === "days_listed" || columnId === "last_title_change_days_ago" || columnId === "last_price_change_days_ago") {
+  if (columnId === "days_listed" || columnId === "last_title_change_days_ago" || columnId === "last_price_change_days_ago" || columnId === "last_auction_convert_days_ago") {
     const n = parseInt(value, 10);
     if (isNaN(n)) return "—";
     return `${n}d`;
@@ -381,6 +383,15 @@ const formatCellValue = (value, columnId) => {
     if (Number.isNaN(date.getTime())) return "—";
     const daysAgo = Math.floor((Date.now() - date.getTime()) / 86400000);
     return `${daysAgo}d`;
+  }
+
+  if (columnId === "last_auction_convert_at") {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "—";
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
   }
 
   if (columnId === "start_time" || columnId === "end_time" || columnId === "last_title_change_at") {
@@ -418,6 +429,7 @@ const COMPACT_COLUMNS = new Set([
   "days_listed",
   "last_title_change_days_ago",
   "last_price_change_days_ago",
+  "last_auction_convert_days_ago",
   "count_main_images",
   "title_matches_ebay_seo_title",
   "ebay_seo_product_type",

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T17:21:25.809876",
+  "timestamp": "2026-03-30T19:57:44.698850",
   "listings": [
     {
       "item_id": "136390447897",
@@ -46146,7 +46146,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-18T11:38:32.000Z",
       "end_time": "2026-04-18T11:38:32.000Z",
       "condition_id": 1000,
@@ -46158,7 +46158,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/8IIAAeSw6MNoWTqY/s-l140.jpg"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 19.99,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 20.48,
+        "payment_fee": 0.35,
+        "sales_commission": 3.0,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 11.5,
+        "total_cost_net": 29.12,
+        "net_profit": -23.49,
+        "net_profit_margin_percent": -80.67
+      }
     },
     {
       "item_id": "136175608954",
@@ -57801,7 +57813,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-23T18:47:18.000Z",
       "end_time": "2026-04-23T18:47:18.000Z",
       "condition_id": 1000,
@@ -57813,7 +57825,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/kPsAAeSwSCZogS4C/s-l140.png"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 10.0,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 12.6,
+        "payment_fee": 0.35,
+        "sales_commission": 1.8,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 9.4,
+        "total_cost_net": 8.14,
+        "net_profit": -7.09,
+        "net_profit_margin_percent": -87.13
+      }
     },
     {
       "item_id": "137181049082",
@@ -57828,7 +57852,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-23T18:52:22.000Z",
       "end_time": "2026-04-23T18:52:22.000Z",
       "condition_id": 1000,
@@ -57840,7 +57864,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/QdkAAeSwxt9ogS7H/s-l140.png"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 15.0,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 16.8,
+        "payment_fee": 0.35,
+        "sales_commission": 2.4,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 9.4,
+        "total_cost_net": 15.64,
+        "net_profit": -10.99,
+        "net_profit_margin_percent": -70.27
+      }
     },
     {
       "item_id": "136205359404",
@@ -57893,7 +57929,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-23T19:07:32.000Z",
       "end_time": "2026-04-23T19:07:32.000Z",
       "condition_id": 1000,
@@ -57905,7 +57941,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/Ru0AAeSwGRdogTK9/s-l140.png"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 10.0,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 12.6,
+        "payment_fee": 0.35,
+        "sales_commission": 1.8,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 9.4,
+        "total_cost_net": 10.79,
+        "net_profit": -9.74,
+        "net_profit_margin_percent": -90.29
+      }
     },
     {
       "item_id": "137180924693",
@@ -57920,7 +57968,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-23T19:09:58.000Z",
       "end_time": "2026-04-23T19:09:58.000Z",
       "condition_id": 1000,
@@ -57932,7 +57980,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/ZqYAAeSwVHBogTNS/s-l140.png"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 10.0,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 12.6,
+        "payment_fee": 0.35,
+        "sales_commission": 1.8,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 9.4,
+        "total_cost_net": 13.91,
+        "net_profit": -12.86,
+        "net_profit_margin_percent": -92.47
+      }
     },
     {
       "item_id": "136501242413",
@@ -61367,7 +61427,7 @@
       "quantity_available": null,
       "quantity_sold": 0,
       "listing_status": "Active",
-      "listing_type": "Chinese",
+      "listing_type": "Auction",
       "start_time": "2025-07-25T14:29:41.000Z",
       "end_time": "2026-04-25T14:29:41.000Z",
       "condition_id": 1000,
@@ -61379,7 +61439,19 @@
       "image_urls": [
         "https://i.ebayimg.com/images/g/SPsAAeSwW2dog5Qu/s-l140.jpg"
       ],
-      "listing_duration": "Days_7"
+      "listing_duration": "Days_7",
+      "profit_analysis": {
+        "selling_price_brutto": 15.0,
+        "shipping_listing": 4.99,
+        "selling_price_netto": 16.8,
+        "payment_fee": 0.35,
+        "sales_commission": 2.4,
+        "sales_commission_percentage": 0.12,
+        "shipping_costs_net": 9.4,
+        "total_cost_net": 25.58,
+        "net_profit": -20.93,
+        "net_profit_margin_percent": -81.82
+      }
     },
     {
       "item_id": "136216905237",

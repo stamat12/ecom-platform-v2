@@ -2074,6 +2074,8 @@ def _get_listing_sku_json_mapping(raw_sku):
         "last_price_change_days_ago": None,
         "last_price_old": None,
         "last_price_new": None,
+        "last_auction_convert_at": "",
+        "last_auction_convert_days_ago": None,
     }
 
     lookup_sku = _extract_lookup_sku(raw_sku)
@@ -2149,6 +2151,14 @@ def _get_listing_sku_json_mapping(raw_sku):
                 mapped["last_price_new"] = details.get("new_price")
                 if ts is not None:
                     mapped["last_price_change_days_ago"] = max((now_utc - ts).days, 0)
+
+            auction_entry = _find_latest("ebay_convert_to_auction_live")
+            if isinstance(auction_entry, dict):
+                ts_raw = auction_entry.get("timestamp")
+                ts = _parse_iso_ts(ts_raw)
+                mapped["last_auction_convert_at"] = str(ts_raw or "")
+                if ts is not None:
+                    mapped["last_auction_convert_days_ago"] = max((now_utc - ts).days, 0)
     except Exception:
         return mapped
 
