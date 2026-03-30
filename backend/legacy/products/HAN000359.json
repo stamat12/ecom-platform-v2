@@ -176,7 +176,25 @@
       "eBay Title": "ragwear OLSSEN Jacke Herren Schwarz M Wasserdichte Jacke Streetwear Vegane Jacke"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T17:19:18.548114Z",
+          "sku": "HAN000359",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000359",
+            "old_item_id": "136216863791",
+            "ended_item_ids": [
+              "136216863791"
+            ],
+            "new_item_id": "137181077779",
+            "start_price": 15.0,
+            "duration_days": 7
+          }
+        }
+      ]
     }
   }
 }

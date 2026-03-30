@@ -948,18 +948,45 @@ def _extract_lookup_sku(raw_sku: str) -> str:
 
 
 def _find_de_item_id_for_listing_sku(listing_sku: str) -> Optional[str]:
-    """Find DE marketplace item_id from listings cache by exact listing SKU."""
+    """Find best DE marketplace item_id from listings cache by exact listing SKU."""
+    candidates = _collect_de_item_candidates_for_listing_sku(listing_sku)
+    if not candidates:
+        return None
+
+    def _priority(candidate: Dict[str, str]) -> Tuple[int, int]:
+        status = str(candidate.get("listing_status") or "").strip().lower()
+        listing_type = str(candidate.get("listing_type") or "").strip().lower()
+        is_active = 1 if status == "active" else 0
+        is_fixed = 1 if "fixed" in listing_type else 0
+        return (is_active, is_fixed)
+
+    best = sorted(candidates, key=_priority, reverse=True)[0]
+    return str(best.get("item_id") or "").strip() or None
+
+
+def _collect_de_item_candidates_for_listing_sku(listing_sku: str) -> List[Dict[str, str]]:
+    """Return all DE marketplace listing candidates for related SKU values from cache."""
     cache = read_cache()
     if not cache:
-        return None
+        return []
 
     target = str(listing_sku or "").strip()
     if not target:
-        return None
+        return []
+
+    target_lookup = _extract_lookup_sku(target)
+    if not target_lookup:
+        return []
+
+    candidates: List[Dict[str, str]] = []
 
     for listing in (cache.get("listings", []) or []):
         sku = str(listing.get("sku") or "").strip()
-        if sku != target:
+        if not sku:
+            continue
+
+        sku_lookup = _extract_lookup_sku(sku)
+        if sku_lookup != target_lookup and sku != target:
             continue
 
         marketplace = str(listing.get("marketplace") or "").strip().upper()
@@ -969,9 +996,188 @@ def _find_de_item_id_for_listing_sku(listing_sku: str) -> Optional[str]:
 
         item_id = str(listing.get("item_id") or "").strip()
         if item_id:
-            return item_id
+            candidates.append({
+                "item_id": item_id,
+                "sku": sku,
+                "listing_status": str(listing.get("listing_status") or ""),
+                "listing_type": str(listing.get("listing_type") or ""),
+            })
 
-    return None
+    return candidates
+
+
+def _parse_ebay_ack(text: str) -> str:
+    ack_match = re.search(r"<Ack>(.*?)</Ack>", text or "")
+    return (ack_match.group(1).strip() if ack_match else "").lower()
+
+
+def _extract_ebay_error(text: str) -> str:
+    short = re.search(r"<ShortMessage>(.*?)</ShortMessage>", text or "")
+    long_msg = re.search(r"<LongMessage>(.*?)</LongMessage>", text or "")
+    return (long_msg.group(1) if long_msg else (short.group(1) if short else "Unknown eBay API error"))
+
+
+def _is_already_ended_error(text: str) -> bool:
+    error_text = _extract_ebay_error(text).lower()
+    return (
+        "bereits beendet" in error_text
+        or "already ended" in error_text
+        or "listing has ended" in error_text
+    )
+
+
+def _extract_response_item_id(text: str) -> str:
+    item_match = re.search(r"<ItemID>(.*?)</ItemID>", text or "")
+    return item_match.group(1).strip() if item_match else ""
+
+
+def convert_ebay_fixed_to_auction(sku: str, start_price: float, duration_days: int = 7) -> Dict[str, Any]:
+    """Convert a live DE fixed-price listing to an auction listing via Trading API."""
+    listing_sku = str(sku or "").strip()
+    if not listing_sku:
+        raise ValueError("SKU is required")
+    if start_price <= 0:
+        raise ValueError("Start price must be greater than 0")
+
+    duration = int(duration_days or 7)
+    if duration not in {1, 3, 5, 7, 10}:
+        raise ValueError("Auction duration must be one of: 1, 3, 5, 7, 10 days")
+
+    lookup_sku = _extract_lookup_sku(listing_sku)
+    if not lookup_sku:
+        raise ValueError(f"Could not extract lookup SKU from '{listing_sku}'")
+
+    candidates = _collect_de_item_candidates_for_listing_sku(listing_sku)
+    if not candidates:
+        raise ValueError(f"No DE listing item_id found in cache for SKU '{listing_sku}'")
+
+    active_fixed_candidates = [
+        c for c in candidates
+        if str(c.get("listing_status") or "").strip().lower() == "active"
+        and "fixed" in str(c.get("listing_type") or "").strip().lower()
+    ]
+
+    exact_active_fixed_candidates = [
+        c for c in active_fixed_candidates
+        if str(c.get("sku") or "").strip() == listing_sku
+    ]
+
+    end_targets = exact_active_fixed_candidates or active_fixed_candidates or [candidates[0]]
+    target_item_ids = [str(c.get("item_id") or "").strip() for c in end_targets if str(c.get("item_id") or "").strip()]
+    if not target_item_ids:
+        raise ValueError(f"No valid item_id targets found for SKU '{listing_sku}'")
+
+    token = get_ebay_token()
+    endpoint = get_api_endpoint()
+
+    logger.info(
+        "Converting fixed listing to auction: sku=%s, target_item_ids=%s, start_price=%.2f, duration=%s",
+        listing_sku,
+        target_item_ids,
+        start_price,
+        duration,
+    )
+
+    end_headers = _build_headers("EndFixedPriceItem")
+    ended_or_endedlike_ids: List[str] = []
+    last_end_error: Optional[str] = None
+
+    for item_id in target_item_ids:
+        end_xml = f"""<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<EndFixedPriceItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+  <RequesterCredentials>
+    <eBayAuthToken>{token}</eBayAuthToken>
+  </RequesterCredentials>
+  <EndingReason>NotAvailable</EndingReason>
+  <ItemID>{html.escape(item_id)}</ItemID>
+</EndFixedPriceItemRequest>"""
+
+        end_response = requests.post(endpoint, headers=end_headers, data=end_xml.encode("utf-8"), timeout=60)
+        end_response.raise_for_status()
+
+        end_text = end_response.text
+        end_ack = _parse_ebay_ack(end_text)
+        if end_ack in {"success", "warning"}:
+            ended_or_endedlike_ids.append(item_id)
+            continue
+
+        if _is_already_ended_error(end_text):
+            logger.warning(
+                "EndFixedPriceItem returned already-ended for sku=%s item_id=%s, continuing",
+                listing_sku,
+                item_id,
+            )
+            ended_or_endedlike_ids.append(item_id)
+            continue
+
+        end_error = _extract_ebay_error(end_text)
+        last_end_error = end_error
+        logger.error(
+            "EndFixedPriceItem failed for sku=%s item_id=%s: %s",
+            listing_sku,
+            item_id,
+            end_error,
+        )
+
+    if not ended_or_endedlike_ids:
+        raise ValueError(f"eBay EndFixedPriceItem failed: {last_end_error or 'Unknown error'}")
+
+    relist_source_item_id = ended_or_endedlike_ids[0]
+
+    relist_xml = f"""<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<RelistItemRequest xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+  <RequesterCredentials>
+    <eBayAuthToken>{token}</eBayAuthToken>
+  </RequesterCredentials>
+  <Item>
+    <ItemID>{html.escape(relist_source_item_id)}</ItemID>
+    <ListingType>Chinese</ListingType>
+    <ListingDuration>Days_{duration}</ListingDuration>
+    <Quantity>1</Quantity>
+    <StartPrice>{start_price:.2f}</StartPrice>
+  </Item>
+</RelistItemRequest>"""
+
+    relist_headers = _build_headers("RelistItem")
+    relist_response = requests.post(endpoint, headers=relist_headers, data=relist_xml.encode("utf-8"), timeout=60)
+    relist_response.raise_for_status()
+
+    relist_text = relist_response.text
+    relist_ack = _parse_ebay_ack(relist_text)
+    if relist_ack not in {"success", "warning"}:
+        relist_error = _extract_ebay_error(relist_text)
+        logger.error(
+            "RelistItem failed after EndFixedPriceItem for sku=%s item_id=%s: %s | response=%s",
+            listing_sku,
+            relist_source_item_id,
+            relist_error,
+            (relist_text[:1200] if relist_text else ""),
+        )
+        raise ValueError(
+            "eBay RelistItem failed after listing was ended: "
+            f"{relist_error}. Please relist manually in eBay Seller Hub if needed."
+        )
+
+    new_item_id = _extract_response_item_id(relist_text) or relist_source_item_id
+
+    logger.info(
+        "Converted listing to auction successfully: sku=%s old_item_id=%s new_item_id=%s",
+        listing_sku,
+        relist_source_item_id,
+        new_item_id,
+    )
+
+    return {
+        "success": True,
+        "sku": listing_sku,
+        "lookup_sku": lookup_sku,
+        "old_item_id": relist_source_item_id,
+        "ended_item_ids": ended_or_endedlike_ids,
+        "item_id": new_item_id,
+        "start_price": round(start_price, 2),
+        "duration_days": duration,
+        "message": f"Converted to {duration}-day auction at EUR{start_price:.2f}",
+    }
 
 
 def revise_ebay_listing_title(sku: str) -> Dict[str, Any]:

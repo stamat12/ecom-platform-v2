@@ -85,7 +85,25 @@
       "eBay Title": "Zign Handtasche Damen Braun 37x27 cm Damentasche Schultertasche Tote Bag"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T17:09:20.761283Z",
+          "sku": "HAN000423",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000423",
+            "old_item_id": "136205317679",
+            "ended_item_ids": [
+              "136205317679"
+            ],
+            "new_item_id": "137181049082",
+            "start_price": 15.0,
+            "duration_days": 7
+          }
+        }
+      ]
     }
   }
 }

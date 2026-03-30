@@ -82,7 +82,25 @@
       "eBay Title": "s.Oliver 28701-20 Sandale Damen Schwarz 37 Damen Sandalen bequeme Schuhe"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T16:13:11.664212Z",
+          "sku": "HAN000399",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000399",
+            "old_item_id": "136205392176",
+            "ended_item_ids": [
+              "136205392176"
+            ],
+            "new_item_id": "137180933524",
+            "start_price": 10.0,
+            "duration_days": 7
+          }
+        }
+      ]
     }
   }
 }

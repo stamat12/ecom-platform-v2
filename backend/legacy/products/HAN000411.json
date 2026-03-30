@@ -82,7 +82,25 @@
       "eBay Title": "Toms Alpargata Rope 2.0 Schuh Damen Beige 37 Espadrilles Damen Schuhe"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T16:14:34.221250Z",
+          "sku": "HAN000411",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000411",
+            "old_item_id": "136205289496",
+            "ended_item_ids": [
+              "136205289496"
+            ],
+            "new_item_id": "137180934160",
+            "start_price": 10.0,
+            "duration_days": 7
+          }
+        }
+      ]
     }
   }
 }

@@ -182,3 +182,10 @@ class EbayRevisePriceRequest(BaseModel):
     sku: str
     new_price: float
 
+
+class EbayConvertToAuctionRequest(BaseModel):
+    """Request to convert a live fixed-price listing into a 7-day auction."""
+    sku: str
+    start_price: float = Field(gt=0)
+    duration_days: int = Field(default=7, ge=1, le=10)
+

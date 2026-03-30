@@ -46,7 +46,7 @@ from app.repositories.sku_json_repo import read_sku_json
 from app.repositories.preferences_repo import get_sku_filter_state, save_sku_filter_state
 from app.services.folder_images_cache import get_last_update_time as get_folder_images_last_update
 from app.services.folder_images_computation import compute_folder_images_for_all_skus
-from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing, update_listing_price_in_cache
+from app.services.ebay_listings_cache import get_last_update_time as get_ebay_listings_last_update, read_cache as read_ebay_cache, get_sku_has_listing, update_listing_price_in_cache, update_listing_to_auction_in_cache
 from app.services.ebay_category_search import search_ebay_categories
 from app.services.ebay_listings_computation import compute_ebay_listings_fast, compute_ebay_listings_detailed, recompute_cached_profit_analysis
 from app.services.inventory_json_db_importer import update_db_from_jsons
@@ -98,6 +98,7 @@ from app.models.ebay_listing import (
     EbayListingBulkUpdateRequest, EbayListingBulkUpdateResponse,
     EbayListingBulkSaveRequest, EbayListingBulkSaveResponse,
     EbayRevisePriceRequest,
+    EbayConvertToAuctionRequest,
 )
 from app.models.ebay_oauth import EbayOAuthExchangeRequest, EbayOAuthExchangeResponse
 from app.models.ebay_sync import (
@@ -1088,6 +1089,43 @@ def revise_ebay_price(request: EbayRevisePriceRequest):
                     "new_price": result.get("new_price", request.new_price),
                 },
             )
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.post("/api/ebay/convert-to-auction")
+def convert_ebay_listing_to_auction(request: EbayConvertToAuctionRequest):
+    """Convert a live fixed-price listing to auction and patch local cache."""
+    try:
+        result = ebay_listing.convert_ebay_fixed_to_auction(
+            request.sku,
+            request.start_price,
+            request.duration_days,
+        )
+
+        update_listing_to_auction_in_cache(
+            request.sku,
+            request.start_price,
+            request.duration_days,
+            result.get("item_id"),
+            result.get("old_item_id"),
+        )
+
+        if result.get("success"):
+            append_product_change_log(
+                str(result.get("lookup_sku") or request.sku),
+                "ebay_convert_to_auction_live",
+                {
+                    "listing_sku": request.sku,
+                    "old_item_id": result.get("old_item_id", ""),
+                    "ended_item_ids": result.get("ended_item_ids", []),
+                    "new_item_id": result.get("item_id", ""),
+                    "start_price": result.get("start_price", request.start_price),
+                    "duration_days": result.get("duration_days", request.duration_days),
+                },
+            )
+
         return result
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))

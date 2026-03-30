@@ -8300,3 +8300,29 @@ ValueError: Product Type missing in eBay SEO for SKU JAL00201
 2026-03-30 17:17:57,867 - INFO - Successfully created listing for SKU HANWS037, ItemID: 137180823987
 2026-03-30 17:17:57,983 - INFO - [BATCH 1ab6b9d8ea] SUCCESS sku=HANWS037 item_id=137180823987
 2026-03-30 17:17:57,983 - INFO - [BATCH 1ab6b9d8ea] Completed: success=True total=1 successful=1 failed=0
+2026-03-30 17:53:45,879 - INFO - Converting fixed listing to auction: sku=HAN000354, item_id=136205398657, start_price=15.00, duration=7
+2026-03-30 17:53:47,744 - INFO - Converting fixed listing to auction: sku=HAN000380, item_id=136048254866, start_price=15.00, duration=7
+2026-03-30 17:53:49,676 - INFO - Converting fixed listing to auction: sku=HAN000411, item_id=136205289496, start_price=10.00, duration=7
+2026-03-30 17:53:51,392 - INFO - Converting fixed listing to auction: sku=HAN000423, item_id=136205317679, start_price=10.00, duration=7
+2026-03-30 17:53:53,183 - INFO - Converting fixed listing to auction: sku=HAN000394, item_id=136216905237, start_price=10.00, duration=7
+2026-03-30 17:54:37,240 - INFO - Converting fixed listing to auction: sku=HAN000354, item_id=136205398657, start_price=15.00, duration=7
+2026-03-30 17:54:38,832 - INFO - Converting fixed listing to auction: sku=HAN000380, item_id=136048254866, start_price=15.00, duration=7
+2026-03-30 17:54:40,225 - INFO - Converting fixed listing to auction: sku=HAN000411, item_id=136205289496, start_price=10.00, duration=7
+2026-03-30 17:54:41,761 - INFO - Converting fixed listing to auction: sku=HAN000423, item_id=136205317679, start_price=10.00, duration=7
+2026-03-30 17:54:43,171 - INFO - Converting fixed listing to auction: sku=HAN000394, item_id=136216905237, start_price=10.00, duration=7
+2026-03-30 18:03:26,921 - INFO - Converting fixed listing to auction: sku=HAN000380, item_id=136048254866, start_price=15.00, duration=7
+2026-03-30 18:03:29,028 - WARNING - EndFixedPriceItem returned already-ended for sku=HAN000380 item_id=136048254866, continuing with relist
+2026-03-30 18:03:33,219 - INFO - Converted listing to auction successfully: sku=HAN000380 old_item_id=136048254866 new_item_id=137180907635
+2026-03-30 18:10:47,201 - INFO - Converting fixed listing to auction: sku=HAN000354, target_item_ids=['136205398657'], start_price=10.00, duration=7
+2026-03-30 18:10:49,190 - WARNING - EndFixedPriceItem returned already-ended for sku=HAN000354 item_id=136205398657, continuing
+2026-03-30 18:10:53,406 - INFO - Converted listing to auction successfully: sku=HAN000354 old_item_id=136205398657 new_item_id=137180924693
+2026-03-30 18:13:05,610 - INFO - Converting fixed listing to auction: sku=HAN000399, target_item_ids=['136205392176'], start_price=10.00, duration=7
+2026-03-30 18:13:11,301 - INFO - Converted listing to auction successfully: sku=HAN000399 old_item_id=136205392176 new_item_id=137180933524
+2026-03-30 18:14:28,778 - INFO - Converting fixed listing to auction: sku=HAN000411, target_item_ids=['136205289496'], start_price=10.00, duration=7
+2026-03-30 18:14:30,014 - WARNING - EndFixedPriceItem returned already-ended for sku=HAN000411 item_id=136205289496, continuing
+2026-03-30 18:14:33,851 - INFO - Converted listing to auction successfully: sku=HAN000411 old_item_id=136205289496 new_item_id=137180934160
+2026-03-30 19:09:14,538 - INFO - Converting fixed listing to auction: sku=HAN000423, target_item_ids=['136205317679'], start_price=15.00, duration=7
+2026-03-30 19:09:16,409 - WARNING - EndFixedPriceItem returned already-ended for sku=HAN000423 item_id=136205317679, continuing
+2026-03-30 19:09:20,472 - INFO - Converted listing to auction successfully: sku=HAN000423 old_item_id=136205317679 new_item_id=137181049082
+2026-03-30 19:19:12,441 - INFO - Converting fixed listing to auction: sku=HAN000359, target_item_ids=['136216863791'], start_price=15.00, duration=7
+2026-03-30 19:19:18,213 - INFO - Converted listing to auction successfully: sku=HAN000359 old_item_id=136216863791 new_item_id=137181077779

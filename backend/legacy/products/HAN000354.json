@@ -351,7 +351,25 @@
       "eBay Title": "S. Oliver Jacke Damen Grün S Herrenjacke Outdoorjacke Windjacke"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T16:10:53.805040Z",
+          "sku": "HAN000354",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000354",
+            "old_item_id": "136205398657",
+            "ended_item_ids": [
+              "136205398657"
+            ],
+            "new_item_id": "137180924693",
+            "start_price": 10.0,
+            "duration_days": 7
+          }
+        }
+      ]
     }
   }
 }

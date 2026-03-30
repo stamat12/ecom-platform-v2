@@ -9,6 +9,28 @@ import config  # type: ignore
 CACHE_FILE = config.PRODUCTS_FOLDER_PATH / "cache" / "ebay_listings_cache.json"
 
 
+def _extract_lookup_sku(raw_sku: str) -> str:
+    """Extract primary SKU token for matching variant SKU formats."""
+    if not raw_sku:
+        return ""
+
+    sku_value = str(raw_sku).strip()
+    if not sku_value:
+        return ""
+
+    if "," in sku_value:
+        sku_value = sku_value.split(",", 1)[0].strip()
+
+    if " - " in sku_value:
+        sku_value = sku_value.split(" - ", 1)[0].strip()
+    elif "-" in sku_value:
+        parts = [part.strip() for part in sku_value.split("-") if part.strip()]
+        if len(parts) == 2:
+            sku_value = parts[0]
+
+    return sku_value
+
+
 def read_cache() -> Optional[Dict]:
     """
     Read the eBay listings cache file.
@@ -225,6 +247,116 @@ def update_listing_price_in_cache(sku: str, new_price: float) -> bool:
         listing.pop("profit_analysis", None)
         updated = True
         break
+
+    if updated:
+        CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+
+    return updated
+
+
+def update_listing_to_auction_in_cache(
+    sku: str,
+    start_price: float,
+    duration_days: int = 7,
+    new_item_id: Optional[str] = None,
+    old_item_id: Optional[str] = None,
+) -> bool:
+    """Patch cache entries after converting a live fixed listing to auction."""
+    cache = read_cache()
+    if not cache:
+        return False
+
+    target = str(sku or "").strip()
+    if not target:
+        return False
+
+    target_lookup = _extract_lookup_sku(target)
+
+    target_old_item_id = str(old_item_id or "").strip()
+
+    listings = cache.get("listings", [])
+    updated = False
+    converted = False
+
+    # FIRST PASS: Convert the old item ID to auction (if provided)
+    if target_old_item_id:
+        for listing in listings:
+            listing_sku = str(listing.get("sku") or "").strip()
+            listing_lookup = _extract_lookup_sku(listing_sku)
+            if not listing_sku:
+                continue
+            if listing_lookup != target_lookup and listing_sku != target:
+                continue
+
+            marketplace = str(listing.get("marketplace") or "").strip().upper()
+            site = str(listing.get("site") or "").strip().lower()
+            if marketplace != "DE" and site != "germany":
+                continue
+
+            listing_item_id = str(listing.get("item_id") or "").strip()
+            if listing_item_id == target_old_item_id:
+                listing["price"] = round(float(start_price), 2)
+                listing["listing_type"] = "Chinese"
+                listing["listing_duration"] = f"Days_{int(duration_days)}"
+                listing["listing_status"] = "Active"
+                if new_item_id:
+                    listing["item_id"] = str(new_item_id)
+                listing.pop("profit_analysis", None)
+                converted = True
+                updated = True
+                break
+
+    # SECOND PASS: Mark all remaining active fixed-price listings as Ended
+    for listing in listings:
+        listing_sku = str(listing.get("sku") or "").strip()
+        listing_lookup = _extract_lookup_sku(listing_sku)
+        if not listing_sku:
+            continue
+        if listing_lookup != target_lookup and listing_sku != target:
+            continue
+
+        marketplace = str(listing.get("marketplace") or "").strip().upper()
+        site = str(listing.get("site") or "").strip().lower()
+        if marketplace != "DE" and site != "germany":
+            continue
+
+        listing_type = str(listing.get("listing_type") or "").strip().lower()
+        listing_status = str(listing.get("listing_status") or "").strip().lower()
+        listing_item_id = str(listing.get("item_id") or "").strip()
+
+        # Mark active fixed listings as ended (skip the one we just converted)
+        if "fixed" in listing_type and listing_status == "active":
+            if listing_item_id != (new_item_id or ""):
+                listing["listing_status"] = "Ended"
+                listing.pop("profit_analysis", None)
+                updated = True
+
+    # FALLBACK: If old_item_id wasn't matched, update first related DE listing
+    if not converted:
+        for listing in listings:
+            listing_sku = str(listing.get("sku") or "").strip()
+            listing_lookup = _extract_lookup_sku(listing_sku)
+            if not listing_sku:
+                continue
+            if listing_lookup != target_lookup and listing_sku != target:
+                continue
+
+            marketplace = str(listing.get("marketplace") or "").strip().upper()
+            site = str(listing.get("site") or "").strip().lower()
+            if marketplace != "DE" and site != "germany":
+                continue
+
+            listing["price"] = round(float(start_price), 2)
+            listing["listing_type"] = "Chinese"
+            listing["listing_duration"] = f"Days_{int(duration_days)}"
+            listing["listing_status"] = "Active"
+            if new_item_id:
+                listing["item_id"] = str(new_item_id)
+            listing.pop("profit_analysis", None)
+            updated = True
+            break
 
     if updated:
         CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)

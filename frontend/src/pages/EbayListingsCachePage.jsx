@@ -543,13 +543,22 @@ const getCellStyle = (columnId, value) => {
  * Given a target profit margin % and a listing's profit_analysis, compute the
  * required new eBay listing price (brutto, DE marketplace, no surcharge).
  */
-const computePriceFromMargin = (targetMarginPct, profit) => {
+const computePriceFromMargin = (
+  targetMarginPct,
+  profit,
+  shippingNetOverride = null,
+  shippingListingOverride = null,
+) => {
   if (!profit) return null;
   const totalCostNet   = profit.total_cost_net        || 0;
   const commissionPct  = profit.sales_commission_percentage || 0;
   const paymentFee     = profit.payment_fee            || 0;
-  const shippingNet    = profit.shipping_costs_net     || 0;
-  const shippingList   = profit.shipping_listing       || 4.99;
+  const shippingNet = Number.isFinite(Number(shippingNetOverride))
+    ? Number(shippingNetOverride)
+    : (profit.shipping_costs_net || 0);
+  const shippingList = Number.isFinite(Number(shippingListingOverride))
+    ? Number(shippingListingOverride)
+    : (profit.shipping_listing || 4.99);
   const vatRate        = 0.19;
 
   const targetNetProfit = (totalCostNet * targetMarginPct) / 100;
@@ -563,14 +572,23 @@ const computePriceFromMargin = (targetMarginPct, profit) => {
  * Given a new eBay price and a listing's profit_analysis, compute the resulting
  * profit margin %.
  */
-const computeMarginFromPrice = (price, profit) => {
+const computeMarginFromPrice = (
+  price,
+  profit,
+  shippingNetOverride = null,
+  shippingListingOverride = null,
+) => {
   if (!profit) return null;
   const totalCostNet   = profit.total_cost_net        || 0;
   if (totalCostNet <= 0) return null;
   const commissionPct  = profit.sales_commission_percentage || 0;
   const paymentFee     = profit.payment_fee            || 0;
-  const shippingNet    = profit.shipping_costs_net     || 0;
-  const shippingList   = profit.shipping_listing       || 4.99;
+  const shippingNet = Number.isFinite(Number(shippingNetOverride))
+    ? Number(shippingNetOverride)
+    : (profit.shipping_costs_net || 0);
+  const shippingList = Number.isFinite(Number(shippingListingOverride))
+    ? Number(shippingListingOverride)
+    : (profit.shipping_listing || 4.99);
   const vatRate        = 0.19;
 
   const custPayment     = parseFloat(price) + shippingList;
@@ -813,6 +831,338 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
   );
 };
 
+const AuctionAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
+  const computeAuctionMetrics = (priceRaw, profit, shippingNetRaw, shippingListingRaw) => {
+    if (!profit) return null;
+    const price = parseFloat(priceRaw);
+    if (isNaN(price) || price <= 0) return null;
+
+    const totalCostNet = parseFloat(profit.total_cost_net || 0);
+    const commissionPct = parseFloat(profit.sales_commission_percentage || 0);
+    const paymentFee = parseFloat(profit.payment_fee || 0);
+    const shippingListParsed = parseFloat(shippingListingRaw);
+    const shippingList = !isNaN(shippingListParsed)
+      ? shippingListParsed
+      : parseFloat(profit.shipping_listing || 4.99);
+    const shippingNetParsed = parseFloat(shippingNetRaw);
+    const shippingNet = !isNaN(shippingNetParsed)
+      ? shippingNetParsed
+      : parseFloat(profit.shipping_costs_net || 0);
+    const vatRate = 0.19;
+
+    const customerPayment = price + shippingList;
+    const sellingNetto = customerPayment / (1 + vatRate);
+    const commission = customerPayment * commissionPct;
+    const netProfit = sellingNetto - commission - paymentFee - shippingNet - totalCostNet;
+    const marginPercent = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : null;
+
+    return {
+      commission,
+      netProfit,
+      marginPercent,
+    };
+  };
+
+  const initialRows = React.useMemo(() => {
+    return Array.from(selectedSkus)
+      .map(sku => listings.find(l => l.sku === sku))
+      .filter(Boolean)
+      .map(l => {
+        const profit = l.profit_analysis || null;
+        const startPrice = parseFloat(l.price) || 0;
+        const shippingNet = profit?.shipping_costs_net ?? 9.4;
+        const margin = profit
+          ? computeMarginFromPrice(startPrice, profit, shippingNet)
+          : null;
+
+        return {
+          sku: l.sku,
+          op: l.op,
+          title: l.title || l.ebay_seo_title || "",
+          imageUrl: l.primary_image_url || "",
+          currentPrice: startPrice,
+          listingType: l.listing_type || "",
+          profit,
+          shippingListing: Number(profit?.shipping_listing ?? 4.99).toFixed(2),
+          shippingNet: Number(shippingNet).toFixed(2),
+          startPrice: startPrice.toFixed(2),
+          targetMargin: margin !== null ? margin.toFixed(1) : "",
+          include: true,
+        };
+      });
+  }, [listings, selectedSkus]);
+
+  const [rows, setRows] = React.useState(initialRows);
+  const [globalMargin, setGlobalMargin] = React.useState("");
+  const [globalShippingNet, setGlobalShippingNet] = React.useState("9.40");
+  const [globalShippingListing, setGlobalShippingListing] = React.useState("4.99");
+  const [updating, setUpdating] = React.useState(false);
+  const [results, setResults] = React.useState([]);
+
+  const updateRow = (idx, field, rawValue) => {
+    setRows(prev => {
+      const next = [...prev];
+      const row = { ...next[idx] };
+
+      if (field === "startPrice") {
+        row.startPrice = rawValue;
+        const price = parseFloat(rawValue);
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(row.shippingListing);
+        if (!isNaN(price) && price > 0 && row.profit) {
+          const margin = computeMarginFromPrice(price, row.profit, ship, shipListing);
+          row.targetMargin = margin !== null ? margin.toFixed(1) : "";
+        }
+      } else if (field === "targetMargin") {
+        row.targetMargin = rawValue;
+        const margin = parseFloat(rawValue);
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(row.shippingListing);
+        if (!isNaN(margin) && row.profit) {
+          const price = computePriceFromMargin(margin, row.profit, ship, shipListing);
+          row.startPrice = price !== null ? price.toFixed(2) : row.startPrice;
+        }
+      } else if (field === "shippingListing") {
+        row.shippingListing = rawValue;
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(rawValue);
+        const price = parseFloat(row.startPrice);
+        if (!isNaN(shipListing) && row.profit && !isNaN(price) && price > 0) {
+          const margin = computeMarginFromPrice(price, row.profit, ship, shipListing);
+          row.targetMargin = margin !== null ? margin.toFixed(1) : row.targetMargin;
+        }
+      } else if (field === "shippingNet") {
+        row.shippingNet = rawValue;
+        const ship = parseFloat(rawValue);
+        const shipListing = parseFloat(row.shippingListing);
+        const price = parseFloat(row.startPrice);
+        if (!isNaN(ship) && row.profit && !isNaN(price) && price > 0) {
+          const margin = computeMarginFromPrice(price, row.profit, ship, shipListing);
+          row.targetMargin = margin !== null ? margin.toFixed(1) : row.targetMargin;
+        }
+      } else if (field === "include") {
+        row.include = rawValue;
+      }
+
+      next[idx] = row;
+      return next;
+    });
+  };
+
+  const applyGlobalMargin = () => {
+    const margin = parseFloat(globalMargin);
+    if (isNaN(margin)) return;
+    setRows(prev => prev.map(row => {
+      if (!row.profit) return row;
+      const ship = parseFloat(row.shippingNet);
+      const shipListing = parseFloat(row.shippingListing);
+      const price = computePriceFromMargin(margin, row.profit, ship, shipListing);
+      return {
+        ...row,
+        targetMargin: margin.toFixed(1),
+        startPrice: price !== null ? price.toFixed(2) : row.startPrice,
+      };
+    }));
+  };
+
+  const applyGlobalShippingNet = () => {
+    const ship = parseFloat(globalShippingNet);
+    if (isNaN(ship) || ship < 0) return;
+    setRows(prev => prev.map(row => {
+      const price = parseFloat(row.startPrice);
+      const shipListing = parseFloat(row.shippingListing);
+      const margin = row.profit && !isNaN(price) && price > 0
+        ? computeMarginFromPrice(price, row.profit, ship, shipListing)
+        : null;
+      return {
+        ...row,
+        shippingNet: ship.toFixed(2),
+        targetMargin: margin !== null ? margin.toFixed(1) : row.targetMargin,
+      };
+    }));
+  };
+
+  const applyGlobalShippingListing = () => {
+    const shipListing = parseFloat(globalShippingListing);
+    if (isNaN(shipListing) || shipListing < 0) return;
+    setRows(prev => prev.map(row => {
+      const price = parseFloat(row.startPrice);
+      const ship = parseFloat(row.shippingNet);
+      const margin = row.profit && !isNaN(price) && price > 0
+        ? computeMarginFromPrice(price, row.profit, ship, shipListing)
+        : null;
+      return {
+        ...row,
+        shippingListing: shipListing.toFixed(2),
+        targetMargin: margin !== null ? margin.toFixed(1) : row.targetMargin,
+      };
+    }));
+  };
+
+  const handleConvert = async () => {
+    const toConvert = rows.filter(r => r.include && parseFloat(r.startPrice) > 0);
+    if (toConvert.length === 0) {
+      alert("No valid rows selected for auction conversion.");
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `This will end and relist ${toConvert.length} listing(s) as 7-day auction. Continue?`
+    );
+    if (!confirmed) return;
+
+    setUpdating(true);
+    setResults([]);
+    const out = [];
+
+    for (const row of toConvert) {
+      try {
+        const resp = await fetch(`${API_BASE}/api/ebay/convert-to-auction`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            sku: row.sku,
+            start_price: parseFloat(row.startPrice),
+            duration_days: 7,
+          }),
+        });
+
+        const data = await resp.json().catch(() => ({}));
+        if (resp.ok && data.success !== false) {
+          out.push({ sku: row.sku, success: true, message: data.message || "Converted" });
+        } else {
+          out.push({ sku: row.sku, success: false, message: data.detail || data.message || `HTTP ${resp.status}` });
+        }
+      } catch (err) {
+        out.push({ sku: row.sku, success: false, message: err.message || "Unknown network error" });
+      }
+    }
+
+    setUpdating(false);
+    setResults(out);
+    const succeeded = out.filter(r => r.success).length;
+    if (succeeded > 0) onDone();
+  };
+
+  const fmtEur = v => {
+    const n = parseFloat(v);
+    return isNaN(n) ? "-" : `EUR${n.toFixed(2)}`;
+  };
+  const fmtPct = v => {
+    const n = parseFloat(v);
+    return isNaN(n) ? "-" : `${n.toFixed(1)}%`;
+  };
+
+  return (
+    <div style={{ position:"fixed", top:0, left:0, right:0, bottom:0, backgroundColor:"rgba(0,0,0,0.55)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999 }}>
+      <div style={{ backgroundColor:"white", borderRadius:"8px", padding:"24px", maxWidth:"1450px", width:"97vw", maxHeight:"90vh", overflowY:"auto", boxShadow:"0 6px 20px rgba(0,0,0,0.3)" }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"16px" }}>
+          <h2 style={{ margin:0, fontSize:"18px" }}>Auction 7 Days ({rows.length} listing{rows.length !== 1 ? "s" : ""})</h2>
+          <button onClick={onClose} style={{ padding:"6px 12px", backgroundColor:"#dc3545", color:"white", border:"none", borderRadius:"4px", cursor:"pointer" }}>Close</button>
+        </div>
+
+        <div style={{ backgroundColor:"#eef6ff", padding:"12px 16px", borderRadius:"6px", marginBottom:"16px", display:"flex", alignItems:"center", gap:"12px", flexWrap:"wrap" }}>
+          <span style={{ fontSize:"13px", fontWeight:"bold" }}>Target margin % for all:</span>
+          <input type="number" step="1" value={globalMargin} onChange={e => setGlobalMargin(e.target.value)} style={{ width:"90px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }} />
+          <button onClick={applyGlobalMargin} style={{ padding:"6px 14px", backgroundColor:"#0066cc", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>Apply Margin</button>
+
+          <span style={{ fontSize:"13px", fontWeight:"bold", marginLeft:"16px" }}>Shipping charged to buyer EUR (all):</span>
+          <input type="number" step="0.01" min="0" value={globalShippingListing} onChange={e => setGlobalShippingListing(e.target.value)} style={{ width:"100px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }} />
+          <button onClick={applyGlobalShippingListing} style={{ padding:"6px 14px", backgroundColor:"#5d4037", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>Apply Buyer Shipping</button>
+
+          <span style={{ fontSize:"13px", fontWeight:"bold", marginLeft:"16px" }}>Your shipping cost net EUR (all):</span>
+          <input type="number" step="0.01" min="0" value={globalShippingNet} onChange={e => setGlobalShippingNet(e.target.value)} style={{ width:"100px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }} />
+          <button onClick={applyGlobalShippingNet} style={{ padding:"6px 14px", backgroundColor:"#455a64", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>Apply Cost Shipping</button>
+          <span style={{ fontSize:"12px", color:"#666" }}>Buyer shipping and your shipping cost are both editable per row and both affect margin.</span>
+        </div>
+
+        <div style={{ overflowX:"auto", marginBottom:"16px" }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"12px" }}>
+            <thead>
+              <tr style={{ backgroundColor:"#f8f9fa", borderBottom:"2px solid #dee2e6" }}>
+                <th style={{ padding:"8px", textAlign:"center" }}>Include</th>
+                <th style={{ padding:"8px", textAlign:"center" }}>Image</th>
+                <th style={{ padding:"8px", textAlign:"left", minWidth:"220px" }}>Title</th>
+                <th style={{ padding:"8px", textAlign:"left" }}>SKU</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Current Price</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Current Type</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Cost Net</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Commission</th>
+                <th style={{ padding:"8px", textAlign:"right" }}>Payment Fee</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Shipping Charged to Buyer EUR</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Your Shipping Cost Net EUR</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Start Price EUR</th>
+                <th style={{ padding:"8px", textAlign:"right", backgroundColor:"#fff3cd" }}>Net Profit EUR</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Margin %</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, idx) => {
+                const p = row.profit || {};
+                const computed = computeAuctionMetrics(row.startPrice, p, row.shippingNet, row.shippingListing);
+                return (
+                  <tr key={row.sku} style={{ borderBottom:"1px solid #eee", backgroundColor: idx % 2 === 0 ? "#fff" : "#f9f9f9" }}>
+                    <td style={{ padding:"6px", textAlign:"center" }}>
+                      <input type="checkbox" checked={row.include} onChange={e => updateRow(idx, "include", e.target.checked)} />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center" }}>
+                      {row.imageUrl ? (
+                        <img src={row.imageUrl} alt={row.sku} style={{ width:"52px", height:"52px", objectFit:"cover", borderRadius:"4px", border:"1px solid #ddd" }} onError={e => { e.target.style.display="none"; }} />
+                      ) : (
+                        <div style={{ width:"52px", height:"52px", backgroundColor:"#e9ecef", borderRadius:"4px", display:"inline-flex", alignItems:"center", justifyContent:"center", fontSize:"18px" }}>N/A</div>
+                      )}
+                    </td>
+                    <td style={{ padding:"6px", fontSize:"11px", whiteSpace:"normal", wordBreak:"break-word", maxWidth:"300px", lineHeight:"1.35" }}>{row.title || "-"}</td>
+                    <td style={{ padding:"6px", fontWeight:"bold" }}>{row.sku}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(row.currentPrice)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{row.listingType || "-"}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.total_cost_net)}</td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(computed?.commission)} <span style={{ color:"#888", fontSize:"10px" }}>({fmtPct((p.sales_commission_percentage || 0) * 100)})</span></td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.payment_fee)}</td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input type="number" step="0.01" min="0" value={row.shippingListing} onChange={e => updateRow(idx, "shippingListing", e.target.value)} title="What buyer pays for shipping" style={{ width:"100px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }} />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input type="number" step="0.01" min="0" value={row.shippingNet} onChange={e => updateRow(idx, "shippingNet", e.target.value)} title="Your net shipping cost" style={{ width:"90px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }} />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input type="number" step="0.01" min="0.01" value={row.startPrice} onChange={e => updateRow(idx, "startPrice", e.target.value)} style={{ width:"90px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }} />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"right", backgroundColor:"#fffde7", fontWeight:"bold", color: (computed?.netProfit || 0) >= 0 ? "#28a745" : "#dc3545" }}>
+                      {fmtEur(computed?.netProfit)}
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input type="number" step="1" value={row.targetMargin} onChange={e => updateRow(idx, "targetMargin", e.target.value)} style={{ width:"80px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px", color: (computed?.marginPercent || 0) >= 0 ? "#28a745" : "#dc3545", fontWeight:"bold" }} />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {results.length > 0 && (
+          <div style={{ marginBottom:"16px", padding:"12px", backgroundColor:"#f8f9fa", borderRadius:"6px", fontSize:"12px" }}>
+            <strong>Results:</strong>
+            {results.map(r => (
+              <div key={r.sku} style={{ color: r.success ? "#28a745" : "#dc3545", marginTop:"4px" }}>
+                {r.success ? "OK" : "ERR"} {r.sku}: {r.message}
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div style={{ display:"flex", justifyContent:"flex-end", gap:"10px" }}>
+          <button onClick={onClose} style={{ padding:"8px 20px", backgroundColor:"#6c757d", color:"white", border:"none", borderRadius:"4px", cursor:"pointer" }}>Cancel</button>
+          <button onClick={handleConvert} disabled={updating} style={{ padding:"8px 20px", backgroundColor: updating ? "#ccc" : "#ad1457", color:"white", border:"none", borderRadius:"4px", cursor: updating ? "default" : "pointer", fontWeight:"bold" }}>
+            {updating ? "Converting..." : "Convert to Auction (7 Days)"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function EbayListingsCachePage() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -868,6 +1218,7 @@ export default function EbayListingsCachePage() {
   const [titleUpdatingEbay, setTitleUpdatingEbay] = useState(false);
   const [profitRecalculating, setProfitRecalculating] = useState(false);
   const [showPriceAdjuster, setShowPriceAdjuster] = useState(false);
+  const [showAuctionAdjuster, setShowAuctionAdjuster] = useState(false);
   const [columnSort, setColumnSort] = useState({ columnId: null, direction: "asc" });
   const [columnWidths, setColumnWidths] = useState(() => {
     const saved = localStorage.getItem("ebayListingsColumnWidths");
@@ -1707,6 +2058,25 @@ export default function EbayListingsCachePage() {
             💰 Price Adjuster {selectedSkus.size > 0 && `(${selectedSkus.size})`}
           </button>
           <button
+            onClick={() => {
+              if (selectedSkus.size === 0) { alert("Please select at least one SKU"); return; }
+              setShowAuctionAdjuster(true);
+            }}
+            disabled={selectedSkus.size === 0}
+            style={{
+              padding: "8px 16px",
+              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#ad1457",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: selectedSkus.size === 0 ? "default" : "pointer",
+              fontWeight: "bold"
+            }}
+            title="Convert selected fixed listings to 7-day auction with start-price planning"
+          >
+            🏁 Auction 7 Days {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+          </button>
+          <button
             onClick={sendSelectedToSkuBatch}
             disabled={selectedSkus.size === 0}
             style={{
@@ -1952,6 +2322,19 @@ export default function EbayListingsCachePage() {
             onClose={() => setShowPriceAdjuster(false)}
             onDone={() => {
               setShowPriceAdjuster(false);
+              fetchListings(page);
+              setSelectedSkus(new Set());
+            }}
+          />
+        )}
+
+        {showAuctionAdjuster && (
+          <AuctionAdjuster
+            listings={listings}
+            selectedSkus={selectedSkus}
+            onClose={() => setShowAuctionAdjuster(false)}
+            onDone={() => {
+              setShowAuctionAdjuster(false);
               fetchListings(page);
               setSelectedSkus(new Set());
             }}

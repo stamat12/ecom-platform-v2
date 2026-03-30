@@ -87,6 +87,20 @@
     "System Logs": {
       "Change Log": [
         {
+          "timestamp": "2026-03-30T16:03:33.643125Z",
+          "sku": "HAN000380",
+          "action": "ebay_convert_to_auction_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000380",
+            "old_item_id": "136048254866",
+            "new_item_id": "137180907635",
+            "start_price": 15.0,
+            "duration_days": 7
+          }
+        },
+        {
           "timestamp": "2026-03-15T12:53:46.718949Z",
           "sku": "HAN000380",
           "action": "ebay_revise_price_live",
