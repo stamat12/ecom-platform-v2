@@ -1726,5 +1726,19 @@
     "ContactURL": "https://www.lexibook.com/en/contact",
     "cached_at": "2026-03-27T13:59:55.125920",
     "original_brand": "Lexibook"
+  },
+  "windsor smith": {
+    "CompanyName": "Windsor Smith Pty Ltd",
+    "Street1": "Level 1, 59-61 Parsons Street",
+    "Street2": "",
+    "CityName": "Kensington",
+    "StateOrProvince": "Victoria",
+    "PostalCode": "3031",
+    "Country": "AU",
+    "Phone": "",
+    "Email": "info@windsorsmith.com.au",
+    "ContactURL": "https://www.windsorsmith.com.au/contact-us",
+    "cached_at": "2026-03-30T14:51:26.771222",
+    "original_brand": "Windsor Smith"
   }
 }

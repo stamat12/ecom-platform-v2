@@ -798,12 +798,12 @@ export default function SkuListPage() {
       if (res.ok) {
         const data = await res.json();
         setExcelSheets(data.sheets || {});
-        // Initialize all sheets as selected with all columns
+        // Safer default: nothing preselected, user chooses exact sheet/columns.
         const initial = {};
         Object.entries(data.sheets || {}).forEach(([sheet, columns]) => {
           initial[sheet] = {
-            selected: true,
-            columns: columns.reduce((acc, col) => ({ ...acc, [col]: true }), {})
+            selected: false,
+            columns: columns.reduce((acc, col) => ({ ...acc, [col]: false }), {})
           };
         });
         setSelectedSheets(initial);
@@ -919,6 +919,17 @@ export default function SkuListPage() {
     const updated = {};
     Object.entries(selectedSheets).forEach(([sheet, info]) => {
       updated[sheet] = { ...info, selected: false };
+    });
+    setSelectedSheets(updated);
+  };
+
+  const selectInventoryOnly = () => {
+    const updated = {};
+    Object.entries(selectedSheets).forEach(([sheet, info]) => {
+      updated[sheet] = {
+        ...info,
+        selected: sheet === "Inventory",
+      };
     });
     setSelectedSheets(updated);
   };
@@ -1078,6 +1089,22 @@ export default function SkuListPage() {
                 Deselect All Sheets
               </button>
               <button
+                onClick={selectInventoryOnly}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: 12,
+                  background: "#1976d2",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  fontWeight: "bold"
+                }}
+                title="Keep only Inventory sheet selected"
+              >
+                Inventory Only
+              </button>
+              <button
                 onClick={addMissingSkuRowsFromExcel}
                 disabled={excelSyncLoading}
                 style={{
@@ -1123,73 +1150,74 @@ export default function SkuListPage() {
                     <span style={{ fontWeight: 600, color: "#333" }}>{sheet}</span>
                   </label>
 
-                  {selectedSheets[sheet]?.selected && (
-                    <div>
-                      <div style={{ marginBottom: 8, display: "flex", gap: 6 }}>
-                        <button
-                          onClick={() => selectAllColumns(sheet)}
-                          style={{
-                            padding: "4px 10px",
-                            fontSize: 11,
-                            background: "#2196f3",
-                            color: "white",
-                            border: "none",
-                            borderRadius: 3,
-                            cursor: "pointer",
-                            fontWeight: "bold"
-                          }}
-                        >
-                          All Cols
-                        </button>
-                        <button
-                          onClick={() => deselectAllColumns(sheet)}
-                          style={{
-                            padding: "4px 10px",
-                            fontSize: 11,
-                            background: "#ff9800",
-                            color: "white",
-                            border: "none",
-                            borderRadius: 3,
-                            cursor: "pointer",
-                            fontWeight: "bold"
-                          }}
-                        >
-                          No Cols
-                        </button>
-                      </div>
-                      <div style={{
-                        marginLeft: 28,
-                        paddingTop: 8,
-                        borderTop: "1px solid #e0e0e0",
-                        display: "grid",
-                        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-                        gap: 8
-                      }}>
-                      {columns.map(col => (
-                        <label key={col} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
-                          <input
-                            type="checkbox"
-                            checked={selectedSheets[sheet]?.columns?.[col] || false}
-                            onChange={(e) => {
-                              setSelectedSheets(prev => ({
-                                ...prev,
-                                [sheet]: {
-                                  ...prev[sheet],
-                                  columns: {
-                                    ...prev[sheet]?.columns,
-                                    [col]: e.target.checked
-                                  }
-                                }
-                              }));
-                            }}
-                            style={{ width: 16, height: 16, cursor: "pointer" }}
-                          />
-                          <span style={{ fontSize: 12, color: "#555" }}>{col}</span>
-                        </label>
-                      ))}
-                      </div>
+                  <div style={{ opacity: selectedSheets[sheet]?.selected ? 1 : 0.65 }}>
+                    <div style={{ marginBottom: 6, fontSize: 11, color: "#666" }}>
+                      Pick one or more columns, then enable the sheet checkbox to include them in sync.
                     </div>
-                  )}
+                    <div style={{ marginBottom: 8, display: "flex", gap: 6 }}>
+                      <button
+                        onClick={() => selectAllColumns(sheet)}
+                        style={{
+                          padding: "4px 10px",
+                          fontSize: 11,
+                          background: "#2196f3",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 3,
+                          cursor: "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        All Cols
+                      </button>
+                      <button
+                        onClick={() => deselectAllColumns(sheet)}
+                        style={{
+                          padding: "4px 10px",
+                          fontSize: 11,
+                          background: "#ff9800",
+                          color: "white",
+                          border: "none",
+                          borderRadius: 3,
+                          cursor: "pointer",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        No Cols
+                      </button>
+                    </div>
+                    <div style={{
+                      marginLeft: 28,
+                      paddingTop: 8,
+                      borderTop: "1px solid #e0e0e0",
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+                      gap: 8
+                    }}>
+                    {columns.map(col => (
+                      <label key={col} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
+                        <input
+                          type="checkbox"
+                          checked={selectedSheets[sheet]?.columns?.[col] || false}
+                          onChange={(e) => {
+                            setSelectedSheets(prev => ({
+                              ...prev,
+                              [sheet]: {
+                                ...prev[sheet],
+                                columns: {
+                                  ...prev[sheet]?.columns,
+                                  [col]: e.target.checked
+                                }
+                              }
+                            }));
+                          }}
+                          style={{ width: 16, height: 16, cursor: "pointer" }}
+                        />
+                        <span style={{ fontSize: 12, color: "#555" }}>{col}</span>
+                      </label>
+                    ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

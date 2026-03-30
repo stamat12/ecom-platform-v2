@@ -35,6 +35,7 @@ from app.services.image_enhancement import (
     list_gemini_models,
     save_gemini_models,
 )
+from app.services.image_bg_removal import remove_background, REMBG_MODELS
 from app.services.product_detail import get_product_detail, update_product_detail
 from app.services.ebay_category_ai import (
     detect_and_save_ebay_category_for_sku,
@@ -375,6 +376,22 @@ def save_gemini_models_endpoint(request: dict):
         "success": success,
         "message": message,
     }
+
+
+@app.get("/api/images/remove-bg/models")
+def list_remove_bg_models_endpoint():
+    """List available rembg models."""
+    return {"models": REMBG_MODELS}
+
+
+@app.post("/api/images/{sku}/{filename}/remove-bg")
+def remove_bg_endpoint(sku: str, filename: str, request: dict = None):
+    """Remove background from an image using rembg AI model."""
+    model = (request or {}).get("model", "isnet-general-use")
+    result = remove_background(sku, filename, model=model)
+    if not result["success"]:
+        raise HTTPException(status_code=400, detail=result.get("message", "Background removal failed"))
+    return result
 
 
 @app.get("/api/images/{sku}/{filename}")

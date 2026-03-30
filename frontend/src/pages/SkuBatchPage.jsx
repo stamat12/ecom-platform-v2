@@ -65,6 +65,14 @@ export default function SkuBatchPage() {
   const [selectedGeminiModel, setSelectedGeminiModel] = useState(null); // Selected Gemini model
   const [enhanceLoading, setEnhanceLoading] = useState(false);
   const [enhancingImages, setEnhancingImages] = useState({}); // { "sku/filename": boolean }
+  const [removingBgImages, setRemovingBgImages] = useState({}); // { "sku/filename": boolean }
+  const [removeBgModel, setRemoveBgModel] = useState("isnet-general-use");
+  const [removeBgModels, setRemoveBgModels] = useState([
+    { id: "isnet-general-use", name: "ISNet (Best Quality)" },
+    { id: "u2net",             name: "U2Net (Fast)" },
+    { id: "silueta",           name: "Silueta (Clean Edges)" },
+    { id: "sam",               name: "SAM (Segment Anything)" },
+  ]);
   const [imagePromptSelection, setImagePromptSelection] = useState({}); // { "sku/filename": promptKey }
 
   // Product details state
@@ -218,6 +226,34 @@ export default function SkuBatchPage() {
       alert(`Error: ${e.message}`);
     } finally {
       setEnhancingImages(prev => ({ ...prev, [key]: false }));
+    }
+  };
+
+  const handleRemoveBg = async (sku, filename) => {
+    const key = `${sku}/${filename}`;
+    setRemovingBgImages(prev => ({ ...prev, [key]: true }));
+    try {
+      const res = await fetch(`/api/images/${encodeURIComponent(sku)}/${encodeURIComponent(filename)}/remove-bg`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ model: removeBgModel }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || "Background removal failed");
+
+      const refreshRes = await fetch(`/api/skus/${encodeURIComponent(sku)}/images`);
+      if (refreshRes.ok) {
+        const refreshData = await refreshRes.json();
+        setItems(prev =>
+          prev.map(item =>
+            item.sku === sku ? { ...item, data: refreshData, error: null } : item
+          )
+        );
+      }
+    } catch (e) {
+      alert(`Remove BG Error: ${e.message}`);
+    } finally {
+      setRemovingBgImages(prev => ({ ...prev, [key]: false }));
     }
   };
 
@@ -5466,6 +5502,7 @@ export default function SkuBatchPage() {
                     const promptKey = getPromptKeyForImage(sku, img.filename);
                     const enhancingKey = `${sku}/${img.filename}`;
                     const isEnhancing = !!enhancingImages[enhancingKey];
+                    const isRemovingBg = !!removingBgImages[enhancingKey];
                     return (
                       <div key={img.filename} style={{ border: isSelected ? "3px solid #2196F3" : "1px solid #ddd", borderRadius: 10, overflow: "hidden", position: "relative" }}>
                         {/* Selection checkbox */}
@@ -5678,6 +5715,42 @@ export default function SkuBatchPage() {
                                 >
                                   {isEnhancing ? "Enhancing..." : "Enhance"}
                                 </button>
+                                <button
+                                  onClick={() => handleRemoveBg(sku, img.filename)}
+                                  disabled={isRemovingBg}
+                                  title="Remove background using AI (rembg)"
+                                  style={{
+                                    padding: "2px 6px",
+                                    fontSize: 10,
+                                    cursor: isRemovingBg ? "not-allowed" : "pointer",
+                                    background: "#1565c0",
+                                    color: "white",
+                                    border: "none",
+                                    borderRadius: 3
+                                  }}
+                                >
+                                  {isRemovingBg ? "Removing..." : "Remove BG"}
+                                </button>
+                              </div>
+                              <div style={{ display: "flex", gap: 4, justifyContent: "center", alignItems: "center", marginTop: 4 }}>
+                                <select
+                                  value={removeBgModel}
+                                  onChange={(e) => setRemoveBgModel(e.target.value)}
+                                  style={{
+                                    padding: "2px 4px",
+                                    fontSize: 9,
+                                    border: "1px solid #90caf9",
+                                    borderRadius: 3,
+                                    background: "#e3f2fd",
+                                    color: "#0d47a1",
+                                    maxWidth: 160,
+                                  }}
+                                  title="Select rembg AI model"
+                                >
+                                  {removeBgModels.map(m => (
+                                    <option key={m.id} value={m.id}>{m.name}</option>
+                                  ))}
+                                </select>
                               </div>
                             </div>
                           )}

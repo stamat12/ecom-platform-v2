@@ -1,263 +1,139 @@
-# ecom-platform-v2 - Startup Guide
+# ecom-platform-v2 Startup Instructions
 
-A complete e-commerce platform with a FastAPI backend and React frontend for managing SKU inventory, product images, and JSON generation.
-
----
+This file is the single startup runbook for local development.
 
 ## Prerequisites
 
-Before starting, ensure you have installed:
-- **Python 3.8+** ([Download](https://www.python.org/downloads/))
-- **Node.js 16+** ([Download](https://nodejs.org/))
-- **npm** (comes with Node.js)
+- Python 3.10+
+- Node.js 18+
+- npm
 
----
+## 1) Backend Startup
 
-## Project Structure
+From project root:
 
-```
-ecom-platform-v2/
-├── backend/          # FastAPI application (Python)
-├── frontend/         # React application (JavaScript)
-├── docs/             # Documentation
-└── ...
-```
-
----
-
-## Backend Setup (FastAPI)
-
-### 1. Navigate to Backend Directory
 ```bash
 cd backend
-```
-
-### 2. Create Virtual Environment
-```bash
 python -m venv .venv
 ```
 
-### 3. Activate Virtual Environment
+Activate environment:
 
-**On Windows (Command Prompt):**
-```bash
-.venv\Scripts\activate
-```
+Windows PowerShell:
 
-**On Windows (PowerShell):**
 ```bash
 .\.venv\Scripts\Activate.ps1
 ```
 
-**On macOS/Linux:**
+Windows CMD:
+
 ```bash
-source .venv/bin/activate
+.venv\Scripts\activate
 ```
 
-### 4. Install Dependencies
+Install dependencies:
 
-First, check if `requirements.txt` exists. If not, install the required packages:
-```bash
-pip install fastapi uvicorn python-multipart pillow openpyxl
-```
-
-Or if `requirements.txt` exists:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Environment Configuration
+If `requirements.txt` is missing/outdated, install minimum runtime packages:
 
-The `.env` file is already configured with:
-- `INVENTORY_FILE_PATH` - Path to Excel inventory file
-- `IMAGE_BASE_DIRS` - Directories containing product images
-- `API_KEYS` - Google, OpenAI, eBay, Replicate API keys
+```bash
+pip install fastapi uvicorn python-multipart pillow openpyxl requests pandas
+```
 
-**Note:** Verify paths in `.env` are correct for your system.
-
-### 6. Start Backend Server
+Run backend:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-The API will start at: **http://localhost:8000**
+Backend URLs:
 
-**API Documentation:** http://localhost:8000/docs (Swagger UI)
+- API: http://localhost:8000
+- Swagger: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
 
----
+## 2) Frontend Startup
 
-## Frontend Setup (React + Vite)
+Open second terminal from project root:
 
-### 1. Navigate to Frontend Directory
 ```bash
 cd frontend
-```
-
-### 2. Install Dependencies
-```bash
 npm install
-```
-
-### 3. Start Development Server
-```bash
 npm run dev
 ```
 
-The frontend will start at: **http://localhost:5173** (Vite default)
+Frontend URL:
 
----
+- UI: http://localhost:5173
 
-## Running Both Services Simultaneously
+## 3) Required Configuration Check
 
-### Option 1: Two Terminal Windows
+Verify `backend/.env` has valid values for your machine:
 
-**Terminal 1 (Backend):**
+- inventory file path(s)
+- image base directory path(s)
+- OpenAI API key
+- eBay tokens/settings if using eBay features
+
+If paths are invalid, most SKU/image endpoints will return empty or not found results.
+
+## 4) Standard Daily Start (after first setup)
+
+Terminal 1:
+
 ```bash
 cd backend
-.venv\Scripts\activate  # or source .venv/bin/activate on macOS/Linux
+.\.venv\Scripts\Activate.ps1
 uvicorn app.main:app --reload
 ```
 
-**Terminal 2 (Frontend):**
+Terminal 2:
+
 ```bash
 cd frontend
 npm run dev
 ```
 
-### Option 2: Using a Process Manager
+## 5) Optional Quick Health Checks
 
-Install `concurrently` globally:
+Backend:
+
 ```bash
-npm install -g concurrently
+curl http://localhost:8000/docs
 ```
 
-From the root directory, run both:
-```bash
-concurrently "cd backend && .venv\Scripts\activate && uvicorn app.main:app --reload" "cd frontend && npm run dev"
+Frontend open in browser:
+
+```text
+http://localhost:5173
 ```
 
----
+## 6) Troubleshooting
 
-## Accessing the Application
+Backend port busy:
 
-- **Frontend:** http://localhost:5173
-- **Backend API:** http://localhost:8000
-- **API Docs:** http://localhost:8000/docs
-- **API ReDoc:** http://localhost:8000/redoc
-
----
-
-## Key Features
-
-### SKU Management
-- View all SKUs from inventory (`/skus`)
-- View single SKU details (`/skus/{sku}`)
-- Batch view multiple SKUs (`/skus/batch`)
-
-### JSON Generation
-- Automatic JSON status checking
-- Generate JSON for individual SKUs
-- Batch generation support
-
-### Image Operations
-- Image listing and viewing
-- Image rotation
-- Image classification
-- Main image marking
-
-### AI Enrichment
-- AI-powered product detail enrichment
-- Batch enrichment support
-- Multiple SKU processing
-
----
-
-## Backend API Endpoints
-
-### SKU List & Management
-- `GET /skus` - Get all SKUs with filtering
-- `GET /skus/{sku}` - Get SKU details
-- `GET /skus/columns/available` - Get available columns
-- `GET /skus/columns/distinct-values` - Get distinct column values
-
-### Images
-- `GET /skus/{sku}/images` - List images for SKU
-- `GET /images/{encoded_path}` - Serve image file
-- `POST /skus/{sku}/rotate` - Rotate image
-- `POST /classify` - Classify images
-
-### JSON Operations
-- `GET /json/status/{sku}` - Check if JSON exists
-- `POST /json/generate/{sku}` - Generate JSON for SKU
-
-### Main Images
-- `POST /main-images/mark` - Mark main image
-- `POST /main-images/unmark` - Unmark main image
-- `POST /batch-main-images/mark` - Batch mark operations
-
-### Product Details
-- `GET /product/{sku}` - Get product detail
-- `PATCH /product/{sku}` - Update product detail
-
-### AI Enrichment
-- `POST /enrich` - Enrich single SKU
-- `POST /enrich-batch` - Enrich multiple SKUs
-- `GET /ai-config` - Get AI configuration
-
----
-
-## Troubleshooting
-
-### Backend Issues
-
-**Port 8000 already in use:**
 ```bash
 uvicorn app.main:app --reload --port 8001
 ```
 
-**Import errors:**
-Ensure virtual environment is activated and dependencies are installed:
+Frontend port busy:
+
+- Vite usually auto-selects next free port.
+
+Dependency issues:
+
 ```bash
-pip install fastapi uvicorn python-multipart pillow openpyxl
-```
-
-**Image not found errors:**
-Verify `IMAGE_BASE_DIRS` paths in `.env` match your system
-
-### Frontend Issues
-
-**Port 5173 already in use:**
-The development server will automatically try the next available port. Check terminal output.
-
-**Dependency errors:**
-Clear cache and reinstall:
-```bash
+cd frontend
 npm cache clean --force
-rm -rf node_modules package-lock.json
 npm install
 ```
 
-**CORS errors:**
-Ensure backend is running on port 8000. Check CORS settings in `backend/app/main.py`
+Python interpreter mismatch:
 
----
-
-## Building for Production
-
-### Backend
-Backend runs as-is in production with:
-```bash
-uvicorn app.main:app --workers 4
-```
-
-### Frontend
-Build optimized production bundle:
-```bash
-npm run build
-```
-
-Output will be in `frontend/dist/` directory.
+- Ensure the active interpreter is `backend/.venv` before running backend commands.
 
 ---
 

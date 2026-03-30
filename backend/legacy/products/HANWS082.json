@@ -1,0 +1,259 @@
+{
+  "HANWS082": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "37.5"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Kisses Black Leather Absatzschuhe",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_183723048.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183734551.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183756148.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183810269.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183826887.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183834761.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183845892.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183848443.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183857301.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183942736.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250518_183810269.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183756148.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183826887.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183834761.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183845892.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183857301.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183942736.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250518_183810269.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/uFwAAeSwZJxpynHT/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183756148.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/u8gAAeSw28ppynHV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183826887.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/S4YAAeSwNtJpynHX/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183845892.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SzcAAeSwkFNpynHY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183848443.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/eQoAAeSwjX9pynHa/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183857301.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/v9kAAeSwN~9pynHb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183834761.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SJUAAeSwJWtpynHd/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183734551.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xbcAAeSwh91pynHf/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183723048.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-jIAAeSwfc9pynHh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_183942736.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0aAAAeSwlK5pynHj/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "37,5",
+        "Stil": "Pumps",
+        "Farbe": "Schwarz",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "4,5",
+        "US-Schuhgröße": "10,5",
+        "Schuhspitze": "Geschlossen",
+        "Modell": "Kisses",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Kisses",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": ""
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T14:49"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T12:50:59.351352Z",
+          "sku": "HANWS082",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-30T12:50:10.477397Z",
+          "sku": "HANWS082",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

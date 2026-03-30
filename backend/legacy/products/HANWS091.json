@@ -1,0 +1,150 @@
+{
+  "HANWS091": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Kisses Black Patent Pumps",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 125.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_183235492.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183246652.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183310970.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183339956.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183349092.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183359878.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183413740.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183421091.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183433674.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183436428.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183439989.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183447219.jpg"
+        },
+        {
+          "filename": "PXL_20250518_183453974.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    },
+    "eBay SEO": {
+      "Product Type": "",
+      "Product Model": "",
+      "Keyword 1": "",
+      "Keyword 2": "",
+      "Keyword 3": ""
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T14:49"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T12:50:10.635751Z",
+          "sku": "HANWS091",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}
