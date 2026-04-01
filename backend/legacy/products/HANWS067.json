@@ -1,0 +1,213 @@
+{
+  "HANWS067": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Weiß",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Heartbreak White Leather Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 105.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250519_191451269.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191441486.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191328446.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191304717.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191251927.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191521093.jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "eBay Images": [
+        {
+          "filename": "PXL_20250519_191304717.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/25sAAeSwqaJpy62~/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191328446.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5K8AAeSwRXppy63C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191251927.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/lI0AAeSwgetpy63F/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191433599.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/g8QAAeSwASBpy63I/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191441486.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oIAAAeSwwP5py63L/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191451269.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5C4AAeSwyElpy63P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191316623.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2NUAAeSwcVRpy63S/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191346911.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/5EoAAeSwXBJpy63U/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191220576.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Qb0AAeSwG4ppy63X/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191210483.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ygwAAeSwsr5py63a/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191521093.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/0wQAAeSwNtJpy63d/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "40",
+        "Stil": "Pumps",
+        "Farbe": "Weiß",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "7",
+        "US-Schuhgröße": "10",
+        "Schuhspitze": "Geschlossen",
+        "Modell": "Heartbreak",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Individualisiert": "Nein",
+        "Anlass": "Elegant",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Plateauhöhe": "5 cm",
+        "Jahreszeit": "Sommer",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Heartbreak",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Sandalen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T13:18"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T11:18:42.124297Z",
+          "sku": "HANWS067",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

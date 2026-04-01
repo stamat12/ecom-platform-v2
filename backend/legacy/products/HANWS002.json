@@ -1,0 +1,155 @@
+{
+  "HANWS002": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Highness Damen Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 105.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 29,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HANWS002 (1).jpg"
+        },
+        {
+          "filename": "HANWS002 (10).jpg"
+        },
+        {
+          "filename": "HANWS002 (10)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (10)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (11).jpg"
+        },
+        {
+          "filename": "HANWS002 (11)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (11)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (12).jpg"
+        },
+        {
+          "filename": "HANWS002 (12)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (12)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (13).jpg"
+        },
+        {
+          "filename": "HANWS002 (14).jpg"
+        },
+        {
+          "filename": "HANWS002 (15).jpg"
+        },
+        {
+          "filename": "HANWS002 (2).jpg"
+        },
+        {
+          "filename": "HANWS002 (3).jpg"
+        },
+        {
+          "filename": "HANWS002 (4).jpg"
+        },
+        {
+          "filename": "HANWS002 (5).jpg"
+        },
+        {
+          "filename": "HANWS002 (6).jpg"
+        },
+        {
+          "filename": "HANWS002 (6)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (6)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (7).jpg"
+        },
+        {
+          "filename": "HANWS002 (7)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (7)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (8).jpg"
+        },
+        {
+          "filename": "HANWS002 (8)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (8)_wb.jpg"
+        },
+        {
+          "filename": "HANWS002 (9).jpg"
+        },
+        {
+          "filename": "HANWS002 (9)_fb.jpg"
+        },
+        {
+          "filename": "HANWS002 (9)_wb.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

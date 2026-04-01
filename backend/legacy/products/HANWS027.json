@@ -1,0 +1,189 @@
+{
+  "HANWS027": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Weiß",
+      "Size": "41"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Heartbreak Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 105.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "HANWS027 (5)_wb.jpg"
+        },
+        {
+          "filename": "HANWS027 (6)_wb.jpg"
+        },
+        {
+          "filename": "HANWS027 (7)_wb.jpg"
+        },
+        {
+          "filename": "HANWS027 (9)_wb.jpg"
+        },
+        {
+          "filename": "HANWS027 (8)_wb.jpg"
+        },
+        {
+          "filename": "HANWS027 (2).JPG"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "eBay Images": [
+        {
+          "filename": "HANWS027 (5)_wb.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/flsAAeSwt~9py62q/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (7)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jGUAAeSw6whpy62s/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (9)_wb.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/ckQAAeSwh-Bpy62u/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (6)_wb.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yIIAAeSwti5py62w/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (8)_wb.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/yiUAAeSwnhhpy62y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (1)_wb.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/0k0AAeSwq4Fpy620/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HANWS027 (2).JPG",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VmUAAeSwArlpy622/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "41",
+        "Stil": "Pumps",
+        "Farbe": "Weiß",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Stilettoabsatz",
+        "Laufsohlenmaterial": "Kunstleder",
+        "Innensohlenmaterial": "Kunstleder",
+        "Futtermaterial": "Kunstleder",
+        "Schuhspitze": "Geschlossen",
+        "Akzente": "Logo",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Anlass": "Elegant",
+        "Schuhweite": "Standard"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Heartbreak",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Absatzschuhe",
+      "Keyword 3": "Sandalen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "1",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-07T13:18"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T11:18:42.093610Z",
+          "sku": "HANWS027",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

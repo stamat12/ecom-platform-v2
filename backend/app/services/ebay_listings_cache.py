@@ -242,9 +242,44 @@ def update_listing_price_in_cache(sku: str, new_price: float) -> bool:
     for listing in listings:
         if str(listing.get("sku") or "").strip() != target:
             continue
+        previous_profit = dict(listing.get("profit_analysis") or {})
         listing["price"] = round(float(new_price), 2)
-        # Also reset cached profit analysis so it gets recomputed on next fetch
-        listing.pop("profit_analysis", None)
+
+        # Keep profit_analysis in sync immediately so table calculations do not disappear.
+        try:
+            from app.services.ebay_profit_calculator import calculate_listing_profit
+
+            calc_listing = dict(listing)
+            if previous_profit.get("shipping_listing") is not None:
+                calc_listing["shipping_listing"] = previous_profit.get("shipping_listing")
+
+            recalculated_profit = calculate_listing_profit(
+                calc_listing,
+                category_fees=None,
+                total_cost_net=previous_profit.get("total_cost_net"),
+                lookup_total_cost_net=previous_profit.get("total_cost_net") in (None, 0, 0.0, "", "0", "0.0"),
+            )
+
+            if previous_profit.get("shipping_costs_net") not in (None, ""):
+                recalculated_profit["shipping_costs_net"] = round(float(previous_profit.get("shipping_costs_net") or 0), 2)
+                customer_payment = recalculated_profit["selling_price_brutto"] + recalculated_profit["shipping_listing"]
+                vat_rate = 0.19
+                selling_netto = round(customer_payment / (1 + vat_rate), 2)
+                sales_commission = round(customer_payment * float(recalculated_profit.get("sales_commission_percentage") or 0), 2)
+                total_cost_net = round(float(recalculated_profit.get("total_cost_net") or 0), 2)
+                payment_fee = round(float(recalculated_profit.get("payment_fee") or 0), 2)
+                net_profit = round(selling_netto - sales_commission - payment_fee - recalculated_profit["shipping_costs_net"] - total_cost_net, 2)
+                recalculated_profit["selling_price_netto"] = selling_netto
+                recalculated_profit["sales_commission"] = sales_commission
+                recalculated_profit["net_profit"] = net_profit
+                recalculated_profit["net_profit_margin_percent"] = round((net_profit / total_cost_net) * 100, 2) if total_cost_net > 0 else 0.0
+
+            listing["profit_analysis"] = recalculated_profit
+        except Exception:
+            if previous_profit:
+                listing["profit_analysis"] = previous_profit
+            else:
+                listing.pop("profit_analysis", None)
         updated = True
         break
 

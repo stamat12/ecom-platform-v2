@@ -1,0 +1,270 @@
+{
+  "HANWS045": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Beige",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Charms Biscuit Leather Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 115.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 17,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250519_183006337.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183013408.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183053575.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183059954.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183107401.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183118946.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183120953.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183130874.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183138698.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183146795.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183241712.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183330593.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183523641.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183535806.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183544097.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183556398.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183603104.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250519_183120953.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183138698.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183130874.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183059954.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183053575.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183013408.jpg"
+        },
+        {
+          "filename": "PXL_20250519_183330593.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250519_183120953.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Q5YAAeSwV3RpzA~P/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183118946.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dWoAAeSw9i1pzA~R/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183138698.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/g4QAAeSwiPdpzA~T/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183107401.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/o7YAAeSwcZRpzA~V/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183059954.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/qgUAAeSw40ZpzA~Y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183053575.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/QxAAAeSwSSBpzA~b/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183130874.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/50oAAeSw8JdpzA~d/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183146795.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/58sAAeSw3GdpzA~g/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183241712.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/mGwAAeSwuTxpzA~i/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183013408.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/4~QAAeSwEZ5pzA~k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183006337.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WzUAAeSwxNtpzA~m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_183330593.jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/gVwAAeSwY8FpzA~o/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "40",
+        "Stil": "Pumps",
+        "Farbe": "Beige",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "7",
+        "UK-Schuhgröße": "7",
+        "US-Schuhgröße": "10",
+        "Schuhspitze": "Geschlossen",
+        "Modell": "CHARMS BISCUIT",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Charms",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Blockabsatz",
+      "Keyword 3": "Absatzschuhe"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "3",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "HANWS045, HANWS018, HANWS003",
+      "Schedule Date": "2026-04-11T20:17"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T18:17:13.867645Z",
+          "sku": "HANWS045",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

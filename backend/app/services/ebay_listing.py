@@ -361,6 +361,29 @@ def upload_images_for_sku(
             logger.info(f"Saved {uploaded_count} new eBay URLs to JSON")
         except Exception as e:
             logger.error(f"Failed to save eBay URLs: {e}")
+
+    # Replace live listing gallery with URLs from JSON eBay Images order
+    listing_update_note = ""
+    try:
+        target = _find_de_listing_target_for_listing_sku(sku)
+        if target and target.get("item_id") and urls:
+            live_update = _revise_live_listing_images(
+                item_id=str(target.get("item_id") or "").strip(),
+                listing_type=str(target.get("listing_type") or "").strip(),
+                image_urls=urls,
+            )
+            logger.info(
+                "Replaced live gallery images for SKU %s item_id=%s using %s URL(s)",
+                sku,
+                live_update.get("item_id"),
+                live_update.get("image_count"),
+            )
+            listing_update_note = f"; live listing images replaced ({live_update.get('call_name')})"
+        elif not target:
+            listing_update_note = "; no DE item_id found in cache to update live listing"
+    except Exception as e:
+        logger.error("Failed to replace live listing images for SKU %s: %s", sku, e)
+        listing_update_note = f"; live listing update failed: {e}"
     
     return {
         "success": True,
@@ -369,7 +392,7 @@ def upload_images_for_sku(
         "cached_count": cached_count,
         "total_count": len(urls),
         "urls": urls,
-        "message": f"Uploaded {uploaded_count} new images, used {cached_count} cached URLs"
+        "message": f"Uploaded {uploaded_count} new images, used {cached_count} cached URLs{listing_update_note}"
     }
 
 
@@ -964,6 +987,36 @@ def _find_de_item_id_for_listing_sku(listing_sku: str) -> Optional[str]:
     return str(best.get("item_id") or "").strip() or None
 
 
+def _find_de_listing_target_for_listing_sku(listing_sku: str) -> Optional[Dict[str, str]]:
+    """Find best DE listing target (item_id + listing_type) for a SKU."""
+    candidates = _collect_de_item_candidates_for_listing_sku(listing_sku)
+    if not candidates:
+        return None
+
+    listing_sku_clean = str(listing_sku or "").strip()
+
+    def _priority(candidate: Dict[str, str]) -> Tuple[int, int, int]:
+        status = str(candidate.get("listing_status") or "").strip().lower()
+        listing_type = str(candidate.get("listing_type") or "").strip().lower()
+        sku = str(candidate.get("sku") or "").strip()
+        is_active = 1 if status == "active" else 0
+        is_exact = 1 if sku == listing_sku_clean else 0
+        is_fixed = 1 if "fixed" in listing_type else 0
+        return (is_active, is_exact, is_fixed)
+
+    best = sorted(candidates, key=_priority, reverse=True)[0]
+    item_id = str(best.get("item_id") or "").strip()
+    if not item_id:
+        return None
+
+    return {
+        "item_id": item_id,
+        "listing_type": str(best.get("listing_type") or "").strip(),
+        "listing_status": str(best.get("listing_status") or "").strip(),
+        "sku": str(best.get("sku") or "").strip(),
+    }
+
+
 def _collect_de_item_candidates_for_listing_sku(listing_sku: str) -> List[Dict[str, str]]:
     """Return all DE marketplace listing candidates for related SKU values from cache."""
     cache = read_cache()
@@ -1029,6 +1082,55 @@ def _is_already_ended_error(text: str) -> bool:
 def _extract_response_item_id(text: str) -> str:
     item_match = re.search(r"<ItemID>(.*?)</ItemID>", text or "")
     return item_match.group(1).strip() if item_match else ""
+
+
+def _revise_live_listing_images(item_id: str, listing_type: str, image_urls: List[str]) -> Dict[str, Any]:
+    """Replace live listing gallery images with provided ordered EPS URLs."""
+    if not item_id:
+        raise ValueError("item_id is required")
+    if not image_urls:
+        raise ValueError("At least one image URL is required")
+
+    token = get_ebay_token()
+    endpoint = get_api_endpoint()
+    listing_type_l = str(listing_type or "").strip().lower()
+
+    picture_lines = ["<PictureDetails>"]
+    for url in image_urls:
+        picture_lines.append(f"  <PictureURL>{html.escape(str(url))}</PictureURL>")
+    picture_lines.append("</PictureDetails>")
+    picture_details_xml = "\n    ".join(picture_lines)
+
+    call_name = "ReviseFixedPriceItem" if "fixed" in listing_type_l else "ReviseItem"
+    request_tag = f"{call_name}Request"
+
+    xml_body = f"""<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<{request_tag} xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+  <RequesterCredentials>
+    <eBayAuthToken>{token}</eBayAuthToken>
+  </RequesterCredentials>
+  <Item>
+    <ItemID>{html.escape(item_id)}</ItemID>
+    {picture_details_xml}
+  </Item>
+</{request_tag}>"""
+
+    headers = _build_headers(call_name)
+    response = requests.post(endpoint, headers=headers, data=xml_body.encode("utf-8"), timeout=60)
+    response.raise_for_status()
+
+    text = response.text
+    ack = _parse_ebay_ack(text)
+    if ack not in {"success", "warning"}:
+        err_msg = _extract_ebay_error(text)
+        raise ValueError(f"eBay {call_name} failed while updating images: {err_msg}")
+
+    return {
+        "success": True,
+        "item_id": item_id,
+        "call_name": call_name,
+        "image_count": len(image_urls),
+    }
 
 
 def convert_ebay_fixed_to_auction(sku: str, start_price: float, duration_days: int = 7) -> Dict[str, Any]:

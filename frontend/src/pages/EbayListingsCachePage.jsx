@@ -613,6 +613,37 @@ const computeMarginFromPrice = (
 // ─── PriceAdjuster modal ──────────────────────────────────────────────────────
 
 const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
+  const computePriceMetrics = (priceRaw, profit, shippingNetRaw, shippingListingRaw) => {
+    if (!profit) return null;
+    const price = parseFloat(priceRaw);
+    if (isNaN(price) || price <= 0) return null;
+
+    const totalCostNet = parseFloat(profit.total_cost_net || 0);
+    const commissionPct = parseFloat(profit.sales_commission_percentage || 0);
+    const paymentFee = parseFloat(profit.payment_fee || 0);
+    const shippingListParsed = parseFloat(shippingListingRaw);
+    const shippingList = !isNaN(shippingListParsed)
+      ? shippingListParsed
+      : parseFloat(profit.shipping_listing || 4.99);
+    const shippingNetParsed = parseFloat(shippingNetRaw);
+    const shippingNet = !isNaN(shippingNetParsed)
+      ? shippingNetParsed
+      : parseFloat(profit.shipping_costs_net || 0);
+    const vatRate = 0.19;
+
+    const customerPayment = price + shippingList;
+    const sellingNetto = customerPayment / (1 + vatRate);
+    const commission = customerPayment * commissionPct;
+    const netProfit = sellingNetto - commission - paymentFee - shippingNet - totalCostNet;
+    const marginPercent = totalCostNet > 0 ? (netProfit / totalCostNet) * 100 : null;
+
+    return {
+      commission,
+      netProfit,
+      marginPercent,
+    };
+  };
+
   // Build initial rows from selected SKUs that appear in the current page
   const initialRows = React.useMemo(() => {
     return Array.from(selectedSkus)
@@ -625,9 +656,16 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
         imageUrl:   l.primary_image_url || "",
         currentPrice: parseFloat(l.price) || 0,
         profit:     l.profit_analysis || null,
+        shippingListing: Number(l.profit_analysis?.shipping_listing ?? 4.99).toFixed(2),
+        shippingNet: Number(l.profit_analysis?.shipping_costs_net ?? 9.4).toFixed(2),
         newPrice:   (parseFloat(l.price) || 0).toFixed(2),
         newMargin:  l.profit_analysis
-          ? (computeMarginFromPrice(parseFloat(l.price) || 0, l.profit_analysis) || 0).toFixed(1)
+          ? (computeMarginFromPrice(
+              parseFloat(l.price) || 0,
+              l.profit_analysis,
+              l.profit_analysis?.shipping_costs_net,
+              l.profit_analysis?.shipping_listing,
+            ) || 0).toFixed(1)
           : "",
         include: true,
       }));
@@ -635,6 +673,8 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
 
   const [rows, setRows] = React.useState(initialRows);
   const [globalMargin, setGlobalMargin] = React.useState("");
+  const [globalShippingNet, setGlobalShippingNet] = React.useState("9.40");
+  const [globalShippingListing, setGlobalShippingListing] = React.useState("4.99");
   const [updating, setUpdating] = React.useState(false);
   const [results, setResults] = React.useState([]);
 
@@ -645,16 +685,38 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
       if (field === "newPrice") {
         row.newPrice = rawValue;
         const n = parseFloat(rawValue);
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(row.shippingListing);
         if (!isNaN(n) && n > 0 && row.profit) {
-          const m = computeMarginFromPrice(n, row.profit);
+          const m = computeMarginFromPrice(n, row.profit, ship, shipListing);
           row.newMargin = m !== null ? m.toFixed(1) : "";
         }
       } else if (field === "newMargin") {
         row.newMargin = rawValue;
         const m = parseFloat(rawValue);
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(row.shippingListing);
         if (!isNaN(m) && row.profit) {
-          const p = computePriceFromMargin(m, row.profit);
+          const p = computePriceFromMargin(m, row.profit, ship, shipListing);
           row.newPrice = p !== null ? p.toFixed(2) : row.newPrice;
+        }
+      } else if (field === "shippingListing") {
+        row.shippingListing = rawValue;
+        const ship = parseFloat(row.shippingNet);
+        const shipListing = parseFloat(rawValue);
+        const price = parseFloat(row.newPrice);
+        if (!isNaN(shipListing) && row.profit && !isNaN(price) && price > 0) {
+          const margin = computeMarginFromPrice(price, row.profit, ship, shipListing);
+          row.newMargin = margin !== null ? margin.toFixed(1) : row.newMargin;
+        }
+      } else if (field === "shippingNet") {
+        row.shippingNet = rawValue;
+        const ship = parseFloat(rawValue);
+        const shipListing = parseFloat(row.shippingListing);
+        const price = parseFloat(row.newPrice);
+        if (!isNaN(ship) && row.profit && !isNaN(price) && price > 0) {
+          const margin = computeMarginFromPrice(price, row.profit, ship, shipListing);
+          row.newMargin = margin !== null ? margin.toFixed(1) : row.newMargin;
         }
       } else if (field === "include") {
         row.include = rawValue;
@@ -669,11 +731,47 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
     if (isNaN(m)) return;
     setRows(prev => prev.map(row => {
       if (!row.profit) return row;
-      const p = computePriceFromMargin(m, row.profit);
+      const ship = parseFloat(row.shippingNet);
+      const shipListing = parseFloat(row.shippingListing);
+      const p = computePriceFromMargin(m, row.profit, ship, shipListing);
       return {
         ...row,
         newMargin: m.toFixed(1),
         newPrice:  p !== null ? p.toFixed(2) : row.newPrice,
+      };
+    }));
+  };
+
+  const applyGlobalShippingNet = () => {
+    const ship = parseFloat(globalShippingNet);
+    if (isNaN(ship) || ship < 0) return;
+    setRows(prev => prev.map(row => {
+      const price = parseFloat(row.newPrice);
+      const shipListing = parseFloat(row.shippingListing);
+      const margin = row.profit && !isNaN(price) && price > 0
+        ? computeMarginFromPrice(price, row.profit, ship, shipListing)
+        : null;
+      return {
+        ...row,
+        shippingNet: ship.toFixed(2),
+        newMargin: margin !== null ? margin.toFixed(1) : row.newMargin,
+      };
+    }));
+  };
+
+  const applyGlobalShippingListing = () => {
+    const shipListing = parseFloat(globalShippingListing);
+    if (isNaN(shipListing) || shipListing < 0) return;
+    setRows(prev => prev.map(row => {
+      const price = parseFloat(row.newPrice);
+      const ship = parseFloat(row.shippingNet);
+      const margin = row.profit && !isNaN(price) && price > 0
+        ? computeMarginFromPrice(price, row.profit, ship, shipListing)
+        : null;
+      return {
+        ...row,
+        shippingListing: shipListing.toFixed(2),
+        newMargin: margin !== null ? margin.toFixed(1) : row.newMargin,
       };
     }));
   };
@@ -724,7 +822,7 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
           <button onClick={onClose} style={{ padding:"6px 12px", backgroundColor:"#dc3545", color:"white", border:"none", borderRadius:"4px", cursor:"pointer" }}>✕ Close</button>
         </div>
 
-        {/* Global margin setter */}
+        {/* Global controls */}
         <div style={{ backgroundColor:"#f0f8ff", padding:"12px 16px", borderRadius:"6px", marginBottom:"16px", display:"flex", alignItems:"center", gap:"12px", flexWrap:"wrap" }}>
           <span style={{ fontSize:"13px", fontWeight:"bold" }}>Set target margin % for all:</span>
           <input
@@ -739,7 +837,33 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
           <button onClick={applyGlobalMargin} style={{ padding:"6px 14px", backgroundColor:"#0066cc", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>
             Apply to all
           </button>
-          <span style={{ fontSize:"12px", color:"#666" }}>Computes the price each listing needs to hit that margin.</span>
+
+          <span style={{ fontSize:"13px", fontWeight:"bold", marginLeft:"16px" }}>Shipping charged to buyer EUR (all):</span>
+          <input
+            type="number"
+            step="0.01"
+            min="0"
+            value={globalShippingListing}
+            onChange={e => setGlobalShippingListing(e.target.value)}
+            style={{ width:"100px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }}
+          />
+          <button onClick={applyGlobalShippingListing} style={{ padding:"6px 14px", backgroundColor:"#5d4037", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>
+            Apply Buyer Shipping
+          </button>
+
+          <span style={{ fontSize:"13px", fontWeight:"bold", marginLeft:"16px" }}>Your shipping cost net EUR (all):</span>
+          <input
+            type="number"
+            step="0.01"
+            min="0"
+            value={globalShippingNet}
+            onChange={e => setGlobalShippingNet(e.target.value)}
+            style={{ width:"100px", padding:"6px 8px", border:"1px solid #ccc", borderRadius:"4px", fontSize:"13px" }}
+          />
+          <button onClick={applyGlobalShippingNet} style={{ padding:"6px 14px", backgroundColor:"#455a64", color:"white", border:"none", borderRadius:"4px", cursor:"pointer", fontSize:"13px" }}>
+            Apply Cost Shipping
+          </button>
+          <span style={{ fontSize:"12px", color:"#666" }}>Buyer shipping and your shipping cost are both editable per row and both affect margin.</span>
         </div>
 
         {/* Rows table */}
@@ -756,16 +880,17 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
                 <th style={{ padding:"8px", textAlign:"right" }}>Cost Net</th>
                 <th style={{ padding:"8px", textAlign:"right" }}>Commission</th>
                 <th style={{ padding:"8px", textAlign:"right" }}>Payment Fee</th>
-                <th style={{ padding:"8px", textAlign:"right" }}>Shipping Net</th>
-                <th style={{ padding:"8px", textAlign:"right", color:"#28a745" }}>Net Profit</th>
-                <th style={{ padding:"8px", textAlign:"right", color:"#28a745" }}>Margin %</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Shipping Charged to Buyer EUR</th>
+                <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>Your Shipping Cost Net EUR</th>
                 <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>New Price €</th>
+                <th style={{ padding:"8px", textAlign:"right", backgroundColor:"#fff3cd" }}>Net Profit</th>
                 <th style={{ padding:"8px", textAlign:"center", backgroundColor:"#fff3cd" }}>New Margin %</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, idx) => {
                 const p = row.profit || {};
+                const computed = computePriceMetrics(row.newPrice, p, row.shippingNet, row.shippingListing);
                 const priceChanged = parseFloat(row.newPrice) !== row.currentPrice;
                 return (
                   <tr key={row.sku} style={{ borderBottom:"1px solid #eee", backgroundColor: priceChanged ? "#fffde7" : (idx % 2 === 0 ? "#fff" : "#f9f9f9") }}>
@@ -784,11 +909,28 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
                     <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(row.op)}</td>
                     <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(row.currentPrice)}</td>
                     <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.total_cost_net)}</td>
-                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.sales_commission)} <span style={{ color:"#888", fontSize:"10px" }}>({fmtPct((p.sales_commission_percentage || 0) * 100)})</span></td>
+                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(computed?.commission ?? p.sales_commission)} <span style={{ color:"#888", fontSize:"10px" }}>({fmtPct((p.sales_commission_percentage || 0) * 100)})</span></td>
                     <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.payment_fee)}</td>
-                    <td style={{ padding:"6px", textAlign:"right" }}>{fmtEur(p.shipping_costs_net)}</td>
-                    <td style={{ padding:"6px", textAlign:"right", fontWeight:"bold", color: p.net_profit > 0 ? "#28a745" : "#dc3545" }}>{fmtEur(p.net_profit)}</td>
-                    <td style={{ padding:"6px", textAlign:"right", fontWeight:"bold", color: parseFloat(p.net_profit_margin_percent) > 0 ? "#28a745" : "#dc3545" }}>{fmtPct(p.net_profit_margin_percent)}</td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input
+                        type="number"
+                        step="0.01"
+                        min="0"
+                        value={row.shippingListing}
+                        onChange={e => updateRow(idx, "shippingListing", e.target.value)}
+                        style={{ width:"88px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }}
+                      />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
+                      <input
+                        type="number"
+                        step="0.01"
+                        min="0"
+                        value={row.shippingNet}
+                        onChange={e => updateRow(idx, "shippingNet", e.target.value)}
+                        style={{ width:"88px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }}
+                      />
+                    </td>
                     <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
                       <input
                         type="number"
@@ -798,6 +940,9 @@ const PriceAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
                         onChange={e => updateRow(idx, "newPrice", e.target.value)}
                         style={{ width:"80px", padding:"4px 6px", border:"1px solid #ccc", borderRadius:"4px", textAlign:"right", fontSize:"12px" }}
                       />
+                    </td>
+                    <td style={{ padding:"6px", textAlign:"right", fontWeight:"bold", color: (computed?.netProfit ?? 0) > 0 ? "#28a745" : "#dc3545", backgroundColor:"#fffde7" }}>
+                      {fmtEur(computed?.netProfit)}
                     </td>
                     <td style={{ padding:"6px", textAlign:"center", backgroundColor:"#fffde7" }}>
                       <input
@@ -1175,6 +1320,112 @@ const AuctionAdjuster = ({ listings, selectedSkus, onClose, onDone }) => {
   );
 };
 
+const EbayAdvancedPanel = ({
+  selectedCount,
+  onClose,
+  onGenerateSeo,
+  onGenerateTitle,
+  onReviseTitle,
+  onOpenPriceAdjuster,
+  onOpenAuctionAdjuster,
+  onRecalculateProfit,
+  onUploadImages,
+  onSyncSelectedStatus,
+  onRefreshListingsFromEbay,
+  seoGenerating,
+  titleGenerating,
+  titleUpdatingEbay,
+  profitRecalculating,
+  imageUploading,
+  statusSyncing,
+  listingsRefreshing,
+}) => {
+  const hasSelection = selectedCount > 0;
+
+  const cardStyle = {
+    backgroundColor: "#ffffff",
+    border: "1px solid #d9e2ec",
+    borderRadius: "10px",
+    padding: "16px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+  };
+
+  const actionBtn = (bg, disabled) => ({
+    padding: "10px 12px",
+    backgroundColor: disabled ? "#c8c8c8" : bg,
+    color: "white",
+    border: "none",
+    borderRadius: "6px",
+    cursor: disabled ? "default" : "pointer",
+    fontWeight: "bold",
+    textAlign: "left",
+  });
+
+  return (
+    <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0,0,0,0.55)", zIndex: 1000, display: "flex", alignItems: "stretch", justifyContent: "center" }}>
+      <div style={{ width: "min(1280px, 100vw)", height: "100vh", backgroundColor: "#f4f7fb", overflowY: "auto", padding: "24px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+          <div>
+            <h2 style={{ margin: 0, fontSize: "24px" }}>eBay Advanced Controls</h2>
+            <div style={{ marginTop: "6px", fontSize: "13px", color: "#4f5b67" }}>
+              One place for all eBay operations. Selected listings: <b>{selectedCount}</b>
+            </div>
+          </div>
+          <button onClick={onClose} style={{ padding: "8px 14px", backgroundColor: "#dc3545", color: "white", border: "none", borderRadius: "6px", cursor: "pointer" }}>
+            Close
+          </button>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "14px" }}>
+          <div style={cardStyle}>
+            <h3 style={{ margin: 0, fontSize: "16px" }}>Titles and SEO</h3>
+            <div style={{ fontSize: "12px", color: "#5f6b76" }}>Generate and push listing text updates.</div>
+            <button onClick={onGenerateSeo} disabled={!hasSelection || seoGenerating} style={actionBtn("#7b1fa2", !hasSelection || seoGenerating)}>
+              {seoGenerating ? "Generating SEO..." : "Generate SEO fields"}
+            </button>
+            <button onClick={onGenerateTitle} disabled={!hasSelection || titleGenerating} style={actionBtn("#2e7d32", !hasSelection || titleGenerating)}>
+              {titleGenerating ? "Generating titles..." : "Generate eBay title"}
+            </button>
+            <button onClick={onReviseTitle} disabled={!hasSelection || titleUpdatingEbay} style={actionBtn("#d32f2f", !hasSelection || titleUpdatingEbay)}>
+              {titleUpdatingEbay ? "Updating live titles..." : "Update live eBay title"}
+            </button>
+          </div>
+
+          <div style={cardStyle}>
+            <h3 style={{ margin: 0, fontSize: "16px" }}>Price and Auction</h3>
+            <div style={{ fontSize: "12px", color: "#5f6b76" }}>Open detailed calculators and apply live changes.</div>
+            <button onClick={onOpenPriceAdjuster} disabled={!hasSelection} style={actionBtn("#e65100", !hasSelection)}>
+              Open Price Adjuster
+            </button>
+            <button onClick={onOpenAuctionAdjuster} disabled={!hasSelection} style={actionBtn("#ad1457", !hasSelection)}>
+              Convert to Auction (7 Days)
+            </button>
+            <button onClick={onRecalculateProfit} disabled={profitRecalculating} style={actionBtn("#8e24aa", profitRecalculating)}>
+              {profitRecalculating ? "Recalculating profit..." : "Recalculate profit for cache"}
+            </button>
+          </div>
+
+          <div style={cardStyle}>
+            <h3 style={{ margin: 0, fontSize: "16px" }}>Images and Sync</h3>
+            <div style={{ fontSize: "12px", color: "#5f6b76" }}>Check status, upload new marked images, and refresh cache from eBay.</div>
+            <button onClick={onUploadImages} disabled={!hasSelection || imageUploading} style={actionBtn("#1565c0", !hasSelection || imageUploading)}>
+              {imageUploading ? "Uploading images..." : "Upload eBay images for selected"}
+            </button>
+            <button onClick={onSyncSelectedStatus} disabled={!hasSelection || statusSyncing} style={actionBtn("#0277bd", !hasSelection || statusSyncing)}>
+              {statusSyncing ? "Checking status..." : "Check listing status (selected)"}
+            </button>
+            <button onClick={onRefreshListingsFromEbay} disabled={listingsRefreshing} style={actionBtn("#00695c", listingsRefreshing)}>
+              {listingsRefreshing ? "Refreshing from eBay..." : "Refresh full listings from eBay"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function EbayListingsCachePage() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -1231,6 +1482,10 @@ export default function EbayListingsCachePage() {
   const [profitRecalculating, setProfitRecalculating] = useState(false);
   const [showPriceAdjuster, setShowPriceAdjuster] = useState(false);
   const [showAuctionAdjuster, setShowAuctionAdjuster] = useState(false);
+  const [showEbayAdvanced, setShowEbayAdvanced] = useState(false);
+  const [imageUploading, setImageUploading] = useState(false);
+  const [statusSyncing, setStatusSyncing] = useState(false);
+  const [listingsRefreshing, setListingsRefreshing] = useState(false);
   const [columnSort, setColumnSort] = useState({ columnId: null, direction: "asc" });
   const [columnWidths, setColumnWidths] = useState(() => {
     const saved = localStorage.getItem("ebayListingsColumnWidths");
@@ -1533,6 +1788,124 @@ export default function EbayListingsCachePage() {
       setError(`Failed to update eBay titles: ${err.message}`);
     } finally {
       setTitleUpdatingEbay(false);
+    }
+  };
+
+  const getExpandedSelectedSkus = () => {
+    const expanded = [];
+    Array.from(selectedSkus).forEach((listingSku) => {
+      const parsed = parseHybridSku(listingSku);
+      if (parsed.length > 0) expanded.push(...parsed);
+    });
+    return Array.from(new Set(expanded));
+  };
+
+  const bulkUploadEbayImages = async () => {
+    const skusArray = getExpandedSelectedSkus();
+    if (skusArray.length === 0) {
+      alert("Please select at least one SKU");
+      return;
+    }
+
+    setImageUploading(true);
+    setError(null);
+    try {
+      const results = await Promise.all(skusArray.map(async (sku) => {
+        try {
+          const response = await fetch(`${API_BASE}/api/ebay/images/upload`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ sku, max_images: 12, force_reupload: false }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok || payload.success === false) {
+            return { sku, success: false, message: payload.detail || payload.message || `HTTP ${response.status}` };
+          }
+          return {
+            sku,
+            success: true,
+            uploaded_count: payload.uploaded_count || 0,
+            cached_count: payload.cached_count || 0,
+          };
+        } catch (err) {
+          return { sku, success: false, message: err.message || "Unknown network error" };
+        }
+      }));
+
+      const successful = results.filter(r => r.success).length;
+      const failed = results.filter(r => !r.success);
+      const uploaded = results.reduce((sum, r) => sum + (r.uploaded_count || 0), 0);
+      const cached = results.reduce((sum, r) => sum + (r.cached_count || 0), 0);
+      alert(
+        `Image upload done: ${successful}/${results.length} SKU(s) successful. Uploaded ${uploaded}, reused ${cached} cached URL(s).` +
+        formatFailures(failed)
+      );
+    } catch (err) {
+      setError(`Failed to upload eBay images: ${err.message}`);
+    } finally {
+      setImageUploading(false);
+    }
+  };
+
+  const bulkSyncSelectedStatus = async () => {
+    const skusArray = getExpandedSelectedSkus();
+    if (skusArray.length === 0) {
+      alert("Please select at least one SKU");
+      return;
+    }
+
+    setStatusSyncing(true);
+    setError(null);
+    try {
+      const results = await Promise.all(skusArray.map(async (sku) => {
+        try {
+          const response = await fetch(`${API_BASE}/api/ebay/sync/status/${encodeURIComponent(sku)}`, {
+            method: "POST",
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok || payload.success === false) {
+            return { sku, success: false, message: payload.detail || payload.message || `HTTP ${response.status}` };
+          }
+          return { sku, success: true, listing_count: payload.listing_count || 0, updated: !!payload.updated };
+        } catch (err) {
+          return { sku, success: false, message: err.message || "Unknown network error" };
+        }
+      }));
+
+      const successful = results.filter(r => r.success).length;
+      const updated = results.filter(r => r.success && r.updated).length;
+      const failed = results.filter(r => !r.success);
+      alert(
+        `Status check complete: ${successful}/${results.length} successful, ${updated} updated.` +
+        formatFailures(failed)
+      );
+      fetchListings(page);
+    } catch (err) {
+      setError(`Failed to sync selected listing status: ${err.message}`);
+    } finally {
+      setStatusSyncing(false);
+    }
+  };
+
+  const refreshListingsFromEbay = async () => {
+    setListingsRefreshing(true);
+    setError(null);
+    try {
+      const response = await fetch(`${API_BASE}/api/ebay/sync/listings`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ use_cache: false, force_refresh: true }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || payload.success === false) {
+        throw new Error(payload.detail || payload.message || `HTTP ${response.status}`);
+      }
+      await fetchListings(1);
+      alert(`Listings refreshed from eBay. Total: ${payload.total_listings || 0}`);
+    } catch (err) {
+      setError(`Failed to refresh listings from eBay: ${err.message}`);
+    } finally {
+      setListingsRefreshing(false);
     }
   };
 
@@ -1981,7 +2354,7 @@ export default function EbayListingsCachePage() {
         </div>
 
         {/* Control Buttons */}
-        <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+        <div style={{ display: "flex", gap: "10px", marginBottom: "20px", flexWrap: "wrap" }}>
           <button
             onClick={resetFilters}
             style={{ padding: "8px 16px", backgroundColor: "#6c757d", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}
@@ -1989,104 +2362,19 @@ export default function EbayListingsCachePage() {
             Reset Filters
           </button>
           <button
-            onClick={recalculateProfitOnly}
-            disabled={profitRecalculating}
+            onClick={() => setShowEbayAdvanced(true)}
             style={{
               padding: "8px 16px",
-              backgroundColor: profitRecalculating ? "#ccc" : "#8e24aa",
+              backgroundColor: "#4f46e5",
               color: "white",
               border: "none",
               borderRadius: "4px",
-              cursor: profitRecalculating ? "default" : "pointer",
+              cursor: "pointer",
               fontWeight: "bold"
             }}
-            title="Recalculate profit_analysis for current eBay cache without refetching from eBay"
+            title="Open advanced eBay actions for selected listings"
           >
-            {profitRecalculating ? "⏳ Recalculating Profit..." : "🧮 Recalculate Profit"}
-          </button>
-          <button
-            onClick={bulkGenerateSeo}
-            disabled={selectedSkus.size === 0 || seoGenerating}
-            style={{ 
-              padding: "8px 16px", 
-              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#9c27b0",
-              color: "white", 
-              border: "none", 
-              borderRadius: "4px", 
-              cursor: selectedSkus.size === 0 ? "default" : "pointer",
-              fontWeight: "bold"
-            }}
-          >
-            {seoGenerating ? "⏳ Generating..." : "📝 SEO"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
-          </button>
-          <button
-            onClick={bulkGenerateTitle}
-            disabled={selectedSkus.size === 0 || titleGenerating}
-            style={{
-              padding: "8px 16px",
-              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#2e7d32",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: selectedSkus.size === 0 ? "default" : "pointer",
-              fontWeight: "bold"
-            }}
-          >
-            {titleGenerating ? "⏳ Generating..." : "🏷️ Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
-          </button>
-          <button
-            onClick={bulkUpdateEbayTitles}
-            disabled={selectedSkus.size === 0 || titleUpdatingEbay}
-            style={{
-              padding: "8px 16px",
-              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#d32f2f",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: selectedSkus.size === 0 ? "default" : "pointer",
-              fontWeight: "bold"
-            }}
-            title="Update live eBay listing titles for selected SKUs"
-          >
-            {titleUpdatingEbay ? "⏳ Updating eBay..." : "🚀 Update eBay Title"} {selectedSkus.size > 0 && `(${selectedSkus.size})`}
-          </button>
-          <button
-            onClick={() => {
-              if (selectedSkus.size === 0) { alert("Please select at least one SKU"); return; }
-              setShowPriceAdjuster(true);
-            }}
-            disabled={selectedSkus.size === 0}
-            style={{
-              padding: "8px 16px",
-              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#e65100",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: selectedSkus.size === 0 ? "default" : "pointer",
-              fontWeight: "bold"
-            }}
-            title="Open Price Adjuster to view margins and update eBay prices"
-          >
-            💰 Price Adjuster {selectedSkus.size > 0 && `(${selectedSkus.size})`}
-          </button>
-          <button
-            onClick={() => {
-              if (selectedSkus.size === 0) { alert("Please select at least one SKU"); return; }
-              setShowAuctionAdjuster(true);
-            }}
-            disabled={selectedSkus.size === 0}
-            style={{
-              padding: "8px 16px",
-              backgroundColor: selectedSkus.size === 0 ? "#ccc" : "#ad1457",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: selectedSkus.size === 0 ? "default" : "pointer",
-              fontWeight: "bold"
-            }}
-            title="Convert selected fixed listings to 7-day auction with start-price planning"
-          >
-            🏁 Auction 7 Days {selectedSkus.size > 0 && `(${selectedSkus.size})`}
+            ⚡ Advanced eBay {selectedSkus.size > 0 && `(${selectedSkus.size})`}
           </button>
           <button
             onClick={sendSelectedToSkuBatch}
@@ -2315,6 +2603,43 @@ export default function EbayListingsCachePage() {
               </span>
             </div>
           </>
+        )}
+
+        {showEbayAdvanced && (
+          <EbayAdvancedPanel
+            selectedCount={selectedSkus.size}
+            onClose={() => setShowEbayAdvanced(false)}
+            onGenerateSeo={bulkGenerateSeo}
+            onGenerateTitle={bulkGenerateTitle}
+            onReviseTitle={bulkUpdateEbayTitles}
+            onOpenPriceAdjuster={() => {
+              if (selectedSkus.size === 0) {
+                alert("Please select at least one SKU");
+                return;
+              }
+              setShowEbayAdvanced(false);
+              setShowPriceAdjuster(true);
+            }}
+            onOpenAuctionAdjuster={() => {
+              if (selectedSkus.size === 0) {
+                alert("Please select at least one SKU");
+                return;
+              }
+              setShowEbayAdvanced(false);
+              setShowAuctionAdjuster(true);
+            }}
+            onRecalculateProfit={recalculateProfitOnly}
+            onUploadImages={bulkUploadEbayImages}
+            onSyncSelectedStatus={bulkSyncSelectedStatus}
+            onRefreshListingsFromEbay={refreshListingsFromEbay}
+            seoGenerating={seoGenerating}
+            titleGenerating={titleGenerating}
+            titleUpdatingEbay={titleUpdatingEbay}
+            profitRecalculating={profitRecalculating}
+            imageUploading={imageUploading}
+            statusSyncing={statusSyncing}
+            listingsRefreshing={listingsRefreshing}
+          />
         )}
 
         {/* Column Selector Modal */}

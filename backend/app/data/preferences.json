@@ -2,9 +2,32 @@
   "sku_list": {
     "default": {
       "profile_id": "default",
-      "selected_columns": [],
-      "column_filters": {},
-      "filter_mode": {},
+      "selected_columns": [
+        "SKU (Old)",
+        "Keywords",
+        "Json",
+        "Brand",
+        "Category",
+        "Color",
+        "Size",
+        "Condition",
+        "Price Net",
+        "Folder Images",
+        "Supplier Title",
+        "Total Cost Net"
+      ],
+      "column_filters": {
+        "SKU (Old)": "HANWS",
+        "Sold": [
+          "No"
+        ],
+        "Keywords": "ru",
+        "Ebay Listing": "false",
+        "Json": "false"
+      },
+      "filter_mode": {
+        "Sold": "include"
+      },
       "page_size": 50,
       "column_widths": {},
       "emptyFilters": {}

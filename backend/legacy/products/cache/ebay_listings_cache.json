@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30T19:57:44.698850",
+  "timestamp": "2026-03-30T21:56:58.139195",
   "listings": [
     {
       "item_id": "136390447897",
@@ -22846,7 +22846,7 @@
       "marketplace": "DE",
       "site": "Germany",
       "view_url": "https://www.ebay.de/itm/Pull-Bear-Jeansjacke-Herren-Blau-M-Denimjacke-Modejacke-Neu-mit-Etiketten-/136937937154",
-      "price": 36.0,
+      "price": 33.0,
       "currency": "EUR",
       "quantity_total": 1,
       "quantity_available": null,
@@ -22865,16 +22865,16 @@
         "https://i.ebayimg.com/images/g/0OkAAeSw9oJpYr23/s-l140.png"
       ],
       "profit_analysis": {
-        "selling_price_brutto": 36.0,
+        "selling_price_brutto": 33.0,
         "shipping_listing": 4.99,
-        "selling_price_netto": 34.45,
+        "selling_price_netto": 31.92,
         "payment_fee": 0.35,
-        "sales_commission": 4.92,
+        "sales_commission": 4.56,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
         "total_cost_net": 8.97,
-        "net_profit": 10.81,
-        "net_profit_margin_percent": 120.47
+        "net_profit": 8.65,
+        "net_profit_margin_percent": 96.38
       }
     },
     {
@@ -65754,7 +65754,7 @@
       "marketplace": "DE",
       "site": "Germany",
       "view_url": "https://www.ebay.de/itm/Dickies-24Herndon-Jacke-Herren-Blau-M-Denimjacke-Sommerjacke-Vintagejacke-/136230465224",
-      "price": 87.0,
+      "price": 75.0,
       "currency": "EUR",
       "quantity_total": 1,
       "quantity_available": null,
@@ -65773,16 +65773,16 @@
         "https://i.ebayimg.com/images/g/URYAAeSwVSRohpmK/s-l140.png"
       ],
       "profit_analysis": {
-        "selling_price_brutto": 87.0,
+        "selling_price_brutto": 75.0,
         "shipping_listing": 4.99,
-        "selling_price_netto": 77.3,
+        "selling_price_netto": 67.22,
         "payment_fee": 0.35,
-        "sales_commission": 11.04,
+        "sales_commission": 9.6,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
         "total_cost_net": 25.64,
-        "net_profit": 30.87,
-        "net_profit_margin_percent": 120.41
+        "net_profit": 22.23,
+        "net_profit_margin_percent": 86.7
       }
     },
     {
@@ -67958,7 +67958,7 @@
       "marketplace": "DE",
       "site": "Germany",
       "view_url": "https://www.ebay.de/itm/Pepe-Jeans-Boyfriend-Jacket-Jacke-Herren-Blau-S-Denimjacke-Jeansjacke-/136236970689",
-      "price": 72.0,
+      "price": 68.0,
       "currency": "EUR",
       "quantity_total": 1,
       "quantity_available": null,
@@ -67977,16 +67977,16 @@
         "https://i.ebayimg.com/images/g/9JEAAeSwoiloiKD0/s-l140.png"
       ],
       "profit_analysis": {
-        "selling_price_brutto": 72.0,
+        "selling_price_brutto": 68.0,
         "shipping_listing": 4.99,
-        "selling_price_netto": 64.7,
+        "selling_price_netto": 61.34,
         "payment_fee": 0.35,
-        "sales_commission": 9.24,
+        "sales_commission": 8.76,
         "sales_commission_percentage": 0.12,
         "shipping_costs_net": 9.4,
         "total_cost_net": 21.47,
-        "net_profit": 24.24,
-        "net_profit_margin_percent": 112.9
+        "net_profit": 21.36,
+        "net_profit_margin_percent": 99.48
       }
     },
     {

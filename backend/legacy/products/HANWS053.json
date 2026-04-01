@@ -1,0 +1,283 @@
+{
+  "HANWS053": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Diamonds Black Patent High Heels",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 15,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_191317919.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191330670.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191349787.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191351101.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191353196.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191353865.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191356443.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191358296.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191358296_wb.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191405139.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191410887.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191421182.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191421351.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191429404.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191442711.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250518_191358296.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191405139.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191410887.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191421182.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191442711.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191421351.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250518_191358296.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nogAAeSwYFxpy-~k/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191356443.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/huYAAeSwUatpy-~m/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191353865.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7tgAAeSw0z9py-~p/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191351101.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Zh8AAeSwAlppy-~r/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191405139.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WHgAAeSwz6ppy-~t/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191421182.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WY4AAeSw0Wxpy-~v/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191410887.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/TVoAAeSwz-Npy-~y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191429404.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YhgAAeSwLeFpy-~0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191330670.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ob4AAeSwRL1py-~3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191317919.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YeUAAeSwkhFpy-~5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_191442711.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nOIAAeSwt~9py-~7/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "39",
+        "Stil": "Pumps",
+        "Farbe": "Schwarz",
+        "Abteilung": "Damen",
+        "Obermaterial": "Kunstleder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "6",
+        "UK-Schuhgröße": "6",
+        "US-Schuhgröße": "8",
+        "Laufsohlenmaterial": "Synthetik",
+        "Innensohlenmaterial": "Kunstleder",
+        "Futtermaterial": "Kunstleder",
+        "Schuhspitze": "Offen",
+        "Akzente": "Glitzer",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Ursprungsland": "Australien",
+        "Jahreszeit": "Sommer",
+        "Personalisieren": "Nein",
+        "Anzahl der Einheiten": "1"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Diamonds",
+      "Keyword 1": "Lackleder",
+      "Keyword 2": "High Heels",
+      "Keyword 3": "Plateau"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": "2026-04-11T18:00"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T16:00:45.905957Z",
+          "sku": "HANWS053",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-31T15:58:26.082647Z",
+          "sku": "HANWS053",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

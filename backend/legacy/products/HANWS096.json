@@ -1,0 +1,226 @@
+{
+  "HANWS096": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Lovesick Black Leather Sandalen",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 6
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_185940310.jpg"
+        },
+        {
+          "filename": "PXL_20250518_185949046.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190037560.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190042407.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190054620.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190111820.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190116861.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190200008.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190211106.MP.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250518_190042407.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190054620.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190111820.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190037560.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190116861.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190211106.MP.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250518_190042407.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/Ax8AAeSw47FpytyN/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190037560.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/SYQAAeSwOxhpytyP/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190054620.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/EPoAAeSw-g1pytyS/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190111820.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kUwAAeSwVuJpytyV/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190200008.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/NykAAeSw-cBpytyY/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190116861.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/rGsAAeSwZJ9pytyb/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_185949046.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/srgAAeSw1Vppytye/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_185940310.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/om8AAeSwjOxpytyh/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250518_190211106.MP.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/PswAAeSwK4tpytyk/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "39",
+        "Abteilung": "Damen",
+        "Farbe": "Schwarz",
+        "Stil": "Riemchen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Modell": "Lovesick",
+        "Innensohlenmaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Synthetik",
+        "Futtermaterial": "Kunstleder",
+        "Absatzart": "Blockabsatz",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Anlass": "Party/Cocktail",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Schnalle"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandalen",
+      "Product Model": "Lovesick",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Blockabsatz",
+      "Keyword 3": "Pumps"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "55",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "3",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "HANWS096, HANWS097, HANWS098",
+      "Schedule Date": "2026-04-08T22:26"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T20:26:46.953538Z",
+          "sku": "HANWS096",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

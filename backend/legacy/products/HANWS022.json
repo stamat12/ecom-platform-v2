@@ -1,0 +1,143 @@
+{
+  "HANWS022": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Diamonds Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 115.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 13,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HANWS022 (1).JPG"
+        },
+        {
+          "filename": "HANWS022 (1)_wb.jpg"
+        },
+        {
+          "filename": "HANWS022 (2).JPG"
+        },
+        {
+          "filename": "HANWS022 (3).JPG"
+        },
+        {
+          "filename": "HANWS022 (3)_wb.jpg"
+        },
+        {
+          "filename": "HANWS022 (4).JPG"
+        },
+        {
+          "filename": "HANWS022 (4)_wb.jpg"
+        },
+        {
+          "filename": "HANWS022 (5).JPG"
+        },
+        {
+          "filename": "HANWS022 (5)_wb.jpg"
+        },
+        {
+          "filename": "HANWS022 (6).JPG"
+        },
+        {
+          "filename": "HANWS022 (6)_wb.jpg"
+        },
+        {
+          "filename": "HANWS022 (7).JPG"
+        },
+        {
+          "filename": "HANWS022 (7)_wb.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "",
+      "Quantity": "",
+      "Condition ID": "",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "",
+      "Schedule Date": ""
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T15:58:26.016784Z",
+          "sku": "HANWS022",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

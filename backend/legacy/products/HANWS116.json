@@ -1,0 +1,89 @@
+{
+  "HANWS116": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Ruby  Sneakers",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 7,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_191655673.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191709576.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191718993.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191726432.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191735300.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191743691.jpg"
+        },
+        {
+          "filename": "PXL_20250518_191757115.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

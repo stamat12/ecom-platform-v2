@@ -54,7 +54,7 @@
         "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 6,
-        "count_enhanced": 3,
+        "count_enhanced": 6,
         "has_main_images": true,
         "count_main_images": 4
       },
@@ -88,6 +88,30 @@
         },
         {
           "filename": "studio_restoration_ultra_gpt_real_HAN000406 (1)_1.JPG"
+        },
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HAN000406 (2)_wb_1_lanczos_4x.png",
+          "source": "HAN000406 (2)_wb.jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000406 (2)_wb_1_lanczos_4x.png",
+          "source": "HAN000406 (2)_wb.jpg",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000406 (1)_1_lanczos_4x.png",
+          "source": "HAN000406 (1).JPG",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
         }
       ],
       "main_images": [
@@ -102,6 +126,38 @@
         },
         {
           "filename": "HAN000406 (3).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000406 (2)_wb_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/KX4AAeSwlK5pytdA/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HAN000406 (2)_wb_1_lanczos_4x.png",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/gU8AAeSwxfNpytdD/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000406 (2)_wb.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/4F0AAeSw28ppytdF/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000406 (1)_1_lanczos_4x.png",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/I-UAAeSwnQRpytdJ/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000406 (3).JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/bCoAAeSwJE9pytdL/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000406 (4).JPG",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/nHwAAeSwSSBpytdN/$_1.JPG?set_id=8800005007"
         }
       ]
     },
@@ -161,7 +217,21 @@
       "eBay Title": "Pull&Bear Jeansjacke Herren Blau M Denimjacke Modejacke Neu mit Etiketten"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T19:53:18.332563Z",
+          "sku": "HAN000406",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000406",
+            "item_id": "136937937154",
+            "old_price": 36.0,
+            "new_price": 33.0
+          }
+        }
+      ]
     }
   }
 }

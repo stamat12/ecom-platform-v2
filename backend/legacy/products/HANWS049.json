@@ -1,0 +1,244 @@
+{
+  "HANWS049": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Weiß",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Cliche White Leather Sandalen",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 120.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 5
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250519_193040707.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193051302.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193115369.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193124037.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193134150.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193145132.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193154076.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193201034.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193242683.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250519_193134150.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193124037.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193154076.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193115369.jpg"
+        },
+        {
+          "filename": "PXL_20250519_193242683.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250519_193115369.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/nAEAAeSwdylpzAWs/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193124037.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/M6EAAeSwbzppzAWu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193134150.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/frYAAeSw8JdpzAWw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193154076.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/P4cAAeSwdJ9pzAWz/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193145132.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/cdkAAeSwgERpzAW1/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193201034.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/7vgAAeSwlcZpzAW3/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193051302.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/YFcAAeSwdIJpzAW5/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193040707.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/xjAAAeSw6whpzAW7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_193242683.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/RW8AAeSwM~tpzAW-/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "39",
+        "Abteilung": "Damen",
+        "Farbe": "Weiß",
+        "Stil": "Zehentrenner",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Sandalen",
+        "Modell": "Cliche",
+        "Innensohlenmaterial": "Kunstleder",
+        "Laufsohlenmaterial": "Gummi",
+        "Futtermaterial": "Kunstleder",
+        "Absatzart": "Keilabsatz",
+        "Absatzhöhe": "Mittel (5 bis 7,5 cm)",
+        "Anlass": "Freizeit",
+        "Jahreszeit": "Sommer",
+        "Verschluss": "Slip-On"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandalen",
+      "Product Model": "Cliche",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Plateau",
+      "Keyword 3": "Weiß"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "62",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "3",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "HANWS004, HANWS014, HANWS049",
+      "Schedule Date": "2026-04-11T19:34"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T17:34:31.652078Z",
+          "sku": "HANWS049",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        },
+        {
+          "timestamp": "2026-03-31T17:34:02.986826Z",
+          "sku": "HANWS049",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

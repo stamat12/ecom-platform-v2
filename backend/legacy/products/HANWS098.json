@@ -1,0 +1,95 @@
+{
+  "HANWS098": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sandalen",
+      "eBay Category ID": "62107"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "39"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Lovesick Black Leather Sandalen",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 100.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 9,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250518_185940846.jpg"
+        },
+        {
+          "filename": "PXL_20250518_185949247.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190037928.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190042224.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190055310.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190111470.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190117011.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190200481.jpg"
+        },
+        {
+          "filename": "PXL_20250518_190211999.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

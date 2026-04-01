@@ -106,6 +106,7 @@ export default function SkuBatchPage() {
   const [bulkEbayListingOpen, setBulkEbayListingOpen] = useState(false);
   const [bulkEbayListingSaving, setBulkEbayListingSaving] = useState(false);
   const [bulkEbayListingCreating, setBulkEbayListingCreating] = useState(false);
+  const [bulkEbayImageSyncing, setBulkEbayImageSyncing] = useState(false);
   const [bulkEbaySeoOpen, setBulkEbaySeoOpen] = useState(false);
   const [bulkEbaySeoSaving, setBulkEbaySeoSaving] = useState(false);
   const [bulkEbaySeoEdits, setBulkEbaySeoEdits] = useState({}); // { sku: { product_type, product_model, keyword_1, keyword_2, keyword_3 } }
@@ -1616,6 +1617,56 @@ export default function SkuBatchPage() {
     await handleBulkEbayListingSaveTable();
     // Then immediately create listings with the saved data
     setTimeout(() => handleBulkEbayCreateListings(), 500);
+  };
+
+  const handleBulkEbaySyncImages = async () => {
+    const skus = Array.from(selectedSkusForEbayListingEdit);
+    if (skus.length === 0) {
+      alert("No SKUs selected for eBay image sync");
+      return;
+    }
+
+    setBulkEbayImageSyncing(true);
+    let succeeded = 0;
+    let failed = 0;
+    const failedRows = [];
+
+    for (const sku of skus) {
+      try {
+        const res = await fetch("/api/ebay/images/upload", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            sku,
+            max_images: 12,
+            force_reupload: false,
+          }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data.success === false) {
+          failed++;
+          failedRows.push(`${sku}: ${data.detail || data.message || `HTTP ${res.status}`}`);
+          continue;
+        }
+
+        succeeded++;
+      } catch (e) {
+        failed++;
+        failedRows.push(`${sku}: ${e.message}`);
+      }
+    }
+
+    setBulkEbayImageSyncing(false);
+
+    if (failedRows.length > 0) {
+      const preview = failedRows.slice(0, 10).join("\n");
+      const more = failedRows.length > 10 ? `\n...and ${failedRows.length - 10} more` : "";
+      alert(`Image sync complete: ${succeeded} succeeded, ${failed} failed.\n\n${preview}${more}`);
+      return;
+    }
+
+    alert(`✅ Image sync complete for ${succeeded} SKU(s).`);
   };
 
   const applyBulkScheduleDate = (scheduleDate) => {
@@ -3696,6 +3747,23 @@ export default function SkuBatchPage() {
               }}
             >
               📤 Bulk Create
+            </button>
+            <button
+              onClick={handleBulkEbaySyncImages}
+              disabled={bulkEbayImageSyncing}
+              style={{
+                padding: "4px 8px",
+                fontSize: 11,
+                background: bulkEbayImageSyncing ? "#ccc" : "#1976d2",
+                color: "white",
+                border: "none",
+                borderRadius: 3,
+                cursor: bulkEbayImageSyncing ? "not-allowed" : "pointer",
+                fontWeight: "bold",
+              }}
+              title="Use JSON eBay Images order to replace live listing gallery images"
+            >
+              {bulkEbayImageSyncing ? "Syncing Images..." : "📸 Sync Listing Images"}
             </button>
             <button
               onClick={() => setSelectedSkusForEbayListingEdit(new Set())}

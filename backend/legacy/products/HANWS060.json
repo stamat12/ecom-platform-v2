@@ -1,0 +1,237 @@
+{
+  "HANWS060": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "40"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Gloss Black Leather Sandalen",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 115.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 10,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 7
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "PXL_20250519_184509431.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184524438.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184547932.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184600068.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184606527.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184628182.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184636360.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184648975.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184656299.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184808866.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250519_184628182.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184648975.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184600068.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184606527.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184636360.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184656299.jpg"
+        },
+        {
+          "filename": "PXL_20250519_184808866.jpg"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "PXL_20250519_184648975.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-1QAAeSwxfNpy-xt/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184628182.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hJMAAeSwPO5py-xw/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184606527.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/dEYAAeSwLTxpy-xy/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184600068.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/g~4AAeSwYghpy-x0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184636360.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/-zwAAeSwhhhpy-x2/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184656299.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/ecIAAeSwvwppy-x4/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184547932.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/kr0AAeSw9w5py-x7/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184524438.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/fpAAAeSwTP1py-x8/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184509431.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/OcYAAeSw~rFpy-x-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_184808866.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/LaYAAeSwGnFpy-yA/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "40",
+        "Stil": "Pumps",
+        "Farbe": "Schwarz",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "7",
+        "Schuhspitze": "Geschlossen",
+        "Vintage": "Nein",
+        "Individualisiert": "Nein",
+        "Anlass": "Elegant",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Sandalen",
+      "Product Model": "Gloss",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Schwarz",
+      "Keyword 3": "Absatz"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "2",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "HANWS005, HANWS060, HANWS061",
+      "Schedule Date": "2026-04-10T17:45"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T15:46:06.553394Z",
+          "sku": "HANWS060",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

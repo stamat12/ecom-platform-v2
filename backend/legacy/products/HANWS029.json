@@ -1,0 +1,140 @@
+{
+  "HANWS029": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Sneaker",
+      "eBay Category ID": "95672"
+    },
+    "EAN": {
+      "EAN": null
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "37"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Ruby Sneaker",
+      "Materials": null
+    },
+    "OP": {
+      "OP": 60.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "summary": {
+        "has_stock": false,
+        "has_phone": true,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 24,
+        "count_enhanced": 0,
+        "has_main_images": false,
+        "count_main_images": 0
+      },
+      "stock": [],
+      "phone": [
+        {
+          "filename": "HANWS029 (1).JPG"
+        },
+        {
+          "filename": "HANWS029 (1)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (10).JPG"
+        },
+        {
+          "filename": "HANWS029 (10)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (11).JPG"
+        },
+        {
+          "filename": "HANWS029 (11)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (12).JPG"
+        },
+        {
+          "filename": "HANWS029 (12)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (13).JPG"
+        },
+        {
+          "filename": "HANWS029 (13)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (14).JPG"
+        },
+        {
+          "filename": "HANWS029 (14)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (2).JPG"
+        },
+        {
+          "filename": "HANWS029 (3).JPG"
+        },
+        {
+          "filename": "HANWS029 (4).JPG"
+        },
+        {
+          "filename": "HANWS029 (5).JPG"
+        },
+        {
+          "filename": "HANWS029 (6).JPG"
+        },
+        {
+          "filename": "HANWS029 (6)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (7).JPG"
+        },
+        {
+          "filename": "HANWS029 (7)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (8).JPG"
+        },
+        {
+          "filename": "HANWS029 (8)_wb.jpg"
+        },
+        {
+          "filename": "HANWS029 (9).JPG"
+        },
+        {
+          "filename": "HANWS029 (9)_wb.jpg"
+        }
+      ],
+      "enhanced": [],
+      "main_images": []
+    }
+  }
+}

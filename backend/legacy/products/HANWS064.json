@@ -1,0 +1,225 @@
+{
+  "HANWS064": {
+    "Invoice Data": {
+      "Buying Entity": "Stamen Gochev",
+      "Supplier": "SHOCK PIOTR MRAS",
+      "Invoice": "FV/2025/1/36",
+      "Invoice Date": "2025-01-22T00:00:00"
+    },
+    "Supplier Data": {
+      "Supplier Number": null,
+      "ISIN": null,
+      "Supplier Title": null
+    },
+    "Price Data": {
+      "Price Net": 8.0,
+      "Shipping Net": 0.0,
+      "Total Cost Net": 8.0
+    },
+    "Ebay Category": {
+      "Category": "/Kleidung & Accessoires/Damen/Damenschuhe/Pumps",
+      "eBay Category ID": "55793"
+    },
+    "EAN": {
+      "EAN": ""
+    },
+    "Product Condition": {
+      "Condition": "Neu mit Karton"
+    },
+    "Intern Product Info": {
+      "Gender": "F",
+      "Brand": "Windsor Smith",
+      "Color": "Schwarz",
+      "Size": "38"
+    },
+    "Intern Generated Info": {
+      "More details": null,
+      "Keywords": "Heartbreak Black Leather Pumps",
+      "Materials": "Leder-Obermaterial"
+    },
+    "OP": {
+      "OP": 105.0
+    },
+    "Status": {
+      "Status": "OK"
+    },
+    "Warehouse": {
+      "Lager": "MyPlace Lager Margareten"
+    },
+    "Images": {
+      "schema_version": "1.0",
+      "stock": [],
+      "phone": [],
+      "enhanced": [],
+      "main_images": [
+        {
+          "filename": "PXL_20250519_190918981.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190910153.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190905864.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190840432.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190954383.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190945168.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190939840.jpg"
+        },
+        {
+          "filename": "PXL_20250519_190930784.jpg"
+        },
+        {
+          "filename": "PXL_20250519_191100207.jpg"
+        }
+      ],
+      "summary": {
+        "has_stock": false,
+        "has_phone": false,
+        "has_enhanced": false,
+        "count_stock": 0,
+        "count_phone": 0,
+        "count_enhanced": 0,
+        "has_main_images": true,
+        "count_main_images": 9
+      },
+      "eBay Images": [
+        {
+          "filename": "PXL_20250519_190918981.jpg",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/jOAAAeSw3DRpy63j/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190939840.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/9AEAAeSwTIlpy63l/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190910153.jpg",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/I~EAAeSw3JRpy63o/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190905864.jpg",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/hvcAAeSwaRppy63r/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190859279.jpg",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/sewAAeSw5rNpy63u/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190930784.jpg",
+          "order": 6,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/oX0AAeSwA4Fpy63y/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190945168.jpg",
+          "order": 7,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/bOgAAeSwSYZpy632/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190954383.jpg",
+          "order": 8,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/1scAAeSwGB9py634/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191029725.jpg",
+          "order": 9,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/zPwAAeSwrzppy637/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190840432.jpg",
+          "order": 10,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/WYYAAeSwPCVpy63-/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_190830711.jpg",
+          "order": 11,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/iQ8AAeSwridpy64C/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "PXL_20250519_191100207.jpg",
+          "order": 12,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxMjA1/z/2QoAAeSwoB1py64F/$_1.JPG?set_id=8800005007"
+        }
+      ]
+    },
+    "eBay Fields": {
+      "required": {
+        "Marke": "Windsor Smith",
+        "EU-Schuhgröße": "38",
+        "Stil": "Pumps",
+        "Farbe": "Schwarz",
+        "Abteilung": "Damen",
+        "Obermaterial": "Leder"
+      },
+      "optional": {
+        "Produktart": "Pumps",
+        "Absatzart": "Blockabsatz",
+        "AU-Schuhgröße": "5",
+        "Schuhspitze": "Geschlossen",
+        "Modell": "Heartbreak",
+        "Vintage": "Nein",
+        "Absatzhöhe": "Hoch (7,6 bis 10 cm)",
+        "Individualisiert": "Nein",
+        "Anlass": "Elegant",
+        "Verschluss": "Schnalle",
+        "Muster": "Ohne Muster",
+        "Plateauhöhe": "5 cm",
+        "Personalisieren": "Nein"
+      }
+    },
+    "eBay SEO": {
+      "Product Type": "Pumps",
+      "Product Model": "Heartbreak",
+      "Keyword 1": "Leder",
+      "Keyword 2": "Schwarz",
+      "Keyword 3": "Sandalen"
+    },
+    "Ebay Listing": {
+      "Selling Price Total": "60",
+      "Shipping Listing": 4.99,
+      "Shipping Costs Net": "5.99",
+      "Quantity": "4",
+      "Condition ID": "1000",
+      "Condition Note": "",
+      "EAN": "",
+      "Modified SKU": "HANWS035, HANWS064, HANWS065, HANWS066",
+      "Schedule Date": "2026-04-07T13:18"
+    },
+    "System Logs": {
+      "Change Log": [
+        {
+          "timestamp": "2026-03-31T11:18:42.158223Z",
+          "sku": "HANWS064",
+          "action": "ebay_listing_bulk_save",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "fields": [
+              "condition_description",
+              "condition_id",
+              "ean",
+              "modified_sku",
+              "price",
+              "quantity",
+              "schedule_date",
+              "shipping_costs_net",
+              "shipping_listing"
+            ],
+            "field_count": 9
+          }
+        }
+      ]
+    }
+  }
+}

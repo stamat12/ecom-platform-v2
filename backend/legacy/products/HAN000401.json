@@ -51,10 +51,10 @@
       "summary": {
         "has_stock": false,
         "has_phone": true,
-        "has_enhanced": false,
+        "has_enhanced": true,
         "count_stock": 0,
         "count_phone": 7,
-        "count_enhanced": 0,
+        "count_enhanced": 3,
         "has_main_images": true,
         "count_main_images": 3
       },
@@ -82,7 +82,32 @@
           "filename": "HAN000401 (5).JPG"
         }
       ],
-      "enhanced": [],
+      "enhanced": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000401 (3)_wb_1_lanczos_4x.png",
+          "source": "HAN000401 (3)_wb.jpg",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Hanger_gemini-2-5-flash-image_real_HAN000401 (3)_wb_1_lanczos_4x.png",
+          "source": "HAN000401 (3)_wb.jpg",
+          "prompt": "Used Clothes Hanger",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000401 (1)_1_lanczos_4x.png",
+          "source": "HAN000401 (1).JPG",
+          "prompt": "Used Clothes Same Position",
+          "generated": true,
+          "upscaled": true,
+          "upscale_method": "lanczos-4x"
+        }
+      ],
       "main_images": [
         {
           "filename": "HAN000401 (3)_wb.jpg"
@@ -92,6 +117,33 @@
         },
         {
           "filename": "HAN000401 (4).JPG"
+        }
+      ],
+      "eBay Images": [
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000401 (3)_wb_1_lanczos_4x.png",
+          "order": 1,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jPsAAeSwzP9pytdr/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000401 (3)_wb.jpg",
+          "order": 2,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/8vkAAeSwu~dpytdu/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "Used Clothes Same Position_gemini-2-5-flash-image_real_HAN000401 (1)_1_lanczos_4x.png",
+          "order": 3,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/jykAAeSwlcZpytdx/$_1.PNG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000401 (4).JPG",
+          "order": 4,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/K3wAAeSw0vBpytd0/$_1.JPG?set_id=8800005007"
+        },
+        {
+          "filename": "HAN000401 (5).JPG",
+          "order": 5,
+          "eBay URL": "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/lH0AAeSwJHtpytd2/$_1.JPG?set_id=8800005007"
         }
       ]
     },
@@ -104,7 +156,21 @@
       "eBay Title": "Pepe Jeans Boyfriend Jacket Jacke Herren Blau S Denimjacke Jeansjacke"
     },
     "System Logs": {
-      "Change Log": []
+      "Change Log": [
+        {
+          "timestamp": "2026-03-30T19:53:14.506466Z",
+          "sku": "HAN000401",
+          "action": "ebay_revise_price_live",
+          "source": "api",
+          "actor": "system",
+          "details": {
+            "listing_sku": "HAN000401",
+            "item_id": "136236970689",
+            "old_price": 72.0,
+            "new_price": 68.0
+          }
+        }
+      ]
     }
   }
 }
